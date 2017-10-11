@@ -9,4 +9,4 @@ Please note that the CoreMathImgProc is still under development. I don't have en
 
 Also note that everything is written by JAVA. The pro is it is compatiable with most of devices. The con is it is slow.
 
-If you want to use this lib in your app, please recognize it when your app starts. Also, please make contribution to this lib during your development. Thanks.
+If you want to use CoreMathImgProc lib in your app, or you want to develop your own app based on SmartMath, please recognize it when your app starts. Also, please make contribution to the CoreMathImgProc lib and SmartMath during your development. Thanks.
