@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="Theme.TransparentNoTitleDim" parent="android:style/Theme.Translucent">
+		<item name="android:windowNoTitle">false</item>
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:backgroundDimEnabled">false</item>
+		<item name="android:background">@color/transparent_background</item>
+	</style>
+	<style name="Theme.SolidDialog" parent="android:Theme.Dialog">
+	    <item name="android:background">#FF000000</item>
+	</style>
+	<style name="SettingsDialog" parent="@android:style/Theme.Dialog">
+    	<item name="android:windowIsFloating">true</item>
+    	<item name="android:windowNoTitle">true</item>
+    	<item name="android:gravity">bottom</item>
+	</style>
+</resources>

@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>Scientific Calculator Plus Help</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">Scientific Calculator Plus Help : string functions</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>Function name</th>
+<th>Function info</th>
+</tr>
+<tr>
+<td><center>conv_ints_to_str</center></td>
+<td><p>conv_ints_to_str(1) :</p>
+<p>conv_ints_to_str(int_or_array) converts a single integer or a list of integer to a unicode string. If int_or_array is a single integer, then returned string includes a single char. Otherwise, returned string should have same number of characters as the element number in the integer array. If an integer is negative or beyond unicode char set range, this integer will be converted to the unicode char whose integer value is 0. For example, conv_ints_to_str([97, 98, 99]) returns "abc" and conv_ints_to_str(97) returns "a".</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_str_to_ints</center></td>
+<td><p>conv_str_to_ints(1) :</p>
+<p>conv_str_to_ints(str) converts a unicode string to an integer array. Each unicode char in general corresponds to one integer (could be two integers, if the unicode char is beyond UTF-16 char set. However, this kind of unicode chars are not widely used). If string is empty, return a zero length array. For example, conv_str_to_ints("abc") returns [97, 98, 99].</p>
+</td>
+</tr>
+<tr>
+<td><center>split</center></td>
+<td><p>split(2) :</p>
+<p>split(string_input, string_regex) splits string_input around matches of the given regular expression defined by parameter string_regex and returns the array of strings computed by splitting string_input around matches of the given regular expression. User could refer to JAVA documents for the Pattern class and String.split function for detailed usage about regular express. For example, split("boo:and:foo", ":") returns ["boo", "and", "foo"] and split("boo:and:foo", "o") returns ["b", "", ":and:f"].</p>
+</td>
+</tr>
+<tr>
+<td><center>sprintf</center></td>
+<td><p>sprintf(1...) :</p>
+<p>printf(format_string, ...), sprintf(format_string, ...) and fprintf(fd, format_string, ...) work like corresponding C/C++ functions. Function printf prints formatted string constructed from format_string and other parameter values to output console, sprintf constructs a new string from format_string and other parameters, and returns the new string, fprintf prints the formated string from format_string and other parameter values to the text file whose id is fd. The format_string parameter supports integer (%d, %i, %x, etc), float (%e, %f, etc), character(%c), string(%s) etc. User can find detailed information for construction of a format string by reading C language manual for these functions. For example, printf("Hello world!%f", 3.14) will output "Hello world!3.140000" on the screen, sprintf("%c%d", "A", 9) returns "A9" (MFP does not support single character type, so single character is stored as a one-char string).</p>
+</td>
+</tr>
+<tr>
+<td><center>sscanf</center></td>
+<td><p>sscanf(2) :</p>
+<p>scanf(format_string), sscanf(input_from, format_string) and fscanf(fd, format_string) work like corresponding C/C++ functions. Function scanf reads one line input from user, sscanf reads string based parameter input_from, and fscanf reads content from a file whose id is fd. The format_string parameter supports integer (%d, %i, %x, etc), float (%e, %f, etc), character(%c), string(%s) etc. User can find detailed information for construction of a format string by reading C language manual for these functions. Different from C language, these functions do not accept additional parameters to store read values. These functions simply return all the read values in an array. For example, sscanf("3Hello world!", "%d%c%c%s") will returns [3, "H", "e", "llo"] (MFP does not support single character type, so single character is stored as a one-char string).</p>
+</td>
+</tr>
+<tr>
+<td><center>strcat</center></td>
+<td><p>strcat(2...) :</p>
+<p>strcat(string1, string2...) catenates the string parameters and return the new catenated string. Need at least two parameters.</p>
+</td>
+</tr>
+<tr>
+<td><center>strcmp</center></td>
+<td><p>strcmp(6) :</p>
+<p>strcmp(src, dest, src_start, src_end, dest_start, dest_end) compare src string from src_start to src_end to dest string from dest_start to dest_end. It returns 0 if they are equal, positive value if src is greater or negative value if dest is greater. Note that string index is from 0, src_end and dest_end are one passed last selected character. Also note that the last four parameters can be omitted. If omitted, starts by default are 0 and ends by default are string length.</p>
+</td>
+</tr>
+<tr>
+<td><center>strcpy</center></td>
+<td><p>strcpy(6) :</p>
+<p>strcpy(src, dest, src_start, src_end, dest_start, dest_end) returns a string which is the string value copying src string from src_start to src_end to dest string from dest_start to dest_end. Note that string index is from 0, src_end and dest_end are one passed last selected character. Also note that the last four parameters can be omitted. If omitted, starts by default are 0 and ends by default are string length.</p>
+</td>
+</tr>
+<tr>
+<td><center>stricmp</center></td>
+<td><p>stricmp(6) :</p>
+<p>stricmp(src, dest, src_start, src_end, dest_start, dest_end) compare src string from src_start to src_end to dest string from dest_start to dest_end ignoring case of letters. It returns 0 if they are equal, positive value if src is greater or negative value if dest is greater. Note that string index is from 0, src_end and dest_end are one passed last selected character. Also note that the last four parameters can be omitted. If omitted, starts by default are 0 and ends by default are string length.</p>
+</td>
+</tr>
+<tr>
+<td><center>strlen</center></td>
+<td><p>strlen(1) :</p>
+<p>strlen(x) returns length of string x.</p>
+</td>
+</tr>
+<tr>
+<td><center>strsub</center></td>
+<td><p>strsub(2) :</p>
+<p>strsub(str, start) returns substring of string parameter str, the substring is from character start (the first character is character 0) to the end of str.</p>
+<p>strsub(3) :</p>
+<p>strsub(str, start, end) returns substring of string parameter str, the substring is from character start to character end - 1 (the first character is character 0).</p>
+</td>
+</tr>
+<tr>
+<td><center>to_lowercase_string</center></td>
+<td><p>to_lowercase_string(1) :</p>
+<p>to_lowercase_string(x) returns a lower case string output of datum x.</p>
+</td>
+</tr>
+<tr>
+<td><center>to_string</center></td>
+<td><p>to_string(1) :</p>
+<p>to_string(x) returns a string output of datum x.</p>
+</td>
+</tr>
+<tr>
+<td><center>to_uppercase_string</center></td>
+<td><p>to_uppercase_string(1) :</p>
+<p>to_uppercase_string(x) returns a upper case string output of datum x.</p>
+</td>
+</tr>
+<tr>
+<td><center>tostring</center></td>
+<td><p>tostring(1) :</p>
+<p>tostring(x) returns a string output of datum x.</p>
+</td>
+</tr>
+<tr>
+<td><center>trim</center></td>
+<td><p>trim(1) :</p>
+<p>trim(string), trim_left(string) and trim_right(string) trim the white space and the characters whose asci value is less than white space (e.g. \n, \t, \r, \0 etc.) off from the string from one or both sides. In particular, trim removes the characters from both the left and right sides until it sees a character whose asci value is greater than white space on each side; trim_left removes the characters from left side until it sees a character whose asci value is greater than white space; trim_right removes the characters from right side until it sees a character whose asci value is greater than white space. Examples are trim(" \n hello world ") (returns "hello world"), trim_left(" \n hello world ") (returns "hello world ") and trim_right(" \n hello world ") (returns " hello world").</p>
+</td>
+</tr>
+<tr>
+<td><center>trim_left</center></td>
+<td><p>trim_left(1) :</p>
+<p>trim(string), trim_left(string) and trim_right(string) trim the white space and the characters whose asci value is less than white space (e.g. \n, \t, \r, \0 etc.) off from the string from one or both sides. In particular, trim removes the characters from both the left and right sides until it sees a character whose asci value is greater than white space on each side; trim_left removes the characters from left side until it sees a character whose asci value is greater than white space; trim_right removes the characters from right side until it sees a character whose asci value is greater than white space. Examples are trim(" \n hello world ") (returns "hello world"), trim_left(" \n hello world ") (returns "hello world ") and trim_right(" \n hello world ") (returns " hello world").</p>
+</td>
+</tr>
+<tr>
+<td><center>trim_right</center></td>
+<td><p>trim_right(1) :</p>
+<p>trim(string), trim_left(string) and trim_right(string) trim the white space and the characters whose asci value is less than white space (e.g. \n, \t, \r, \0 etc.) off from the string from one or both sides. In particular, trim removes the characters from both the left and right sides until it sees a character whose asci value is greater than white space on each side; trim_left removes the characters from left side until it sees a character whose asci value is greater than white space; trim_right removes the characters from right side until it sees a character whose asci value is greater than white space. Examples are trim(" \n hello world ") (returns "hello world"), trim_left(" \n hello world ") (returns "hello world ") and trim_right(" \n hello world ") (returns " hello world").</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

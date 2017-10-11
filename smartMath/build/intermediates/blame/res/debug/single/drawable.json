@@ -1,0 +1,854 @@
+[
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\script_file_icon.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\script_file_icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\enter_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\enter_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\scriptmngr_prog.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\scriptmngr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\toleft_land_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toleft_land_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\delete_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\delete_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\zoom_fit_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_fit_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\startplot.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\startplot.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_erazer_96.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_erazer_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_pen_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_pen_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\zoom_1_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_1_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\cameraime.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cameraime.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_camera_96.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_camera_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\next_16.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\next_16.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\toright_land_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toright_land_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_start_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_start_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\inputpadhide_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\inputpadhide_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\help_prog_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\help_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\save_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\save_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\recognize_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\recognize_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\help_prog.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\help_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_camera_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_camera_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_zoom_fit_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_zoom_fit_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_redo_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_redo_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\cpexample_prog_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cpexample_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\folder_icon.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\folder_icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_crop_select_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_crop_select_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\plus.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\plus.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\save_16.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\save_16.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\enter_16.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\enter_16.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_erazer_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_erazer_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\toleft_land.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toleft_land.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_pen_96.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_pen_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\quickhelp_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\quickhelp_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\inputpadcfg_prog.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\inputpadcfg_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\btn_background.xml",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\btn_background.xml"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_start_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_start_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_delete_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_delete_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\enter_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\enter_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\forward_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\forward_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_rotate_anticw_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_anticw_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\runonpc_prog.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\runonpc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\toleft_land_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toleft_land_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\toright.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toright.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\next_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\next_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\zoom_out_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_out_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\zoom_1_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_1_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_erazer_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_erazer_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\zoom_out_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_out_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\recognize_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\recognize_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_move_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_move_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\setting_gear_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\setting_gear_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_rotate_cw_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_cw_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\inputpadhide_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\inputpadhide_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_start_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_start_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_undo_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_undo_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_resize_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_resize_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\graph_prog_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\graph_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\hide_keypad_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\hide_keypad_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_pen_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_pen_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\toright_land_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toright_land_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_start_96.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_start_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\delete_16.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\delete_16.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\zoom_in_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_in_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\save_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\save_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\integr_prog_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\integr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_redo_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_redo_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\black_start_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\black_start_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\fingerpaint.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\fingerpaint.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\start_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\start_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\forward_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\forward_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\black_start_16.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\black_start_16.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_resize_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_resize_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\startplot_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\startplot_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\chart_file_icon.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\chart_file_icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\background.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\background.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_redo_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_redo_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_camera_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_camera_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_pen_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_pen_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\hide_keypad_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\hide_keypad_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\cursorright_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cursorright_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\leftright_background.xml",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\leftright_background.xml"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\fingerpaint_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\fingerpaint_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\runonpc_prog_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\runonpc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\keyboardime.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\keyboardime.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\delete_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\delete_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\plus_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\plus_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\icon.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_rotate_cw_96.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_cw_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\graph_prog.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\graph_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\save_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\save_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\delete_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\delete_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\cursorright.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cursorright.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\keyboardime_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\keyboardime_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_place_holder_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_place_holder_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_resize_96.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_resize_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\fingerpaint_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\fingerpaint_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\delete.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\delete.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\toleft_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toleft_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\scripteditor_prog.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\scripteditor_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\next_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\next_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\start.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\start.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\start_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\start_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\quickhelp.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\quickhelp.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\zoom_1_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_1_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\verify.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\verify.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\cursorright_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cursorright_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_zoom_fit_96.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_zoom_fit_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\zoom_fit_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_fit_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\bmp_file_icon.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\bmp_file_icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_rotate_anticw_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_anticw_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_place_holder_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_place_holder_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\cameraime_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cameraime_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\inputpadhide.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\inputpadhide.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\cursorleft_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cursorleft_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_zoom_fit_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_zoom_fit_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\delete_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\delete_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_crop_select_96.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_crop_select_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_camera_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_camera_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\zoom_fit_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_fit_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_crop_select_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_crop_select_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_pen_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_pen_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_rotate_cw_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_cw_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\recognize.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\recognize.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\enter_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\enter_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\save_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\save_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\toright_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toright_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_rotate_anticw_96.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_anticw_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\cursorleft.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cursorleft.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\setting_gear_24.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\setting_gear_24.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\calc_prog.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\calc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\keyboardime_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\keyboardime_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_rotate_anticw_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_anticw_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\zoom_out_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_out_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_zoom_fit_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_zoom_fit_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_delete_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_delete_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\settings_prog.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\settings_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_delete_96.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_delete_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_rotate_cw_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_cw_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\inputpadcfg_prog_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\inputpadcfg_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\cursorleft_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cursorleft_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_crop_select_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_crop_select_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_camera_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_camera_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\zoom_in_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_in_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\startplot_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\startplot_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_undo_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_undo_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\setting_gear_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\setting_gear_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\save.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\save.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\scripteditor_prog_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\scripteditor_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\next_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\next_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_delete_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_delete_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\cpexample_prog.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cpexample_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_move_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_move_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\smartcalc_prog.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\smartcalc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_erazer_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_erazer_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\inputkeyboard_prog.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\inputkeyboard_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\enter_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\enter_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\enter.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\enter.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_start_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_start_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_delete_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_delete_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_rotate_anticw_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_anticw_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\cmdline_prog.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cmdline_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\zoom_in_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_in_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\calc_prog_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\calc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\convebtn_background.xml",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\convebtn_background.xml"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_move_96.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_move_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_resize_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_resize_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\black_start_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\black_start_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\scriptmngr_prog_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\scriptmngr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_place_holder_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_place_holder_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_move_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_move_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\integr_prog.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\integr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_resize_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_resize_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_undo_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_undo_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_erazer_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_erazer_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\setting_gear_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\setting_gear_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\enter_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\enter_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_move_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_move_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\delete_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\delete_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_undo_32.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_undo_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\cameraime_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cameraime_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\toleft.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toleft.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\smartcalc_prog_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\smartcalc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\unknown_file_icon.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\unknown_file_icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\chartmngr_prog.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\chartmngr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\hide_keypad_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\hide_keypad_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\garbage_bin_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\garbage_bin_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\zoom_fit_24.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_fit_24.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\garbage_bin.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\garbage_bin.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\forward.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\forward.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_zoom_fit_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_zoom_fit_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_place_holder_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_place_holder_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\clean.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\clean.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\quickhelp_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\quickhelp_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_rotate_cw_64.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_cw_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_redo_48.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_redo_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\toright_land.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toright_land.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_place_holder_96.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_place_holder_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\verify_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\verify_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\upper_folder_icon.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\upper_folder_icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\chartmngr_prog_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\chartmngr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\settings_prog_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\settings_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\hide_keypad_16.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\hide_keypad_16.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\verify_xlarge.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\verify_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_undo_96.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_undo_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_crop_select_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_crop_select_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\mr_redo_96.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_redo_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\zoom_out_24.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_out_24.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\black_start_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\black_start_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\zoom_1_24.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_1_24.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\inputkeyboard_prog_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\inputkeyboard_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\save_128.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\save_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\cmdline_prog_large.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cmdline_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\dev\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\debug\\drawable\\zoom_in_24.png",
+        "source": "D:\\tmp\\dev\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_in_24.png"
+    }
+]

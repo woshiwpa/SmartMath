@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Scientific Calculator Plus Help</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">Scientific Calculator Plus Help : expression_and_integration functions</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>Function name</th>
+<th>Function info</th>
+</tr>
+<tr>
+<td><center>evaluate</center></td>
+<td><p>evaluate(1...) :</p>
+<p> evaluate(expr_string,var_string1,var_value1,var_string2,var_value2, ...) returns the value of string based expression expr_string when the string based variable var_string1 equals var_value1, variable var_string2 equals var_value2, ... respectively. Note that var_value1, var_value2, ... can be any type and the number of variables can be zero, i.e. evaluate("3+2") is valid.</p>
+</td>
+</tr>
+<tr>
+<td><center>integrate</center></td>
+<td><p>integrate(2) :</p>
+<p> integrate(x,y) returns the indefinite integrated expression of expression x based on variable y where x and y are both strings. Note that if x cannot be indefinitely integrated or x is too complicated to solve, this function will throw an exception.</p>
+<p>integrate(4) :</p>
+<p> integrate(x,y,z,w) returns the integrated value of expression x based on variable y changing from z to w. Note that x and y are string type and z and w can be real numbers, complex numbers or strings. The integrating algorithm selected is adaptive Gauss-Kronrod method.</p>
+<p>integrate(5) :</p>
+<p> integrate(x,y,z,w,v) returns integrated value given a string expression x of a variable y (also a string type) and an interval [z, w]. In calculation, one step length is (w - z)/v, note that v must be a positive integer while w and z can be real numbers, complex values or strings. If v is zero, this function is the same as integrate(x,y,z,w).</p>
+</td>
+</tr>
+<tr>
+<td><center>lim</center></td>
+<td><p>lim(3) :</p>
+<p> lim(expr, var, dest_value) calculates the limit value of expression expr when variable var is closing to dest_value. expr and var should be string and dest_value can be expression or value, whether string based or not. For example, lim("1/x", "x", 0) or lim("(x+2)/(x+3)","x","3+0"). Note that this function is still under development.</p>
+</td>
+</tr>
+<tr>
+<td><center>product_over</center></td>
+<td><p>product_over(3) :</p>
+<p> product_over(x, y, z) calculates the product of string based expression x over integer value y to z. Note that y and z are also string based value, y should be written like "a=10" (where a is the variable) and z should be like "20". For example, product_over("x+1", "x=1", "10").</p>
+</td>
+</tr>
+<tr>
+<td><center>sum_over</center></td>
+<td><p>sum_over(3) :</p>
+<p>	sum_over(x, y, z) calculates the sum of string based expression x over integer value y to z. Note that y and z are also string based value, y should be written like "a=10" (where a is the variable) and z should be like "20". For example, sum_over("x+1", "x=1", "10").</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

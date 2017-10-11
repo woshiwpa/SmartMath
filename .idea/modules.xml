@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SmartMath.iml" filepath="$PROJECT_DIR$/SmartMath.iml" />
+      <module fileurl="file://$PROJECT_DIR$/smartMath/smartMath.iml" filepath="$PROJECT_DIR$/smartMath/smartMath.iml" />
+    </modules>
+  </component>
+</project>

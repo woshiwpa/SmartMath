@@ -1,0 +1,46 @@
+﻿<html>
+	<head>
+		<title>Smart Calculator Help</title>
+	</head>
+	<body style="background-color:white;">
+		<h2 style="color:blue">Smart Calculator Help : Main window</h2>
+		
+		<p style="font-family:verdana;color:purple;">
+			<b>Input to calculate</b>:
+		</p>
+		<p style="color:black">User is able to input expression(s) using <a href="math_recognition.html" target="_self">back camera</a>, soft keyboard, buttons in inputpad, or copy a historical record from history screen or output box by clicking the expression or result, or input a constant or unit-converted value from calculator assistant. User can slide the input pad to left or right to select inputing numbers & operators or functions.</p>
+		<p style="color:black">User inputs an expression like 3 + log(4.1 / avg(1,5,-3)) or 4*x**2 + x == 3, or a group of expressions like</p><p style="color:black">y1*3+4*y2-3*y3==7</p><p style="color:black">y2/2-3*y3+y1==9</p><p style="color:black">y3/3-6*y1+y2==2.4</p><p style="color:black">, then press start button to calculate. If user is not sure how to use a function or an operator, he/she can press QuickHelp button <img src="quickhelp.jpg"  alt="icon" /> and then press the function or operator button or type the function name or the operator by keyboard.</p>
+		<p style="color:black;"> There are a few things user might keep in mind. First, in Smart Calculator equal is "==" while "=" is assign operator. For example, to calculate x value where x + 3 is 5, user should input x + 3 == 5 instead of x + 3 = 5. But user can still assign a value to a variable, e.g. x = 7.
+		</p>
+		<p style="color:black;">Second, in Smart Calculator power is "**" not "^". For example, to let Smart Calculator calculate x value where square x is 7, user should input x ** 2 == 7 instead of x ^ 2 == 7.
+		</p>
+		<p style="color:black;">Third, in Smart Calculator user is able to input at most six expressions at once. Each expression is one line. Smart Calculator looks on the expressions user input as an expression group to solve. However, considering the low performance of some mobile devices, Smart Calculator only goes through the expressions once. For example, if user inputs</p><p style="color:black;">x**2 + 2*x == y</p><p style="color:black;">y + 1 == 2</p><p style="color:black;">, Smart Calculator can only get y value is -1 but cannot solve x since x needs y's value to solve but Smart Calculator tries to solve x's expression before y. In this way, when inputs expressions, user may try to place independent expressions on top and then the expressions which rely on other variables' values to solve. 
+		</p>
+		
+		<p style="font-family:verdana;color:purple;">
+			<b>Input to plot graph</b>:
+		</p>
+		<p style="color:black">User is able to input expression(s) to plot 2D, polar or 3D charts. Accepted expressions can be an equation , e.g. y**2 == sin(x) * x or t1 + t2 == t3. Besides equation, assign (=) expression with a single variable on the left side like a = b + 20 is also accepted. If an input expression is neither equation nor assign expression, Scientific Calculator Plus will assume the value of the expression equals to another single variable. For example, if user inputs 2 * x + 5, Scientific Calculator Plus will automatically convert it to 2 * x + 5 == f_x where f_x is another single variable.</p>
+		<p style="color:black">User can type at most 4 expressions in one input to plot a chart. If the total number of variables in all the expressions is 3, a 3D chart will be plotted. If the total number of variables in all the expressions is 2, and none of the variables is α, β, γ or θ, a 2D chart will be plotted. If the total number of variables in all the expressions is 2, and at least one of the variable is α, β, γ or θ, a polar chart will be plotted. For instance,</p><p style="color:black">y=x+2z</p><p style="color:black">z==sin(x)*y</p><p style="color:black">x/abs(tan(x) + 1) == y</p><p style="color:black">4==x</p><p style="color:black">will be plotted as a 3D chart while </p><p style="color:black">x + abs(x) - 3</p><p style="color:black">4 + y == x</p><p style="color:black">will be a 2D chart because x + abs(x) - 3 will be automatically converted to x + abs(x) - 3 == y so that in total only two variables. And </p><p style="color:black">log(r)</p><p style="color:black">θ</p><p style="color:black">will be plotted as a polar chart with θ value being the angle.</p>
+		<p style="color:black">Please note that the plot functionality in Smart Calculator is different from the independent plotting 2D/polar/3D chart programs in Smart Calculator. In Smart Calculator, expressions not data values are plotted. As such, if user changes plotting range by zooming or sliding the chart, Smart Calculator would automatically recalculate the expression values for the new plotting range while the independent 2D/polar/3D plotting programs simply use existing data values.</p>
+		<p style="color:black">Also, if the input expression is an implicit function, Calculator will try to solve it and plot the root expression(s). If plot 2-variable implicit function, at most 4 root expressions can be drawn. If plot 3-variable implicit function, Calculator may calculate roots for each of the variables and then plot at most 2 roots for every variable. In other words, a single 3-variable implicit function may imply at most 6 to-be-plotted expressions. The whole solving-plotting procedure in this case will take quite long time.</p>
+
+		<p style="font-family:verdana;color:purple;">
+			<b>Input from camera</b>:
+		</p>
+		<p style="color:black">If the Android device has a back camera, user is able to input expression(s) by taking photo of them. Note that at this moment only printed expressions are supported. Handwriting recognition is available in our another app named Smart Photographic Calculator and is still at beta stage. More detailed information about use of camera input is available in <a href="recog_print.html" target="_self">a separate help section</a>.</p>
+		
+		<p style="font-family:verdana;color:purple;">
+			<b>Output</b>: 
+		</p>
+		<p style="color:black">The output box shows user the result of calculations. If syntax of the input expression is incorrect, output box shows error message. User can also place one of the expressions or results in last calculation into the input text box by clicking the corresponding item in output box. Note that print outputs are not shown in output box in Smart Calculator.</p>
+		<p style="font-family:verdana;color:purple;">
+			<b>History</b>:
+		</p>
+		<p style="color:black">The history screen shows user the recent calculation history of smart calculator GUI. By clicking one of the expressions or results, user is able to place any historical expression or result into input box, which saves typing time.</p>
+		<p style="font-family:verdana;color:purple;">
+			<b>Calculator Assistant</b>:
+		</p>
+		<p style="color:black">The calculator assistant screen is accessible by clicking Android menu button and select "Calc Assistant" button. This tool provides two functions. One is inserting a constant into input. The other is converting value from one unit to another unit. The unit conversion functionality is supported by an underlying function called convert_unit. If text in the input box is a valid real value, it is placed in the units conversion tab as initial value to-be-converted. Otherwise, units conversion tab does not place an initial value. If conversion is successful, user is able to select the converted value or conversion expression to insert.</p>
+	</body>
+</html>

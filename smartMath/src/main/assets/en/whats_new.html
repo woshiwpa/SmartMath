@@ -1,0 +1,168 @@
+﻿<html>
+	<head>
+		<title>Smart Calculator Help</title>
+	</head>
+	<body style="background-color:white;">
+		<h2 style="color:blue">What's new in Smart Calculator</h2>
+
+		<p style="font-family:verdana;color:magenta;">
+<b>v 1.6.5</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 2D graph engine for expressions is improved. Caching technology is implemented to store calculated results. And the expression chart is more sensative to Drag-to-move operations. However, note that plotting expressions is different from plotting data. Expression result at a new value need be calculated anyway. As such if the expression is not simple, user may still experience significant lag.
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. Plot graph for 2-variable and 3-variable implicit functions. Note that only solvable implicit functions can be plotted. Polymonials of degree larger than 3 can be solved but cannot be plotted because the root expressions are very complicated. If plot 2-variable implicit function, at most 4 root expressions can be drawn. For 3-variable implicit function, Calculator may calculate roots for each of the variables and then plot at most 2 roots for every variable. In other words, a single 3-variable implicit function may imply at most 6 to-be-plotted expressions. The whole solving-plotting procedure in this case will take quite long time. Also note that implicit function must be an equation, not assignment, i.e. x**2+y**2=4-z**2 is invalid while x**2+y**2==4-z**2 can be accepted;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. Change behavior of functions size, zeros and ones. Now if calculate size of a value, not matrix, [] not [0] will return. Also, function zeros and ones return 0 and 1 respectively if input parameter is [];
+		</p>
+		<p style="font-family:verdana;color:black;">
+	4. Performance improvement;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	5. A number of bug fixes;
+		</p>
+		<p style="font-family:verdana;color:green;">
+<b>v 1.6.4</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. Improved PRINTED math recognition functionality. Now more accurate;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. Minor functionality optimized and several bugs fixed;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. Release 1.6.4.16 improves indefinite integration calculation;
+		</p>
+		<p style="font-family:verdana;color:green;">
+<b>v 1.6.3</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. Improved PRINTED math recognition functionality. Now more accurate;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. Minor functionality optimized and several bugs fixed;
+		</p>
+		<p style="font-family:verdana;color:magenta;">
+<b>v 1.6.2</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. Improved PRINTED math recognition functionality. Now more accurate. Now support addition (95% accuracy), subtraction (95% accuracy), multiplication (90% accuracy), division (90-95% accuracy), mixed fractions and complex fractions (85% accuracy), power (90% accuracy), multi-variable linear equations (80% accuracy, variable name should be x, a, b, c or y), polynomial (80% accuracy, variable name should be x, a, b, c or y), (first level) integral (70% accuracy), summation (80% accuracy) and basic matrix calculation (60% accuracy). Operator can be complex values. Note that handwriting math recognition is still in beta stage. 
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. Minor functionality optimized and several bugs fixed;
+		</p>
+		<p style="font-family:verdana;color:magenta;">
+<b>v 1.6.1</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. Improved math recognition functionality. Now more accurate, especially for handwritings;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. Allow user to send unsatisfactory recognition results to developer so that the software can be further improved;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. Minor functionality optimized and several bugs fixed;
+		</p>
+		<p style="font-family:verdana;color:red;">
+<b>v 1.6.0</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. Optimized math recognition procedure. Now more flexible, more stable and faster;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. Support calculation of indefinite integral and add adaptive Gauss-Kronrod algorithm to calculate integral;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. Optimize polar chart and make it much faster when user moves the chart;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	4. Be able to process any large values like 1000**1000;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	5. Result is more accurate. The rounding error now is only 5*10E-48 compared to Octave which can be as large as 10E-17. Only if a value is smaller than 5*10E-48 this app cannot handle (it will be asssumed to be zero);
+		</p>
+		<p style="font-family:verdana;color:black;">
+	6. Support infinite and nan;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	7. Be able to calculate eigen values and vectors;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	8. Extend support to hexadecimal, octal and binary numbers (both integer and float values). Hexadecimal number starts with 0x, e.g. 0xEFF6 and 0x23FAB.DF24. Octal number starts with an extra 0, e.g. 02751 and 00.23561. Binary number starts with 0b, e.g. 0b0011101 and 0b11.1001;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	9. Add new functions sum_over and product_over;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	10. Minor functionality optimized and several bugs fixed;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	11. Baidu ads service has been added into this app aiming at users in China mainland. Only if system language is simplified Chinese Baidu ads service is activated. Users in other part of world are not affected. Baidu ads service requires additional permissions including coarse location and phone state to push relative ads to different groups of people. However, neither Baidu nor us store users' private data. Users' privacy is fully protected;
+		</p>
+	<p style="font-family:verdana;color:magenta;">
+<b>v 1.5.1</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. Improved math recognition accuracy;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. Support more devices;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. Improved support to binary, octal and hexadecimal values, both integers and floating values;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	4. Much faster processing/recognising procedure;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	5. Improved user interface;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	6. Bug fixes;
+		</p>
+		<p style="font-family:verdana;color:red;">
+<b>v 1.5</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. Support printed math expression recognition. User can take photo of math expressions and Smart Calculator recognizes them to input;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. Support plotting 3D and polar charts;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. Support multiple SD cards as such user is able to select in which storage to place app's data;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	4. Support a lot more functions;
+		</p>
+		<p style="font-family:verdana;color:green;">
+<b>v 1.0.2</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. GUI minor changes and bug fixes.
+		</p>
+		<p style="font-family:verdana;color:green;">
+<b>v 1.0.1</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. GUI minor changes and bug fixes.
+		</p>
+		<p style="font-family:verdana;color:red;">
+<b>v 1.0</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. Support basic calculation.
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. Support 2D plotting;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. Support solving polynomials and linear multi-variable equations;
+		</p>
+		<p style="font-family:verdana;color:black;">
+	4. Support (high order) integral;
+		</p>
+	</body>
+</html>

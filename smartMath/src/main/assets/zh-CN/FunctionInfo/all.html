@@ -1,0 +1,1256 @@
+<html>
+<head>
+<title>可编程科学计算器帮助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">可编程科学计算器帮助：所有函数</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函数名</th>
+<th>函数帮助信息</th>
+</tr>
+<tr>
+<td><center>abs</center></td>
+<td><p>abs(1) :</p>
+<p>abs(x)返回复数x的模或者实数x的绝对值。</p>
+</td>
+</tr>
+<tr>
+<td><center>acos</center></td>
+<td><p>acos(1) :</p>
+<p>acos(x)返回x的反余弦值，注意x可以为复数。</p>
+</td>
+</tr>
+<tr>
+<td><center>acosd</center></td>
+<td><p>acosd(1) :</p>
+<p>acosd(x)返回基于角度的x的反余弦值。</p>
+</td>
+</tr>
+<tr>
+<td><center>acosh</center></td>
+<td><p>acosh(1) :</p>
+<p>函数acosh(x)为双曲余弦函数的反函数。</p>
+</td>
+</tr>
+<tr>
+<td><center>adj</center></td>
+<td><p>adj(1) :</p>
+<p>函数cofactor(x)返回2维方阵x的伴随矩阵。</p>
+</td>
+</tr>
+<tr>
+<td><center>alloc_array</center></td>
+<td><p>alloc_array(1...) :</p>
+<p>alloc_array(x...)返回一个新分配的矩阵，其大小由参数决定。所有的参数都必须为正整数。</p>
+<p>alloc_array(2) :</p>
+<p>alloc_array(x, y)返回一个新分配的矩阵，其大小由参数x决定，参数x或者是一批正整数，或者是一个正整数数列。参数y是矩阵中所有元素的初始值，注意y参数可省略，如果省略，所有元素被初始化为0。</p>
+</td>
+</tr>
+<tr>
+<td><center>and</center></td>
+<td><p>and(1...) :</p>
+<p>and(x...)接受不少于1个的任意个数的参数，返回这些参数的逻辑与值。如果某一个参数不是布尔类型，将会被自动转换为布尔类型。</p>
+</td>
+</tr>
+<tr>
+<td><center>angle</center></td>
+<td><p>angle(1) :</p>
+<p>angle(x)返回复数x基于弧度的幅角值。</p>
+</td>
+</tr>
+<tr>
+<td><center>asin</center></td>
+<td><p>asin(1) :</p>
+<p>asin(x)返回x的反正弦值，注意x可以为复数。</p>
+</td>
+</tr>
+<tr>
+<td><center>asind</center></td>
+<td><p>asind(1) :</p>
+<p>asind(x)返回基于角度的x的反正弦值。</p>
+</td>
+</tr>
+<tr>
+<td><center>asinh</center></td>
+<td><p>asinh(1) :</p>
+<p>函数asinh(x)为双曲正弦函数的反函数。</p>
+</td>
+</tr>
+<tr>
+<td><center>atan</center></td>
+<td><p>atan(1) :</p>
+<p>atan(x)返回x的反正切值，注意x可以为复数。</p>
+</td>
+</tr>
+<tr>
+<td><center>atand</center></td>
+<td><p>atand(1) :</p>
+<p>atand(x)返回基于角度的x的反正切值。</p>
+</td>
+</tr>
+<tr>
+<td><center>atanh</center></td>
+<td><p>atanh(1) :</p>
+<p>函数atanh(x)为双曲正切函数的反函数。</p>
+</td>
+</tr>
+<tr>
+<td><center>avg</center></td>
+<td><p>avg(0...) :</p>
+<p>函数avg(…)返回任意个数参数的平均值。</p>
+</td>
+</tr>
+<tr>
+<td><center>cd</center></td>
+<td><p>cd(1) :</p>
+<p>change_dir(path)（别名cd(path)）将当前路径变为字符串路径path。如果成功，返回true，否则返回false。例子包括change_dir("D:\\Windows") (Windows)和cd("/") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>ceil</center></td>
+<td><p>ceil(1) :</p>
+<p>ceil(x), x是浮点数，返回不小于x的最小整数。</p>
+<p>ceil(2) :</p>
+<p>ceil(x,y)，x是浮点数，y是非负整数，返回不小于x的小数点后面保留y位有效数字的最小数值。</p>
+</td>
+</tr>
+<tr>
+<td><center>change_dir</center></td>
+<td><p>change_dir(1) :</p>
+<p>change_dir(path)（别名cd(path)）将当前路径变为字符串路径path。如果成功，返回true，否则返回false。例子包括change_dir("D:\\Windows") (Windows)和cd("/") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>clone</center></td>
+<td><p>clone(1) :</p>
+<p>clone(source_value)复制输入参数source_value并返回source_value的拷贝。输入参数可以是任何数据类型，包括字符串，数，复数以及数组。比如，如果变量a等于[1,2]，用户执行语句variable b = clone(a)就会得的b等于[1,2]。但是这时候b和a是两个不同的数据。如果用户改变a的值，比如，设置a[0]等于3，a将会变成[3,2]但是b依然是[1，2]。</p>
+</td>
+</tr>
+<tr>
+<td><center>cofactor</center></td>
+<td><p>cofactor(1) :</p>
+<p>函数cofactor(x)返回2维方阵x的余因子矩阵。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv</center></td>
+<td><p>conv(2) :</p>
+<p>conv(input_a, inputb)返回input_a和input_b的卷积。Input_a和input_b要么都是一维向量，要么都是二维矩阵。当前本函数仅仅支持一维和二维卷积，比如：</p>
+<p>conv([4,8,2,9],[5,3,8,9,6,7,8]) = [20, 52, 66, 151, 139, 166, 181, 132, 79, 72]</p>
+<p>conv([[4,8,2,9],[8,6,7,9],[2,2,8,-4]],[[-5,i,7],[0.6,8,4]]) = [[-20, -40 + 4 * i, 18 + 8 * i, 11 + 2 * i, 14 + 9 * i, 63], [-37.6, 6.8 + 8 * i, 102.2 + 6 * i, 50.4 + 7 * i, 129 + 9 * i, 99], [-5.2, 57.6 + 2 * i, 58.2 + 2 * i, 119.4 + 8 * i, 156 - 4 * i, 8], [1.2, 17.2, 28.8, 69.6, 0, -16]]</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_bin_to_dec</center></td>
+<td><p>conv_bin_to_dec(1) :</p>
+<p>conv_bin_to_dec(x)将一个二进制的非负数或代表该数的字符串x（x可以为浮点数，也可以为整数）转换为一个十进制的数值。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_bin_to_hex</center></td>
+<td><p>conv_bin_to_hex(1) :</p>
+<p>conv_bin_to_hex(x)将一个二进制的非负数或代表该数的字符串x（x可以为浮点数，也可以为整数）转换为一个代表16进制数的字符串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_bin_to_oct</center></td>
+<td><p>conv_bin_to_oct(1) :</p>
+<p>conv_bin_to_oct(x)将一个二进制的非负数或代表该数的字符串x（x可以为浮点数，也可以为整数）转换为一个代表八进制数的字符串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_dec_to_bin</center></td>
+<td><p>conv_dec_to_bin(1) :</p>
+<p>conv_dec_to_bin(x)将一个十进制的非负数或代表该数的字符串x（x可以为浮点数，也可以为整数）转换为一个代表二进制数的字符串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_dec_to_hex</center></td>
+<td><p>conv_dec_to_hex(1) :</p>
+<p>conv_dec_to_hex(x)将一个十进制的非负数或代表该数的字符串x（x可以为浮点数，也可以为整数）转换为一个代表16进制数的字符串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_dec_to_oct</center></td>
+<td><p>conv_dec_to_oct(1) :</p>
+<p>conv_dec_to_oct(x)将一个十进制的非负数或代表该数的字符串x（x可以为浮点数，也可以为整数）转换为一个代表八进制数的字符串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_hex_to_bin</center></td>
+<td><p>conv_hex_to_bin(1) :</p>
+<p>conv_hex_to_bin(x)将一个16进制的非负数或代表该数的字符串x（x可以为浮点数，也可以为整数）转换为一个代表二进制数的字符串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_hex_to_dec</center></td>
+<td><p>conv_hex_to_dec(1) :</p>
+<p>conv_hex_to_dec(x)将一个16进制的非负数或代表该数的字符串x（x可以为浮点数，也可以为整数）转换为一个十进制的数值。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_hex_to_oct</center></td>
+<td><p>conv_hex_to_oct(1) :</p>
+<p>conv_hex_to_oct(x)将一个16进制的非负数或代表该数的字符串x（x可以为浮点数，也可以为整数）转换为一个代表八进制数的字符串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_ints_to_str</center></td>
+<td><p>conv_ints_to_str(1) :</p>
+<p>conv_ints_to_str(int_or_array)将一个整数或者一组整数转换成一个Unicode字符串。如果只有一个整数，返回的字符串只包含一个Unicode字符，否则，返回字符串的字符数目和int_or_array中的元素数目一致。如果需要转换的整数是负数或者超出了Unicode字符集的定义范围，则被转换成整数0所对应的Unicode字符。示例包括conv_ints_to_str([20320, 22909, 25105, 22909, 22823, 23478, 22909])返回"你好我好大家好"，以及conv_ints_to_str(20320)返回"你"。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_oct_to_bin</center></td>
+<td><p>conv_oct_to_bin(1) :</p>
+<p>conv_oct_to_bin(x)将一个八进制的非负数或代表该数的字符串x（x可以为浮点数，也可以为整数）转换为一个代表二进制数的字符串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_oct_to_dec</center></td>
+<td><p>conv_oct_to_dec(1) :</p>
+<p>conv_oct_to_dec(x)将一个八进制的非负数或代表该数的字符串x（x可以为浮点数，也可以为整数）转换为一个十进制的数值。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_oct_to_hex</center></td>
+<td><p>conv_oct_to_hex(1) :</p>
+<p>conv_oct_to_hex(x)将一个八进制的非负数或代表该数的字符串x（x可以为浮点数，也可以为整数）转换为一个代表16进制数的字符串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_str_to_ints</center></td>
+<td><p>conv_str_to_ints(1) :</p>
+<p>conv_str_to_ints(str)将一个Unicode字符串转换成一个整数数组。通常，一个Unicode字符对应一个整数（但也有可能对应两个整数，如果该Unicode字符超出了UTF-16字符集的范围。但这种情况很少出现）。如果字符串是空的，则返回一个空数组。一个示例为conv_str_to_ints("你好我好大家好")返回[20320, 22909, 25105, 22909, 22823, 23478, 22909]。</p>
+</td>
+</tr>
+<tr>
+<td><center>convert_unit</center></td>
+<td><p>convert_unit(3) :</p>
+<p>函数convert_unit(value, from_unit, to_unit)将基于某一个单位的数值转换为基于另外一个单位的数值。第一个参数是将要转换的数值，第二个参数是将被转换的单位（单位是一个对大小写敏感的字符串），第三个参数是转换后的单位（单位是一个对大小写敏感的字符串）。比如，convert_unit(23.71, "m", "km")。</p>
+<p>本函数支持以下单位：</p>
+<p>1. 长度单位: "um" (微米), "mm" (毫米), "cm" (厘米), "m" (米), "km" (公里), "in" (英寸), "ft" (英尺), "yd" (码), "mi" (英里), "nmi" (海浬), "AU" (天文单位), "ly" (光年), "pc" (秒差距);</p>
+<p>2. 面积单位: "mm2" (平方毫米), "cm2" (平方厘米), "m2" (平方米), "ha" (公顷), "km2" (平方公里), "sq in" (平方英寸), "sq ft" (平方英尺), "sq yd" (平方码), "ac" (英亩), "sq mi" (平方英里);</p>
+<p>3. 体积单位: "mL" (毫升), "L" (升), "m3" (立方米), "cu in" (立方英寸), "cu ft" (立方英尺), "cu yd" (立方码), "km3" (立方公里), "fl oz(Imp)" (液盎司(英制)), "pt(Imp)" (品脱(英制)), "gal(Imp)" (加仑(英制)), "fl oz(US)" (液盎司(美制)), "pt(US)" (品脱(美制)), "gal(US)" (加仑(美制));</p>
+<p>4. 质量单位: "ug" (微克), "mg" (毫克), "g" (克), "kg" (千克), "t" (吨), "oz" (盎司), "lb" (磅), "jin" (市斤), "jin(HK)" (斤(香港)), "jin(TW)" (台斤);</p>
+<p>5. 速度单位: "m/s" (米每秒), "km/h" (千米每小时), "ft/s" (英尺每秒), "mph" (英里每小时), "knot" (节);</p>
+<p>6. 时间单位: "ns" (纳秒), "us" (微秒), "ms" (毫秒), "s" (秒), "min" (分钟), "h" (小时), "d" (天), "wk" (礼拜), "yr" (年);</p>
+<p>7. 力单位: "N" (牛顿), "kgf" (千克力), "lbF" (磅力);</p>
+<p>8. 压强单位: "Pa" (帕斯卡), "hPa" (百帕), "kPa" (千帕), "MPa" (兆帕), "atm" (大气压), "psi" (每平方英寸上受到的磅力压力), "Torr" (毫米汞柱);</p>
+<p>9. 能量单位: "J" (焦耳), "kJ" (千焦), "MJ" (兆焦), "kWh" (千瓦时), "cal" (卡路里), "kcal" (千卡), "BTU" (英热单位);</p>
+<p>10. 功率单位: "W" (瓦特), "kW" (千瓦), "MW" (兆瓦), "cal/s" (卡路里每秒), "BTU/h" (英热单位每小时), "hp" (马力);</p>
+<p>11. 温度单位: "0C" (摄氏度), "0F" (华氏度), "K" (开氏温标);</p>
+</td>
+</tr>
+<tr>
+<td><center>copy_file</center></td>
+<td><p>copy_file(3) :</p>
+<p>copy_file(source, destination, replace_exist)函数拷贝位于字符串source路径的文件或文件夹到位于字符串destination路径的文件或文件夹。如果第三个参数，replace_exist，是true，那么如果目标文件已经存在，它将会被源文件（或者源文件夹中的对应文件）替换。注意第三个参数可以省略，它的缺省值为false。 例子包括copy_file("c:\\temp\\try1", "D:\\", true) (Windows)和copy_file("/mnt/sdcard/testfile.txt", "./testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>cos</center></td>
+<td><p>cos(1) :</p>
+<p>cos(x)返回x的余弦值，注意x可以为复数。</p>
+</td>
+</tr>
+<tr>
+<td><center>cosd</center></td>
+<td><p>cosd(1) :</p>
+<p>cosd(x)返回基于角度的x的余弦值。</p>
+</td>
+</tr>
+<tr>
+<td><center>cosh</center></td>
+<td><p>cosh(1) :</p>
+<p>函数cosh(x)为双曲余弦函数。</p>
+</td>
+</tr>
+<tr>
+<td><center>create_file</center></td>
+<td><p>create_file(2) :</p>
+<p>create_file(path, is_folder)创建一个文件（如果is_folder是false或者不存在）或者目录（如果if_folder是true）。如果这个基于字符串的路径path的上级目录不存在，不存在的上级目录将会被创建。如果文件能够被创建，这个函数返回true，否则返回false。例子包括create_file("c:\\temp\\try1", true) (Windows)和create_file("testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>delete_file</center></td>
+<td><p>delete_file(2) :</p>
+<p>delete_file(path, delete_children_in_folder)删除一个位于字符串path的文件或者目录。如果是一个目录且第二个参数delete_children_in_folder是true，目录中的所以文件和子目录将会被删除。注意第二个参数可以省略，它的缺省值是false。如果删除成功，本函数返回true，否则返回false。例子包括delete_file("c:\\temp\\try1", true) (Windows)和delete_file("testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>det</center></td>
+<td><p>det(1) :</p>
+<p>det(x)计算2维方阵x的行列式值。</p>
+</td>
+</tr>
+<tr>
+<td><center>deter</center></td>
+<td><p>deter(1) :</p>
+<p>deter(x)计算2维方阵x的行列式值。</p>
+</td>
+</tr>
+<tr>
+<td><center>dir</center></td>
+<td><p>dir(1) :</p>
+<p>print_file_list(path) (别名ls(path)或者dir(path))函数和Windows平台上的dir命令以及Linux平台上的ls命令类似。它打印出位于字符串path路径的文件或者目录中的所有子文件和子目录的信息。它返回打印的条目的个数。如果不存在一个文件或者目录对应于path路径，它返回-1。注意参数path是可以省略的。它的缺省值是当前目录。例子包括dir() (Windows)和ls("../testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>dprod</center></td>
+<td><p>dprod(2) :</p>
+<p>函数dprod用于计算两个向量 [x1, x2, ... xn]和[y1, y2, ... yn]的点乘值。</p>
+</td>
+</tr>
+<tr>
+<td><center>eig</center></td>
+<td><p>eig(1) :</p>
+<p>eig(A)计算2维方阵A的特征向量和特征值。这个函数返回一个包含两个成员的列表。第一个成员是特征向量矩阵，每一列是一个特征向量。第二个成员是一个对角矩阵，每一个对角线元素是一个特征值。注意运算这个函数非常耗费内存和CPU资源，如果在手机上运行，矩阵A的尺寸最好不要超过6*6，如果在电脑上运行，最好不要超过8*8，否则可能造成内存不足而程序崩溃或者运行很长时间而没有结果。</p>
+<p>eig(2) :</p>
+<p>eig(A, B)计算2维方阵A相对于同样尺寸的方阵B的特征向量和特征值，也就是Av = lambda * Bv，在这里，。lambda是一个特征值，v是一个特征向量。第二个参数，B，可以省略，其缺省值为I矩阵。这个函数返回一个包含两个成员的列表。第一个成员是特征向量矩阵，每一列是一个特征向量。第二个成员是一个对角矩阵，每一个对角线元素是一个特征值。注意运算这个函数非常耗费内存和CPU资源，如果在手机上运行，矩阵A的尺寸最好不要超过6*6，如果在电脑上运行，最好不要超过8*8，否则可能造成内存不足而程序崩溃或者运行很长时间而没有结果。</p>
+</td>
+</tr>
+<tr>
+<td><center>evaluate</center></td>
+<td><p>evaluate(1...) :</p>
+<p>evaluate(expr_string,var_string1,var_value1,var_string2,var_value2, ...) 返回当基于字符串的变量var_string1等于var_value1，var_string2等于var_value2，...时，基于字符串的表达式expr_string的值。注意变量var_string1，var_string2，...的值可以为任意类型。变量的数目可以为0，也就是说，evaluate("3+2")是合法的。</p>
+</td>
+</tr>
+<tr>
+<td><center>exp</center></td>
+<td><p>exp(1) :</p>
+<p>exp(x)返回自然对数e的x次方，x可以为实数或者虚数。</p>
+</td>
+</tr>
+<tr>
+<td><center>eye</center></td>
+<td><p>eye(1) :</p>
+<p>eye(x)返回正整数x乘x的2维方阵I。注意表达式eye(0)返回常数1。</p>
+<p>eye(2) :</p>
+<p>eye(x,y)返回y（y为正整数）维方阵I，注意每一维长度均为正整数x。</p>
+</td>
+</tr>
+<tr>
+<td><center>fact</center></td>
+<td><p>fact(1) :</p>
+<p>函数fact(x)计算非负整数x的阶乘。</p>
+</td>
+</tr>
+<tr>
+<td><center>fclose</center></td>
+<td><p>fclose(1) :</p>
+<p>fclose(fd)关闭文件号fd所对应的文件。如果文件号不存在，返回-1，否则返回0。</p>
+</td>
+</tr>
+<tr>
+<td><center>feof</center></td>
+<td><p>feof(1) :</p>
+<p>feof(fd)用于确定是否已经到达文件号为fd的读模式文件的末尾。如果是，返回true，否则返回false。如果文件号不合法，抛出异常。</p>
+</td>
+</tr>
+<tr>
+<td><center>FFT</center></td>
+<td><p>FFT(1...) :</p>
+<p>FFT(a, ...)返回对一个数值向量作快速傅立叶变换后的值。注意数值向量中数值的个数必须是2的整数次方。如果参数a是一个数值序列，则本函数只可能拥有一个参数，返回值为对序列a[0], a[1], ..., a[N-1]作快速傅立叶变换的返回值。如果参数a仅仅是一个实数或者虚数，则本函数最少包含2个参数，而返回序列a， optional_params[0]， ...， optional_params[number_of_optional_params - 2]， optional_params[number_of_optional_params - 1]快速傅立叶变换后的值。注意返回值总是一个数组。</p>
+<p>函数例子：</p>
+<p>FFT(1, 2, 3, 4)返回[10, -2+2i, -2, -2 - 2i]；</p>
+<p>FFT([1, 2, 3, 4])同样也是返回[10, -2+2i, -2, -2 - 2i]；</p>
+</td>
+</tr>
+<tr>
+<td><center>floor</center></td>
+<td><p>floor(1) :</p>
+<p>floor(x)，x是浮点数，返回不大于x的最大整数。</p>
+<p>floor(2) :</p>
+<p>floor(x,y)，x是浮点数，y是非负整数，返回不大于x的小数点后面保留y位有效数字的最大数值。</p>
+</td>
+</tr>
+<tr>
+<td><center>fopen</center></td>
+<td><p>fopen(2) :</p>
+<p>fopen(path, mode)打开位于path路径的文件并返回文件号以进行后续读写操作。它和C以及Matlab中的同名函数用法相似。但它仅支持"r"、"a"、"w"、"rb"、"ab"和"wb"六种读写模式。例子包括fopen("C:\\Temp\\Hello.dat", "ab") (Windows)和fopen("./hello.txt", "r") (Android)。</p>
+<p>fopen(3) :</p>
+<p>fopen(path, mode, encoding)用字符编码encoding打开位于path路径的文件并返回文件号以进行后续读写操作。由于只有文本文件支持字符编码，参数mode只能为"r"、"a"和"w"3种读写模式。例子包括fopen("C:\\Temp\\Hello.txt", "a", "LATIN-1") (Windows)和fopen("./hello.txt", "r", "UTF-8") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>fprintf</center></td>
+<td><p>fprintf(2...) :</p>
+<p>printf(format_string, ...)，sprintf(format_string, ...)和fprintf(fd, format_string, ...)和C/C++中的对应函数工作方式相似。这些函数通过format_string和其后的数值参数构造出一个新的字符串，printf函数将字符串打印到标准输出，sprintf函数将字符串作为返回值返回，fprintf函数则将字符串输出到文件号为fd的文本文件。字符串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字符串（%c和%s）等等。用户可以在C语言的帮助文档中找到format_string的构造方法。例如，printf("Hello world!%f", 3.14)将会打印输出"Hello world!3.140000"，而sprintf("%c%d", "A", 9)则返回"A9"（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字符串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>fread</center></td>
+<td><p>fread(4) :</p>
+<p>fread(fd, buffer, from, length)从文件（文件号fd）中读取length个字节数据，并把读出的数据保存在数组buffer中（从buffer的索引from开始保存）。注意from和length必须非负，并且from+length必须不比buffer的容量大。参数from和length可以同时省略。如果它们被省略，意味着fread读取整个buffer容量的字节数据并保存在整个buffer中。Buffer也可以省略，如果buffer省略，fread读取一个字节并返回。如果fread在读取之前发现已经到达文件末尾，则返回-1，否则返回读取字节的个数（如果buffer不省略）。如果文件不存在或非法或不可以访问，将会抛出异常。例子包括fread(1)、fread(2, byte_buffer)以及fread(2, byte_buffer, 3, 7)。</p>
+</td>
+</tr>
+<tr>
+<td><center>freadline</center></td>
+<td><p>freadline(1) :</p>
+<p>freadline(fd)读取文本文件（文件号是fd）的一行。如果freadline在读取之前发现已经到达文件末尾，它返回NULL。否则，它返回基于字符串的这一行的内容，但不包括结尾的换行符。</p>
+</td>
+</tr>
+<tr>
+<td><center>fscanf</center></td>
+<td><p>fscanf(2) :</p>
+<p>scanf(format_string)，sscanf(input_from, format_string)和fscanf(fd, format_string)和C/C++中的对应函数工作方式相似。scanf读取用户的一行输入，sscanf读取字符串input_from，fscanf从文件（文件号fd）中读取文件内容。字符串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字符串（%c和%s）等等。用户可以在C语言的帮助文档中找到format_string的构造方法。但是，和C语言有所不同，MFP中的这些函数不需要输入用于存储读取数值的参数。所有的读取的数值将会保存在一个数组中作为返回值返回。比如，sscanf("3Hello world!", "%d%c%c%s")将会返回[3, "H", "e", "llo"]（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字符串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>fwrite</center></td>
+<td><p>fwrite(4) :</p>
+<p>fwrite(fd, buffer, from, length)向文件（文件号fd）中写入length个字节数据。这些字节数据保存在数组buffer中（从buffer的索引from开始）。注意from和length必须非负，并且from+length必须不比buffer的容量大。参数from和length可以同时省略。如果它们被省略，意味着fwrite写入整个buffer的字节数据。Buffer也可以是一个单独的字节，在这种情况下fwrite仅写入一个字节的数据。如果文件不存在或非法或不可以访问，将会抛出异常。例子包括fwrite(1, 108)、fwrite(2, byte_buffer)以及fwrite(2, byte_buffer, 3, 7)。</p>
+</td>
+</tr>
+<tr>
+<td><center>gavg</center></td>
+<td><p>gavg(0...) :</p>
+<p>函数gavg(…)返回任意个数参数的几何平均数值。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_absolute_path</center></td>
+<td><p>get_absolute_path(1) :</p>
+<p>get_absolute_path(fd_or_path)返回文件号fd_or_path（这里fd_or_path是一个整数）或者相对路径为fd_or_path（这里fd_or_path是一个字符串）所对应的文件的绝对路径字符串。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_canonical_path</center></td>
+<td><p>get_canonical_path(1) :</p>
+<p>get_canonical_path(fd_or_path)返回文件号fd_or_path（这里fd_or_path是一个整数）或者相对路径为fd_or_path（这里fd_or_path是一个字符串）所对应的文件的标准路径（不依赖符号链接的绝对路径）字符串。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_constant</center></td>
+<td><p>get_constant(2) :</p>
+<p>函数get_constant(const_name, n)返回一个由区分大小写的字符串const_name所对应的常数值，返回的数值将会四舍五入后保留小数点后面n位有效数值，这里n为非负整数并且可以省略。如果n被省略，返回值将不会被四舍五入处理。本函数支持以下常数：</p>
+<p>1. 圆周率 (const_name == "pi");</p>
+<p>2. 自然对数 (const_name == "e");</p>
+<p>3. 真空中的光速 [m/s] (const_name == "light_speed_in_vacuum");</p>
+<p>4. 万有引力常数 [m**3/kg/(s**2)] (const_name == "gravitational_constant");</p>
+<p>5. 普朗克常数 [J*s] (const_name == "planck_constant");</p>
+<p>6. 磁常数（真空磁导率） [N/(A**2)] (const_name == "magnetic_constant");</p>
+<p>7. 电常数（真空电容率） [F/m] (const_name == "electric_constant");</p>
+<p>8. 基本电荷 [c] (const_name == "elementary_charge_constant");</p>
+<p>9. 阿伏伽德罗常数 [1/mol] (const_name == "avogadro_constant");</p>
+<p>10. 法拉第常数 [C/mol] (const_name == "faraday_constant");</p>
+<p>11. 气体常数 [J/mol/K] (const_name == "molar_gas_constant");</p>
+<p>12. 玻尔兹曼常量 [J/K] (const_name == "boltzman_constant");</p>
+<p>13. 标准重力 [m/(s**2)] (const_name == "standard_gravity");</p>
+<p>例如，如果用户输入get_constant("pi", 4)，结果将会是3.1416；如果用户输入get_constant("pi", 8)，结果将会是3.14159265；如果用户输入get_constant("pi", 0)，将会得到3，如果用户输入get_constant("pi")返回值将是3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 （小数点后有100位数字），这个数值就是本软件内部所使用的圆周率数值。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_day_of_month</center></td>
+<td><p>get_day_of_month(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分别返回时标timestamp所对应的年，月，本年中的第几天，本月中的第几天，本星期中的第几天（礼拜天是第0天，礼拜一是第一天，...），小时，分钟，秒钟和毫秒。时标是时标所表示的时刻和1970年1月1日午夜（UTC）的毫秒数时间差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是礼拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_day_of_week</center></td>
+<td><p>get_day_of_week(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分别返回时标timestamp所对应的年，月，本年中的第几天，本月中的第几天，本星期中的第几天（礼拜天是第0天，礼拜一是第一天，...），小时，分钟，秒钟和毫秒。时标是时标所表示的时刻和1970年1月1日午夜（UTC）的毫秒数时间差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是礼拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_day_of_year</center></td>
+<td><p>get_day_of_year(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分别返回时标timestamp所对应的年，月，本年中的第几天，本月中的第几天，本星期中的第几天（礼拜天是第0天，礼拜一是第一天，...），小时，分钟，秒钟和毫秒。时标是时标所表示的时刻和1970年1月1日午夜（UTC）的毫秒数时间差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是礼拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_eigen_values</center></td>
+<td><p>get_eigen_values(1) :</p>
+<p>get_eigen_values(A)计算2维方阵A的特征值。这个函数返回所有特征值，包括重复的特征值的列表。注意运算这个函数非常耗费内存和CPU资源，如果在手机上运行，矩阵A的尺寸最好不要超过6*6，如果在电脑上运行，最好不要超过8*8，否则可能造成内存不足而程序崩溃或者运行很长时间而没有结果。</p>
+<p>get_eigen_values(2) :</p>
+<p>get_eigen_values(A, B)计算2维方阵A相对于同样尺寸的方阵B的特征值，也就是Av = lambda * Bv，在这里，。lambda是一个特征值，v是一个特征向量。第二个参数，B，可以省略，其缺省值为I矩阵。这个函数返回所有特征值，包括重复的特征值的列表。注意运算这个函数非常耗费内存和CPU资源，如果在手机上运行，矩阵A的尺寸最好不要超过6*6，如果在电脑上运行，最好不要超过8*8，否则可能造成内存不足而程序崩溃或者运行很长时间而没有结果。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_extreme_elem</center></td>
+<td><p>get_extreme_elem(3) :</p>
+<p>函数get_extreme_elem分析输入的数值矩阵并返回其所有元素的最大或最小值。如果某一个元素不是实数，这个元素就会被忽略。这个函数有3个参数，第一个是数值矩阵（也可以是一个单一的数值），第二个是起始的最大或者最小值，如果这个参数不是null并且是一个实数，本函数将该参数和选出的最大或最小元素进行比较，并返回新的最大或最小值。第三个参数是告诉本函数返回最大值还是最小值，如果是0则返回最小值，否则返回最大值。函数的例子包括get_extreme_elem([[2, 3], "hello", 5], null, 1)和get_extreme_elem([[3,4,6],[5+3i, 7, 9.88-4.61], [5.77 -0.03i]], -8, 0)。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_last_modified_time</center></td>
+<td><p>get_file_last_modified_time(1) :</p>
+<p>get_file_last_modified_time(path)返回基于字符串路径的path的文件或目录的上一次更改时间。该时间等于从1970年1月1日午夜开始到上一次更改时刻所经历的毫秒数。如果path不存在或者没有访问权限，返回-1。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_path</center></td>
+<td><p>get_file_path(1) :</p>
+<p>get_file_path(fd)返回文件号fd（fd是一个整数）所对应的文件的路径字符串。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_separator</center></td>
+<td><p>get_file_separator(0) :</p>
+<p>get_file_separator()返回路径分割符。在Windows平台下返回字符串"\\"，在Linux和Android平台下返回字符串"/"。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_size</center></td>
+<td><p>get_file_size(1) :</p>
+<p>get_file_size(path)返回基于字符串路径的path的文件大小。如果path不是对应一个文件或者没有权限或者不存在，返回-1。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_hour</center></td>
+<td><p>get_hour(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分别返回时标timestamp所对应的年，月，本年中的第几天，本月中的第几天，本星期中的第几天（礼拜天是第0天，礼拜一是第一天，...），小时，分钟，秒钟和毫秒。时标是时标所表示的时刻和1970年1月1日午夜（UTC）的毫秒数时间差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是礼拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_millisecond</center></td>
+<td><p>get_millisecond(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分别返回时标timestamp所对应的年，月，本年中的第几天，本月中的第几天，本星期中的第几天（礼拜天是第0天，礼拜一是第一天，...），小时，分钟，秒钟和毫秒。时标是时标所表示的时刻和1970年1月1日午夜（UTC）的毫秒数时间差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是礼拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_minute</center></td>
+<td><p>get_minute(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分别返回时标timestamp所对应的年，月，本年中的第几天，本月中的第几天，本星期中的第几天（礼拜天是第0天，礼拜一是第一天，...），小时，分钟，秒钟和毫秒。时标是时标所表示的时刻和1970年1月1日午夜（UTC）的毫秒数时间差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是礼拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_month</center></td>
+<td><p>get_month(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分别返回时标timestamp所对应的年，月，本年中的第几天，本月中的第几天，本星期中的第几天（礼拜天是第0天，礼拜一是第一天，...），小时，分钟，秒钟和毫秒。时标是时标所表示的时刻和1970年1月1日午夜（UTC）的毫秒数时间差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是礼拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_num_of_results_sets</center></td>
+<td><p>get_num_of_results_sets(1) :</p>
+<p>get_num_of_results_sets(x)返回solve程序块返回值x中所包含的解集的组数。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_second</center></td>
+<td><p>get_second(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分别返回时标timestamp所对应的年，月，本年中的第几天，本月中的第几天，本星期中的第几天（礼拜天是第0天，礼拜一是第一天，...），小时，分钟，秒钟和毫秒。时标是时标所表示的时刻和1970年1月1日午夜（UTC）的毫秒数时间差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是礼拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_solved_results_set</center></td>
+<td><p>get_solved_results_set(2) :</p>
+<p>get_solved_results_set(x, y)返回solve程序块返回值x中所包含的第y+1组解集。注意本函数返回一个一维数组，数组中的第一个元素是solve程序块的第一个待解变量的值，第二个元素是solve程序块的第二个待解变量的值，依次类推。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_time_stamp</center></td>
+<td><p>get_time_stamp(1...) :</p>
+<p>get_time_stamp(string_or_year, ...)返回由其参数所决定的时标。时标是时标所表示的时刻和1970年1月1日午夜（UTC）的毫秒数时间差。这个函数有两种工作模式。第一种模式是get_time_stamp(string_time_stamp)。这种模式仅仅接受一个字符串参数，该参数必须基于yyyy-mm-dd hh:mm:ss[.f...]的格式。其中，秒的分数部分可以忽略。第二种模式是get_time_stamp(year, month, day, hour, minute, second, millisecond)。这些参数中，除了第一个参数year（年），所有的其他参数都可以省略。如果省略，month（月）和day（日）的缺省值是1，hour（小时），minute（分钟），second（秒）和millisecond（毫秒）的缺省值是0。比如get_time_stamp("1981-05-30 17:05:06")返回1981年5月30日17点5分6秒0毫秒的时标，用户也可以调用get_time_stamp(1981, 5, 30, 17, 5, 6, 0)获得同样的结果。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_variable_results</center></td>
+<td><p>get_variable_results(2) :</p>
+<p>get_variable_results(x, y)返回solve程序块返回值x中该solve程序块第y+1个待解变量的所有值。注意本函数返回一个一维数组，数组中的每一个元素是该待解变量的一个根。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_working_dir</center></td>
+<td><p>get_working_dir(0) :</p>
+<p>get_working_dir()（别名pwd()）返回基于字符串的当前路径。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_year</center></td>
+<td><p>get_year(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分别返回时标timestamp所对应的年，月，本年中的第几天，本月中的第几天，本星期中的第几天（礼拜天是第0天，礼拜一是第一天，...），小时，分钟，秒钟和毫秒。时标是时标所表示的时刻和1970年1月1日午夜（UTC）的毫秒数时间差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是礼拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>havg</center></td>
+<td><p>havg(0...) :</p>
+<p>函数havg(…)返回任意个数参数的调和平均数值。</p>
+</td>
+</tr>
+<tr>
+<td><center>iff</center></td>
+<td><p>iff(3...) :</p>
+<p>函数iff(condition1, true_result1, condition2, true_result2, ..., false_result)的参数condition1，condition2，...为代表条件的布尔值，iff函数的返回值由条件值决定。比如，iff(true, 3, 2)返回3，iff(3 &lt; 2, 3, 2)返回2（这是因为3 &lt; 2是false），iff(3 &lt; 2, 3, 5 &gt; 4, 5, 6 == 9, 6, 9)返回5，以及iff(3 &lt; 2, 3, 5 &lt; 4, 5, 6 == 9, 6, 9)返回9。</p>
+</td>
+</tr>
+<tr>
+<td><center>IFFT</center></td>
+<td><p>IFFT(1...) :</p>
+<p>IFFT(a, ...)返回对一个数值向量作快速傅立叶变换的逆变换后的值。注意数值向量中数值的个数必须是2的整数次方。如果参数a是一个数值序列，则本函数只可能拥有一个参数，返回值为对序列a[0], a[1], ..., a[N-1]作快速傅立叶变换德逆变换的返回值。如果参数a仅仅是一个实数或者虚数，则本函数最少包含2个参数，而返回序列a， optional_params[0]， ...， optional_params[number_of_optional_params - 2]， optional_params[number_of_optional_params - 1]快速傅立叶变换的逆变换后的值。注意返回值总是一个数组。</p>
+<p>函数例子：</p>
+<p>IFFT(10, -2 + 2i, -2, -2 - 2i)返回[1, 2, 3, 4]；</p>
+<p>IFFT([10, -2 + 2i, -2, -2 - 2i])同样也是返回[1, 2, 3, 4]；</p>
+</td>
+</tr>
+<tr>
+<td><center>image</center></td>
+<td><p>image(1) :</p>
+<p>image(x)返回复数x的虚部的实数值。</p>
+<p>image(2) :</p>
+<p>image(x, mode)返回复数x的虚部。如果参数mode是true，则返回虚数值，否则返回实数值。比如image(3+2i, true) = 2i而image(3+2i, false) = 2。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_inf</center></td>
+<td><p>includes_inf(1) :</p>
+<p>includes_inf(x)用于判断参数x是否包含正负无穷。这里，包含指的是，如果x是个数组，那么它的某一个元素包含或者本身就是目标值，如果x是一个复数，那么它的实部或者虚部是目标值，如果x是一个实数，那么它就是目标值。如果是，返回true，否则，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan</center></td>
+<td><p>includes_nan(1) :</p>
+<p>includes_nan(x)用于判断参数x是否包含Nan。这里，包含指的是，如果x是个数组，那么它的某一个元素包含或者本身就是目标值，如果x是一个复数，那么它的实部或者虚部是目标值，如果x是一个实数，那么它就是目标值。如果是，返回true，否则，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan_or_inf</center></td>
+<td><p>includes_nan_or_inf(1) :</p>
+<p>includes_nan_or_inf(x)用于判断参数x是否包含Nan或者正负无穷。这里，包含指的是，如果x是个数组，那么它的某一个元素包含或者本身就是目标值，如果x是一个复数，那么它的实部或者虚部是目标值，如果x是一个实数，那么它就是目标值。如果是，返回true，否则，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan_or_inf_or_null</center></td>
+<td><p>includes_nan_or_inf_or_null(1) :</p>
+<p>includes_nan_or_inf_or_null(x)用于判断参数x是否包含Nan或者正负无穷或者null。这里，包含指的是，如果x是个数组，那么它的某一个元素包含或者本身就是目标值，如果x是一个复数，那么它的实部或者虚部是目标值，如果x是一个实数，那么它就是目标值。如果是，返回true，否则，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_null</center></td>
+<td><p>includes_null(1) :</p>
+<p>includes_null(x)用于判断参数x是否包含null。这里，包含指的是，如果x是个数组，那么它的某一个元素包含或者本身就是目标值，如果x是一个复数，那么它的实部或者虚部是目标值，如果x是一个实数，那么它就是目标值。如果是，返回true，否则，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>input</center></td>
+<td><p>input(2) :</p>
+<p>input(prompt,input_type)函数打印出提示符prompt并等待用户输入。第二个参数input_type可以省略。如果第二个参数不省略并且其为字符串"s"或"S"，用户的输入将会被看成一个字符串，并且这个函数返回输入的字符串。否则，输入被当作一个表达式来处理，而这个函数返回表达式的值。如果输入的不是一个合法的表达式，本函数将再次打印出提示符，等待用户重新输入。用户如果要结束一次输入需要按回车键。如果一次输入多行，只有第一行会被处理。本函数的一个例子为，用户运行input("$", "S")，然后在提示符后输入4 + 3，按回车键，本函数将会返回字符串"4 + 3"。而如果用户运行input("%")，然后在提示符后输入4 + 3，按回车键，本函数将会返回7。</p>
+</td>
+</tr>
+<tr>
+<td><center>integrate</center></td>
+<td><p>integrate(2) :</p>
+<p>integrate(x,y)返回基于变量y的表达式x的不定积分，表达式x和变量y均为字符串。注意如果表达式x不存在不定积分，或者x过于复杂无法解出其不定积分，本函数将会抛出异常。</p>
+<p>integrate(4) :</p>
+<p>integrate(x,y,z,w)返回表达式x在变量y从z到w的积分值。表达式x和变量y均为字符串，z和w可以为实数，复数或字符串。注意本函数采用的积分算法是自适应Gauss-Kronrod积分法。</p>
+<p>integrate(5) :</p>
+<p>integrate(x,y,z,w,v)返回表达式x相对于变量y从w到z的积分。计算时每一步步长为(w-z)/v。表达式x和变量y均为字符串，z和w可以为实数，复数或字符串，v必须为正整数。注意如果v是0，则相当于执行integrate(x,y,z,w)。</p>
+</td>
+</tr>
+<tr>
+<td><center>invert</center></td>
+<td><p>invert(1) :</p>
+<p>invert(x)返回方块2维矩阵x的逆矩阵，注意x中的元素可以为复数。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_directory</center></td>
+<td><p>is_directory(1) :</p>
+<p>is_directory(path)用于判断位于字符串path的文件（或者目录）是否是一个目录。如果该文件或目录存在并且是一个目录返回true，否则返回false。例子包括is_directory("E:\\") (Windows)和is_directory("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_eye</center></td>
+<td><p>is_eye(2) :</p>
+<p>is_eye(x,y)用于确定数组（或数）x是否是单位阵I（或数字1），如果是，返回true，否则返回false。参数y是布尔量，可以省略，缺省值为false。如果y是true，将所有的null值视为0，否则，null值不被当作0。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_executable</center></td>
+<td><p>is_file_executable(1) :</p>
+<p>is_file_executable(path)用于判断位于字符串path的文件（或者目录）是否可执行。如果该文件或目录存在并且可执行返回true，否则返回false。例子包括is_file_executable("E:\\") (Windows)和is_file_executable("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_existing</center></td>
+<td><p>is_file_existing(1) :</p>
+<p>is_file_existing(path)用于判断位于字符串path的文件（或者目录）是否存在。如果存在返回true，否则返回false。例子包括is_file_existing("E:\\") (Windows)和is_file_existing("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_hidden</center></td>
+<td><p>is_file_hidden(1) :</p>
+<p>is_file_hidden(path)用于判断位于字符串path的文件（或者目录）是否隐藏。如果该文件或目录存在并且隐藏返回true，否则返回false。例子包括is_file_hidden("E:\\") (Windows)和is_file_hidden("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_normal</center></td>
+<td><p>is_file_normal(1) :</p>
+<p>is_file_normal(path)用于判断位于字符串path的文件（或者目录）是否是一个常规文件而不是目录。如果该文件或目录存在并且是一个常规文件而不是目录返回true，否则返回false。例子包括is_file_normal("E:\\") (Windows)和is_file_normal("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_readable</center></td>
+<td><p>is_file_readable(1) :</p>
+<p>is_file_readable(path)用于判断位于字符串path的文件（或者目录）是否可读。如果该文件或目录存在并且可读返回true，否则返回false。例子包括is_file_readable("E:\\") (Windows)和is_file_readable("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_writable</center></td>
+<td><p>is_file_writable(1) :</p>
+<p>is_file_writable(path)用于判断位于字符串path的文件（或者目录）是否可写。如果该文件或目录存在并且可写返回true，否则返回false。例子包括is_file_writable("E:\\") (Windows)和is_file_writable("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_inf</center></td>
+<td><p>is_inf(1) :</p>
+<p>is_inf(x)用于判断参数x是否为正负无穷。如果是，返回true，否则，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_nan_or_inf</center></td>
+<td><p>is_nan_or_inf(1) :</p>
+<p>is_nan_or_inf(x)用于判断参数x是否为Nan或者正负无穷。如果是，返回true，否则，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_nan_or_inf_or_null</center></td>
+<td><p>is_nan_or_inf_or_null(1) :</p>
+<p>is_nan_or_inf_or_null(x)用于判断参数x是否为Nan或者正负无穷或者null。如果是，返回true，否则，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_path_absolute</center></td>
+<td><p>is_path_absolute(1) :</p>
+<p>is_path_absolute(path)用于判断位于字符串path是否是一个绝对路径（也就是不是相对于当前目录的路径）。如果是返回true，否则返回false。例子包括is_path_absolute("E:\\temp") (Windows)和is_path_absolute("Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_path_parent</center></td>
+<td><p>is_path_parent(2) :</p>
+<p>is_path_parent(path1, path2)用于判断位于字符串path1是否是字符串path2的上级目录。如果是返回true，否则返回false。例子包括is_path_parent("E:\\temp", "E:\\temp\\..\\temp\\test") (Windows)和is_path_parent(".", "Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_path_same</center></td>
+<td><p>is_path_same(2) :</p>
+<p>is_path_same(path1, path2)用于判断位于字符串path1是否和字符串path2指向同一条路径。如果是返回true，否则返回false。例子包括is_path_same("E:\\temp", "E:\\temp\\..\\temp\\") (Windows)和is_path_parent("/home/tony/Documents", "Documents/") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_prime</center></td>
+<td><p>is_prime(1) :</p>
+<p>函数Is_Prime(x)用于测定正整数x(>=2)是否为素数。如果x不是大于等于二的正整数，则返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_symbol_link</center></td>
+<td><p>is_symbol_link(1) :</p>
+<p>is_symbol_link(path)用于判断位于字符串path的文件（或者目录）是否是一个符号链接。如果该文件或目录存在并且是一个符号链接返回true，否则返回false。例子包括is_symbol_link("E:\\") (Windows)和is_symbol_link("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_zeros</center></td>
+<td><p>is_zeros(2) :</p>
+<p>is_zeros(x,y)用于确定数组（或数）x是否是零矩阵（或数字0），如果是，返回true，否则返回false。参数y是布尔量，可以省略，缺省值为false。如果y是true，将所有的null值视为0，否则，null值不被当作0。</p>
+</td>
+</tr>
+<tr>
+<td><center>left_recip</center></td>
+<td><p>left_recip(1) :</p>
+<p>left_recip(x)计算x的左除倒数，注意当前仅支持数值或二维矩阵。</p>
+</td>
+</tr>
+<tr>
+<td><center>lg</center></td>
+<td><p>lg(1) :</p>
+<p>函数lg(x)返回x的自然对数。</p>
+</td>
+</tr>
+<tr>
+<td><center>lim</center></td>
+<td><p>lim(3) :</p>
+<p>lim(expr, var, dest_value)用于计算表达式expr在变量var趋近于dest_value时的值。expr和var必须为字符串，dest_value为表达式或者数值，可以基于字符串，也可以不基于字符串。比如，lim("1/x", "x", 0)或者lim("(x+2)/(x+3)","x","3+0")。注意这个函数还在开发中。</p>
+</td>
+</tr>
+<tr>
+<td><center>list_files</center></td>
+<td><p>list_files(1) :</p>
+<p>list_files(path)返回位于字符串path路径的目录中的所有子文件或者子目录的名字，或者如果path路径对应的是一个文件，它返回该文件的文件名。如果不存在一个文件或者目录对应于path路径，它返回NULL。注意参数path是可以省略的。它的缺省值是当前目录。例子包括list_files("c:\\temp\\try1") (Windows)和list_files("../testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>ln</center></td>
+<td><p>ln(1) :</p>
+<p>函数ln(x)返回x的自然对数。</p>
+</td>
+</tr>
+<tr>
+<td><center>log</center></td>
+<td><p>log(1) :</p>
+<p>log(x)返回x的自然对数，注意x可以为复数。</p>
+</td>
+</tr>
+<tr>
+<td><center>log10</center></td>
+<td><p>log10(1) :</p>
+<p>函数log10(x)返回x以十为底的对数。</p>
+</td>
+</tr>
+<tr>
+<td><center>log2</center></td>
+<td><p>log2(1) :</p>
+<p>函数log2(x)返回x以2为底的对数。</p>
+</td>
+</tr>
+<tr>
+<td><center>loge</center></td>
+<td><p>loge(1) :</p>
+<p>函数loge(x)返回x的自然对数。</p>
+</td>
+</tr>
+<tr>
+<td><center>ls</center></td>
+<td><p>ls(1) :</p>
+<p>print_file_list(path) (别名ls(path)或者dir(path))函数和Windows平台上的dir命令以及Linux平台上的ls命令类似。它打印出位于字符串path路径的文件或者目录中的所有子文件和子目录的信息。它返回打印的条目的个数。如果不存在一个文件或者目录对应于path路径，它返回-1。注意参数path是可以省略的。它的缺省值是当前目录。例子包括dir() (Windows)和ls("../testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>max</center></td>
+<td><p>max(0...) :</p>
+<p>函数max(...)返回任意数目参数中的最大值。</p>
+</td>
+</tr>
+<tr>
+<td><center>med</center></td>
+<td><p>med(0...) :</p>
+<p>函数med(…)返回任意数目参数的中位数。如果参数的个数为偶数个，返回中间两个参数的平均值。</p>
+</td>
+</tr>
+<tr>
+<td><center>min</center></td>
+<td><p>min(0...) :</p>
+<p>函数min(...)返回任意数目参数中的最小值。</p>
+</td>
+</tr>
+<tr>
+<td><center>mod</center></td>
+<td><p>mod(2) :</p>
+<p>mod(x,y)返回x除以正整数y的余数，如果x或者y不是整数，将被首先转换为整数。</p>
+</td>
+</tr>
+<tr>
+<td><center>move_file</center></td>
+<td><p>move_file(3) :</p>
+<p>move_file(source, destination, replace_exist)函数移动位于字符串source路径的文件或文件夹到位于字符串destination路径的文件或位于destination路径的文件夹内（而不是位于destination路径的文件夹本身）。如果第三个参数，replace_exist，是true，那么如果目标文件已经存在，它将会被源文件（或者源文件夹中的对应文件）替换。注意第三个参数可以省略，它的缺省值为false。例子包括move_file("c:\\temp\\try1", "D:\\", true) (Windows)和copy_file("/mnt/sdcard/testfile.txt", "./testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>ncr</center></td>
+<td><p>ncr(2) :</p>
+<p>函数nCr(x, y)计算有x个元素的集合S的k个元素组合的个数。注意x，y都是非负整数，x >= y。</p>
+</td>
+</tr>
+<tr>
+<td><center>now</center></td>
+<td><p>now(0) :</p>
+<p>now()返回当前时刻和1970年1月1日午夜（UTC）的毫秒数时间差。</p>
+</td>
+</tr>
+<tr>
+<td><center>npr</center></td>
+<td><p>npr(2) :</p>
+<p>函数nPr(x, y)计算有x个元素的集合S的k个元素排列的个数。注意x，y都是非负整数，x >= y。</p>
+</td>
+</tr>
+<tr>
+<td><center>ones</center></td>
+<td><p>ones(1...) :</p>
+<p>ones函数返回一个所有元素都是1的矩阵，本函数的参数用于决定矩阵的尺寸，要么为一批正整数，要么为一个正整数数列。注意函数表达式ones([])返回常数1。</p>
+</td>
+</tr>
+<tr>
+<td><center>or</center></td>
+<td><p>or(1...) :</p>
+<p>or(x...)接受不少于1个的任意个数的参数，返回这些参数的逻辑或值。如果某一个参数不是布尔类型，将会被自动转换为布尔类型。</p>
+</td>
+</tr>
+<tr>
+<td><center>pause</center></td>
+<td><p>pause(1) :</p>
+<p>pause(message)将暂停当前运行的程序，等待用户输入一个回车，然后继续。字符串参数message可以省略。如果不省略，message将作为提示被打印在屏幕上。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot2d</center></td>
+<td><p>plot2d(5...) :</p>
+<p>函数plot2D调用plot_multi_xy以绘制由最多8条2-D曲线所构成的图像。其包括以下参数：1.图像名字（图像文件名）；2.图像标题；3.X轴标题；4.Y轴标题；5.是否显示网格；6.曲线标题；7.曲线颜色；8.t起始位置；9.t终止位置；10.t的间隔；11.以t为变量的X的表达式；12.以t为变量的Y的表达式...。其中，每增加一条新的曲线，需要添加7个参数（也就是参数6到12），最多定义8条曲线。需要注意的是，本函数不建议被使用。如果想绘制二维图形，请使用函数plot2DEX。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot2dex</center></td>
+<td><p>plot2dex(6...) :</p>
+<p>函数plot2DEX调用plot_multi_xy以绘制由最多8条2-D曲线所构成的图像。其包括以下参数：1.图像名字（图像文件名）；2.图像标题；3.X轴标题；4.Y轴标题；5.图像背景色；6.是否显示网格；7.曲线标题；8.曲线数据点颜色；9.曲线数据点形状；10.曲线数据点大小；11.曲线连接线颜色；12.曲线连接线类型；13.曲线连接线粗细；14.t起始位置；15.t终止位置；16.t的间隔；17.以t为变量的X的表达式；18.以t为变量的Y的表达式...。其中，每增加一条新的曲线，需要添加12个参数（也就是参数7到18），最多定义8条曲线。另外要注意图像背景色，曲线数据点的大小，曲线连接线颜色以及曲线连接线类型还没有被实现，曲线连接线粗细仅支持0（意味着没有连接线连接数据点）和非0（意味着有连接线连接数据点）。本函数的一个例子为：plot2DEX("chart 3", "3rd chart", "x", "y", "black", true, "cv1", "blue", "x", 2, "blue", "solid", 1, -5, 5, 0.1, "t", "t**2/2.5 - 4*t + 6", "cv2", "red", "square", 4, "square", "solid", 1, -10, 10, 0.1, "5*sin(t)", "10*cos(t)") 。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot3d</center></td>
+<td><p>plot3d(5...) :</p>
+<p>函数plot3D调用plot_multi_xyz以绘制由最多8条3-D曲面所构成的图像。其包括以下参数：1.图像名字（图像文件名）；2.图像标题；3.X轴标题；4.Y轴标题；5.Z轴标题；6.曲线标题；7.是网格还是填充表面（true是网格，false是填充表面）；8.z值最小的时候的颜色；9.最小的z值（注意如果是null，意味着让软件自己找到最小的z值）；10.z值最大的时候的颜色；11.最大的z值（注意如果是null，意味着让软件自己找到最大的z值）；12.变量u的起始值；13.变量u的终止值；14.变量u的间隔（0意味着间隔由软件决定）；15.变量v的起始值；16.变量v的终止值；17.变量v的间隔（0意味着间隔由软件决定）；18.以u，v为变量的X的表达式；19.以u，v为变量的Y的表达式；20.以u，v为变量的Z的表达式；...。其中，每增加一条新的曲线，需要添加15个参数（也就是参数6到20），最多定义8条曲线。该函数的一个例子为：plot3D("chartI", "first chart", "x", "y", "z", "Curve1", true, "red", -0.5, "green", null, 0, pi, pi/8, -pi/2, pi/2, 0, "sin(u)*cos(v)", "sin(u)*sin(v)", "cos(u)")　。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_2d_data</center></td>
+<td><p>plot_2d_data(16) :</p>
+<p>函数plot_2d_data分析最少1组，最多8组数值向量，每组数值向量将会被绘制为一条曲线。输入的参数个数可以为1个（绘制一条曲线），2个（绘制一条曲线），4个（绘制2条曲线），6个（绘制3条曲线），8个（绘制4条曲线），10个（绘制5条曲线），12个（绘制6条曲线），14个（绘制7条曲线），16个（绘制8条曲线）。每一个参数都是一个数值向量（也就是一维矩阵）。如果只有一个参数，该参数中的每一个元素将会是绘制出的曲线中的一个点，否则，奇数号参数决定曲线中的每一个点的x值，偶数号参数决定每一个点的y值。注意决定x值的参数中包含的元素个数应该和决定y值的参数中包含的元素相同。函数例子包括plot_2d_data([5.5, -7, 8.993, 2.788])以及plot_2d_data([2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1], [28, 42, 33, 16, 7])。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_3d_data</center></td>
+<td><p>plot_3d_data(24) :</p>
+<p>函数plot_3d_data分析最少1组，最多8组数值矩阵，每组数值矩阵将会被绘制为一条曲面。输入的参数个数可以为1个（绘制一条曲面），3个（绘制一条曲面），6个（绘制2条曲面），9个（绘制3条曲面），12个（绘制4条曲面），15个（绘制5条曲面），18个（绘制6条曲面），21个（绘制7条曲面），24个（绘制8条曲面）。如果只有一个参数，该参数必须是一个2维矩阵，矩阵中的每一个元素将会是绘制出的曲线中的一个点的z值，否则，每3个参数组成一个参数组，在每个参数组中，第一个参数必须是一个一维矩阵，参数中的元素值决定的决定曲面中各点的x值，第二个参数也必须是一个一维矩阵，参数中的元素值决定的决定曲面中各点的y值，第三个参数必须是一个二维矩阵，矩阵中的元素值决定每一个点的z值。注意决定x值的参数中包含的元素个数以及决定y值的参数中包含的元素应该和决定z值的参数中包含的元素个数相符。函数例子包括plot_3d_data([[2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1]])以及plot_3d_data([1,2,3],[4,5,6,8],[[3,7,2],[5,8,9],[2,6,3],[7,4,4]],[8,7,4,8],[2,1],[[9,3,2,6],[4,5,3,7]])。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_exprs</center></td>
+<td><p>plot_exprs(8) :</p>
+<p> 函数plot_exprs分析最少1条，最多8条表达式以绘制2维或者3维图形（取决于表达式中未知变量的个数）。输入的表达式可以是一个等式，比如"4*x+9 == y +z**2"和"log(x*y) == x"，也可以是一个左侧为未知变量的赋值表达式，比如"k= 3+ 7 * sin(z)"，还可以是一个可以被看作为赋值表达式的表达式，比如"9*log(y)"可以被看作"x = 9 * log(y)"。注意所有表达式中未知变量的总数不多于3，每一条表达式中的未知变量的个数不能少于未知变量的总数减一。未知变量的起始范围可以在设置中设定，缺省是从-5到5，但是使用者可以在图形绘制出来之后动态调整每个未知变量的范围。如果有两个未知变量并且其中一个是希腊字母α、β、γ或者θ，则绘制极坐标图形而不是普通2维图形。本函数的一个例子是plot_exprs("4*x+sin(y)", "4-y**2==(x**2 + z**2)", "x*lg(x)/log2(z)==y")。需要指出的是，如果是绘制二维隐函数表达式，这个函数最多能绘制出4个表达式解；如果绘制的是3维隐函数表达式，这个函数会根据情况，可能会求每一个变量的最多两组解，绘制出最多6个解表达式图形，这样一来，整个求解绘图过程会花费比较长的时间。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_multi_xy</center></td>
+<td><p>plot_multi_xy(26) :</p>
+<p>plot_multi_xy(包含2到26个参数)用于绘制2维或极坐标图像，每个图像最多包括8条曲线。参数1为图像名字，参数2为图像设置，该参数是一个字符串，比如"chart_type:multiXY;chart_title:1 chart;x_title:x;x_min:-6.2796950076838645;x_max:6.918480857169536;x_labels:10;y_title:y;y_min:-4.487378580559947;y_max:4.1268715788884345;y_labels:10;background_color:black;show_grid:true"。注意chart_type的值是multiXY（用于绘制二维图像）或者multiRangle（用于绘制极坐标图像），x_labels和y_lables分别代表x和y轴上有多少刻度标记（对于极坐标图像是R轴有多少刻度标记，幅角的刻度标记不可设）。从参数3到参数26，每3个参数定义一条曲线，在这3个参数中，第一个参数为曲线设置，第二个参数是包含所有x数值（或者R数值）的向量，第三个参数是包括所有y值（或者幅角值）的向量。曲线设置参数为一个字符串，比如"curve_label:cv2;point_color:blue;point_style:point;point_size:1;line_color:blue;line_style:solid;line_size:1"。另外注意x和y的每一个数值都必须为实数，x和y的数值个数必须一致。本函数不返回数值。本函数的一个例子是plot_multi_xy("chart2", "chart_type:multiXY;chart_title:1 chart;x_title:x;x_min:-6;x_max:6;x_labels:6;y_title:y;y_min:-4;y_max:4;y_labels:5;background_color:black;show_grid:true", "curve_label:cv2;point_color:blue;point_style:circle;point_size:3;line_color:blue;line_style:solid;line_size:1", [-5, -3, -1, 0, 1, 2, 3, 4, 5], [-3.778, -2.9793, -2.0323, -1.1132, 0.2323, 1.2348, 3.9865, 2.3450, 0.4356]) 。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_multi_xyz</center></td>
+<td><p>plot_multi_xyz(34) :</p>
+<p>plot_multi_xyz(包含2到34个参数)用于绘制3维图像，每个图像最多包括8条曲面。参数1为图像名字，参数2为图像设置，图像设置参数是一个字符串，比如"chart_type:multiXYZ;chart_title:This is a graph;x_title:x axis;x_min:-24.43739154366772;x_max:24.712391543667717;x_labels:10;y_title:Y axis;y_min:-251.3514430737091;y_max:268.95144307370913;y_labels:10;z_title:Z axis;z_min:-1.6873277335234405;z_max:1.7896774628184482;z_labels:10"。需要注意的是chart_type的值必须是multiXYZ，x_labels，y_labels和z_lables分别代表x，y和z轴上有多少刻度标记。从参数3到参数34，每4个参数定义一条曲线，在这4个参数中，第一个参数为曲线设置，第二个参数是包含所有x数值的矩阵，第三个参数是包括所有y值的矩阵，第四个参数是包括所有z值的矩阵。曲线设置参数为一个字符串，比如"curve_label:cv2;is_grid:true;min_color:blue;min_color_1:cyan;min_color_value:-2.0;max_color:white;max_color_1:yellow;max_color_value:2.0"。另外注意x，y和z的每一个数值都必须为实数，x，y和z的矩阵的尺寸必须一致。本函数不返回数值。本函数的一个例子为：plot_multi_xyz("chartII", "chart_type:multiXYZ;chart_title:This is a graph;x_title:x;x_min:-5;x_max:5;x_labels:6;y_title:Y;y_min:-6;y_max:6;y_labels:3;z_title:Z;z_min:-3;z_max:1;z_labels:4", "curve_label:cv1;min_color:blue;min_color_1:green;max_color:yellow;max_color_1:red", [[-4, -2, 0, 2, 4],[-4, -2, 0, 2, 4],[-4, -2, 0, 2, 4]], [[-5, -5, -5, -5, -5], [0, 0, 0, 0, 0], [-5, -5, -5, -5, -5]], [[-2.71, -2.65, -2.08, -1.82, -1.77], [-2.29, -2.36, -1.88, -1.45, -1.01], [-1.74, -1.49, -0.83, -0.17, 0.44]]) 。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_polar</center></td>
+<td><p>plot_polar(6...) :</p>
+<p>函数plot_polar调用plot_multi_xy以绘制由最多8条极坐标曲线所构成的图像。其包括以下参数：1.图像名字（图像文件名）；2.图像标题；3.R轴标题；4.幅角标题；5.图像背景色；6.是否显示网格；7.曲线标题；8.曲线数据点颜色；9.曲线数据点形状；10.曲线数据点大小；11.曲线连接线颜色；12.曲线连接线类型；13.曲线连接线粗细；14.t起始位置；15.t终止位置；16.t的间隔；17.以t为变量的R的表达式；18.以t为变量的幅角的表达式...。其中，每增加一条新的曲线，需要添加12个参数（也就是参数7到18），最多定义8条曲线。另外要注意图像背景色，曲线数据点的大小，曲线连接线颜色以及曲线连接线类型还没有被实现，曲线连接线粗细仅支持0（意味着没有连接线连接数据点）和非0（意味着有连接线连接数据点）。本函数的一个例子为：plot_polar("chart 3", "3rd chart", "R", "Angle", "black", true, "cv1", "blue", "point", 0, "yellow", "solid", 1, -5, 5, 0.1, "cos(t)", "t", "cv2", "red", "square", 4, "green", "solid", 1, 0, PI*2.23, PI/10, "5*sqrt(t)", "t + PI") 。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_polar_data</center></td>
+<td><p>plot_polar_data(16) :</p>
+<p>函数plot_polar_data分析最少1组，最多8组数值向量，每组数值向量将会被绘制为一条极坐标曲线。输入的参数个数可以为2个（绘制一条曲线），4个（绘制2条曲线），6个（绘制3条曲线），8个（绘制4条曲线），10个（绘制5条曲线），12个（绘制6条曲线），14个（绘制7条曲线），16个（绘制8条曲线）。每一个参数都是一个数值向量（也就是一维矩阵）。奇数号参数决定曲线中的每一个点的R值，偶数号参数决定每一个点的幅角值。注意决定R值的参数中包含的元素个数应该和决定幅角值的参数中包含的元素相同。函数一个例子为plot_polar_data([2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1], [28, 42, 33, 16, 7])。</p>
+</td>
+</tr>
+<tr>
+<td><center>pow</center></td>
+<td><p>pow(2) :</p>
+<p>pow(x,y)返回x的y次方，注意x和y可以为实数，可以为虚数。如果结果有多个值，返回第一个值。</p>
+<p>pow(3) :</p>
+<p>pow(x,y,z)返回包含x的y次方的前z个值组成的一个向量，如果x的y次方只有少于z个值，返回所有值。注意y必须为实数，x可以为实数，可以为虚数，z必须为正整数。</p>
+</td>
+</tr>
+<tr>
+<td><center>print</center></td>
+<td><p>print(1) :</p>
+<p>print(x)向输出端打印任意数据类型x的值。</p>
+</td>
+</tr>
+<tr>
+<td><center>print_file_list</center></td>
+<td><p>print_file_list(1) :</p>
+<p>print_file_list(path) (别名ls(path)或者dir(path))函数和Windows平台上的dir命令以及Linux平台上的ls命令类似。它打印出位于字符串path路径的文件或者目录中的所有子文件和子目录的信息。它返回打印的条目的个数。如果不存在一个文件或者目录对应于path路径，它返回-1。注意参数path是可以省略的。它的缺省值是当前目录。例子包括dir() (Windows)和ls("../testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>printf</center></td>
+<td><p>printf(1...) :</p>
+<p>printf(format_string, ...)，sprintf(format_string, ...)和fprintf(fd, format_string, ...)和C/C++中的对应函数工作方式相似。这些函数通过format_string和其后的数值参数构造出一个新的字符串，printf函数将字符串打印到标准输出，sprintf函数将字符串作为返回值返回，fprintf函数则将字符串输出到文件号为fd的文本文件。字符串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字符串（%c和%s）等等。用户可以在C语言的帮助文档中找到format_string的构造方法。例如，printf("Hello world!%f", 3.14)将会打印输出"Hello world!3.140000"，而sprintf("%c%d", "A", 9)则返回"A9"（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字符串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>product_over</center></td>
+<td><p>product_over(3) :</p>
+<p>函数product_over(x, y, z)计算基于字符串的表达式x中的变量取值从整数y逐步变化到整数z的值的乘积。y和z必须是字符串的形式，其中，y必须写成一个赋值表达式，比如"a=10"，这里，a是变量名。一个函数的例子为product_over("x+1", "x=1", "10")。</p>
+</td>
+</tr>
+<tr>
+<td><center>pwd</center></td>
+<td><p>pwd(0) :</p>
+<p>get_working_dir()（别名pwd()）返回基于字符串的当前路径。</p>
+</td>
+</tr>
+<tr>
+<td><center>quick_sort</center></td>
+<td><p>quick_sort(2) :</p>
+<p>函数quick_sort(desc, original_list)将拥有至少一个元素的向量original_list排序并返回排序后的向量。如果desc是true或者1，按照从大到小排序，否则（false或者0）按照从小到大排序。比如，输入quick_sort(1, [5,6,7,9,4])得到[9,7,6,5,4]而输入quick_sort(0, [5,6,7,9,4])的结果是[4,5,6,7,9]。</p>
+</td>
+</tr>
+<tr>
+<td><center>rand</center></td>
+<td><p>rand(0) :</p>
+<p>rand()函数返回一个大于等于0小于1的随机浮点数。</p>
+</td>
+</tr>
+<tr>
+<td><center>rank</center></td>
+<td><p>rank(1) :</p>
+<p>rank(matrix)返回矩阵的秩。比如，rank([[1,2],[2,4]])将返回1。</p>
+</td>
+</tr>
+<tr>
+<td><center>real</center></td>
+<td><p>real(1) :</p>
+<p>real(x)返回复数x的实部。</p>
+</td>
+</tr>
+<tr>
+<td><center>recip</center></td>
+<td><p>recip(1) :</p>
+<p>recip(x)计算x的倒数，注意当前仅支持数值或二维矩阵。</p>
+</td>
+</tr>
+<tr>
+<td><center>roots</center></td>
+<td><p>roots(1...) :</p>
+<p>函数roots(a, ...)返回一个多项式的根数列。如果a是一个实数或虚数数列，返回多项式a[0] * x**(N-1) + a[1] * x**(N-2) + ... + a[N-2] * x + a[N-1] = 0的根数列。如果a是一个单一的实数，此函数则必须拥有至少两个参数，返回多项式a * x**(number_of_optional_params) + optional_params[0] * x**(number_of_optional_params - 1) + ... + optional_params[number_of_optional_params - 2] * x + optional_params[number_of_optional_params - 1] = 0的根数列。</p>
+<p>需要注意的是，如果该多项式次数大于等于4，根的计算是通过牛顿拉夫逊法给出的近似值。由于牛顿拉夫逊法需要迭代计算，运算时间会比较长（取决于设备的性能）。</p>
+<p>函数例子：</p>
+<p>如果要计算多项式3 * x**2 - 4 * x + 1 == 0的根，输入命令：roots([3, -4, 1])获得的结果是[1, 0.33333333]；</p>
+<p>如果要计算多项式(1+2i) * x**3 + (7-6i) * x**2 + 0.54 * x - 4.31 - 9i == 0的根，输入命令：roots(1+2i, 7-6i, 0.54, -4.31-9i)获得的结果是[0.79288607 + 3.9247084 * i, -0.56361748 - 0.78399569 * i, 0.7707314 + 0.85928729 * i]。</p>
+</td>
+</tr>
+<tr>
+<td><center>round</center></td>
+<td><p>round(1) :</p>
+<p>round(x)，x是浮点数，返回x的四舍五入值。</p>
+<p>round(2) :</p>
+<p>round(x,y)，x是浮点数，y为非负整数，返回小数点后有y位数字的x的四舍五入值。</p>
+</td>
+</tr>
+<tr>
+<td><center>scanf</center></td>
+<td><p>scanf(1) :</p>
+<p>scanf(format_string)，sscanf(input_from, format_string)和fscanf(fd, format_string)和C/C++中的对应函数工作方式相似。scanf读取用户的一行输入，sscanf读取字符串input_from，fscanf从文件（文件号fd）中读取文件内容。字符串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字符串（%c和%s）等等。用户可以在C语言的帮助文档中找到format_string的构造方法。但是，和C语言有所不同，MFP中的这些函数不需要输入用于存储读取数值的参数。所有的读取的数值将会保存在一个数组中作为返回值返回。比如，sscanf("3Hello world!", "%d%c%c%s")将会返回[3, "H", "e", "llo"]（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字符串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>set_array_elem</center></td>
+<td><p>set_array_elem(3) :</p>
+<p>set_array_elem(x,y,z)将x[y]赋值为z，并且返回新的x。注意x不是必须为矩阵，y必须为正整数向量。y的值可以超出x的尺寸和维度。比如，如果x=3，y=[1,2]，z=2+3i，那么set_array_elem(x,y,z)等于[3, [0, 0, 2+3i]]。</p>
+</td>
+</tr>
+<tr>
+<td><center>set_file_last_modified_time</center></td>
+<td><p>set_file_last_modified_time(2) :</p>
+<p>set_file_last_modified_time(path, time)设置基于字符串路径的path的文件或目录的上一次更改时间为time。该时间等于从1970年1月1日午夜开始到上一次更改时刻所经历的毫秒数。如果path不存在或者没有访问权限，返回false，否则返回true。例子包括("C:\\Temp\\Hello\\", 99999999) (Windows)和set_file_last_modified_time("./hello.txt", 1111111111) (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>sin</center></td>
+<td><p>sin(1) :</p>
+<p>sin(x)返回x的正弦值，注意x可以为复数。</p>
+</td>
+</tr>
+<tr>
+<td><center>sind</center></td>
+<td><p>sind(1) :</p>
+<p>sind(x)返回基于角度的x的正弦值。</p>
+</td>
+</tr>
+<tr>
+<td><center>sinh</center></td>
+<td><p>sinh(1) :</p>
+<p>函数sinh(x)返回x的双曲正弦值。</p>
+</td>
+</tr>
+<tr>
+<td><center>size</center></td>
+<td><p>size(1) :</p>
+<p>size(x)返回矩阵x的尺寸向量。注意如果x不是一个矩阵，则总是返回[]。</p>
+<p>size(2) :</p>
+<p>size(x,y)返回矩阵x前y维的尺寸向量，如果x少于y维，返回完整的尺寸向量，注意y必须为正整数。此外如果x不是一个矩阵，则总是返回[]。</p>
+</td>
+</tr>
+<tr>
+<td><center>sleep</center></td>
+<td><p>sleep(1) :</p>
+<p>sleep(x)休眠x毫秒（x必须为正实数），此函数不返回任何值。</p>
+</td>
+</tr>
+<tr>
+<td><center>split</center></td>
+<td><p>split(2) :</p>
+<p>split(string_input, string_regex)j将字符串string_input按照正则表达式string_regex分割为若干个子字符串并返回包含所有子字符串的数组。用户可以阅读JAVA语言的Pattern类和String.split函数的帮助文档获得更多关于正则表达式使用方法的信息。例子包括split("boo:and:foo", ":")返回["boo", "and", "foo"]以及split("boo:and:foo", "o")返回["b", "", ":and:f"]。</p>
+</td>
+</tr>
+<tr>
+<td><center>sprintf</center></td>
+<td><p>sprintf(1...) :</p>
+<p>printf(format_string, ...)，sprintf(format_string, ...)和fprintf(fd, format_string, ...)和C/C++中的对应函数工作方式相似。这些函数通过format_string和其后的数值参数构造出一个新的字符串，printf函数将字符串打印到标准输出，sprintf函数将字符串作为返回值返回，fprintf函数则将字符串输出到文件号为fd的文本文件。字符串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字符串（%c和%s）等等。用户可以在C语言的帮助文档中找到format_string的构造方法。例如，printf("Hello world!%f", 3.14)将会打印输出"Hello world!3.140000"，而sprintf("%c%d", "A", 9)则返回"A9"（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字符串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>sqrt</center></td>
+<td><p>sqrt(1) :</p>
+<p>函数sqrt(x)返回实数x的平方根值。</p>
+</td>
+</tr>
+<tr>
+<td><center>sscanf</center></td>
+<td><p>sscanf(2) :</p>
+<p>scanf(format_string)，sscanf(input_from, format_string)和fscanf(fd, format_string)和C/C++中的对应函数工作方式相似。scanf读取用户的一行输入，sscanf读取字符串input_from，fscanf从文件（文件号fd）中读取文件内容。字符串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字符串（%c和%s）等等。用户可以在C语言的帮助文档中找到format_string的构造方法。但是，和C语言有所不同，MFP中的这些函数不需要输入用于存储读取数值的参数。所有的读取的数值将会保存在一个数组中作为返回值返回。比如，sscanf("3Hello world!", "%d%c%c%s")将会返回[3, "H", "e", "llo"]（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字符串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>stdev</center></td>
+<td><p>stdev(0...) :</p>
+<p>函数stdev(…)返回任意个数参数的标准差，注意这些参数是一个大的集合中的采样。</p>
+</td>
+</tr>
+<tr>
+<td><center>stdevp</center></td>
+<td><p>stdevp(0...) :</p>
+<p>函数stdevp(…)返回任意个数参数的标准差。</p>
+</td>
+</tr>
+<tr>
+<td><center>strcat</center></td>
+<td><p>strcat(2...) :</p>
+<p>strcat(string1, string2...)将字符串参数顺次连接在一起，返回新的连接好的字符串。本函数需要至少两个参数。</p>
+</td>
+</tr>
+<tr>
+<td><center>strcmp</center></td>
+<td><p>strcmp(6) :</p>
+<p>strcmp(src, dest, src_start, src_end, dest_start, dest_end)比较源字符串src（从src_start到src_end）和目标字符串dest（从dest_start到dest_end）。如果src和dest相等返回0，如果src大于dest返回大于0的值，如果src小于dest返回小于0的值。注意字符串索引从0开始，src_end和dest_end的索引位置为最后一个被选中字符的索引位置加一。另外，最后四个参数可以省略，如果被省略，src_start和dest_start的缺省值为0，src_end和dest_end的缺省值为对应字符串的长度。</p>
+</td>
+</tr>
+<tr>
+<td><center>strcpy</center></td>
+<td><p>strcpy(6) :</p>
+<p>strcpy(src, dest, src_start, src_end, dest_start, dest_end)返回将源字符串src从src_start到src_end拷贝到目标字符串dest从dest_start到dest_end的新字符串值。注意字符串索引从0开始，src_end和dest_end的索引位置为最后一个被选中字符的索引位置加一。另外，最后四个参数可以省略，如果被省略，src_start和dest_start的缺省值为0，src_end和dest_end的缺省值为对应字符串的长度。</p>
+</td>
+</tr>
+<tr>
+<td><center>stricmp</center></td>
+<td><p>stricmp(6) :</p>
+<p>stricmp(src, dest, src_start, src_end, dest_start, dest_end)在忽略字母大小写的前提下比较源字符串src（从src_start到src_end）和目标字符串dest（从dest_start到dest_end）。如果src和dest相等返回0，如果src大于dest返回大于0的值，如果src小于dest返回小于0的值。注意字符串索引从0开始，src_end和dest_end的索引位置为最后一个被选中字符的索引位置加一。另外，最后四个参数可以省略，如果被省略，src_start和dest_start的缺省值为0，src_end和dest_end的缺省值为对应字符串的长度。</p>
+</td>
+</tr>
+<tr>
+<td><center>strlen</center></td>
+<td><p>strlen(1) :</p>
+<p>strlen(x)返回字符串x的长度。</p>
+</td>
+</tr>
+<tr>
+<td><center>strsub</center></td>
+<td><p>strsub(2) :</p>
+<p>strsub(str, start)返回字符串str的子字符串。该子字符串从字符start开始到str的最后一个字符。注意字符串的第一个字符是0号字符。</p>
+<p>strsub(3) :</p>
+<p>strsub(str, start, end)返回字符串str的子字符串。该子字符串从字符start开始到字符end-1。注意字符串的第一个字符是0号字符。</p>
+</td>
+</tr>
+<tr>
+<td><center>sum</center></td>
+<td><p>sum(0...) :</p>
+<p>函数sum(…)返回任意个数参数的总合。</p>
+</td>
+</tr>
+<tr>
+<td><center>sum_over</center></td>
+<td><p>sum_over(3) :</p>
+<p>函数sum_over(x, y, z)计算基于字符串的表达式x中的变量取值从整数y逐步变化到整数z的值的总合。y和z必须是字符串的形式，其中，y必须写成一个赋值表达式，比如"a=10"，这里，a是变量名。一个函数的例子为sum_over("x+1", "x=1", "10")。</p>
+</td>
+</tr>
+<tr>
+<td><center>system</center></td>
+<td><p>system(1) :</p>
+<p>system(str)运行一个系统指令并且返回该系统指令的返回值。注意系统指令必须是一个可执行的文件以及它的命令参数。由于这个原因，在Windows平台上，诸如system("dir")无法正确执行是因为dir并非是一个单独的可执行文件，而是cmd.exe的一个内部功能。要执行dir指令，用户需要运行system("cmd /c dir")。还要注意，在现阶段，这个函数只能将系统指令的输出打印出来，还无法接受在运行中用户对于该系统指令的输入。此外，如果该系统指令不存在，则会抛出异常。</p>
+</td>
+</tr>
+<tr>
+<td><center>tan</center></td>
+<td><p>tan(1) :</p>
+<p>tan(x)返回x的正切值，注意x可以为复数。</p>
+</td>
+</tr>
+<tr>
+<td><center>tand</center></td>
+<td><p>tand(1) :</p>
+<p>tand(x)返回基于角度的x的正切值。</p>
+</td>
+</tr>
+<tr>
+<td><center>tanh</center></td>
+<td><p>tanh(1) :</p>
+<p>函数tanh(x)用于计算x的双曲正切值。</p>
+</td>
+</tr>
+<tr>
+<td><center>tip</center></td>
+<td><p>tip(2) :</p>
+<p>函数tip(x,y)用于计算在美国饭馆吃饭时所支付的所有费用包括实际费用和小费。</p>
+</td>
+</tr>
+<tr>
+<td><center>to_lowercase_string</center></td>
+<td><p>to_lowercase_string(1) :</p>
+<p>to_lowercase_string(x)返回数据x的打印值（所有的字母均为小写）。</p>
+</td>
+</tr>
+<tr>
+<td><center>to_string</center></td>
+<td><p>to_string(1) :</p>
+<p>to_string(x)返回数据x的打印值。</p>
+</td>
+</tr>
+<tr>
+<td><center>to_uppercase_string</center></td>
+<td><p>to_uppercase_string(1) :</p>
+<p>to_uppercase_string(x)返回数据x的打印值（所有的字母均为大写）。</p>
+</td>
+</tr>
+<tr>
+<td><center>todeg</center></td>
+<td><p>todeg(1) :</p>
+<p>函数todeg(x)将弧度x转换为度数值。</p>
+</td>
+</tr>
+<tr>
+<td><center>torad</center></td>
+<td><p>torad(1) :</p>
+<p>函数torad(x)将度数x转换为弧度值。</p>
+</td>
+</tr>
+<tr>
+<td><center>tostring</center></td>
+<td><p>tostring(1) :</p>
+<p>tostring(x) 返回数据x的打印值。</p>
+</td>
+</tr>
+<tr>
+<td><center>trim</center></td>
+<td><p>trim(1) :</p>
+<p>trim(string)，trim_left(string)和trim_right(string)从字符串的两边或者一边删除任何一个ASCI值小于等于空白字符（' '）的字符。具体说来，trim从左右两边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到左边和右边都遇到了一个ASCI值大于空白字符（' '）的字符；trim_left从左边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到遇到了一个ASCI值大于空白字符（' '）的字符；trim_right从右边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到遇到了一个ASCI值大于空白字符（' '）的字符。例子包括trim(" \n hello world ") （返回"hello world"）, trim_left(" \n hello world "）, （返回"hello world "）以及trim_right(" \n hello world ") （返回" hello world")。</p>
+</td>
+</tr>
+<tr>
+<td><center>trim_left</center></td>
+<td><p>trim_left(1) :</p>
+<p>trim(string)，trim_left(string)和trim_right(string)从字符串的两边或者一边删除任何一个ASCI值小于等于空白字符（' '）的字符。具体说来，trim从左右两边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到左边和右边都遇到了一个ASCI值大于空白字符（' '）的字符；trim_left从左边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到遇到了一个ASCI值大于空白字符（' '）的字符；trim_right从右边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到遇到了一个ASCI值大于空白字符（' '）的字符。例子包括trim(" \n hello world ") （返回"hello world"）, trim_left(" \n hello world "）, （返回"hello world "）以及trim_right(" \n hello world ") （返回" hello world")。</p>
+</td>
+</tr>
+<tr>
+<td><center>trim_right</center></td>
+<td><p>trim_right(1) :</p>
+<p>trim(string)，trim_left(string)和trim_right(string)从字符串的两边或者一边删除任何一个ASCI值小于等于空白字符（' '）的字符。具体说来，trim从左右两边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到左边和右边都遇到了一个ASCI值大于空白字符（' '）的字符；trim_left从左边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到遇到了一个ASCI值大于空白字符（' '）的字符；trim_right从右边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到遇到了一个ASCI值大于空白字符（' '）的字符。例子包括trim(" \n hello world ") （返回"hello world"）, trim_left(" \n hello world "）, （返回"hello world "）以及trim_right(" \n hello world ") （返回" hello world")。</p>
+</td>
+</tr>
+<tr>
+<td><center>xor</center></td>
+<td><p>xor(2) :</p>
+<p>函数xor计算x和y的异或值，x和y可以为任何数值。如果x不等于y，返回true。</p>
+</td>
+</tr>
+<tr>
+<td><center>zeros</center></td>
+<td><p>zeros(1...) :</p>
+<p>zeros函数返回一个所有元素都是0的矩阵，本函数的参数用于决定矩阵的尺寸，要么为一批正整数，要么为一个正整数数列。注意函数表达式zeros([])返回常数值0。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

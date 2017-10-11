@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="CoreMathImgProc">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../CoreMathImgProc/bin/CoreMathImgProc.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

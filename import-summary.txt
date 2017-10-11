@@ -1,0 +1,305 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From SmartMath:
+* encrypted
+* misc\
+* misc\icons\
+* misc\icons\new_icon_1024.png
+* misc\icons\new_icon_128.png
+* misc\icons\new_icon_16.png
+* misc\icons\new_icon_24.png
+* misc\icons\new_icon_256.png
+* misc\icons\new_icon_32.png
+* misc\icons\new_icon_36.png
+* misc\icons\new_icon_48.png
+* misc\icons\new_icon_512.png
+* misc\icons\new_icon_64.png
+* misc\icons\new_icon_72.png
+* proguard.cfg
+From google-play-services_lib:
+* AndroidManifest.xml
+* README.txt
+* proguard.txt
+* res\
+* res\color\
+* res\color\common_signin_btn_text_dark.xml
+* res\color\common_signin_btn_text_light.xml
+* res\color\wallet_primary_text_holo_light.xml
+* res\color\wallet_secondary_text_holo_dark.xml
+* res\drawable-hdpi\
+* res\drawable-hdpi\common_signin_btn_icon_disabled_dark.9.png
+* res\drawable-hdpi\common_signin_btn_icon_disabled_focus_dark.9.png
+* res\drawable-hdpi\common_signin_btn_icon_disabled_focus_light.9.png
+* res\drawable-hdpi\common_signin_btn_icon_disabled_light.9.png
+* res\drawable-hdpi\common_signin_btn_icon_focus_dark.9.png
+* res\drawable-hdpi\common_signin_btn_icon_focus_light.9.png
+* res\drawable-hdpi\common_signin_btn_icon_normal_dark.9.png
+* res\drawable-hdpi\common_signin_btn_icon_normal_light.9.png
+* res\drawable-hdpi\common_signin_btn_icon_pressed_dark.9.png
+* res\drawable-hdpi\common_signin_btn_icon_pressed_light.9.png
+* res\drawable-hdpi\common_signin_btn_text_disabled_dark.9.png
+* res\drawable-hdpi\common_signin_btn_text_disabled_focus_dark.9.png
+* res\drawable-hdpi\common_signin_btn_text_disabled_focus_light.9.png
+* res\drawable-hdpi\common_signin_btn_text_disabled_light.9.png
+* res\drawable-hdpi\common_signin_btn_text_focus_dark.9.png
+* res\drawable-hdpi\common_signin_btn_text_focus_light.9.png
+* res\drawable-hdpi\common_signin_btn_text_normal_dark.9.png
+* res\drawable-hdpi\common_signin_btn_text_normal_light.9.png
+* res\drawable-hdpi\common_signin_btn_text_pressed_dark.9.png
+* res\drawable-hdpi\common_signin_btn_text_pressed_light.9.png
+* res\drawable-hdpi\ic_plusone_medium_off_client.png
+* res\drawable-hdpi\ic_plusone_small_off_client.png
+* res\drawable-hdpi\ic_plusone_standard_off_client.png
+* res\drawable-hdpi\ic_plusone_tall_off_client.png
+* res\drawable-hdpi\powered_by_google_dark.png
+* res\drawable-hdpi\powered_by_google_light.png
+* res\drawable-mdpi\
+* res\drawable-mdpi\common_signin_btn_icon_disabled_dark.9.png
+* res\drawable-mdpi\common_signin_btn_icon_disabled_focus_dark.9.png
+* res\drawable-mdpi\common_signin_btn_icon_disabled_focus_light.9.png
+* res\drawable-mdpi\common_signin_btn_icon_disabled_light.9.png
+* res\drawable-mdpi\common_signin_btn_icon_focus_dark.9.png
+* res\drawable-mdpi\common_signin_btn_icon_focus_light.9.png
+* res\drawable-mdpi\common_signin_btn_icon_normal_dark.9.png
+* res\drawable-mdpi\common_signin_btn_icon_normal_light.9.png
+* res\drawable-mdpi\common_signin_btn_icon_pressed_dark.9.png
+* res\drawable-mdpi\common_signin_btn_icon_pressed_light.9.png
+* res\drawable-mdpi\common_signin_btn_text_disabled_dark.9.png
+* res\drawable-mdpi\common_signin_btn_text_disabled_focus_dark.9.png
+* res\drawable-mdpi\common_signin_btn_text_disabled_focus_light.9.png
+* res\drawable-mdpi\common_signin_btn_text_disabled_light.9.png
+* res\drawable-mdpi\common_signin_btn_text_focus_dark.9.png
+* res\drawable-mdpi\common_signin_btn_text_focus_light.9.png
+* res\drawable-mdpi\common_signin_btn_text_normal_dark.9.png
+* res\drawable-mdpi\common_signin_btn_text_normal_light.9.png
+* res\drawable-mdpi\common_signin_btn_text_pressed_dark.9.png
+* res\drawable-mdpi\common_signin_btn_text_pressed_light.9.png
+* res\drawable-mdpi\ic_plusone_medium_off_client.png
+* res\drawable-mdpi\ic_plusone_small_off_client.png
+* res\drawable-mdpi\ic_plusone_standard_off_client.png
+* res\drawable-mdpi\ic_plusone_tall_off_client.png
+* res\drawable-mdpi\powered_by_google_dark.png
+* res\drawable-mdpi\powered_by_google_light.png
+* res\drawable-xhdpi\
+* res\drawable-xhdpi\common_signin_btn_icon_disabled_dark.9.png
+* res\drawable-xhdpi\common_signin_btn_icon_disabled_focus_dark.9.png
+* res\drawable-xhdpi\common_signin_btn_icon_disabled_focus_light.9.png
+* res\drawable-xhdpi\common_signin_btn_icon_disabled_light.9.png
+* res\drawable-xhdpi\common_signin_btn_icon_focus_dark.9.png
+* res\drawable-xhdpi\common_signin_btn_icon_focus_light.9.png
+* res\drawable-xhdpi\common_signin_btn_icon_normal_dark.9.png
+* res\drawable-xhdpi\common_signin_btn_icon_normal_light.9.png
+* res\drawable-xhdpi\common_signin_btn_icon_pressed_dark.9.png
+* res\drawable-xhdpi\common_signin_btn_icon_pressed_light.9.png
+* res\drawable-xhdpi\common_signin_btn_text_disabled_dark.9.png
+* res\drawable-xhdpi\common_signin_btn_text_disabled_focus_dark.9.png
+* res\drawable-xhdpi\common_signin_btn_text_disabled_focus_light.9.png
+* res\drawable-xhdpi\common_signin_btn_text_disabled_light.9.png
+* res\drawable-xhdpi\common_signin_btn_text_focus_dark.9.png
+* res\drawable-xhdpi\common_signin_btn_text_focus_light.9.png
+* res\drawable-xhdpi\common_signin_btn_text_normal_dark.9.png
+* res\drawable-xhdpi\common_signin_btn_text_normal_light.9.png
+* res\drawable-xhdpi\common_signin_btn_text_pressed_dark.9.png
+* res\drawable-xhdpi\common_signin_btn_text_pressed_light.9.png
+* res\drawable-xhdpi\ic_plusone_medium_off_client.png
+* res\drawable-xhdpi\ic_plusone_small_off_client.png
+* res\drawable-xhdpi\ic_plusone_standard_off_client.png
+* res\drawable-xhdpi\ic_plusone_tall_off_client.png
+* res\drawable-xhdpi\powered_by_google_dark.png
+* res\drawable-xhdpi\powered_by_google_light.png
+* res\drawable-xxhdpi\
+* res\drawable-xxhdpi\common_signin_btn_icon_disabled_dark.9.png
+* res\drawable-xxhdpi\common_signin_btn_icon_disabled_focus_dark.9.png
+* res\drawable-xxhdpi\common_signin_btn_icon_disabled_focus_light.9.png
+* res\drawable-xxhdpi\common_signin_btn_icon_disabled_light.9.png
+* res\drawable-xxhdpi\common_signin_btn_icon_focus_dark.9.png
+* res\drawable-xxhdpi\common_signin_btn_icon_focus_light.9.png
+* res\drawable-xxhdpi\common_signin_btn_icon_normal_dark.9.png
+* res\drawable-xxhdpi\common_signin_btn_icon_normal_light.9.png
+* res\drawable-xxhdpi\common_signin_btn_icon_pressed_dark.9.png
+* res\drawable-xxhdpi\common_signin_btn_icon_pressed_light.9.png
+* res\drawable-xxhdpi\common_signin_btn_text_disabled_dark.9.png
+* res\drawable-xxhdpi\common_signin_btn_text_disabled_focus_dark.9.png
+* res\drawable-xxhdpi\common_signin_btn_text_disabled_focus_light.9.png
+* res\drawable-xxhdpi\common_signin_btn_text_disabled_light.9.png
+* res\drawable-xxhdpi\common_signin_btn_text_focus_dark.9.png
+* res\drawable-xxhdpi\common_signin_btn_text_focus_light.9.png
+* res\drawable-xxhdpi\common_signin_btn_text_normal_dark.9.png
+* res\drawable-xxhdpi\common_signin_btn_text_normal_light.9.png
+* res\drawable-xxhdpi\common_signin_btn_text_pressed_dark.9.png
+* res\drawable-xxhdpi\common_signin_btn_text_pressed_light.9.png
+* res\drawable-xxhdpi\ic_plusone_medium_off_client.png
+* res\drawable-xxhdpi\ic_plusone_small_off_client.png
+* res\drawable-xxhdpi\ic_plusone_standard_off_client.png
+* res\drawable-xxhdpi\ic_plusone_tall_off_client.png
+* res\drawable-xxhdpi\powered_by_google_dark.png
+* res\drawable-xxhdpi\powered_by_google_light.png
+* res\drawable\
+* res\drawable\common_signin_btn_icon_dark.xml
+* res\drawable\common_signin_btn_icon_light.xml
+* res\drawable\common_signin_btn_text_dark.xml
+* res\drawable\common_signin_btn_text_light.xml
+* res\values-af\
+* res\values-af\common_strings.xml
+* res\values-am\
+* res\values-am\common_strings.xml
+* res\values-ar\
+* res\values-ar\common_strings.xml
+* res\values-be\
+* res\values-be\common_strings.xml
+* res\values-bg\
+* res\values-bg\common_strings.xml
+* res\values-ca\
+* res\values-ca\common_strings.xml
+* res\values-cs\
+* res\values-cs\common_strings.xml
+* res\values-da\
+* res\values-da\common_strings.xml
+* res\values-de\
+* res\values-de\common_strings.xml
+* res\values-el\
+* res\values-el\common_strings.xml
+* res\values-en-rGB\
+* res\values-en-rGB\common_strings.xml
+* res\values-en-rIN\
+* res\values-en-rIN\common_strings.xml
+* res\values-es-rUS\
+* res\values-es-rUS\common_strings.xml
+* res\values-es\
+* res\values-es\common_strings.xml
+* res\values-es\wallet_strings.xml
+* res\values-et-rEE\
+* res\values-et-rEE\common_strings.xml
+* res\values-fa\
+* res\values-fa\common_strings.xml
+* res\values-fi\
+* res\values-fi\common_strings.xml
+* res\values-fr-rCA\
+* res\values-fr-rCA\common_strings.xml
+* res\values-fr\
+* res\values-fr\common_strings.xml
+* res\values-hi\
+* res\values-hi\common_strings.xml
+* res\values-hr\
+* res\values-hr\common_strings.xml
+* res\values-hu\
+* res\values-hu\common_strings.xml
+* res\values-hy-rAM\
+* res\values-hy-rAM\common_strings.xml
+* res\values-in\
+* res\values-in\common_strings.xml
+* res\values-it\
+* res\values-it\common_strings.xml
+* res\values-iw\
+* res\values-iw\common_strings.xml
+* res\values-ja\
+* res\values-ja\common_strings.xml
+* res\values-ka-rGE\
+* res\values-ka-rGE\common_strings.xml
+* res\values-km-rKH\
+* res\values-km-rKH\common_strings.xml
+* res\values-ko\
+* res\values-ko\common_strings.xml
+* res\values-lo-rLA\
+* res\values-lo-rLA\common_strings.xml
+* res\values-lt\
+* res\values-lt\common_strings.xml
+* res\values-lv\
+* res\values-lv\common_strings.xml
+* res\values-mn-rMN\
+* res\values-mn-rMN\common_strings.xml
+* res\values-ms-rMY\
+* res\values-ms-rMY\common_strings.xml
+* res\values-nb\
+* res\values-nb\common_strings.xml
+* res\values-nl\
+* res\values-nl\common_strings.xml
+* res\values-pl\
+* res\values-pl\common_strings.xml
+* res\values-pt-rBR\
+* res\values-pt-rBR\common_strings.xml
+* res\values-pt-rPT\
+* res\values-pt-rPT\common_strings.xml
+* res\values-pt\
+* res\values-pt\common_strings.xml
+* res\values-ro\
+* res\values-ro\common_strings.xml
+* res\values-ru\
+* res\values-ru\common_strings.xml
+* res\values-sk\
+* res\values-sk\common_strings.xml
+* res\values-sl\
+* res\values-sl\common_strings.xml
+* res\values-sr\
+* res\values-sr\common_strings.xml
+* res\values-sv\
+* res\values-sv\common_strings.xml
+* res\values-sw\
+* res\values-sw\common_strings.xml
+* res\values-th\
+* res\values-th\common_strings.xml
+* res\values-tl\
+* res\values-tl\common_strings.xml
+* res\values-tr\
+* res\values-tr\common_strings.xml
+* res\values-uk\
+* res\values-uk\common_strings.xml
+* res\values-vi\
+* res\values-vi\common_strings.xml
+* res\values-zh-rCN\
+* res\values-zh-rCN\common_strings.xml
+* res\values-zh-rHK\
+* res\values-zh-rHK\common_strings.xml
+* res\values-zh-rTW\
+* res\values-zh-rTW\common_strings.xml
+* res\values-zu\
+* res\values-zu\common_strings.xml
+* res\values\
+* res\values\admob_ads_attrs.xml
+* res\values\admob_iap_style.xml
+* res\values\common_colors.xml
+* res\values\common_strings.xml
+* res\values\maps_attrs.xml
+* res\values\version.xml
+* res\values\wallet_attrs.xml
+* res\values\wallet_colors.xml
+* res\values\wallet_strings.xml
+* res\values\wallet_styles.xml
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In google-play-services_lib:
+* libs\google-play-services.jar => googleplayservices_lib\libs\google-play-services.jar
+* src\ => googleplayservices_lib\src\main\java\
+In SmartMath:
+* AndroidManifest.xml => smartMath\src\main\AndroidManifest.xml
+* assets\ => smartMath\src\main\assets\
+* libs\Baidu_MobAds_SDK.jar => smartMath\libs\Baidu_MobAds_SDK.jar
+* lint.xml => smartMath\lint.xml
+* res\ => smartMath\src\main\res\
+* src\ => smartMath\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

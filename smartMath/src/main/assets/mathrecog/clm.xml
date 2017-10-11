@@ -1,0 +1,94 @@
+<CCSetsList>
+	<CharCandSet Type="CLOSE_SQUARE_BRACKET" Font="">
+		<CharCand Type="ONE" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="SMALL_L" Font="">
+		<CharCand Type="ONE" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="ONE" Font="">
+		<CharCand Type="SMALL_L" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="BIG_O" Font="">
+		<CharCand Type="ZERO" Font="" MissRecogTimes="" />
+		<CharCand Type="SMALL_O" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="SMALL_O" Font="">
+		<CharCand Type="ZERO" Font="" MissRecogTimes="" />
+		<CharCand Type="BIG_O" Font="" MissRecogTimes="" />
+		<CharCand Type="SMALL_N" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="ZERO" Font="">
+		<CharCand Type="SMALL_O" Font="" MissRecogTimes="" />
+		<CharCand Type="BIG_O" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="SMALL_F" Font="cambria_italian_48_thinned">
+		<CharCand Type="INTEGRATE" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="BIG_J" Font="cambria_italian_48_thinned">
+		<CharCand Type="INTEGRATE" Font="cambria_italian_48_thinned" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="INTEGRATE" Font="">
+		<CharCand Type="SMALL_F" Font="cambria_italian_48_thinned" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="SQRT_TALL" Font="">
+		<CharCand Type="SMALL_T" Font="cambria_italian_48_thinned" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="FORWARD_SLASH" Font="">
+		<CharCand Type="ONE" Font="" MissRecogTimes="" />
+		<CharCand Type="SMALL_T" Font="cambria_italian_48_thinned" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="BIG_J" Font="cambria_48_thinned">
+		<CharCand Type="CLOSE_ROUND_BRACKET" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="FIVE" Font="">
+		<CharCand Type="BIG_S" Font="" MissRecogTimes="" />
+		<CharCand Type="SMALL_S" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="BIG_S" Font="">
+		<CharCand Type="FIVE" Font="" MissRecogTimes="" />
+		<CharCand Type="SMALL_S" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="SMALL_S" Font="">
+		<CharCand Type="BIG_S" Font="" MissRecogTimes="" />
+		<CharCand Type="FIVE" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="SMALL_DELTA" Font="book_man_old_black_72_thinned">
+		<CharCand Type="FIVE" Font="book_man_old_black_72_thinned" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="SMALL_PI" Font="cambria_italian_48_thinned">
+		<CharCand Type="SMALL_N" Font="cambria_italian_48_thinned" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="SMALL_PI" Font="cambria_48_thinned">
+		<CharCand Type="SMALL_N" Font="cambria_48_thinned" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="BIG_X" Font="">
+		<CharCand Type="SMALL_X" Font="" MissRecogTimes="" />
+		<CharCand Type="MULTIPLY" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="SMALL_X" Font="">
+		<CharCand Type="BIG_X" Font="" MissRecogTimes="" />
+		<CharCand Type="MULTIPLY" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="MULTIPLY" Font="">
+		<CharCand Type="BIG_X" Font="" MissRecogTimes="" />
+		<CharCand Type="SMALL_X" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="SMALL_A" Font="">
+		<CharCand Type="SMALL_ALPHA" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="SMALL_ALPHA" Font="">
+		<CharCand Type="SMALL_A" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="BRACE" Font="">
+		<CharCand Type="ROUND_BRACKET" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="CLOSE_BRACE" Font="">
+		<CharCand Type="CLOSE_ROUND_BRACKET" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="SMALL_Q" Font="">
+		<CharCand Type="FOUR" Font="" MissRecogTimes="" />
+	</CharCandSet>
+	<CharCandSet Type="SMALL_D" Font="">
+		<CharCand Type="FOUR" Font="" MissRecogTimes="" />
+	</CharCandSet>
+</CCSetsList>

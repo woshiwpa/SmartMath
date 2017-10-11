@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">您好！</string>
+    <string name="app_name">智慧计算器</string>
+    <string name="alert_dialog_ok">确定</string>
+    <string name="alert_dialog_cancel">取消</string>
+    <string name="yes_i_know">我知道了</string>
+    <string name="read_next_time">下次再说</string>
+    <string name="menu_cmdline">命令提示符</string>
+    <string name="menu_calcassist">计算助手</string>
+    <string name="menu_calculate">数值计算</string>
+    <string name="menu_plotgraph">绘制图形</string>
+    <string name="menu_plot2dgraph">绘制二维曲线</string>
+    <string name="menu_plot3dgraph">绘制三维曲线</string>
+    <string name="menu_chartmgr">图形文件管理</string>
+    <string name="menu_integrate">积分计算</string>
+    <string name="menu_history">历史纪录</string>
+    <string name="menu_alwayshidesoftkeyboard">隐藏软件盘</string>
+    <string name="menu_enablesoftkeyboard">激活软件盘</string>
+    <string name="menu_settings">设置</string>
+	<string name="menu_configinputpads">设置输入键盘</string>
+    <string name="menu_fill_example">填充示例</string>
+	<string name="menu_help">帮助</string>
+    <string name="setting_number_format_prompt">设置数值精度</string>
+    <string name="setting_variable_range_prompt">设置智慧计算器绘图时变量变化范围</string>
+    <string name="setting_record_length_prompt">设置记录长度</string>
+    <string name="setting_extreme_value_prompt">设置科学计数</string>
+    <string name="setting_auto_start_prompt">开启应用时自动启动程序</string>
+    <string name="setting_application_data_storage_prompt">用于存放软件数据的存储器</string>
+    <string name="do_you_know">您知道吗 ...</string>
+    <string name="whats_new">更新和增加的功能</string>
+    <string name="do_not_show_whats_new_again">下一次启动时不再显示。</string>
+    <string name="welcome_message">输入help或表达式如：3 + log(4.1 / avg(1,5,-3))，然后按“计算”</string>
+    <string name="welcome_message2">温馨提示：\n* 请您触摸表达式输入框以显示软键盘或输入按钮面板。您可以将输入面板向左右滑动以选择输入数字/运算符或者函数。\n* 输入help（通过按下救生圈图标按钮）和函数名或者运算符获取快速帮助信息，或输入表达式如：3 + log(4.1 / avg(1,5,-3))，或者一组表达式比如\ny1*3+4*y2-3*y3==7\ny2/2-3*y3+y1==9\ny3/3-6*y1+y2==2.4\n，然后按开始按钮进行计算！\n* 请注意等于运算符在本软件中是“==”，而“=”是赋值运算符，此外次方运算符是“**”而不是“^”。</string>
+	<string name="welcome_message3">温馨提示：\n* 请您触摸表达式输入框以显示软键盘或输入按钮面板。您可以将输入面板向左右滑动以选择输入数字/运算符或者函数。\n* 输入help（通过按下救生圈图标按钮）和函数名或运算符获取快速帮助信息。\n* 输入表达式如：3+log(4.1/avg(1,5,-3))，或表达式组比如\ny1*(3.8+i)==7+4*y2\ny2/2-3*y1==9.4\n，然后按开始按钮进行计算。\n输入一个或多个等式比如r=cos(θ)，y==sin(x)和/或z==x+y，然后按绘图按钮绘制2维，极坐标或者3维图形！\n* 请注意等于运算符在本软件中是“==”，而“=”是赋值运算符，此外次方运算符是“**”而不是“^”。</string>
+	<string name="welcome_message4">温馨提示：\n* 您可以点击照相按钮拍摄输入数学表达式。\n&lt;div align=&quot;left&quot;&gt;&lt;img src=&quot;file:///android_asset/zh-CN/HowtoInfo/main_window_big.jpg&quot; alt=&quot;take_photo&quot; WITH_HEIGHT_TO_RECALC(800,480) /&gt;&lt;/div&gt;\n* 您还可以触摸表达式输入框以显示软键盘或输入按钮面板,然后将输入面板向左右滑动以选择输入数字/运算符或者函数。\n&lt;div align=&quot;left&quot;&gt;&lt;img src=&quot;file:///android_asset/zh-CN/HowtoInfo/main_window_popup_keyboard_big.jpg&quot; alt=&quot;input_by_keyboard&quot; WITH_HEIGHT_TO_RECALC(800,480) /&gt;&lt;/div&gt;\n* 输入help（通过按下救生圈图标按钮或者问号键）和函数名或运算符获取快速帮助信息。\n&lt;div align=&quot;left&quot;&gt;&lt;img src=&quot;file:///android_asset/zh-CN/HowtoInfo/find_help_of_functions_big.jpg&quot; alt=&quot;find_help_of_functions&quot; WITH_HEIGHT_TO_RECALC(800,480) /&gt;&lt;/div&gt;</string>
+    <string name="calculation_result_clearly_shown">计算结果</string>
+    <string name="copy_result_to_input">拷贝结果至输入</string>
+    <string name="copy_expression_to_input">拷贝输入至输入</string>
+    <string name="long_click_calculate_output">长按输出结果将可以更清晰地显示结果！</string>
+        
+	<string name="EXPERROR_NO_EXPRESSION">没有表达式！</string>
+	<string name="EXPERROR_MULTIPLE_EXPRESSIONS">多个表达式！</string>
+	<string name="EXPERROR_LACK_OPERATOR_BETWEEN_TWO_OPERANDS">两个计算数之间缺少计算符！</string>
+	<string name="EXPERROR_NUM_CAN_NOT_HAVE_TWO_DECIMAL_POINT">两个小数点！</string>
+	<string name="EXPERROR_NUM_DO_NOT_ACCORD_DECIMAL_NUM_WRITING_STANDARD">数字格式不对！</string>
+	<string name="EXPERROR_OPERATOR_NOT_EXIST">不存在的操作符！</string>
+	<string name="EXPERROR_UNMATCHED_RIGHTPARENTHESE">右括号没有对应的左括号！</string>
+	<string name="EXPERROR_UNMATCHED_LEFTPARENTHESE">左括号没有对应的右括号！</string>
+	<string name="EXPERROR_WRONG_OPERAND_TYPE">不正确的操作数类型！</string>
+	<string name="EXPERROR_INCORRECT_ANSWER_OF_POWER_FUNCTION_OPERANDS">次方（power）函数的参数不正确！</string>
+	<string name="EXPERROR_INCORRECT_BINARY_OPERATOR">不正确的二元操作符！</string>
+	<string name="EXPERROR_INCORRECT_MONADIC_OPERATOR">不正确的一元操作符！</string>
+	<string name="EXPERROR_LACK_OPERAND">缺少操作数！</string>
+	<string name="EXPERROR_CAN_NOT_IDENTIFIED_CHARACTER">字符无法识别！</string>
+	<string name="EXPERROR_DATATYPE_IS_NOT_DEFINED">数据类型没有定义！</string>
+	<string name="EXPERROR_CAN_NOT_CHANGE_A_NOTEXIST_DATUM_TO_ANY_OTHER_DATATYPE">无法将不存在的类型变成其它任何数据类型！</string>
+	<string name="EXPERROR_NEW_DATATYPE_IS_NOT_DEFINED">新数据类型没有定义！</string>
+	<string name="EXPERROR_INTEGER_OVERFLOW">整数溢出！</string>
+	<string name="EXPERROR_DOUBLE_OVERFLOW">浮点数溢出！</string>
+	<string name="EXPERROR_CHANGE_FROM_DOUBLE_TO_INTEGER_OVERFLOW">将浮点数转换为整数时溢出！</string>
+	<string name="EXPERROR_OPERAND_OF_FACTORIAL_MAY_BE_TOO_LARGE">阶乘参数值过大！</string>
+	<string name="EXPERROR_DIVISOR_CAN_NOT_BE_ZERO">被零除！</string>
+	<string name="EXPERROR_OPERAND_OF_FACTORIAL_CAN_NOT_LESS_THAN_ZERO">负的阶乘参数值！</string>
+	<string name="EXPERROR_OPERAND_OF_BIT_OPERATION_MUST_BE_GREATER_THAN_ZERO">位操作数必须为正数！</string>
+	<string name="EXPERROR_INCORRECT_NUM_OF_PARAMETER">参数数目不对！</string>
+	<string name="EXPERROR_INVALID_PARAMETER_RANGE">不正确的参数范围！</string>
+	<string name="EXPERROR_INVALID_PARAMETER_TYPE">不正确的参数类型！</string>
+	<string name="EXPERROR_UNDEFINED_FUNCTION">没有定义的函数！</string>
+	<string name="EXPERROR_UNDEFINED_VARIABLE">没有定义的变量！</string>
+	
+	<string name="go_button">计算!</string>
+	<string name="numbers_operators_button_long">数字\n操作符</string>
+	<string name="common_functions_button_long">通用函数</string>
+	<string name="more_functions_button_long">更多函数</string>
+	<string name="numbers_operators_button_short">1+2*3</string>
+	<string name="common_functions_button_short">f(x)</string>
+	<string name="more_functions_button_short">f()...</string>
+	<string name="left_button">向左</string>
+	<string name="right_button">向右</string>
+	<string name="eraze_button">删除</string>
+	<string name="help_button">帮助</string>
+    <string name="x_help_info">X为待解或待绘图变量x的名字或者其他待解或待绘图变量比如x1，xy，xx等的名字的一部分。</string>
+    <string name="y_help_info">Y为待解或待绘图变量y的名字或者其他待解或待绘图变量比如y3，xy，yyyy等的名字的一部分。</string>
+    <string name="z_help_info">Z为待解或待绘图变量z的名字或者其他待解或待绘图变量比如z2，zx，zzz等的名字的一部分。</string>
+    <string name="u_help_info">U为待解或待绘图变量u的名字或者其他待解或待绘图变量比如u1，uy，uu等的名字的一部分。</string>
+    <string name="v_help_info">V为待解或待绘图变量v的名字或者其他待解或待绘图变量比如v3，xv，vvvv等的名字的一部分。</string>
+    <string name="t_help_info">T为待解或待绘图变量t的名字或者其他待解或待绘图变量比如t2，tx，ttt等的名字的一部分。</string>
+    <string name="r_help_info">R为待解或待绘图（经常用于绘制极坐标图形）变量t的名字或者其他待解或待绘图变量比如r2，rx，ttr等的名字的一部分。</string>
+    <string name="theta_help_info">&#x03B8;为待解或待绘图变量&#x03B8;的名字或者其他待解或待绘图变量比如&#x03B8;2，&#x03B8;x，&#x03B8;t等的名字的一部分。注意如果变量名字为&#x03B8;且待绘图变量个数为2，将绘制极坐标图形。</string>
+   	<string name="assign_help_info">赋值操作符。本操作符将一个数值赋给一个变量。比如，x = 3 + 4将数值7赋给变量x。</string>
+	<string name="equal_help_info">等于号。本符号意味着本符号左边的表达式和符号右边的表达式有同样的数值。比如，x + 1 == 7 + 3意味着x + 1和7 + 3有同样的数值，也就是10。通过这个表达式，我们可以解出x的值为9。</string>
+	<string name="parenthesis_help_info">左括号。位于一对括号中的表达式有更高的运算优先级。比如，x * (y + 3)。</string>
+	<string name="closeparenthesis_help_info">右括号。位于一对括号中的表达式有更高的运算优先级。比如，x * (y + 3)。</string>
+	<string name="squarebracket_help_info">左方括号。左方括号为一个数组的定义的开始。比如，[[1,2,3],[4,5,6]]定义了一个2*3矩阵，第一行为包括3个元素（也就是1，2和3）的数组，第二行也为包括3个元素（也就是4，5和6）的数组。该矩阵本身也为一个数组包括2个数组元素。</string>
+	<string name="closesquarebracket_help_info">右方括号。右方括号为一个数组的定义的结束。比如，[[1,2,3],[4,5,6]]定义了一个2*3矩阵，第一行为包括3个元素（也就是1，2和3）的数组，第二行也为包括3个元素（也就是4，5和6）的数组。该矩阵本身也为一个数组包括2个数组元素。</string>
+	<string name="comma_help_info">逗号将数组中的每一个元素分隔开，比如，数组[2,3,4,5]有4个元素被3个逗号分隔开。</string>
+	<string name="plus_help_info">正数或加号（加号支持复数，矩阵和字符串）。</string>
+	<string name="minus_help_info">负数或减号（减号支持复数和矩阵）。</string>
+	<string name="multiplication_help_info">乘号（支持复数和矩阵）。</string>
+	<string name="division_help_info">除号（支持复数和矩阵）。</string>
+	<string name="leftdivision_help_info">左除号（主要用于矩阵相除，比如计算Ax=b中的x时，x=A\\b，注意第一个操作数是除数，第二个是被除数，如果除数不是矩阵，和除号的功能完全一样）。</string>
+	<string name="power_help_info">次方。注意如果两个运算数都可以为复数。</string>
+	<string name="exclaimation_help_info">如果位于操作数左边是否操作符，如果位于操作数有变是阶乘操作符。注意操作数必须是非负并且自动转换为整数。</string>
+	<string name="transpose_help_info">二维矩阵转秩。如果操作数是一维向量，返回一个二维矩阵，如果操作数不是矩阵，返回操作数本身。</string>
+	<string name="doublequote_help_info">双引号，用于标示字符串。</string>
+	<string name="percentage_help_info">百分号。例如，403.77% = 4.0377。</string>
+	<string name="bit_and_help_info">位与操作符，注意操作数必须为非负整数。</string>
+	<string name="bit_or_help_info">位或操作符，注意操作数必须为非负整数。</string>
+	<string name="bit_xor_help_info">位异或操作符，注意操作数必须为非负整数。</string>
+	<string name="bit_not_help_info">位否操作符，注意操作数必须为非负整数。</string>
+	<string name="image_i_help_info">用于复数计算的单位虚数值。</string>
+	<string name="pi_constant_help_info">圆周率。</string>
+	<string name="e_constant_help_info">自然对数e。注意e同时也用于科学计数，比如1.23e-002。</string>
+	<string name="null_constant_help_info">NULL（空值）。</string>
+	<string name="true_constant_help_info">布尔值true。</string>
+	<string name="false_constant_help_info">布尔值false。</string>
+	<string name="inf_constant_help_info">数值无穷大。</string>
+	<string name="infi_constant_help_info">虚数值无穷大。</string>
+	<string name="nan_constant_help_info">没有定义的数值，比如0除以0。</string>
+	<string name="nani_constant_help_info">没有定义的虚数值。</string>
+	<string name="hex_oct_bin_initial_help_info">0x是一个16进制数的起始符号，比如0xFA36.BCEE；0b是一个二进制数的起始符号，比如0b0011；0是一个八进制数的起始符号，比如0376.774。</string>
+	<string name="no_quick_help_info">没有快速帮助信息对应于</string>
+
+	<string name="calculator_settings">计算器设置</string>
+	<string name="digits_shown">位数字</string>
+	<string name="let_calculator_decide">让计算器决定</string>
+	<string name="never_sci_notation">不使用科学计数</string>
+	<string name="always_sci_notation">总是使用科学计数</string>
+	<string name="if_log10_abs_result">仅当log10(abs(结果)) >= </string>
+	<string name="records_shown"> 条记录</string>
+	<string name="enable_btn_press_vibration_prompt">按计算器按钮时震动</string>
+	<string name="external_storage_mnt_folder_prompt">存储设备（比如SD卡）所在系统文件夹:</string>
+	<string name="app_folder_prompt">应用程序数据在存储设备上的文件夹位于：</string>
+	<string name="default_storage">默认存储位置</string>
+	<string name="auto">自动</string>
+	<string name="internal_storage">内部存储</string>
+	<string name="external_sd_card">外存SD卡</string>
+	<string name="script_folder_prompt">用户定义的函数存储于存储设备文件夹：</string>
+   	<string name="chart_folder_prompt">使用者生成的图片存放于存储设备文件夹：</string>
+	<string name="settings_saved">设置已经保存</string>
+	
+	<string name="select_record_title">计算记录</string>
+	<string name="no_records">没有记录！</string>
+	<string name="select_input_type">请选择表达式或者结果以输入</string>	
+	<string name="error_answer_shown">错误</string>
+	<string name="return_nothing_answer_shown">没有返回值</string>
+	<string name="variables_declared_shown">申明变量：</string>
+	    	    
+	<string name="calculator_help">计算器帮助</string>
+
+	<string name="cmd_line_title">命令提示符</string>
+	<string name="cmd_line_welcome_message">请输入表达式或者help加空格加函数名，然后按回车键。</string>
+	<string name="command_prompt">$></string>
+    <string name="session_starts">命令集开始执行</string>
+    <string name="session_returns">命令集返回</string>
+	<string name="last_cmd">上一条指令</string>
+    <string name="last_return">上一次结果</string>
+    <string name="last_input">上一次输入</string>
+    <string name="interrupt_task">终止运行中的任务</string>
+    <string name="clear_screen">清屏</string>
+    <string name="pop_up_soft_key">显示软键盘</string>
+    <string name="pop_up_system_soft_key">弹出系统软键盘</string>
+    <string name="hide_system_soft_key">隐藏系统软键盘</string>
+    <string name="new_script">新程序文件</string>
+    <string name="manage_scripts">管理程序文件</string>
+    <string name="view_charts">观看图形</string>
+
+    <string name="error">错误！</string>
+    <string name="retry_or_not">是否重试？</string>
+    <string name="warning">警告！</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="yes">是</string>
+    <string name="no">否</string> 
+    <string name="close">关闭</string>
+    <string name="clear">清空</string>
+    <string name="next_step">下一步</string>
+	<string name="back">返回</string>
+    <string name="skip">跳过</string>
+        
+    <string name="script_file_manager_title">程序文件管理器</string>
+    <string name="chart_file_manager_title">图形文件管理器</string>
+    <string name="file_manager_title">文件管理器</string>
+    <string name="script_editor_title">程序编辑器</string>
+    <string name="script_file_saved">文件已经保存</string>
+    <string name="file_folder_icon">文件或者文件夹图标</string>
+    <string name="file_manager_menu_new">新建</string>
+    <string name="file_manager_menu_open">打开</string>
+    <string name="file_manager_menu_save">保存</string>
+    <string name="file_manager_menu_cut">剪切</string>
+    <string name="file_manager_menu_copy">拷贝</string>
+    <string name="file_manager_menu_paste">粘贴</string>
+    <string name="file_manager_menu_rename">重命名</string>
+    <string name="file_manager_menu_delete">删除</string>
+    <string name="cannot">无法</string>
+    <string name="file_copy_action">拷贝文档</string>
+    <string name="file_move_action">移动文档</string>
+    <string name="file_rename_action">重命名文档</string>
+    <string name="to_path">至</string>
+    <string name="file_manager_file_io_error">文件错误！</string>
+    <string name="file_manager_source_file_does_not_exist">作为拷贝，移动或重命名的源文件不存在！</string>
+    <string name="file_manager_invalid_operation">非法文件操作！</string>
+    <string name="file_manager_to_cover_existing_file">将要覆盖一个已存在的文件或者合并至一个已存在的文件夹，是否继续？</string>
+        
+    <string name="loading_chart">装载图形文件 ...</string>
+    <string name="file_manager_invalid_path">非法路径！</string>
+    <string name="example_scripts_not_loaded">example文件夹用于存放开发示例，该文件夹以及其子文件夹中的所有程序将不会被加载！</string>
+    <string name="file_manager_copy_examples_confirm">在本目录下没有任何文件，您想拷贝示例文件至此吗？</string>
+        
+    <string name="file_manager_new_file_type_script_file">新的程序文件</string>
+    <string name="file_manager_new_file_type_folder">新文件夹</string>
+    <string name="file_manager_new_file_prompt">请输入文件名：</string>
+    <string name="file_manager_new_file_title">创建新的文件或文件夹</string>
+    <string name="file_manager_new_file_failed_msg">无法创建新文件或文件夹！</string>
+	<string name="file_manager_file_cannot_be_renamed_to_the_same_file">重命名的文件名和原来的文件名一样！</string>
+	<string name="file_manager_file_cannot_be_copied_moved_or_renamed_to_folder_or_vice_versa">文件不可以被拷贝，移动或者重命名到一个文件夹（或者反过来）！</string>
+	<string name="file_manager_folder_cannot_be_copied_moved_or_renamed_to_its_child">文件夹不能够被复制，移动或者重命名为它的子文件夹！</string>
+	<string name="file_manager_renamed_file_name_cannot_be_empty">重命名的文件名不能为空！</string>
+        
+    <string name="file_manager_file_rename_title">重命名</string>
+    <string name="file_manager_file_new_name_prompt">请输入新的文件名：</string>
+	<string name="file_manager_file_rename_failed_msg">无法重命名！</string>
+	
+    <string name="file_manager_file_delete_title">删除</string>
+	<string name="file_manager_file_delete_confirm">你确定要删除</string>
+	<string name="file_manager_file_delete_failed_msg">无法删除！</string>
+	
+	<string name="file_editor_file_open_fail">无法打开文件！</string>
+	<string name="file_not_found">找不到文件！</string>
+	<string name="file_editor_file_io_error">IO错误！</string>
+	<string name="file_editor_file_changed">文件已经被更改，是否保存？</string>
+	
+	<string name="file_editor_new_file">新文件</string>
+	<string name="file_editor_file">文件</string>
+	<string name="file_editor_inside">位于</string>
+	
+	<string name="file_editor_menu_new">新建</string>
+	<string name="file_editor_menu_open">打开</string>
+	<string name="file_editor_menu_save">保存</string>
+	<string name="file_editor_menu_save_as">另存为</string>
+	<string name="file_editor_menu_goto_line">跳转至</string>
+	<string name="file_editor_goto_line">跳转至行</string>
+	
+	<string name="choose_inputpad_2_config">请选择设置那一个程序的输入面板：</string>
+	<string name="choose_sc_inputpad_config">设置智慧计算器输入面板</string>
+	<string name="choose_cl_inputpad_config">设置命令提示符输入面板</string>
+	<string name="choose_se_inputpad_config">设置程序编辑器输入面板</string>
+	<string name="choose_integ_plot_inputpad_config">设置其他输入面板</string>
+	<string name="choose_graph_plotter">请选择绘制哪一种图形：</string>
+	<string name="choose_2d_graph_plotter">绘制2维曲线图</string>
+	<string name="choose_polar_graph_plotter">绘制极坐标曲线图</string>
+	<string name="choose_3d_graph_plotter">绘制3维曲线图</string>
+	<string name="plot_2d_title">绘制2维曲线图</string>
+	<string name="plot_polar_title">绘制极坐标曲线图</string>
+	<string name="plot_3d_title">绘制3维曲线图</string>
+	<string name="graph_name_prompt">图像名：</string>
+	<string name="graph_title_prompt">图像标题：</string>
+	<string name="graph_Xtitle_prompt">X轴标题：</string>
+	<string name="graph_Ytitle_prompt">Y轴标题：</string>
+	<string name="graph_Ztitle_prompt">Z轴标题：</string>
+	<string name="graph_Rtitle_prompt">r轴标题：</string>
+	<string name="graph_Angletitle_prompt">&#x03B8;轴标题：</string>
+	<string name="graph_name_hint">图像1</string>
+	<string name="graph_title_hint">绘图示例</string>
+	<string name="graph_Xtitle_hint">X值</string>
+	<string name="graph_Ytitle_hint">Y值</string>
+	<string name="graph_Ztitle_hint">Z值</string>
+	<string name="graph_Rtitle_hint">半径</string>
+	<string name="graph_Angletitle_hint">角度</string>
+	<string name="graph_show_grid_chkbox_prompt">显示\n网格</string>
+	<string name="add_curve_btn_text">添加曲线</string>
+	<string name="clear_all_btn_text">清除所有</string>
+	<string name="generate_chart_btn_text">观看</string>
+	<string name="curve_title_prompt">标题：</string>
+	<string name="surface_is_grid_prompt">仅绘制网格？</string>
+	<string name="curve_color_prompt">颜色：</string>
+	<string name="max_color_prompt">颜色:</string>
+	<string name="max_color_value_prompt">最大值:</string>
+	<string name="max_value_colors_prompt">最大值和颜色</string>
+	<string name="min_color_prompt">颜色:</string>
+	<string name="min_color_value_prompt">最小值:</string>
+	<string name="min_value_colors_prompt">最小值和颜色</string>
+	<string name="curve_point_style_prompt">点的形状：</string>
+	<string name="curve_show_line_chkbox_prompt">显示连接线</string>
+	<string name="t_from_prompt">t：从</string>
+	<string name="t_to_prompt">到</string>
+	<string name="t_step_prompt">间隔</string>
+	<string name="u_from_prompt">u：从</string>
+	<string name="u_to_prompt">到</string>
+	<string name="u_step_prompt">间隔</string>
+	<string name="v_from_prompt">v：从</string>
+	<string name="v_to_prompt">到</string>
+	<string name="v_step_prompt">间隔</string>
+	<string name="curve_title_hint">曲线1</string>
+	<string name="curve_title_hint1">曲线2</string>
+   	<string name="curve_title_hint2">曲线3</string>
+   	<string name="t_from_hint">-50</string>
+	<string name="t_to_hint">50</string>
+	<string name="auto_value">自动</string>
+	<string name="t_step_hint">0.1</string>
+	<string name="x_t_hint">sin(2*t+2)</string>
+	<string name="y_t_hint">cos(3*t-5)</string>
+	<string name="delete_curve_btn_text">删除曲线</string>
+	<string name="clear_curve_btn_text">清除曲线定义</string>
+    <string-array name="curve_point_style_array">
+        <item>圆形</item>
+        <item>三角形</item>
+        <item>正方形</item>
+        <item>菱形</item>
+        <item>对角叉</item>
+        <item>点</item>
+    </string-array>
+	<string name="circle_point_style">圆形</string>
+	<string name="triangle_point_style">三角形</string>
+	<string name="square_point_style">正方形</string>
+	<string name="diamond_point_style">菱形</string>
+	<string name="x_point_style">对角叉</string>
+	<string name="point_point_style">点</string>
+	<string-array name="curve_color_array">
+        <item>黑色</item>
+        <item>蓝色</item>
+        <item>青色</item>
+        <item>深灰色</item>
+        <item>灰色</item>
+        <item>绿色</item>
+        <item>浅灰色</item>
+        <item>紫红色</item>
+        <item>红色</item>
+        <item>透明</item>
+        <item>白色</item>
+        <item>黄色</item>
+    </string-array>
+	<string name="black_color">黑色</string>
+	<string name="blue_color">蓝色</string>
+	<string name="cyan_color">青色</string>
+	<string name="dkgray_color">深灰色</string>
+	<string name="gray_color">灰色</string>
+	<string name="green_color">绿色</string>
+	<string name="ltgray_color">浅灰色</string>
+	<string name="magenta_color">紫红色</string>
+	<string name="red_color">红色</string>
+	<string name="transparent_color">透明</string>
+	<string name="white_color">白色</string>
+	<string name="yellow_color">黄色</string>
+	<string name="graph_settings_wrong">图像设置有问题所以无法绘制！</string>
+	<string name="no_graph_input">没有图形输入！</string>
+	<string name="graph_file_cannot_be_read">在阅读图像文件时发生错误！</string>
+	<string name="graph_file_cannot_be_saved">在保存图像文件时发生错误！</string>
+	<string name="too_many_points_in_graph">多于1000个点需要绘制。如果您的移动设备处理器不够快，图像处理可能会比较慢。如果您移动设备随机存储器容量较小，可能会被绘制点用尽。您要继续吗？</string>
+	<string name="please_wait">请等待</string>
+	<string name="calculating_chart_data">正在进行绘制图形所需要的计算...</string>
+	<string name="calculating_chart_data_cancelable">正在进行绘制图形所需要的计算。用户可以按回退键取消。</string>
+	<string name="not_show_axis_and_title">不显示轴和标题</string>
+	<string name="integrate_title">积分</string>
+	<string name="integrated_expr_prompt">被积分\n表达式：</string>
+	<string name="you_want_to_calculate">您想要计算：</string>
+	<string-array name="multiple_integral_array">
+        <item>不定积分</item>
+        <item>一次积分</item>
+        <item>二次积分</item>
+        <item>三次积分</item>
+    </string-array>
+   	<string name="x_variable_name">第一个积分变量的名字：</string>
+   	<string name="y_variable_name">第二个积分变量的名字：</string>
+   	<string name="z_variable_name">第三个积分变量的名字：</string>
+   	<string name="variable_from">从</string>
+   	<string name="variable_to">到</string>
+	<string name="variable_number_of_steps">积分步数</string>
+	<string name="default_number_of_steps_integ"></string>
+	<string name="integ_settings_wrong">积分输入有问题，积分无法计算！</string>
+	<string name="calculating_integrating_result">正在计算积分结果...</string>
+	<string name="integrating_result">积分结果</string>
+	<string name="integrate_note">注意：如果将积分步数设置为0，自适应Gauss—Kronrod积分法将会用于积分计算。该算法处理高频震荡函数更为精确，但是处理一些极端的情况时非常耗时，一次积分就可能花费5到10分钟。所以，只建议在普通一次积分，而不推荐在高次积分中采用该算法。</string>
+		
+	<string name="cannot_create_app_folder">无法生成数据文件夹，使用者将无法保存自己开发的函数和浏览生成的图片！</string>
+	<string name="cannot_create_script_folder">无法生成函数程序文件夹，使用者将无法保存自己开发的函数！</string>
+	<string name="cannot_create_chart_folder">无法生成图片文件夹，使用者将无法浏览生成的图片！</string>
+	<string name="function_name">函数名</string>
+	<string name="function_info">函数帮助信息</string>
+	<string name="all_functions">所有函数</string>
+	<string name="builtin_functions">内置函数</string>
+	<string name="predefined_functions">预定义函数</string>
+	<string name="integer_operation_functions">整数操作函数</string>
+	<string name="logic_functions">逻辑函数</string>
+	<string name="statistic_and_stochastic_functions">统计和随机函数</string>
+	<string name="trigononmetric_functions">三角函数</string>
+	<string name="exponential_and_logarithmic_functions">指数对数和次方函数</string>
+	<string name="complex_number_functions">复数操作函数</string>
+	<string name="system_functions">系统函数</string>
+	<string name="array_or_matrix_functions">数组和矩阵函数</string>
+	<string name="graphic_functions">图形函数</string>
+	<string name="expression_and_integration_functions">表达式和积分函数</string>
+	<string name="string_functions">字符串函数</string>
+	<string name="hyperbolic_trigononmetric_functions">双曲三角函数</string>
+	<string name="sorting_functions">排序函数</string>
+	<string name="others_functions">其他函数</string>
+
+	<string name="exception">异常！</string>
+	<string name="back_to_normal">回复正常。</string>
+	<string name="unmounted_external_storage">无法找到外接存储器（比如SD卡）！</string>
+	<string name="mounting_external_storage">正在寻找并装载外接存储器。注意在此过程中计算可能会出现中断。</string>
+	<string name="mounted_external_storage">找到并已装载外接存储器。</string>
+
+	<string name="initializing_application">正在初始化应用...</string>
+	<string name="copying_files">正在将程序示例和可在个人电脑上运行的可编程科学计算器拷贝到存储卡中... </string>
+	<string name="copying_scpp4Java">正在将可在个人电脑上运行的可编程科学计算器拷贝到存储卡中。请不要切换至后台运行，否则拷贝过程可能被终止。 </string>
+	<string name="loading_pre_defined_libs">正在装载预定义程序库...</string>
+	<string name="loading_user_defined_libs">正在读取用户开发的程序...</string>
+	<string name="error_in_copying_example_files">将文件拷贝到存储卡时出错。用户可能无法读取例子程序或者可能无法将程序或图像文件保存在此移动设备中！</string>
+	<string name="error_in_copying_scpp4Java_files">将文件拷贝到存储卡时出错。用户可能无法使用个人电脑版的可编程科学计算器！</string>
+	<string name="you_can_still_copy_example_java">您仍然可以拷贝例子程序或使用个人电脑版的可编程科学计算器。但您需要在程序启动后点击主面板的复制示例程序或在电脑上运行图标。</string>
+	<string name="copying_scpp4Java_step1">基于Java，可运行Windows，MacOSX和Linux个人电脑的可编程科学计算器将会被拷贝到本移动设备的存储卡上。如果您在安装或升级本软件之后已经执行过本步骤，您可以跳过本步骤。</string>
+	<string name="copying_scpp4Java_step2">基于Java，可运行Windows，MacOSX和Linux个人电脑的可编程科学计算器已经被拷贝到本移动设备的存储卡上。您现在可以用一根USB连接线将本移动设备连接到任何安装有Java 1.6及其以上版本的电脑上，选择允许通过USB拷贝和传输文件，然后在个人电脑中运行位于USB盘SmartMath目录的JMathCmd.jar文件。如果这台个人电脑还未有安装JAVA，您可以在www.java.com下载JAVA并安装。</string>
+	<string name="copy_examples_step1">示例程序将被拷贝到存储卡上的SmartMath/scripts/examples文件夹，示例图片被拷贝到存储卡上的SmartMath/charts文件夹。如果您在安装或升级本软件之后已经执行过本步骤，您不必再拷贝一次。</string>
+	<string name="copy_examples_step2">示例程序和文件已经被拷贝到存储卡上。您可以打开文件管理器，进入对应目录以阅读这些示例文件。</string>
+	<string name="select_script_examples_to_read">打开示例程序文件夹</string>
+	<string name="select_chart_examples_to_read">打开示例图片文件夹</string>
+	<string name="see_what_has_been_copied">阅读示例文件</string>
+	
+    <string name="smartcalc_prog_name">智慧计算器</string>
+	<string name="calc_prog_name">函数计算器</string>
+	<string name="inputpadcfg_prog_name">设置输入键盘</string>
+	<string name="cmdline_prog_name">命令提示符</string>
+	<string name="graph_prog_name">绘制图形</string>
+	<string name="integr_prog_name">计算积分</string>
+	<string name="scriptmngr_prog_name">管理程序</string>
+	<string name="scripteditor_prog_name">编写程序</string>
+	<string name="chartmngr_prog_name">管理图形文件</string>
+	<string name="settings_prog_name">设置</string>
+	<string name="runonpc_prog_name">在电脑上运行</string>
+	<string name="cpexample_prog_name">复制示例程序</string>
+	<string name="cpexample_name">复制示例</string>
+	<string name="help_prog_name">帮助</string>
+
+	<string name="inputpad_config">设置输入键盘</string>
+	<string name="inputpad_name_prompt">键盘名：</string>
+	<string name="inputpad_long_name_prompt">长名：</string>
+	<string name="inputpad_short_name_prompt">短名：</string>
+	<string name="inputpad_wrapped_name_1_2_prompt">两行显示名：</string>
+	<string name="key_height_prompt">按键高度：</string>
+	<string name="times_standard_height">倍标准高度</string>
+	<string name="inputpad_number_of_rows_prompt">按钮行数：</string>
+	<string name="inputpad_number_of_columns_prompt">按钮列数：</string>
+	<string name="inputpad_visibility_prompt">是否可见：</string>
+	<string name="inputpad_visible">可见</string>
+	<string name="no_inputpad_defined">没有定义输入键盘</string>
+	<string name="inputkey_config">设置输入键</string>
+	<string name="inputkey_shown_prompt">键上文字：</string>
+	<string name="inputkey_shown_color_prompt">文字颜色：</string>
+	<string name="inputkey_input_string_prompt">按键输入：</string>
+	<string name="inputkey_input_match_shown">按键输入和按键文字保持一致</string>
+	<string name="cursorplace_front_prompt">输入光标位置（从后向前数字符个数）：</string>
+	<string name="inputkey_hint_4_context_menu">提示：如果您想剪切，复制，粘贴，删除或者插入输入键，按住输入键不放即可。</string>
+	<string name="menu_add">添加</string>
+	<string name="menu_addleft">在左边添加</string>
+	<string name="menu_addright">在右边添加</string>
+	<string name="menu_delete">移除</string>
+	<string name="menu_save">保存</string>
+	<string name="what_do_you_want">请问您想进行什么操作？</string>
+	<string name="cut_key">剪切</string> 
+	<string name="copy_key">拷贝</string> 
+	<string name="paste_before_key">在前面粘贴</string>   
+	<string name="paste_on_key">替换粘贴</string> 
+	<string name="paste_after_key">在后面粘贴</string> 
+	<string name="create_before_key">在前面创建</string>   
+	<string name="create_after_key">在后面创建</string>  
+	<string name="delete_key">删除</string> 
+	<string name="edit_key">编辑</string> 
+	<string name="error_two_inputpads_with_same_name">两个输入键盘具有相同名字</string>
+	<string name="error_cannot_save_to_file">无法保存到文件！</string>
+	<string name="how_many_inputkeys_to_add">您想增加多少个输入键？</string>
+	<string name="inputpad_cfg_changed">输入键盘设置已经改变，是否保存？</string>
+	    				
+	<string name="calculating_result">正在计算...</string>
+	<string name="calculating_result_cancelable">正在计算。用户可以按回退键取消。</string>
+	<string name="loading_libs_history">正在装载程序库和历史纪录...</string>
+	<string name="loading_libs">正在装载程序库...</string>
+	<string name="loading_history">正在装载历史纪录...</string>
+		
+   	<string name="calculator_assistant">计算助手</string>
+   	<string name="read_constants">常数值</string>
+   	<string name="convert_units">单位转换</string>
+   	<string name="digit_after_decimal_point_prompt">有效数字位数：</string>
+	<string name="insert_constant_value_text">插入常数值</string>
+	<string name="select_unit_type">选择单位类型：</string>
+	<string name="use_sci_notation">使用科学记数</string>
+	<string name="is_equal_to_prompt">等于</string>
+	<string name="underlying_function_is">对应的单位转换函数为</string>
+	<string name="invalid_input">输入数值或单位有误！</string>
+	<string name="cannot_convert_unit">无法进行单位转换！</string>
+	<string name="insert_converted_value_text">插入转换值</string>
+	<string name="insert_function_text">插入表达式</string>	
+	<string name="pi_comment">圆周率</string>
+	<string name="e_comment">自然对数</string>
+	<string name="light_speed_in_vacuum_comment">真空中的光速</string>
+	<string name="gravitational_constant_comment">万有引力常数</string>
+	<string name="planck_constant_comment">普朗克常数</string>
+	<string name="magnetic_constant_comment">磁常数（真空磁导率）</string>
+	<string name="electric_constant_comment">电常数（真空电容率）</string>
+	<string name="elementary_charge_constant_comment">基本电荷</string>
+	<string name="avogadro_constant_comment">阿伏伽德罗常数</string>
+	<string name="faraday_constant_comment">法拉第常数</string>
+	<string name="molar_gas_constant_comment">气体常数</string>
+	<string name="boltzman_constant_comment">玻尔兹曼常量</string>
+	<string name="standard_gravity_comment">标准重力</string>
+		
+	<string-array name="unit_type_array">
+        <item>长度</item>
+        <item>面积</item>
+        <item>体积</item>
+        <item>质量</item>
+        <item>速度</item>
+        <item>时间</item>
+        <item>力</item>
+        <item>压强</item>
+        <item>能量</item>
+        <item>功率</item>
+        <item>温度</item>
+    </string-array>
+    <string name="length_unit_type">长度</string>
+    <string name="area_unit_type">面积</string>
+    <string name="volume_unit_type">体积</string>
+    <string name="mass_unit_type">质量</string>
+    <string name="speed_unit_type">速度</string>
+    <string name="time_unit_type">时间</string>
+    <string name="force_unit_type">力</string>
+    <string name="pressure_unit_type">压强</string>
+    <string name="energy_unit_type">能量</string>
+    <string name="power_unit_type">功率</string>
+    <string name="temperature_unit_type">温度</string>
+    <string-array name="length_unit_type_array">
+        <item>微米</item>
+        <item>毫米</item>
+        <item>厘米</item>
+        <item>米</item>
+        <item>千米</item>
+        <item>英寸</item>
+        <item>英尺</item>
+        <item>码</item>
+        <item>英里</item>
+        <item>海浬</item>
+        <item>天文单位</item>
+        <item>光年</item>
+        <item>秒差距</item>
+    </string-array>
+    <string name="micron_unit">微米</string>
+    <string name="millimetre_unit">毫米</string>
+    <string name="centimetre_unit">厘米</string>
+    <string name="metre_unit">米</string>
+    <string name="kilometre_unit">千米</string>
+    <string name="inch_unit">英寸</string>
+    <string name="foot_unit">英尺</string>
+    <string name="yard_unit">码</string>
+    <string name="mile_unit">英里</string>
+    <string name="nautical_mile_unit">海浬</string>
+    <string name="astronomical_unit_unit">天文单位</string>
+    <string name="light_year_unit">光年</string>
+    <string name="parsec_unit">秒差距</string>
+    <string-array name="area_unit_type_array">
+        <item>平方毫米</item>
+        <item>平方厘米</item>
+        <item>平方米</item>
+        <item>公顷</item>
+        <item>平方公里</item>
+        <item>平方英寸</item>
+        <item>平方英尺</item>
+        <item>平方码</item>
+        <item>英亩</item>
+        <item>平方英里</item>
+    </string-array>
+    <string name="mm2_unit">平方毫米</string>
+    <string name="cm2_unit">平方厘米</string>
+    <string name="metre2_unit">平方米</string>
+    <string name="hectare_unit">公顷</string>
+    <string name="km2_unit">平方公里</string>
+    <string name="inch2_unit">平方英寸</string>
+    <string name="foot2_unit">平方英尺</string>
+    <string name="yard2_unit">平方码</string>
+    <string name="acre_unit">英亩</string>
+    <string name="mile2_unit">平方英里</string>
+    <string-array name="volume_unit_type_array">
+        <item>毫升</item>
+        <item>升</item>
+        <item>立方米</item>
+        <item>立方英寸</item>
+        <item>立方英尺</item>
+        <item>立方码</item>
+        <item>立方公里</item>
+        <item>液盎司（英制）</item>
+        <item>品脱（英制）</item>
+        <item>加仑（英制）</item>
+        <item>液盎司（美制）</item>
+        <item>品脱（美制）</item>
+        <item>加仑（美制）</item>
+    </string-array>
+    <string name="ml_unit">毫升</string>
+    <string name="litre_unit">升</string>
+    <string name="metre3_unit">立方米</string>
+    <string name="inch3_unit">立方英寸</string>
+    <string name="foot3_unit">立方英尺</string>
+    <string name="yard3_unit">立方码</string>
+    <string name="km3_unit">立方公里</string>
+    <string name="founce_imp_unit">液盎司（英制）</string>
+    <string name="pint_imp_unit">品脱（英制）</string>
+    <string name="gallon_imp_unit">加仑（英制）</string>
+    <string name="founce_us_unit">液盎司（美制）</string>
+    <string name="pint_us_unit">品脱（美制）</string>
+    <string name="gallon_us_unit">加仑（美制）</string>
+    <string-array name="mass_unit_type_array">
+        <item>微克</item>
+        <item>毫克</item>
+        <item>克</item>
+        <item>千克</item>
+        <item>吨</item>
+        <item>盎司</item>
+        <item>磅</item>
+        <item>市斤</item>
+        <item>斤（香港）</item>
+        <item>台斤</item>
+    </string-array>
+    <string name="microgram_unit">微克</string>
+    <string name="milligram_unit">毫克</string>
+    <string name="gram_unit">克</string>
+    <string name="kg_unit">千克</string>
+    <string name="ton_unit">吨</string>
+    <string name="ounce_unit">盎司</string>
+    <string name="lb_unit">磅</string>
+    <string name="market_catty_unit">市斤</string>
+    <string name="hk_catty_unit">斤（香港）</string>
+    <string name="tw_catty_unit">台斤</string>
+    <string-array name="speed_unit_type_array">
+        <item>米每秒</item>
+        <item>千米每小时</item>
+        <item>英尺每秒</item>
+        <item>英里每小时</item>
+        <item>节</item>
+    </string-array>
+    <string name="metre_s_unit">米每秒</string>
+    <string name="km_h_unit">千米每小时</string>
+    <string name="foot_s_unit">英尺每秒</string>
+    <string name="mile_h_unit">英里每小时</string>
+    <string name="knot_unit">节</string>
+    <string-array name="time_unit_type_array">
+        <item>纳秒</item>
+        <item>微秒</item>
+        <item>毫秒</item>
+        <item>秒</item>
+        <item>分钟</item>
+        <item>小时</item>
+        <item>天</item>
+        <item>礼拜</item>
+        <item>年</item>
+    </string-array>
+    <string name="nanosecond_unit">纳秒</string>
+    <string name="microsecond_unit">微秒</string>
+    <string name="millisecond_unit">毫秒</string>
+    <string name="second_unit">秒</string>
+    <string name="minute_unit">分钟</string>
+    <string name="hour_unit">小时</string>
+    <string name="day_unit">天</string>
+    <string name="week_unit">礼拜</string>
+    <string name="year_unit">年</string>
+    <string-array name="force_unit_type_array">
+        <item>牛顿</item>
+        <item>千克力</item>
+        <item>磅力</item>
+    </string-array>
+    <string name="newton_unit">牛顿</string>
+    <string name="kgf_unit">千克力</string>
+    <string name="lbf_unit">磅力</string>
+    <string-array name="pressure_unit_type_array">
+        <item>帕斯卡</item>
+        <item>百帕</item>
+        <item>千帕</item>
+        <item>兆帕</item>
+        <item>大气压</item>
+        <item>每平方英寸上受到的磅力压力</item>
+        <item>毫米汞柱</item>
+    </string-array>
+    <string name="pascal_unit">帕斯卡</string>
+    <string name="hectopascal_unit">百帕</string>
+    <string name="kilopascal_unit">千帕</string>
+    <string name="megapascal_unit">兆帕</string>
+    <string name="atmosphere">大气压</string>
+    <string name="pound_square_inche_unit">每平方英寸上受到的磅力压力</string>
+    <string name="torr_unit">毫米汞柱</string>
+    <string-array name="energy_unit_type_array">
+        <item>焦耳</item>
+        <item>千焦</item>
+        <item>兆焦</item>
+        <item>千瓦时</item>
+        <item>卡路里</item>
+        <item>千卡</item>
+        <item>英热单位</item>
+    </string-array>
+    <string name="joule_unit">焦耳</string>
+    <string name="kilojoule_unit">千焦</string>
+    <string name="megajoule_unit">兆焦</string>
+    <string name="kwh_unit">千瓦时</string>
+    <string name="calorie_unit">卡路里</string>
+    <string name="kilocalorie_unit">千卡</string>
+    <string name="btu_unit">英热单位</string>
+    <string-array name="power_unit_type_array">
+        <item>瓦特</item>
+        <item>千瓦</item>
+        <item>兆瓦</item>
+        <item>卡路里每秒</item>
+        <item>英热单位每小时</item>
+        <item>马力</item>
+    </string-array>
+    <string name="watt_unit">瓦特</string>
+    <string name="kilowatt_unit">千瓦</string>
+    <string name="megawatt_unit">兆瓦</string>
+    <string name="calorie_second_unit">卡路里每秒</string>
+    <string name="btu_hour_unit">英热单位每小时</string>
+    <string name="horsepower_unit">马力</string>
+    <string-array name="temperature_unit_type_array">
+        <item>摄氏度</item>
+        <item>华氏度</item>
+        <item>开氏温标</item>
+    </string-array>
+    <string name="celsius_unit">摄氏度</string>
+    <string name="fahrenheit_unit">华氏度</string>
+    <string name="kelvin_unit">开氏温标</string>
+    
+    <string name="merge_inputpad_cfg">合并输入键盘设置文件</string>
+    <string name="merging_inputpad_cfg">正在合并输入键盘设置文件...</string>
+    <string name="upgrading_inputpad_cfg">正在升级输入键盘设置文件...</string>
+    <string name="confirm_to_merge_inputpad_cfg">您想将最新的键盘设置文件合并至您自己定义的键盘设置文件中去吗？如果您打算合并，请确定您的安卓设备没有和电脑通过USB相连。</string>
+    <string name="update_sdcard_files">更新存储卡上的文件</string>
+    <string name="confirm_to_update_sdcard_files">您想更新存储卡上的文件吗（包括基于JAVA的可编程科学计算器和一些例子程序）？ 如果您打算更新，请确定您的安卓设备没有和电脑通过USB相连。</string>
+	<string name="error_in_upgrading_input_keypad_config">升级输入键盘设置文件时出错！</string>
+    <string name="error_in_merging_input_keypad_config">合并输入键盘设置文件时出错！</string>
+    <string name="title_activity_activity_smart_calc">智慧计算器</string>
+    <string name="error_in_help_requirement">错误的帮助命令</string>
+    <string name="invalid_expr_type_to_solve">表达式类型有误，无法计算变量值</string>
+    <string name="did_you_use_assign">您是不是把赋值号（=）当作等于号了（==）？</string>
+    <string name="invalid_expr_to_solve">表达式有误，无法计算变量值</string>
+    <string name="expr_cannot_solve">无法通过表达式解出变量值</string>
+    <string name="line">行</string>
+    <string name="config_3D_title">设置三维图形</string>
+    <string name="config_2D_title">设置二维图形</string>
+    <string name="config_polar_title">设置极坐标图形</string>
+    <string name="polar_chart_r_range_note">注意：极坐标半径范围总是从0到一个正数值。</string>
+    <string name="polar_chart_angle_range_note">注意：极坐标幅角是基于</string>
+    <string name="degree">角度</string>
+    <string name="radius">弧度</string>
+    <string name="zoom_box_prompt">缩放（0.01到100）</string>
+    <string name="zoom_whole_chart_prompt">全图缩放</string>
+    <string name="zoom_x_prompt">x</string>
+    <string name="zoom_y_prompt">y</string>
+    <string name="zoom_z_prompt">z</string>
+    <string name="shift_box_prompt">平移</string>
+    <string name="shift_x_prompt">x</string>
+    <string name="shift_y_prompt">y</string>
+    <string name="shift_z_prompt">z</string>
+    <string name="rotate_box_prompt">旋转（角度数）</string>
+    <string name="rotate_x_prompt">垂直</string>
+    <string name="rotate_y_prompt">水平</string>
+    <string name="rotate_z_prompt">逆时针</string>
+    <string name="apply">应用</string>
+        			
+	<string name="help_statement_cannot_be_plotted">无法绘制帮助命令！</string>
+	<string name="no_variable_to_plot">没有变量，无法绘图！</string>
+	<string name="invalid_expr_to_plot">非法表达式，无法绘图！</string>
+	<string name="cannot_assign_value_to_anything_except_variable_use_equal_instead">无法将数值赋予一个表达式，请用等号代替赋值号!</string>
+	<string name="invalid_input_to_plot">输入有误，无法绘图！</string>
+	<string name="cannot_plot_more_than_3d_chart">无法绘制出多于3维的图形！</string>
+	<string name="cannot_plot_more_than_4_curves">无法在同一幅图中绘制多于4条曲线!</string>
+	<string name="cannot_plot_too_many_curves">无法在同一幅图中绘制太多条曲线!</string>
+	<string name="chart_name_default">SysGen</string>
+	<string name="chart_title_default">智能绘图</string>
+	<string name="curve_title_default">曲线</string>
+	<string name="cannot_plot">无法绘制</string>
+	<string name="graph_is_plotted">成功绘制图形！</string>
+	<string name="graph_is_plotted_but_graph_file_cannot_be_saved">成功绘制图形，但是无法保存在文件中！</string>
+	<string name="from">从</string>
+	<string name="to">到</string>
+	<string name="number_of_steps">采样数</string>
+	<string name="detect_singular_points">侦测奇点</string>
+	<string name="press_back_again_to_exit">再次按回退键退出！</string>
+	
+    <string name="fail_to_take_picture">无法拍摄图像！</string>
+	<string name="copying_data">正在拷贝数据...</string>
+	<string name="error_in_copying_data_files">在拷贝数据的过程中出错！</string>
+	<string name="recognizing_math_expressions">正在辨识数学表达式 ...</string>
+	<string name="recognizing_math_expressions_press_back_2_cancel">正在辨识数学表达式，用户可以点击回退键中止。</string>
+	<string name="expression_might_not_valid">所选择的需要辨识的数学表达式似乎并非合法表达式，请重新选择。</string>
+	<string name="recognizing_error">辨识数学表达式时出现错误，请您重新试一试。</string>
+	<string name="cannot_find_valid_expression">无法在图像中找到一个合法的表达式，请您重新试一试。</string>
+	<string name="preprocessing_image">正在预处理图像...</string>
+	<string name="please_confirm_recognized_result">请确认以下辨识出来的表达式是否是您想要的。如果您对辨识结果不满意，请点击</string>
+	<string name="please_confirm_recognized_result_and_calculation_result">请确认以下结果，不满意请点击</string>
+	<string name="here">这里</string>
+	<string name="stop_charater">。</string>
+	<string name="invalid_expr_to_analyse">非法数学表达式，无法进行进一步分析。</string>
+	<string name="please_modify_the_input_expression">请修改输入编辑框中对应的表达式，该表达式现在是：</string>
+	<string name="menu_plotcomplicatedgraph">绘制复杂图形</string>
+	<string name="rotate_90_degrees">旋转90度</string>
+	<string name="rotate_180_degrees">旋转180度</string>
+	<string name="rotate_270_degrees">旋转270度</string>
+	<string name="rotate_any_degrees">旋转任意角度</string>
+	<string name="enter_rotate_degrees_prompt">请输入旋转角度数：</string>
+	<string name="rotate_clockwise">顺时针旋转</string>
+	<string name="rotate_anti_clockwise">逆时针旋转</string>
+	<string name="insufficient_memory_to_recognize_complicated_expr">表达式太过于复杂，设备内存不够，无法处理。</string>
+	<string name="error_in_save_img">无法保存图像。</string>
+	<string name="loading_img_proc_libs">正在装载图像处理所需要的库 ...</string>
+	<string name="setting_flash_mode_prompt">设置照相时的闪光灯模式</string>
+	<string name="clear_input_txt_before_take_photo_prompt">在拍摄公式图片前清除输入</string>
+	<string name="on">总是打开</string>
+	<string name="off">总是关闭</string>
+	<string name="touch_screen_to_take_photo">请轻触屏幕照相。</string>
+	<string name="select_expr_to_recognize">请选择要识别的表达式。</string>
+	<string name="setting_photo_taken_from_prompt">设置照片拍摄源</string>
+	<string name="screen">计算机屏幕</string>
+	<string name="white_paper">白纸</string>
+    <string name="no_back_facing_camera">错误！没有后置摄像头或者后置摄像头不具备必要的功能！</string>
+    <string name="fail_to_initialize_camera">无法初始化摄像头！</string>
+    <string name="camera_preview_clicked">摄像头预览窗口被点击！</string>
+    <string name="camera_preview_clicked_and_autofocused">摄像头预览窗口被点击并自动聚焦！</string>
+    <string name="camera_preview_fail_to_autofocus">摄像头无法自动聚焦！</string>
+    <string name="start">开始</string>
+    <string name="turn_on_flash_prompt">开闪光灯</string>
+    <string name="preview_start_to_calculate">开始计算</string>
+    <string name="preview_start_to_plot">开始绘图</string>
+    <string name="preview_start_to_recognize">开始识别</string>
+    <string name="preview_edit_image">修正识别图像</string>
+    <string name="preview_verify_correct_image">确认修正</string>
+    <string name="reset_image_size">设置图片尺寸</string>
+    <string name="width_of_image">图片宽度</string>
+    <string name="height_of_image">图片高度</string>
+    <string name="image_is_too_large">图片太大了！</string>
+    <string name="image_size_cannot_be_zero">图片尺寸不能为0！</string>
+    <string name="unsatisfactory_recog">识别结果不准确！</string>
+    <string name="please_type_what_you_want_to_tell_us">请输入您想告诉我们的信息：</string>
+    <string name="choose_an_email_provider">请选择用哪一个电子邮件服务</string>
+    <string name="please_do_not_change_the_follows">请不要修改以下文字：</string>
+    <string name="recognized_result">识别结果</string>
+    <string name="input_text">输入文本</string>
+    <string name="output_text">输出文本</string>
+    <string name="handwriting_recog_notice">现在您进入离线手写数学公式辨识模式。请注意离线手写辨识功能还不成熟。在这种模式下仅能够识别数字，基本的运算符和有限的表达式。同时用户需要保证字迹清楚公正，没有连笔或者断笔。</string>
+    <string name="print_recog_notice">现在您进入离线打印体数学公式辨识模式。在这种模式下可以识别更多的运算符，函数名和字母。但请注意我们假定在这种模式下用户不会手写输入数学公式，仅仅只会选择识别范围，连接断笔或者断开粘连的笔画。</string>
+    <string name="dont_show_it_next_time">下次不必再显示</string>
+    <string name="photo_taken_tutorial">拍照识别数学表达式指导</string>
+	<string name="calculating_result_after_recognition">数学公式识别完成，现在正在计算。用户可以点击回退按键终止计算并修改输入文本。</string>
+	<string name="calculating_chart_data_after_recognition">数学公式识别完成，现在正在计算数值准备绘图。用户可以点击回退按键终止计算并修改输入文本。</string>
+	<string name="calculating_result_after_recognition2">数学公式识别完成，现在正在计算。如果公式中包含积分或者公式比较复杂，整个计算过程需要较长时间。如果用户确定要处理的只是非常简单的公式但计算仍然花很长时间，这可能意味着识别有误。在这种情况下，请用户点击回退按键，终止计算，修改输入文本。</string>
+	<string name="calculating_chart_data_after_recognition2">数学公式识别完成，现在正在计算数值准备绘图。如果公式比较复杂或者由多个公式，整个处理过程需要较长时间。如果用户确定要处理的只是非常简单的单一公式但计算仍然花很长时间，这可能意味着识别有误。在这种情况下，请用户点击回退按键，终止计算，修改输入文本。</string>
+	<string name="ok_i_have_known">好的，我知道了。</string>
+	<string name="never_show_it_again">不要再显示这些信息</string>
+	<string name="what_you_need_to_know_before_start_to_use">在使用之前您需要了解 ...</string>
+	<string name="no_valid_expr_recognized">没有辨识出任何合法的表达式！</string>
+	<string name="recognition_interrupted">识别过程被中断！</string>
+    
+	<string name="baidu_ad_words_China">中 国 </string>
+</resources>

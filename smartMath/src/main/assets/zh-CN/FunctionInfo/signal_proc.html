@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>可编程科学计算器帮助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">可编程科学计算器帮助：信号处理函数</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函数名</th>
+<th>函数帮助信息</th>
+</tr>
+<tr>
+<td><center>conv</center></td>
+<td><p>conv(2) :</p>
+<p>conv(input_a, inputb)返回input_a和input_b的卷积。Input_a和input_b要么都是一维向量，要么都是二维矩阵。当前本函数仅仅支持一维和二维卷积，比如：</p>
+<p>conv([4,8,2,9],[5,3,8,9,6,7,8]) = [20, 52, 66, 151, 139, 166, 181, 132, 79, 72]</p>
+<p>conv([[4,8,2,9],[8,6,7,9],[2,2,8,-4]],[[-5,i,7],[0.6,8,4]]) = [[-20, -40 + 4 * i, 18 + 8 * i, 11 + 2 * i, 14 + 9 * i, 63], [-37.6, 6.8 + 8 * i, 102.2 + 6 * i, 50.4 + 7 * i, 129 + 9 * i, 99], [-5.2, 57.6 + 2 * i, 58.2 + 2 * i, 119.4 + 8 * i, 156 - 4 * i, 8], [1.2, 17.2, 28.8, 69.6, 0, -16]]</p>
+</td>
+</tr>
+<tr>
+<td><center>FFT</center></td>
+<td><p>FFT(1...) :</p>
+<p>	FFT(a, ...)返回对一个数值向量作快速傅立叶变换后的值。注意数值向量中数值的个数必须是2的整数次方。如果参数a是一个数值序列，则本函数只可能拥有一个参数，返回值为对序列a[0], a[1], ..., a[N-1]作快速傅立叶变换的返回值。如果参数a仅仅是一个实数或者虚数，则本函数最少包含2个参数，而返回序列a， optional_params[0]， ...， optional_params[number_of_optional_params - 2]， optional_params[number_of_optional_params - 1]快速傅立叶变换后的值。注意返回值总是一个数组。</p>
+<p>函数例子：</p>
+<p>FFT(1, 2, 3, 4)返回[10, -2+2i, -2, -2 - 2i]；</p>
+<p>FFT([1, 2, 3, 4])同样也是返回[10, -2+2i, -2, -2 - 2i]；</p>
+</td>
+</tr>
+<tr>
+<td><center>IFFT</center></td>
+<td><p>IFFT(1...) :</p>
+<p>	IFFT(a, ...)返回对一个数值向量作快速傅立叶变换的逆变换后的值。注意数值向量中数值的个数必须是2的整数次方。如果参数a是一个数值序列，则本函数只可能拥有一个参数，返回值为对序列a[0], a[1], ..., a[N-1]作快速傅立叶变换德逆变换的返回值。如果参数a仅仅是一个实数或者虚数，则本函数最少包含2个参数，而返回序列a， optional_params[0]， ...， optional_params[number_of_optional_params - 2]， optional_params[number_of_optional_params - 1]快速傅立叶变换的逆变换后的值。注意返回值总是一个数组。</p>
+<p>函数例子：</p>
+<p>IFFT(10, -2 + 2i, -2, -2 - 2i)返回[1, 2, 3, 4]；</p>
+<p>IFFT([10, -2 + 2i, -2, -2 - 2i])同样也是返回[1, 2, 3, 4]；</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

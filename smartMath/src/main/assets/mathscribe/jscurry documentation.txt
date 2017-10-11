@@ -1,0 +1,284 @@
+jscurry-0.3.0.js Usage Documentation
+by Micah Smukler
+
+Type conventions:
+
+x,y,z are arbitrary objects or values.
+f,g,h are functions.
+a,b,c are arrays or array-like objects.
+m,n are integers.
+s,t are strings.
+p,q are either integers or strings when used as array indices/object property names.
+
+F(): Several different behaviors depending on the types of its arguments.
+
+F(f, ...): Equivalent to F.curry(f, ...) (see below).
+
+F(s, x): Returns the method of x with name s.
+
+	Example: If a is an array, F('concat', a) is a function which returns an array consisting of
+	a followed by its arguments; F('push', a) is a function with the side-effect of appending
+	its arguments to a.
+
+F(n, f): Equivalent to F.aritize(n, f) (see below).
+
+F(a, f): Equivalent to F.partial(a, f) (see below).
+
+F(p): Equivalent to F.pToF(p). (see below)
+
+F(x): If x is an HTML element, returns the jQuery data associated to that element.
+In all other cases (not covered above), equivalent to F.aToF(x). (see below)
+
+F.id(x): Identity function; returns x.
+
+F.constant(x): Builds a constant function; returns the function whose value is constantly x.
+
+F.applyF(f, a): Evaluates f using the elements of a as arguments.
+
+	Example: F.applyF(f, [x, y, z]) is equivalent to f(x, y, z).
+
+F.curry(f, ...): Returns the function given by partially evaluating f on the remaining 
+arguments.
+
+	Example: g = F.curry(f, x) is a function with g(y, z, ...) = f(x, y, z, ...).
+
+F.partial(a, f): Returns the function given by partially evaluating f on the elements of a.
+
+	Example: g = F.partial([x, y], f) is a function with g(z, ...) = f(x, y, z, ...). 
+	
+If any of the elements of a is F._, the function returned will "fill in" the corresponding
+argument in f before moving on to further-right arguments.
+	
+	Example: g = F.partial([x, F._, y], f) is a function with g(z, ...) = f(x, z, y, ...).
+	
+F.uncurry(f): f should be a one-argument function that returns another one-argument function. 
+Then g = F.uncurry(f) is a function with g(x, y) = f(x)(y).
+
+F.o(f, g, h, ...): Returns the function composition f o g o h o ...
+
+	Example: F.o(f, g, h)(x) = f(g(h(x))).
+
+F.oMap(f, g): returns a function which evaluates g on each of its arguments, then uses them as
+an argument list for f.
+
+	Example: If g is a one-argument function, h = F.oMap(f, g) is a function with 
+	h(x, y, z, ...) = f(g(x), g(y), g(z), ...)
+	
+F.oMap() passes the index of each argument as a second argument to g.
+
+	Example: If g is a two-argument function, h = F.oMap(f, g) is a function
+	with h(x, y, z, ...) = f(g(x, 0), g(y, 1), g(z, 2), ...)
+	
+As a third argument to g, F.oMap() passes its full Argument object.
+
+	Example: If g is a function with at least 3 arguments, h = F.oMap(f, g) is a function with
+	h(x, y, z) = f(g(x, 0, [x, y, z, ...]), g(y, 0, [x, y, z, ...]), g(z, 0, [x, y, z]), ...),
+	except that the "arrays" are actually all array-like Argument objects.
+
+F.flip(f): f should be a two-argument function. F.flip(f) is the two argument function which
+is identical to f but with the arguments reversed: F.flip(f)(x, y) = f(y, x).
+
+F.seqF(f, g, h, ...): The arguments should be functions with side-effects. F.seqF returns a
+function which calls each of f, g, h, ... in turn, using its arguments as the arguments of each
+of them.
+
+	Example: If h = F.seqF(f, g), then calling h(x, y, z, ...) is equivalent to calling 
+	f(x, y, z, ...) and then calling g(x, y, z, ...).
+	
+F.cor(f, g, h, ...): The arguments should be functions. F.cor returns a function which calls
+each of f, g, h until one returns a truthy value, and then returns that value.
+
+	Example: F.cor(F.eqTo(0), F.eqTo(1), F.eqTo(2)) returns a boolean-valued function which
+	returns true iff x is either 0, 1, or 2. (see below for F.eqTo)
+
+F.aritize(n, f): Returns a function that is equivalent to f except that it ignores any arguments 
+past the first n.
+
+	Example: If g = F.aritize(2, f), then g(x, y) and g(x, y, z) are both equivalent to f(x, y).
+	
+F.not(x): Returns ! x.
+
+F.cmpX(x, y): Comparison for numbers or Dates; returns x - y (so negative if x < y, positive if
+x > y, 0 if x == y).
+
+F.cmpJS(x, y): Default JavaScript comparison for numbers, Dates, or strings; returns -1
+if x < y, 1 if x > 1, 0 otherwise.
+
+F.cmpLex(f, a, b) -- Compares a and b using "lexicographic order"; returns the first
+f(a[i], b[i]) which is truthy, or if none then just compares their lengths.
+
+F.eqTo(x): Returns a function of one argument that checks whether x is equal (===) to that 
+argument.
+
+	Example: If g = F.eqTo(5), g(x) returns true when x === 5 and false otherwise.
+	
+F.eqTo(x, f): As above, but f is a comparison function (such as the three above). The function 
+returned by F.eqTo will use f to check whether its argument is equal to x or not.
+
+	Example: If g = F.eqTo(5, f) and f returns a number, then g(x) returns true when
+	f(5, x) == 0 and false otherwise.
+	
+F.pToF(p): Converts a property name or subscript to a function; returns the function that looks
+at its argument and returns the value indexed by p.
+
+	Example: F.pToF(0) is a one-argument function that picks out the zeroth element in arrays.
+	F.pToF('baseHeightA') is a one-argument function that picks out the value of the baseHeightA
+	property in objects.
+
+F.aToF(a): "array to function": Returns the function f with f(i) = a[i]. (Despite the suggestive
+name, works on arbitrary objects.)
+
+	Example: f = F.aToF([0, 1, 1]) is a function with f(0) = 0, f(1) = f(2) = 1, and f(x)
+	undefined for any other x.
+	
+	g = F.aToF({ x: 1, y: 'fnord' }) is a function with g('x') = 1, g('y') = 'fnord', and g(z)
+	undefined for any other z.
+
+F.fToA(f, n): "function to array": Returns an n-element array a with a[i] = f(i).
+
+F.memoF(f, x): returns a memoized version of f, storing all previously computed values of f in 
+x. Can be called as a one-argument function in which case x will be automatically created and
+inaccessible.
+
+F.replicate(n, x): Returns an array whose n elements are all x.
+
+F.setF(x, p, y): A function whose side-effect is to set x[p] = y. Good for feeding to F to build
+other functions.
+
+F.obj1(p, x): Returns an object whose sole property p has value x.
+
+F.slice(a): Returns an array which is a shallow copy of the array-like object a.
+
+F.slice(a, n): Returns an array consisting of all the elements of a starting with a[n] if n is
+non-negative, or the element -n from the end if n is negative. Analogous to the array method of 
+the same name, but also works on array-like objects.
+
+F.slice(a, n, m): Returns an array consisting of the elements of a starting with a[n] and
+going up to but not including a[m]; treats negative arguments modulo a.length as the 
+two-argument version does. Can be called with n == null to start from the beginning of the 
+array, like n == 0.
+
+F.array(x, y, z, ...): Returns its arguments in an array (not an array-like Argument object).
+
+	Example: F.array(x, y, z, ...) returns [x, y, z, ...].
+	
+F.concatArgs(a, b, c, ...): Returns an array consisting of the elements of the array-like
+objects a, b, c, ....
+
+	Example: F.concatArgs([x, y], [1, 2], [z]) returns [x, y, 1, 2, z].
+	
+F.concatMap(f, a): f should be a function that returns an array-like object. Returns an array
+obtained by applying f to each element of a in turn and then concatenating the resulting arrays.
+
+	Example: If f(n) returns [n^2, 2n, 1], F.concatMap(f, [0, 1, 5, 100]) returns
+	[0, 0, 1, 1, 2, 1, 25, 10, 1, 10000, 200, 1].
+
+F.findIndex(f, a): Returns the smallest i where f(a[i]) is truthy. If f has a second argument,
+it is taken to be the index i; a third argument is taken to be the entire array a. If no such i
+exists, returns -1.
+
+	Example: F.findIndex(function(x) { return x == 3; }, [0, 1, 2, 3, 4, 3]) returns 3.
+	F.findIndex(function(x) { return x == 3; }, [0, 1, 2]) returns -1.
+	
+F.findLastIndex(f, a): As findIndex, except that it returns the largest i where f(a[i]) is
+truthy.
+
+	Example: F.findLastIndex(function(x) { return x == 3; }, [0, 1, 2, 3, 4, 3]) returns 5.
+
+F.find(f, a): Returns the first a[i] with f(a[i]) truthy, or undefined if there is no such a[i].
+
+	Example: F.find(function(x) { return x > 3; }, [0, 4, 2]) returns 4.
+	
+F.elemIndex(x, a, f): Returns the smallest i where a[i] == x, using f as a comparison function
+for equality if given (i.e., it finds i where f(x, a[i]) is falsy).
+
+F.elemLastIndex(x, a, f): As F.elemIndex, except that it returns the largest such i.
+
+F.elem(x, a, f): Returns true if x can be found in a and false otherwise, using f as a 
+comparison function if given.
+
+F.all(f, a): Returns true if f(a[i], i, a) returns a truthy value for all i, and false 
+otherwise.
+
+F.any(f, a): Returns the smallest-index f(a[i], i, a) which is truthy, or the last such value if
+none are truthy, or false if a is empty.
+
+F.iter(f, a, b, c, ...): f should be a function with side-effects. Calls f with arguments
+a[0], b[0], c[0], ...; then with arguments a[1], b[1], c[1], ...; and so on. If the arrays
+differ in length, ignores all remaining elements in longer arrays once the shortest array has
+run out. If f wants more arguments than there are arrays, the first additional argument is the
+index and each subsequent additional argument is an entire array a, b, c, ... .
+
+	Example: F.iter(f, [x0, x1, x2], [y0, y1, y2]) is equivalent to calling:
+		f(x0, y0); f(x1, y1); f(x2; y2); if f is a function of at most 2 arguments
+		f(x0, y0, 0); f(x1, y1, 1); f(x2, y2, 2); if f is a function of 3 arguments
+		f(x0, y0, 0, [x0, x1, x2], [y0, y1, y2]); ... in general.
+		
+F.map(f, a): Returns the array whose ith element is f(a[i], i, a).
+
+F.map1(f, a): Returns the array whose ith element is f(a[i]) (even if f is capable of being 
+passed more than one argument).
+
+F.zipWith(f, a, b, c, ...): Returns the array whose ith element is f(a[i], b[i], c[i], ...). If
+a, b, c, ... are not all the same length, ignores remaining elements in the longer ones once the
+shortest one has run out.
+
+F.zip(a, b, c, ...): Returns the array [[a[0], b[0], c[0], ...], [a[1], b[1], c[1], ...], ...].
+
+F.unzip(a): a should be a *matrix* -- an array of arrays, where each row array has the same 
+length (or elements beyond the shortest length are ignored). Returns the matrix transpose of a.
+
+	Example: F.unzip([[1,2,3], [4,5,6], [7,8,9]]) returns [[1,4,7], [2,5,8], [3,6,9]].
+	
+F.filter(f, a): returns an array consisting of all those a[i] where f(a[i], i, a) is truthy, in
+their original order.
+
+	Example: F.filter(eqTo(4), [1,2,3,4,5,4]) returns [4,4].
+	F.filter(F.not, [0, 1, null, 2, undefined, 3]) returns [0, null, undefined].
+	
+F.fold(f, a, x): Calls f(x, a[0]), then calls f on the result and a[1], and so on until the 
+array is exhausted, and returns the result. If x is omitted, start the process with 
+f(a[0], a[1]). Equivalent to the reduce method for genuine arrays. Also passes i and a to f.
+
+	Example: If plus is a function that returns x + y, F.fold(plus, [0, 1, 2], ' ') returns the 
+	string ' 012'.
+	
+F.foldR(f, a, x): The same as to F.fold except that it begins at the end of a (so it starts by 
+calling f(x, a[a.length - 1])). Equivalent to the reduceRight method for genuine arrays.
+
+	Example: If plus is a function that returns x + y, F.foldR(plus, [0, 1, 2], ' ') returns the
+	string ' 210'.
+	
+F.sum(a): Returns the sum of the elements of a.
+
+F.test(x): Returns a boolean function of one argument which checks that argument in some way 
+determined by x -- usually some form of type-checking.
+
+To check whether:
+Something is a number               Use F.test(0) (or F.test('number') -- see below)
+Something is a string               Use F.test('') (or F.test('string') -- see below)
+Something has a type readable       Use F.test(s) where s is a string returnable by the typeof
+    by the typeof operator              operator.
+    (undefined, object, boolean,
+    number, string, function)
+Something is an array, Date         Use F.test(Array), F.test(Date), and F.test(RegExp)
+    object, or Javascript regular   respectively.
+    expression, constructed in
+    the same window frame
+Something is null                   Use F.test(null)
+
+If r is a regular expression, F.test(r) is equivalent to r.test (it returns true if its argument
+contains a match for r).
+
+If f is a function, F.test(f) returns f (allowing you to feed arbitrary test functions into the 
+following recursive cases).
+
+F.test([x]) checks to see if its argument is an array, all of whose elements satisfy F.test(x).
+
+For arrays of more than one element, F.test(a) checks to see if its argument satisfies 
+F.test(a[i]) for any i.
+
+For generic objects that don't match any of the above, F.test(x) looks at some other object y
+and returns true if:
+	-y is non-null, and
+	-for every property p of x, y[p] passes the test F.test(x[p]).

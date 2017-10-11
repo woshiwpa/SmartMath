@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+ 	<RadioGroup
+ 		android:layout_width="fill_parent"
+ 		android:layout_height="wrap_content"
+ 		android:orientation="vertical"
+ 		android:id="@+id/radioGrp_inputpad_selection"
+ 		android:checkedButton="@+id/radioBtn_smartcalc_inputpad" >
+	    <RadioButton 
+	    	android:text="@string/choose_sc_inputpad_config" 
+	    	android:id="@+id/radioBtn_smartcalc_inputpad" ></RadioButton>
+	    <RadioButton 
+	    	android:text="@string/choose_cl_inputpad_config" 
+	    	android:id="@+id/radioBtn_cmdline_inputpad" ></RadioButton>
+	    <RadioButton 
+	        android:visibility="gone"
+	    	android:text="@string/choose_se_inputpad_config" 
+	    	android:id="@+id/radioBtn_scriptedt_inputpad" ></RadioButton>
+	    <RadioButton 
+	        android:visibility="gone"
+	    	android:text="@string/choose_integ_plot_inputpad_config" 
+	    	android:id="@+id/radioBtn_other_inputpad" ></RadioButton>
+	    
+	</RadioGroup>
+</LinearLayout>

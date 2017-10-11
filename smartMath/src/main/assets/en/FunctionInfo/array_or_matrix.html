@@ -1,0 +1,174 @@
+<html>
+<head>
+<title>Scientific Calculator Plus Help</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">Scientific Calculator Plus Help : array or matrix functions</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>Function name</th>
+<th>Function info</th>
+</tr>
+<tr>
+<td><center>adj</center></td>
+<td><p>adj(1) :</p>
+<p>adj(x), where x is 2D square matrix, returns the adjugate matrix of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>alloc_array</center></td>
+<td><p>alloc_array(1...) :</p>
+<p>alloc_array(x...) returns a newly allocated array whose size is determined by parameters. All the parameters must be positive integers.</p>
+<p>alloc_array(2) :</p>
+<p>alloc_array(x, y) returns a newly allocated array whose size is determined by parameter x which is a list of integer. Parameter y is the default value of array elements. Note that y is optional, by default all the elements are initialized as zero.</p>
+</td>
+</tr>
+<tr>
+<td><center>cofactor</center></td>
+<td><p>cofactor(1) :</p>
+<p>cofactor(x), where x is 2D square matrix, returns the cofactor matrix of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>det</center></td>
+<td><p>det(1) :</p>
+<p>Function det(x) calculates determinant of square matrix x.</p>
+</td>
+</tr>
+<tr>
+<td><center>deter</center></td>
+<td><p>deter(1) :</p>
+<p>Function deter(x) calculates determinant of square matrix x.</p>
+</td>
+</tr>
+<tr>
+<td><center>dprod</center></td>
+<td><p>dprod(2) :</p>
+<p>Function dprod calculates dot product of two vectors [x1, x2, ... xn] and [y1, y2, ... yn].</p>
+</td>
+</tr>
+<tr>
+<td><center>eig</center></td>
+<td><p>eig(1) :</p>
+<p>eig(A) calculates 2D square matrix A's eigen vectors and eigen values. This function returns a two element list. First element is the eigen vector matrix, each column is an eigen vector. Second element is a diagonal matrix. Each diagonal element is an eigen value. Note that this function needs big memory to run and consumes significant CPU time. If running in mobile device, size of A and B should be no greater than 6*6. If running on PC, A and B should be no greater than 8*8. Otherwise, it may fail because lack of memory or run for very long time.</p>
+<p>eig(2) :</p>
+<p>eig(A, B) calculates 2D square matrix A's eigen vectors and eigen values against same size matrix B, i.e. Av = lambda * Bv, where lambda is an eigen value and v is an eigen vector. The second parameter, B, is optional. By default, B is an I matrix. This function returns a two element list. First element is the eigen vector matrix, each column is an eigen vector. Second element is a diagonal matrix. Each diagonal element is an eigen value. Note that this function needs big memory to run and consumes significant CPU time. If running in mobile device, size of A and B should be no greater than 6*6. If running on PC, A and B should be no greater than 8*8. Otherwise, it may fail because lack of memory or run for very long time.</p>
+</td>
+</tr>
+<tr>
+<td><center>eye</center></td>
+<td><p>eye(1) :</p>
+<p>eye(x), where x is a positive integer, returns 2-D matrix I whose size is x times x. Note that eye(0) returns 1.</p>
+<p>eye(2) :</p>
+<p>eye(x,y), where x and y are both positive integer numbers, returns y-D matrix I whose size of each dimension is x.</p>
+</td>
+</tr>
+<tr>
+<td><center>get_eigen_values</center></td>
+<td><p>get_eigen_values(1) :</p>
+<p>get_eigen_values(A) calculates 2D square matrix A's eigen values. This function returns an eigen value list which includes all the eigen values including duplicated ones. Note that this function needs big memory to run and consumes significant CPU time. If running in mobile device, size of A and B should be no greater than 6*6. If running on PC, A and B should be no greater than 8*8. Otherwise, it may fail because lack of memory or run for very long time.</p>
+<p>get_eigen_values(2) :</p>
+<p>get_eigen_values(A, B) calculates 2D square matrix A's eigen values against same size matrix B, i.e. Av = lambda * Bv, where lambda is an eigen value and v is an eigen vector. The second parameter, B, is optional. By default, B is an I matrix. This function returns an eigen value list which includes all the eigen values including duplicated ones. Note that this function needs big memory to run and consumes significant CPU time. If running in mobile device, size of A and B should be no greater than 6*6. If running on PC, A and B should be no greater than 8*8. Otherwise, it may fail because lack of memory or run for very long time.</p>
+</td>
+</tr>
+<tr>
+<td><center>get_extreme_elem</center></td>
+<td><p>get_extreme_elem(3) :</p>
+<p>Function get_extreme_elem analyses input dataArray and returns the maximum or minimum element in the data array. If an element is not a real value, this function ignores it. It has three parameters. The first is data array (it can be a single value), the second is original max or min value. If this is not null and is a real value, the function compares selected max or min element with this parameter and returns the new max or min value. The third one is to tell the function to get max value or min value. 0 is for min value and 1 is for max value. Examples are get_extreme_elem([[2, 3], "hello", 5], null, 1) and get_extreme_elem([[3,4,6],[5+3i, 7, 9.88-4.61], [5.77 -0.03i]], -8, 0).</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_inf</center></td>
+<td><p>includes_inf(1) :</p>
+<p>includes_inf(x) determines if x includes positive infinite or negative infinite. Include means, if x is an array, then one of its elements is or includes the destination value(s), if x is a complex value, then its real or image is the destination value(s), if x is a single value, then it is the destination values(s). If it is, return true. Otherwise, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan</center></td>
+<td><p>includes_nan(1) :</p>
+<p>includes_nan(x) determines if x includes Nan. Include means, if x is an array, then one of its elements is or includes the destination value(s), if x is a complex value, then its real or image is the destination value(s), if x is a single value, then it is the destination values(s). If it is, return true. Otherwise, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan_or_inf</center></td>
+<td><p>includes_nan_or_inf(1) :</p>
+<p>includes_nan_or_inf(x) determines if x includes Nan or positive infinite or negative infinite. Include means, if x is an array, then one of its elements is or includes the destination value(s), if x is a complex value, then its real or image is the destination value(s), if x is a single value, then it is the destination values(s). If it is, return true. Otherwise, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan_or_inf_or_null</center></td>
+<td><p>includes_nan_or_inf_or_null(1) :</p>
+<p>includes_nan_or_inf_or_null(x) determines if x includes Nan or positive infinite or negative infinite or null. Include means, if x is an array, then one of its elements is or includes the destination value(s), if x is a complex value, then its real or image is the destination value(s), if x is a single value, then it is the destination values(s). If it is, return true. Otherwise, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_null</center></td>
+<td><p>includes_null(1) :</p>
+<p>includes_null(x) determines if x includes null. Include means, if x is an array, then one of its elements is or includes the destination value(s), if x is a complex value, then its real or image is the destination value(s), if x is a single value, then it is the destination values(s). If it is, return true. Otherwise, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>invert</center></td>
+<td><p>invert(1) :</p>
+<p>invert(x) inverted 2D matrix x. Note that the elements of x can be complex numbers but x must be a square matrix (i.e. number of rows equals number of columns).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_eye</center></td>
+<td><p>is_eye(2) :</p>
+<p>is_eye(x,y), where x is an array or number and y is a boolean, identifies x is matrix I (or 1) or not. If x is matrix I (or 1), returns true, otherwise, returns false. If y is true, looks on all null values as zero, otherwise, null values are not looked on as zero. Y is optional. By default, it is false.</p>
+</td>
+</tr>
+<tr>
+<td><center>is_zeros</center></td>
+<td><p>is_zeros(2) :</p>
+<p>is_zeros(x,y), where x is an array or number and y is a boolean, identifies x is matrix zeor (or number zero) or not. If x is, returns true, otherwise, returns false. If y is true, looks on all null values as zero, otherwise, null values are not looked on as zero. Y is optional. By default, it is false.</p>
+</td>
+</tr>
+<tr>
+<td><center>left_recip</center></td>
+<td><p>left_recip(1) :</p>
+<p>left_recip(x) calculates left-division reciprocal of x. Note that so far x can only be a number or a 2D matrix.</p>
+</td>
+</tr>
+<tr>
+<td><center>ones</center></td>
+<td><p>ones(1...) :</p>
+<p>Function ones generates a matrix whose elements are all one. The dimension of the matrix is determined by the parameters of ones function, which is either a number of positive integers or a single positive integer list. Note that ones([]) returns 1.</p>
+</td>
+</tr>
+<tr>
+<td><center>rank</center></td>
+<td><p>rank(1) :</p>
+<p>rank(matrix) returns the rank of a matrix. For example rank([[1,2],[2,4]]) returns 1.</p>
+</td>
+</tr>
+<tr>
+<td><center>recip</center></td>
+<td><p>recip(1) :</p>
+<p>recip(x) calculates reciprocal of x. Note that so far x can only be a number or a 2D matrix.</p>
+</td>
+</tr>
+<tr>
+<td><center>set_array_elem</center></td>
+<td><p>set_array_elem(3) :</p>
+<p>set_array_elem(x,y,z) sets x[y] to be z, and returns new x. Note that x can be an array or a single element, y must be a list of positive integers which are the indices. Y can be beyond the size of x. For example x = 3, y = [1, 2], z = 2 + 3i then set_array_elem(x,y,z) = [3, [0, 0, 2+3i]].</p>
+</td>
+</tr>
+<tr>
+<td><center>size</center></td>
+<td><p>size(1) :</p>
+<p>size(x) returns a size list of array x. Note that if x is not an array, it always return [].</p>
+<p>size(2) :</p>
+<p>size(x,y) returns a size list of array x which includes the first y dimension sizes. If x has less than y dimensions, return full size list. Note that y must be a positive integer. Note that if x is not an array, it always return [].</p>
+</td>
+</tr>
+<tr>
+<td><center>zeros</center></td>
+<td><p>zeros(1...) :</p>
+<p>Function zeros generates a matrix whose elements are all zero. The dimension of the matrix is determined by the parameters of zeros function, which is either a number of positive integers or a single positive integer list. Note that zeros([]) returns 0.</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+		android:id="@+id/scrollViewScriptEdt"
+		android:layout_above="@+id/layoutSEInputMethodHolder"
+		>
+    <EditText
+        android:id="@+id/edittxtScript"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:scrollHorizontally="true" >
+
+        <requestFocus />
+    </EditText>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/txtviewStatus"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="right"
+        android:singleLine="true" />
+
+	<LinearLayout 
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+		android:id="@+id/layoutSEInputMethodHolder"
+		android:visibility="visible"
+		>
+	</LinearLayout>
+</RelativeLayout>

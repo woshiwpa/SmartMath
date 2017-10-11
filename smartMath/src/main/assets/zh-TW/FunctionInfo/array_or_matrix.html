@@ -1,0 +1,174 @@
+<html>
+<head>
+<title>程式開發科學計算器幫助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">程式開發科學計算器幫助：陣列和矩陣函數</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函數名</th>
+<th>函數幫助資訊</th>
+</tr>
+<tr>
+<td><center>adj</center></td>
+<td><p>adj(1) :</p>
+<p>函數程式adj(x)返回2維方陣x的伴隨陣列。</p>
+</td>
+</tr>
+<tr>
+<td><center>alloc_array</center></td>
+<td><p>alloc_array(1...) :</p>
+<p>alloc_array(x...)返回一個新分配的矩陣，其大小由參數決定。所有的參數都必須為正整數。</p>
+<p>alloc_array(2) :</p>
+<p>alloc_array(x, y)返回一個新分配的矩陣，其大小由參數x決定，參數x或者是一批正整數，或者是一個正整數數列。參數y是矩陣中所有元素的初始值，註意y參數可省略，如果省略，所有元素被初始化為0。</p>
+</td>
+</tr>
+<tr>
+<td><center>cofactor</center></td>
+<td><p>cofactor(1) :</p>
+<p>函數程式cofactor(x)返回2維方陣x的余因子陣列。</p>
+</td>
+</tr>
+<tr>
+<td><center>det</center></td>
+<td><p>det(1) :</p>
+<p>det(x)計算2維方陣x的行列式值。</p>
+</td>
+</tr>
+<tr>
+<td><center>deter</center></td>
+<td><p>deter(1) :</p>
+<p>deter(x)計算2維方陣x的行列式值。</p>
+</td>
+</tr>
+<tr>
+<td><center>dprod</center></td>
+<td><p>dprod(2) :</p>
+<p>函數dprod用於計算兩個向量 [x1, x2, ... xn]和[y1, y2, ... yn]的點乘值。</p>
+</td>
+</tr>
+<tr>
+<td><center>eig</center></td>
+<td><p>eig(1) :</p>
+<p>eig(A)計算2維方陣A的特征向量和特征值。這個函數程式返回一個包含兩個成員的列表。第一個成員是特征向量陣列，每一列是一個特征向量。第二個成員是一個對角陣列，每一個對角線元素是一個特征值。註意運算這個程式非常耗費內存和CPU資源，如果在移動設備上運行，征列A的尺寸最好不要超過6*6，如果在電腦上運行，最好不要超過8*8，否則可能造成內存不足而程序崩潰或者運行很長時間而沒有結果。</p>
+<p>eig(2) :</p>
+<p>eig(A, B)計算2維方陣A相對於同樣尺寸的方陣B的特征向量和特征值，也就是Av = lambda * Bv，在這裏，。lambda是一個特征值，v是一個特征向量。第二個參數，B，可以省略，其缺省值為I陣列。這個函數程式返回一個包含兩個成員的列表。第一個成員是特征向量陣列，每一列是一個特征向量。第二個成員是一個對角陣列，每一個對角線元素是一個特征值。註意運算這個程式非常耗費內存和CPU資源，如果在移動設備上運行，征列A的尺寸最好不要超過6*6，如果在電腦上運行，最好不要超過8*8，否則可能造成內存不足而程序崩潰或者運行很長時間而沒有結果。</p>
+</td>
+</tr>
+<tr>
+<td><center>eye</center></td>
+<td><p>eye(1) :</p>
+<p>eye(x)返回正整數x乘x的2維方陣I。註意表達式eye(0)返回常數1。</p>
+<p>eye(2) :</p>
+<p>eye(x,y)返回y（y為正整數）維方陣I，註意每一維長度均為正整數x。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_eigen_values</center></td>
+<td><p>get_eigen_values(1) :</p>
+<p>get_eigen_values(A)計算2維方陣A的特征值。這個函數程式返回所有特征值，包括重復的特征值的列表。註意運算這個程式非常耗費內存和CPU資源，如果在移動設備上運行，征列A的尺寸最好不要超過6*6，如果在電腦上運行，最好不要超過8*8，否則可能造成內存不足而程序崩潰或者運行很長時間而沒有結果。</p>
+<p>get_eigen_values(2) :</p>
+<p>get_eigen_values(A, B)計算2維方陣A相對於同樣尺寸的方陣B的特征值，也就是Av = lambda * Bv，在這裏，。lambda是一個特征值，v是一個特征向量。第二個參數，B，可以省略，其缺省值為I陣列。這個函數程式返回所有特征值，包括重復的特征值的列表。註意運算這個程式非常耗費內存和CPU資源，如果在移動設備上運行，征列A的尺寸最好不要超過6*6，如果在電腦上運行，最好不要超過8*8，否則可能造成內存不足而程序崩潰或者運行很長時間而沒有結果。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_extreme_elem</center></td>
+<td><p>get_extreme_elem(3) :</p>
+<p>函數程式get_extreme_elem分析輸入的數值陣列並返回其所有元素的最大或最小值。如果某一個元素不是實數，這個元素就會被忽略。這個函數程式有3個參數，第一個是數值陣列（也可以是一個單一的數值），第二個是起始的最大或者最小值，如果這個參數不是null並且是一個實數，本函數程式將該參數和選出的最大或最小元素進行比較，並返回新的最大或最小值。第三個參數是告訴本函數程式返回最大值還是最小值，如果是0則返回最小值，否則返回最大值。函數程式的例子包括get_extreme_elem([[2, 3], "hello", 5], null, 1)和get_extreme_elem([[3,4,6],[5+3i, 7, 9.88-4.61], [5.77 -0.03i]], -8, 0)。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_inf</center></td>
+<td><p>includes_inf(1) :</p>
+<p>includes_inf(x)用於判斷參數x是否包含正負無窮。這裏，包含指的是，如果x是個陣列，那麽它的某一個元素包含或者本身就是目標值，如果x是一個復數，那麽它的實部或者虛部是目標值，如果x是一個實數，那麽它就是目標值。如果是，返回true，否則，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan</center></td>
+<td><p>includes_nan(1) :</p>
+<p>includes_nan(x)用於判斷參數x是否包含Nan。這裏，包含指的是，如果x是個陣列，那麽它的某一個元素包含或者本身就是目標值，如果x是一個復數，那麽它的實部或者虛部是目標值，如果x是一個實數，那麽它就是目標值。如果是，返回true，否則，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan_or_inf</center></td>
+<td><p>includes_nan_or_inf(1) :</p>
+<p>includes_nan_or_inf(x)用於判斷參數x是否包含Nan或者正負無窮。這裏，包含指的是，如果x是個陣列，那麽它的某一個元素包含或者本身就是目標值，如果x是一個復數，那麽它的實部或者虛部是目標值，如果x是一個實數，那麽它就是目標值。如果是，返回true，否則，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan_or_inf_or_null</center></td>
+<td><p>includes_nan_or_inf_or_null(1) :</p>
+<p>includes_nan_or_inf_or_null(x)用於判斷參數x是否包含Nan或者正負無窮或者null。這裏，包含指的是，如果x是個陣列，那麽它的某一個元素包含或者本身就是目標值，如果x是一個復數，那麽它的實部或者虛部是目標值，如果x是一個實數，那麽它就是目標值。如果是，返回true，否則，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_null</center></td>
+<td><p>includes_null(1) :</p>
+<p>includes_null(x)用於判斷參數x是否包含null。這裏，包含指的是，如果x是個陣列，那麽它的某一個元素包含或者本身就是目標值，如果x是一個復數，那麽它的實部或者虛部是目標值，如果x是一個實數，那麽它就是目標值。如果是，返回true，否則，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>invert</center></td>
+<td><p>invert(1) :</p>
+<p>invert(x)返回方塊2維矩陣x的逆矩陣，註意x中的元素可以為復數。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_eye</center></td>
+<td><p>is_eye(2) :</p>
+<p>is_eye(x,y)用於確定數組（或數）x是否是單位陣I（或數字1），如果是，返回true，否則返回false。參數y是布爾量，可以省略，缺省值為false。如果y是true，將所有的null值視為0，否則，null值不被當作0。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_zeros</center></td>
+<td><p>is_zeros(2) :</p>
+<p>is_zeros(x,y)用於確定數組（或數）x是否是零矩陣（或數字0），如果是，返回true，否則返回false。參數y是布爾量，可以省略，缺省值為false。如果y是true，將所有的null值視為0，否則，null值不被當作0。</p>
+</td>
+</tr>
+<tr>
+<td><center>left_recip</center></td>
+<td><p>left_recip(1) :</p>
+<p>left_recip(x)計算x的左除倒數，註意當前僅支持數值或二維陣列。</p>
+</td>
+</tr>
+<tr>
+<td><center>ones</center></td>
+<td><p>ones(1...) :</p>
+<p>ones函數返回一個所有元素都是1的矩陣，本函數的參數用於決定矩陣的尺寸，要麽為一批正整數，要麽為一個正整數數列。註意表達式ones([])返回常數1。</p>
+</td>
+</tr>
+<tr>
+<td><center>rank</center></td>
+<td><p>rank(1) :</p>
+<p>rank(matrix)返回矩陣的秩。比如，rank([[1,2],[2,4]])將返回1。</p>
+</td>
+</tr>
+<tr>
+<td><center>recip</center></td>
+<td><p>recip(1) :</p>
+<p>recip(x)計算x的倒數，註意當前僅支持數值或二維陣列。</p>
+</td>
+</tr>
+<tr>
+<td><center>set_array_elem</center></td>
+<td><p>set_array_elem(3) :</p>
+<p>set_array_elem(x,y,z)將x[y]賦值為z，並且返回新的x。註意x不是必須為矩陣，y必須為正整數向量。y的值可以超出x的尺寸和維度。比如，如果x=3，y=[1,2]，z=2+3i，那麽set_array_elem(x,y,z)等於[3, [0, 0, 2+3i]]。</p>
+</td>
+</tr>
+<tr>
+<td><center>size</center></td>
+<td><p>size(1) :</p>
+<p>size(x)返回矩陣x的尺寸向量。註意如果x不是一個矩陣，則總是返回[]。</p>
+<p>size(2) :</p>
+<p>size(x,y)返回矩陣x前y維的尺寸向量，如果x少於y維，返回完整的尺寸向量，注意y必須為正整數。此外如果x不是一個矩陣，則總是返回[]。</p>
+</td>
+</tr>
+<tr>
+<td><center>zeros</center></td>
+<td><p>zeros(1...) :</p>
+<p>zeros函數返回一個所有元素都是0的矩陣，本函數的參數用於決定矩陣的尺寸，要麽為一批正整數，要麽為一個正整數數列。註意表達式zeros([])返回常數值0。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

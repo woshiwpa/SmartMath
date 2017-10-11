@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btnQuickHelp" type="id"/>
+    <item name="btnCursorLeft" type="id"/>
+    <item name="btnCursorRight" type="id"/>
+    <item name="btnDEL" type="id"/>
+    <item name="btnEnter" type="id"/>
+    <item name="btnStartCalc" type="id"/>
+    <item name="btnSave" type="id"/>
+    <item name="btnNext" type="id"/>
+    <item name="btnHideInputPad" type="id"/>
+</resources>

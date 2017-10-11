@@ -1,0 +1,805 @@
+
+◀◀◀◀break_continue▶▶▶▶
+◁◁◁◁English▷▷▷▷
+MFP language break, continue statments:
+Break statement can be used in looping blocks (i.e. while ... loop, do ... until, for ... next) or select ... case ... default ... ends condition block. MFP jumps out the inner-most looping block or select ... case ... default ... ends condition block if break is hit.
+Continue statement can be used in looping blocks (i.e. while ... loop, do ... until, for ... next). MFP ignores the following statement and goes back to the beginning of the inner-most looping block if continue statement is hit.
+◁◁◁◁Simplified_Chinese▷▷▷▷
+MFP编程语言break语句和continue语句:
+Break语句用于循环（也就是While ... loop, do ... until, for ... next）或者条件程序块select ... case ... default ... ends。Break语句使MFP跳出最内一层循环或者select ... case ... default ... ends程序块。
+Continue语句用于循环（也就是While ... loop, do ... until, for ... next）。Continue语句使MFP忽略最内一层循环中该continue语句之后的语句并跳转到最内一层循环的开始处开始执行。
+◁◁◁◁Traditional_Chinese▷▷▷▷
+MFP編程語言break語句和continue語句:
+Break語句用於循環（也就是While ... loop, do ... until, for ... next）或者條件程式塊select ... case ... default ... ends。Break語句使MFP跳出最內一層循環或者select ... case ... default ... ends程式塊。
+Continue語句用於循環（也就是While ... loop, do ... until, for ... next）。Continue語句使MFP忽略最內一層循環中該continue語句之後的語句並跳轉到最內一層循環的開始處開始執行。
+
+◀◀◀◀function_return_endf▶▶▶▶
+◁◁◁◁English▷▷▷▷
+MFP language function, return and endf statements:
+Function statement in MFP is a start of a function. It should be used as
+Function name(parameter1, parameter2, parameter3, ...)
+. Note that "..." here means there are various number of parameters following parameters 1 to 3. If there is no optional parameter, no "..." should be used. For example:
+Function abcd(para1, para2, para3, para4)
+is a function named abcd with four parameters, while
+Function abcdx(para1, para2, para3, para4, ...)
+is a function with >= 4 parameters. The number of optional parameters (excluding para1 to para4) is stored in a system variable named opt_argc. The first to fourth parameters have defined name which are para1, para2, para3 and para4 respectively. The first optional parameter's value is stored in opt_argv[0] where opt_argv is a system array variable. Similarly, the second optional parameter's value is opt_argv[1], the third is opt_argv[2], etc.
+A function statement can return a value or return nothing. However, user needs not to clare the return variable name in function statement. MFP can automatically process the return.
+Return statement in MFP is used to exit from a function and return a value (which can be any data type) to caller if needed. For example:
+Return "Hello word"    // return a string "Hello word"
+or
+Return    // return nothing
+.
+Endf statement is the end of function block. It is simple and does not take any parameter.
+◁◁◁◁Simplified_Chinese▷▷▷▷
+MFP编程语言function，return和endf语句：
+在MFP语言中Function语句是一个函数的开始。Function语句的语法为：
+Function name(parameter1, parameter2, parameter3, ...)
+。注意这里"..."意味着在parameter3参数之后还可能有任意个数个参数。如果一个函数没有可选参数，函数的声明应该类似于
+Function abcd(para1, para2, para3, para4)
+。换句话说不能够在参数列中有"..."。
+如果一个函数有可选参数，可选参数的个数保存在一个系统变量中，该系统变量名字叫做opt_argc。所有的可选参数作为一个数组保存于系统变量opt_argv中。换句话说，第一个可选参数的值为opt_argv[0]，第二个为opt_argv[1]，以此类推。
+一个函数可以返回一个任意类型的数值或者什么都不返回。但使用者不用在Function语句中声明返回值，MFP会自动处理返回值。
+Return语句用于退出函数并返回数值。比如：
+Return "Hello word"    // 返回字符串"Hello word"
+或
+Return    // 什么都不返回
+。
+Endf语句用于标记函数的结尾，该语句不接受任何参数。
+◁◁◁◁Traditional_Chinese▷▷▷▷
+MFP編程語言function，return和endf語句：
+在MFP語言中Function語句是一個函數的開始。Function語句的語法為：
+Function name(parameter1, parameter2, parameter3, ...)
+。注意這裡"..."意味著在parameter3參數之後還可能有任意個數個參數。如果一個函數沒有可選參數，函數的聲明應該類似於
+Function abcd(para1, para2, para3, para4)
+。換句話說不能夠在參數列中有"..."。
+如果一個函數有可選參數，可選參數的個數儲存在一個系統變數中，該系統變數名字叫做opt_argc。所有的可選參數作為一個陣列保存於系統變數opt_argv中。換句話說，第一個可選參數的值為opt_argv[0]，第二個為opt_argv[1]，以此類推。
+一個函數可以返回一個任意類型的數值或者什麼都不返回。但使用者不用在Function語句中聲明返回值，MFP會自動處理返回值。
+Return語句用於退出函數並返回數值。比如：
+Return "Hello word"    // 返回字串"Hello word"
+或
+Return    // 什麼都不返回
+。
+Endf語句用於標記函數的結尾，該語句不接受任何參數。
+
+◀◀◀◀help_endh▶▶▶▶
+◁◁◁◁English▷▷▷▷
+MFP language help, endh statments:
+Help is the start of a help block in MFP language and endh is the end of help block.
+Note that although the statements in a help block does not have any impact in the running of the function, it is useful to show user help information when user types "help function_name" or "help function_name(number_of_parameters_in_this_function)" if this help block is right above the function declaration. MFP is also able to feed different help information for different system language. For example, assume a help block is right above function abcd:
+Help
+  This line will be shown for any system language.
+  @language:
+  This line will be shown for default system language.
+  @end
+    This line will also be shown for any system language.
+  @language:simplified_chinese
+  这一行将在系统语言为中文时显示（This line will be shown when system language is simplified Chinese.）。
+  @end
+    This line is also a line for any system language.
+Endh
+Function abcd(x, y)
+Endf
+. So when user types "help abcd" or "help abcd(2)", he/she will see
+  This line will be shown for any system language.
+  This line will be shown for default system language.
+    This line will also be shown for any system language.
+    This line is also a line for any system language.
+if system language is English which is also the default language. He/she will see
+  This line will be shown for any system language.
+    This line will also be shown for any system language.
+    This line is also a line for any system language.
+if system language is Japansee which is not the default language. He/she will see
+  This line will be shown for any system language.
+    This line will also be shown for any system language.
+  这一行将在系统语言为中文时显示（This line will be shown when system language is simplified Chinese.）。
+    This line is also a line for any system language.
+if system language is simplified Chinese which is not the default language. He/she will see
+  This line will be shown for any system language.
+  This line will be shown for default system language.
+    This line will also be shown for any system language.
+  这一行将在系统语言为中文时显示（This line will be shown when system language is simplified Chinese.）。
+    This line is also a line for any system language.
+if system language is simplified Chinese which is also the default language.
+If user simply wants to add comment for a line, "//" can be used. Like C++, words following "//" will be comments. "//" can start a new line or follow a statement.
+◁◁◁◁Simplified_Chinese▷▷▷▷
+MFP编程语言help和endh语句：
+在MFP语言中，Help语句是一个帮助信息块的开始而endh语句是一个帮助信息块的终止。
+注意虽然在一个帮助信息块中的语句不会影响函数的运行，当用户输入"help 函数名"或者"help 函数名(函数参数个数)"时帮助信息块却能提供必要的帮助信息。条件是该帮助信息块正好位于函数声明的上方。在以下例子中一个帮助信息块位于函数abcd的上方：
+Help
+  This line will be shown for any system language.
+  @language:
+  This line will be shown for default system language.
+  @end
+    This line will also be shown for any system language.
+  @language:simplified_chinese
+  这一行将在系统语言为中文时显示（This line will be shown when system language is simplified Chinese.）。
+  @end
+    This line is also a line for any system language.
+Endh
+Function abcd(x, y)
+Endf
+。当用户输入"help abcd"或者"help abcd(2)"时，如果系统语言是英语并且英语也是默认语言，该用户将看到如下帮助信息：
+  This line will be shown for any system language.
+  This line will be shown for default system language.
+    This line will also be shown for any system language.
+    This line is also a line for any system language.
+，如果系统语言是日语但是日语不是默认语言，该用户将看到如下帮助信息：
+  This line will be shown for any system language.
+    This line will also be shown for any system language.
+    This line is also a line for any system language.
+，如果系统语言是简体中文但简体中文不是默认语言，，该用户将看到如下帮助信息：
+  This line will be shown for any system language.
+    This line will also be shown for any system language.
+  这一行将在系统语言为中文时显示（This line will be shown when system language is simplified Chinese.）。
+    This line is also a line for any system language.
+，如果系统语言是简体中文而且简体中文是默认语言，，该用户将看到如下帮助信息：
+  This line will be shown for any system language.
+  This line will be shown for default system language.
+    This line will also be shown for any system language.
+  这一行将在系统语言为中文时显示（This line will be shown when system language is simplified Chinese.）。
+    This line is also a line for any system language.
+。
+如果用户仅仅只是想在一行的末尾加一些注释，可以使用类似于C++的"//"，在一行中，"//"之后的内容均为注释。"//"可以位于一行最开始。
+◁◁◁◁Traditional_Chinese▷▷▷▷
+MFP編程語言help和endh語句：
+在MFP語言中，Help語句是一個幫助資訊塊的開始而endh語句是一個幫助資訊塊的終止。
+注意雖然在一個幫助資訊塊中的語句不會影響函數的運行，當使用者輸入"help 函數名"或者"help 函數名(函數參數個數)"時幫助資訊塊卻能提供必要的幫助資訊。條件是該幫助資訊塊正好位於函數聲明的上方。在以下例子中一個幫助資訊塊位於函數abcd的上方：
+Help
+  This line will be shown for any system language.
+  @language:
+  This line will be shown for default system language.
+  @end
+    This line will also be shown for any system language.
+  @language:simplified_chinese
+  這一行將在系統語言為中文時顯示（This line will be shown when system language is simplified Chinese.）。
+  @end
+    This line is also a line for any system language.
+Endh
+Function abcd(x, y)
+Endf
+。當使用者輸入"help abcd"或者"help abcd(2)"時，如果系統語言是英文並且英文也是預設語言，該使用者將看到如下幫助資訊：
+  This line will be shown for any system language.
+  This line will be shown for default system language.
+    This line will also be shown for any system language.
+    This line is also a line for any system language.
+，如果系統語言是日文但是日文不是預設語言，該使用者將看到如下幫助資訊：
+  This line will be shown for any system language.
+    This line will also be shown for any system language.
+    This line is also a line for any system language.
+，如果系統語言是簡體中文但簡體中文不是預設語言，，該使用者將看到如下幫助資訊：
+  This line will be shown for any system language.
+    This line will also be shown for any system language.
+  這一行將在系統語言為中文時顯示（This line will be shown when system language is simplified Chinese.）。
+    This line is also a line for any system language.
+，如果系統語言是簡體中文而且簡體中文是預設語言，，該使用者將看到如下幫助資訊：
+  This line will be shown for any system language.
+  This line will be shown for default system language.
+    This line will also be shown for any system language.
+  這一行將在系統語言為中文時顯示（This line will be shown when system language is simplified Chinese.）。
+    This line is also a line for any system language.
+。
+如果使用者僅僅只是想在一行的末尾加一些註釋，可以使用類似於C++的"//"，在一行中，"//"之後的內容均為註釋。"//"可以位於一行最開始。
+
+◀◀◀◀if_elseif_else_endif▶▶▶▶
+◁◁◁◁English▷▷▷▷
+MFP language if, elseif, else, endif statements:
+If, elseif, else and endif comprise condition block in MFP. They should be used like the following example:
+If conditionA
+    ......
+elseif conditionB
+    ......
+elseif conditionC
+    ......
+......
+......
+......
+else
+    ......
+endif
+, where conditionA, conditionB, conditionC, etc. are expressions which have boolean values. If they are not boolean values, MFP converts them to boolean first (if MFP can).
+◁◁◁◁Simplified_Chinese▷▷▷▷
+MFP编程语言if，elseif，else和endif语句：
+If，elseif，else和endif组成了MFP语言中的条件程序块。它们的语法如下：
+If conditionA
+    ......
+elseif conditionB
+    ......
+elseif conditionC
+    ......
+......
+......
+......
+else
+    ......
+endif
+。在上述例子中，conditionA，conditionB和conditionC均为表达式，它们的运算结果应该为布尔值。如果它们运算值不是布尔值，MFP将会将运算结果转换为布尔值。如果做不到这一点，MFP将报错。
+◁◁◁◁Traditional_Chinese▷▷▷▷
+MFP編程語言if，elseif，else和endif語句：
+If，elseif，else和endif組成了MFP語言中的條件程式塊。它們的語法如下：
+If conditionA
+    ......
+elseif conditionB
+    ......
+elseif conditionC
+    ......
+......
+......
+......
+else
+    ......
+endif
+。在上述例子中，conditionA，conditionB和conditionC均為運算式，它們的運算結果應該為布林值。如果它們運算值不是布林值，MFP將會將運算結果轉換為布林值。如果做不到這一點，MFP將報錯。
+
+◀◀◀◀select_case_default_ends▶▶▶▶
+◁◁◁◁English▷▷▷▷
+MFP language select, case, default, ends statments:
+Select, case, default and ends comprise another type of condition block besides if. They should be used like the following example: 
+select expr
+case value1
+    ......
+    break
+case value2
+    ......
+    break 
+......
+......
+......
+default
+    ......
+ends
+. Note that if there is no break at the end of a block of case, MFP will continue to execute the statements in the following case or default block. 
+◁◁◁◁Simplified_Chinese▷▷▷▷
+MFP编程语言select，case，default和ends语句：
+Select，case，default和ends构成了MFP中除if之外的另外一种条件程序块。他们的语法如下：
+select expr
+case value1
+    ......
+    break
+case value2
+    ......
+    break 
+......
+......
+......
+default
+    ......
+ends
+。注意如果一个case块的结尾没有break语句，MFP将会执行下一个case块或者default块（如果下个条件分支为default）的语句。
+◁◁◁◁Traditional_Chinese▷▷▷▷
+MFP編程語言select，case，default和ends語句：
+Select，case，default和ends構成了MFP中除if之外的另外一種條件程式塊。他們的語法如下：
+select expr
+case value1
+    ......
+    break
+case value2
+    ......
+    break 
+......
+......
+......
+default
+    ......
+ends
+。注意如果一個case塊的結尾沒有break語句，MFP將會執行下一個case塊或者default塊（如果下個條件分支為default）的語句。
+
+◀◀◀◀solve_slvreto▶▶▶▶
+◁◁◁◁English▷▷▷▷
+MFP language solve and slvreto statements:
+Solve statement starts an in-line solver block. It takes an arbitary number of variables as parameters. These variables must be declared before. These variables will be the to-be-solved variables in the solve block. In the following example, user first defines three variables x, y and z, then starts a solve block to solve the values of variables x, y and z.
+variable x = 3, y, z = [2, 7]
+solve x, y, z
+...
+It doesn't matter what the initial values of x, y and z are. If in the solve block x, y or z is solved it will be assigned a new value. If the solve block cannot solve any or all of the variables, the value of the variable(s) does not change.
+Slvreto statement finishes an in-line solver block. It has one optional parameter, a variable declared before the solve block. This variable is used to store all the roots of each to-be-solved variables (i.e. variables as parameters in solve statement). However, to retrive roots of a variable or a result set, user should use built-in functions including get_num_of_results_sets, get_solved_results_set and get_variable_results. For example, the following statements are all valid:
+slvreto
+slvreto all_results
+The follows are a solve example.
+Function testtry2()
+	Variable a, b, c, x, y, z
+	a = 3
+	b = 4
+	c = 5
+	x = 6
+	y = 7
+	z = 8
+	solve x, y, z 	// x, y and z are to-be-solved variables in the solve block.
+		// a, b and c are also used in the solve block.
+		// However, different from x, y and z, they are
+		// not to solve variables so that their values
+		// are not gonna change.
+		a * x**2 + 7 * log(b) *x + 6.5 == 8 // note that '==' should be used
+											// instead of '=' because '='
+											// assigns value to a variable.
+		y * b - z + 6 == 3.7 + x/(a + 7)
+		y * x + z/(c - 3) == 6 + a + y
+	slvreto a	// a is optional. If used, solve block saves all roots of all
+				// variables to a.
+	print("\nx == " + x + "\ny == " + y + "\nz == " + z)
+	print("\nNumber of results sets is " + get_num_of_results_sets(a))
+	
+	// it's possible that MFP cannot solve the expressions in a solve block. In
+	// this case solve block does not throw any exception but simply returns an
+	// empty result to returned variable (which is a in this function).
+	if (get_num_of_results_sets(a) > 0)
+		
+		// 0 means the first results set, 1 means the second, etc.
+		print("\nResults set No. 2 is " + get_solved_results_set(a, 1))
+		
+		// note that get_variable_results has two parameters, first is solve
+		// returned result, second is the variable place in the corresponding
+		// solve statement. 0 means the first variable (which is x in this
+		// example), 1 means the second variable (which is y in this example),
+		// etc. It is also possible that some variables can be solved in a
+		// solve block while other variables cannot be solved. In this case,
+		// roots of unsolved variables are NULL.
+		print("\nAll results of y are " + get_variable_results(a, 1))
+	else
+		print("\nSorry, cannot solve the expressions and get x, y, z's values")
+	endif
+	return
+Endf
+In the above example, we get
+x == 0.14781939
+y == 6.84549421
+z == 29.66719489
+Number of results sets is 2
+Results set No. 2 is [-3.38250623, -3.22386342, -10.25720306]
+All results of y are [6.84549421, -3.22386342] .
+To write a solve block, user needs to know the following things:
+1. There are two types of variables in a solve block, normal variables and to-be-solved variables. To-be-solved variables are the variables in the solve statement definition. In the above example, to-be-solved variables are x, y and z while a, b and c are normal variables. Values of normal variables are known to solve block while values of to-be-solved variables will be assigned in a solve block. Also, both normal variables and to-be-solved variables should be declared before a solve block.
+2. To set up a to-be-solved expression in a solve block, '==' should be used instead of '=' since '=' is to assign value to a variable. However, it is fine if user assigns value to a variable (whether normal or to-be-solved) in a solve block. An example is:
+variable a = 3, b = 4, c = 5, x, y
+solve x, y
+	a * x + y / c == 9
+	c = 7
+	y * b - x * c  == 6
+slvreto
+In the above example, if we comment the line c = 7, we actually solve an expression group which includes 3 * x + y / 5 == 9 and y * 4 - x * 5 == 6. But if we have the line c = 7, we actually solve an expression group which includes 3 * x + y / 5 == 9 and y * 4 - x * 7 == 6.
+If user assigns value to a to-be-solved variable, this to-be-solved variable is no longer unknown so that it becomes a normal variable. However, user has to be very careful because assigning may affect expressions before it. An example is:
+variable a = 3, b = 4, c = 5, x, y
+solve x, y
+	a * x + y / c == 9
+	x = 7
+	y * b - x * c  == 6
+slvreto
+In the above example, if we comment the line x = 7, we actually solve an expression group which includes 3 * x + y / 5 == 9 and y * 4 - x * 5 == 6. But if we have the line x = 7, we actually solve a single expression which is y * 4 - 7 * 5 == 6. This is because, clearly, MFP cannot solve x and y values only from the first expression a * x + y / c == 9 so it goes to the next statement. In the second statement, x is assigned a value, which is 7, and becomes a normal variable. In the third statement, variables b, c and x are normal variables with valid value so that MFP uses their values and gets that y should be 10.25. Then MFP goes back to the first expression a * x + y / c == 9. But now both x and y become normal variables and have known values so that MFP uses their values and simplifies the expression to 3 * 7 + 10.25 / 5 == 9. This is a compare expression and its value is FALSE. In this way, MFP solves x should be 7 and y should be 10.25.
+3. We can see all the roots of all the variables are stored in the returned variable in slvreto statement. In current MFP language, the returned variable is actually a 2-D matrix, each row is a root set for every variable. However, please note that in the future the data structure of solve returned value may change. As such make sure to use functions provided by system (i.e. get_num_of_results_sets, get_solved_results_set, get_variable_results, etc.) to obtain the roots. After solve block finishes, the value of each to-be-solved variable is the root of this variable in the first root set. Only exception is that in the first root set this variable cannot be solved.
+MFP in-line solver is not almighty. It is possible that MFP cannot solve some mathematic expressions. In this case, slvreto returns empty result to its returned variable. Function get_num_of_results_sets returns zero. The to-be-solved variables keep their original values before solve block. It is also possible that some to-be-solved variables are solved while others cannot be solved. In this case, the unsolved to-be-solved variables keep their original values before solve block. If we use get_solved_results_set or get_variable_results function to obtain the unsolved variable values, we get NULL.
+4. The number of results sets returned by solve block is determined by multiplying number of roots of each individual to-be-solved variable. For example,
+variable x, y, z
+solve x, y
+	log(x) == 3
+	y**3 + 3 * y**2 + 3 * y+ 1 == 0
+slvreto z
+returns three sets of results. All of them are [20.08553692318766792368478490971028804779052734375, -1]. This is because y**3 + 3 * y**2 + 3 * y+ 1 == 0 has three roots but with same value. Although log(x) == 3 has only one root, each y root should has a corresponding x value so that we get three sets of results.
+◁◁◁◁Simplified_Chinese▷▷▷▷
+MFP编程语言solve和slvreto语句：
+Solve语句开始了一个内联求解代数方程程序块。Solve语句可以拥有任意个数的变量作为参数。这些变量必须预先声明。这些作为参数的变量将成为内联求解代数方程程序块的待解变量。在以下例子中，程序员首先声明了三个变量x，y和z，然后开始执行一个内联求解代数方程程序块以解出这三个变量的值。
+variable x = 3, y, z = [2, 7]
+solve x, y, z
+...
+待解变量x，y和z的初始值是什么无关紧要。如果solve程序块能够解出x，y或z的值，x，y或z将被赋予这个新值，否则，x，y或z的值将保持为进入solve程序块之前的值不变。.
+Slvreto语句结束了一个内联求解代数方程程序块。它有一个可选参数。该参数必须为内联求解代数方程程序块之前声明的一个变量。该变量用于储存每一个待解变量的所有的根。程序员需要调用系统提供的函数get_num_of_results_sets，get_solved_results_set和get_variable_results去获得所有变量的一组解或者某一个变量的所有的根。比如，以下语句都是合法的：
+slvreto
+slvreto all_results
+以下代码是一个内联求解代数方程程序块的完整示例
+Function testtry2()
+	Variable a, b, c, x, y, z
+	a = 3
+	b = 4
+	c = 5
+	x = 6
+	y = 7
+	z = 8
+	solve x, y, z 	//x，y和z为待解变量
+		//变量a，b和c也用于本内联求解代数方程程序块
+		//但是，a，b和c不是待解变量所以它们的值不会改变。
+		a * x**2 + 7 * log(b) *x + 6.5 == 8 //注意必须使用‘==’而不是赋值符号‘=’。
+		y * b - z + 6 == 3.7 + x/(a + 7)
+		y * x + z/(c - 3) == 6 + a + y
+	slvreto a	//a用于存放每一个变量的所有的根，可以省略
+	print("\nx == " + x + "\ny == " + y + "\nz == " + z)
+	print("\n解集个数为" + get_num_of_results_sets(a))
+	
+	//存在MFP无法解出方程的情况，如果是这样，
+	//内联求解代数方程程序块返回一个空值。
+	if (get_num_of_results_sets(a) > 0)
+		
+		//0意味着第一组解，1是第二组解，依次类推。
+		print("\n第二组解是" + get_solved_results_set(a, 1))
+		
+		//注意get_variable_results有两个参数，第一个是solve程序块返回的包含所有解的变量，
+		//第二个是待解变量在solve语句中的位子。0表示第一个待解变量，1表示第二个，依次类推。
+		//也有可能一些变量能够解出但另一些变量无法解出，在这种情况下，在solve程序块返回值
+		//中，没有解出的变量的值为NULL。
+		print("\ny的所有根为" + get_variable_results(a, 1))
+	else
+		print("\n对不起，无法通过上述方程解出x，y和z的值。")
+	endif
+	return
+Endf
+在以上例子中，我们可以得到
+x == 0.14781939
+y == 6.84549421
+z == 29.66719489
+解集个数为2
+第二组解是[-3.38250623, -3.22386342, -10.25720306]
+y的所有根为[6.84549421, -3.22386342] 。
+如果想编写内联求解代数方程程序块，程序员需要注意以下事项：
+1. 在内联求解代数方程程序块有两种变量，普通变量和待解变量。待解变量为solve语句的参数。在上述例子里，x，y和z为待解变量而a，b和c为常规变量。常规变量的值在内联求解代数方程程序块中是已知的而待解变量的值是未知的。无论是哪一种变量，都必须在内联求解代数方程程序块之前预先声明。
+2. 在内联求解代数方程程序块中的方程表达式必须使用‘==’而不是赋值号‘=’。但是，在内联求解代数方程程序块中程序员可以赋值给普通变量和待解变量（虽然不推荐这样做）。比如：
+variable a = 3, b = 4, c = 5, x, y
+solve x, y
+	a * x + y / c == 9
+	c = 7
+	y * b - x * c  == 6
+slvreto
+在上述例子中，如果我们删掉c = 7这一行，我们所解的方程为3 * x + y / 5 == 9和y * 4 - x * 5 == 6。但如果我们保留c = 7这一行，我们所解的方程则为3 * x + y / 5 == 9和y * 4 - x * 7 == 6。
+如果程序员给一个待解变量赋值，该待解变量将不再待解而自动转变为普通变量。这样做必须非常小心，因为赋值待解变量可能会影响到赋值语句之前的方程式。比如：
+variable a = 3, b = 4, c = 5, x, y
+solve x, y
+	a * x + y / c == 9
+	x = 7
+	y * b - x * c  == 6
+slvreto
+在上述例子中，如果我们删掉x = 7这一行，我们所解的方程为3 * x + y / 5 == 9和y * 4 - x * 5 == 6。但如果我们保留x = 7这一行，我们实际上解得方程为y * 4 - 7 * 5 == 6。这是由于一开始，MFP语言无法通过第一个方程式解出x或者y，所以，它继续分析第二个表达式。在这个表达式中，x被赋值为7，这样一来，x和a，b以及c一样不再为待解变量，所以，第三个方程式变成了y * 4 - 7 * 5 == 6。我们可以得到y的值为10.25。然后MFP语言回过头来分析第一个方程式，这时，x，y和a，b以及c一样都不再为待解变量，该方程式变成3 * 7 + 10.25 / 5 == 9。这是一个比较表达式，返回值为FALSE。所以，我们最后得到的解是x为7而y为10.25。
+3. 从上述例子中可以看到，每一个待解变量的所有的根都存放在内联求解代数方程程序块的最后的slvreto语句的返回变量中。在当前的MFP语言中，slvreto语句的返回变量实际上是一个2维矩阵，矩阵的每一列为所有待解变量的一个解集。但是，请注意在后续版本中slvreto语句返回变量的数据结构可能会发生改变。所以，程序员必须使用系统所提供的函数，也就是get_num_of_results_sets，get_solved_results_set和get_variable_results等函数从slvreto语句的返回变量提取待解变量的根。所有待解变量在第一个解集中的根为待解变量在内联求解代数方程程序块运行完毕之后的值，除非在第一个解集中该待解变量无解。
+很显然，MFP语言内联求解代数方程的功能并非是万能的。过于复杂的代数方程（组）无法被MFP语言解出。在这种情况下，slvreto语句返回空值，调用函数get_num_of_results_sets返回值为0。而待解变量则都保持它们进入solve程序块之前的原始值不变。还有一种可能是一些待解变量能够被MFP语言解出，但另外的待解变量的值无法被解出。这时，无法被解出的待解变量保持它们的原始值不变。而如果我们使用函数get_solved_results_set或者get_variable_results从slvreto语句返回值中取回无解变量的值，我们取回的是NULL。
+4. MFP语言内联求解代数方程所获得的解集个数为每个待解变量的解的个数的乘积。比如，
+variable x, y, z
+solve x, y
+	log(x) == 3
+	y**3 + 3 * y**2 + 3 * y+ 1 == 0
+slvreto z
+返回3组解集，每一组解集都是[20.08553692318766792368478490971028804779052734375, -1]。这是由于y**3 + 3 * y**2 + 3 * y+ 1 == 0有三个相同的根。这样一来，虽然log(x) == 3只有一个根，但每一个y的根必须有一个x来对应，所以我们最后得到3组解集。
+◁◁◁◁Traditional_Chinese▷▷▷▷
+MFP程式solve和slvreto語句：
+Solve語句開始了一個內聯求解代數方程程式塊。Solve語句可以擁有任意個數的變數作為參數。這些變數必須預先聲明。這些作為參數的變數將成為內聯求解代數方程程式塊的待解變數。在以下例子中，程式開發人員首先聲明了三個變數x，y和z，然後開始執行一個內聯求解代數方程程式塊以解出這三個變數的值。
+variable x = 3, y, z = [2, 7]
+solve x, y, z
+...
+待解變數x，y和z的初始值是什麽無關緊要。如果solve程式塊能夠解出x，y或z的值，x，y或z將被賦予這個新值，否則，x，y或z的值將保持為進入solve程式塊之前的值不變。.
+Slvreto語句結束了一個內聯求解代數方程程式塊。它有一個可選參數。該參數必須為內聯求解代數方程程式塊之前聲明的一個變數。該變數用於儲存每一個待解變數的所有的根。程式開發人員需要調用系統提供的函數程式get_num_of_results_sets，get_solved_results_set和get_variable_results去獲得所有變數的一組解或者某一個變數的所有的根。比如，以下語句都是合法的：
+slvreto
+slvreto all_results
+以下代碼是一個內聯求解代數方程程式塊的完整示例
+Function testtry2()
+	Variable a, b, c, x, y, z
+	a = 3
+	b = 4
+	c = 5
+	x = 6
+	y = 7
+	z = 8
+	solve x, y, z 	//x，y和z為待解變數
+		//變數a，b和c也用於本內聯求解代數方程程式塊
+		//但是，a，b和c不是待解變數所以它們的值不會改變。
+		a * x**2 + 7 * log(b) *x + 6.5 == 8 //註意必須使用‘==’而不是賦值符號‘=’。
+		y * b - z + 6 == 3.7 + x/(a + 7)
+		y * x + z/(c - 3) == 6 + a + y
+	slvreto a	//a用於存放每一個變數的所有的根，可以省略
+	print("\nx == " + x + "\ny == " + y + "\nz == " + z)
+	print("\n解集個數為" + get_num_of_results_sets(a))
+	
+	//存在MFP無法解出方程的情況，如果是這樣，
+	//內聯求解代數方程程式塊返回一個空值。
+	if (get_num_of_results_sets(a) > 0)
+		
+		//0意味著第一組解，1是第二組解，依次類推。
+		print("\n第二組解是" + get_solved_results_set(a, 1))
+		
+		//註意get_variable_results有兩個參數，第一個是solve程式塊返回的包含所有解的變數，
+		//第二個是待解變數在solve語句中的位子。0表示第一個待解變數，1表示第二個，依次類推。
+		//也有可能一些變數能夠解出但另一些變數無法解出，在這種情況下，在solve程式塊返回值
+		//中，沒有解出的變數的值為NULL。
+		print("\ny的所有根為" + get_variable_results(a, 1))
+	else
+		print("\n對不起，無法通過上述方程解出x，y和z的值。")
+	endif
+	return
+Endf
+在以上例子中，我們可以得到
+x == 0.14781939
+y == 6.84549421
+z == 29.66719489
+解集個數為2
+第二組解是[-3.38250623, -3.22386342, -10.25720306]
+y的所有根為[6.84549421, -3.22386342] 。
+如果想編寫內聯求解代數方程程式塊，程式開發人員需要註意以下事項：
+1. 在內聯求解代數方程程式塊有兩種變數，普通變數和待解變數。待解變數為solve語句的參數。在上述例子裏，x，y和z為待解變數而a，b和c為常規變數。常規變數的值在內聯求解代數方程程式塊中是已知的而待解變數的值是未知的。無論是哪一種變數，都必須在內聯求解代數方程程式塊之前預先聲明。
+2. 在內聯求解代數方程程式塊中的方程表達式必須使用‘==’而不是賦值號‘=’。但是，在內聯求解代數方程程式塊中程式開發人員可以賦值給普通變數和待解變數（雖然不推薦這樣做）。比如：
+variable a = 3, b = 4, c = 5, x, y
+solve x, y
+	a * x + y / c == 9
+	c = 7
+	y * b - x * c  == 6
+slvreto
+在上述例子中，如果我們刪掉c = 7這一行，我們所解的方程為3 * x + y / 5 == 9和y * 4 - x * 5 == 6。但如果我們保留c = 7這一行，我們所解的方程則為3 * x + y / 5 == 9和y * 4 - x * 7 == 6。
+如果程式開發人員給一個待解變數賦值，該待解變數將不再待解而自動轉變為普通變數。這樣做必須非常小心，因為賦值待解變數可能會影響到賦值語句之前的方程式。比如：
+variable a = 3, b = 4, c = 5, x, y
+solve x, y
+	a * x + y / c == 9
+	x = 7
+	y * b - x * c  == 6
+slvreto
+在上述例子中，如果我們刪掉x = 7這一行，我們所解的方程為3 * x + y / 5 == 9和y * 4 - x * 5 == 6。但如果我們保留x = 7這一行，我們實際上解得方程為y * 4 - 7 * 5 == 6。這是由於一開始，MFP語言無法通過第一個方程式解出x或者y，所以，它繼續分析第二個表達式。在這個表達式中，x被賦值為7，這樣一來，x和a，b以及c一樣不再為待解變數，所以，第三個方程式變成了y * 4 - 7 * 5 == 6。我們可以得到y的值為10.25。然後MFP語言回過頭來分析第一個方程式，這時，x，y和a，b以及c一樣都不再為待解變數，該方程式變成3 * 7 + 10.25 / 5 == 9。這是一個比較表達式，返回值為FALSE。所以，我們最後得到的解是x為7而y為10.25。
+3. 從上述例子中可以看到，每一個待解變數的所有的根都存放在內聯求解代數方程程式塊的最後的slvreto語句的返回變數中。在當前的MFP語言中，slvreto語句的返回變數實際上是一個2維矩陣，矩陣的每一列為所有待解變數的一個解集。但是，請註意在後續版本中slvreto語句返回變數的數據結構可能會發生改變。所以，程式開發人員必須使用系統所提供的函數程式，也就是get_num_of_results_sets，get_solved_results_set和get_variable_results等函數程式從slvreto語句的返回變數提取待解變數的根。所有待解變數在第一個解集中的根為待解變數在內聯求解代數方程程式塊運行完畢之後的值，除非在第一個解集中該待解變數無解。
+很顯然，MFP語言內聯求解代數方程的功能並非是萬能的。過於復雜的代數方程（組）無法被MFP語言解出。在這種情況下，slvreto語句返回空值，調用函數程式get_num_of_results_sets返回值為0。而待解變數則都保持它們進入solve程式塊之前的原始值不變。還有一種可能是一些待解變數能夠被MFP語言解出，但另外的待解變數的值無法被解出。這時，無法被解出的待解變數保持它們的原始值不變。而如果我們使用函數程式get_solved_results_set或者get_variable_results從slvreto語句返回值中取回無解變數的值，我們取回的是NULL。
+4. MFP語言內聯求解代數方程所獲得的解集個數為每個待解變數的解的個數的乘積。比如，
+variable x, y, z
+solve x, y
+	log(x) == 3
+	y**3 + 3 * y**2 + 3 * y+ 1 == 0
+slvreto z
+返回3組解集，每一組解集都是[20.08553692318766792368478490971028804779052734375, -1]。這是由於y**3 + 3 * y**2 + 3 * y+ 1 == 0有三個相同的根。這樣一來，雖然log(x) == 3只有一個根，但每一個y的根必須有一個x來對應，所以我們最後得到3組解集。
+
+◀◀◀◀try_throw_catch_endtry▶▶▶▶
+◁◁◁◁English▷▷▷▷
+MFP language try, throw, catch, endtry statements:
+Try statement starts a try block. It does not take any parameter. Any exception triggered by MFP in the try block will be thrown to the following catch statements until one of the catch statements process it. If no catch statement following this try block is able to process the thrown exception, it is thrown to the higher level.
+Throw statement has a string as parameter. MFP exits if a throw statement is hit, and the string following throw keyword is printed.
+Catch statement may have an expression as parameter. If it does not take any parameter, it catches any exception. If it is followed by an expression, the expression is an exception filter which identifies an exception should be processed by this catch block or not. If exception filter value is true, the exception is caught. Otherwise, the exception is conveyed to the next catch statement, or thrown to upper level. Catch statement provides three string type internal parameters, i.e. level, type and info. Parameter level is exception level, its value can be either "LANGUAGE" (i.e. language level exception like no endif statement follows a if statement or a user defined expression to throw a string) or "EXPRESSION" (i.e. expression level exception like divided by zero or lack of right parenthesis). Parameter type is exception type which is internally defined in MFP language. Parameter info is the information provided by the exception. If developer uses a throw statement to throw a string, info value is the string. These three parameters can only be used in exception filter in a catch statement. However, exception filter can use any variables defined in the name scope. If a variable has the same name as any of the three internal parameters, it's overridden by the internal parameter.
+Endtry statement finishes a try/catch block. It does not take any parameter.
+The follows are a try/throw/catch/endtry example.
+Function testtry1()
+	Variable a, b, c
+	a = 3
+	Try
+		Select a
+		Case 3
+			print("a == 1\n")
+			Try
+				print (NULL==FALSE)
+				dbc
+			Catch
+				print ("Cannot cvt NULL to boolean or dbc is undefined\n")
+			EndTry
+		EndS
+		Throw "my exception"
+	Catch (1+2)==4
+		print ("IN (1+2) == 4")
+	catch false
+		print ("In false")
+	Catch and((b=level)=="LANGUAGE", (c=info) == "my exception")
+		print ("In catch and, b = ")
+		print (b)
+		print ("\n")
+		Help
+		 Try 
+		 	c = adb
+		 Catch
+		 	print (" c= adb")
+		 EndTry
+			Help
+		Endh
+		Try
+			c = 3/0
+		Catch And((c= info)==c, level == "LANGUAGE")
+			print ("In Language\n")
+			print (c) 
+		Catch And((c= info)==c, level=="EXPRESSION")
+			print ("In Expression\n")
+			print (c)
+		EndTry
+		print ("In upper level try\n")
+		print (b)
+		print (" , c = ")
+		print (c)
+		print ("\n")
+	Catch or((b=level)=="LANGUAGE", (c=info) == "my exception")
+		print ("In catch or, b = ")
+		print (b)
+		print (" , c = ")
+		print (c)
+		print ("\n")
+	Endtry
+Endf
+And the output of this function would be:
+a == 1
+FALSECannot cvt NULL to boolean or dbc is undefined
+In catch and, b = LANGUAGE
+In Expression
+Zero division!In upper level try
+LANGUAGE , c = Zero division!
+◁◁◁◁Simplified_Chinese▷▷▷▷
+MFP编程语言try，throw，catch，endtry语句：
+Try语句用于开始一个Try程序块。Try语句没有任何参数。在Try程序块中，任何由于MFP语言触发的异常将会被抛出并传递到跟随try程序块的某一个catch语句中处理。当然，如果没有一个catch语句能够处理这个被抛出来的异常，该异常将会被抛向外层的程序块或函数。
+Throw语句有一个字符串参数。如果throw语句被执行，MFP打印出字符串参数然后退出。
+Catch语句可以接受一个表达式作为参数，也可以不接受参数。如果不接受参数，该catch语句捕获任何由该语句对应的try程序块抛出的异常。如果它有一个表达式参数，该表达式参数作为一个异常过滤器用于决定一个异常是否由该catch语句处理。如果异常过滤器表达式的值是布尔值true，该异常被捕获，否则，该异常被传递到下一个catch语句，或者被抛向外层的程序块或函数。Catch语句提供三个字符串类型的内部参数，也就是level，type和info。参数level存储异常的层级，它的值是"LANGUAGE"（也就是编程语言级别的异常，比如没有endif语句跟随if语句或者一个用户定义的抛出字符串的异常）或者"EXPRESSION"（也就是表达式级别的异常，比如被零除或者缺少右括号），参数type是MFP编程语言内部定义异常的类型，参数info是异常的内容。如果开发人员用一个throw语句抛出一个字符串，info的值就是这个字符串。这三个参数仅能用于catch语句中的异常过滤器。但是异常过滤器可以使用变量名和函数名空间中的任意变量和函数。如果一个变量和这三个catch语句的内部参数重名，它将被重名内部参数重载。
+Endtry用于结束一个try/catch程序块，它不接受任何参数。
+以下是try/throw/catch/endtry的例子。
+Function testtry1()
+	Variable a, b, c
+	a = 3
+	Try
+		Select a
+		Case 3
+			print("a == 1\n")
+			Try
+				print (NULL==FALSE)
+				dbc
+			Catch
+				print ("Cannot cvt NULL to boolean or dbc is undefined\n")
+			EndTry
+		EndS
+		Throw "my exception"
+	Catch (1+2)==4
+		print ("IN (1+2) == 4")
+	catch false
+		print ("In false")
+	Catch and((b=level)=="LANGUAGE", (c=info) == "my exception")
+		print ("In catch and, b = ")
+		print (b)
+		print ("\n")
+		Help
+		 Try 
+		 	c = adb
+		 Catch
+		 	print (" c= adb")
+		 EndTry
+			Help
+		Endh
+		Try
+			c = 3/0
+		Catch And((c= info)==c, level == "LANGUAGE")
+			print ("In Language\n")
+			print (c) 
+		Catch And((c= info)==c, level=="EXPRESSION")
+			print ("In Expression\n")
+			print (c)
+		EndTry
+		print ("In upper level try\n")
+		print (b)
+		print (" , c = ")
+		print (c)
+		print ("\n")
+	Catch or((b=level)=="LANGUAGE", (c=info) == "my exception")
+		print ("In catch or, b = ")
+		print (b)
+		print (" , c = ")
+		print (c)
+		print ("\n")
+	Endtry
+Endf
+这个函数的输出结果如下：
+a == 1
+FALSECannot cvt NULL to boolean or dbc is undefined
+In catch and, b = LANGUAGE
+In Expression
+Zero division!In upper level try
+LANGUAGE , c = Zero division!
+◁◁◁◁Traditional_Chinese▷▷▷▷
+MFP編程語言try，throw，catch，endtry語句：
+Try語句用於開始一個Try程式塊。Try語句沒有任何參數。在Try程式塊中，任何由於MFP語言觸發的異常將會被拋出並傳遞到跟隨try程式塊的某一個catch語句中處理。當然，如果沒有一個catch語句能夠處理這個被拋出來的異常，該異常將會被拋向外層的程式塊或函數。
+Throw語句有一個字串參數。如果throw語句被執行，MFP列印出字串參數然後退出。
+Catch語句可以接受一個表達式作為參數，也可以不接受參數。如果不接受參數，該catch語句捕獲任何由該語句對應的try程式塊拋出的異常。如果它有一個表達式參數，該表達式參數作為一個異常過濾器用於決定一個異常是否由該catch語句處理。如果異常過濾器表達式的值是布爾值true，該異常被捕獲，否則，該異常被傳遞到下一個catch語句，或者被拋向外層的程式塊或函數。Catch語句提供三個字串類型的內部參數，也就是level，type和info。參數level存儲異常的層級，它的值是"LANGUAGE"（也就是程式語言級別的異常，比如沒有endif語句跟隨if語句或者一個用戶定義的拋出字符串的異常）或者"EXPRESSION"（也就是表達式級別的異常，比如被零除或者缺少右括號），參數type是MFP編程語言內部定義異常的類型，參數info是異常的內容。如果開發人員用一個throw語句拋出一個字串，info的值就是這個字串。這三個參數僅能用於catch語句中的異常過濾器。但是異常過濾器可以使用變量名和函數名空間中的任意變量和函數。如果一個變量和這三個catch語句的內部參數重名，它將被重名內部參數重載。
+Endtry用於結束一個try/catch程式塊，它不接受任何參數。
+以下是try/throw/catch/endtry的例子。
+Function testtry1()
+	Variable a, b, c
+	a = 3
+	Try
+		Select a
+		Case 3
+			print("a == 1\n")
+			Try
+				print (NULL==FALSE)
+				dbc
+			Catch
+				print ("Cannot cvt NULL to boolean or dbc is undefined\n")
+			EndTry
+		EndS
+		Throw "my exception"
+	Catch (1+2)==4
+		print ("IN (1+2) == 4")
+	catch false
+		print ("In false")
+	Catch and((b=level)=="LANGUAGE", (c=info) == "my exception")
+		print ("In catch and, b = ")
+		print (b)
+		print ("\n")
+		Help
+		 Try 
+		 	c = adb
+		 Catch
+		 	print (" c= adb")
+		 EndTry
+			Help
+		Endh
+		Try
+			c = 3/0
+		Catch And((c= info)==c, level == "LANGUAGE")
+			print ("In Language\n")
+			print (c) 
+		Catch And((c= info)==c, level=="EXPRESSION")
+			print ("In Expression\n")
+			print (c)
+		EndTry
+		print ("In upper level try\n")
+		print (b)
+		print (" , c = ")
+		print (c)
+		print ("\n")
+	Catch or((b=level)=="LANGUAGE", (c=info) == "my exception")
+		print ("In catch or, b = ")
+		print (b)
+		print (" , c = ")
+		print (c)
+		print ("\n")
+	Endtry
+Endf
+這個例子的輸出結果如下：
+a == 1
+FALSECannot cvt NULL to boolean or dbc is undefined
+In catch and, b = LANGUAGE
+In Expression
+Zero division!In upper level try
+LANGUAGE , c = Zero division!
+
+◀◀◀◀variable▶▶▶▶
+◁◁◁◁English▷▷▷▷
+MFP language variable statement:
+Variable statement is used to define one or several variables. It should be always like
+variable var1{=expr1}, var2{=expr2}, var3{=expr3}, ..., varN{=exprN}
+, where var1, var2, var3, ..., varN are variables' names. N can be any positive integer. And {=expr*} means the initial value assignment can be ignored (with default initial value is NULL). For example, statement
+variable a = "hello, world", b, c = a + 7, d=[2,3,[5,8]]
+declares four variables whose name are a, b, c, and d and whose initial values are "hello, world", NULL, "hello, world7" and [2, 3, [5, 8]] respectively.
+◁◁◁◁Simplified_Chinese▷▷▷▷
+MFP编程语言variable语句：
+Variable语句用于定义一个或任意多个变量，其语法为：
+variable var1{=expr1}, var2{=expr2}, var3{=expr3}, ..., varN{=exprN}
+，这里var1，var2，var3，...，varN为变量名，N为一个正整数，{=expr*}含义为变量初始化的部分可以省略（变量缺省初始值为NULL）。例如：语句
+variable a = "hello, world", b, c = a + 7, d=[2,3,[5,8]]
+定义了4个变量名字分别为a, b, c和d。它们的初始值分别是"hello, world"，NULL，"hello, world7"和[2, 3, [5, 8]]。
+◁◁◁◁Traditional_Chinese▷▷▷▷
+MFP編程語言variable語句：
+Variable語句用於定義一個或任意多個變數，其語法為：
+variable var1{=expr1}, var2{=expr2}, var3{=expr3}, ..., varN{=exprN}
+，這裡var1，var2，var3，...，varN為變數名，N為一個正整數，{=expr*}含義為變數初始化的部分可以省略（變數缺省初始值為NULL）。例如：語句
+variable a = "hello, world", b, c = a + 7, d=[2,3,[5,8]]
+定義了4個變數名字分別為a, b, c和d。它們的初始值分別是"hello, world"，NULL，"hello, world7"和[2, 3, [5, 8]]。
+
+◀◀◀◀while_loop_do_until_for_next▶▶▶▶
+◁◁◁◁English▷▷▷▷
+MFP language while, loop, do, until, for, next statements:
+While and loop, do and until, and for and next are three pairs of looping statements in MFP.  They should be used in the following way: 
+While condition
+    ......
+Loop
+Do
+    ......
+Until condition
+For variable var = from_value to to_value step step_value
+    ......
+Next
+where condition is an expression which has boolean value (or can be converted to boolean value). Var is the name of for statement's index variable. From_value is the initial value of var, step_value is how much var increase each time, note that step_value can be negative. To_value is the destination value of var variable. Var variable stops to change if it is beyond to_value. Note that if var is defined before, the variable keyword following for can be ignored.
+Note that all the three looping blocks support break and continue statement. When break is hit, MFP jumps out the current inner-most looping block. When continue is hit, MFP ignores the following statements in the inner-most looping block and goes back to the beginning of the looping block.
+◁◁◁◁Simplified_Chinese▷▷▷▷
+MFP编程语言while，loop，do，until，for和next语句：
+While和loop，do和until，以及for和next构成MFP语言中的三对循环语句。它们语法如下：
+While condition
+    ......
+Loop
+Do
+    ......
+Until condition
+For variable var = from_value to to_value step step_value
+    ......
+Next
+。在上述例子中，condition为一个表达式，其计算值为布尔值（或者可以被转换为布尔值）。Var是for语句索引变量的名字。From_value为var变量的起始值，step_value为var变量每次增加多少，注意step_value可正可负。To_value为var的目标值。如果Var的值超出了to_value，var将会停止改变。注意如果var曾经定义过，variable关键字可以被省略掉。
+注意这些循环均支持break和continue语句。如果break语句被执行，MFP跳出最内一层循环。如果continue语句被执行，MFP忽略最内层循环中的continue语句之后的语句并跳转到循环开始处开始执行。
+◁◁◁◁Traditional_Chinese▷▷▷▷
+MFP編程語言while，loop，do，until，for和next語句：
+While和loop，do和until，以及for和next構成MFP語言中的三對循環語句。它們語法如下：
+While condition
+    ......
+Loop
+Do
+    ......
+Until condition
+For variable var = from_value to to_value step step_value
+    ......
+Next
+。在上述例子中，condition為一個運算式，其計算值為布林值（或者可以被轉換為布林值）。Var是for語句索引變數的名字。From_value為var變數的起始值，step_value為var變數每次增加多少，注意step_value可正可負。To_value為var的目標值。如果Var的值超出了to_value，var將會停止改變。注意如果var曾經定義過，variable關鍵字可以被省略掉。
+注意這些循環均支持break和continue語句。如果break語句被執行，MFP跳出最內一層循環。如果continue語句被執行，MFP忽略最內層循環中的continue語句之後的語句並跳轉到循環開始處開始執行。

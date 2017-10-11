@@ -1,0 +1,168 @@
+﻿<html>
+	<head>
+		<title>智慧计算器帮助</title>
+	</head>
+	<body style="background-color:white;">
+		<h2 style="color:blue">智慧计算器的新特性</h2>
+		
+		<p style="font-family:verdana;color:magenta;">
+<b>1.6.5版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 二维图形表达式绘图引擎得到显著改进。由于引入缓存技术以及对拖动事件响应进行了优化，现在计算器对图形各种操作更加快速和敏感。但要注意，由于对表达式绘图必须在新的值计算表达式结果，如果表达式过于复杂，用户仍然会感觉到明显的延迟。
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 支持绘制2维或3维隐函数图形。注意只有当隐函数可解，才能够绘制图形。4次或者4次以上的多项式由于根表达式过于复杂，虽然可解，但无法绘图。。如果绘制包含两个变量的隐函数，最多4个根表达式将会被绘制出。如果是3个变量的隐函数，根据情况计算器可能会对每个变量求根，然后为每个变量绘制出最多2个解表达式。这样一来，一个单一的3变量的隐函数，可能意味着绘制出6条图形，整个求解绘图过程将会花费比较长的时间。还要注意，隐函数必须是等式，而不能是赋值式，比如x**2+y**2=4-z**2是非法的，而x**2+y**2==4-z**2则是正确的；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. 函数size，zeros和ones的返回值和参数定义有所改变。现在，如果是计算一个数值，而不是矩阵的尺寸，size函数返回[]而不是[0]。同理，如果参数是[]，zeros返回0而ones返回1；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	4. 一定程度的性能提升；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	5. 很多错误得到了修正；
+		</p>
+		<p style="font-family:verdana;color:green;">
+<b>1.6.4版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 改进了打印体数学公式识别功能。现在数学公式识别准确率更高；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 其他一些小的功能优化和错误修正；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. 1.6.4.16版改进了对不定积分的支持；
+		</p>
+		<p style="font-family:verdana;color:green;">
+<b>1.6.3版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 改进了打印体数学公式识别功能。现在数学公式识别准确率更高；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 其他一些小的功能优化和错误修正；
+		</p>
+		<p style="font-family:verdana;color:magenta;">
+<b>1.6.2版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 改进了打印体数学公式识别功能。现在数学公式识别准确率更高，对于基本的加减乘除和次方的计算可以达到90%的准确性，多元一次方程组可以达到80%的准确性，但要注意变量名最好为x、y、a、b或者c，一元多项式可以达到80%的准确性，但要注意变量名最好为x、y、a、b或者c，（一次）积分可以达到70%的准确性，求和（大写的西格玛）可以达到80%的准确性，基本矩阵运算可以达到60%的准确性。操作数既可以为实数，也可以为复数。但要注意手写数学公式识别仍然在继续改进阶段；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 其他一些小的功能优化和错误修正；
+		</p>
+		<p style="font-family:verdana;color:magenta;">
+<b>1.6.1版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 改进了数学公式识别功能。现在数学公式识别准确率更高，尤其是对于手写识别；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 允许用户将不满意的识别结果发送给开发者做进一步的改进；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. 其他一些小的功能优化和错误修正；
+		</p>
+		<p style="font-family:verdana;color:red;">
+<b>1.6.0版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 优化了数学公式识别的过程。现在数学公式识别更灵活，更稳定也更快；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 支持不定积分和用Gauss-Kronrod法计算定积分；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. 优化极坐标绘图。现在用户移动图像更流畅；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	4. 能够处理任意大数比如1000的1000次方；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	5. 计算结果更准确，误差小至5*10E-48；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	6. 支持无穷大（infinite）和无意义（nan）；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	7. 能够计算特征值和特征向量；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	8. 完全支持二进制，8进制和十六进制数。二进制数用0b打头，比如0b0011101和0b11.1001；8进制由0打头，比如 02751以及00.23561；16进制由0x打头，比如0xEFF6和x23FAB.DF24；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	9. 增加了连加函数sum_over和连乘函数product_over；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	10. 其他一些小的功能优化和错误修正；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	11. 从1.6.0版开始，本软件中嵌入了百度移动广告服务。这一新的特性是针对国内的用户，只有当系统语言为简体中文时才会被激活，世界其他地方的用户不受影响。百度移动广告服务需要读取用户大致位置和移动设备状态，以针对不同人群推送不同的广告。我们郑重承诺，百度和我们均不会存储用户的私人数据，用户的隐私得到充分保护；
+		</p>
+		<p style="font-family:verdana;color:magenta;">
+<b>1.5.1版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 提高了数学公式识别的正确率；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 支持更多的设备；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. 更有效地支持二进制，八进制和16进制的整数和浮点数；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	4. 更快的处理和识别速度；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	5. 改善了用户界面；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	6. 修正了一些错误；
+		</p>
+		<p style="font-family:verdana;color:red;">
+<b>1.5版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 支持印刷体数学公式识别。用户可以通过拍照的方式输入数学公式并识别计算；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 支持绘制3维或者极坐标图像；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. 支持多存储卡，用户可以选择在那块存储卡上储存生成的图像；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	4. 支持很多新的函数；
+		</p>
+		<p style="font-family:verdana;color:green;">
+<b>1.0.2版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 一些小的界面优化和错误修正；
+		</p>
+		<p style="font-family:verdana;color:green;">
+<b>1.0.1版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 一些小的界面优化和错误修正；
+		</p>
+		<p style="font-family:verdana;color:red;">
+<b>1.0版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 支持基本计算；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 支持绘制二维图像；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. 支持解多项式和一维线性方程组；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	4. 支持（高次）积分；
+		</p>
+	</body>
+</html>

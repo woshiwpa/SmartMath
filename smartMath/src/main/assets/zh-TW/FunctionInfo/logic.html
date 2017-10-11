@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>程式開發科學計算器幫助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">程式開發科學計算器幫助：邏輯函數</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函數名</th>
+<th>函數幫助資訊</th>
+</tr>
+<tr>
+<td><center>and</center></td>
+<td><p>and(1...) :</p>
+<p> and(x...)接受不少於1個的任意個數的參數，返回這些參數的邏輯與值。如果某一個參數不是布爾類型，將會被自動轉換為布爾類型。</p>
+</td>
+</tr>
+<tr>
+<td><center>iff</center></td>
+<td><p>iff(3...) :</p>
+<p>	函數程式iff(condition1, true_result1, condition2, true_result2, ..., false_result)的參數condition1，condition2，...為代表條件的布爾值，iff函數程式的返回值由條件值決定。比如，iff(true, 3, 2)返回3，iff(3 &lt; 2, 3, 2)返回2（這是因為3 &lt; 2是false），iff(3 &lt; 2, 3, 5 &gt; 4, 5, 6 == 9, 6, 9)返回5，以及iff(3 &lt; 2, 3, 5 &lt; 4, 5, 6 == 9, 6, 9)返回9。</p>
+</td>
+</tr>
+<tr>
+<td><center>or</center></td>
+<td><p>or(1...) :</p>
+<p> or(x...)接受不少於1個的任意個數的參數，返回這些參數的邏輯或值。如果某一個參數不是布爾類型，將會被自動轉換為布爾類型。</p>
+</td>
+</tr>
+<tr>
+<td><center>xor</center></td>
+<td><p>xor(2) :</p>
+<p>	函數xor計算x和y的異或值，x和y可以為任何數值。如果x不等於y，返回true。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

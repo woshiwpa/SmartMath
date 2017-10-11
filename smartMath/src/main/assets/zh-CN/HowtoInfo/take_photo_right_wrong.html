@@ -1,0 +1,59 @@
+﻿<html>
+	<head>
+		<title>智慧计算器帮助</title>
+	</head>
+	<body style="background-color:Lightgray;">
+		<h2 style="color:blue">智慧计算器帮助：正确和错误的拍照识别方法</h2>
+		
+		<p style="font-family:verdana;color:black;">
+			如果用户想要识别打印体数学表达式，必须遵循以下规则：
+		</p>
+		<p style="font-family:verdana;color:black;">
+			1. 用户必须确保拍照识别的是打印体数学表达式，而不是手写的表达式；
+		</p>
+		<p style="font-family:verdana;color:black;">
+			2. 用户必须保证拍照识别是表达式是正立的，不能倾斜或者倒置；
+		</p>
+		<p style="font-family:verdana;color:black;">
+			3. 拍照识别时背景（指的是绿色方块内除表达式以外的地方）必须干净单调，不能有噪音点，光线投射下来的阴影可以接受，但是太过于明显的颜色区别会被误认为笔画。同时背景色必须比表达式颜色浅（比如，背景是白色，表达式是黑色）。
+		</p>
+		<p style="font-family:verdana;color:black;">
+			4. 拍的照片必须清晰可辨。如果用户不确定是否清晰可辨，可点击“确认修正”按钮，看看二值化之后的黑白图像是否清晰可辨。
+		</p>
+		<p style="font-family:verdana;color:green;">
+			以下照片采用正确的方式拍照获得，因此可以被识别：
+		</p>
+		<p><img src="right_approach_photo_taken.bmp"  alt="right_approach_photo_taken" /></p>
+		<p style="font-family:verdana;color:green;">
+			以下图片时上述照片二值化后的结果，可以看到它非常清楚：
+		</p>
+		<p><img src="segmentated_right_approach_photo_taken.bmp"  alt="segmentated_right_approach_photo_taken" /></p>
+		<p style="font-family:verdana;color:red;">
+			以下照片没有用正确的拍照方式获得。字体太小，用户拍照时手可能抖动了，所以二值化后的图像非常模糊。
+		</p>
+		<p><img src="mr_initial(1).bmp"  alt="mr_initial" /></p><p><img src="mr_finallyproc(1).bmp"  alt="mr_finallyproc" /></p>
+		<p style="font-family:verdana;color:red;">
+			以下照片没有用正确的拍照方式获得。字体不清楚，背景有噪音点。
+		</p>
+		<p><img src="mr_initial(2).bmp"  alt="mr_initial" /></p><p><img src="mr_finallyproc(2).bmp"  alt="mr_finallyproc" /></p>
+		<p style="font-family:verdana;color:red;">
+			以下照片没有用正确的拍照方式获得。表达式是手写的，而且不是正立的。
+		</p>
+		<p><img src="mr_initial(3).bmp"  alt="mr_initial" /></p><p><img src="mr_finallyproc(3).bmp"  alt="mr_finallyproc" /></p>
+		<p style="font-family:verdana;color:red;">
+			以下照片没有用正确的拍照方式获得。表达式是手写的，而且不是正立的。并且背景上有很多文字分割线。
+		</p>
+		<p><img src="mr_initial(4).bmp"  alt="mr_initial" /></p><p><img src="mr_finallyproc(4).bmp"  alt="mr_finallyproc" /></p>
+		<p style="font-family:verdana;color:red;">
+			以下照片没有用正确的拍照方式获得。除了表达式是手写的，其他都满足要求。但要注意，如果用户想识别手写数学公式，请使用我们另外一个软件，智慧拍照计算器，的手写模式，直接在屏幕上手写识别，不需要拍摄照片。否则，用打印模式识别，x可能会被识别为乘号，2可能被识别为z，整个表达式就错了。
+		<p><img src="mr_initial(5).bmp"  alt="mr_initial" /></p><p><img src="mr_finallyproc(5).bmp"  alt="mr_finallyproc" /></p>
+		<p style="font-family:verdana;color:red;">
+			以下照片没有用正确的拍照方式获得。这些表达式是教儿童学数学的，并非正式的数学表达式。请注意智慧计算器只能识别正式的数学表达式。
+		</p>
+		<p><img src="mr_initial(6).bmp"  alt="mr_initial" /></p><p><img src="mr_finallyproc(6).bmp"  alt="mr_finallyproc" /></p>
+		<p style="font-family:verdana;color:red;">
+			这是什么东西？！
+		</p>
+		<p><img src="mr_initial(7).bmp"  alt="mr_initial" /></p><p><img src="mr_finallyproc(7).bmp"  alt="mr_finallyproc" /></p>
+	</body>
+</html>

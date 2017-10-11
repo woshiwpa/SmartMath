@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello!</string>
+    <string name="app_name">Smart Calculator</string>
+    <string name="alert_dialog_ok">OK</string>
+    <string name="alert_dialog_cancel">Cancel</string>
+    <string name="yes_i_know">Yes I know</string>
+    <string name="read_next_time">Read next time</string>
+    <string name="menu_cmdline">Command line</string>
+    <string name="menu_calcassist">Calc Assistant</string>
+    <string name="menu_calculate">Calculate</string>
+    <string name="menu_plotgraph">Plot chart</string>
+    <string name="menu_plot2dgraph">Plot 2D chart</string>
+    <string name="menu_plot3dgraph">Plot 3D chart</string>
+    <string name="menu_chartmgr">Chart manager</string>
+    <string name="menu_integrate">Integrate</string>
+    <string name="menu_history">History</string>
+    <string name="menu_alwayshidesoftkeyboard">Hide Soft Input</string>
+    <string name="menu_enablesoftkeyboard">Enable Soft Input</string>
+    <string name="menu_settings">Settings</string>
+	<string name="menu_configinputpads">Config InputPads</string>
+    <string name="menu_fill_example">Fill Example</string>
+    <string name="menu_help">Help</string>
+    <string name="setting_number_format_prompt">Set Bits of Precision</string>
+    <string name="setting_variable_range_prompt">Set variable range to plot charts in Smart Calc</string>
+    <string name="setting_record_length_prompt">Set Record Length</string>
+    <string name="setting_extreme_value_prompt">Set Scientific Notation</string>
+    <string name="setting_auto_start_prompt">Auto Start Program</string>
+    <string name="setting_application_data_storage_prompt">Storage to save application data</string>
+    <string name="do_you_know">Do you know ...</string>
+    <string name="whats_new">What\'s new</string>
+    <string name="do_not_show_whats_new_again">Do not show this box next time.</string>
+    <string name="welcome_message">Input help or an expression like 3 + log(4.1 / avg(1,5,-3)), then press Go!</string>
+    <string name="welcome_message2">Hints:\n* Touch the input text edit box to show soft keyboard or input pad. Slide the input pad to left or right to select numbers, operators or different functions to input.\n* Input help (by clicking the life ring button) and then function name or operator to get quick help information, or an expression like 3 + log(4.1 / avg(1,5,-3)), or a group of expressions like\ny1*3+4*y2-3*y3==7\ny2/2-3*y3+y1==9\ny3/3-6*y1+y2==2.4\n, then press start to calculate!\n* Please remember that equal operator is \'==\' while \'=\' is to assign a value to a variable. Also, power operator is \'**\' not \'^\'.</string>
+    <string name="welcome_message3">Hints:\n* Touch the input text box to show soft keyboard or input pad. Slide the input pad to left or right to select numbers, operators or functions to input.\n* Input help (by clicking the life ring button) and then function name or operator to get quick help information.\n* Input single expression like 3+log(4.1/avg(1,5,-3)), or expressions like\ny1*(3.8+i)==7+4*y2\ny2/2-3*y1==9.4\n, then press start button to calculate value(s).\nInput equation(s) like r = cos(θ), y==sin(x) and/or z==x+y, then press plot button to draw 2D, polar or 3D charts!\n* Please remember that equal operator is \'==\' while \'=\' is to assign a value to a variable. Also, power operator is \'**\' not \'^\'.</string>
+    <string name="welcome_message4">Hints:\n* Click the camera button to take math expression photo and recognize.\n&lt;div align=&quot;left&quot;&gt;&lt;img src=&quot;file:///android_asset/en/HowtoInfo/main_window_big.jpg&quot; alt=&quot;take_photo&quot; WITH_HEIGHT_TO_RECALC(800,480) /&gt;&lt;/div&gt;\n* Touch the input text box to show soft keyboard or input pad. Slide the input pad to left or right to select numbers, operators or functions to input.\n&lt;div align=&quot;left&quot;&gt;&lt;img src=&quot;file:///android_asset/en/HowtoInfo/main_window_popup_keyboard_big.jpg&quot; alt=&quot;input_by_keyboard&quot; WITH_HEIGHT_TO_RECALC(800,480) /&gt;&lt;/div&gt;\n* Input help (by clicking the life ring button or the question mark key) and then function name to get quick help information.\n&lt;div align=&quot;left&quot;&gt;&lt;img src=&quot;file:///android_asset/en/HowtoInfo/find_help_of_functions_big.jpg&quot; alt=&quot;find_help_of_functions&quot; WITH_HEIGHT_TO_RECALC(800,480) /&gt;&lt;/div&gt;</string>
+    <string name="calculation_result_clearly_shown">Calculation result</string>
+    <string name="copy_result_to_input">copy result</string>
+    <string name="copy_expression_to_input">copy input</string>
+    <string name="long_click_calculate_output">Long click output box to see results more clearly!</string>
+        
+	<string name="EXPERROR_NO_EXPRESSION">No expression!</string>
+	<string name="EXPERROR_MULTIPLE_EXPRESSIONS">Multiple expressions!</string>
+	<string name="EXPERROR_LACK_OPERATOR_BETWEEN_TWO_OPERANDS">Lack of operator between two operands!</string>
+	<string name="EXPERROR_NUM_CAN_NOT_HAVE_TWO_DECIMAL_POINT">Two decimal points in one number!</string>
+	<string name="EXPERROR_NUM_DO_NOT_ACCORD_DECIMAL_NUM_WRITING_STANDARD">Does not match with decimal number writing standard!</string>
+	<string name="EXPERROR_OPERATOR_NOT_EXIST">No-exist operator!</string>
+	<string name="EXPERROR_UNMATCHED_RIGHTPARENTHESE">Cannot find a left parnthese to match the right parenthese!</string>
+	<string name="EXPERROR_UNMATCHED_LEFTPARENTHESE">Cannot find a right parnthese to match the left parenthese!</string>
+	<string name="EXPERROR_WRONG_OPERAND_TYPE">Incorrect operand type!</string>
+	<string name="EXPERROR_INCORRECT_ANSWER_OF_POWER_FUNCTION_OPERANDS">Incorrect answer of power function operand!</string>
+	<string name="EXPERROR_INCORRECT_BINARY_OPERATOR">Incorrect binary operator!</string>
+	<string name="EXPERROR_INCORRECT_MONADIC_OPERATOR">Incorrect monadic operator!</string>
+	<string name="EXPERROR_LACK_OPERAND">Lack of operand!</string>
+	<string name="EXPERROR_CAN_NOT_IDENTIFIED_CHARACTER">Can not identify character!</string>
+	<string name="EXPERROR_DATATYPE_IS_NOT_DEFINED">Undefined data type!</string>
+	<string name="EXPERROR_CAN_NOT_CHANGE_A_NOTEXIST_DATUM_TO_ANY_OTHER_DATATYPE">Can not change a no-exist DATUM to any other data type!</string>
+	<string name="EXPERROR_NEW_DATATYPE_IS_NOT_DEFINED">Undefined new data type!</string>
+	<string name="EXPERROR_INTEGER_OVERFLOW">Integer overflow!</string>
+	<string name="EXPERROR_DOUBLE_OVERFLOW">Double overflow!</string>
+	<string name="EXPERROR_CHANGE_FROM_DOUBLE_TO_INTEGER_OVERFLOW">Overflow when convert double to integer!</string>
+	<string name="EXPERROR_OPERAND_OF_FACTORIAL_MAY_BE_TOO_LARGE">Too large operand of factorial!</string>
+	<string name="EXPERROR_DIVISOR_CAN_NOT_BE_ZERO">Zero division!</string>
+	<string name="EXPERROR_OPERAND_OF_FACTORIAL_CAN_NOT_LESS_THAN_ZERO">Negative operand of factorial!</string>
+	<string name="EXPERROR_OPERAND_OF_BIT_OPERATION_MUST_BE_GREATER_THAN_ZERO">No-positive operand of bit operation!</string>
+	<string name="EXPERROR_INCORRECT_NUM_OF_PARAMETER">Incorrect number of parameters!</string>
+	<string name="EXPERROR_INVALID_PARAMETER_RANGE">Invalid parameter range!</string>
+	<string name="EXPERROR_INVALID_PARAMETER_TYPE">Invalid parameter type!</string>
+	<string name="EXPERROR_UNDEFINED_FUNCTION">Undefined function!</string>
+	<string name="EXPERROR_UNDEFINED_VARIABLE">Undefined variable!</string>
+	
+	<string name="go_button">Go!</string>
+	<string name="numbers_operators_button_long">numbers\noperators</string>
+	<string name="common_functions_button_long">common\nfunctions</string>
+	<string name="more_functions_button_long">more\nfunctions</string>
+	<string name="numbers_operators_button_short">1+2*3</string>
+	<string name="common_functions_button_short">f(x)</string>
+	<string name="more_functions_button_short">f()...</string>
+	<string name="left_button">Left</string>
+	<string name="right_button">Right</string>
+	<string name="eraze_button">Erase</string>
+	<string name="help_button">Help</string>
+    <string name="x_help_info">X is the name of to-solve or to-plot variable x or part of name of other to-solve or to-plot variables like x1, xy, xx etc.</string>
+    <string name="y_help_info">Y is the name of to-solve or to-plot variable y or part of name of other to-solve or to-plot variables like y3, xy, yyyy etc.</string>
+    <string name="z_help_info">Z is the name of to-solve or to-plot variable z or part of name of other to-solve or to-plot variables like z2, zx, zzz etc.</string>
+    <string name="u_help_info">U is the name of to-solve or to-plot variable u or part of name of other to-solve or to-plot variables like u1, uy, uu etc.</string>
+    <string name="v_help_info">V is the name of to-solve or to-plot variable v or part of name of other to-solve or to-plot variables like v3, xv, vvvv etc.</string>
+    <string name="t_help_info">T is the name of to-solve or to-plot variable t or part of name of other to-solve or to-plot variables like t2, tx, ttt etc.</string>
+    <string name="r_help_info">R is the name of to-solve or to-plot variable r (usually used to plot polar graphs) or part of name of other to-solve or to-plot variables like r2, rx, rrr etc.</string>
+    <string name="theta_help_info">&#x03B8; is the name of to-solve or to-plot variable &#x03B8; or part of name of other to-solve or to-plot variables like &#x03B8;2. Note that if plot variable &#x03B8; and another variable, i.e. 2D chart, a polar graph will be generated.</string>
+    <string name="assign_help_info">Assign operator which assign a value to a variable, e.g. x = 3 + 4 assigns 7 to variable x.</string>
+	<string name="equal_help_info">Equal sign which means left part has the same value as right part. For example, x + 1 == 7 + 3 means x + 1 has the same value as 7 + 3 (i.e. 10). Then x can be solved which is 9.</string>
+	<string name="parenthesis_help_info">Left parenthesis. Expression part inside a pair of parentheses should be calculated first. For instance, x * (y + 3).</string>
+	<string name="closeparenthesis_help_info">Right parenthesis. Expression part inside a pair of parentheses should be calculated first. For instance, x * (y + 3).</string>
+	<string name="squarebracket_help_info">Square bracket which starts an array. For example, [[1,2,3],[4,5,6]] is a 2*3 matrix whose first line includes elements 1, 2 and 3 and second line includes elements 4, 5 and 6.</string>
+	<string name="closesquarebracket_help_info">Close square bracket which ends an array. For example, [[1,2,3],[4,5,6]] is a 2*3 matrix whose first line includes elements 1, 2 and 3 and second line includes elements 4, 5 and 6.</string>
+	<string name="comma_help_info">Comma character which seperates individual elements in an array. For example, [2,3,4,5] has four elements seperated by commas.</string>
+	<string name="plus_help_info">Plus sign (support complex number, matrix and string) or positive sign.</string>
+	<string name="minus_help_info">Minus sign (support complex number and matrix) or negative sign.</string>
+	<string name="multiplication_help_info">Multiplication (support complex number and matrix).</string>
+	<string name="division_help_info">Division (support complex number and matrix).</string>
+	<string name="leftdivision_help_info">Left division (mainly for matrix to calculator x from Ax=b (i.e. x = A\\b), note that first operand is divisor, do the same operation to division if divisor is not a matrix).</string>
+	<string name="power_help_info">Power. Note that both the first and the second operands can be complex number.</string>
+	<string name="exclaimation_help_info">Not sign if left unary operator or factorial sign if right unary operator. The operand should be non-negative and will be converted to an integer.</string>
+	<string name="transpose_help_info">2D matrix transpose, if operand is a 1D vector, convert it to a 2D matrix, if operand is not an array, return operand itself.</string>
+	<string name="doublequote_help_info">Double-quote character which identifies the range of a string.</string>
+	<string name="percentage_help_info">Percentage. For example, 403.77% = 4.0377.</string>
+	<string name="bit_and_help_info">Bit wise and, which only accepts non-negative integer operands.</string>
+	<string name="bit_or_help_info">Bit wise or, which only accepts non-negative integer operands.</string>
+	<string name="bit_xor_help_info">Bit wise xor, which only accepts non-negative integer operands.</string>
+	<string name="bit_not_help_info">Bit wise not, which only accepts non-negative integer operand.</string>
+	<string name="image_i_help_info">Image unit for complex values.</string>
+	<string name="pi_constant_help_info">The constant value of PI.</string>
+	<string name="e_constant_help_info">The constant value of e. Note that e is also used in scientific notation, e.g. 1.23e-002.</string>
+	<string name="null_constant_help_info">Null value.</string>
+	<string name="true_constant_help_info">Boolean true value.</string>
+	<string name="false_constant_help_info">Boolean false value.</string>
+	<string name="inf_constant_help_info">Infinite value.</string>
+	<string name="infi_constant_help_info">Infinite image value.</string>
+	<string name="nan_constant_help_info">Indefinite value, like 0 divided by 0.</string>
+	<string name="nani_constant_help_info">Indefinite image value.</string>
+	<string name="hex_oct_bin_initial_help_info">0x is the initial of a hexadecimal number; e.g. 0xFA36.BCEE, 0b is the initial of a binary number, e.g. 0b0011; and 0 is the initial of an octal number, e.g. 0376.774.</string>
+	<string name="no_quick_help_info">No quick help information for </string>
+
+	<string name="calculator_settings">Calculator Settings</string>
+	<string name="digits_shown"> digits</string>
+	<string name="let_calculator_decide">Let calculator decide</string>
+	<string name="never_sci_notation">Never use scientific notation</string>
+	<string name="always_sci_notation">Always use scientific notation</string>
+	<string name="if_log10_abs_result">If log10(abs(result)) >= </string>
+	<string name="records_shown"> records</string>
+	<string name="enable_btn_press_vibration_prompt">Vibrate when press calculator button</string>
+	<string name="external_storage_mnt_folder_prompt">External storage device (e.g. SD card) mounted at folder :</string>
+	<string name="app_folder_prompt">Application data folder in external storage device is :</string>
+	<string name="default_storage">Default storage</string>
+	<string name="auto">Auto</string>
+	<string name="internal_storage">Internal storage</string>
+	<string name="external_sd_card">External SD card</string>
+	<string name="script_folder_prompt">User defined functions are stored in external storage device folder :</string>
+   	<string name="chart_folder_prompt">User generated charts are stored in external storage device folder :</string>
+   	<string name="settings_saved">Settings saved</string>
+	
+	<string name="select_record_title">Calculation Records</string>
+	<string name="no_records">No record!</string>
+	<string name="select_input_type">Please select expression or answer to input</string>
+	<string name="error_answer_shown">Error</string>
+	<string name="return_nothing_answer_shown">returns nothing</string>
+	<string name="variables_declared_shown">The following variables declared :</string>
+	    	
+	<string name="calculator_help">Calculator Help</string>
+
+	<string name="cmd_line_title">Command line</string>
+	<string name="cmd_line_welcome_message">Please input an expression or help followed by a function name, then press enter.</string>
+    <string name="command_prompt">$></string>
+    <string name="session_starts">Session starts</string>
+    <string name="session_returns">Session returns</string>
+    <string name="last_cmd">Last command</string>
+    <string name="last_return">Last return</string>
+    <string name="last_input">Last input</string>
+    <string name="interrupt_task">Terminate running task</string>
+    <string name="clear_screen">Clear screen</string>
+    <string name="pop_up_soft_key">Show soft keyboard</string>
+    <string name="pop_up_system_soft_key">Show system soft keyboard</string>
+    <string name="hide_system_soft_key">Hide system soft keyboard</string>
+    <string name="new_script">New script</string>
+    <string name="manage_scripts">Manage script</string>
+    <string name="view_charts">View charts</string>
+
+    <string name="error">Error!</string>
+    <string name="retry_or_not">Retry?</string>
+    <string name="warning">Warning!</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string> 
+    <string name="close">Close</string>
+    <string name="clear">Clear</string>
+	<string name="next_step">Next step</string>
+	<string name="back">Back</string>
+	<string name="skip">Skip</string>
+	    
+    <string name="script_file_manager_title">Script File Manager</string>
+    <string name="chart_file_manager_title">Chart File Manager</string>
+    <string name="file_manager_title">File Manager</string>
+    <string name="script_editor_title">Script Editor</string>
+    <string name="script_file_saved">File saved</string>
+    <string name="file_folder_icon">File or folder icon</string>
+    <string name="file_manager_menu_new">New</string>
+    <string name="file_manager_menu_open">Open</string>
+    <string name="file_manager_menu_save">Save</string>
+    <string name="file_manager_menu_cut">Cut</string>
+    <string name="file_manager_menu_copy">Copy</string>
+    <string name="file_manager_menu_paste">Paste</string>
+    <string name="file_manager_menu_rename">Rename</string>
+    <string name="file_manager_menu_delete">Delete</string>
+    <string name="cannot">Can not</string>
+    <string name="file_copy_action">copy file</string>
+    <string name="file_move_action">move file</string>
+    <string name="file_rename_action">rename file</string>
+    <string name="to_path">to</string>
+    <string name="file_manager_file_io_error">File error!</string>
+    <string name="file_manager_source_file_does_not_exist">does not exist as a source file!</string>
+    <string name="file_manager_invalid_operation">Invalid file operation!</string>
+	<string name="file_manager_to_cover_existing_file">Going to replace an existing file (or merge to an existing folder), continue?</string>
+        
+    <string name="loading_chart">Loading chart ...</string>
+    <string name="file_manager_invalid_path">Invalid path!</string>
+    <string name="example_scripts_not_loaded">Example folder is only for examples. Any change in this folder and its sub-folders will not be applied!</string>
+    <string name="file_manager_copy_examples_confirm">No file found. Do you want to copy example file(s) into the folder?</string>
+        
+    <string name="file_manager_new_file_type_script_file">New script file</string>
+    <string name="file_manager_new_file_type_folder">New folder</string>
+    <string name="file_manager_new_file_prompt">Please enter the name :</string>
+    <string name="file_manager_new_file_title">Create new item</string>
+    <string name="file_manager_new_file_failed_msg">Cannot create the new item!</string>
+        
+    <string name="file_manager_file_rename_title">Rename</string>
+    <string name="file_manager_file_new_name_prompt">Please enter the new name :</string>
+	<string name="file_manager_file_rename_failed_msg">Cannot rename the item!</string>
+	<string name="file_manager_file_cannot_be_renamed_to_the_same_file">Renamed file has the same name as original file!</string>
+	<string name="file_manager_file_cannot_be_copied_moved_or_renamed_to_folder_or_vice_versa">File cannot be copied, moved or renamed to folder or vice-versa!</string>
+	<string name="file_manager_folder_cannot_be_copied_moved_or_renamed_to_its_child">Folder cannot be copied, moved or renamed to its child!</string>
+	<string name="file_manager_renamed_file_name_cannot_be_empty">Renamed file name cannot be empty!</string>
+	
+    <string name="file_manager_file_delete_title">Delete</string>
+	<string name="file_manager_file_delete_confirm">Are you sure to delete </string>
+	<string name="file_manager_file_delete_failed_msg">Cannot delete the item!</string>
+	
+	<string name="file_editor_file_open_fail">Cannot open file!</string>
+	<string name="file_not_found">File cannot be found!</string>
+	<string name="file_editor_file_io_error">IO error!</string>
+	<string name="file_editor_file_changed">File has been changed, save it?</string>
+	
+	<string name="file_editor_new_file">New file</string>
+	<string name="file_editor_file">File</string>
+	<string name="file_editor_inside">in</string>
+	
+	<string name="file_editor_menu_new">New</string>
+	<string name="file_editor_menu_open">Open</string>
+	<string name="file_editor_menu_save">Save</string>
+	<string name="file_editor_menu_save_as">Save as</string>
+	<string name="file_editor_menu_goto_line">Go to line</string>
+	<string name="file_editor_goto_line">Go to line</string>
+
+	<string name="choose_inputpad_2_config">Please choose program to config its inputpad:</string>
+	<string name="choose_sc_inputpad_config">Config smart calculator inputpad</string>
+	<string name="choose_cl_inputpad_config">Config command line inputpad</string>
+	<string name="choose_se_inputpad_config">Config script editor inputpad</string>
+	<string name="choose_integ_plot_inputpad_config">Config other inputpad(s)</string>
+	<string name="choose_graph_plotter">Please choose graph type:</string>
+	<string name="choose_2d_graph_plotter">Plot 2D chart</string>
+	<string name="choose_polar_graph_plotter">Plot polar chart</string>
+	<string name="choose_3d_graph_plotter">Plot 3D chart</string>
+	<string name="plot_2d_title">Plot 2D chart</string>
+	<string name="plot_polar_title">Plot polar chart</string>
+	<string name="plot_3d_title">Plot 3D chart</string>
+	<string name="graph_name_prompt">Chart name:</string>
+	<string name="graph_title_prompt">Chart title:</string>
+	<string name="graph_Xtitle_prompt">X title:</string>
+	<string name="graph_Ytitle_prompt">Y title:</string>
+	<string name="graph_Ztitle_prompt">Z title:</string>
+	<string name="graph_Rtitle_prompt">r title:</string>
+	<string name="graph_Angletitle_prompt">&#x03B8; title:</string>
+	<string name="graph_name_hint">Chart1</string>
+	<string name="graph_title_hint">A plot example</string>
+	<string name="graph_Xtitle_hint">X value</string>
+	<string name="graph_Ytitle_hint">Y value</string>
+	<string name="graph_Ztitle_hint">Z value</string>
+	<string name="graph_Rtitle_hint">R</string>
+	<string name="graph_Angletitle_hint">Angle</string>
+	<string name="graph_show_grid_chkbox_prompt">Show\ngrid</string>
+	<string name="add_curve_btn_text">Add curve</string>
+	<string name="clear_all_btn_text">Clear</string>
+	<string name="generate_chart_btn_text">View</string>
+	<string name="curve_title_prompt">Title:</string>
+	<string name="surface_is_grid_prompt">Is grid?</string>
+	<string name="curve_color_prompt">Color:</string>
+	<string name="max_color_prompt">Color:</string>
+	<string name="max_color_value_prompt">Max value:</string>
+	<string name="max_value_colors_prompt">Max value and colors</string>
+	<string name="min_color_prompt">Color:</string>
+	<string name="min_color_value_prompt">Min value:</string>
+	<string name="min_value_colors_prompt">Min value and colors</string>
+	<string name="curve_point_style_prompt">Point style:</string>
+	<string name="curve_show_line_chkbox_prompt">Show line</string>
+	<string name="t_from_prompt">t: from</string>
+	<string name="t_to_prompt">to</string>
+	<string name="t_step_prompt">step</string>
+	<string name="u_from_prompt">u: from</string>
+	<string name="u_to_prompt">to</string>
+	<string name="u_step_prompt">step</string>
+	<string name="v_from_prompt">v: from</string>
+	<string name="v_to_prompt">to</string>
+	<string name="v_step_prompt">step</string>
+	<string name="curve_title_hint">curve1</string>
+	<string name="curve_title_hint1">curve2</string>
+   	<string name="curve_title_hint2">curve3</string>
+   	<string name="t_from_hint">-50</string>
+	<string name="t_to_hint">50</string>
+	<string name="t_step_hint">0.1</string>
+	<string name="auto_value">Auto</string>
+	<string name="x_t_hint">sin(2*t+2)</string>
+	<string name="y_t_hint">cos(3*t-5)</string>
+	<string name="delete_curve_btn_text">Delete curve</string>
+	<string name="clear_curve_btn_text">Clear curve definition</string>
+    <string-array name="curve_point_style_array">
+        <item>Circle</item>
+        <item>Triangle</item>
+        <item>Square</item>
+        <item>Diamond</item>
+        <item>X</item>
+        <item>Point</item>
+    </string-array>
+	<string name="circle_point_style">Circle</string>
+	<string name="triangle_point_style">Triangle</string>
+	<string name="square_point_style">Square</string>
+	<string name="diamond_point_style">Diamond</string>
+	<string name="x_point_style">X</string>
+	<string name="point_point_style">Point</string>
+   	<string-array name="curve_color_array">
+        <item>Black</item>
+        <item>Blue</item>
+        <item>Cyan</item>
+        <item>DKGray</item>
+        <item>Gray</item>
+        <item>Green</item>
+        <item>LTGray</item>
+        <item>Magenta</item>
+        <item>Red</item>
+        <item>Transparent</item>
+        <item>White</item>
+        <item>Yellow</item>
+    </string-array>
+	<string name="black_color">Black</string>
+	<string name="blue_color">Blue</string>
+	<string name="cyan_color">Cyan</string>
+	<string name="dkgray_color">DKGray</string>
+	<string name="gray_color">Gray</string>
+	<string name="green_color">Green</string>
+	<string name="ltgray_color">LTGray</string>
+	<string name="magenta_color">Magenta</string>
+	<string name="red_color">Red</string>
+	<string name="transparent_color">Transparent</string>
+	<string name="white_color">White</string>
+	<string name="yellow_color">Yellow</string>
+	<string name="graph_settings_wrong">Chart settings have problem so that it cannot be plotted!</string>
+	<string name="no_graph_input">No graph input!</string>
+	<string name="graph_file_cannot_be_read">Error occurred when read chart file!</string>
+	<string name="graph_file_cannot_be_saved">Error occurred when save chart file!</string>
+	<string name="too_many_points_in_graph">More than 1000 points will be plotted. Chart processing might be slow in some low performance devices. If device memory is limited, it may be used up by the points. Are you sure to continue?</string>
+	<string name="please_wait">Please wait</string>
+	<string name="calculating_chart_data">Calculating data to plot chart...</string>
+	<string name="calculating_chart_data_cancelable">Calculating data to plot chart now. User can press BACK key to cancel.</string>
+	<string name="not_show_axis_and_title">Not show axis and title</string>
+	<string name="integrate_title">Integrate</string>
+	<string name="integrated_expr_prompt">Integrated\nExpression:</string>
+	<string name="you_want_to_calculate">You want to calculate:</string>
+	<string-array name="multiple_integral_array">
+	    <item>Antiderivative</item>
+	    <item>Single integral</item>
+        <item>Double integral</item>
+        <item>Triple integral</item>
+    </string-array>
+   	<string name="x_variable_name">First variable name:</string>
+   	<string name="y_variable_name">Second variable name:</string>
+   	<string name="z_variable_name">Third variable name:</string>
+   	<string name="variable_from">from</string>
+   	<string name="variable_to">to</string>
+	<string name="variable_number_of_steps">number\nof steps</string>
+	<string name="default_number_of_steps_integ"></string>
+	<string name="integ_settings_wrong">Integrate inputs have problem so that it cannot be integrated!</string>
+	<string name="calculating_integrating_result">Calculating integrating result...</string>
+	<string name="integrating_result">Result</string>
+	<string name="integrate_note">Note: If set number of steps to 0, adaptive Gauss—Kronrod method is selected to calculate the integral. It is much more accurate for high frequency functions. However, in some extreme cases, this algorithm could be very slow (5 to 10 minutes) even for first order integral. So it is not recommended for higher order integral calculations.</string>
+		
+	<string name="cannot_create_app_folder">The application folder cannot be created. Users will not be able to save their scripts or view charts!</string>
+	<string name="cannot_create_script_folder">The script folder cannot be created. Users will not be able to save their scripts!</string>
+	<string name="cannot_create_chart_folder">The chart folder cannot be created. Users will not be able to view charts!</string>
+	<string name="function_name">Function name</string>
+	<string name="function_info">Function info</string>
+	<string name="all_functions">all functions</string>
+	<string name="builtin_functions">built-in functions</string>
+	<string name="predefined_functions">predefined functions</string>
+	<string name="integer_operation_functions">integer operation functions</string>
+	<string name="logic_functions">logic functions</string>
+	<string name="statistic_and_stochastic_functions">statistic and stochastic functions</string>
+	<string name="trigononmetric_functions">trigononmetric functions</string>
+	<string name="exponential_and_logarithmic_functions">exponential and logrithmic functions</string>
+	<string name="complex_number_functions">complex number functions</string>
+	<string name="system_functions">system functions</string>
+	<string name="array_or_matrix_functions">array or matrix functions</string>
+	<string name="graphic_functions">graphic functions</string>
+	<string name="expression_and_integration_functions">expression_and_integration functions</string>
+	<string name="string_functions">string functions</string>
+	<string name="hyperbolic_trigononmetric_functions">hyperbolic_trigononmetric functions</string>
+	<string name="sorting_functions">sorting functions</string>
+	<string name="others_functions">others functions</string>
+
+	<string name="exception">Exception!</string>
+	<string name="back_to_normal">Back to normal.</string>
+	<string name="unmounted_external_storage">External storage device is unmounted or removed!</string>
+	<string name="mounting_external_storage">Mounting external storage. May lead to calculation interruption.</string>
+	<string name="mounted_external_storage">External storage device has been mounted.</string>
+	
+	<string name="initializing_application">initializing application ...</string>
+	<string name="copying_files">Copying example program files and Scientific Calculator Plus for Windows / MacOSX / Linux to SD card ...</string>
+	<string name="copying_scpp4Java">Copying Java based Scientific Calculator Plus for Windows / MacOSX / Linux to SD card. Please do not switch Scientific Calculator to background. Otherwise, copying may not be successful.</string>
+	<string name="loading_pre_defined_libs">Loading pre-defined libraries ...</string>
+	<string name="loading_user_defined_libs">Loading user_defined libraries ...</string>
+	<string name="error_in_copying_example_files">Error when copying files to SD card. User may not be able to read example programs or cannot create program or chart files in the mobile device!</string>
+	<string name="error_in_copying_scpp4Java_files">Error when copying files to SD card. User may not be able to use Scientific Calculator Plus for Windows / MacOSX / Linux!</string>
+	<string name="you_can_still_copy_example_java">You can still copy examples or use Scientific Calculator Plus for Windows / MacOSX / Linux by clicking the Copy examples or Run in PC or MAC icon in the main panel!</string>
+	<string name="copying_scpp4Java_step1">Java based Scientific Calculator Plus for Windows / MacOSX / Linux will be copied to SD card. If you have done this before since last install or update of this app, you can skip this step.</string>
+	<string name="copying_scpp4Java_step2">Java based Scientific Calculator Plus for Windows / MacOSX / Linux has been copied to SmartMath folder in SD card. You can now use a USB cable to connect this mobile device to a computer which installs JAVA (v. 1.6+), enable USB file copying and transferring and run JMathCmd.jar in SmartMath folder in the removable USB disk from the computer. If the computer does not have JAVA (v. 1.6+) installed, you can go to www.java.com to download it.</string>
+	<string name="copy_examples_step1">Example programs will be copied to your SmartMath/scripts/examples folder and example chart(s) will be copied to your SmartMath/charts folder in SD card. If you have already done so since last installation or upgrade, you need not do it again.</string>
+	<string name="copy_examples_step2">Example programs and chart(s) have been copied in your SD card. You can open file manager and go to the example folders to read them.</string>
+	<string name="select_script_examples_to_read">Read example scripts</string>
+	<string name="select_chart_examples_to_read">View example charts</string>
+	<string name="see_what_has_been_copied">Go to examples</string>
+
+    <string name="smartcalc_prog_name">Smart Calculator</string>
+	<string name="calc_prog_name">Function Calculator</string>
+	<string name="inputpadcfg_prog_name">Inputpad config</string>
+	<string name="cmdline_prog_name">Command line</string>
+	<string name="graph_prog_name">Chart plotter</string>
+	<string name="integr_prog_name">Integration</string>
+	<string name="scriptmngr_prog_name">Script manager</string>
+	<string name="scripteditor_prog_name">Script editor</string>
+	<string name="chartmngr_prog_name">Chart manager</string>
+	<string name="settings_prog_name">Settings</string>
+	<string name="runonpc_prog_name">Run in PC or MAC</string>
+	<string name="cpexample_prog_name">Copy examples</string>
+	<string name="cpexample_name">Copy examples</string>
+	<string name="help_prog_name">Help</string>
+	
+	<string name="inputpad_config">Setup InputPad</string>
+	<string name="inputpad_name_prompt">Pad Name:</string>
+	<string name="inputpad_long_name_prompt">Long Name:</string>
+	<string name="inputpad_short_name_prompt">Short Name:</string>
+	<string name="inputpad_wrapped_name_1_2_prompt">Wrapped name (2 Lines):</string>
+	<string name="key_height_prompt">Key height:</string>
+	<string name="times_standard_height"> * standard</string>
+	<string name="inputpad_number_of_rows_prompt">Rows:</string>
+	<string name="inputpad_number_of_columns_prompt">Columns:</string>
+	<string name="inputpad_visibility_prompt">Visibility:</string>
+	<string name="inputpad_visible">Visible</string>
+	<string name="no_inputpad_defined">No inputpad defined</string>
+	<string name="inputkey_config">Setup InputKey</string>
+	<string name="inputkey_shown_prompt">Shown Name:</string>
+	<string name="inputkey_shown_color_prompt">Text Color:</string>
+	<string name="inputkey_input_string_prompt">Input Text:</string>
+	<string name="inputkey_input_match_shown">Input Text Same as Shown Name</string>
+	<string name="cursorplace_front_prompt">Cursor Place (number of characters counted backwards):</string>
+	<string name="inputkey_hint_4_context_menu">Hint: if you want to cut, copy, paste, delete or insert an input key button, long click it.</string>
+	<string name="menu_add">Add</string>
+	<string name="menu_addleft">Add left</string>
+	<string name="menu_addright">Add right</string>
+	<string name="menu_delete">Delete</string>
+	<string name="menu_save">Save</string>
+	<string name="what_do_you_want">What do you want?</string>
+	<string name="cut_key">Cut</string> 
+	<string name="copy_key">Copy</string> 
+	<string name="paste_before_key">Paste Before</string>   
+	<string name="paste_on_key">Paste On</string> 
+	<string name="paste_after_key">Paste After</string> 
+	<string name="create_before_key">Create Before</string>   
+	<string name="create_after_key">Create After</string>  
+	<string name="delete_key">Delete</string> 
+	<string name="edit_key">Edit</string> 
+	<string name="error_two_inputpads_with_same_name">Tow input pads share same name</string>
+	<string name="error_cannot_save_to_file">Cannot save to file!</string>
+	<string name="how_many_inputkeys_to_add">How many keys to add?</string>
+	<string name="inputpad_cfg_changed">Inputpad config has been changed, save it?</string>
+		
+	<string name="calculating_result">Calculating ...</string>
+	<string name="calculating_result_cancelable">Calculating now. User can press BACK key to cancel.</string>
+	<string name="loading_libs_history">Loading libs and history...</string>
+	<string name="loading_libs">Loading libs ...</string>
+	<string name="loading_history">Loading history ...</string>
+		
+   	<string name="calculator_assistant">Calculator Assistant</string>
+   	<string name="read_constants">Constants</string>
+   	<string name="convert_units">Units</string>
+	<string name="digit_after_decimal_point_prompt">Number of significant digits :</string>
+	<string name="insert_constant_value_text">Insert value</string>
+	<string name="select_unit_type">Select unit type :</string>
+	<string name="use_sci_notation">Use scientific notation</string>
+	<string name="is_equal_to_prompt">is equal to</string>
+	<string name="underlying_function_is">Underlying function is</string>
+	<string name="invalid_input">Invalid input value or unit!</string>
+	<string name="cannot_convert_unit">Cannot convert unit!</string>
+	<string name="insert_converted_value_text">Insert value</string>
+	<string name="insert_function_text">Insert function</string>
+	<string name="pi_comment">Ratio of circumference of a circle to its diameter</string>
+	<string name="e_comment">Natural logarithm</string>
+	<string name="light_speed_in_vacuum_comment">Light speed in vacuum</string>
+	<string name="gravitational_constant_comment">Gravitational constant</string>
+	<string name="planck_constant_comment">Planck constant</string>
+	<string name="magnetic_constant_comment">Magnetic constant</string>
+	<string name="electric_constant_comment">Electric constant</string>
+	<string name="elementary_charge_constant_comment">Elementary charge</string>
+	<string name="avogadro_constant_comment">Avogadro constant</string>
+	<string name="faraday_constant_comment">Faraday constant</string>
+	<string name="molar_gas_constant_comment">Molar gas constant</string>
+	<string name="boltzman_constant_comment">Boltzman constant</string>
+	<string name="standard_gravity_comment">Standard gravity</string>
+							
+	<string-array name="unit_type_array">
+        <item>Length</item>
+        <item>Area</item>
+        <item>Volume</item>
+        <item>Mass</item>
+        <item>Speed</item>
+        <item>Time</item>
+        <item>Force</item>
+        <item>Pressure</item>
+        <item>Energy</item>
+        <item>Power</item>
+        <item>Temperature</item>
+    </string-array>
+    <string name="length_unit_type">Length</string>
+    <string name="area_unit_type">Area</string>
+    <string name="volume_unit_type">Volume</string>
+    <string name="mass_unit_type">Mass</string>
+    <string name="speed_unit_type">Speed</string>
+    <string name="time_unit_type">Time</string>
+    <string name="force_unit_type">Force</string>
+    <string name="pressure_unit_type">Pressure</string>
+    <string name="energy_unit_type">Energy</string>
+    <string name="power_unit_type">Power</string>
+    <string name="temperature_unit_type">Temperature</string>
+    <string-array name="length_unit_type_array">
+        <item>Microns</item>
+        <item>Millimetres</item>
+        <item>Centimetres</item>
+        <item>Metres</item>
+        <item>Kilometres</item>
+        <item>Inches</item>
+        <item>Feet</item>
+        <item>Yards</item>
+        <item>Miles</item>
+        <item>Nautical miles</item>
+        <item>Astronomical units</item>
+        <item>Light years</item>
+        <item>Parsecs</item>
+    </string-array>
+    <string name="micron_unit">Microns</string>
+    <string name="millimetre_unit">Millimetres</string>
+    <string name="centimetre_unit">Centimetres</string>
+    <string name="metre_unit">Metres</string>
+    <string name="kilometre_unit">Kilometres</string>
+    <string name="inch_unit">Inches</string>
+    <string name="foot_unit">Feet</string>
+    <string name="yard_unit">Yards</string>
+    <string name="mile_unit">Miles</string>
+    <string name="nautical_mile_unit">Nautical miles</string>
+    <string name="astronomical_unit_unit">Astronomical units</string>
+    <string name="light_year_unit">Light years</string>
+    <string name="parsec_unit">Parsecs</string>
+    <string-array name="area_unit_type_array">
+        <item>Square mms</item>
+        <item>Square cms</item>
+        <item>Square metres</item>
+        <item>Hectares</item>
+        <item>Square kms</item>
+        <item>Square inches</item>
+        <item>Square feet</item>
+        <item>Square Yards</item>
+        <item>Acres</item>
+        <item>Square miles</item>
+    </string-array>
+    <string name="mm2_unit">Square mms</string>
+    <string name="cm2_unit">Square cms</string>
+    <string name="metre2_unit">Square metres</string>
+    <string name="hectare_unit">Hectares</string>
+    <string name="km2_unit">Square kms</string>
+    <string name="inch2_unit">Square inches</string>
+    <string name="foot2_unit">Square feet</string>
+    <string name="yard2_unit">Square Yards</string>
+    <string name="acre_unit">Acres</string>
+    <string name="mile2_unit">Square miles</string>
+    <string-array name="volume_unit_type_array">
+        <item>Millilitres (cc)</item>
+        <item>Litres</item>
+        <item>Cubic metres</item>
+        <item>Cubic inches</item>
+        <item>Cubic feet</item>
+        <item>Cubic yards</item>
+        <item>Cubic kms</item>
+        <item>Fluid ounces (Imp)</item>
+        <item>Pints (Imp)</item>
+        <item>Gallons (Imp)</item>
+        <item>Fluid ounces (US)</item>
+        <item>Pints (US)</item>
+        <item>Gallons (US)</item>
+    </string-array>
+    <string name="ml_unit">Millilitres (cc)</string>
+    <string name="litre_unit">Litres</string>
+    <string name="metre3_unit">Cubic metres</string>
+    <string name="inch3_unit">Cubic inches</string>
+    <string name="foot3_unit">Cubic feet</string>
+    <string name="yard3_unit">Cubic yards</string>
+    <string name="km3_unit">Cubic kms</string>
+    <string name="founce_imp_unit">Fluid ounces (Imp)</string>
+    <string name="pint_imp_unit">Pints (Imp)</string>
+    <string name="gallon_imp_unit">Gallons (Imp)</string>
+    <string name="founce_us_unit">Fluid ounces (US)</string>
+    <string name="pint_us_unit">Pints (US)</string>
+    <string name="gallon_us_unit">Gallons (US)</string>
+    <string-array name="mass_unit_type_array">
+        <item>Micrograms</item>
+        <item>Milligrams</item>
+        <item>Grams</item>
+        <item>Kilograms</item>
+        <item>Tonnes</item>
+        <item>Ounces</item>
+        <item>Pounds</item>
+        <item>Market catties</item>
+        <item>Catties (HK)</item>
+        <item>Catties (TW)</item>
+    </string-array>
+    <string name="microgram_unit">Micrograms</string>
+    <string name="milligram_unit">Milligrams</string>
+    <string name="gram_unit">Grams</string>
+    <string name="kg_unit">Kilograms</string>
+    <string name="ton_unit">Tonnes</string>
+    <string name="ounce_unit">Ounces</string>
+    <string name="lb_unit">Pounds</string>
+    <string name="market_catty_unit">Market catties</string>
+    <string name="hk_catty_unit">Catties (HK)</string>
+    <string name="tw_catty_unit">Catties (TW)</string>
+    <string-array name="speed_unit_type_array">
+        <item>Metres per second</item>
+        <item>Kms per hour</item>
+        <item>Feet per second</item>
+        <item>Miles per hour</item>
+        <item>Knots</item>
+    </string-array>
+    <string name="metre_s_unit">Metres per second</string>
+    <string name="km_h_unit">Kms per hour</string>
+    <string name="foot_s_unit">Feet per second</string>
+    <string name="mile_h_unit">Miles per hour</string>
+    <string name="knot_unit">Knots</string>
+    <string-array name="time_unit_type_array">
+        <item>Nanoseconds</item>
+        <item>Microseconds</item>
+        <item>Milliseconds</item>
+        <item>Seconds</item>
+        <item>Minutes</item>
+        <item>Hours</item>
+        <item>Days</item>
+        <item>Weeks</item>
+        <item>Years</item>
+    </string-array>
+    <string name="nanosecond_unit">Nanoseconds</string>
+    <string name="microsecond_unit">Microseconds</string>
+    <string name="millisecond_unit">Milliseconds</string>
+    <string name="second_unit">Seconds</string>
+    <string name="minute_unit">Minutes</string>
+    <string name="hour_unit">Hours</string>
+    <string name="day_unit">Days</string>
+    <string name="week_unit">Weeks</string>
+    <string name="year_unit">Years</string>
+    <string-array name="force_unit_type_array">
+        <item>Newtons</item>
+        <item>Kilogram-force</item>
+        <item>Pound-force</item>
+    </string-array>
+    <string name="newton_unit">Newtons</string>
+    <string name="kgf_unit">Kilogram-force</string>
+    <string name="lbf_unit">Pound-force</string>
+    <string-array name="pressure_unit_type_array">
+        <item>Pascal</item>
+        <item>Hectopascal</item>
+        <item>Kilopascal</item>
+        <item>Megapascal</item>
+        <item>Atmosphere</item>
+        <item>Pounds per square inch</item>
+        <item>Torrs</item>
+    </string-array>
+    <string name="pascal_unit">Pascal</string>
+    <string name="hectopascal_unit">Hectopascal</string>
+    <string name="kilopascal_unit">Kilopascal</string>
+    <string name="megapascal_unit">Megapascal</string>
+    <string name="atmosphere">Atmosphere</string>
+    <string name="pound_square_inche_unit">Pounds per square inch</string>
+    <string name="torr_unit">Torrs</string>
+    <string-array name="energy_unit_type_array">
+        <item>Joules</item>
+        <item>Kilojoules</item>
+        <item>Megajoules</item>
+        <item>Kilowatt-Hours</item>
+        <item>Calories</item>
+        <item>Kilocalories</item>
+        <item>British Thermal Units</item>
+    </string-array>
+    <string name="joule_unit">Joules</string>
+    <string name="kilojoule_unit">Kilojoules</string>
+    <string name="megajoule_unit">Megajoules</string>
+    <string name="kwh_unit">Kilowatt-Hours</string>
+    <string name="calorie_unit">Calories</string>
+    <string name="kilocalorie_unit">Kilocalories</string>
+    <string name="btu_unit">British Thermal Units</string>
+    <string-array name="power_unit_type_array">
+        <item>Watts</item>
+        <item>Kilowatts</item>
+        <item>Megawatts</item>
+        <item>Calories per second</item>
+        <item>BTUs per hour</item>
+        <item>Horsepower</item>
+    </string-array>
+    <string name="watt_unit">Watts</string>
+    <string name="kilowatt_unit">Kilowatts</string>
+    <string name="megawatt_unit">Megawatts</string>
+    <string name="calorie_second_unit">Calories per second</string>
+    <string name="btu_hour_unit">BTUs per hour</string>
+    <string name="horsepower_unit">Horsepower</string>
+    <string-array name="temperature_unit_type_array">
+        <item>Celsius</item>
+        <item>Fahrenheit</item>
+        <item>Kelvin</item>
+    </string-array>
+    <string name="celsius_unit">Celsius</string>
+    <string name="fahrenheit_unit">Fahrenheit</string>
+    <string name="kelvin_unit">Kelvin</string>
+        
+    <string name="merge_inputpad_cfg">Merge inputpad config</string>
+    <string name="merging_inputpad_cfg">Merging inputpad config files ...</string>
+    <string name="upgrading_inputpad_cfg">Upgrading inputpad config files ...</string>
+    <string name="confirm_to_merge_inputpad_cfg">Do you want to merge the latest inputpad config to the one you defined? If you want, please ensure that your Android device is DISCONNECTED to a computer.</string>
+    <string name="update_sdcard_files">Update SD-card files</string>
+    <string name="confirm_to_update_sdcard_files">Do you want to update files in SD-card (including Java based Scientific Calculator Pus and examples) ? If you want, please ensure that your Android device is DISCONNECTED to a computer.</string>
+    <string name="error_in_upgrading_input_keypad_config">Error in upgrading inputpad configs!</string>
+    <string name="error_in_merging_input_keypad_config">Error in merging inputpad configs!</string>
+    <string name="title_activity_activity_smart_calc">Smart Calculator</string>
+    <string name="error_in_help_requirement">Invalid help requirement</string>
+    <string name="invalid_expr_type_to_solve">Invalid expression type to solve</string>
+    <string name="did_you_use_assign">Did you use == (equal) instead of = (assign) for equation?</string>
+    <string name="invalid_expr_to_solve">Invalid expression(s) to solve</string>
+    <string name="expr_cannot_solve">Expression(s) cannot be solved</string>
+    <string name="line">Line</string>
+    <string name="config_3D_title">Config 3D chart</string>
+    <string name="config_2D_title">Config 2D chart</string>
+    <string name="config_polar_title">Config polar chart</string>
+    <string name="polar_chart_r_range_note">Note: r must be from 0 to a positive value.</string>
+    <string name="polar_chart_angle_range_note">Note: angle is based on</string>
+    <string name="degree">degree</string>
+    <string name="radius">radius</string>
+    <string name="zoom_box_prompt">Zoom (0.01 ~ 100)</string>
+    <string name="zoom_whole_chart_prompt">Whole chart</string>
+    <string name="zoom_x_prompt">x</string>
+    <string name="zoom_y_prompt">y</string>
+    <string name="zoom_z_prompt">z</string>
+    <string name="shift_box_prompt">Shift</string>
+    <string name="shift_x_prompt">x</string>
+    <string name="shift_y_prompt">y</string>
+    <string name="shift_z_prompt">z</string>
+    <string name="rotate_box_prompt">Rotate (degree)</string>
+    <string name="rotate_x_prompt">vertical</string>
+    <string name="rotate_y_prompt">horizontal</string>
+    <string name="rotate_z_prompt">anti-cw</string>
+    <string name="apply">Apply</string>
+    
+	<string name="help_statement_cannot_be_plotted">Help statement cannot be plotted!</string>
+	<string name="no_variable_to_plot">No variable to plot!</string>
+	<string name="invalid_expr_to_plot">Invalid expression to plot!</string>
+	<string name="cannot_assign_value_to_anything_except_variable_use_equal_instead">Cannot assign value to anything except variable! Please use equal instead.</string>
+	<string name="invalid_input_to_plot">Invalid input to plot!</string>
+	<string name="cannot_plot_more_than_3d_chart">Cannot plot more than 3 dimentional chart!</string>
+	<string name="cannot_plot_more_than_4_curves">Cannot plot more than 4 curves!</string>
+	<string name="cannot_plot_too_many_curves">Cannot plot too many curves!</string>
+	<string name="chart_name_default">SysGen</string>
+	<string name="chart_title_default">Smart Chart</string>
+	<string name="curve_title_default">Curve</string>
+	<string name="cannot_plot">Cannot plot</string>
+	<string name="graph_is_plotted">Graph is plotted!</string>
+	<string name="graph_is_plotted_but_graph_file_cannot_be_saved">Graph is plotted but graph file cannot be saved!</string>
+	<string name="from">from</string>
+	<string name="to">to</string>
+	<string name="number_of_steps">number of steps</string>
+	<string name="detect_singular_points">Detect singular points</string>
+	<string name="press_back_again_to_exit">Press back key again to exit!</string>
+	
+	<string name="fail_to_take_picture">Fail to take picture!</string>
+	<string name="copying_data">Copying data ...</string>
+	<string name="error_in_copying_data_files">Error occurs when copying data files!</string>
+	<string name="recognizing_math_expressions">Recognizing mathematic expressions ...</string>
+	<string name="recognizing_math_expressions_press_back_2_cancel">Recognizing mathematic expressions. User can press BACK key to cancel.</string>
+	<string name="expression_might_not_valid">The expression(s) selected to recognize may not be valid. Please reselect to recognize.</string>
+	<string name="recognizing_error">Error occurs when recognizing expressions. Please try again.</string>
+	<string name="cannot_find_valid_expression">Cannot find a valid expression. Please try again.</string>
+	<string name="preprocessing_image">Pre-processing image ...</string>
+	<string name="please_confirm_recognized_result">Please confirm the following recognized expressions. If you are not satisfactory with the recognized result, please click&amp;nbsp;</string>
+	<string name="please_confirm_recognized_result_and_calculation_result">Please confirm the following results, if not satisfactory click&amp;nbsp;</string>
+	<string name="here">here</string>
+	<string name="stop_charater">.</string>
+	<string name="invalid_expr_to_analyse">Invalid expression to analyze.</string>
+	<string name="please_modify_the_input_expression">Please modify the input expression in the input box which is :</string>
+	<string name="menu_plotcomplicatedgraph">Plot complicated graph</string>
+	<string name="rotate_90_degrees">Rotate 90 degrees</string>
+	<string name="rotate_180_degrees">Rotate 180 degrees</string>
+	<string name="rotate_270_degrees">Rotate 270 degrees</string>
+	<string name="rotate_any_degrees">Rotate arbitrary degrees</string>
+	<string name="enter_rotate_degrees_prompt">Number of degrees to rotate:</string>
+	<string name="rotate_clockwise">Rotate clockwise</string>
+	<string name="rotate_anti_clockwise">Rotate anti-clockwise</string>
+	<string name="insufficient_memory_to_recognize_complicated_expr">Expression(s) are too complicated and device memory is not enough to process.</string>
+	<string name="error_in_save_img">Fail to save photo image.</string>
+	<string name="loading_img_proc_libs">Loading image processing libs...</string>
+	<string name="setting_flash_mode_prompt">Set flash mode when take photo</string>
+	<string name="clear_input_txt_before_take_photo_prompt">Clear input text before taking photo</string>
+	<string name="on">On</string>
+	<string name="off">Off</string>
+	<string name="touch_screen_to_take_photo">Please tap screen to take photo.</string>
+	<string name="select_expr_to_recognize">Please select math expression to recognize.</string>
+	<string name="setting_photo_taken_from_prompt">Set the source where photo will be taken from</string>
+	<string name="screen">Computer screen</string>
+	<string name="white_paper">White paper</string>
+    <string name="no_back_facing_camera">Error! No back-facing camera or back-facing camera does not have required features!</string>
+    <string name="fail_to_initialize_camera">Fail to initialize camera!</string>
+    <string name="camera_preview_clicked">Camera preview clicked!</string>
+    <string name="camera_preview_clicked_and_autofocused">Camera preview clicked and autofocused!</string>
+    <string name="camera_preview_fail_to_autofocus">Camera preview fails to autofocus!</string>
+    <string name="start">Start</string>
+    <string name="turn_on_flash_prompt">Torch</string>
+    <string name="preview_start_to_calculate">Calc</string>
+    <string name="preview_start_to_plot">Plot</string>
+    <string name="preview_start_to_recognize">Read</string>
+    <string name="preview_edit_image">Edit</string>
+    <string name="preview_verify_correct_image">Verify</string>
+    <string name="reset_image_size">Reset image size</string>
+    <string name="width_of_image">Image width</string>
+    <string name="height_of_image">Image height</string>
+    <string name="image_is_too_large">Image is too large!</string>
+    <string name="image_size_cannot_be_zero">Image size cannot be zero!</string>
+    <string name="unsatisfactory_recog">Unsatisfactory recognition result!</string>
+    <string name="please_type_what_you_want_to_tell_us">Please type what you want to tell us:</string>
+    <string name="choose_an_email_provider">Please choose an email provider</string>
+    <string name="please_do_not_change_the_follows">Please do not change the follows:</string>
+    <string name="recognized_result">Recognition result</string>
+    <string name="input_text">Input text</string>
+    <string name="output_text">Output text</string>
+    <string name="handwriting_recog_notice">Now you are entering offline handwriting math recognition mode. Please note that this functionality is still under development. In this mode only numbers, basic operators and limited number of functions are supported. You also need to write clearly and avoid any disconnects or joint strokes.</string>
+    <string name="print_recog_notice">Now you are entering offline printed math recognition mode. More functions, letters and operators can be recognized in this mode. However, note that we assume user only selects recognition range, connects broken strokes or disconnects joint strokes here. Please do not hand-write expression(s) to recognize.</string>
+    <string name="dont_show_it_next_time">Do not show it next time</string>
+    <string name="photo_taken_tutorial">Tutorial how to recognize photo</string>
+	<string name="calculating_result_after_recognition">Expression(s) have been recognized and I am now calculating results. User can cancel the calculation by tapping "BACK" key and modify input.</string>
+	<string name="calculating_chart_data_after_recognition">Expression(s) have been recognized and I am now calculating values to draw chart. User may cancel the calculation by tapping "BACK" key and modify input.</string>
+	<string name="calculating_result_after_recognition2">Expression(s) have been recognized and I am now calculating results. This may take a while for integration or is very complicated expression(s). However, if calculation still takes long time in spite of simple expression, it could be caused by incorrect recognition result. In this case user may cancel the calculation by tapping "BACK" key and modify input.</string>
+	<string name="calculating_chart_data_after_recognition2">Expression(s) have been recognized and I am now calculating values to draw chart. This may take a while if expression is complicated or several expressions to plot. However, if calculation still takes long time in spite of one simple expression, it could be caused by incorrect recognition result. In this case user may cancel the calculation by tapping "BACK" key and modify input.</string>
+	<string name="ok_i_have_known">OK, I have known</string>
+	<string name="never_show_it_again">Never show this again</string>
+	<string name="what_you_need_to_know_before_start_to_use">What you need to know before start to use ...</string>
+	<string name="no_valid_expr_recognized">No valid expression recognized!</string>
+	<string name="recognition_interrupted">Recognition has been interrupted!</string>
+	
+	<string name="baidu_ad_words_China">中 国 </string>
+</resources>

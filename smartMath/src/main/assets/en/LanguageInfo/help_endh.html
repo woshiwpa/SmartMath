@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>Scientific Calculator Plus Help</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+</head>
+<body style="background-color:white;">
+<h2 style="color:blue">MFP language help, endh statments:</h2>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+Help is the start of a help block in MFP language and endh is the end of help block.</p>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+Note that although the statements in a help block does not have any impact in the running of the function, it is useful to show user help information when user types "help function_name" or "help function_name(number_of_parameters_in_this_function)" if this help block is right above the function declaration. MFP is also able to feed different help information for different system language. For example, assume a help block is right above function abcd:</p>
+<p style="font-family:verdana;color:black;">
+Help</p>
+<p style="font-family:verdana;color:black;">
+  This line will be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+  @language:</p>
+<p style="font-family:verdana;color:black;">
+  This line will be shown for default system language.</p>
+<p style="font-family:verdana;color:black;">
+  @end</p>
+<p style="font-family:verdana;color:black;">
+&nbsp;&nbsp;&nbsp;&nbsp;This line will also be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+  @language:simplified_chinese</p>
+<p style="font-family:verdana;color:black;">
+  这一行将在系统语言为中文时显示（This line will be shown when system language is simplified Chinese.）。</p>
+<p style="font-family:verdana;color:black;">
+  @end</p>
+<p style="font-family:verdana;color:black;">
+    This line is also a line for any system language.</p>
+<p style="font-family:verdana;color:black;">
+Endh</p>
+<p style="font-family:verdana;color:black;">
+Function abcd(x, y)</p>
+<p style="font-family:verdana;color:black;">
+Endf</p>
+<p style="font-family:verdana;color:black;">
+. So when user types "help abcd" or "help abcd(2)", he/she will see</p>
+<p style="font-family:verdana;color:black;">
+  This line will be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+  This line will be shown for default system language.</p>
+<p style="font-family:verdana;color:black;">
+&nbsp;&nbsp;&nbsp;&nbsp;This line will also be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+    This line is also a line for any system language.</p>
+<p style="font-family:verdana;color:black;">
+if system language is English which is also the default language. He/she will see</p>
+<p style="font-family:verdana;color:black;">
+  This line will be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+&nbsp;&nbsp;&nbsp;&nbsp;This line will also be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+    This line is also a line for any system language.</p>
+<p style="font-family:verdana;color:black;">
+if system language is Japansee which is not the default language. He/she will see</p>
+<p style="font-family:verdana;color:black;">
+  This line will be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+&nbsp;&nbsp;&nbsp;&nbsp;This line will also be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+  这一行将在系统语言为中文时显示（This line will be shown when system language is simplified Chinese.）。</p>
+<p style="font-family:verdana;color:black;">
+    This line is also a line for any system language.</p>
+<p style="font-family:verdana;color:black;">
+if system language is simplified Chinese which is not the default language. He/she will see</p>
+<p style="font-family:verdana;color:black;">
+  This line will be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+  This line will be shown for default system language.</p>
+<p style="font-family:verdana;color:black;">
+&nbsp;&nbsp;&nbsp;&nbsp;This line will also be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+  这一行将在系统语言为中文时显示（This line will be shown when system language is simplified Chinese.）。</p>
+<p style="font-family:verdana;color:black;">
+    This line is also a line for any system language.</p>
+<p style="font-family:verdana;color:black;">
+if system language is simplified Chinese which is also the default language.</p>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+If user simply wants to add comment for a line, "//" can be used. Like C++, words following "//" will be comments. "//" can start a new line or follow a statement.</p>
+</body>
+</html>

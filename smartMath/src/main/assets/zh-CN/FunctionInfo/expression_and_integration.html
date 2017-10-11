@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>可编程科学计算器帮助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">可编程科学计算器帮助：表达式和积分函数</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函数名</th>
+<th>函数帮助信息</th>
+</tr>
+<tr>
+<td><center>evaluate</center></td>
+<td><p>evaluate(1...) :</p>
+<p> evaluate(expr_string,var_string1,var_value1,var_string2,var_value2, ...) 返回当基于字符串的变量var_string1等于var_value1，var_string2等于var_value2，...时，基于字符串的表达式expr_string的值。注意变量var_string1，var_string2，...的值可以为任意类型。变量的数目可以为0，也就是说，evaluate("3+2")是合法的。</p>
+</td>
+</tr>
+<tr>
+<td><center>integrate</center></td>
+<td><p>integrate(2) :</p>
+<p> integrate(x,y)返回基于变量y的表达式x的不定积分，表达式x和变量y均为字符串。注意如果表达式x不存在不定积分，或者x过于复杂无法解出其不定积分，本函数将会抛出异常。</p>
+<p>integrate(4) :</p>
+<p> integrate(x,y,z,w)返回表达式x在变量y从z到w的积分值。表达式x和变量y均为字符串，z和w可以为实数，复数或字符串。注意本函数采用的积分算法是自适应Gauss-Kronrod积分法。</p>
+<p>integrate(5) :</p>
+<p> integrate(x,y,z,w,v)返回表达式x相对于变量y从w到z的积分。计算时每一步步长为(w-z)/v。表达式x和变量y均为字符串，z和w可以为实数，复数或字符串，v必须为正整数。注意如果v是0，则相当于执行integrate(x,y,z,w)。</p>
+</td>
+</tr>
+<tr>
+<td><center>lim</center></td>
+<td><p>lim(3) :</p>
+<p> lim(expr, var, dest_value)用于计算表达式expr在变量var趋近于dest_value时的值。expr和var必须为字符串，dest_value为表达式或者数值，可以基于字符串，也可以不基于字符串。比如，lim("1/x", "x", 0)或者lim("(x+2)/(x+3)","x","3+0")。注意这个函数还在开发中。</p>
+</td>
+</tr>
+<tr>
+<td><center>product_over</center></td>
+<td><p>product_over(3) :</p>
+<p> 函数product_over(x, y, z)计算基于字符串的表达式x中的变量取值从整数y逐步变化到整数z的值的乘积。y和z必须是字符串的形式，其中，y必须写成一个赋值表达式，比如"a=10"，这里，a是变量名。一个函数的例子为product_over("x+1", "x=1", "10")。</p>
+</td>
+</tr>
+<tr>
+<td><center>sum_over</center></td>
+<td><p>sum_over(3) :</p>
+<p> 函数sum_over(x, y, z)计算基于字符串的表达式x中的变量取值从整数y逐步变化到整数z的值的总合。y和z必须是字符串的形式，其中，y必须写成一个赋值表达式，比如"a=10"，这里，a是变量名。一个函数的例子为sum_over("x+1", "x=1", "10")。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

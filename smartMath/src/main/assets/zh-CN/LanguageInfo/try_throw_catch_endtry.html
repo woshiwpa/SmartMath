@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>可编程科学计算器帮助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+</head>
+<body style="background-color:white;">
+<h2 style="color:blue">MFP编程语言try，throw，catch，endtry语句：</h2>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+Try语句用于开始一个Try程序块。Try语句没有任何参数。在Try程序块中，任何由于MFP语言触发的异常将会被抛出并传递到跟随try程序块的某一个catch语句中处理。当然，如果没有一个catch语句能够处理这个被抛出来的异常，该异常将会被抛向外层的程序块或函数。</p>
+<p style="font-family:verdana;color:black;">
+Throw语句有一个字符串参数。如果throw语句被执行，MFP打印出字符串参数然后退出。</p>
+<p style="font-family:verdana;color:black;">
+Catch语句可以接受一个表达式作为参数，也可以不接受参数。如果不接受参数，该catch语句捕获任何由该语句对应的try程序块抛出的异常。如果它有一个表达式参数，该表达式参数作为一个异常过滤器用于决定一个异常是否由该catch语句处理。如果异常过滤器表达式的值是布尔值true，该异常被捕获，否则，该异常被传递到下一个catch语句，或者被抛向外层的程序块或函数。Catch语句提供三个字符串类型的内部参数，也就是level，type和info。参数level存储异常的层级，它的值是"LANGUAGE"（也就是编程语言级别的异常，比如没有endif语句跟随if语句或者一个用户定义的抛出字符串的异常）或者"EXPRESSION"（也就是表达式级别的异常，比如被零除或者缺少右括号），参数type是MFP编程语言内部定义异常的类型，参数info是异常的内容。如果开发人员用一个throw语句抛出一个字符串，info的值就是这个字符串。这三个参数仅能用于catch语句中的异常过滤器。但是异常过滤器可以使用变量名和函数名空间中的任意变量和函数。如果一个变量和这三个catch语句的内部参数重名，它将被重名内部参数重载。</p>
+<p style="font-family:verdana;color:black;">
+Endtry用于结束一个try/catch程序块，它不接受任何参数。</p>
+<p style="font-family:verdana;color:black;">
+以下是try/throw/catch/endtry的例子。</p>
+<pre style="font-family:verdana;color:black;">
+Function testtry1()
+	Variable a, b, c
+	a = 3
+	Try
+		Select a
+		Case 3
+			print("a == 1\n")
+			Try
+				print (NULL==FALSE)
+				dbc
+			Catch
+				print ("Cannot cvt NULL to boolean or dbc is undefined\n")
+			EndTry
+		EndS
+		Throw "my exception"
+	Catch (1+2)==4
+		print ("IN (1+2) == 4")
+	catch false
+		print ("In false")
+	Catch and((b=level)=="LANGUAGE", (c=info) == "my exception")
+		print ("In catch and, b = ")
+		print (b)
+		print ("\n")
+		Help
+		 Try 
+		 	c = adb
+		 Catch
+		 	print (" c= adb")
+		 EndTry
+			Help
+		Endh
+		Try
+			c = 3/0
+		Catch And((c= info)==c, level == "LANGUAGE")
+			print ("In Language\n")
+			print (c) 
+		Catch And((c= info)==c, level=="EXPRESSION")
+			print ("In Expression\n")
+			print (c)
+		EndTry
+		print ("In upper level try\n")
+		print (b)
+		print (" , c = ")
+		print (c)
+		print ("\n")
+	Catch or((b=level)=="LANGUAGE", (c=info) == "my exception")
+		print ("In catch or, b = ")
+		print (b)
+		print (" , c = ")
+		print (c)
+		print ("\n")
+	Endtry
+Endf
+</pre>
+<p style="font-family:verdana;color:black;">
+这个函数的输出结果如下：</p>
+<pre style="font-family:verdana;color:black;">
+a == 1
+FALSECannot cvt NULL to boolean or dbc is undefined
+In catch and, b = LANGUAGE
+In Expression
+Zero division!In upper level try
+LANGUAGE , c = Zero division!
+</pre>
+</body>
+</html>

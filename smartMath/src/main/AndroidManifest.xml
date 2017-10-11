@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cyzapps.SmartMath"
+    android:installLocation="auto"
+    android:versionCode="18"
+    android:versionName="1.6.5.18" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="16" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /><!-- for adwo and baidu ads -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /><!-- for baidu ads -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /><!-- for baidu ads -->
+	<uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+    
+    <supports-screens
+        android:anyDensity="true"
+        android:resizeable="true" />
+
+    <application
+        android:name=".AppSmartMath"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name" >
+        <meta-data android:name="com.google.android.gms.version" android:value="9452000" />
+        <activity
+            android:name="ActivitySmartCalc"
+            android:label="@string/title_activity_activity_smart_calc"
+            android:windowSoftInputMode="adjustPan|stateUnchanged" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+		<activity android:name=".ActivityQuickRecog"
+		    android:configChanges="keyboardHidden|orientation|screenSize"
+		    android:screenOrientation="landscape"></activity>
+        <activity
+            android:name="ActivityFingerPaint"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan|stateUnchanged"
+            android:screenOrientation="landscape" >
+            <!-- intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter -->
+        </activity>
+        <activity android:name=".ActivityCalcAssistant"
+		    	android:theme="@android:style/Theme.Dialog"
+				android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+		<activity android:name=".ActivityReadConstants"
+				android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+		<activity android:name=".ActivityCvtUnit"
+				android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+		<activity android:name=".ActivityCfgKeyPad"
+				android:windowSoftInputMode="adjustPan|stateUnchanged"></activity>
+        <activity android:name=".ActivityPlotXYGraph"
+            	android:windowSoftInputMode="adjustPan|stateUnchanged"
+				android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+        <activity android:name=".ActivityPlotPolarGraph"
+            	android:windowSoftInputMode="adjustPan|stateUnchanged"
+				android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+        <activity android:name=".ActivityPlotXYZGraph"
+            	android:windowSoftInputMode="adjustPan|stateUnchanged"
+				android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+        <activity android:name=".ActivityIntegrate"
+            	android:windowSoftInputMode="adjustPan|stateUnchanged"
+				android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+		<activity android:name=".ActivitySettings"
+				android:configChanges="orientation|keyboardHidden|screenSize"
+				android:theme="@android:style/Theme.Dialog"></activity>
+		<activity android:name=".ActivitySmCRecord"
+				android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+		<activity android:name=".ActivityTutorialBox"
+				android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+		<activity android:name=".ActivityShowHelp"
+				android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+		<activity android:name="com.cyzapps.GraphDemon.ActivityChartDemon"
+				android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+        <activity android:name="com.cyzapps.GraphDemon.ActivityConfig2DExprGraph"
+		    	android:theme="@android:style/Theme.Dialog"
+				android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+		<activity android:name="com.cyzapps.GraphDemon.ActivityConfigPolarExprGraph"
+		    	android:theme="@android:style/Theme.Dialog"
+				android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+		<activity android:name="com.cyzapps.GraphDemon.ActivityConfigXYZGraph"
+		    	android:theme="@android:style/Theme.Dialog"
+				android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+        <activity android:name="com.cyzapps.GraphDemon.ActivityConfig3DExprGraph"
+		    	android:theme="@android:style/Theme.Dialog"
+				android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+        <activity android:name="com.cyzapps.MFPFileManager.MFPFileManagerActivity"
+				android:configChanges="orientation|keyboardHidden|screenSize"></activity>
+		<activity android:name="com.cyzapps.MFPFileManager.ScriptEditorActivity"
+				android:configChanges="orientation|keyboardHidden|screenSize"
+				android:windowSoftInputMode="adjustPan|stateUnchanged"></activity>
+		
+        <receiver
+            android:name="com.cyzapps.adapter.StorageActionReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+                <action android:name="android.intent.action.MEDIA_EJECT" />
+                <action android:name="android.intent.action.MEDIA_BAD_REMOVAL" />
+                <action android:name="android.intent.action.MEDIA_CHECKING" />
+
+                <data android:scheme="file" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

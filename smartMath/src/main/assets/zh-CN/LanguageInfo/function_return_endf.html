@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>可编程科学计算器帮助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+</head>
+<body style="background-color:white;">
+<h2 style="color:blue">MFP编程语言function，return和endf语句：</h2>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+在MFP语言中Function语句是一个函数的开始。Function语句的语法为：</p>
+<p style="font-family:verdana;color:black;">
+Function name(parameter1, parameter2, parameter3, ...)</p>
+<p style="font-family:verdana;color:black;">
+。注意这里"..."意味着在parameter3参数之后还可能有任意个数个参数。如果一个函数没有可选参数，函数的声明应该类似于</p>
+<p style="font-family:verdana;color:black;">
+Function abcd(para1, para2, para3, para4)</p>
+<p style="font-family:verdana;color:black;">
+。换句话说不能够在参数列中有"..."。</p>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+如果一个函数有可选参数，可选参数的个数保存在一个系统变量中，该系统变量名字叫做opt_argc。所有的可选参数作为一个数组保存于系统变量opt_argv中。换句话说，第一个可选参数的值为opt_argv[0]，第二个为opt_argv[1]，以此类推。</p>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+一个函数可以返回一个任意类型的数值或者什么都不返回。但使用者不用在Function语句中声明返回值，MFP会自动处理返回值。</p>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+Return语句用于退出函数并返回数值。比如：</p>
+<p style="font-family:verdana;color:black;">
+Return "Hello word"&nbsp;&nbsp;&nbsp;&nbsp;// 返回字符串"Hello word"</p>
+<p style="font-family:verdana;color:black;">
+或</p>
+<p style="font-family:verdana;color:black;">
+Return&nbsp;&nbsp;&nbsp;&nbsp;// 什么都不返回</p>
+<p style="font-family:verdana;color:black;">
+。</p>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+Endf语句用于标记函数的结尾，该语句不接受任何参数。</p>
+</body>
+</html>

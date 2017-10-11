@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="leftrightbtn_pressed">#FFFFAA00</color>
+	<color name="leftrightbtn_normal">#00000000</color>
+	<color name="transparent_background">#55000000</color>
+	<color name="opaque_black_background">#FF000000</color>
+	<color name="white">#FFFFFFFF</color>
+	<color name="yellow">#FFFFFF00</color>
+	<color name="fuchsia">#FFFF00FF</color>
+	<color name="red">#FFFF0000</color>
+	<color name="silver">#FFC0C0C0</color>
+	<color name="gray">#FF808080</color>
+	<color name="olive">#FF808000</color>
+	<color name="purple">#FF800080</color>
+	<color name="maroon">#FF800000</color>
+	<color name="aqua">#FF00FFFF</color>
+	<color name="lime">#FF00FF00</color>
+	<color name="teal">#FF008080</color>
+	<color name="green">#FF008000</color>
+	<color name="blue">#FF0000FF</color>
+	<color name="navy">#FF000080</color>
+	<color name="black">#FF000000</color>
+</resources>

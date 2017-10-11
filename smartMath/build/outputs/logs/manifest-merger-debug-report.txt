@@ -1,0 +1,311 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:2:1-125:12
+	package
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:3:5-36
+		INJECTED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml
+		INJECTED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:6:5-35
+		INJECTED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml
+		INJECTED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml
+	android:versionCode
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:5:5-29
+		INJECTED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml
+		INJECTED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:2:11-69
+	android:installLocation
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:4:5-35
+uses-sdk
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:8:5-10:41
+	android:targetSdkVersion
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:10:9-38
+		INJECTED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml
+		INJECTED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:9:9-34
+		INJECTED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml
+		INJECTED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml
+uses-permission#android.permission.VIBRATE
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:12:5-66
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:12:22-63
+uses-permission#android.permission.INTERNET
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:13:5-67
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:13:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:14:22-76
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:15:5-81
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:15:22-78
+uses-permission#android.permission.CAMERA
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:16:5-65
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:16:22-62
+uses-permission#android.permission.FLASHLIGHT
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:17:2-65
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:17:19-63
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:18:5-75
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:18:22-72
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:19:5-81
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:19:22-78
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:20:5-76
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:20:22-73
+uses-feature#android.hardware.camera
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:21:2-82
+	android:required
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:21:55-79
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:21:16-54
+uses-feature#android.hardware.camera.autofocus
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:22:5-95
+	android:required
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:22:68-92
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:22:19-67
+uses-feature#android.hardware.camera.flash
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:23:5-91
+	android:required
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:23:64-88
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:23:19-63
+supports-screens
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:25:5-27:37
+	android:resizeable
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:27:9-34
+	android:anyDensity
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:26:9-34
+application
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:29:5-123:19
+	android:label
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:32:9-41
+	android:icon
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:31:9-38
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:30:9-37
+meta-data#com.google.android.gms.version
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:33:9-92
+	android:value
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:33:66-89
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:33:20-65
+activity#com.cyzapps.SmartMath.ActivitySmartCalc
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:34:9-43:20
+	android:label
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:36:13-71
+	android:windowSoftInputMode
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:37:13-67
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:35:13-45
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:38:13-42:29
+action#android.intent.action.MAIN
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:39:17-69
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:39:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:41:17-77
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:41:27-74
+activity#com.cyzapps.SmartMath.ActivityQuickRecog
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:44:3-46:56
+	android:screenOrientation
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:46:7-44
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:45:7-68
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:44:13-47
+activity#com.cyzapps.SmartMath.ActivityFingerPaint
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:47:9-58:20
+	android:screenOrientation
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:52:13-50
+	android:label
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:50:13-45
+	android:windowSoftInputMode
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:51:13-67
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:49:13-74
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:48:13-47
+activity#com.cyzapps.SmartMath.ActivityCalcAssistant
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:59:9-61:78
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:61:5-66
+	android:theme
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:60:8-51
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:59:19-56
+activity#com.cyzapps.SmartMath.ActivityReadConstants
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:62:3-63:78
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:63:5-66
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:62:13-50
+activity#com.cyzapps.SmartMath.ActivityCvtUnit
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:64:3-65:78
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:65:5-66
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:64:13-44
+activity#com.cyzapps.SmartMath.ActivityCfgKeyPad
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:66:3-67:71
+	android:windowSoftInputMode
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:67:5-59
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:66:13-46
+activity#com.cyzapps.SmartMath.ActivityPlotXYGraph
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:68:9-70:78
+	android:windowSoftInputMode
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:69:14-68
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:70:5-66
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:68:19-54
+activity#com.cyzapps.SmartMath.ActivityPlotPolarGraph
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:71:9-73:78
+	android:windowSoftInputMode
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:72:14-68
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:73:5-66
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:71:19-57
+activity#com.cyzapps.SmartMath.ActivityPlotXYZGraph
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:74:9-76:78
+	android:windowSoftInputMode
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:75:14-68
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:76:5-66
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:74:19-55
+activity#com.cyzapps.SmartMath.ActivityIntegrate
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:77:9-79:78
+	android:windowSoftInputMode
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:78:14-68
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:79:5-66
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:77:19-52
+activity#com.cyzapps.SmartMath.ActivitySettings
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:80:3-82:60
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:81:5-66
+	android:theme
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:82:5-48
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:80:13-45
+activity#com.cyzapps.SmartMath.ActivitySmCRecord
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:83:3-84:78
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:84:5-66
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:83:13-46
+activity#com.cyzapps.SmartMath.ActivityTutorialBox
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:85:3-86:78
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:86:5-66
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:85:13-48
+activity#com.cyzapps.SmartMath.ActivityShowHelp
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:87:3-88:78
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:88:5-66
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:87:13-45
+activity#com.cyzapps.GraphDemon.ActivityChartDemon
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:89:3-90:78
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:90:5-66
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:89:13-69
+activity#com.cyzapps.GraphDemon.ActivityConfig2DExprGraph
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:91:9-93:78
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:93:5-66
+	android:theme
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:92:8-51
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:91:19-82
+activity#com.cyzapps.GraphDemon.ActivityConfigPolarExprGraph
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:94:3-96:78
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:96:5-66
+	android:theme
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:95:8-51
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:94:13-79
+activity#com.cyzapps.GraphDemon.ActivityConfigXYZGraph
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:97:3-99:78
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:99:5-66
+	android:theme
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:98:8-51
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:97:13-73
+activity#com.cyzapps.GraphDemon.ActivityConfig3DExprGraph
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:100:9-102:78
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:102:5-66
+	android:theme
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:101:8-51
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:100:19-82
+activity#com.cyzapps.MFPFileManager.MFPFileManagerActivity
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:103:9-104:78
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:104:5-66
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:103:19-83
+activity#com.cyzapps.MFPFileManager.ScriptEditorActivity
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:105:3-107:71
+	android:windowSoftInputMode
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:107:5-59
+	android:configChanges
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:106:5-66
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:105:13-75
+receiver#com.cyzapps.adapter.StorageActionReceiver
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:109:9-122:20
+	android:enabled
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:111:13-35
+	android:exported
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:112:13-36
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:110:13-69
+intent-filter#android.intent.action.MEDIA_BAD_REMOVAL+android.intent.action.MEDIA_CHECKING+android.intent.action.MEDIA_EJECT+android.intent.action.MEDIA_MOUNTED+android.intent.action.MEDIA_UNMOUNTED
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:113:13-121:29
+action#android.intent.action.MEDIA_MOUNTED
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:114:17-78
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:114:25-75
+action#android.intent.action.MEDIA_UNMOUNTED
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:115:17-80
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:115:25-77
+action#android.intent.action.MEDIA_EJECT
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:116:17-76
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:116:25-73
+action#android.intent.action.MEDIA_BAD_REMOVAL
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:117:17-82
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:117:25-79
+action#android.intent.action.MEDIA_CHECKING
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:118:17-79
+	android:name
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:118:25-76
+data
+ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:120:17-47
+	android:scheme
+		ADDED from D:\tmp\dev\SmartMath\smartMath\src\main\AndroidManifest.xml:120:23-44

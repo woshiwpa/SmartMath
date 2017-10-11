@@ -1,0 +1,174 @@
+<html>
+<head>
+<title>可编程科学计算器帮助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">可编程科学计算器帮助：数组和矩阵函数</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函数名</th>
+<th>函数帮助信息</th>
+</tr>
+<tr>
+<td><center>adj</center></td>
+<td><p>adj(1) :</p>
+<p>函数cofactor(x)返回2维方阵x的伴随矩阵。</p>
+</td>
+</tr>
+<tr>
+<td><center>alloc_array</center></td>
+<td><p>alloc_array(1...) :</p>
+<p>alloc_array(x...)返回一个新分配的矩阵，其大小由参数决定。所有的参数都必须为正整数。</p>
+<p>alloc_array(2) :</p>
+<p>alloc_array(x, y)返回一个新分配的矩阵，其大小由参数x决定，参数x或者是一批正整数，或者是一个正整数数列。参数y是矩阵中所有元素的初始值，注意y参数可省略，如果省略，所有元素被初始化为0。</p>
+</td>
+</tr>
+<tr>
+<td><center>cofactor</center></td>
+<td><p>cofactor(1) :</p>
+<p>函数cofactor(x)返回2维方阵x的余因子矩阵。</p>
+</td>
+</tr>
+<tr>
+<td><center>det</center></td>
+<td><p>det(1) :</p>
+<p>det(x)计算2维方阵x的行列式值。</p>
+</td>
+</tr>
+<tr>
+<td><center>deter</center></td>
+<td><p>deter(1) :</p>
+<p>deter(x)计算2维方阵x的行列式值。</p>
+</td>
+</tr>
+<tr>
+<td><center>dprod</center></td>
+<td><p>dprod(2) :</p>
+<p>函数dprod用于计算两个向量 [x1, x2, ... xn]和[y1, y2, ... yn]的点乘值。</p>
+</td>
+</tr>
+<tr>
+<td><center>eig</center></td>
+<td><p>eig(1) :</p>
+<p>eig(A)计算2维方阵A的特征向量和特征值。这个函数返回一个包含两个成员的列表。第一个成员是特征向量矩阵，每一列是一个特征向量。第二个成员是一个对角矩阵，每一个对角线元素是一个特征值。注意运算这个函数非常耗费内存和CPU资源，如果在手机上运行，矩阵A的尺寸最好不要超过6*6，如果在电脑上运行，最好不要超过8*8，否则可能造成内存不足而程序崩溃或者运行很长时间而没有结果。</p>
+<p>eig(2) :</p>
+<p>eig(A, B)计算2维方阵A相对于同样尺寸的方阵B的特征向量和特征值，也就是Av = lambda * Bv，在这里，。lambda是一个特征值，v是一个特征向量。第二个参数，B，可以省略，其缺省值为I矩阵。这个函数返回一个包含两个成员的列表。第一个成员是特征向量矩阵，每一列是一个特征向量。第二个成员是一个对角矩阵，每一个对角线元素是一个特征值。注意运算这个函数非常耗费内存和CPU资源，如果在手机上运行，矩阵A的尺寸最好不要超过6*6，如果在电脑上运行，最好不要超过8*8，否则可能造成内存不足而程序崩溃或者运行很长时间而没有结果。</p>
+</td>
+</tr>
+<tr>
+<td><center>eye</center></td>
+<td><p>eye(1) :</p>
+<p>eye(x)返回正整数x乘x的2维方阵I。注意表达式eye(0)返回常数1。</p>
+<p>eye(2) :</p>
+<p>eye(x,y)返回y（y为正整数）维方阵I，注意每一维长度均为正整数x。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_eigen_values</center></td>
+<td><p>get_eigen_values(1) :</p>
+<p>get_eigen_values(A)计算2维方阵A的特征值。这个函数返回所有特征值，包括重复的特征值的列表。注意运算这个函数非常耗费内存和CPU资源，如果在手机上运行，矩阵A的尺寸最好不要超过6*6，如果在电脑上运行，最好不要超过8*8，否则可能造成内存不足而程序崩溃或者运行很长时间而没有结果。</p>
+<p>get_eigen_values(2) :</p>
+<p>get_eigen_values(A, B)计算2维方阵A相对于同样尺寸的方阵B的特征值，也就是Av = lambda * Bv，在这里，。lambda是一个特征值，v是一个特征向量。第二个参数，B，可以省略，其缺省值为I矩阵。这个函数返回所有特征值，包括重复的特征值的列表。注意运算这个函数非常耗费内存和CPU资源，如果在手机上运行，矩阵A的尺寸最好不要超过6*6，如果在电脑上运行，最好不要超过8*8，否则可能造成内存不足而程序崩溃或者运行很长时间而没有结果。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_extreme_elem</center></td>
+<td><p>get_extreme_elem(3) :</p>
+<p>函数get_extreme_elem分析输入的数值矩阵并返回其所有元素的最大或最小值。如果某一个元素不是实数，这个元素就会被忽略。这个函数有3个参数，第一个是数值矩阵（也可以是一个单一的数值），第二个是起始的最大或者最小值，如果这个参数不是null并且是一个实数，本函数将该参数和选出的最大或最小元素进行比较，并返回新的最大或最小值。第三个参数是告诉本函数返回最大值还是最小值，如果是0则返回最小值，否则返回最大值。函数的例子包括get_extreme_elem([[2, 3], "hello", 5], null, 1)和get_extreme_elem([[3,4,6],[5+3i, 7, 9.88-4.61], [5.77 -0.03i]], -8, 0)。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_inf</center></td>
+<td><p>includes_inf(1) :</p>
+<p>includes_inf(x)用于判断参数x是否包含正负无穷。这里，包含指的是，如果x是个数组，那么它的某一个元素包含或者本身就是目标值，如果x是一个复数，那么它的实部或者虚部是目标值，如果x是一个实数，那么它就是目标值。如果是，返回true，否则，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan</center></td>
+<td><p>includes_nan(1) :</p>
+<p>includes_nan(x)用于判断参数x是否包含Nan。这里，包含指的是，如果x是个数组，那么它的某一个元素包含或者本身就是目标值，如果x是一个复数，那么它的实部或者虚部是目标值，如果x是一个实数，那么它就是目标值。如果是，返回true，否则，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan_or_inf</center></td>
+<td><p>includes_nan_or_inf(1) :</p>
+<p>includes_nan_or_inf(x)用于判断参数x是否包含Nan或者正负无穷。这里，包含指的是，如果x是个数组，那么它的某一个元素包含或者本身就是目标值，如果x是一个复数，那么它的实部或者虚部是目标值，如果x是一个实数，那么它就是目标值。如果是，返回true，否则，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan_or_inf_or_null</center></td>
+<td><p>includes_nan_or_inf_or_null(1) :</p>
+<p>includes_nan_or_inf_or_null(x)用于判断参数x是否包含Nan或者正负无穷或者null。这里，包含指的是，如果x是个数组，那么它的某一个元素包含或者本身就是目标值，如果x是一个复数，那么它的实部或者虚部是目标值，如果x是一个实数，那么它就是目标值。如果是，返回true，否则，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_null</center></td>
+<td><p>includes_null(1) :</p>
+<p>includes_null(x)用于判断参数x是否包含null。这里，包含指的是，如果x是个数组，那么它的某一个元素包含或者本身就是目标值，如果x是一个复数，那么它的实部或者虚部是目标值，如果x是一个实数，那么它就是目标值。如果是，返回true，否则，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>invert</center></td>
+<td><p>invert(1) :</p>
+<p>invert(x)返回方块2维矩阵x的逆矩阵，注意x中的元素可以为复数。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_eye</center></td>
+<td><p>is_eye(2) :</p>
+<p>is_eye(x,y)用于确定数组（或数）x是否是单位阵I（或数字1），如果是，返回true，否则返回false。参数y是布尔量，可以省略，缺省值为false。如果y是true，将所有的null值视为0，否则，null值不被当作0。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_zeros</center></td>
+<td><p>is_zeros(2) :</p>
+<p>is_zeros(x,y)用于确定数组（或数）x是否是零矩阵（或数字0），如果是，返回true，否则返回false。参数y是布尔量，可以省略，缺省值为false。如果y是true，将所有的null值视为0，否则，null值不被当作0。</p>
+</td>
+</tr>
+<tr>
+<td><center>left_recip</center></td>
+<td><p>left_recip(1) :</p>
+<p>left_recip(x)计算x的左除倒数，注意当前仅支持数值或二维矩阵。</p>
+</td>
+</tr>
+<tr>
+<td><center>ones</center></td>
+<td><p>ones(1...) :</p>
+<p>ones函数返回一个所有元素都是1的矩阵，本函数的参数用于决定矩阵的尺寸，要么为一批正整数，要么为一个正整数数列。注意函数表达式ones([])返回常数1。</p>
+</td>
+</tr>
+<tr>
+<td><center>rank</center></td>
+<td><p>rank(1) :</p>
+<p>rank(matrix)返回矩阵的秩。比如，rank([[1,2],[2,4]])将返回1。</p>
+</td>
+</tr>
+<tr>
+<td><center>recip</center></td>
+<td><p>recip(1) :</p>
+<p>recip(x)计算x的倒数，注意当前仅支持数值或二维矩阵。</p>
+</td>
+</tr>
+<tr>
+<td><center>set_array_elem</center></td>
+<td><p>set_array_elem(3) :</p>
+<p>set_array_elem(x,y,z)将x[y]赋值为z，并且返回新的x。注意x不是必须为矩阵，y必须为正整数向量。y的值可以超出x的尺寸和维度。比如，如果x=3，y=[1,2]，z=2+3i，那么set_array_elem(x,y,z)等于[3, [0, 0, 2+3i]]。</p>
+</td>
+</tr>
+<tr>
+<td><center>size</center></td>
+<td><p>size(1) :</p>
+<p>size(x)返回矩阵x的尺寸向量。注意如果x不是一个矩阵，则总是返回[]。</p>
+<p>size(2) :</p>
+<p>size(x,y)返回矩阵x前y维的尺寸向量，如果x少于y维，返回完整的尺寸向量，注意y必须为正整数。此外如果x不是一个矩阵，则总是返回[]。</p>
+</td>
+</tr>
+<tr>
+<td><center>zeros</center></td>
+<td><p>zeros(1...) :</p>
+<p>zeros函数返回一个所有元素都是0的矩阵，本函数的参数用于决定矩阵的尺寸，要么为一批正整数，要么为一个正整数数列。注意函数表达式zeros([])返回常数值0。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

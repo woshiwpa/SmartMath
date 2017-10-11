@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<ScrollView 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/scroll_rotate_settings"
+		>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+	<RadioGroup
+ 		android:layout_width="fill_parent"
+ 		android:layout_height="wrap_content"
+ 		android:orientation="vertical"
+ 		android:id="@+id/radioGrp_rotate_degrees"
+ 		android:checkedButton="@+id/radioBtn_rotate_90_degrees" >
+	    <RadioButton 
+	    	android:text="@string/rotate_90_degrees" 
+	    	android:id="@+id/radioBtn_rotate_90_degrees" ></RadioButton>
+	    <RadioButton 
+	    	android:text="@string/rotate_180_degrees" 
+	    	android:id="@+id/radioBtn_rotate_180_degrees" ></RadioButton>
+	    <RadioButton 
+	    	android:text="@string/rotate_270_degrees" 
+	    	android:id="@+id/radioBtn_rotate_270_degrees" ></RadioButton>
+	    <RadioButton 
+	    	android:text="@string/rotate_any_degrees" 
+	    	android:id="@+id/radioBtn_rotate_any_degrees" ></RadioButton>
+	</RadioGroup>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:id="@+id/layout_enter_rotate_degrees"
+	    android:visibility="gone"
+	    android:orientation="horizontal" >
+	 		<TextView
+	 	    android:id="@+id/txt_enter_rotate_degrees_prompt"
+	 	    android:layout_width="wrap_content"
+	 	    android:layout_height="wrap_content" 
+	 	    android:text="@string/enter_rotate_degrees_prompt" />
+	
+	 	<EditText
+	 	    android:id="@+id/edttxt_rotate_degrees"
+	 	    android:layout_width="fill_parent"
+	 	    android:layout_height="wrap_content"
+	 	    android:singleLine="true"
+	 	    android:inputType="number"
+	 	    android:maxLines="1" />
+	</LinearLayout>
+	</LinearLayout>
+	</ScrollView>
+</LinearLayout>

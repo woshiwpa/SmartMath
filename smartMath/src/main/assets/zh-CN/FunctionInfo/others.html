@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>可编程科学计算器帮助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">可编程科学计算器帮助：其他函数</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函数名</th>
+<th>函数帮助信息</th>
+</tr>
+<tr>
+<td><center>clone</center></td>
+<td><p>clone(1) :</p>
+<p>clone(source_value)复制输入参数source_value并返回source_value的拷贝。输入参数可以是任何数据类型，包括字符串，数，复数以及数组。比如，如果变量a等于[1,2]，用户执行语句variable b = clone(a)就会得的b等于[1,2]。但是这时候b和a是两个不同的数据。如果用户改变a的值，比如，设置a[0]等于3，a将会变成[3,2]但是b依然是[1，2]。</p>
+</td>
+</tr>
+<tr>
+<td><center>convert_unit</center></td>
+<td><p>convert_unit(3) :</p>
+<p>函数convert_unit(value, from_unit, to_unit)将基于某一个单位的数值转换为基于另外一个单位的数值。第一个参数是将要转换的数值，第二个参数是将被转换的单位（单位是一个对大小写敏感的字符串），第三个参数是转换后的单位（单位是一个对大小写敏感的字符串）。比如，convert_unit(23.71, "m", "km")。</p>
+<p>本函数支持以下单位：</p>
+<p>1. 长度单位: "um" (微米), "mm" (毫米), "cm" (厘米), "m" (米), "km" (公里), "in" (英寸), "ft" (英尺), "yd" (码), "mi" (英里), "nmi" (海浬), "AU" (天文单位), "ly" (光年), "pc" (秒差距);</p>
+<p>2. 面积单位: "mm2" (平方毫米), "cm2" (平方厘米), "m2" (平方米), "ha" (公顷), "km2" (平方公里), "sq in" (平方英寸), "sq ft" (平方英尺), "sq yd" (平方码), "ac" (英亩), "sq mi" (平方英里);</p>
+<p>3. 体积单位: "mL" (毫升), "L" (升), "m3" (立方米), "cu in" (立方英寸), "cu ft" (立方英尺), "cu yd" (立方码), "km3" (立方公里), "fl oz(Imp)" (液盎司(英制)), "pt(Imp)" (品脱(英制)), "gal(Imp)" (加仑(英制)), "fl oz(US)" (液盎司(美制)), "pt(US)" (品脱(美制)), "gal(US)" (加仑(美制));</p>
+<p>4. 质量单位: "ug" (微克), "mg" (毫克), "g" (克), "kg" (千克), "t" (吨), "oz" (盎司), "lb" (磅), "jin" (市斤), "jin(HK)" (斤(香港)), "jin(TW)" (台斤);</p>
+<p>5. 速度单位: "m/s" (米每秒), "km/h" (千米每小时), "ft/s" (英尺每秒), "mph" (英里每小时), "knot" (节);</p>
+<p>6. 时间单位: "ns" (纳秒), "us" (微秒), "ms" (毫秒), "s" (秒), "min" (分钟), "h" (小时), "d" (天), "wk" (礼拜), "yr" (年);</p>
+<p>7. 力单位: "N" (牛顿), "kgf" (千克力), "lbF" (磅力);</p>
+<p>8. 压强单位: "Pa" (帕斯卡), "hPa" (百帕), "kPa" (千帕), "MPa" (兆帕), "atm" (大气压), "psi" (每平方英寸上受到的磅力压力), "Torr" (毫米汞柱);</p>
+<p>9. 能量单位: "J" (焦耳), "kJ" (千焦), "MJ" (兆焦), "kWh" (千瓦时), "cal" (卡路里), "kcal" (千卡), "BTU" (英热单位);</p>
+<p>10. 功率单位: "W" (瓦特), "kW" (千瓦), "MW" (兆瓦), "cal/s" (卡路里每秒), "BTU/h" (英热单位每小时), "hp" (马力);</p>
+<p>11. 温度单位: "0C" (摄氏度), "0F" (华氏度), "K" (开氏温标);</p>
+</td>
+</tr>
+<tr>
+<td><center>get_constant</center></td>
+<td><p>get_constant(2) :</p>
+<p>函数get_constant(const_name, n)返回一个由区分大小写的字符串const_name所对应的常数值，返回的数值将会四舍五入后保留小数点后面n位有效数值，这里n为非负整数并且可以省略。如果n被省略，返回值将不会被四舍五入处理。本函数支持以下常数：</p>
+<p>1. 圆周率 (const_name == "pi");</p>
+<p>2. 自然对数 (const_name == "e");</p>
+<p>3. 真空中的光速 [m/s] (const_name == "light_speed_in_vacuum");</p>
+<p>4. 万有引力常数 [m**3/kg/(s**2)] (const_name == "gravitational_constant");</p>
+<p>5. 普朗克常数 [J*s] (const_name == "planck_constant");</p>
+<p>6. 磁常数（真空磁导率） [N/(A**2)] (const_name == "magnetic_constant");</p>
+<p>7. 电常数（真空电容率） [F/m] (const_name == "electric_constant");</p>
+<p>8. 基本电荷 [c] (const_name == "elementary_charge_constant");</p>
+<p>9. 阿伏伽德罗常数 [1/mol] (const_name == "avogadro_constant");</p>
+<p>10. 法拉第常数 [C/mol] (const_name == "faraday_constant");</p>
+<p>11. 气体常数 [J/mol/K] (const_name == "molar_gas_constant");</p>
+<p>12. 玻尔兹曼常量 [J/K] (const_name == "boltzman_constant");</p>
+<p>13. 标准重力 [m/(s**2)] (const_name == "standard_gravity");</p>
+<p>例如，如果用户输入get_constant("pi", 4)，结果将会是3.1416；如果用户输入get_constant("pi", 8)，结果将会是3.14159265；如果用户输入get_constant("pi", 0)，将会得到3，如果用户输入get_constant("pi")返回值将是3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 （小数点后有100位数字），这个数值就是本软件内部所使用的圆周率数值。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_inf</center></td>
+<td><p>is_inf(1) :</p>
+<p>is_inf(x)用于判断参数x是否为正负无穷。如果是，返回true，否则，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_nan_or_inf</center></td>
+<td><p>is_nan_or_inf(1) :</p>
+<p>is_nan_or_inf(x)用于判断参数x是否为Nan或者正负无穷。如果是，返回true，否则，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_nan_or_inf_or_null</center></td>
+<td><p>is_nan_or_inf_or_null(1) :</p>
+<p>is_nan_or_inf_or_null(x)用于判断参数x是否为Nan或者正负无穷或者null。如果是，返回true，否则，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>tip</center></td>
+<td><p>tip(2) :</p>
+<p>函数tip(x,y)用于计算在美国饭馆吃饭时所支付的所有费用包括实际费用和小费。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

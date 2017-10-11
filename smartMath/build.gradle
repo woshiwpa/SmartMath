@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 16
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        applicationId "com.cyzapps.SmartMath"
+        minSdkVersion 9
+        targetSdkVersion 16
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    lintOptions {
+        disable "ResourceType"
+		abortOnError false
+    }
+}
+
+dependencies {
+    compile files('../../CoreMathImgProc/bin/CoreMathImgProc.jar')
+}

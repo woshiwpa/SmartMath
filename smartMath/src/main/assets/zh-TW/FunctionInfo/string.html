@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>程式開發科學計算器幫助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">程式開發科學計算器幫助：字串函數</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函數名</th>
+<th>函數幫助資訊</th>
+</tr>
+<tr>
+<td><center>conv_ints_to_str</center></td>
+<td><p>conv_ints_to_str(1) :</p>
+<p>conv_ints_to_str(int_or_array)將一個整數或者一組整數轉換成一個Unicode字串。如果只有一個整數，返回的字串只包含一個Unicode字符，否則，返回字串的字符數目和int_or_array中的元素數目一致。如果需要轉換的整數是負數或者超出了Unicode字符集的定義範圍，則被轉換成整數0所對應的Unicode字符。示例包括conv_ints_to_str([20320, 22909, 25105, 22909, 22823, 23478, 22909])返回"你好我好大家好"，以及conv_ints_to_str(20320)返回"你"。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_str_to_ints</center></td>
+<td><p>conv_str_to_ints(1) :</p>
+<p>conv_str_to_ints(str)將一個Unicode字串轉換成一個整數數組。通常，一個Unicode字符對應一個整數（但也有可能對應兩個整數，如果該Unicode字符超出了UTF-16字符集的範圍。但這種情況很少出現）。如果字串是空的，則返回一個空數組。一個示例為conv_str_to_ints("你好我好大家好")返回[20320, 22909, 25105, 22909, 22823, 23478, 22909]。</p>
+</td>
+</tr>
+<tr>
+<td><center>split</center></td>
+<td><p>split(2) :</p>
+<p>string_regex)j將字串string_input按照正則表達式string_regex分割為若幹個子字串並返回包含所有子字串的數組。用戶可以閱讀JAVA語言的Pattern類和String.split函數程式的幫助檔案獲得更多關於正則表達式使用方法的資訊。例子包括split("boo:and:foo", ":")返回["boo", "and", "foo"]以及split("boo:and:foo", "o")返回["b", "", ":and:f"]。</p>
+</td>
+</tr>
+<tr>
+<td><center>sprintf</center></td>
+<td><p>sprintf(1...) :</p>
+<p>printf(format_string, ...)，sprintf(format_string, ...)和fprintf(fd, format_string, ...)和C/C++中的对应函数程式工作方式相似。这些函数程式通过format_string和其后的数值参数构造出一个新的字串，printf将字串打印到标准输出，sprintf将字串作为返回值返回，fprintf则将字串输出到档案号为fd的文本档案。字串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字串（%c和%s）等等。用户可以在C语言的帮助手册中找到format_string的构造方法。例如，printf("Hello world!%f", 3.14)将会打印输出"Hello world!3.140000"，而sprintf("%c%d", "A", 9)则返回"A9"（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>sscanf</center></td>
+<td><p>sscanf(2) :</p>
+<p>scanf(format_string)，sscanf(input_from, format_string)和fscanf(fd, format_string)和C/C++中的對應函數程式工作方式相似。scanf讀取用戶的一行輸入，sscanf讀取字串input_from，fscanf從檔案（檔案號fd）中讀取檔案內容。字串format_string支持輸入整數（%d、%i、%x等），浮點數（%e、%f等），字符和字串（%c和%s）等等。用戶可以在C語言的幫助文檔中找到format_string的構造方法。但是，和C語言有所不同，MFP中的這些函數程式不需要輸入用於存儲讀取數值的參數。所有的讀取的數值將會保存在一個數組中作為返回值返回。比如，sscanf("3Hello world!", "%d%c%c%s")將會返回[3, "H", "e", "llo"]（註意MFP不支持單一字符數據類型，所以單一的字符將會存儲為一個只包括一個字符的字串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>strcat</center></td>
+<td><p>strcat(2...) :</p>
+<p>strcat(string1, string2...)將字串參數順次連接在一起，返回新的連接好的字串。本函數程式需要至少兩個參數。</p>
+</td>
+</tr>
+<tr>
+<td><center>strcmp</center></td>
+<td><p>strcmp(6) :</p>
+<p>strcmp(src, dest, src_start, src_end, dest_start, dest_end)比較源字串src（從src_start到src_end）和目標字串dest（從dest_start到dest_end）。如果src和dest相等返回0，如果src大於dest返回大於0的值，如果src小於dest返回小於0的值。注意字串索引從0開始，src_end和dest_end的索引位置為最後一個被選中字元的索引位置加一。另外，最後四個參數可以省略，如果被省略，src_start和dest_start的預設值為0，src_end和dest_end的預設值為對應字串的長度。</p>
+</td>
+</tr>
+<tr>
+<td><center>strcpy</center></td>
+<td><p>strcpy(6) :</p>
+<p>strcpy(src, dest, src_start, src_end, dest_start, dest_end)返回將源字串src從src_start到src_end拷貝到目標字串dest從dest_start到dest_end的新字串值。注意字串索引從0開始，src_end和dest_end的索引位置為最後一個被選中字元的索引位置加一。另外，最後四個參數可以省略，如果被省略，src_start和dest_start的預設值為0，src_end和dest_end的預設值為對應字串的長度。</p>
+</td>
+</tr>
+<tr>
+<td><center>stricmp</center></td>
+<td><p>stricmp(6) :</p>
+<p>stricmp(src, dest, src_start, src_end, dest_start, dest_end)在忽略字母大小寫的前提下比較源字符串src（從src_start到src_end）和目標字符串dest（從dest_start到dest_end）。如果src和dest相等返回0，如果src大於dest返回大於0的值，如果src小於dest返回小於0的值。註意字符串索引從0開始，src_end和dest_end的索引位置為最後一個被選中字符的索引位置加一。另外，最後四個參數可以省略，如果被省略，src_start和dest_start的缺省值為0，src_end和dest_end的缺省值為對應字符串的長度。</p>
+</td>
+</tr>
+<tr>
+<td><center>strlen</center></td>
+<td><p>strlen(1) :</p>
+<p>strlen(x)返回字串x的長度。</p>
+</td>
+</tr>
+<tr>
+<td><center>strsub</center></td>
+<td><p>strsub(2) :</p>
+<p>strsub(str, start)返回字串str的子字串。該子字串從字元start開始到str的最後一個字元。注意字串的第一個字元是0號字元。</p>
+<p>strsub(3) :</p>
+<p>strsub(str, start, end)返回字串str的子字串。該子字串從字元start開始到字元end-1。注意字串的第一個字元是0號字元。</p>
+</td>
+</tr>
+<tr>
+<td><center>to_lowercase_string</center></td>
+<td><p>to_lowercase_string(1) :</p>
+<p>to_lowercase_string(x)返回數據x的打印值（所有的字母均為小寫）。</p>
+</td>
+</tr>
+<tr>
+<td><center>to_string</center></td>
+<td><p>to_string(1) :</p>
+<p>to_string(x)返回數據x的打印值。</p>
+</td>
+</tr>
+<tr>
+<td><center>to_uppercase_string</center></td>
+<td><p>to_uppercase_string(1) :</p>
+<p>to_uppercase_string(x)返回數據x的打印值（所有的字母均為大寫）。</p>
+</td>
+</tr>
+<tr>
+<td><center>tostring</center></td>
+<td><p>tostring(1) :</p>
+<p>tostring(x) 返回數據x的打印值。</p>
+</td>
+</tr>
+<tr>
+<td><center>trim</center></td>
+<td><p>trim(1) :</p>
+<p>trim(string)，trim_left(string)和trim_right(string)從字串的兩邊或者一邊刪除任何一個ASCI值小於等於空白字符（' '）的字符。具體說來，trim從左右兩邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到左邊和右邊都遇到了一個ASCI值大於空白字符（' '）的字符；trim_left從左邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到遇到了一個ASCI值大於空白字符（' '）的字符；trim_right從右邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到遇到了一個ASCI值大於空白字符（' '）的字符。例子包括trim(" \n hello world ") （返回"hello world"）, trim_left(" \n hello world "）, （返回"hello world "）以及trim_right(" \n hello world ") （返回" hello world")。</p>
+</td>
+</tr>
+<tr>
+<td><center>trim_left</center></td>
+<td><p>trim_left(1) :</p>
+<p>trim(string)，trim_left(string)和trim_right(string)從字串的兩邊或者一邊刪除任何一個ASCI值小於等於空白字符（' '）的字符。具體說來，trim從左右兩邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到左邊和右邊都遇到了一個ASCI值大於空白字符（' '）的字符；trim_left從左邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到遇到了一個ASCI值大於空白字符（' '）的字符；trim_right從右邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到遇到了一個ASCI值大於空白字符（' '）的字符。例子包括trim(" \n hello world ") （返回"hello world"）, trim_left(" \n hello world "）, （返回"hello world "）以及trim_right(" \n hello world ") （返回" hello world")。</p>
+</td>
+</tr>
+<tr>
+<td><center>trim_right</center></td>
+<td><p>trim_right(1) :</p>
+<p>trim(string)，trim_left(string)和trim_right(string)從字串的兩邊或者一邊刪除任何一個ASCI值小於等於空白字符（' '）的字符。具體說來，trim從左右兩邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到左邊和右邊都遇到了一個ASCI值大於空白字符（' '）的字符；trim_left從左邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到遇到了一個ASCI值大於空白字符（' '）的字符；trim_right從右邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到遇到了一個ASCI值大於空白字符（' '）的字符。例子包括trim(" \n hello world ") （返回"hello world"）, trim_left(" \n hello world "）, （返回"hello world "）以及trim_right(" \n hello world ") （返回" hello world")。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

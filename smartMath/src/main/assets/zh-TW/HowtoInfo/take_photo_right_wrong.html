@@ -1,0 +1,60 @@
+﻿<html>
+	<head>
+		<title>智慧計算器幫助</title>
+	</head>
+	<body style="background-color:Lightgray;">
+		<h2 style="color:blue">智慧計算器幫助：正確和錯誤的拍照識別方法</h2>
+		
+		<p style="font-family:verdana;color:black;">
+			如果用戶想要識別打印體數學表達式，必須遵循以下規則：
+		</p>
+		<p style="font-family:verdana;color:black;">
+			1. 用戶必須確保拍照識別的是打印體數學表達式，而不是手寫的表達式；
+		</p>
+		<p style="font-family:verdana;color:black;">
+			2. 用戶必須保證拍照識別是表達式是正立的，不能傾斜或者倒置；
+		</p>
+		<p style="font-family:verdana;color:black;">
+			3. 拍照識別時背景（指的是綠色方塊內除表達式以外的地方）必須幹凈單調，不能有噪音點，光線投射下來的陰影可以接受，但是太過於明顯的顏色區別會被誤認為筆畫。同時背景色必須比表達式顏色淺（比如，背景是白色，表達式是黑色）。
+		</p>
+		<p style="font-family:verdana;color:black;">
+			4. 拍的照片必須清晰可辨。如果用戶不確定是否清晰可辨，可點擊“確認修正”按鈕，看看二值化之後的黑白圖像是否清晰可辨。
+		</p>
+		<p style="font-family:verdana;color:green;">
+			以下照片采用正確的方式拍照獲得，因此可以被識別：
+		</p>
+		<p><img src="right_approach_photo_taken.bmp"  alt="right_approach_photo_taken" /></p>
+		<p style="font-family:verdana;color:green;">
+			以下圖片時上述照片二值化後的結果，可以看到它非常清楚：
+		</p>
+		<p><img src="segmentated_right_approach_photo_taken.bmp"  alt="segmentated_right_approach_photo_taken" /></p>
+		<p style="font-family:verdana;color:red;">
+			以下照片沒有用正確的拍照方式獲得。字體太小，用戶拍照時手可能抖動了，所以二值化後的圖像非常模糊。
+		</p>
+		<p><img src="mr_initial(1).bmp"  alt="mr_initial" /></p><p><img src="mr_finallyproc(1).bmp"  alt="mr_finallyproc" /></p>
+		<p style="font-family:verdana;color:red;">
+			以下照片沒有用正確的拍照方式獲得。字體不清楚，背景有噪音點。
+		</p>
+		<p><img src="mr_initial(2).bmp"  alt="mr_initial" /></p><p><img src="mr_finallyproc(2).bmp"  alt="mr_finallyproc" /></p>
+		<p style="font-family:verdana;color:red;">
+			以下照片沒有用正確的拍照方式獲得。表達式是手寫的，而且不是正立的。
+		</p>
+		<p><img src="mr_initial(3).bmp"  alt="mr_initial" /></p><p><img src="mr_finallyproc(3).bmp"  alt="mr_finallyproc" /></p>
+		<p style="font-family:verdana;color:red;">
+			以下照片沒有用正確的拍照方式獲得。表達式是手寫的，而且不是正立的。並且背景上有很多文字分割線。
+		</p>
+		<p><img src="mr_initial(4).bmp"  alt="mr_initial" /></p><p><img src="mr_finallyproc(4).bmp"  alt="mr_finallyproc" /></p>
+		<p style="font-family:verdana;color:red;">
+			以下照片沒有用正確的拍照方式獲得。除了表達式是手寫的，其他都滿足要求。但要註意，如果用戶想識別手寫數學公式，請使用我們的另外一個軟體，智慧拍照計算器，的手寫模式，直接在熒幕上手寫識別，不需要拍攝照片。否則，用打印模式識別，x可能會被識別為乘號，2可能被識別為z，整個表達式就錯了。
+		<p><img src="mr_initial(5).bmp"  alt="mr_initial" /></p><p><img src="mr_finallyproc(5).bmp"  alt="mr_finallyproc" /></p>
+		<p style="font-family:verdana;color:red;">
+			以下照片沒有用正確的拍照方式獲得。這些表達式是教兒童學數學的，並非正式的數學表達式。請註意智慧計算器只能識別正式的數學表達式。
+		</p>
+		<p><img src="mr_initial(6).bmp"  alt="mr_initial" /></p><p><img src="mr_finallyproc(6).bmp"  alt="mr_finallyproc" /></p>
+		<p style="font-family:verdana;color:red;">
+			這是什麼東西？！
+		</p>
+		<p><img src="mr_initial(7).bmp"  alt="mr_initial" /></p><p><img src="mr_finallyproc(7).bmp"  alt="mr_finallyproc" /></p>
+	</body>
+</html>
+

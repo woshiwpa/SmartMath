@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <LinearLayout android:id="@+id/linearLayoutNumOfBits"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:orientation="horizontal" >
+    	<TextView
+	        android:id="@+id/txtViewNumOfBitsPrompt"
+	        android:layout_weight="1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent"
+	        android:text="@string/digit_after_decimal_point_prompt"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+		/>
+    
+       <EditText
+            android:id="@+id/edtTextNumOfBits"
+  			    android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:maxLength="2"
+            android:ems="10"
+            android:inputType="number" />
+   	</LinearLayout>
+        	       
+    <LinearLayout android:id="@+id/linearLayoutButtons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:orientation="horizontal" >
+		<Button
+			android:id="@+id/copy_constant_value_btn"
+			android:layout_weight="1"
+		    android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/insert_constant_value_text"
+		/>
+		<Button
+			android:id="@+id/copy_function_btn"
+			android:layout_weight="1"
+		    android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/insert_function_text"
+		/>
+		<Button
+			android:id="@+id/close_read_contants_btn"
+			android:layout_weight="1"
+		    android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:text="@string/close"
+		/>
+	</LinearLayout>
+	
+   	<TextView android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+        android:id="@+id/txtViewPad2ListView"
+		android:text="" />
+    
+   	<ListView
+        android:id="@+id/listViewConstantValues"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    </ListView> 
+        
+</LinearLayout>

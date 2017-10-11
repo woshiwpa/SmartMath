@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>程式開發科學計算器幫助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">程式開發科學計算器幫助：其他函數</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函數名</th>
+<th>函數幫助資訊</th>
+</tr>
+<tr>
+<td><center>clone</center></td>
+<td><p>clone(1) :</p>
+<p>clone(source_value)復制輸入參數source_value並返回source_value的拷貝。輸入參數可以是任何數據類型，包括字串，數，復數以及陣列。比如，如果變量a等於[1,2]，用戶執行語句variable b = clone(a)就會得的b等於[1,2]。但是這時候b和a是兩個不同的數據。如果用戶改變a的值，比如，設置a[0]等於3，a將會變成[3,2]但是b依然是[1，2]。</p>
+</td>
+</tr>
+<tr>
+<td><center>convert_unit</center></td>
+<td><p>convert_unit(3) :</p>
+<p>函數convert_unit(value, from_unit, to_unit)將基於某一個單位的數值轉換為基於另外一個單位的數值。第一個參數是將要轉換的數值，第二個參數是將被轉換的單位（單位是一個對大小寫敏感的字串），第三個參數是轉換後的單位（單位是一個對大小寫敏感的字串）。比如，convert_unit(23.71, "m", "km")。</p>
+<p>本函數支持以下單位：</p>
+<p>1. 長度單位: "um" (微米), "mm" (毫米), "cm" (厘米), "m" (米), "km" (公里), "in" (英寸), "ft" (英尺), "yd" (碼), "mi" (英里), "nmi" (海浬), "AU" (天文單位), "ly" (光年), "pc" (秒差距);</p>
+<p>2. 面積單位: "mm2" (平方毫米), "cm2" (平方厘米), "m2" (平方米), "ha" (公頃), "km2" (平方公里), "sq in" (平方英寸), "sq ft" (平方英尺), "sq yd" (平方碼), "ac" (英畝), "sq mi" (平方英里);</p>
+<p>3. 體積單位: "mL" (毫升), "L" (升), "m3" (立方米), "cu in" (立方英寸), "cu ft" (立方英尺), "cu yd" (立方碼), "km3" (立方公里), "fl oz(Imp)" (液盎司(英制)), "pt(Imp)" (品脫(英制)), "gal(Imp)" (加侖(英制)), "fl oz(US)" (液盎司(美制)), "pt(US)" (品脫(美制)), "gal(US)" (加侖(美制));</p>
+<p>4. 質量單位: "ug" (微克), "mg" (毫克), "g" (克), "kg" (千克), "t" (噸), "oz" (盎司), "lb" (磅), "jin" (市斤), "jin(HK)" (斤(香港)), "jin(TW)" (臺斤);</p>
+<p>5. 速度單位: "m/s" (米每秒), "km/h" (千米每小時), "ft/s" (英尺每秒), "mph" (英里每小時), "knot" (節);</p>
+<p>6. 時間單位: "ns" (納秒), "us" (微秒), "ms" (毫秒), "s" (秒), "min" (分鐘), "h" (小時), "d" (天), "wk" (禮拜), "yr" (年);</p>
+<p>7. 力單位: "N" (牛頓), "kgf" (千克力), "lbF" (磅力);</p>
+<p>8. 壓強單位: "Pa" (帕斯卡), "hPa" (百帕), "kPa" (千帕), "MPa" (兆帕), "atm" (大氣壓), "psi" (每平方英寸上受到的磅力壓力), "Torr" (毫米汞柱);</p>
+<p>9. 能量單位: "J" (焦耳), "kJ" (千焦), "MJ" (兆焦), "kWh" (千瓦時), "cal" (卡路里), "kcal" (千卡), "BTU" (英熱單位);</p>
+<p>10. 功率單位: "W" (瓦特), "kW" (千瓦), "MW" (兆瓦), "cal/s" (卡路里每秒), "BTU/h" (英熱單位每小時), "hp" (馬力);</p>
+<p>11. 溫度單位: "0C" (攝氏度), "0F" (華氏度), "K" (開氏溫標);</p>
+</td>
+</tr>
+<tr>
+<td><center>get_constant</center></td>
+<td><p>get_constant(2) :</p>
+<p>函數程式get_constant(const_name, n)返回一個由區分大小寫的字符串const_name所對應的常數值，返回的數值將會四舍五入後保留小數點後面n位有效數值，這裏n為非負整數並且可以省略。如果n被省略，返回值將不會被四舍五入處理。本函數程式支持以下常數：</p>
+<p>1. 圓周率 (const_name == "pi");</p>
+<p>2. 自然對數 (const_name == "e");</p>
+<p>3. 真空中的光速 [m/s] (const_name == "light_speed_in_vacuum");</p>
+<p>4. 萬有引力常數 [m**3/kg/(s**2)] (const_name == "gravitational_constant");</p>
+<p>5. 普朗克常數 [J*s] (const_name == "planck_constant");</p>
+<p>6. 磁常數（真空磁導率） [N/(A**2)] (const_name == "magnetic_constant");</p>
+<p>7. 電常數（真空電容率） [F/m] (const_name == "electric_constant");</p>
+<p>8. 基本電荷 [c] (const_name == "elementary_charge_constant");</p>
+<p>9. 亞佛加厥常數 [1/mol] (const_name == "avogadro_constant");</p>
+<p>10. 法拉第常數 [C/mol] (const_name == "faraday_constant");</p>
+<p>11. 氣體常數 [J/mol/K] (const_name == "molar_gas_constant");</p>
+<p>12. 玻茲曼常量 [J/K] (const_name == "boltzman_constant");</p>
+<p>13. 標準重力 [m/(s**2)] (const_name == "standard_gravity");</p>
+<p>例如，如果用戶輸入get_constant("pi", 4)，結果將會是3.1416；如果用戶輸入get_constant("pi", 8)，結果將會是3.14159265；如果用戶輸入get_constant("pi", 0)，將會得到3，如果用戶輸入get_constant("pi")返回值將是3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 （小數點後有100位數字），這個數值就是本軟體內部所使用的圓周率數值。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_inf</center></td>
+<td><p>is_inf(1) :</p>
+<p>is_inf(x)用於判斷參數x是否為正負無窮。如果是，返回true，否則，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_nan_or_inf</center></td>
+<td><p>is_nan_or_inf(1) :</p>
+<p>is_nan_or_inf(x)用於判斷參數x是否為Nan或者正負無窮。如果是，返回true，否則，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_nan_or_inf_or_null</center></td>
+<td><p>is_nan_or_inf_or_null(1) :</p>
+<p>is_nan_or_inf_or_null(x)用於判斷參數x是否為Nan或者正負無窮或者null。如果是，返回true，否則，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>tip</center></td>
+<td><p>tip(2) :</p>
+<p>函數tip(x,y)用於計算在美國飯館吃飯時所支付的所有費用包括實際費用和小費。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

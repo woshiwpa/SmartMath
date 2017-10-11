@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>可编程科学计算器帮助</title>
+		<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+	</head>
+	<body style="background-color:white;">
+		<h2 style="color:blue">可编程科学计算器：MFP编程语言手册</h2>
+		<p style="font-family:verdana;color:black;">
+			在可编程科学计算器中，除了内置函数，所有函数均由一种叫做MFP的编程语言编写。除了支持常用数学表达式和<a href="operators.html" target="_self">操作符</a>，MFP语言还支持<a href="solve_slvreto.html" target="_self">解代数方程（组）</a>，二进制数（格式为0b打头，比如0b0011100），八进制数（格式为0打头，比如0371.242），16进制数（格式为0x打头，比如0xAF46BC.0DD3E），<a href="complex_number.html" target="_self">复数</a>，<a href="array.html" target="_self">数组和矩阵</a>，<a href="string.html" target="_self">字符串</a>，函数，变量，条件语句，循环语句，注释和帮助等等。MFP语言对大小写不敏感。
+		<p style="font-family:verdana;color:black;">
+			MFP编程语言包含以下语句：
+		</p>
+		<p><a href="function_return_endf.html" target="_self">function, endf, return</a></p>
+		<p><a href="variable.html" target="_self">variable</a></p>
+		<p><a href="if_elseif_else_endif.html" target="_self">if, elseif, else, endif</a></p>
+		<p><a href="while_loop_do_until_for_next.html" target="_self">while, loop, do, until, for, next</a></p>
+		<p><a href="break_continue.html" target="_self">break, continue</a></p>
+		<p><a href="select_case_default_ends.html" target="_self">select, case, default, ends</a></p>
+		<p><a href="try_throw_catch_endtry.html" target="_self">try, throw, catch, endtry</a></p>
+		<p><a href="solve_slvreto.html" target="_self">solve, slvreto</a></p>
+		<p><a href="help_endh.html" target="_self">help, endh</a></p>
+		<p style="font-family:verdana;color:black;">在MFP语言中每一条语句可以占据一行或者多行。换句话说，如果一条语句太长，它可以被分割为几行，除了最后一行在每一行的末尾都跟随有字符串" _"。例如，假设一个函数拥有十个参数，如果将函数声明语句放在一行中将会非常的长：</p>
+		<p style="font-family:verdana;color:black;">function abcde(para1, para2, para3, para4, para5, para6, para7, para8, para9, para10)</p>
+		<p style="font-family:verdana;color:black;">。为了让程序代码更容易阅读，我们可以把函数声明语句分成3行，如下所示：</p>
+		<p><pre style="font-family:verdana;color:black;">function abcde(para1, para2, para3, _</pre></p>
+		<p><pre style="font-family:verdana;color:black;">               para4, para5, para6, _</pre></p>
+		<p><pre style="font-family:verdana;color:black;">               para7, para8, para9, para10)</pre><p>
+		<p style="font-family:verdana;color:black;">。并且我们依然可以在每一行的末尾添加注释，在以上例子中，我们可以为每一行添加注释如下：</p>
+		<p><pre style="font-family:verdana;color:black;">function abcde(para1, para2, para3, _// 第一行有3个参数。</pre></p>
+		<p><pre style="font-family:verdana;color:black;">               para4, para5, para6, _		// 第二行也有三个参数。</pre></p>
+		<p><pre style="font-family:verdana;color:black;">               para7, para8, para9, para10) // 第三行有4个参数。</pre><p>
+		<p style="font-family:verdana;color:black;">需要注意的是在MFP语言中每一行最多只能容纳一条语句。不像C/C++，MFP语言不支持语句分隔号，比如";"。</p>
+	</body>
+</html>
