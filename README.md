@@ -1,5 +1,5 @@
 # SmartMath
-An Android calculator app which is able to take photo of math formula and recongize it. It calls the CoreMathImgProc lib.
+An Android calculator app for math image recognition. It is able to take photo of math formula and recongize it. It calls the CoreMathImgProc lib.
 
 This app is built by Android Studio (2.3.3). To build it, the source repository has to be placed in the same folder as CoreMathImgProc source repository. Moreover, CoreMathImgProc has to be built first. After the CoreMathImgProc.jar is created, developer can start to make/build this project using Android Studio.
 
