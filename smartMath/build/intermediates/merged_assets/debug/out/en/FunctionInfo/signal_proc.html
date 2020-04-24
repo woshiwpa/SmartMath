@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Scientific Calculator Plus Help</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">Scientific Calculator Plus Help : signal processing functions</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>Function name</th>
+<th>Function info</th>
+</tr>
+<tr>
+<td><center>conv</center></td>
+<td><p>conv(2) :</p>
+<p>conv(input_a, inputb) returns convolution of input_a and input_b. input_a and input_b can either be two 1-D lists or two 2-D arrays. So far conv function only support 1-D and 2-D convolution. For example,</p>
+<p>conv([4,8,2,9],[5,3,8,9,6,7,8]) = [20, 52, 66, 151, 139, 166, 181, 132, 79, 72]</p>
+<p>conv([[4,8,2,9],[8,6,7,9],[2,2,8,-4]],[[-5,i,7],[0.6,8,4]]) = [[-20, -40 + 4 * i, 18 + 8 * i, 11 + 2 * i, 14 + 9 * i, 63], [-37.6, 6.8 + 8 * i, 102.2 + 6 * i, 50.4 + 7 * i, 129 + 9 * i, 99], [-5.2, 57.6 + 2 * i, 58.2 + 2 * i, 119.4 + 8 * i, 156 - 4 * i, 8], [1.2, 17.2, 28.8, 69.6, 0, -16]]</p>
+</td>
+</tr>
+<tr>
+<td><center>FFT</center></td>
+<td><p>FFT(1...) :</p>
+<p>Function FFT(a, ...) returns fast fourier transform of a series of values, note that the number of values in the series should always be 2 to a positive integer. If a is a list of real or complex numbers, this function should only have one parameter and return fast fourier transform of a[0], a[1], ... a[N-1] where N is the number of values in a. If a is a single value (real or complex), this function should have at least two parameters and return fast fourier transform of a, optional_params[0], optional_params[1], ..., optional_params[number_of_optional_params - 1]. The returned value is always an array.</p>
+<p>Examples of this function:</p>
+<p>FFT(1, 2, 3, 4) returns [10, -2 + 2i, -2, -2 - 2i];</p>
+<p>FFT([1, 2, 3, 4]) also returns [10, -2 + 2i, -2, -2 - 2i].</p>
+</td>
+</tr>
+<tr>
+<td><center>IFFT</center></td>
+<td><p>IFFT(1...) :</p>
+<p>	Function IFFT(a, ...) returns inverse fast fourier transform of a series of values, note that the number of values in the series should always be 2 to a positive integer. If a is a list of real or complex numbers, this function should only have one parameter and return inverse fast fourier transform of a[0], a[1], ... a[N-1] where N is the number of values in a. If a is a single value (real or complex), this function should have at least two parameters and return inverse fast fourier transform of a, optional_params[0], optional_params[1], ..., optional_params[number_of_optional_params - 1]. The returned value is always an array.</p>
+<p>Examples of this function:</p>
+<p>IFFT(10, -2 + 2i, -2, -2 - 2i) returns [1, 2, 3, 4];</p>
+<p>IFFT([10, -2 + 2i, -2, -2 - 2i]) returns [1, 2, 3, 4];</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

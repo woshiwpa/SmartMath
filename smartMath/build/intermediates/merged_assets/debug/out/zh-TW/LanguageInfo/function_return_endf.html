@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>程式開發科學計算器幫助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+</head>
+<body style="background-color:white;">
+<h2 style="color:blue">MFP編程語言function，return和endf語句：</h2>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+在MFP語言中Function語句是一個函數的開始。Function語句的語法為：</p>
+<p style="font-family:verdana;color:black;">
+Function name(parameter1, parameter2, parameter3, ...)</p>
+<p style="font-family:verdana;color:black;">
+。注意這裡"..."意味著在parameter3參數之後還可能有任意個數個參數。如果一個函數沒有可選參數，函數的聲明應該類似於</p>
+<p style="font-family:verdana;color:black;">
+Function abcd(para1, para2, para3, para4)</p>
+<p style="font-family:verdana;color:black;">
+。換句話說不能夠在參數列中有"..."。</p>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+如果一個函數有可選參數，可選參數的個數儲存在一個系統變數中，該系統變數名字叫做opt_argc。所有的可選參數作為一個陣列保存於系統變數opt_argv中。換句話說，第一個可選參數的值為opt_argv[0]，第二個為opt_argv[1]，以此類推。</p>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+一個函數可以返回一個任意類型的數值或者什麼都不返回。但使用者不用在Function語句中聲明返回值，MFP會自動處理返回值。</p>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+Return語句用於退出函數並返回數值。比如：</p>
+<p style="font-family:verdana;color:black;">
+Return "Hello word"&nbsp;&nbsp;&nbsp;&nbsp;// 返回字串"Hello word"</p>
+<p style="font-family:verdana;color:black;">
+或</p>
+<p style="font-family:verdana;color:black;">
+Return&nbsp;&nbsp;&nbsp;&nbsp;// 什麼都不返回</p>
+<p style="font-family:verdana;color:black;">
+。</p>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+Endf語句用於標記函數的結尾，該語句不接受任何參數。</p>
+</body>
+</html>

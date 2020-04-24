@@ -1,0 +1,1542 @@
+[
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_runonpc_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\runonpc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_settings_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\settings_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_delete_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\delete_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_pen_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_pen_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_help_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\help_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_settings.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\settings.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_setting_gear_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\setting_gear_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_scriptmngr_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\scriptmngr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_start.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\start.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_save_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\save_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_setting_gear_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\setting_gear_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_calc_integ.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\calc_integ.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_calc_assistant.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\calc_assistant.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_graph_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\graph_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_cameraime.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cameraime.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_scripteditor_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\scripteditor_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\xml_provider_paths.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\xml\\provider_paths.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_resize_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_resize_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_plus_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\plus_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_resize_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_resize_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_enter_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\enter_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_icon.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_resize_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_resize_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_integr_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\integr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_clean.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\clean.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_zoom_in_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_in_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_cameraime_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cameraime_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_place_holder_96.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_place_holder_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_toleft_land.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toleft_land.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_icon.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_enter_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\enter_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_enter_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\enter_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_am_input_method.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\am_input_method.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_redo_96.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_redo_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_help_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\help_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_math_photo_mgr.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\math_photo_mgr.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_settings_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\settings_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_erazer_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_erazer_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_graph_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\graph_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_settings_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\settings_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_settings_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\settings_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_zoom_fit_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_fit_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout-land_smart_calc.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout-land\\smart_calc.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_hide_keypad_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\hide_keypad_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_fingerpaint.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\fingerpaint.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_save.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\save.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_rotate_cw_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_cw_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_cmdline_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\cmdline_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_scriptmngr_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\scriptmngr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_inputkeyboard_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\inputkeyboard_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_tutorial_box.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\tutorial_box.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_delete_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_delete_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_move_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_move_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_inputkeyboard_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\inputkeyboard_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_hide_keypad_16.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\hide_keypad_16.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_graph_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\graph_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_unknown_file_icon.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\unknown_file_icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_scriptmngr_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\scriptmngr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_smartcalc_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\smartcalc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_cmdline_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\cmdline_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_smartcalc_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\smartcalc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_scriptmngr_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\scriptmngr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_set_paint_size.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\set_paint_size.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_inputkeyboard_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\inputkeyboard_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_calc_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\calc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_cmdline_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\cmdline_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_graph_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\graph_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_scripteditor_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\scripteditor_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_delete_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\delete_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_camera_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_camera_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_cpexample_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\cpexample_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_smartcalc_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\smartcalc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_crop_select_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_crop_select_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_runonpc_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\runonpc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_resize_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_resize_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_cmdline_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\cmdline_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_enter_16.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\enter_16.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_cmdline_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\cmdline_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_integr_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\integr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_scriptmngr_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\scriptmngr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_inputpad_cfg.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\inputpad_cfg.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_place_holder_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_place_holder_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_calc_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\calc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_toright_land.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toright_land.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_help_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\help_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_camera_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_camera_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_garbage_bin.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\garbage_bin.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_inputpadcfg_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\inputpadcfg_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_zoom_out_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_out_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_goto_line.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\goto_line.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_hide_keypad_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\hide_keypad_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_set_inputkey.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\set_inputkey.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_icon.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_add_inputkeys.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\add_inputkeys.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_scripteditor_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\scripteditor_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_color_spinner_item.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\color_spinner_item.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_inputpadcfg_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\inputpadcfg_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_smartcalc_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\smartcalc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_expr_ans_selection.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\expr_ans_selection.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_verify_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\verify_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_next_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\next_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_pen_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_pen_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_cmd_line_gui.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\cmd_line_gui.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_pen_96.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_pen_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_toleft_land_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toleft_land_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_move_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_move_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_undo_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_undo_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_inputpadcfg_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\inputpadcfg_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_enter_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\enter_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_redo_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_redo_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_chartmngr_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\chartmngr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_calc_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\calc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_bmp_file_icon.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\bmp_file_icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_cursorright.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cursorright.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_upper_folder_icon.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\upper_folder_icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_zoom_1_24.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_1_24.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_rotate_cw_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_cw_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_crop_select_96.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_crop_select_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_plot_xyzgraph.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\plot_xyzgraph.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_cpexample_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cpexample_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_redo_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_redo_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_camera_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_camera_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_inputkeyboard_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\inputkeyboard_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_resize_96.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_resize_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_erazer_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_erazer_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_keyboardime.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\keyboardime.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_file_manager.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\file_manager.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_graph_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\graph_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_inputpadcfg_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\inputpadcfg_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_inputpadcfg_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\inputpadcfg_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_main_panel.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\main_panel.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_quickhelp_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\quickhelp_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_cameraime_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cameraime_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_rotate_anticw_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_anticw_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_copy_examples.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\copy_examples.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_save_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\save_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_whats_new.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\whats_new.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_pen_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_pen_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_camera_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_camera_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_scriptmngr_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\scriptmngr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_recognize.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\recognize.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_help_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\help_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_integr_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\integr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_settings_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\settings_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_recognize_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\recognize_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_next_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\next_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout-xlarge-land_smart_calc.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout-xlarge-land\\smart_calc.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_chart_file_icon.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\chart_file_icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_cpexample_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\cpexample_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_inputkeyboard_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\inputkeyboard_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_zoom_out_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_out_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_rotate_anticw_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_anticw_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_toright_land_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toright_land_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_calc_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\calc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout-xlarge_smart_calc.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout-xlarge\\smart_calc.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_zoom_fit_96.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_zoom_fit_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_graph_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\graph_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_move_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_move_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_zoom_fit_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_fit_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_inputpadcfg_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\inputpadcfg_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_config_xyzgraph.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\config_xyzgraph.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_black_start_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\black_start_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_inputpadhide.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\inputpadhide.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_zoom_1_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_1_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_keyboardime_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\keyboardime_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_place_holder_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_place_holder_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_script_file_icon.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\script_file_icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_runonpc_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\runonpc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_delete_16.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\delete_16.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_erazer_96.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_erazer_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_help_info.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\help_info.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_scroll_message.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\scroll_message.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_cpexample_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\cpexample_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout-small_smart_calc.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout-small\\smart_calc.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_zoom_out_24.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_out_24.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_convert_unit.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\convert_unit.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_graph_plotter_chooser.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\graph_plotter_chooser.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_chartmngr_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\chartmngr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_fingerpaint_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\fingerpaint_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_setting_gear_24.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\setting_gear_24.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_integr_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\integr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_save_16.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\save_16.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_scripteditor_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\scripteditor_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_inputpadcfg_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\inputpadcfg_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_help_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\help_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_plus.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\plus.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_finger_paint.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\finger_paint.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_help_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\help_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_scriptmngr_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\scriptmngr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_smartcalc_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\smartcalc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_cpexample_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cpexample_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_zoom_fit_24.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_fit_24.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_smartcalc_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\smartcalc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_inputkeyboard_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\inputkeyboard_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_rotate_cw_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_cw_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_save_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\save_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_enter.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\enter.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_smartcalc_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\smartcalc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_garbage_bin_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\garbage_bin_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_cursorleft.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cursorleft.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_move_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_move_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_recognize_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\recognize_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_smartcalc_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\smartcalc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_toright_land_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toright_land_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_zoom_fit_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_zoom_fit_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_keyboardime_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\keyboardime_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_delete_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_delete_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_graph_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\graph_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_cpexample_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\cpexample_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_scripteditor_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\scripteditor_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_start_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_start_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_camera_96.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_camera_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_delete_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_delete_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_graph_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\graph_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_delete_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\delete_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_quickhelp_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\quickhelp_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_integr_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\integr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_toright.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toright.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_calc_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\calc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_fingerpaint_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\fingerpaint_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_integr_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\integr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_inputkeyboard_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\inputkeyboard_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_undo_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_undo_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_redo_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_redo_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_start_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_start_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_toright_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toright_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_inputkeyboard_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\inputkeyboard_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_zoom_1_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_1_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_start_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_start_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_scripteditor_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\scripteditor_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_tab_indicator_view.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\tab_indicator_view.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_place_holder_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_place_holder_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_edit_script.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\edit_script.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_scripteditor_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\scripteditor_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_chartmngr_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\chartmngr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_file_rename.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\file_rename.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_rotate_anticw_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_anticw_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_rotate_cw_96.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_cw_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_save_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\save_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_zoom_in_24.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_in_24.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_cpexample_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\cpexample_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_rotate_anticw_96.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_anticw_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_help_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\help_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_chartmngr_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\chartmngr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_move_96.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_move_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_inputpad_cfg_chooser.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\inputpad_cfg_chooser.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_help_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\help_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_place_holder_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_place_holder_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_undo_96.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_undo_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_integr_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\integr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_smartcalc_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\smartcalc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_integr_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\integr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_cpexample_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\cpexample_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_integr_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\integr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_startplot_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\startplot_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_calc_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\calc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_scripteditor_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\scripteditor_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_chartmngr_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\chartmngr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_calc_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\calc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_delete_96.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_delete_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_cursorright_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cursorright_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_inputpadhide_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\inputpadhide_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_chartmngr_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\chartmngr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_config_3dexprgraph.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\config_3dexprgraph.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_runonpc_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\runonpc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_scriptmngr_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\scriptmngr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_config_2dexprgraph.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\config_2dexprgraph.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_xyzcurve_def.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\xyzcurve_def.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_smart_calc.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\smart_calc.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_background.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\background.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_start_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\start_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_undo_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_undo_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_runonpc_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\runonpc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_verify.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\verify.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_calc_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\calc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_chartmngr_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\chartmngr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_camera_view.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\camera_view.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_msg_box_show_once.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\msg_box_show_once.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_runonpc_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\runonpc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_toleft_land_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toleft_land_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_forward.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\forward.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_graph_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\graph_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_startplot_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\startplot_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_black_start_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\black_start_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_settings_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\settings_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_leftright_background.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\leftright_background.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_convebtn_background.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\convebtn_background.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_inputpadcfg_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\inputpadcfg_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_cursorleft_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cursorleft_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_quick_recog.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\quick_recog.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_cmdline_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\cmdline_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_inputpadcfg_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\inputpadcfg_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_new_file_generator.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\new_file_generator.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_next_16.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\next_16.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout-small-land_smart_calc.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout-small-land\\smart_calc.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_scripteditor_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\scripteditor_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_chartmngr_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\chartmngr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_cursorleft_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cursorleft_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_cmdline_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cmdline_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_zoom_in_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_in_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_rotate_cw_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_cw_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_btn_background.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\btn_background.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_cmdline_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cmdline_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_startplot.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\startplot.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_chartmngr_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\chartmngr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_undo_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_undo_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_zoom_1_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_1_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_delete_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_delete_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout-land_inputpad_cfg.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout-land\\inputpad_cfg.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_forward_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\forward_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_settings_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\settings_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-ldpi_scripteditor_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-ldpi\\scripteditor_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_inputpadcfg_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\inputpadcfg_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_inputkeyboard_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\inputkeyboard_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_folder_icon.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\folder_icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_cursorright_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\cursorright_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_zoom_in_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_in_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_toleft_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toleft_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout-large-land_smart_calc.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout-large-land\\smart_calc.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_zoom_fit_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_zoom_fit_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_delete_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\delete_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\anim_clockwise_rotation.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\anim\\clockwise_rotation.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_inputpadhide_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\inputpadhide_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_runonpc_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\runonpc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_zoom_fit_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_fit_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_runonpc_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\runonpc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_settings_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\settings_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_setting_gear_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\setting_gear_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_black_start_16.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\black_start_16.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_start_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_start_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_start_96.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_start_96.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_scriptmngr_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\scriptmngr_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_chartmngr_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\chartmngr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_settings_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\settings_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_integr_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\integr_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_smc_record_list.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\smc_record_list.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_const_value_child.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\const_value_child.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_zoom_fit_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_zoom_fit_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_cpexample_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\cpexample_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_settings_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\settings_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_quickhelp.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\quickhelp.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_numop_sminput.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\numop_sminput.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_verify_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\verify_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_enter_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\enter_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_crop_select_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_crop_select_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_runonpc_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\runonpc_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout-large_smart_calc.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout-large\\smart_calc.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_erazer_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_erazer_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_help_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\help_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_calc_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\calc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_crop_select_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_crop_select_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_hide_keypad_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\hide_keypad_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_read_constants.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\read_constants.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_crop_select_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_crop_select_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_start_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\start_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_erazer_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_erazer_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_redo_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_redo_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_rotate_setting.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\rotate_setting.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_cmdline_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\cmdline_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_plot_xygraph.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\plot_xygraph.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_help_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\help_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_forward_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\forward_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_pen_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_pen_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_cmdline_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\cmdline_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_cpexample_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\cpexample_prog.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_icon.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_calc_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\calc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_next_128.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\next_128.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_delete_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\delete_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_connect_pc.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\connect_pc.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_icon.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-mdpi\\icon.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_xycurve_def.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\xycurve_def.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_inputkeyboard_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\inputkeyboard_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\layout_image_text.xml.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\layout\\image_text.xml"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_delete.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\delete.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_black_start_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\black_start_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_runonpc_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\runonpc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_save_xlarge.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\save_xlarge.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_toleft.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\toleft.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_zoom_fit_48.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_zoom_fit_48.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_smartcalc_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-xhdpi\\smartcalc_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_zoom_out_32.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\zoom_out_32.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_mr_rotate_anticw_64.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\mr_rotate_anticw_64.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_graph_prog_large.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable-hdpi\\graph_prog_large.png"
+    },
+    {
+        "merged": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\res\\merged\\release\\drawable_scriptmngr_prog.png.flat",
+        "source": "D:\\tmp\\git_repo\\SmartMath\\smartMath\\src\\main\\res\\drawable\\scriptmngr_prog.png"
+    }
+]

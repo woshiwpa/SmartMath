@@ -1,0 +1,1256 @@
+<html>
+<head>
+<title>可編程科學計算器幫助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">可編程科學計算器幫助：所有函數</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函數名</th>
+<th>函數幫助信息</th>
+</tr>
+<tr>
+<td><center>abs</center></td>
+<td><p>abs(1) :</p>
+<p>abs(x)返回復數x的模或者實數x的絕對值。</p>
+</td>
+</tr>
+<tr>
+<td><center>acos</center></td>
+<td><p>acos(1) :</p>
+<p>acos(x)返回x的反余弦值，註意x可以為復數。</p>
+</td>
+</tr>
+<tr>
+<td><center>acosd</center></td>
+<td><p>acosd(1) :</p>
+<p>acosd(x)返回基於角度的x的反余弦值。</p>
+</td>
+</tr>
+<tr>
+<td><center>acosh</center></td>
+<td><p>acosh(1) :</p>
+<p>函數acosh(x)為雙曲余弦函數的反函數。</p>
+</td>
+</tr>
+<tr>
+<td><center>adj</center></td>
+<td><p>adj(1) :</p>
+<p>函數程式adj(x)返回2維方陣x的伴隨陣列。</p>
+</td>
+</tr>
+<tr>
+<td><center>alloc_array</center></td>
+<td><p>alloc_array(1...) :</p>
+<p>alloc_array(x...)返回一個新分配的矩陣，其大小由參數決定。所有的參數都必須為正整數。</p>
+<p>alloc_array(2) :</p>
+<p>alloc_array(x, y)返回一個新分配的矩陣，其大小由參數x決定，參數x或者是一批正整數，或者是一個正整數數列。參數y是矩陣中所有元素的初始值，註意y參數可省略，如果省略，所有元素被初始化為0。</p>
+</td>
+</tr>
+<tr>
+<td><center>and</center></td>
+<td><p>and(1...) :</p>
+<p>and(x...)接受不少於1個的任意個數的參數，返回這些參數的邏輯與值。如果某一個參數不是布爾類型，將會被自動轉換為布爾類型。</p>
+</td>
+</tr>
+<tr>
+<td><center>angle</center></td>
+<td><p>angle(1) :</p>
+<p>angle(x)返回復數x基於弧度的幅角值。</p>
+</td>
+</tr>
+<tr>
+<td><center>asin</center></td>
+<td><p>asin(1) :</p>
+<p>asin(x)返回x的反正弦值，註意x可以為復數。</p>
+</td>
+</tr>
+<tr>
+<td><center>asind</center></td>
+<td><p>asind(1) :</p>
+<p>asind(x)返回基於角度的x的反正弦值。</p>
+</td>
+</tr>
+<tr>
+<td><center>asinh</center></td>
+<td><p>asinh(1) :</p>
+<p>函數asinh(x)為雙曲正弦函數的反函數。</p>
+</td>
+</tr>
+<tr>
+<td><center>atan</center></td>
+<td><p>atan(1) :</p>
+<p>atan(x)返回x的反正切值，註意x可以為復數。</p>
+</td>
+</tr>
+<tr>
+<td><center>atand</center></td>
+<td><p>atand(1) :</p>
+<p>atand(x)返回基於角度的x的反正切值。</p>
+</td>
+</tr>
+<tr>
+<td><center>atanh</center></td>
+<td><p>atanh(1) :</p>
+<p>函數atanh(x)為雙曲正切函數的反函數。</p>
+</td>
+</tr>
+<tr>
+<td><center>avg</center></td>
+<td><p>avg(0...) :</p>
+<p>函數avg(…)返回任意個數參數的平均值。</p>
+</td>
+</tr>
+<tr>
+<td><center>cd</center></td>
+<td><p>cd(1) :</p>
+<p>change_dir(path)（別名cd(path)）將當前路徑變為字串路徑path。如果成功，返回true，否則返回false。例子包括change_dir("D:\\Windows") (Windows)和cd("/") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>ceil</center></td>
+<td><p>ceil(1) :</p>
+<p>ceil(x), x是浮點數，返回不小於x的最小整數。</p>
+<p>ceil(2) :</p>
+<p>ceil(x,y)，x是浮點數，y是非負整數，返回不小於x的小數點後面保留y位有效數字的最小數值。</p>
+</td>
+</tr>
+<tr>
+<td><center>change_dir</center></td>
+<td><p>change_dir(1) :</p>
+<p>change_dir(path)（別名cd(path)）將當前路徑變為字串路徑path。如果成功，返回true，否則返回false。例子包括change_dir("D:\\Windows") (Windows)和cd("/") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>clone</center></td>
+<td><p>clone(1) :</p>
+<p>clone(source_value)復制輸入參數source_value並返回source_value的拷貝。輸入參數可以是任何數據類型，包括字串，數，復數以及陣列。比如，如果變量a等於[1,2]，用戶執行語句variable b = clone(a)就會得的b等於[1,2]。但是這時候b和a是兩個不同的數據。如果用戶改變a的值，比如，設置a[0]等於3，a將會變成[3,2]但是b依然是[1，2]。</p>
+</td>
+</tr>
+<tr>
+<td><center>cofactor</center></td>
+<td><p>cofactor(1) :</p>
+<p>函數程式cofactor(x)返回2維方陣x的余因子陣列。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv</center></td>
+<td><p>conv(2) :</p>
+<p>conv(input_a, inputb)返回input_a和input_b的卷積。Input_a和input_b要麼都是一維向量，要麼都是二維矩陣。當前本函數程式僅僅支持一維和二維卷積，比如：</p>
+<p>conv([4,8,2,9],[5,3,8,9,6,7,8]) = [20, 52, 66, 151, 139, 166, 181, 132, 79, 72]</p>
+<p>conv([[4,8,2,9],[8,6,7,9],[2,2,8,-4]],[[-5,i,7],[0.6,8,4]]) = [[-20, -40 + 4 * i, 18 + 8 * i, 11 + 2 * i, 14 + 9 * i, 63], [-37.6, 6.8 + 8 * i, 102.2 + 6 * i, 50.4 + 7 * i, 129 + 9 * i, 99], [-5.2, 57.6 + 2 * i, 58.2 + 2 * i, 119.4 + 8 * i, 156 - 4 * i, 8], [1.2, 17.2, 28.8, 69.6, 0, -16]]</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_bin_to_dec</center></td>
+<td><p>conv_bin_to_dec(1) :</p>
+<p>conv_bin_to_dec(x)將一個二進制的非負數或代表該數的字串x（x可以為浮點數，也可以為整數）轉換為一個十進制的數值。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_bin_to_hex</center></td>
+<td><p>conv_bin_to_hex(1) :</p>
+<p>conv_bin_to_hex(x)將一個二進制的非負數或代表該數的字串x（x可以為浮點數，也可以為整數）轉換為一個代表16進制數的字串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_bin_to_oct</center></td>
+<td><p>conv_bin_to_oct(1) :</p>
+<p>conv_bin_to_oct(x)將一個二進制的非負數或代表該數的字串x（x可以為浮點數，也可以為整數）轉換為一個代表八進制數的字串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_dec_to_bin</center></td>
+<td><p>conv_dec_to_bin(1) :</p>
+<p>conv_dec_to_bin(x)將一個十進制的非負數或代表該數的字串x（x可以為浮點數，也可以為整數）轉換為一個代表二進制數的字串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_dec_to_hex</center></td>
+<td><p>conv_dec_to_hex(1) :</p>
+<p>conv_dec_to_hex(x)將一個十進制的非負數或代表該數的字串x（x可以為浮點數，也可以為整數）轉換為一個代表16進制數的字串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_dec_to_oct</center></td>
+<td><p>conv_dec_to_oct(1) :</p>
+<p>conv_dec_to_oct(x)將一個十進制的非負數或代表該數的字串x（x可以為浮點數，也可以為整數）轉換為一個代表八進制數的字串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_hex_to_bin</center></td>
+<td><p>conv_hex_to_bin(1) :</p>
+<p>conv_hex_to_bin(x)將一個16進制的非負數或代表該數的字串x（x可以為浮點數，也可以為整數）轉換為一個代表二進制數的字串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_hex_to_dec</center></td>
+<td><p>conv_hex_to_dec(1) :</p>
+<p>conv_hex_to_dec(x)將一個16進制的非負數或代表該數的字串x（x可以為浮點數，也可以為整數）轉換為一個十進制的數值。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_hex_to_oct</center></td>
+<td><p>conv_hex_to_oct(1) :</p>
+<p>conv_hex_to_oct(x)將一個16進制的非負數或代表該數的字串x（x可以為浮點數，也可以為整數）轉換為一個代表八進制數的字串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_ints_to_str</center></td>
+<td><p>conv_ints_to_str(1) :</p>
+<p>conv_ints_to_str(int_or_array)將一個整數或者一組整數轉換成一個Unicode字串。如果只有一個整數，返回的字串只包含一個Unicode字符，否則，返回字串的字符數目和int_or_array中的元素數目一致。如果需要轉換的整數是負數或者超出了Unicode字符集的定義範圍，則被轉換成整數0所對應的Unicode字符。示例包括conv_ints_to_str([20320, 22909, 25105, 22909, 22823, 23478, 22909])返回"你好我好大家好"，以及conv_ints_to_str(20320)返回"你"。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_oct_to_bin</center></td>
+<td><p>conv_oct_to_bin(1) :</p>
+<p>conv_oct_to_bin(x)將一個八進制的非負數或代表該數的字串x（x可以為浮點數，也可以為整數）轉換為一個代表二進制數的字串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_oct_to_dec</center></td>
+<td><p>conv_oct_to_dec(1) :</p>
+<p>conv_oct_to_dec(x)將一個八進制的非負數或代表該數的字串x（x可以為浮點數，也可以為整數）轉換為一個十進制的數值。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_oct_to_hex</center></td>
+<td><p>conv_oct_to_hex(1) :</p>
+<p>conv_oct_to_hex(x)將一個八進制的非負數或代表該數的字串x（x可以為浮點數，也可以為整數）轉換為一個代表16進制數的字串。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_str_to_ints</center></td>
+<td><p>conv_str_to_ints(1) :</p>
+<p>conv_str_to_ints(str)將一個Unicode字串轉換成一個整數數組。通常，一個Unicode字符對應一個整數（但也有可能對應兩個整數，如果該Unicode字符超出了UTF-16字符集的範圍。但這種情況很少出現）。如果字串是空的，則返回一個空數組。一個示例為conv_str_to_ints("你好我好大家好")返回[20320, 22909, 25105, 22909, 22823, 23478, 22909]。</p>
+</td>
+</tr>
+<tr>
+<td><center>convert_unit</center></td>
+<td><p>convert_unit(3) :</p>
+<p>函數convert_unit(value, from_unit, to_unit)將基於某一個單位的數值轉換為基於另外一個單位的數值。第一個參數是將要轉換的數值，第二個參數是將被轉換的單位（單位是一個對大小寫敏感的字串），第三個參數是轉換後的單位（單位是一個對大小寫敏感的字串）。比如，convert_unit(23.71, "m", "km")。</p>
+<p>本函數支持以下單位：</p>
+<p>1. 長度單位: "um" (微米), "mm" (毫米), "cm" (厘米), "m" (米), "km" (公里), "in" (英寸), "ft" (英尺), "yd" (碼), "mi" (英里), "nmi" (海浬), "AU" (天文單位), "ly" (光年), "pc" (秒差距);</p>
+<p>2. 面積單位: "mm2" (平方毫米), "cm2" (平方厘米), "m2" (平方米), "ha" (公頃), "km2" (平方公里), "sq in" (平方英寸), "sq ft" (平方英尺), "sq yd" (平方碼), "ac" (英畝), "sq mi" (平方英里);</p>
+<p>3. 體積單位: "mL" (毫升), "L" (升), "m3" (立方米), "cu in" (立方英寸), "cu ft" (立方英尺), "cu yd" (立方碼), "km3" (立方公里), "fl oz(Imp)" (液盎司(英制)), "pt(Imp)" (品脫(英制)), "gal(Imp)" (加侖(英制)), "fl oz(US)" (液盎司(美制)), "pt(US)" (品脫(美制)), "gal(US)" (加侖(美制));</p>
+<p>4. 質量單位: "ug" (微克), "mg" (毫克), "g" (克), "kg" (千克), "t" (噸), "oz" (盎司), "lb" (磅), "jin" (市斤), "jin(HK)" (斤(香港)), "jin(TW)" (臺斤);</p>
+<p>5. 速度單位: "m/s" (米每秒), "km/h" (千米每小時), "ft/s" (英尺每秒), "mph" (英里每小時), "knot" (節);</p>
+<p>6. 時間單位: "ns" (納秒), "us" (微秒), "ms" (毫秒), "s" (秒), "min" (分鐘), "h" (小時), "d" (天), "wk" (禮拜), "yr" (年);</p>
+<p>7. 力單位: "N" (牛頓), "kgf" (千克力), "lbF" (磅力);</p>
+<p>8. 壓強單位: "Pa" (帕斯卡), "hPa" (百帕), "kPa" (千帕), "MPa" (兆帕), "atm" (大氣壓), "psi" (每平方英寸上受到的磅力壓力), "Torr" (毫米汞柱);</p>
+<p>9. 能量單位: "J" (焦耳), "kJ" (千焦), "MJ" (兆焦), "kWh" (千瓦時), "cal" (卡路里), "kcal" (千卡), "BTU" (英熱單位);</p>
+<p>10. 功率單位: "W" (瓦特), "kW" (千瓦), "MW" (兆瓦), "cal/s" (卡路里每秒), "BTU/h" (英熱單位每小時), "hp" (馬力);</p>
+<p>11. 溫度單位: "0C" (攝氏度), "0F" (華氏度), "K" (開氏溫標);</p>
+</td>
+</tr>
+<tr>
+<td><center>copy_file</center></td>
+<td><p>copy_file(3) :</p>
+<p>copy_file(source, destination, replace_exist)函數程式拷貝位於字串source路徑的檔案或檔案目錄到位於字串destination路徑的檔案或檔案目錄。如果第三個參數，replace_exist，是true，那麼如果目標檔案已經存在，它將會被源檔案（或者源檔案目錄中的對應檔案）替換。註意第三個參數可以省略，它的缺省值為false。例子包括copy_file("c:\\temp\\try1", "D:\\", true) (Windows)和copy_file("/mnt/sdcard/testfile.txt", "./testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>cos</center></td>
+<td><p>cos(1) :</p>
+<p>cos(x)返回x的余弦值，註意x可以為復數。</p>
+</td>
+</tr>
+<tr>
+<td><center>cosd</center></td>
+<td><p>cosd(1) :</p>
+<p>cosd(x)返回基於角度的x的余弦值。</p>
+</td>
+</tr>
+<tr>
+<td><center>cosh</center></td>
+<td><p>cosh(1) :</p>
+<p>函數cosh(x)為雙曲余弦函數。</p>
+</td>
+</tr>
+<tr>
+<td><center>create_file</center></td>
+<td><p>create_file(2) :</p>
+<p>create_file(path, is_folder)創建一個檔案（如果is_folder是false或者不存在）或者檔案 目錄（如果if_folder是true）。如果這個基於字串的路徑path的上級目錄不存在，不存在的上級目錄將會被創建。如果檔案能夠被創建，這個函數程式返回true，否則返回false。例子包括create_file("c:\\temp\\try1", true) (Windows)和create_file("testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>delete_file</center></td>
+<td><p>delete_file(2) :</p>
+<p>delete_file(path, delete_children_in_folder)刪除一個位於字串path的檔案或者檔案目錄。如果是一個目錄且第二個參數delete_children_in_folder是true，目錄中的所以檔案和子目錄將會被刪除。註意第二個參數可以省略，它的缺省值是false。如果刪除成功，本函數程式返回true，否則返回false。例子包括delete_file("c:\\temp\\try1", true) (Windows)和delete_file("testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>det</center></td>
+<td><p>det(1) :</p>
+<p>det(x)計算2維方陣x的行列式值。</p>
+</td>
+</tr>
+<tr>
+<td><center>deter</center></td>
+<td><p>deter(1) :</p>
+<p>deter(x)計算2維方陣x的行列式值。</p>
+</td>
+</tr>
+<tr>
+<td><center>dir</center></td>
+<td><p>dir(1) :</p>
+<p>print_file_list(path) (别名ls(path)或者dir(path))函數程式和Windows平臺上的dir命令以及Linux平臺上的ls命令類似。它打印出位於字串path路徑的档案或者目錄中的所有子档案和子目錄的信息。它返回打印的條目的個數。如果不存在一個檔案或者目錄對應於path路徑，它返回-1。註意參數path是可以省略的。它的缺省值是當前目錄。例子包括dir("c:\\temp\\try1") (Windows)和ls("../testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>dprod</center></td>
+<td><p>dprod(2) :</p>
+<p>函數dprod用於計算兩個向量 [x1, x2, ... xn]和[y1, y2, ... yn]的點乘值。</p>
+</td>
+</tr>
+<tr>
+<td><center>eig</center></td>
+<td><p>eig(1) :</p>
+<p>eig(A)計算2維方陣A的特征向量和特征值。這個函數程式返回一個包含兩個成員的列表。第一個成員是特征向量陣列，每一列是一個特征向量。第二個成員是一個對角陣列，每一個對角線元素是一個特征值。註意運算這個程式非常耗費內存和CPU資源，如果在移動設備上運行，征列A的尺寸最好不要超過6*6，如果在電腦上運行，最好不要超過8*8，否則可能造成內存不足而程序崩潰或者運行很長時間而沒有結果。</p>
+<p>eig(2) :</p>
+<p>eig(A, B)計算2維方陣A相對於同樣尺寸的方陣B的特征向量和特征值，也就是Av = lambda * Bv，在這裏，。lambda是一個特征值，v是一個特征向量。第二個參數，B，可以省略，其缺省值為I陣列。這個函數程式返回一個包含兩個成員的列表。第一個成員是特征向量陣列，每一列是一個特征向量。第二個成員是一個對角陣列，每一個對角線元素是一個特征值。註意運算這個程式非常耗費內存和CPU資源，如果在移動設備上運行，征列A的尺寸最好不要超過6*6，如果在電腦上運行，最好不要超過8*8，否則可能造成內存不足而程序崩潰或者運行很長時間而沒有結果。</p>
+</td>
+</tr>
+<tr>
+<td><center>evaluate</center></td>
+<td><p>evaluate(1...) :</p>
+<p>evaluate(expr_string,var_string1,var_value1,var_string2,var_value2, ...) 返回當基於字串的變數var_string1等於var_value1，var_string2等於var_value2，...時，基於字串的表達式expr_string的值。註意變數var_string1，var_string2，...的值可以為任意類型。變數的數目可以為0，也就是說，evaluate("3+2")是合法的。</p>
+</td>
+</tr>
+<tr>
+<td><center>exp</center></td>
+<td><p>exp(1) :</p>
+<p>exp(x)返回自然對數e的x次方，x可以為實數或者虛數。</p>
+</td>
+</tr>
+<tr>
+<td><center>eye</center></td>
+<td><p>eye(1) :</p>
+<p>eye(x)返回正整數x乘x的2維方陣I。註意表達式eye(0)返回常數1。</p>
+<p>eye(2) :</p>
+<p>eye(x,y)返回y（y為正整數）維方陣I，註意每一維長度均為正整數x。</p>
+</td>
+</tr>
+<tr>
+<td><center>fact</center></td>
+<td><p>fact(1) :</p>
+<p>函數fact(x)計算非負整數x的階乘。</p>
+</td>
+</tr>
+<tr>
+<td><center>fclose</center></td>
+<td><p>fclose(1) :</p>
+<p>fclose(fd)關閉文件號fd所對應的檔案。如果檔案號不存在，返回-1，否則返回0。</p>
+</td>
+</tr>
+<tr>
+<td><center>feof</center></td>
+<td><p>feof(1) :</p>
+<p>feof(fd)用于确定是否已经到达档案号为fd的读模式档案的末尾。如果是，返回true，否则返回false。如果档案号不合法，抛出异常。</p>
+</td>
+</tr>
+<tr>
+<td><center>FFT</center></td>
+<td><p>FFT(1...) :</p>
+<p>FFT(a, ...)返回對一個數值向量作快速傅立葉變換後的值。註意數值向量中數值的個數必須是2的整數次方。如果參數a是一個數值序列，則本函數程式只可能擁有一個參數，返回值為對序列a[0], a[1], ..., a[N-1]作快速傅立葉變換的返回值。如果參數a僅僅是一個實數或者虛數，則本函數程式最少包含2個參數，而返回序列a， optional_params[0]， ...， optional_params[number_of_optional_params - 2]， optional_params[number_of_optional_params - 1]快速傅立葉變換後的值。註意返回值總是一個數組。</p>
+<p>函數程式例子：</p>
+<p>FFT(1, 2, 3, 4)返回[10, -2+2i, -2, -2 - 2i]；</p>
+<p>FFT([1, 2, 3, 4])同樣也是返回[10, -2+2i, -2, -2 - 2i]；</p>
+</td>
+</tr>
+<tr>
+<td><center>floor</center></td>
+<td><p>floor(1) :</p>
+<p>floor(x)，x是浮點數，返回不大於x的最大整數。</p>
+<p>floor(2) :</p>
+<p>floor(x,y)，x是浮點數，y是非負整數，返回不大於x的小數點後面保留y位有效數字的最大數值。</p>
+</td>
+</tr>
+<tr>
+<td><center>fopen</center></td>
+<td><p>fopen(2) :</p>
+<p>fopen(path, mode)打开位于path路径的档案并返回档案号以进行后续读写操作。它和C以及Matlab中的同名函数程式用法相似。但它仅支持"r"、"a"、"w"、"rb"、"ab"和"wb"六种读写模式。例子包括fopen("C:\\Temp\\Hello.dat", "ab") (Windows)和fopen("./hello.txt", "r") (Android)。</p>
+<p>fopen(3) :</p>
+<p>fopen(path, mode, encoding)用字符編碼encoding打開位於path路徑的檔案並返回檔案號以進行後續讀寫操作。由於只有文本檔案支持字符編碼，參數mode只能為"r"、"a"和"w"3種讀寫模式。例子包括fopen("C:\\Temp\\Hello.txt", "a", "LATIN-1") (Windows)和fopen("./hello.txt", "r", "UTF-8") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>fprintf</center></td>
+<td><p>fprintf(2...) :</p>
+<p>printf(format_string, ...)，sprintf(format_string, ...)和fprintf(fd, format_string, ...)和C/C++中的对应函数程式工作方式相似。这些函数程式通过format_string和其后的数值参数构造出一个新的字串，printf将字串打印到标准输出，sprintf将字串作为返回值返回，fprintf则将字串输出到档案号为fd的文本档案。字串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字串（%c和%s）等等。用户可以在C语言的帮助手册中找到format_string的构造方法。例如，printf("Hello world!%f", 3.14)将会打印输出"Hello world!3.140000"，而sprintf("%c%d", "A", 9)则返回"A9"（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>fread</center></td>
+<td><p>fread(4) :</p>
+<p>fread(fd, buffer, from, length)從檔案（檔案號fd）中讀取length個字節數據，並把讀出的數據保存在數組buffer中（從buffer的索引from開始保存）。註意from和length必須非負，並且from+length必須不比buffer的容量大。參數from和length可以同時省略。如果它們被省略，意味著fread讀取整個buffer容量的字節數據並保存在整個buffer中。Buffer也可以省略，如果buffer省略，fread讀取一個字節並返回。如果fread在讀取之前發現已經到達檔案末尾，則返回-1，否則返回讀取字節的個數（如果buffer不省略）。如果檔案不存在或非法或不可以訪問，將會拋出異常。例子包括fread(1)、fread(2, byte_buffer)以及fread(2, byte_buffer, 3, 7)。</p>
+</td>
+</tr>
+<tr>
+<td><center>freadline</center></td>
+<td><p>freadline(1) :</p>
+<p>freadline(fd)讀取文本檔案（檔案號是fd）的一行。如果freadline在讀取之前發現已經到達檔案末尾，它返回NULL。否則，它返回基於字串的這一行的內容，但不包括結尾的換行符。</p>
+</td>
+</tr>
+<tr>
+<td><center>fscanf</center></td>
+<td><p>fscanf(2) :</p>
+<p>scanf(format_string)，sscanf(input_from, format_string)和fscanf(fd, format_string)和C/C++中的對應函數程式工作方式相似。scanf讀取用戶的一行輸入，sscanf讀取字串input_from，fscanf從檔案（檔案號fd）中讀取檔案內容。字串format_string支持輸入整數（%d、%i、%x等），浮點數（%e、%f等），字符和字串（%c和%s）等等。用戶可以在C語言的幫助文檔中找到format_string的構造方法。但是，和C語言有所不同，MFP中的這些函數程式不需要輸入用於存儲讀取數值的參數。所有的讀取的數值將會保存在一個數組中作為返回值返回。比如，sscanf("3Hello world!", "%d%c%c%s")將會返回[3, "H", "e", "llo"]（註意MFP不支持單一字符數據類型，所以單一的字符將會存儲為一個只包括一個字符的字串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>fwrite</center></td>
+<td><p>fwrite(4) :</p>
+<p>fwrite(fd, buffer, from, length)向檔案（檔案號fd）中寫入length個字節數據。這些字節數據保存在數組buffer中（從buffer的索引from開始）。註意from和length必須非負，並且from+length必須不比buffer的容量大。參數from和length可以同時省略。如果它們被省略，意味著fwrite寫入整個buffer的字節數據。Buffer也可以是一個單獨的字節，在這種情況下fwrite僅寫入一個字節的數據。如果檔案不存在或非法或不可以訪問，將會拋出異常。例子包括fwrite(1, 108)、fwrite(2, byte_buffer)以及fwrite(2, byte_buffer, 3, 7)。</p>
+</td>
+</tr>
+<tr>
+<td><center>gavg</center></td>
+<td><p>gavg(0...) :</p>
+<p>函數gavg(…)返回任意個數參數的幾何平均數值。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_absolute_path</center></td>
+<td><p>get_absolute_path(1) :</p>
+<p>get_absolute_path(fd_or_path)返回檔案號fd_or_path（這裏fd_or_path是一個整數）或者相對路徑為fd_or_path（這裏fd_or_path是一個字串）所對應的檔案的絕對路徑字串。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_canonical_path</center></td>
+<td><p>get_canonical_path(1) :</p>
+<p>get_canonical_path(fd_or_path)返回檔案號fd_or_path（這裏fd_or_path是一個整數）或者相對路徑為fd_or_path（這裏fd_or_path是一個字串）所對應的檔案的標準路徑（不依賴符號鏈接的絕對路徑）字串。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_constant</center></td>
+<td><p>get_constant(2) :</p>
+<p>函數程式get_constant(const_name, n)返回一個由區分大小寫的字符串const_name所對應的常數值，返回的數值將會四舍五入後保留小數點後面n位有效數值，這裏n為非負整數並且可以省略。如果n被省略，返回值將不會被四舍五入處理。本函數程式支持以下常數：</p>
+<p>1. 圓周率 (const_name == "pi");</p>
+<p>2. 自然對數 (const_name == "e");</p>
+<p>3. 真空中的光速 [m/s] (const_name == "light_speed_in_vacuum");</p>
+<p>4. 萬有引力常數 [m**3/kg/(s**2)] (const_name == "gravitational_constant");</p>
+<p>5. 普朗克常數 [J*s] (const_name == "planck_constant");</p>
+<p>6. 磁常數（真空磁導率） [N/(A**2)] (const_name == "magnetic_constant");</p>
+<p>7. 電常數（真空電容率） [F/m] (const_name == "electric_constant");</p>
+<p>8. 基本電荷 [c] (const_name == "elementary_charge_constant");</p>
+<p>9. 亞佛加厥常數 [1/mol] (const_name == "avogadro_constant");</p>
+<p>10. 法拉第常數 [C/mol] (const_name == "faraday_constant");</p>
+<p>11. 氣體常數 [J/mol/K] (const_name == "molar_gas_constant");</p>
+<p>12. 玻茲曼常量 [J/K] (const_name == "boltzman_constant");</p>
+<p>13. 標準重力 [m/(s**2)] (const_name == "standard_gravity");</p>
+<p>例如，如果用戶輸入get_constant("pi", 4)，結果將會是3.1416；如果用戶輸入get_constant("pi", 8)，結果將會是3.14159265；如果用戶輸入get_constant("pi", 0)，將會得到3，如果用戶輸入get_constant("pi")返回值將是3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 （小數點後有100位數字），這個數值就是本軟體內部所使用的圓周率數值。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_day_of_month</center></td>
+<td><p>get_day_of_month(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分別返回時標timestamp所對應的年，月，本年中的第幾天，本月中的第幾天，本星期中的第幾天（禮拜天是第0天，禮拜一是第一天，...），小時，分鐘，秒鐘和毫秒。時標是時標所表示的時刻和1970年1月1日午夜（UTC）的毫秒數時間差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是禮拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_day_of_week</center></td>
+<td><p>get_day_of_week(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分別返回時標timestamp所對應的年，月，本年中的第幾天，本月中的第幾天，本星期中的第幾天（禮拜天是第0天，禮拜一是第一天，...），小時，分鐘，秒鐘和毫秒。時標是時標所表示的時刻和1970年1月1日午夜（UTC）的毫秒數時間差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是禮拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_day_of_year</center></td>
+<td><p>get_day_of_year(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分別返回時標timestamp所對應的年，月，本年中的第幾天，本月中的第幾天，本星期中的第幾天（禮拜天是第0天，禮拜一是第一天，...），小時，分鐘，秒鐘和毫秒。時標是時標所表示的時刻和1970年1月1日午夜（UTC）的毫秒數時間差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是禮拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_eigen_values</center></td>
+<td><p>get_eigen_values(1) :</p>
+<p>get_eigen_values(A)計算2維方陣A的特征值。這個函數程式返回所有特征值，包括重復的特征值的列表。註意運算這個程式非常耗費內存和CPU資源，如果在移動設備上運行，征列A的尺寸最好不要超過6*6，如果在電腦上運行，最好不要超過8*8，否則可能造成內存不足而程序崩潰或者運行很長時間而沒有結果。</p>
+<p>get_eigen_values(2) :</p>
+<p>get_eigen_values(A, B)計算2維方陣A相對於同樣尺寸的方陣B的特征值，也就是Av = lambda * Bv，在這裏，。lambda是一個特征值，v是一個特征向量。第二個參數，B，可以省略，其缺省值為I陣列。這個函數程式返回所有特征值，包括重復的特征值的列表。註意運算這個程式非常耗費內存和CPU資源，如果在移動設備上運行，征列A的尺寸最好不要超過6*6，如果在電腦上運行，最好不要超過8*8，否則可能造成內存不足而程序崩潰或者運行很長時間而沒有結果。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_extreme_elem</center></td>
+<td><p>get_extreme_elem(3) :</p>
+<p>函數程式get_extreme_elem分析輸入的數值陣列並返回其所有元素的最大或最小值。如果某一個元素不是實數，這個元素就會被忽略。這個函數程式有3個參數，第一個是數值陣列（也可以是一個單一的數值），第二個是起始的最大或者最小值，如果這個參數不是null並且是一個實數，本函數程式將該參數和選出的最大或最小元素進行比較，並返回新的最大或最小值。第三個參數是告訴本函數程式返回最大值還是最小值，如果是0則返回最小值，否則返回最大值。函數程式的例子包括get_extreme_elem([[2, 3], "hello", 5], null, 1)和get_extreme_elem([[3,4,6],[5+3i, 7, 9.88-4.61], [5.77 -0.03i]], -8, 0)。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_last_modified_time</center></td>
+<td><p>get_file_last_modified_time(1) :</p>
+<p>get_file_last_modified_time(path)返回基於字串路徑的path的檔案或目錄的上一次更改時間。該時間等於從1970年1月1日午夜開始到上一次更改時刻所經歷的毫秒數。如果path不存在或者沒有訪問權限，返回-1。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_path</center></td>
+<td><p>get_file_path(1) :</p>
+<p>get_file_path(fd)返回文件號fd（fd是一個整數）所對應的文件的路徑字串。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_separator</center></td>
+<td><p>get_file_separator(0) :</p>
+<p>get_file_separator()返回路徑分割符。在Windows平臺下返回字串"\\"，在Linux和Android平臺下返回字串"/"。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_size</center></td>
+<td><p>get_file_size(1) :</p>
+<p>get_file_size(path)返回基于字串路径的path的档案大小。如果path不是对应一个档案或者没有权限或者不存在，返回-1。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_hour</center></td>
+<td><p>get_hour(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分別返回時標timestamp所對應的年，月，本年中的第幾天，本月中的第幾天，本星期中的第幾天（禮拜天是第0天，禮拜一是第一天，...），小時，分鐘，秒鐘和毫秒。時標是時標所表示的時刻和1970年1月1日午夜（UTC）的毫秒數時間差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是禮拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_millisecond</center></td>
+<td><p>get_millisecond(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分別返回時標timestamp所對應的年，月，本年中的第幾天，本月中的第幾天，本星期中的第幾天（禮拜天是第0天，禮拜一是第一天，...），小時，分鐘，秒鐘和毫秒。時標是時標所表示的時刻和1970年1月1日午夜（UTC）的毫秒數時間差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是禮拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_minute</center></td>
+<td><p>get_minute(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分別返回時標timestamp所對應的年，月，本年中的第幾天，本月中的第幾天，本星期中的第幾天（禮拜天是第0天，禮拜一是第一天，...），小時，分鐘，秒鐘和毫秒。時標是時標所表示的時刻和1970年1月1日午夜（UTC）的毫秒數時間差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是禮拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_month</center></td>
+<td><p>get_month(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分別返回時標timestamp所對應的年，月，本年中的第幾天，本月中的第幾天，本星期中的第幾天（禮拜天是第0天，禮拜一是第一天，...），小時，分鐘，秒鐘和毫秒。時標是時標所表示的時刻和1970年1月1日午夜（UTC）的毫秒數時間差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是禮拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_num_of_results_sets</center></td>
+<td><p>get_num_of_results_sets(1) :</p>
+<p>get_num_of_results_sets(x)返回solve返回值x中所包含的解集的組數。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_second</center></td>
+<td><p>get_second(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分別返回時標timestamp所對應的年，月，本年中的第幾天，本月中的第幾天，本星期中的第幾天（禮拜天是第0天，禮拜一是第一天，...），小時，分鐘，秒鐘和毫秒。時標是時標所表示的時刻和1970年1月1日午夜（UTC）的毫秒數時間差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是禮拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_solved_results_set</center></td>
+<td><p>get_solved_results_set(2) :</p>
+<p>get_solved_results_set(x, y)返回solve程式塊返回值x中所包含的第y+1組解集。註意本函數程式返回一個一維陣列，陣列中的第一個元素是solve程式塊的第一個待解變數的值，第二個元素是solve程式塊的第二個待解變數的值，依次類推。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_time_stamp</center></td>
+<td><p>get_time_stamp(1...) :</p>
+<p>get_time_stamp(string_or_year, ...)返回由其參數所決定的時標。時標是時標所表示的時刻和1970年1月1日午夜（UTC）的毫秒數時間差。這個函數程式有兩種工作模式。第一種模式是get_time_stamp(string_time_stamp)。這種模式僅僅接受一個字串參數，該參數必須基於yyyy-mm-dd hh:mm:ss[.f...]的格式。其中，秒的分數部分可以忽略。第二種模式是get_time_stamp(year, month, day, hour, minute, second, millisecond)。這些參數中，除了第一個參數year（年），所有的其他參數都可以省略。如果省略，month（月）和day（日）的缺省值是1，hour（小時），minute（分鐘），second（秒）和millisecond（毫秒）的缺省值是0。比如get_time_stamp("1981-05-30 17:05:06")返回1981年5月30日17點5分6秒0毫秒的時標，用戶也可以調用get_time_stamp(1981, 5, 30, 17, 5, 6, 0)獲得同樣的結果。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_variable_results</center></td>
+<td><p>get_variable_results(2) :</p>
+<p>get_variable_results(x, y)返回solve程式塊返回值x中該solve程式塊第y+1個待解變數的所有值。註意本函數程式返回一個一維陣列，陣列中的每一個元素是該待解變數的一個根。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_working_dir</center></td>
+<td><p>get_working_dir(0) :</p>
+<p>get_working_dir()（別名pwd()）返回基於字串的當前路徑。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_year</center></td>
+<td><p>get_year(1) :</p>
+<p>get_year(timestamp)，get_month(timestamp)，get_day_of_year(timestamp)，get_day_of_month(timestamp)，get_day_of_week(timestamp)，get_hour(timestamp)，get_minute(timestamp)，get_second(timestamp)和get_millisecond(timestamp) 分別返回時標timestamp所對應的年，月，本年中的第幾天，本月中的第幾天，本星期中的第幾天（禮拜天是第0天，禮拜一是第一天，...），小時，分鐘，秒鐘和毫秒。時標是時標所表示的時刻和1970年1月1日午夜（UTC）的毫秒數時間差。例如，get_day_of_week(get_time_stamp(2014, 12, 21))返回0，表示2014年12月21日是禮拜天。</p>
+</td>
+</tr>
+<tr>
+<td><center>havg</center></td>
+<td><p>havg(0...) :</p>
+<p>函數havg(…)返回任意個數參數的調和平均數值。</p>
+</td>
+</tr>
+<tr>
+<td><center>iff</center></td>
+<td><p>iff(3...) :</p>
+<p>函數程式iff(condition1, true_result1, condition2, true_result2, ..., false_result)的參數condition1，condition2，...為代表條件的布爾值，iff函數程式的返回值由條件值決定。比如，iff(true, 3, 2)返回3，iff(3 &lt; 2, 3, 2)返回2（這是因為3 &lt; 2是false），iff(3 &lt; 2, 3, 5 &gt; 4, 5, 6 == 9, 6, 9)返回5，以及iff(3 &lt; 2, 3, 5 &lt; 4, 5, 6 == 9, 6, 9)返回9。</p>
+</td>
+</tr>
+<tr>
+<td><center>IFFT</center></td>
+<td><p>IFFT(1...) :</p>
+<p>IFFT(a, ...)返回對一個數值向量作快速傅立葉變換的逆變換後的值。註意數值向量中數值的個數必須是2的整數次方。如果參數a是一個數值序列，則本函數程式只可能擁有一個參數，返回值為對序列a[0], a[1], ..., a[N-1]作快速傅立葉變換的逆變換的返回值。如果參數a僅僅是一個實數或者虛數，則本函數程式最少包含2個參數，而返回序列a， optional_params[0]， ...， optional_params[number_of_optional_params - 2]， optional_params[number_of_optional_params - 1]快速傅立葉變換的逆變換後的值。註意返回值總是一個數組。</p>
+<p>函數程式例子：</p>
+<p>IFFT(10, -2 + 2i, -2, -2 - 2i)返回[1, 2, 3, 4]；</p>
+<p>IFFT([10, -2 + 2i, -2, -2 - 2i])同樣也是返回[1, 2, 3, 4]；</p>
+</td>
+</tr>
+<tr>
+<td><center>image</center></td>
+<td><p>image(1) :</p>
+<p>image(x)返回復數x的虛部的實數值。</p>
+<p>image(2) :</p>
+<p>image(x, mode)返回復數x的虛部。如果參數mode是true，則返回虛數值，否則返回實數值。比如image(3+2i, true) = 2i而image(3+2i, false) = 2。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_inf</center></td>
+<td><p>includes_inf(1) :</p>
+<p>includes_inf(x)用於判斷參數x是否包含正負無窮。這裏，包含指的是，如果x是個陣列，那麽它的某一個元素包含或者本身就是目標值，如果x是一個復數，那麽它的實部或者虛部是目標值，如果x是一個實數，那麽它就是目標值。如果是，返回true，否則，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan</center></td>
+<td><p>includes_nan(1) :</p>
+<p>includes_nan(x)用於判斷參數x是否包含Nan。這裏，包含指的是，如果x是個陣列，那麽它的某一個元素包含或者本身就是目標值，如果x是一個復數，那麽它的實部或者虛部是目標值，如果x是一個實數，那麽它就是目標值。如果是，返回true，否則，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan_or_inf</center></td>
+<td><p>includes_nan_or_inf(1) :</p>
+<p>includes_nan_or_inf(x)用於判斷參數x是否包含Nan或者正負無窮。這裏，包含指的是，如果x是個陣列，那麽它的某一個元素包含或者本身就是目標值，如果x是一個復數，那麽它的實部或者虛部是目標值，如果x是一個實數，那麽它就是目標值。如果是，返回true，否則，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan_or_inf_or_null</center></td>
+<td><p>includes_nan_or_inf_or_null(1) :</p>
+<p>includes_nan_or_inf_or_null(x)用於判斷參數x是否包含Nan或者正負無窮或者null。這裏，包含指的是，如果x是個陣列，那麽它的某一個元素包含或者本身就是目標值，如果x是一個復數，那麽它的實部或者虛部是目標值，如果x是一個實數，那麽它就是目標值。如果是，返回true，否則，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_null</center></td>
+<td><p>includes_null(1) :</p>
+<p>includes_null(x)用於判斷參數x是否包含null。這裏，包含指的是，如果x是個陣列，那麽它的某一個元素包含或者本身就是目標值，如果x是一個復數，那麽它的實部或者虛部是目標值，如果x是一個實數，那麽它就是目標值。如果是，返回true，否則，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>input</center></td>
+<td><p>input(2) :</p>
+<p>input(prompt,input_type)程式打印出提示符prompt並等待用戶輸入。第二個參數input_type可以省略。如果第二個參數不省略並且其為字串"s"或"S"，用戶的輸入將會被看成一個字串，並且這個程式返回輸入的字串。否則，輸入被當作一個表達式來處理，而這個程式返回表達式的值。如果輸入的不是一個合法的表達式，本程式將再次打印出提示符，等待用戶重新輸入。用戶如果要結束一次輸入需要按回車鍵。如果一次輸入多行，只有第一行會被處理。本程式的一個例子為，用戶運行input("$", "S")，然後在提示符後輸入4 + 3，按回車鍵，本程式將會返回字串"4 + 3"。而如果用戶運行input("%")，然後在提示符後輸入4 + 3，按回車鍵，本程式將會返回7。</p>
+</td>
+</tr>
+<tr>
+<td><center>integrate</center></td>
+<td><p>integrate(2) :</p>
+<p>integrate(x,y)返回基於變數y的表達式x的不定積分，表達式x和變數y均為字串。註意如果表達式x不存在不定積分，或者x過於復雜無法解出其不定積分，本函數程式將會拋出異常。</p>
+<p>integrate(4) :</p>
+<p>integrate(x,y,z,w)返回表達式x在變數y從z到w的積分值。表達式x和變數y均為字串，z和w可以為實數，復數或字串。註意本函數程式采用的積分算法是自適應Gauss-Kronrod積分法。</p>
+<p>integrate(5) :</p>
+<p>integrate(x,y,z,w,v)返回表達式x相對於變數y從w到z的積分。計算時每一步步長為(w-z)/v。表達式x和變數y均為字串，z和w可以為實數，復數或字串，v必須為正整數。註意如果v是0，則相當於執行integrate(x,y,z,w)。</p>
+</td>
+</tr>
+<tr>
+<td><center>invert</center></td>
+<td><p>invert(1) :</p>
+<p>invert(x)返回方塊2維矩陣x的逆矩陣，註意x中的元素可以為復數。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_directory</center></td>
+<td><p>is_directory(1) :</p>
+<p>is_directory(path)用於判斷位於字串path的檔案（或者目錄）是否是一個目錄。如果該檔案或目錄存在並且是一個目錄返回true，否則返回false。例子包括is_directory("E:\\") (Windows)和is_directory("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_eye</center></td>
+<td><p>is_eye(2) :</p>
+<p>is_eye(x,y)用於確定數組（或數）x是否是單位陣I（或數字1），如果是，返回true，否則返回false。參數y是布爾量，可以省略，缺省值為false。如果y是true，將所有的null值視為0，否則，null值不被當作0。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_executable</center></td>
+<td><p>is_file_executable(1) :</p>
+<p>is_file_executable(path)用于判断位于字串path的档案（或者目录）是否可执行。如果该档案或目录存在并且可执行返回true，否则返回false。例子包括is_file_executable("E:\\") (Windows)和is_file_executable("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_existing</center></td>
+<td><p>is_file_existing(1) :</p>
+<p>is_file_existing(path)用於判斷位於字串path的文件（或者目錄）是否存在。如果存在返回true，否則返回false。例子包括is_file_existing("E:\\") (Windows)和is_file_existing("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_hidden</center></td>
+<td><p>is_file_hidden(1) :</p>
+<p>is_file_hidden(path)用于判断位于字串path的档案（或者目录）是否隱藏。如果该档案或目录存在并且隱藏返回true，否则返回false。例子包括is_file_hidden("E:\\") (Windows)和is_file_hidden("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_normal</center></td>
+<td><p>is_file_normal(1) :</p>
+<p>is_file_normal(path)用于判断位于字串path的档案（或者目录）是否是一個常規檔案而不是目錄。如果该档案或目录存在并且是一個常規檔案而不是目錄返回true，否则返回false。例子包括is_file_normal("E:\\") (Windows)和is_file_normal("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_readable</center></td>
+<td><p>is_file_readable(1) :</p>
+<p>is_file_readable(path)用于判断位于字串path的档案（或者目录）是否可讀。如果该档案或目录存在并且可讀返回true，否则返回false。例子包括is_file_readable("E:\\") (Windows)和is_file_readable("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_writable</center></td>
+<td><p>is_file_writable(1) :</p>
+<p>is_file_writable(path)用于判断位于字串path的档案（或者目录）是否可寫。如果该档案或目录存在并且可寫返回true，否则返回false。例子包括is_file_writable("E:\\") (Windows)和is_file_writable("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_inf</center></td>
+<td><p>is_inf(1) :</p>
+<p>is_inf(x)用於判斷參數x是否為正負無窮。如果是，返回true，否則，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_nan_or_inf</center></td>
+<td><p>is_nan_or_inf(1) :</p>
+<p>is_nan_or_inf(x)用於判斷參數x是否為Nan或者正負無窮。如果是，返回true，否則，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_nan_or_inf_or_null</center></td>
+<td><p>is_nan_or_inf_or_null(1) :</p>
+<p>is_nan_or_inf_or_null(x)用於判斷參數x是否為Nan或者正負無窮或者null。如果是，返回true，否則，返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_path_absolute</center></td>
+<td><p>is_path_absolute(1) :</p>
+<p>is_path_absolute(path)用于判断位于字串path是否是一個絕對路徑（也就是不是相對於當前目錄的路徑）。如果是返回true，否则返回false。例子包括is_path_absolute("E:\\temp") (Windows)和is_path_absolute("Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_path_parent</center></td>
+<td><p>is_path_parent(2) :</p>
+<p>is_path_parent(path1, path2)用於判斷位於字串path1是否是字符串path2的上級目錄。如果是返回true，否則返回false。例子包括is_path_parent("E:\\temp", "E:\\temp\\..\\temp\\test") (Windows)和is_path_parent(".", "Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_path_same</center></td>
+<td><p>is_path_same(2) :</p>
+<p>is_path_same(path1, path2)用於判斷位於字串path1是否和字串path2指向同一條路徑。如果是返回true，否則返回false。例子包括is_path_same("E:\\temp", "E:\\temp\\..\\temp\\") (Windows)和is_path_parent("/home/tony/Documents", "Documents/") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_prime</center></td>
+<td><p>is_prime(1) :</p>
+<p>函數Is_Prime(x)用於測定正整數x(>=2)是否為素數。如果x不是大於等於二的正整數，則返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_symbol_link</center></td>
+<td><p>is_symbol_link(1) :</p>
+<p>is_symbol_link(path)用于判断位于字串path的档案（或者目录）是否是一個符號鏈接。如果该档案或目录存在并且是一個符號鏈接返回true，否则返回false。例子包括is_symbol_link("E:\\") (Windows)和is_symbol_link("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_zeros</center></td>
+<td><p>is_zeros(2) :</p>
+<p>is_zeros(x,y)用於確定數組（或數）x是否是零矩陣（或數字0），如果是，返回true，否則返回false。參數y是布爾量，可以省略，缺省值為false。如果y是true，將所有的null值視為0，否則，null值不被當作0。</p>
+</td>
+</tr>
+<tr>
+<td><center>left_recip</center></td>
+<td><p>left_recip(1) :</p>
+<p>left_recip(x)計算x的左除倒數，註意當前僅支持數值或二維陣列。</p>
+</td>
+</tr>
+<tr>
+<td><center>lg</center></td>
+<td><p>lg(1) :</p>
+<p>函數lg(x)返回x的自然對數。</p>
+</td>
+</tr>
+<tr>
+<td><center>lim</center></td>
+<td><p>lim(3) :</p>
+<p>lim(expr, var, dest_value)用於計算表達式expr在變數var趨近於dest_value時的值。expr和var必須為字串，dest_value為表達式或者數值，可以基於字串，也可以不基於字串。比如，lim("1/x", "x", 0)或者lim("(x+2)/(x+3)","x","3+0")。註意這個函數程式還在開發中。</p>
+</td>
+</tr>
+<tr>
+<td><center>list_files</center></td>
+<td><p>list_files(1) :</p>
+<p>list_files(path)返回位於字串path路徑的目錄中的所有子檔案或者子目錄的名字，或者如果path路徑對應的是一個檔案，它返回該檔案的名字。如果不存在一個檔案或者目錄對應於path路徑，它返回NULL。註意參數path是可以省略的。它的缺省值是當前目錄。例子包括list_files("c:\\temp\\try1") (Windows)和list_files("../testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>ln</center></td>
+<td><p>ln(1) :</p>
+<p>函數ln(x)返回x的自然對數。</p>
+</td>
+</tr>
+<tr>
+<td><center>log</center></td>
+<td><p>log(1) :</p>
+<p>log(x)返回x的自然對數，註意x可以為復數。</p>
+</td>
+</tr>
+<tr>
+<td><center>log10</center></td>
+<td><p>log10(1) :</p>
+<p>函數log10(x)返回x以十為底的對數。</p>
+</td>
+</tr>
+<tr>
+<td><center>log2</center></td>
+<td><p>log2(1) :</p>
+<p>函數log2(x)返回x以2為底的對數。</p>
+</td>
+</tr>
+<tr>
+<td><center>loge</center></td>
+<td><p>loge(1) :</p>
+<p>函數loge(x)返回x的自然對數。</p>
+</td>
+</tr>
+<tr>
+<td><center>ls</center></td>
+<td><p>ls(1) :</p>
+<p>print_file_list(path) (别名ls(path)或者dir(path))函數程式和Windows平臺上的dir命令以及Linux平臺上的ls命令類似。它打印出位於字串path路徑的档案或者目錄中的所有子档案和子目錄的信息。它返回打印的條目的個數。如果不存在一個檔案或者目錄對應於path路徑，它返回-1。註意參數path是可以省略的。它的缺省值是當前目錄。例子包括dir("c:\\temp\\try1") (Windows)和ls("../testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>max</center></td>
+<td><p>max(0...) :</p>
+<p>函數max(...)返回任意數目參數中的最大值。</p>
+</td>
+</tr>
+<tr>
+<td><center>med</center></td>
+<td><p>med(0...) :</p>
+<p>函數med(…)返回任意數目參數的中位數。如果參數的個數為偶數個，返回中間兩個參數的平均值。</p>
+</td>
+</tr>
+<tr>
+<td><center>min</center></td>
+<td><p>min(0...) :</p>
+<p>函數min(...)返回任意數目參數中的最小值。</p>
+</td>
+</tr>
+<tr>
+<td><center>mod</center></td>
+<td><p>mod(2) :</p>
+<p>mod(x,y)返回x除以正整數y的余數，如果x或者y不是整數，將被首先轉換為整數。</p>
+</td>
+</tr>
+<tr>
+<td><center>move_file</center></td>
+<td><p>move_file(3) :</p>
+<p>move_file(source, destination, replace_exist)函數程式移動位於字串source路徑的檔案或檔案目錄到位於字串destination路徑的檔案或位於destination路徑的檔案目錄內（而不是位於destination路徑的檔案目錄本身）。如果第三個參數，replace_exist，是true，那麼如果目標檔案已經存在，它將會被源檔案（或者源檔案目錄中的對應檔案）替換。註意第三個參數可以省略，它的缺省值為false。例子包括move_file("c:\\temp\\try1", "D:\\", true) (Windows)和copy_file("/mnt/sdcard/testfile.txt", "./testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>ncr</center></td>
+<td><p>ncr(2) :</p>
+<p>函數程式nCr(x, y)計算有x個元素的集合S的k個元素組合的個數。註意x，y都是非負整數，x >= y。</p>
+</td>
+</tr>
+<tr>
+<td><center>now</center></td>
+<td><p>now(0) :</p>
+<p>now()返回當前時刻和1970年1月1日午夜（UTC）的毫秒數時間差。</p>
+</td>
+</tr>
+<tr>
+<td><center>npr</center></td>
+<td><p>npr(2) :</p>
+<p>函數程式nPr(x, y)計算有x個元素的集合S的k個元素置換的個數。註意x，y都是非負整數，x >= y。</p>
+</td>
+</tr>
+<tr>
+<td><center>ones</center></td>
+<td><p>ones(1...) :</p>
+<p>ones函數返回一個所有元素都是1的矩陣，本函數的參數用於決定矩陣的尺寸，要麽為一批正整數，要麽為一個正整數數列。註意表達式ones([])返回常數1。</p>
+</td>
+</tr>
+<tr>
+<td><center>or</center></td>
+<td><p>or(1...) :</p>
+<p>or(x...)接受不少於1個的任意個數的參數，返回這些參數的邏輯或值。如果某一個參數不是布爾類型，將會被自動轉換為布爾類型。</p>
+</td>
+</tr>
+<tr>
+<td><center>pause</center></td>
+<td><p>pause(1) :</p>
+<p>pause(message)將暫停當前運行的程式，等待用戶輸入一個回車，然後繼續。字串參數message可以省略。如果不省略，message將作為提示被打印在熒幕上。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot2d</center></td>
+<td><p>plot2d(5...) :</p>
+<p>函數plot2D調用plot_multi_xy以繪制由最多8條2-D曲線所構成的圖像。其包括以下參數：1.圖像名字（圖像文件名）；2.圖像標題；3.X軸標題；4.Y軸標題；5.是否顯示網格；6.曲線標題；7.曲線顏色；8.t起始位置；9.t終止位置；10.t的間隔；11.以t為變量的X的表達式；12.以t為變量的Y的表達式...。其中，每增加一條新的曲線，需要添加7個參數（也就是參數6到12），最多定義8條曲線。需要註意的是，本函數程式不建議被使用。如果想繪制二維圖形，請使用函數程式plot2DEX。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot2dex</center></td>
+<td><p>plot2dex(6...) :</p>
+<p>函數plot2DEX調用plot_multi_xy以繪制由最多8條2-D曲線所構成的圖像。其包括以下參數：1.圖像名字（圖像文件名）；2.圖像標題；3.X軸標題；4.Y軸標題；5.圖像背景色；6.是否顯示網格；7.曲線標題；8.曲線數據點顏色；9.曲線數據點形狀；10.曲線數據點大小；11.曲線連接線顏色；12.曲線連接線類型；13.曲線連接線粗細；14.t起始位置；15.t終止位置；16.t的間隔；17.以t為變量的X的表達式；18.以t為變量的Y的表達式...。其中，每增加一條新的曲線，需要添加12個參數（也就是參數7到18），最多定義8條曲線。另外要註意圖像背景色，曲線數據點的大小，曲線連接線顏色以及曲線連接線類型還沒有被實現，曲線連接線粗細僅支持0（意味著沒有連接線連接數據點）和非0（意味著有連接線連接數據點）。本函數程式的一個例子為：plot2DEX("chart 3", "3rd chart", "x", "y", "black", true, "cv1", "blue", "x", 2, "blue", "solid", 1, -5, 5, 0.1, "t", "t**2/2.5 - 4*t + 6", "cv2", "red", "square", 4, "square", "solid", 1, -10, 10, 0.1, "5*sin(t)", "10*cos(t)") 。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot3d</center></td>
+<td><p>plot3d(5...) :</p>
+<p>函數plot3D調用plot_multi_xyz以繪制由最多8條3-D曲面所構成的圖像。其包括以下參數：1.圖像名字（圖像文件名）；2.圖像標題；3.X軸標題；4.Y軸標題；5.Z軸標題；6.曲線標題；7.是網格還是填充表面（true是網格，false是填充表面）；8.z值最小的時候的顏色；9.最小的z值（註意如果是null，意味著讓軟件自己找到最小的z值）；10.z值最大的時候的顏色；11.最大的z值（註意如果是null，意味著讓軟件自己找到最大的z值）；12.變數u的起始值；13.變數u的終止值；14.變數u的間隔（0意味著間隔由軟件決定）；15.變數v的起始值；16.變數v的終止值；17.變數v的間隔（0意味著間隔由軟件決定）；18.以u，v為變數的X的表達式；19.以u，v為變數的Y的表達式；20.以u，v為變數的Z的表達式；...。其中，每增加一條新的曲線，需要添加15個參數（也就是參數6到20），最多定義8條曲線。該函數的一個例子為：plot3D("chartI", "first chart", "x", "y", "z", "Curve1", true, "red", -0.5, "green", null, 0, pi, pi/8, -pi/2, pi/2, 0, "sin(u)*cos(v)", "sin(u)*sin(v)", "cos(u)")　。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_2d_data</center></td>
+<td><p>plot_2d_data(16) :</p>
+<p>函數程式plot_2d_data分析最少1組，最多8組數值向量，每組數值向量將會被繪制為一條曲線。輸入的參數個數可以為1個（繪制一條曲線），2個（繪制一條曲線），4個（繪制2條曲線），6個（繪制3條曲線），8個（繪制4條曲線），10個（繪制5條曲線），12個（繪制6條曲線），14個（繪制7條曲線），16個（繪制8條曲線）。每一個參數都是一個數值向量（也就是一維陣列）。如果只有一個參數，該參數中的每一個元素將會是繪制出的曲線中的一個點，否則，奇數號參數決定曲線中的每一個點的x值，偶數號參數決定每一個點的y值。註意決定x值的參數中包含的元素個數應該和決定y值的參數中包含的元素相同。函數程式例子包括plot_2d_data([5.5, -7, 8.993, 2.788])以及plot_2d_data([2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1], [28, 42, 33, 16, 7])。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_3d_data</center></td>
+<td><p>plot_3d_data(24) :</p>
+<p>函數程式plot_3d_data分析最少1組，最多8組數值陣列，每組數值陣列將會被繪制為一條曲面。輸入的參數個數可以為1個（繪制一條曲面），3個（繪制一條曲面），6個（繪制2條曲面），9個（繪制3條曲面），12個（繪制4條曲面），15個（繪制5條曲面），18個（繪制6條曲面），21個（繪制7條曲面），24個（繪制8條曲面）。如果只有一個參數，該參數必須是一個2維陣列，陣列中的每一個元素將會是繪制出的曲線中的一個點的z值，否則，每3個參數組成一個參數組，在每個參數組中，第一個參數必須是一個一維陣列，參數中的元素值決定的決定曲面中各點的x值，第二個參數也必須是一個一維陣列，參數中的元素值決定的決定曲面中各點的y值，第三個參數必須是一個二維陣列，陣列中的元素值決定每一個點的z值。註意決定x值的參數中包含的元素個數以及決定y值的參數中包含的元素應該和決定z值的參數中包含的元素個數相符。函數程式例子包括plot_3d_data([[2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1]])以及plot_3d_data([1,2,3],[4,5,6,8],[[3,7,2],[5,8,9],[2,6,3],[7,4,4]],[8,7,4,8],[2,1],[[9,3,2,6],[4,5,3,7]])。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_exprs</center></td>
+<td><p>plot_exprs(8) :</p>
+<p> 函數程式plot_exprs分析最少1條，最多8條表達式以繪制2維或者3維圖形（取決於表達式中未知變數的個數）。輸入的表達式可以是一個等式，比如"4*x+9 == y +z**2"和"log(x*y) == x"，也可以是一個左側為未知變數的賦值表達式，比如"k= 3+ 7 * sin(z)"，還可以是一個可以被看作為賦值表達式的表達式，比如"9*log(y)"可以被看作"x = 9 * log(y)"。註意所有表達式中未知變數的總數不多於3，每一條表達式中的未知變數的個數不能少於未知變數的總數減一。未知變數的起始範圍可以在設置中設定，缺省是從-5到5，但是使用者可以在圖形繪制出來之後動態調整每個未知變數的範圍。如果有兩個未知變數並且其中一個是希臘字母α、β、γ或者θ，則繪制極坐標圖形而不是普通2維圖形。本函數程式的一個例子是plot_exprs("4*x+sin(y)", "4-y**2==(x**2 + z**2)", "x*lg(x)/log2(z)==y")。需要指出的是，如果是繪制二維隱函數表達式，這個函數程式最多能繪制出4個表達式解；如果繪制的是3維隱函數表達式，這個函數程式會根據情況，可能會求每一個變數的最多兩組解，繪制出最多6個解表達式圖形，這樣一來，整個求解繪圖過程會花費比較長的時間。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_multi_xy</center></td>
+<td><p>plot_multi_xy(26) :</p>
+<p>plot_multi_xy(包含2到26個參數)用於繪制2維或極坐標圖像，每個圖像最多包括8條曲線。參數1為圖像名字，參數2為圖像設置，該參數是一個字串，比如"chart_type:multiXY;chart_title:1 chart;x_title:x;x_min:-6.2796950076838645;x_max:6.918480857169536;x_labels:10;y_title:y;y_min:-4.487378580559947;y_max:4.1268715788884345;y_labels:10;background_color:black;show_grid:true"。註意chart_type的值是multiXY（用於繪制二維圖像）或者multiRangle（用於繪制極坐標圖像），x_labels和y_lables分別代表x和y軸上有多少刻度標記（對於極坐標圖像是R軸有多少刻度標記，幅角的刻度標記不可設）。從參數3到參數26，每3個參數定義一條曲線，在這3個參數中，第一個參數為曲線設置，第二個參數是包含所有x數值（或者R數值）的向量，第三個參數是包括所有y值（或者幅角值）的向量。曲線設置參數為一個字串，比如"curve_label:cv2;point_color:blue;point_style:point;point_size:1;line_color:blue;line_style:solid;line_size:1"。另外註意x和y的每一個數值都必須為實數，x和y的數值個數必須一致。本函數程式不返回數值。本函數程式的一個例子是plot_multi_xy("chart2", "chart_type:multiXY;chart_title:1 chart;x_title:x;x_min:-6;x_max:6;x_labels:6;y_title:y;y_min:-4;y_max:4;y_labels:5;background_color:black;show_grid:true", "curve_label:cv2;point_color:blue;point_style:circle;point_size:3;line_color:blue;line_style:solid;line_size:1", [-5, -3, -1, 0, 1, 2, 3, 4, 5], [-3.778, -2.9793, -2.0323, -1.1132, 0.2323, 1.2348, 3.9865, 2.3450, 0.4356]) 。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_multi_xyz</center></td>
+<td><p>plot_multi_xyz(34) :</p>
+<p>plot_multi_xyz(包含2到34個參數)用於繪制3維圖像，每個圖像最多包括8條曲面。參數1為圖像名字，參數2為圖像設置，圖像設置參數是一個字串，比如"chart_type:multiXYZ;chart_title:This is a graph;x_title:x axis;x_min:-24.43739154366772;x_max:24.712391543667717;x_labels:10;y_title:Y axis;y_min:-251.3514430737091;y_max:268.95144307370913;y_labels:10;z_title:Z axis;z_min:-1.6873277335234405;z_max:1.7896774628184482;z_labels:10"。需要註意的是chart_type的值必須是multiXYZ，x_labels，y_labels和z_lables分別代表x，y和z軸上有多少刻度標記。從參數3到參數34，每4個參數定義一條曲線，在這4個參數中，第一個參數為曲線設置，第二個參數是包含所有x數值的陣列，第三個參數是包括所有y值的陣列，第四個參數是包括所有z值的陣列。曲線設置參數為一個字串，比如"curve_label:cv2;is_grid:true;min_color:blue;min_color_1:cyan;min_color_value:-2.0;max_color:white;max_color_1:yellow;max_color_value:2.0"。另外註意x，y和z的每一個數值都必須為實數，x，y和z的陣列的尺寸必須一致。本函數程式不返回數值。本函數程式的一個例子為：plot_multi_xyz("chartII", "chart_type:multiXYZ;chart_title:This is a graph;x_title:x;x_min:-5;x_max:5;x_labels:6;y_title:Y;y_min:-6;y_max:6;y_labels:3;z_title:Z;z_min:-3;z_max:1;z_labels:4", "curve_label:cv1;min_color:blue;min_color_1:green;max_color:yellow;max_color_1:red", [[-4, -2, 0, 2, 4],[-4, -2, 0, 2, 4],[-4, -2, 0, 2, 4]], [[-5, -5, -5, -5, -5], [0, 0, 0, 0, 0], [-5, -5, -5, -5, -5]], [[-2.71, -2.65, -2.08, -1.82, -1.77], [-2.29, -2.36, -1.88, -1.45, -1.01], [-1.74, -1.49, -0.83, -0.17, 0.44]]) 。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_polar</center></td>
+<td><p>plot_polar(6...) :</p>
+<p>程式plot_polar調用plot_multi_xy以繪制由最多8條極坐標曲線所構成的圖像。其包括以下參數：1.圖像名字（圖像文件名）；2.圖像標題；3.R軸標題；4.幅角軸標題；5.圖像背景色；6.是否顯示網格；7.曲線標題；8.曲線數據點顏色；9.曲線數據點形狀；10.曲線數據點大小；11.曲線連接線顏色；12.曲線連接線類型；13.曲線連接線粗細；14.t起始位置；15.t終止位置；16.t的間隔；17.以t為變量的R的表達式；18.以t為變量的幅角的表達式...。其中，每增加一條新的曲線，需要添加12個參數（也就是參數7到18），最多定義8條曲線。另外要註意圖像背景色，曲線數據點的大小，曲線連接線顏色以及曲線連接線類型還沒有被實現，曲線連接線粗細僅支持0（意味著沒有連接線連接數據點）和非0（意味著有連接線連接數據點）。本函數程式的一個例子為：plot_polar("chart 3", "3rd chart", "R", "Angle", "black", true, "cv1", "blue", "point", 0, "yellow", "solid", 1, -5, 5, 0.1, "cos(t)", "t", "cv2", "red", "square", 4, "green", "solid", 1, 0, PI*2.23, PI/10, "5*sqrt(t)", "t + PI") 。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_polar_data</center></td>
+<td><p>plot_polar_data(16) :</p>
+<p>函數程式plot_polar_data分析最少1組，最多8組數值向量，每組數值向量將會被繪制為一條極坐標曲線。輸入的參數個數可以為2個（繪制一條曲線），4個（繪制2條曲線），6個（繪制3條曲線），8個（繪制4條曲線），10個（繪制5條曲線），12個（繪制6條曲線），14個（繪制7條曲線），16個（繪制8條曲線）。每一個參數都是一個數值向量（也就是一維陣列）。奇數號參數決定曲線中的每一個點的R值，偶數號參數決定每一個點的幅角值。註意決定R值的參數中包含的元素個數應該和決定幅角值的參數中包含的元素相同。函數程式一個例子為plot_polar_data([2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1], [28, 42, 33, 16, 7])。</p>
+</td>
+</tr>
+<tr>
+<td><center>pow</center></td>
+<td><p>pow(2) :</p>
+<p>pow(x,y)返回x的y次方，註意x和y可以為實數，可以為虛數。如果結果有多個值，返回第一個值。</p>
+<p>pow(3) :</p>
+<p>pow(x,y,z)返回包含x的y次方的前z個值組成的一個向量，如果x的y次方只有少於z個值，返回所有值。註意y必須為實數，x可以為實數，可以為虛數，z必須為正整數。</p>
+</td>
+</tr>
+<tr>
+<td><center>print</center></td>
+<td><p>print(1) :</p>
+<p>print(x)向輸出端打印任意數據類型x的值。</p>
+</td>
+</tr>
+<tr>
+<td><center>print_file_list</center></td>
+<td><p>print_file_list(1) :</p>
+<p>print_file_list(path) (别名ls(path)或者dir(path))函數程式和Windows平臺上的dir命令以及Linux平臺上的ls命令類似。它打印出位於字串path路徑的档案或者目錄中的所有子档案和子目錄的信息。它返回打印的條目的個數。如果不存在一個檔案或者目錄對應於path路徑，它返回-1。註意參數path是可以省略的。它的缺省值是當前目錄。例子包括dir("c:\\temp\\try1") (Windows)和ls("../testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>printf</center></td>
+<td><p>printf(1...) :</p>
+<p>printf(format_string, ...)，sprintf(format_string, ...)和fprintf(fd, format_string, ...)和C/C++中的对应函数程式工作方式相似。这些函数程式通过format_string和其后的数值参数构造出一个新的字串，printf将字串打印到标准输出，sprintf将字串作为返回值返回，fprintf则将字串输出到档案号为fd的文本档案。字串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字串（%c和%s）等等。用户可以在C语言的帮助手册中找到format_string的构造方法。例如，printf("Hello world!%f", 3.14)将会打印输出"Hello world!3.140000"，而sprintf("%c%d", "A", 9)则返回"A9"（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>product_over</center></td>
+<td><p>product_over(3) :</p>
+<p>函數程式product_over(x, y, z)計算基於字串的表達式x中的變數取值從整數y逐步變化到整數z的值的乘積。y和z必須是字串的形式，其中，y必須寫成一個賦值表達式，比如"a=10"，這裏，a是變數名。本函數程式的一個例子為product_over("x+1", "x=1", "10")。</p>
+</td>
+</tr>
+<tr>
+<td><center>pwd</center></td>
+<td><p>pwd(0) :</p>
+<p>get_working_dir()（別名pwd()）返回基於字串的當前路徑。</p>
+</td>
+</tr>
+<tr>
+<td><center>quick_sort</center></td>
+<td><p>quick_sort(2) :</p>
+<p>函數程式quick_sort(desc, original_list)將擁有至少一個元素的向量original_list排序並返回排序後的向量。如果desc是true或者1，按照從大到小排序，否則（false或者0）按照從小到大排序。比如，輸入quick_sort(1, [5,6,7,9,4])得到[9,7,6,5,4]而輸入quick_sort(0, [5,6,7,9,4])的結果是[4,5,6,7,9]。</p>
+</td>
+</tr>
+<tr>
+<td><center>rand</center></td>
+<td><p>rand(0) :</p>
+<p>rand()函數返回一個大於等於0小於1的隨機浮點數。</p>
+</td>
+</tr>
+<tr>
+<td><center>rank</center></td>
+<td><p>rank(1) :</p>
+<p>rank(matrix)返回矩陣的秩。比如，rank([[1,2],[2,4]])將返回1。</p>
+</td>
+</tr>
+<tr>
+<td><center>real</center></td>
+<td><p>real(1) :</p>
+<p>real(x)返回復數x的實部。</p>
+</td>
+</tr>
+<tr>
+<td><center>recip</center></td>
+<td><p>recip(1) :</p>
+<p>recip(x)計算x的倒數，註意當前僅支持數值或二維陣列。</p>
+</td>
+</tr>
+<tr>
+<td><center>roots</center></td>
+<td><p>roots(1...) :</p>
+<p>函數程式roots(a, ...)返回一個多項式的根數列。如果a是一個實數或虛數數列，返回多項式a[0] * x**(N-1) + a[1] * x**(N-2) + ... + a[N-2] * x + a[N-1] = 0的根數列。如果a是一個單一的實數，此函數程式則必須擁有至少兩個參數，返回多項式a * x**(number_of_optional_params) + optional_params[0] * x**(number_of_optional_params - 1) + ... + optional_params[number_of_optional_params - 2] * x + optional_params[number_of_optional_params - 1] = 0的根數列。</p>
+<p>需要註意的是，如果該多項式次數大於等於4，根的計算是通過牛頓拉夫遜法給出的近似值。由於牛頓拉夫遜法需要叠代計算，運算時間會比較長（取決於設備的性能）。</p>
+<p>函數程式例子：</p>
+<p>如果要計算多項式3 * x**2 - 4 * x + 1 == 0的根，輸入命令：roots([3, -4, 1])獲得的結果是[1, 0.33333333]；</p>
+<p>如果要計算多項式(1+2i) * x**3 + (7-6i) * x**2 + 0.54 * x - 4.31 - 9i == 0的根，輸入命令：roots(1+2i, 7-6i, 0.54, -4.31-9i)獲得的結果是[0.79288607 + 3.9247084 * i, -0.56361748 - 0.78399569 * i, 0.7707314 + 0.85928729 * i]。</p>
+</td>
+</tr>
+<tr>
+<td><center>round</center></td>
+<td><p>round(1) :</p>
+<p>round(x)，x是浮點數，返回x的四舍五入值。</p>
+<p>round(2) :</p>
+<p>round(x,y)，x是浮點數，y為非負整數，返回小數點後有y位數字的x的四舍五入值。</p>
+</td>
+</tr>
+<tr>
+<td><center>scanf</center></td>
+<td><p>scanf(1) :</p>
+<p>scanf(format_string)，sscanf(input_from, format_string)和fscanf(fd, format_string)和C/C++中的對應函數程式工作方式相似。scanf讀取用戶的一行輸入，sscanf讀取字串input_from，fscanf從檔案（檔案號fd）中讀取檔案內容。字串format_string支持輸入整數（%d、%i、%x等），浮點數（%e、%f等），字符和字串（%c和%s）等等。用戶可以在C語言的幫助文檔中找到format_string的構造方法。但是，和C語言有所不同，MFP中的這些函數程式不需要輸入用於存儲讀取數值的參數。所有的讀取的數值將會保存在一個數組中作為返回值返回。比如，sscanf("3Hello world!", "%d%c%c%s")將會返回[3, "H", "e", "llo"]（註意MFP不支持單一字符數據類型，所以單一的字符將會存儲為一個只包括一個字符的字串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>set_array_elem</center></td>
+<td><p>set_array_elem(3) :</p>
+<p>set_array_elem(x,y,z)將x[y]賦值為z，並且返回新的x。註意x不是必須為矩陣，y必須為正整數向量。y的值可以超出x的尺寸和維度。比如，如果x=3，y=[1,2]，z=2+3i，那麽set_array_elem(x,y,z)等於[3, [0, 0, 2+3i]]。</p>
+</td>
+</tr>
+<tr>
+<td><center>set_file_last_modified_time</center></td>
+<td><p>set_file_last_modified_time(2) :</p>
+<p>set_file_last_modified_time(path, time)设置基于字串路径的path的档案或目录的上一次更改时间为time。该时间等于从1970年1月1日午夜开始到上一次更改时刻所经历的毫秒数。如果path不存在或者没有访问权限，返回false，否则返回true。例子包括("C:\\Temp\\Hello\\", 99999999) (Windows)和set_file_last_modified_time("./hello.txt", 1111111111) (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>sin</center></td>
+<td><p>sin(1) :</p>
+<p>sin(x)返回x的正弦值，註意x可以為復數。</p>
+</td>
+</tr>
+<tr>
+<td><center>sind</center></td>
+<td><p>sind(1) :</p>
+<p>sind(x)返回基於角度的x的正弦值。</p>
+</td>
+</tr>
+<tr>
+<td><center>sinh</center></td>
+<td><p>sinh(1) :</p>
+<p>函數sinh(x)返回x的雙曲正弦值。</p>
+</td>
+</tr>
+<tr>
+<td><center>size</center></td>
+<td><p>size(1) :</p>
+<p>size(x)返回矩陣x的尺寸向量。註意如果x不是一個矩陣，則總是返回[]。</p>
+<p>size(2) :</p>
+<p>size(x,y)返回矩陣x前y維的尺寸向量，如果x少於y維，返回完整的尺寸向量，註意y必須為正整數。此外如果x不是一個矩陣，則總是返回[]。</p>
+</td>
+</tr>
+<tr>
+<td><center>sleep</center></td>
+<td><p>sleep(1) :</p>
+<p>sleep(x)休眠x毫秒（x必須為正實數），此函數不返回任何值。</p>
+</td>
+</tr>
+<tr>
+<td><center>split</center></td>
+<td><p>split(2) :</p>
+<p>string_regex)j將字串string_input按照正則表達式string_regex分割為若幹個子字串並返回包含所有子字串的數組。用戶可以閱讀JAVA語言的Pattern類和String.split函數程式的幫助檔案獲得更多關於正則表達式使用方法的資訊。例子包括split("boo:and:foo", ":")返回["boo", "and", "foo"]以及split("boo:and:foo", "o")返回["b", "", ":and:f"]。</p>
+</td>
+</tr>
+<tr>
+<td><center>sprintf</center></td>
+<td><p>sprintf(1...) :</p>
+<p>printf(format_string, ...)，sprintf(format_string, ...)和fprintf(fd, format_string, ...)和C/C++中的对应函数程式工作方式相似。这些函数程式通过format_string和其后的数值参数构造出一个新的字串，printf将字串打印到标准输出，sprintf将字串作为返回值返回，fprintf则将字串输出到档案号为fd的文本档案。字串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字串（%c和%s）等等。用户可以在C语言的帮助手册中找到format_string的构造方法。例如，printf("Hello world!%f", 3.14)将会打印输出"Hello world!3.140000"，而sprintf("%c%d", "A", 9)则返回"A9"（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>sqrt</center></td>
+<td><p>sqrt(1) :</p>
+<p>函數sqrt(x)返回實數x的平方根值。</p>
+</td>
+</tr>
+<tr>
+<td><center>sscanf</center></td>
+<td><p>sscanf(2) :</p>
+<p>scanf(format_string)，sscanf(input_from, format_string)和fscanf(fd, format_string)和C/C++中的對應函數程式工作方式相似。scanf讀取用戶的一行輸入，sscanf讀取字串input_from，fscanf從檔案（檔案號fd）中讀取檔案內容。字串format_string支持輸入整數（%d、%i、%x等），浮點數（%e、%f等），字符和字串（%c和%s）等等。用戶可以在C語言的幫助文檔中找到format_string的構造方法。但是，和C語言有所不同，MFP中的這些函數程式不需要輸入用於存儲讀取數值的參數。所有的讀取的數值將會保存在一個數組中作為返回值返回。比如，sscanf("3Hello world!", "%d%c%c%s")將會返回[3, "H", "e", "llo"]（註意MFP不支持單一字符數據類型，所以單一的字符將會存儲為一個只包括一個字符的字串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>stdev</center></td>
+<td><p>stdev(0...) :</p>
+<p>函數stdev(…)返回任意個數參數的標準差，註意這些參數是一個大的集合中的采樣。</p>
+</td>
+</tr>
+<tr>
+<td><center>stdevp</center></td>
+<td><p>stdevp(0...) :</p>
+<p>函數stdevp(…)返回任意個數參數的標準差。</p>
+</td>
+</tr>
+<tr>
+<td><center>strcat</center></td>
+<td><p>strcat(2...) :</p>
+<p>strcat(string1, string2...)將字串參數順次連接在一起，返回新的連接好的字串。本函數程式需要至少兩個參數。</p>
+</td>
+</tr>
+<tr>
+<td><center>strcmp</center></td>
+<td><p>strcmp(6) :</p>
+<p>strcmp(src, dest, src_start, src_end, dest_start, dest_end)比較源字符串src（從src_start到src_end）和目標字符串dest（從dest_start到dest_end）。如果src和dest相等返回0，如果src大於dest返回大於0的值，如果src小於dest返回小於0的值。註意字符串索引從0開始，src_end和dest_end的索引位置為最後一個被選中字符的索引位置加一。另外，最後四個參數可以省略，如果被省略，src_start和dest_start的缺省值為0，src_end和dest_end的缺省值為對應字符串的長度。</p>
+</td>
+</tr>
+<tr>
+<td><center>strcpy</center></td>
+<td><p>strcpy(6) :</p>
+<p>strcpy(src, dest, src_start, src_end, dest_start, dest_end)返回將源字符串src從src_start到src_end拷貝到目標字符串dest從dest_start到dest_end的新字符串值。註意字符串索引從0開始，src_end和dest_end的索引位置為最後一個被選中字符的索引位置加一。另外，最後四個參數可以省略，如果被省略，src_start和dest_start的缺省值為0，src_end和dest_end的缺省值為對應字符串的長度。</p>
+</td>
+</tr>
+<tr>
+<td><center>stricmp</center></td>
+<td><p>stricmp(6) :</p>
+<p>stricmp(src, dest, src_start, src_end, dest_start, dest_end)在忽略字母大小寫的前提下比較源字符串src（從src_start到src_end）和目標字符串dest（從dest_start到dest_end）。如果src和dest相等返回0，如果src大於dest返回大於0的值，如果src小於dest返回小於0的值。註意字符串索引從0開始，src_end和dest_end的索引位置為最後一個被選中字符的索引位置加一。另外，最後四個參數可以省略，如果被省略，src_start和dest_start的缺省值為0，src_end和dest_end的缺省值為對應字符串的長度。</p>
+</td>
+</tr>
+<tr>
+<td><center>strlen</center></td>
+<td><p>strlen(1) :</p>
+<p>strlen(x)返回字符串x的長度。</p>
+</td>
+</tr>
+<tr>
+<td><center>strsub</center></td>
+<td><p>strsub(2) :</p>
+<p>strsub(str, start)返回字符串str的子字符串。該子字符串從字符start開始到str的最後一個字符。註意字符串的第一個字符是0號字符。</p>
+<p>strsub(3) :</p>
+<p>strsub(str, start, end)返回字符串str的子字符串。該子字符串從字符start開始到字符end-1。註意字符串的第一個字符是0號字符。</p>
+</td>
+</tr>
+<tr>
+<td><center>sum</center></td>
+<td><p>sum(0...) :</p>
+<p>函數sum(…)返回任意個數參數的總合。</p>
+</td>
+</tr>
+<tr>
+<td><center>sum_over</center></td>
+<td><p>sum_over(3) :</p>
+<p>函數程式sum_over(x, y, z)計算基於字串的表達式x中的變數取值從整數y逐步變化到整數z的值的總合。y和z必須是字串的形式，其中，y必須寫成一個賦值表達式，比如"a=10"，這裏，a是變數名。本函數程式的一個例子為sum_over("x+1", "x=1", "10")。</p>
+</td>
+</tr>
+<tr>
+<td><center>system</center></td>
+<td><p>system(1) :</p>
+<p>system(str)運行一個系統指令並且返回該系統指令的返回值。註意系統指令必須是一個可執行的檔案以及它的命令參數。由於這個原因，在Windows平臺上，諸如system("dir")無法正確執行是因為dir並非是一個單獨的可執行檔案，而是cmd.exe的一個內部功能。要執行dir指令，用戶需要運行system("cmd /c dir")。還要註意，在現階段，這個函數程式只能將系統指令的輸出打印出來，還無法接受在運行中用戶對於該系統指令的輸入。此外，如果該系統指令不存在，則會拋出異常。</p>
+</td>
+</tr>
+<tr>
+<td><center>tan</center></td>
+<td><p>tan(1) :</p>
+<p>tan(x)返回x的正切值，註意x可以為復數。</p>
+</td>
+</tr>
+<tr>
+<td><center>tand</center></td>
+<td><p>tand(1) :</p>
+<p>tand(x)返回基於角度的x的正切值。</p>
+</td>
+</tr>
+<tr>
+<td><center>tanh</center></td>
+<td><p>tanh(1) :</p>
+<p>函數tanh(x)用於計算x的雙曲正切值。</p>
+</td>
+</tr>
+<tr>
+<td><center>tip</center></td>
+<td><p>tip(2) :</p>
+<p>函數tip(x,y)用於計算在美國飯館吃飯時所支付的所有費用包括實際費用和小費。</p>
+</td>
+</tr>
+<tr>
+<td><center>to_lowercase_string</center></td>
+<td><p>to_lowercase_string(1) :</p>
+<p>to_lowercase_string(x)返回數據x的打印值（所有的字母均為小寫）。</p>
+</td>
+</tr>
+<tr>
+<td><center>to_string</center></td>
+<td><p>to_string(1) :</p>
+<p>to_string(x)返回數據x的打印值。</p>
+</td>
+</tr>
+<tr>
+<td><center>to_uppercase_string</center></td>
+<td><p>to_uppercase_string(1) :</p>
+<p>to_uppercase_string(x)返回數據x的打印值（所有的字母均為大寫）。</p>
+</td>
+</tr>
+<tr>
+<td><center>todeg</center></td>
+<td><p>todeg(1) :</p>
+<p>函數todeg(x)將弧度x轉換為度數值。</p>
+</td>
+</tr>
+<tr>
+<td><center>torad</center></td>
+<td><p>torad(1) :</p>
+<p>函數torad(x)將度數x轉換為弧度值。</p>
+</td>
+</tr>
+<tr>
+<td><center>tostring</center></td>
+<td><p>tostring(1) :</p>
+<p>tostring(x) 返回數據x的打印值。</p>
+</td>
+</tr>
+<tr>
+<td><center>trim</center></td>
+<td><p>trim(1) :</p>
+<p>trim(string)，trim_left(string)和trim_right(string)從字串的兩邊或者一邊刪除任何一個ASCI值小於等於空白字符（' '）的字符。具體說來，trim從左右兩邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到左邊和右邊都遇到了一個ASCI值大於空白字符（' '）的字符；trim_left從左邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到遇到了一個ASCI值大於空白字符（' '）的字符；trim_right從右邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到遇到了一個ASCI值大於空白字符（' '）的字符。例子包括trim(" \n hello world ") （返回"hello world"）, trim_left(" \n hello world "）, （返回"hello world "）以及trim_right(" \n hello world ") （返回" hello world")。</p>
+</td>
+</tr>
+<tr>
+<td><center>trim_left</center></td>
+<td><p>trim_left(1) :</p>
+<p>trim(string)，trim_left(string)和trim_right(string)從字串的兩邊或者一邊刪除任何一個ASCI值小於等於空白字符（' '）的字符。具體說來，trim從左右兩邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到左邊和右邊都遇到了一個ASCI值大於空白字符（' '）的字符；trim_left從左邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到遇到了一個ASCI值大於空白字符（' '）的字符；trim_right從右邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到遇到了一個ASCI值大於空白字符（' '）的字符。例子包括trim(" \n hello world ") （返回"hello world"）, trim_left(" \n hello world "）, （返回"hello world "）以及trim_right(" \n hello world ") （返回" hello world")。</p>
+</td>
+</tr>
+<tr>
+<td><center>trim_right</center></td>
+<td><p>trim_right(1) :</p>
+<p>trim(string)，trim_left(string)和trim_right(string)從字串的兩邊或者一邊刪除任何一個ASCI值小於等於空白字符（' '）的字符。具體說來，trim從左右兩邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到左邊和右邊都遇到了一個ASCI值大於空白字符（' '）的字符；trim_left從左邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到遇到了一個ASCI值大於空白字符（' '）的字符；trim_right從右邊刪除任何一個ASCI值小於等於空白字符（' '）的字符，直到遇到了一個ASCI值大於空白字符（' '）的字符。例子包括trim(" \n hello world ") （返回"hello world"）, trim_left(" \n hello world "）, （返回"hello world "）以及trim_right(" \n hello world ") （返回" hello world")。</p>
+</td>
+</tr>
+<tr>
+<td><center>xor</center></td>
+<td><p>xor(2) :</p>
+<p>函數xor計算x和y的異或值，x和y可以為任何數值。如果x不等於y，返回true。</p>
+</td>
+</tr>
+<tr>
+<td><center>zeros</center></td>
+<td><p>zeros(1...) :</p>
+<p>zeros函數返回一個所有元素都是0的矩陣，本函數的參數用於決定矩陣的尺寸，要麽為一批正整數，要麽為一個正整數數列。註意表達式zeros([])返回常數值0。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

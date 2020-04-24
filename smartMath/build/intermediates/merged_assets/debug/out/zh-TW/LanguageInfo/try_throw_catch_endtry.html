@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>程式開發科學計算器幫助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+</head>
+<body style="background-color:white;">
+<h2 style="color:blue">MFP編程語言try，throw，catch，endtry語句：</h2>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+Try語句用於開始一個Try程式塊。Try語句沒有任何參數。在Try程式塊中，任何由於MFP語言觸發的異常將會被拋出並傳遞到跟隨try程式塊的某一個catch語句中處理。當然，如果沒有一個catch語句能夠處理這個被拋出來的異常，該異常將會被拋向外層的程式塊或函數。</p>
+<p style="font-family:verdana;color:black;">
+Throw語句有一個字串參數。如果throw語句被執行，MFP列印出字串參數然後退出。</p>
+<p style="font-family:verdana;color:black;">
+Catch語句可以接受一個表達式作為參數，也可以不接受參數。如果不接受參數，該catch語句捕獲任何由該語句對應的try程式塊拋出的異常。如果它有一個表達式參數，該表達式參數作為一個異常過濾器用於決定一個異常是否由該catch語句處理。如果異常過濾器表達式的值是布爾值true，該異常被捕獲，否則，該異常被傳遞到下一個catch語句，或者被拋向外層的程式塊或函數。Catch語句提供三個字串類型的內部參數，也就是level，type和info。參數level存儲異常的層級，它的值是"LANGUAGE"（也就是程式語言級別的異常，比如沒有endif語句跟隨if語句或者一個用戶定義的拋出字符串的異常）或者"EXPRESSION"（也就是表達式級別的異常，比如被零除或者缺少右括號），參數type是MFP編程語言內部定義異常的類型，參數info是異常的內容。如果開發人員用一個throw語句拋出一個字串，info的值就是這個字串。這三個參數僅能用於catch語句中的異常過濾器。但是異常過濾器可以使用變量名和函數名空間中的任意變量和函數。如果一個變量和這三個catch語句的內部參數重名，它將被重名內部參數重載。</p>
+<p style="font-family:verdana;color:black;">
+Endtry用於結束一個try/catch程式塊，它不接受任何參數。</p>
+<p style="font-family:verdana;color:black;">
+以下是try/throw/catch/endtry的例子。</p>
+<pre style="font-family:verdana;color:black;">
+Function testtry1()
+	Variable a, b, c
+	a = 3
+	Try
+		Select a
+		Case 3
+			print("a == 1\n")
+			Try
+				print (NULL==FALSE)
+				dbc
+			Catch
+				print ("Cannot cvt NULL to boolean or dbc is undefined\n")
+			EndTry
+		EndS
+		Throw "my exception"
+	Catch (1+2)==4
+		print ("IN (1+2) == 4")
+	catch false
+		print ("In false")
+	Catch and((b=level)=="LANGUAGE", (c=info) == "my exception")
+		print ("In catch and, b = ")
+		print (b)
+		print ("\n")
+		Help
+		 Try 
+		 	c = adb
+		 Catch
+		 	print (" c= adb")
+		 EndTry
+			Help
+		Endh
+		Try
+			c = 3/0
+		Catch And((c= info)==c, level == "LANGUAGE")
+			print ("In Language\n")
+			print (c) 
+		Catch And((c= info)==c, level=="EXPRESSION")
+			print ("In Expression\n")
+			print (c)
+		EndTry
+		print ("In upper level try\n")
+		print (b)
+		print (" , c = ")
+		print (c)
+		print ("\n")
+	Catch or((b=level)=="LANGUAGE", (c=info) == "my exception")
+		print ("In catch or, b = ")
+		print (b)
+		print (" , c = ")
+		print (c)
+		print ("\n")
+	Endtry
+Endf
+</pre>
+<p style="font-family:verdana;color:black;">
+這個例子的輸出結果如下：</p>
+<pre style="font-family:verdana;color:black;">
+a == 1
+FALSECannot cvt NULL to boolean or dbc is undefined
+In catch and, b = LANGUAGE
+In Expression
+Zero division!In upper level try
+LANGUAGE , c = Zero division!
+</pre>
+</body>
+</html>

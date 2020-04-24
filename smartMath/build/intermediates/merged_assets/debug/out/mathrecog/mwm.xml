@@ -1,0 +1,136 @@
+<MisrecogWordSets>
+	<MisrecogWord ShouldBe="cos" WordType="FUNCTION" UnitType="WORD_COS" >
+		<WordCandidate>\infinites</WordCandidate>
+		<WordCandidate>\infiniteS</WordCandidate>
+		<WordCandidate>\infinite5</WordCandidate>
+		<LetterCandidates Index="0" UnitType="SMALL_C" >
+			<LetterCandidate>c</LetterCandidate>
+			<LetterCandidate>C</LetterCandidate>
+		</LetterCandidates>
+		<LetterCandidates Index="1" UnitType="SMALL_O" >
+			<LetterCandidate>o</LetterCandidate>
+			<LetterCandidate>O</LetterCandidate>
+			<LetterCandidate>0</LetterCandidate>
+		</LetterCandidates>
+		<LetterCandidates Index="2" UnitType="SMALL_S" >
+			<LetterCandidate>s</LetterCandidate>
+			<LetterCandidate>S</LetterCandidate>
+			<LetterCandidate Misrecog="true" >5</LetterCandidate>
+		</LetterCandidates>
+	</MisrecogWord>
+	<MisrecogWord ShouldBe="sin" WordType="FUNCTION" >
+		<LetterCandidates Index="0" UnitType="SMALL_S" >
+			<LetterCandidate>s</LetterCandidate>
+			<LetterCandidate>S</LetterCandidate>
+			<LetterCandidate Misrecog="true" >5</LetterCandidate>
+		</LetterCandidates>
+		<LetterCandidates Index="1" UnitType="SMALL_I" >
+			<LetterCandidate>i</LetterCandidate>
+		</LetterCandidates>
+		<LetterCandidates Index="2" UnitType="SMALL_N" >
+			<LetterCandidate>n</LetterCandidate>
+			<LetterCandidate Misrecog="true" >\pi</LetterCandidate>
+			<LetterCandidate Misrecog="true" >\Pi</LetterCandidate>
+		</LetterCandidates>
+	</MisrecogWord>
+	<MisrecogWord ShouldBe="lg" WordType="FUNCTION" >
+		<LetterCandidates Index="0" UnitType="SMALL_L" >
+			<LetterCandidate>l</LetterCandidate>
+			<LetterCandidate>1</LetterCandidate>
+			<LetterCandidate>|</LetterCandidate>
+			<LetterCandidate Misrecog="true" >]</LetterCandidate>
+		</LetterCandidates>
+		<LetterCandidates Index="1" UnitType="SMALL_G" >
+			<LetterCandidate>g</LetterCandidate>
+		</LetterCandidates>
+	</MisrecogWord>
+	<MisrecogWord ShouldBe="ln" WordType="FUNCTION" >
+		<LetterCandidates Index="0" UnitType="SMALL_L" >
+			<LetterCandidate>l</LetterCandidate>
+			<LetterCandidate>1</LetterCandidate>
+			<LetterCandidate>|</LetterCandidate>
+			<LetterCandidate Misrecog="true" >]</LetterCandidate>
+		</LetterCandidates>
+		<LetterCandidates Index="1" UnitType="SMALL_N" >
+			<LetterCandidate>n</LetterCandidate>
+			<LetterCandidate Misrecog="true" >\pi</LetterCandidate>
+			<LetterCandidate Misrecog="true" >\Pi</LetterCandidate>
+		</LetterCandidates>
+	</MisrecogWord>
+	<MisrecogWord ShouldBe="log" WordType="FUNCTION" >
+		<LetterCandidates Index="0" UnitType="SMALL_L" >
+			<LetterCandidate>l</LetterCandidate>
+			<LetterCandidate>I</LetterCandidate>
+			<LetterCandidate>1</LetterCandidate>
+			<LetterCandidate>|</LetterCandidate>
+			<LetterCandidate Misrecog="true" >]</LetterCandidate>
+		</LetterCandidates>
+		<LetterCandidates Index="1" UnitType="SMALL_O" >
+			<LetterCandidate>o</LetterCandidate>
+			<LetterCandidate>O</LetterCandidate>
+			<LetterCandidate>0</LetterCandidate>
+		</LetterCandidates>
+		<LetterCandidates Index="2" UnitType="SMALL_G" >
+			<LetterCandidate>g</LetterCandidate>
+		</LetterCandidates>
+	</MisrecogWord>
+	<MisrecogWord ShouldBe="tan" WordType="FUNCTION" UnitType="WORD_TAN" >
+		<WordCandidate>t\infinite</WordCandidate>
+		<WordCandidate>b\infinite</WordCandidate>
+		<WordCandidate>b\Deltan</WordCandidate>
+		<LetterCandidates Index="0" UnitType="SMALL_T" >
+			<LetterCandidate>t</LetterCandidate>
+			<LetterCandidate Misrecog="true" >[</LetterCandidate>
+			<LetterCandidate Misrecog="true" >(</LetterCandidate>
+			<LetterCandidate Misrecog="true" >{</LetterCandidate>
+			<LetterCandidate Misrecog="true" >b</LetterCandidate>
+		</LetterCandidates>
+		<LetterCandidates Index="1" UnitType="SMALL_A" >
+			<LetterCandidate>a</LetterCandidate>
+			<LetterCandidate Misrecog="true" >O</LetterCandidate>
+			<LetterCandidate Misrecog="true" >o</LetterCandidate>
+		</LetterCandidates>
+		<LetterCandidates Index="2" UnitType="SMALL_N" >
+			<LetterCandidate>n</LetterCandidate>
+			<LetterCandidate>\Pi</LetterCandidate>
+		</LetterCandidates>
+	</MisrecogWord>
+	<MisrecogWord ShouldBe="lim" WordType="FUNCTION" UnitType="WORD_LIM" >
+		<WordCandidate>{h}^{.}m</WordCandidate>
+		<WordCandidate>un1</WordCandidate>
+		<WordCandidate>{h}^{.}n1</WordCandidate>
+		<WordCandidate>{1}^{.}1m</WordCandidate>
+		<WordCandidate>{1}^{.}1n1</WordCandidate>
+		<WordCandidate>{1}^{.}11n</WordCandidate>
+		<WordCandidate>{1}^{.}1In</WordCandidate>
+		<WordCandidate>{I}^{.}1m</WordCandidate>
+		<WordCandidate>{I}^{.}1n1</WordCandidate>
+		<WordCandidate>{I}^{.}11n</WordCandidate>
+		<WordCandidate>{I}^{.}1In</WordCandidate>
+		<WordCandidate>{1}^{.}Im</WordCandidate>
+		<WordCandidate>{1}^{.}In1</WordCandidate>
+		<WordCandidate>{1}^{.}I1n</WordCandidate>
+		<WordCandidate>{1}^{.}IIn</WordCandidate>
+		<WordCandidate>{I}^{.}Im</WordCandidate>
+		<WordCandidate>{I}^{.}In1</WordCandidate>
+		<WordCandidate>{I}^{.}I1n</WordCandidate>
+		<WordCandidate>{I}^{.}IIn</WordCandidate>
+		<LetterCandidates Index="0" UnitType="SMALL_L" >
+			<LetterCandidate>l</LetterCandidate>
+			<LetterCandidate>I</LetterCandidate>
+			<LetterCandidate>1</LetterCandidate>
+			<LetterCandidate>\arrowvert</LetterCandidate>
+		</LetterCandidates>
+		<LetterCandidates Index="1" UnitType="SMALL_I" >
+			<LetterCandidate>i</LetterCandidate>
+		</LetterCandidates>
+		<LetterCandidates Index="2" UnitType="SMALL_M" >
+			<LetterCandidate>m</LetterCandidate>
+			<LetterCandidate>M</LetterCandidate>
+			<LetterCandidate Misrecog="true" >\infinite</LetterCandidate>
+			<LetterCandidate Misrecog="true" >n1</LetterCandidate>
+			<LetterCandidate Misrecog="true" >1n</LetterCandidate>
+			<LetterCandidate Misrecog="true" >In</LetterCandidate>
+		</LetterCandidates>
+	</MisrecogWord>
+</MisrecogWordSets>

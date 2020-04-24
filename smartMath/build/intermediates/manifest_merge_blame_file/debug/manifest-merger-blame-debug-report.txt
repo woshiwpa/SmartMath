@@ -1,0 +1,321 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.cyzapps.SmartMath"
+4    android:installLocation="auto"
+5    android:versionCode="19"
+6    android:versionName="1.6.5.19" >
+7
+8    <uses-sdk
+9        android:minSdkVersion="14"
+9-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml
+10        android:targetSdkVersion="28" />
+10-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml
+11
+12    <uses-permission android:name="android.permission.VIBRATE" />
+12-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:9:5-66
+12-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:9:22-63
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:10:5-67
+13-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:10:22-64
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:11:5-79
+14-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:11:22-76
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:12:5-81
+15-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:12:22-78
+16    <uses-permission android:name="android.permission.CAMERA" />
+16-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:13:5-65
+16-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:13:22-62
+17    <uses-permission android:name="android.permission.FLASHLIGHT" />
+17-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:14:2-65
+17-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:14:19-63
+18    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- for adwo and baidu ads -->
+18-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:15:5-75
+18-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:15:22-72
+19    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- for baidu ads -->
+19-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:16:5-81
+19-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:16:22-78
+20    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- for baidu ads -->
+20-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:17:5-76
+20-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:17:22-73
+21    <uses-feature
+21-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:18:2-82
+22        android:name="android.hardware.camera"
+22-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:18:16-54
+23        android:required="false" />
+23-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:18:55-79
+24    <uses-feature
+24-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:19:5-95
+25        android:name="android.hardware.camera.autofocus"
+25-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:19:19-67
+26        android:required="false" />
+26-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:19:68-92
+27    <uses-feature
+27-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:20:5-91
+28        android:name="android.hardware.camera.flash"
+28-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:20:19-63
+29        android:required="false" />
+29-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:20:64-88
+30
+31    <supports-screens
+31-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:22:5-24:37
+32        android:anyDensity="true"
+32-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:23:9-34
+33        android:resizeable="true" />
+33-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:24:9-34
+34
+35    <application
+35-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:26:5-129:19
+36        android:name="com.cyzapps.SmartMath.AppSmartMath"
+36-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:27:9-37
+37        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+37-->[com.android.support:support-compat:28.0.0] C:\Users\Tony\.gradle\caches\transforms-2\files-2.1\09c1f5634c674c46b74176ad3d1ddced\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+38        android:debuggable="true"
+39        android:icon="@drawable/icon"
+39-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:28:9-38
+40        android:label="@string/app_name"
+40-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:29:9-41
+41        android:testOnly="true" >
+42        <meta-data
+42-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:30:9-92
+43            android:name="com.google.android.gms.version"
+43-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:30:20-65
+44            android:value="9452000" />
+44-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:30:66-89
+45
+46        <activity
+46-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:31:9-40:20
+47            android:name="com.cyzapps.SmartMath.ActivitySmartCalc"
+47-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:32:13-45
+48            android:label="@string/title_activity_activity_smart_calc"
+48-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:33:13-71
+49            android:windowSoftInputMode="adjustPan|stateUnchanged" >
+49-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:34:13-67
+50            <intent-filter>
+50-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:35:13-39:29
+51                <action android:name="android.intent.action.MAIN" />
+51-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:36:17-69
+51-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:36:25-66
+52
+53                <category android:name="android.intent.category.LAUNCHER" />
+53-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:38:17-77
+53-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:38:27-74
+54            </intent-filter>
+55        </activity>
+56        <activity
+56-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:41:3-44:65
+57            android:name="com.cyzapps.SmartMath.ActivityQuickRecog"
+57-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:41:13-47
+58            android:configChanges="keyboardHidden|orientation|screenSize"
+58-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:42:7-68
+59            android:screenOrientation="landscape" />
+59-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:43:7-44
+60        <activity
+60-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:45:9-57:20
+61            android:name="com.cyzapps.SmartMath.ActivityFingerPaint"
+61-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:46:13-47
+62            android:configChanges="orientation|keyboardHidden|screenSize"
+62-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:47:13-74
+63            android:label="@string/app_name"
+63-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:48:13-45
+64            android:screenOrientation="landscape"
+64-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:50:13-50
+65            android:windowSoftInputMode="adjustPan|stateUnchanged" >
+65-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:49:13-67
+66
+67            <!--
+68            intent-filter>
+69                <action android:name="android.intent.action.MAIN" />
+70
+71                <category android:name="android.intent.category.LAUNCHER" />
+72            </intent-filter
+73            -->
+74        </activity>
+75        <activity
+75-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:58:9-60:78
+76            android:name="com.cyzapps.SmartMath.ActivityCalcAssistant"
+76-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:58:19-56
+77            android:configChanges="orientation|keyboardHidden|screenSize"
+77-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:60:5-66
+78            android:theme="@android:style/Theme.Dialog" />
+78-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:59:8-51
+79        <activity
+79-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:61:3-62:78
+80            android:name="com.cyzapps.SmartMath.ActivityReadConstants"
+80-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:61:13-50
+81            android:configChanges="orientation|keyboardHidden|screenSize" />
+81-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:62:5-66
+82        <activity
+82-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:63:3-64:78
+83            android:name="com.cyzapps.SmartMath.ActivityCvtUnit"
+83-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:63:13-44
+84            android:configChanges="orientation|keyboardHidden|screenSize" />
+84-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:64:5-66
+85        <activity
+85-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:65:3-66:71
+86            android:name="com.cyzapps.SmartMath.ActivityCfgKeyPad"
+86-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:65:13-46
+87            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+87-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:66:5-59
+88        <activity
+88-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:67:9-69:78
+89            android:name="com.cyzapps.SmartMath.ActivityPlotXYGraph"
+89-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:67:19-54
+90            android:configChanges="orientation|keyboardHidden|screenSize"
+90-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:69:5-66
+91            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+91-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:68:14-68
+92        <activity
+92-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:70:9-72:78
+93            android:name="com.cyzapps.SmartMath.ActivityPlotPolarGraph"
+93-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:70:19-57
+94            android:configChanges="orientation|keyboardHidden|screenSize"
+94-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:72:5-66
+95            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+95-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:71:14-68
+96        <activity
+96-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:73:9-75:78
+97            android:name="com.cyzapps.SmartMath.ActivityPlotXYZGraph"
+97-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:73:19-55
+98            android:configChanges="orientation|keyboardHidden|screenSize"
+98-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:75:5-66
+99            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+99-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:74:14-68
+100        <activity
+100-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:76:9-78:78
+101            android:name="com.cyzapps.SmartMath.ActivityIntegrate"
+101-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:76:19-52
+102            android:configChanges="orientation|keyboardHidden|screenSize"
+102-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:78:5-66
+103            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+103-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:77:14-68
+104        <activity
+104-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:79:3-81:60
+105            android:name="com.cyzapps.SmartMath.ActivitySettings"
+105-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:79:13-45
+106            android:configChanges="orientation|keyboardHidden|screenSize"
+106-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:80:5-66
+107            android:theme="@android:style/Theme.Dialog" />
+107-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:81:5-48
+108        <activity
+108-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:82:3-83:78
+109            android:name="com.cyzapps.SmartMath.ActivitySmCRecord"
+109-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:82:13-46
+110            android:configChanges="orientation|keyboardHidden|screenSize" />
+110-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:83:5-66
+111        <activity
+111-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:84:3-85:78
+112            android:name="com.cyzapps.SmartMath.ActivityTutorialBox"
+112-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:84:13-48
+113            android:configChanges="orientation|keyboardHidden|screenSize" />
+113-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:85:5-66
+114        <activity
+114-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:86:3-87:78
+115            android:name="com.cyzapps.SmartMath.ActivityShowHelp"
+115-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:86:13-45
+116            android:configChanges="orientation|keyboardHidden|screenSize" />
+116-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:87:5-66
+117        <activity
+117-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:88:3-89:78
+118            android:name="com.cyzapps.GraphDemon.ActivityChartDemon"
+118-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:88:13-69
+119            android:configChanges="orientation|keyboardHidden|screenSize" />
+119-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:89:5-66
+120        <activity
+120-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:90:9-92:78
+121            android:name="com.cyzapps.GraphDemon.ActivityConfig2DExprGraph"
+121-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:90:19-82
+122            android:configChanges="orientation|keyboardHidden|screenSize"
+122-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:92:5-66
+123            android:theme="@android:style/Theme.Dialog" />
+123-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:91:8-51
+124        <activity
+124-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:93:3-95:78
+125            android:name="com.cyzapps.GraphDemon.ActivityConfigPolarExprGraph"
+125-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:93:13-79
+126            android:configChanges="orientation|keyboardHidden|screenSize"
+126-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:95:5-66
+127            android:theme="@android:style/Theme.Dialog" />
+127-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:94:8-51
+128        <activity
+128-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:96:3-98:78
+129            android:name="com.cyzapps.GraphDemon.ActivityConfigXYZGraph"
+129-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:96:13-73
+130            android:configChanges="orientation|keyboardHidden|screenSize"
+130-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:98:5-66
+131            android:theme="@android:style/Theme.Dialog" />
+131-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:97:8-51
+132        <activity
+132-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:99:9-101:78
+133            android:name="com.cyzapps.GraphDemon.ActivityConfig3DExprGraph"
+133-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:99:19-82
+134            android:configChanges="orientation|keyboardHidden|screenSize"
+134-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:101:5-66
+135            android:theme="@android:style/Theme.Dialog" />
+135-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:100:8-51
+136        <activity
+136-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:102:9-103:78
+137            android:name="com.cyzapps.MFPFileManager.MFPFileManagerActivity"
+137-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:102:19-83
+138            android:configChanges="orientation|keyboardHidden|screenSize" />
+138-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:103:5-66
+139        <activity
+139-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:104:3-106:71
+140            android:name="com.cyzapps.MFPFileManager.ScriptEditorActivity"
+140-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:104:13-75
+141            android:configChanges="orientation|keyboardHidden|screenSize"
+141-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:105:5-66
+142            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+142-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:106:5-59
+143
+144        <receiver
+144-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:108:9-121:20
+145            android:name="com.cyzapps.adapter.StorageActionReceiver"
+145-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:109:13-69
+146            android:enabled="true"
+146-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:110:13-35
+147            android:exported="true" >
+147-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:111:13-36
+148            <intent-filter>
+148-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:112:13-120:29
+149                <action android:name="android.intent.action.MEDIA_MOUNTED" />
+149-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:113:17-78
+149-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:113:25-75
+150                <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
+150-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:114:17-80
+150-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:114:25-77
+151                <action android:name="android.intent.action.MEDIA_EJECT" />
+151-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:115:17-76
+151-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:115:25-73
+152                <action android:name="android.intent.action.MEDIA_BAD_REMOVAL" />
+152-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:116:17-82
+152-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:116:25-79
+153                <action android:name="android.intent.action.MEDIA_CHECKING" />
+153-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:117:17-79
+153-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:117:25-76
+154
+155                <data android:scheme="file" />
+155-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:119:17-47
+155-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:119:23-44
+156            </intent-filter>
+157        </receiver>
+158
+159        <provider
+160            android:name="android.support.v4.content.FileProvider"
+160-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:122:19-73
+161            android:authorities="com.cyzapps.SmartMath.provider"
+161-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:123:13-60
+162            android:exported="false"
+162-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:124:13-37
+163            android:grantUriPermissions="true" >
+163-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:125:13-47
+164            <meta-data
+164-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:126:13-127:58
+165                android:name="android.support.FILE_PROVIDER_PATHS"
+165-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:126:24-74
+166                android:resource="@xml/provider_paths" />
+166-->D:\tmp\git_repo\SmartMath\smartMath\src\main\AndroidManifest.xml:127:17-55
+167        </provider>
+168    </application>
+169
+170</manifest>

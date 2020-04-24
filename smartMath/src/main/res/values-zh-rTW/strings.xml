@@ -853,6 +853,8 @@
 	<string name="what_you_need_to_know_before_start_to_use">在使用之前您需要了解 ...</string>
 	<string name="no_valid_expr_recognized">沒有辨識出任何合法的表達式！</string>
 	<string name="recognition_interrupted">識別過程被中斷！</string>
+	<string name="help">幫助</string>
+	<string name="why_request_permissions">我需要拍照權限進行數學公式識別，還需要存儲權限以保存結果。</string>
 
 	<string name="baidu_ad_words_China">中 国 </string>
 </resources>

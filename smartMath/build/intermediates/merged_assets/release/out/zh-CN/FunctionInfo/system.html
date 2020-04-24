@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>可编程科学计算器帮助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">可编程科学计算器帮助：系统函数</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函数名</th>
+<th>函数帮助信息</th>
+</tr>
+<tr>
+<td><center>input</center></td>
+<td><p>input(2) :</p>
+<p>input(prompt,input_type)函数打印出提示符prompt并等待用户输入。第二个参数input_type可以省略。如果第二个参数不省略并且其为字符串"s"或"S"，用户的输入将会被看成一个字符串，并且这个函数返回输入的字符串。否则，输入被当作一个表达式来处理，而这个函数返回表达式的值。如果输入的不是一个合法的表达式，本函数将再次打印出提示符，等待用户重新输入。用户如果要结束一次输入需要按回车键。如果一次输入多行，只有第一行会被处理。本函数的一个例子为，用户运行input("$", "S")，然后在提示符后输入4 + 3，按回车键，本函数将会返回字符串"4 + 3"。而如果用户运行input("%")，然后在提示符后输入4 + 3，按回车键，本函数将会返回7。</p>
+</td>
+</tr>
+<tr>
+<td><center>pause</center></td>
+<td><p>pause(1) :</p>
+<p>pause(message)将暂停当前运行的程序，等待用户输入一个回车，然后继续。字符串参数message可以省略。如果不省略，message将作为提示被打印在屏幕上。</p>
+</td>
+</tr>
+<tr>
+<td><center>print</center></td>
+<td><p>print(1) :</p>
+<p>print(x)向输出端打印任意数据类型x的值。</p>
+</td>
+</tr>
+<tr>
+<td><center>printf</center></td>
+<td><p>printf(1...) :</p>
+<p>printf(format_string, ...)，sprintf(format_string, ...)和fprintf(fd, format_string, ...)和C/C++中的对应函数工作方式相似。这些函数通过format_string和其后的数值参数构造出一个新的字符串，printf函数将字符串打印到标准输出，sprintf函数将字符串作为返回值返回，fprintf函数则将字符串输出到文件号为fd的文本文件。字符串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字符串（%c和%s）等等。用户可以在C语言的帮助文档中找到format_string的构造方法。例如，printf("Hello world!%f", 3.14)将会打印输出"Hello world!3.140000"，而sprintf("%c%d", "A", 9)则返回"A9"（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字符串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>scanf</center></td>
+<td><p>scanf(1) :</p>
+<p>scanf(format_string)，sscanf(input_from, format_string)和fscanf(fd, format_string)和C/C++中的对应函数工作方式相似。scanf读取用户的一行输入，sscanf读取字符串input_from，fscanf从文件（文件号fd）中读取文件内容。字符串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字符串（%c和%s）等等。用户可以在C语言的帮助文档中找到format_string的构造方法。但是，和C语言有所不同，MFP中的这些函数不需要输入用于存储读取数值的参数。所有的读取的数值将会保存在一个数组中作为返回值返回。比如，sscanf("3Hello world!", "%d%c%c%s")将会返回[3, "H", "e", "llo"]（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字符串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>sleep</center></td>
+<td><p>sleep(1) :</p>
+<p>sleep(x)休眠x毫秒（x必须为正实数），此函数不返回任何值。</p>
+</td>
+</tr>
+<tr>
+<td><center>system</center></td>
+<td><p>system(1) :</p>
+<p>system(str)运行一个系统指令并且返回该系统指令的返回值。注意系统指令必须是一个可执行的文件以及它的命令参数。由于这个原因，在Windows平台上，诸如system("dir")无法正确执行是因为dir并非是一个单独的可执行文件，而是cmd.exe的一个内部功能。要执行dir指令，用户需要运行system("cmd /c dir")。还要注意，在现阶段，这个函数只能将系统指令的输出打印出来，还无法接受在运行中用户对于该系统指令的输入。此外，如果该系统指令不存在，则会抛出异常。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

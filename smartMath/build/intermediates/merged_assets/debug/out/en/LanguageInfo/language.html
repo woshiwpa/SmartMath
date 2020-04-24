@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Scientific Calculator Plus Help</title>
+	</head>
+	<body style="background-color:white;">
+		<h2 style="color:blue">Scientific Calculator Plus : Language manual</h2>
+		<p style="font-family:verdana;color:black;">
+			All the functions except the built-in ones in Scientific Calculator Plus are developed by a language called MFP. Besides normal mathematical expressions and  <a href="operators.html" target="_self">operators</a>, this language also supports <a href="solve_slvreto.html" target="_self">solving mathematic equations</a>, binary number (with 0b as initial, e.g. 0b0011100), octal number (with 0 as initial, e.g. 0371.242), hexadecimal number (with 0x as initial, e.g. 0xAF46BC.0DD3E), <a href="complex_number.html" target="_self">complex number</a>, <a href="array.html" target="_self">array (matrix)</a>, <a href="string.html" target="_self">string</a>, function, variable, condition statements, loop statements and help comments. This language is case-insensative. 
+		<p style="font-family:verdana;color:black;">
+			MFP programming language has the following statements: 
+		</p>
+		<p><a href="function_return_endf.html" target="_self">function, endf, return</a></p>
+		<p><a href="variable.html" target="_self">variable</a></p>
+		<p><a href="if_elseif_else_endif.html" target="_self">if, elseif, else, endif</a></p>
+		<p><a href="while_loop_do_until_for_next.html" target="_self">while, loop, do, until, for, next</a></p>
+		<p><a href="break_continue.html" target="_self">break, continue</a></p>
+		<p><a href="select_case_default_ends.html" target="_self">select, case, default, ends</a></p>
+		<p><a href="try_throw_catch_endtry.html" target="_self">try, throw, catch, endtry</a></p>
+		<p><a href="solve_slvreto.html" target="_self">solve, slvreto</a></p>
+		<p><a href="help_endh.html" target="_self">help, endh</a></p>
+		<p style="font-family:verdana;color:black;">Each statement in MFP should occupy at least one line. If a statement is too long, it can be divided into several lines, and at the end of each line except the last line should be the characters " _". For example, assume there is a function with 10 parameters, the declaration of this function is very long if the function declaration statement is put in a single line:</p>
+		<p style="font-family:verdana;color:black;">function abcde(para1, para2, para3, para4, para5, para6, para7, para8, para9, para10)</p>
+		<p style="font-family:verdana;color:black;">. To make the program reader-friendly, the declaration can be devided into several lines like:</p>
+		<p><pre style="font-family:verdana;color:black;">function abcde(para1, para2, para3, _</pre></p>
+		<p><pre style="font-family:verdana;color:black;">               para4, para5, para6, _</pre></p>
+		<p><pre style="font-family:verdana;color:black;">               para7, para8, para9, para10)</pre><p>
+		<p style="font-family:verdana;color:black;">. And we can still add comment at the end of each line, for the above example, comments can be added like:</p>
+		<p><pre style="font-family:verdana;color:black;">function abcde(para1, para2, para3, _// line 1 has 3 parameters.</pre></p>
+		<p><pre style="font-family:verdana;color:black;">               para4, para5, para6, _		// line 2 has 3 parameters too.</pre></p>
+		<p><pre style="font-family:verdana;color:black;">               para7, para8, para9, para10) // line three has 4 parameters.</pre><p>
+		<p style="font-family:verdana;color:black;">. And each line can have at most one statement. Not like C/C++, MFP doesn't have any statement divisor, e.g. ";".</p>
+	</body>
+</html>

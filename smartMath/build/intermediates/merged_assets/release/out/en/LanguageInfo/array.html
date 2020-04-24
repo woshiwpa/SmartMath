@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Scientific Calculator Plus Help</title>
+</head>
+<body style="background-color:white;">
+<h2 style="color:blue">MFP language array (matrix) support:</h2>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+&nbsp;&nbsp;&nbsp;&nbsp;MFP supports array/matrix operations. An array is a list of elements which are seperated by "," and surrounded by "[" and "]". Consider the following examples: [1, 2, 3+i], [[1, 2, 3+i]] and [[4, 5], [sqrt(8.9), -i], [1.71, stdev(2,3,4)]]. In the examples, [1, 2, 3+i] is a one dimensional vector which includes three elements, [[1, 2, 3+i]] is 1 * 3 array while [[4, 5], [sqrt(8.9), -i], [1.71, stdev(2,3,4)]] is a 3 * 2 array.</p>
+<p style="font-family:verdana;color:black;">
+&nbsp;&nbsp;&nbsp;&nbsp;To access individual elements in an array, user should use index which is a list of integers surrounded by "[" and "]". For example, assume variable a is array [[4, 5], [sqrt(8.9), -i], [1.71, stdev(2,3,4)]], then a[2,0] is 1.71 and a[1] is [sqrt(8.9), -i] (index always starts from 0 at each dimension). In another example, assume variable b is [1, 2, 3+i], then b[2] is 3+i and b[0, 2] is invalid.</p>
+<p style="font-family:verdana;color:black;">
+&nbsp;&nbsp;&nbsp;&nbsp;Since version 1.0.3, MFP has been able to support matrix adding, substraction, multiplication and transposition. For example, [[1, 2], [3, 4], [5, 6]] + [[2, 3], [4, 5], [6, 7]] = [[3, 5], [7, 9], [11, 13]] (matrix adding), [[2, 3], [4, 5]] * 2 = [[4, 6], [8, 10]] (matrix multiplication), [1, 2] * [[3, 4]] = [11] (matrix multiplication) and [[2,3], [4, 5]]' = [[2,4], [3, 5]] (matrix transposition). Note that the size and dimention of the operands in matrix adding and substraction must exactly match while in matrix multiplication, last dimension size of the first operand should equal first dimension size of the second operand. However, direct matrix division is not supported yet.</p>
+<p style="font-family:verdana;color:black;">
+&nbsp;&nbsp;&nbsp;&nbsp;Different from matlab, MFP does support automatic size/dimension change in matrix element assignment. For example, assume an array variable a is [1, 2], then assigning a new value to a[1] is valid while to a[2] or a[0,1] is invalid. Fortunately MFP has many built-in and pre-defined functions which are able to access and modify array elements even beyond array size so that user can use them to raise array size/dimension. </p>
+</body>
+</html>

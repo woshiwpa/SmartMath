@@ -1,0 +1,4 @@
+#Thu Apr 23 22:06:49 AEST 2020
+base.0=D\:\\tmp\\git_repo\\SmartMath\\smartMath\\build\\intermediates\\dex\\debug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

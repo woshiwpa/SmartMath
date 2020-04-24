@@ -37,6 +37,7 @@ import com.cyzapps.adapter.MFPAdapter.InternalFuncInfo;
 
 import android.net.Uri;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
@@ -55,6 +56,9 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.hardware.Camera;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.content.FileProvider;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -122,18 +126,19 @@ public class ActivitySmartCalc extends Activity	implements AMInputMethod.InputMe
 	protected AMInputMethod minputMethod = null;
 	
 	public static final String IMMUTABLE_INPUTPAD_CONFIG = "immutable_inputpad_sc.cfg";
-	
+	public static final int MY_PERMISSIONS_REQUEST = 0;
+
     private AsyncTaskManager masyncTask;
     private ProgressDialog mdlgTaskProgressing = null;
     public static final String OUTPUT_HEAD_STRING = "<!DOCTYPE html>"
     		+ "<html lang=\"en\" xmlns:m=\"http://www.w3.org/1998/Math/MathML\">"
     		+ "<head>" + "<meta charset=\"utf-8\">"
     		+ "<link rel=\"stylesheet\" href=\"http://fonts.googleapis.com/css?family=UnifrakturMaguntia\">"
-    		+ "<link rel=\"stylesheet\" href=\"../mathscribe/jqmath-0.3.0.css\">"
-    		+ "<script src=\"../mathscribe/jquery-1.4.3.min.js\"></script><script src=\"../mathscribe/jqmath-etc-0.3.0.min.js\"></script>"
+    		+ "<link rel=\"stylesheet\" href=\"../mathscribe/jqmath-0.4.3.css\">"
+    		+ "<script src=\"../mathscribe/jquery-3.5.0.min.js\"></script><script src=\"../mathscribe/jqmath-etc-0.4.6.min.js\"></script>"
     		+ "<title></title><style>p.quickhelp{width:100%;word-wrap:normal;}</style></head><body style=\"font-size:";
     public static final String OUTPUT_SIZE_UNIT_STRING = "pt;\">";
-    public static final String OUTPUT_TAIL_STRING = "</body></html>";
+    public static final String OUTPUT_TAIL_STRING = "<p><br></p><p><br></p><p><br></p><p><br></p><p><br></p><p><br></p></body></html>";
  
     private String mstrFontSize = "30";
     private String[] mstrarrayTaskAndOutput = new String[] {"", ""};	// 0 is task type and 1 is task output
@@ -876,7 +881,7 @@ public class ActivitySmartCalc extends Activity	implements AMInputMethod.InputMe
 					}
 				}
 				return true;	// always intercept, otherwise may cause crash problem.
-            }
+			}
 		});
 		mstrarrayTaskAndOutput[0] = "initialize";
 	    mstrarrayTaskAndOutput[1] = "<p class=\"quickhelp\">" + SmartCalcProcLib.recalcWidthHeight4Help(this, getString(R.string.welcome_message4)).replace("\n", "</p><p>") + "</p>";
@@ -897,6 +902,129 @@ public class ActivitySmartCalc extends Activity	implements AMInputMethod.InputMe
 		Log.d("History", "After set input key pad.");
 		
 		//----------------------------------------------------------------
+		// request permissions.
+		process1stStartStuffWithPermissionRequest();
+	}
+
+	public void process1stStartStuffWithPermissionRequest() {
+		if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.RECORD_AUDIO)
+				!= PackageManager.PERMISSION_GRANTED
+				|| ContextCompat.checkSelfPermission(this, android.Manifest.permission.MODIFY_AUDIO_SETTINGS)
+				!= PackageManager.PERMISSION_GRANTED
+				|| ContextCompat.checkSelfPermission(this, android.Manifest.permission.WAKE_LOCK)
+				!= PackageManager.PERMISSION_GRANTED
+				|| ContextCompat.checkSelfPermission(this, android.Manifest.permission.VIBRATE)
+				!= PackageManager.PERMISSION_GRANTED
+				|| ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+				!= PackageManager.PERMISSION_GRANTED
+				|| ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA)
+				!= PackageManager.PERMISSION_GRANTED
+                /*|| ContextCompat.checkSelfPermission(this, android.Manifest.permission.FLASHLIGHT)    // flashlight is a normal permission so no need to request.
+                    != PackageManager.PERMISSION_GRANTED*/
+                /*|| ContextCompat.checkSelfPermission(this, android.Manifest.permission.READ_PHONE_STATE)
+                    != PackageManager.PERMISSION_GRANTED*/
+				|| ContextCompat.checkSelfPermission(this, android.Manifest.permission.INTERNET)
+				!= PackageManager.PERMISSION_GRANTED
+                /*|| ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION)
+                    != PackageManager.PERMISSION_GRANTED*/
+				|| ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_NETWORK_STATE)
+				!= PackageManager.PERMISSION_GRANTED
+				|| ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_WIFI_STATE)
+				!= PackageManager.PERMISSION_GRANTED
+				|| ContextCompat.checkSelfPermission(this, android.Manifest.permission.CHANGE_WIFI_STATE)
+				!= PackageManager.PERMISSION_GRANTED
+				|| ContextCompat.checkSelfPermission(this, android.Manifest.permission.CHANGE_WIFI_MULTICAST_STATE)
+				!= PackageManager.PERMISSION_GRANTED
+		) {
+
+			// Should we show an explanation?
+			if (ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.VIBRATE)
+					|| ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+					|| ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.CAMERA)
+					//|| ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.FLASHLIGHT)  // flashlight a normal permission no need to request.
+					//|| ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.READ_PHONE_STATE)
+					|| ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.INTERNET)
+					//|| ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.ACCESS_COARSE_LOCATION)
+					|| ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.ACCESS_NETWORK_STATE)
+					|| ActivityCompat.shouldShowRequestPermissionRationale(this, android.Manifest.permission.ACCESS_WIFI_STATE)
+			) {
+				// Show an expanation to the user *asynchronously* -- don't block
+				// this thread waiting for the user's response! After the user
+				// sees the explanation, try again to request the permission.
+				AlertDialog.Builder blder = new AlertDialog.Builder(this);
+				blder.setIcon(R.drawable.icon);
+				blder.setTitle(getString(R.string.help));
+				blder.setMessage(getString(R.string.why_request_permissions));
+				blder.setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						// No explanation needed, we can request the permission.
+						ActivityCompat.requestPermissions(ActivitySmartCalc.this, new String[]{
+										android.Manifest.permission.VIBRATE,
+										android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
+										android.Manifest.permission.CAMERA,
+										//android.Manifest.permission.FLASHLIGHT,   // normal permission no need to request
+										//android.Manifest.permission.READ_PHONE_STATE,
+										android.Manifest.permission.INTERNET,
+										//android.Manifest.permission.ACCESS_COARSE_LOCATION,
+										android.Manifest.permission.ACCESS_NETWORK_STATE,
+										android.Manifest.permission.ACCESS_WIFI_STATE
+								},
+								MY_PERMISSIONS_REQUEST);
+					}
+				});
+				blder.setCancelable(false);
+				AlertDialog alertErrDlg = blder.create();
+				alertErrDlg.show();
+			} else {
+				// No explanation needed, we can request the permission.
+				ActivityCompat.requestPermissions(this, new String[]{
+								android.Manifest.permission.VIBRATE,
+								android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
+								android.Manifest.permission.CAMERA,
+								//android.Manifest.permission.FLASHLIGHT,   // normal permission no need to request.
+								//android.Manifest.permission.READ_PHONE_STATE,
+								android.Manifest.permission.INTERNET,
+								//android.Manifest.permission.ACCESS_COARSE_LOCATION,
+								android.Manifest.permission.ACCESS_NETWORK_STATE,
+								android.Manifest.permission.ACCESS_WIFI_STATE
+						},
+						MY_PERMISSIONS_REQUEST);
+
+				// MY_PERMISSIONS_REQUEST is an app-defined int constant. The callback method gets the
+				// result of the request.
+			}
+		} else {
+			// permission has been granted. Do the task you need to do
+		}
+	}
+
+	@Override
+	public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+		switch (requestCode) {
+			case MY_PERMISSIONS_REQUEST: {
+				// If request is cancelled, the result arrays are empty.
+				if (grantResults.length >= 6
+						&& grantResults[0] == PackageManager.PERMISSION_GRANTED
+						&& grantResults[1] == PackageManager.PERMISSION_GRANTED
+						&& grantResults[2] == PackageManager.PERMISSION_GRANTED
+						&& grantResults[3] == PackageManager.PERMISSION_GRANTED
+						&& grantResults[4] == PackageManager.PERMISSION_GRANTED
+						&& grantResults[5] == PackageManager.PERMISSION_GRANTED
+				) {
+
+					// permission was granted, yay! Do the
+					// contacts-related task you need to do.
+				} else {
+					// permission denied, boo! Still start the functionality.
+				}
+				return;
+			}
+
+			// other 'case' lines to check for other
+			// permissions this app might request
+		}
 	}
 
 	@Override
@@ -1002,6 +1130,7 @@ public class ActivitySmartCalc extends Activity	implements AMInputMethod.InputMe
 				mshistoricalRecMgr.getFirstRecord().setHistoricalRecordItem(strFormattedInput, strTaskType, strOutput, strChartFileName);
 			} else {
 				mshistoricalRecMgr.addRecord(strFormattedInput, strTaskType, strOutput, strChartFileName, ActivitySettings.msnNumberofRecords);
+				mshistoricalRecMgr.flush(this);	// flush should be called here because onPause may be called before onCalcPlotCompleted so that flush in onPause may happen before addRecord.
 			}
 	        String strConfirm = "<p>" + getString(R.string.please_confirm_recognized_result_and_calculation_result)
 	        		+ "<a href=\"" + ActivitySmartCalc.AOPER_URL_HEADER + ActivitySmartCalc.EMAIL_UNSATISFACTORY_RECOG + "\">"
@@ -1011,6 +1140,7 @@ public class ActivitySmartCalc extends Activity	implements AMInputMethod.InputMe
 						"text/html", "utf-8", "");
 		} else {
 			mshistoricalRecMgr.addRecord(strFormattedInput, strTaskType, strOutput, strChartFileName, ActivitySettings.msnNumberofRecords);
+			mshistoricalRecMgr.flush(this);	// flush should be called here because onPause may be called before onCalcPlotCompleted so that flush in onPause may happen before addRecord.
 			wvOutput.loadDataWithBaseURL("file:///android_asset/mathscribe/index.html",
 						OUTPUT_HEAD_STRING + mstrFontSize + OUTPUT_SIZE_UNIT_STRING + strOutputProcessed + OUTPUT_TAIL_STRING,
 						"text/html", "utf-8", "");
@@ -2280,17 +2410,30 @@ public class ActivitySmartCalc extends Activity	implements AMInputMethod.InputMe
 			ArrayList<Uri> uris = new ArrayList<Uri>();
 			String strPhotoFilePath = MFPFileManagerActivity.getAppFolderFullPath() + File.separator + CameraPreview.INITIAL_BMP_FILE_NAME;
 			String strFinalFilePath = MFPFileManagerActivity.getAppFolderFullPath() + File.separator + CameraPreview.PROCESSED_IMAGE_SAVED_FILE_NAME;
-			File filePhoto = new File(strPhotoFilePath);
+            File filePhoto = new File(strPhotoFilePath);
 			if (filePhoto.exists() && filePhoto.canRead()) {
-				Uri uri = Uri.fromFile(filePhoto);
-				uris.add(uri);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    //Cannot use Uri uri = Uri.fromFile(filePhoto); after Android N. Have to use file provider
+                    Uri uri = FileProvider.getUriForFile(getApplicationContext(), getPackageName() + ".provider", filePhoto);
+                    uris.add(uri);
+                } else {
+                    Uri uri = Uri.fromFile(filePhoto);
+                    uris.add(uri);
+                }
 			}
 			File fileFinal = new File(strFinalFilePath);
 			if (fileFinal.exists() && fileFinal.canRead()) {
-				Uri uri = Uri.fromFile(fileFinal);
-				uris.add(uri);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                    //Cannot use Uri uri = Uri.fromFile(fileFinal); after Android N. Have to use file provider
+                    Uri uri = FileProvider.getUriForFile(getApplicationContext(), getPackageName() + ".provider", fileFinal);
+                    uris.add(uri);
+                } else {
+                    Uri uri = Uri.fromFile(fileFinal);
+                    uris.add(uri);
+                }
 			}
 			emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
+			emailIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
 			startActivity(Intent.createChooser(emailIntent, getString(R.string.choose_an_email_provider)));
 		}
 	}

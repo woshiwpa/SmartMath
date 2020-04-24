@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SmartMath.iml" filepath="$PROJECT_DIR$/SmartMath.iml" />
-      <module fileurl="file://$PROJECT_DIR$/smartMath/smartMath.iml" filepath="$PROJECT_DIR$/smartMath/smartMath.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SmartMath.iml" filepath="$PROJECT_DIR$/SmartMath.iml" group="SmartMath" />
+      <module fileurl="file://$PROJECT_DIR$/smartMath/smartMath.iml" filepath="$PROJECT_DIR$/smartMath/smartMath.iml" group="SmartMath/smartMath" />
     </modules>
   </component>
 </project>

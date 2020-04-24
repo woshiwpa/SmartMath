@@ -1,0 +1,378 @@
+<html>
+<head>
+<title>Scientific Calculator Plus Help</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">Scientific Calculator Plus Help : predefined functions</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>Function name</th>
+<th>Function info</th>
+</tr>
+<tr>
+<td><center>acosd</center></td>
+<td><p>acosd(1) :</p>
+<p>	Function acosd(x) returns degree based arccos value of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>acosh</center></td>
+<td><p>acosh(1) :</p>
+<p>	Function acosh(x) calculates inverse hyperbolic cos of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>adj</center></td>
+<td><p>adj(1) :</p>
+<p> adj(x), where x is 2D square matrix, returns the adjugate matrix of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>asind</center></td>
+<td><p>asind(1) :</p>
+<p>	Function asind(x) returns degree based arcsin value of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>asinh</center></td>
+<td><p>asinh(1) :</p>
+<p>	Function asinh(x) calculates inverse hyperbolic sin of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>atand</center></td>
+<td><p>atand(1) :</p>
+<p>	Function atand(x) returns degree based arctan value of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>atanh</center></td>
+<td><p>atanh(1) :</p>
+<p>	Function atanh(x) calculates inverse hyperbolic tan of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>avg</center></td>
+<td><p>avg(0...) :</p>
+<p>	Function avg(...) returns average value of an arbitary number of parameters.</p>
+</td>
+</tr>
+<tr>
+<td><center>cofactor</center></td>
+<td><p>cofactor(1) :</p>
+<p> cofactor(x), where x is 2D square matrix, returns the cofactor matrix of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>conv</center></td>
+<td><p>conv(2) :</p>
+<p>conv(input_a, inputb) returns convolution of input_a and input_b. input_a and input_b can either be two 1-D lists or two 2-D arrays. So far conv function only support 1-D and 2-D convolution. For example,</p>
+<p>conv([4,8,2,9],[5,3,8,9,6,7,8]) = [20, 52, 66, 151, 139, 166, 181, 132, 79, 72]</p>
+<p>conv([[4,8,2,9],[8,6,7,9],[2,2,8,-4]],[[-5,i,7],[0.6,8,4]]) = [[-20, -40 + 4 * i, 18 + 8 * i, 11 + 2 * i, 14 + 9 * i, 63], [-37.6, 6.8 + 8 * i, 102.2 + 6 * i, 50.4 + 7 * i, 129 + 9 * i, 99], [-5.2, 57.6 + 2 * i, 58.2 + 2 * i, 119.4 + 8 * i, 156 - 4 * i, 8], [1.2, 17.2, 28.8, 69.6, 0, -16]]</p>
+</td>
+</tr>
+<tr>
+<td><center>convert_unit</center></td>
+<td><p>convert_unit(3) :</p>
+<p> Function convert_unit(value, from_unit, to_unit) converts value based on one unit to value based on another unit. The first parameter is the value to be converted, the second parameter is the from unit (a case sensitive string), the third parameter is the to unit (a case sensitive string). For example, convert_unit(23.71, "m", "km").</p>
+<p> This function supports the following units:</p>
+<p> 1. length units: "um" (microns), "mm" (millimetres), "cm" (centimetres), "m" (metres), "km" (kilometres), "in" (inches), "ft" (feet), "yd" (yards), "mi" (miles), "nmi" (nautical miles), "AU" (Astronomical units), "ly" (light years), "pc" (parsecs);</p>
+<p> 2. area units: "mm2" (square millimetres), "cm2" (square centimetres), "m2" (square metres), "ha" (hectares), "km2" (square kilometres), "sq in" (square inches), "sq ft" (square feet), "sq yd" (square yards), "ac" (acres), "sq mi" (square miles);</p>
+<p> 3. volume units: "mL" (millilitres (cc)), "L" (litres), "m3" (cubic metres), "cu in" (cubic inches), "cu ft" (cubic feet), "cu yd" (cubic yards), "km3" (cubic kilometres), "fl oz(Imp)" (fluid ounce (Imp)), "pt(Imp)" (pint (Imp)), "gal(Imp)" (gallon (Imp)), "fl oz(US)" (fluid ounce (US)), "pt(US)" (pint (US)), "gal(US)" (gallon (US));</p>
+<p> 4. mass units: "ug" (micrograms), "mg" (milligrams), "g" (grams), "kg" (kilograms), "t" (tonnes), "oz" (ounces), "lb" (pounds), "jin" (market catties), "jin(HK)" (catties (HK)), "jin(TW)" (catties (TW));</p>
+<p> 5. speed units: "m/s" (metres per second), "km/h" (kilometres per hour), "ft/s" (feet per second), "mph" (miles per hour), "knot" (knots);</p>
+<p> 6. time units: "ns" (nanoseconds), "us" (microseconds), "ms" (milliseconds), "s" (seconds), "min" (minutes), "h" (hours), "d" (days), "wk" (weeks), "yr" (years);</p>
+<p> 7. force units: "N" (newtons), "kgf" (kilogram-force), "lbF" (pound-force);</p>
+<p> 8. pressure units: "Pa" (pascal), "hPa" (hectopascal), "kPa" (kilopascal), "MPa" (megapascal), "atm" (atomsphere), "psi" (pounds per square inch), "Torr" (torrs (millimetres of mercury);</p>
+<p> 9. energy units: "J" (joules), "kJ" (kilojoules), "MJ" (megajoules), "kWh" (kilowatt-hours), "cal" (calories), "kcal" (kilocalories), "BTU" (British Thermal Units);</p>
+<p> 10. power units: "W" (Watts), "kW" (kilowatts), "MW" (megawatts), "cal/s" (calories per second), "BTU/h" (BTUs per hour), "hp" (horse power);</p>
+<p> 11. temperature units: "0C" (celsius), "0F" (fahrenheit), "K" (Kelvin);</p>
+</td>
+</tr>
+<tr>
+<td><center>cosd</center></td>
+<td><p>cosd(1) :</p>
+<p>	Function cosd(x) calculates cos value of x, where x is a degree.</p>
+</td>
+</tr>
+<tr>
+<td><center>cosh</center></td>
+<td><p>cosh(1) :</p>
+<p>	Function cosh(x) calculates hyperbolic cos of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>dprod</center></td>
+<td><p>dprod(2) :</p>
+<p>	Function dprod calculates dot product of two vectors [x1, x2, ... xn] and [y1, y2, ... yn].</p>
+</td>
+</tr>
+<tr>
+<td><center>fact</center></td>
+<td><p>fact(1) :</p>
+<p>	Function fact(x) calculates factorial of a non-negative integer x.</p>
+</td>
+</tr>
+<tr>
+<td><center>FFT</center></td>
+<td><p>FFT(1...) :</p>
+<p>Function FFT(a, ...) returns fast fourier transform of a series of values, note that the number of values in the series should always be 2 to a positive integer. If a is a list of real or complex numbers, this function should only have one parameter and return fast fourier transform of a[0], a[1], ... a[N-1] where N is the number of values in a. If a is a single value (real or complex), this function should have at least two parameters and return fast fourier transform of a, optional_params[0], optional_params[1], ..., optional_params[number_of_optional_params - 1]. The returned value is always an array.</p>
+<p>Examples of this function:</p>
+<p>FFT(1, 2, 3, 4) returns [10, -2 + 2i, -2, -2 - 2i];</p>
+<p>FFT([1, 2, 3, 4]) also returns [10, -2 + 2i, -2, -2 - 2i].</p>
+</td>
+</tr>
+<tr>
+<td><center>gavg</center></td>
+<td><p>gavg(0...) :</p>
+<p>	Function gavg(...) returns geometric mean value of an arbitary number of parameters.</p>
+</td>
+</tr>
+<tr>
+<td><center>get_constant</center></td>
+<td><p>get_constant(2) :</p>
+<p>get_constant(const_name, n) fetches a constant value (identified by a case-sensative string consta_name) wih n significant digits after decimal point. The second parameter n a non-negative integer and is optional. If it is omitted, this function returns the value without rounding. It supports the following constants:</p>
+<p>1. Ratio of circumference of a circle to its diameter (const_name == "pi");</p>
+<p>2. Natural logarithm (const_name == "e");</p>
+<p>3. Light speed in vacuum [m/s] (const_name == "light_speed_in_vacuum");</p>
+<p>4. Gravitational constant [m**3/kg/(s**2)] (const_name == "gravitational_constant");</p>
+<p>5. Planck constant [J*s] (const_name == "planck_constant");</p>
+<p>6. Magnetic constant [N/(A**2)] (const_name == "magnetic_constant");</p>
+<p>7. Electric constant [F/m] (const_name == "electric_constant");</p>
+<p>8. Elementary charge [c] (const_name == "elementary_charge_constant");</p>
+<p>9. Avogadro constant [1/mol] (const_name == "avogadro_constant");</p>
+<p>10. Faraday constant [C/mol] (const_name == "faraday_constant");</p>
+<p>11. Molar gas constant [J/mol/K] (const_name == "molar_gas_constant");</p>
+<p>12. Boltzman constant [J/K] (const_name == "boltzman_constant");</p>
+<p>13. Standard gravity [m/(s**2)] (const_name == "standard_gravity");</p>
+<p>For example, if user inputs get_constant("pi", 4), the result will be 3.1416; if user inputs get_constant("pi", 8), the result will be 3.14159265; if user inputs get_constant("pi", 0), s\he will get 3; if user inputs get_constant("pi"), the result will be 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 (with 100 digits after decimal point), which is the pi value internally used by the software.</p>
+</td>
+</tr>
+<tr>
+<td><center>get_extreme_elem</center></td>
+<td><p>get_extreme_elem(3) :</p>
+<p>Function get_extreme_elem analyses input dataArray and returns the maximum or minimum element in the data array. If an element is not a real value, this function ignores it. It has three parameters. The first is data array (it can be a single value), the second is original max or min value. If this is not null and is a real value, the function compares selected max or min element with this parameter and returns the new max or min value. The third one is to tell the function to get max value or min value. 0 is for min value and 1 is for max value. Examples are get_extreme_elem([[2, 3], "hello", 5], null, 1) and get_extreme_elem([[3,4,6],[5+3i, 7, 9.88-4.61], [5.77 -0.03i]], -8, 0).</p>
+</td>
+</tr>
+<tr>
+<td><center>havg</center></td>
+<td><p>havg(0...) :</p>
+<p>	Function havg(...) returns harmonic mean value of an arbitary number of parameters.</p>
+</td>
+</tr>
+<tr>
+<td><center>IFFT</center></td>
+<td><p>IFFT(1...) :</p>
+<p>	Function IFFT(a, ...) returns inverse fast fourier transform of a series of values, note that the number of values in the series should always be 2 to a positive integer. If a is a list of real or complex numbers, this function should only have one parameter and return inverse fast fourier transform of a[0], a[1], ... a[N-1] where N is the number of values in a. If a is a single value (real or complex), this function should have at least two parameters and return inverse fast fourier transform of a, optional_params[0], optional_params[1], ..., optional_params[number_of_optional_params - 1]. The returned value is always an array.</p>
+<p>Examples of this function:</p>
+<p>IFFT(10, -2 + 2i, -2, -2 - 2i) returns [1, 2, 3, 4];</p>
+<p>IFFT([10, -2 + 2i, -2, -2 - 2i]) returns [1, 2, 3, 4];</p>
+</td>
+</tr>
+<tr>
+<td><center>is_prime</center></td>
+<td><p>is_prime(1) :</p>
+<p>	Function Is_Prime(x) is used to determine if a positive integer x(>=2) is a prime number or not. If x is not a positive integer or it is less than 2, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>lg</center></td>
+<td><p>lg(1) :</p>
+<p>	Function lg(x) returns e based log value of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>ln</center></td>
+<td><p>ln(1) :</p>
+<p>	Function ln(x) returns e based log value of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>log10</center></td>
+<td><p>log10(1) :</p>
+<p>	Function log10(x) returns 10 based log value of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>log2</center></td>
+<td><p>log2(1) :</p>
+<p>	Function log2(x) returns 2 based log value of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>loge</center></td>
+<td><p>loge(1) :</p>
+<p>	Function loge(x) returns e based log value of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>max</center></td>
+<td><p>max(0...) :</p>
+<p>	Function max(...) returns maximum value of an arbitary number of parameters.</p>
+</td>
+</tr>
+<tr>
+<td><center>med</center></td>
+<td><p>med(0...) :</p>
+<p>	Function med(...) returns medium value of an arbitary number of parameters. If the number of parameters is even, returns average of the middle two 	parameters.</p>
+</td>
+</tr>
+<tr>
+<td><center>min</center></td>
+<td><p>min(0...) :</p>
+<p>	Function min(...) returns minimum value of an arbitary number of parameters.</p>
+</td>
+</tr>
+<tr>
+<td><center>ncr</center></td>
+<td><p>ncr(2) :</p>
+<p> Function nCr(x, y) calculates the number of y-combination of a set S which has x elements. Note that x, y are non-negative integer, x >= y.</p>
+</td>
+</tr>
+<tr>
+<td><center>npr</center></td>
+<td><p>npr(2) :</p>
+<p> Function nPr(x, y) calculates the number of y-permutation of a set S which has x elements. Note that x, y are non-negative integer, x >= y.</p>
+</td>
+</tr>
+<tr>
+<td><center>plot2d</center></td>
+<td><p>plot2d(5...) :</p>
+<p>	Function plot2D calls plot_multi_xy function to plot at most eight 2D-curves in one chart. It has the following parameters: 1. chart name (i.e. chart file name); 2. chart title; 3. X axis title; 4. Y axis title; 5. show grid or not; 6. curve title; 7. curve color; 8. t values start from; 9. t values end at; 10. t values' interval; 11. X's expression (based on variable t); 12. Y's expression (based on variable t)... Note that every new curve needs additional 7 parameters (i.e. parameters 6 to 12). At most 8 curves can be included. Note that this function is not recommended to use. Function plot2DEX should be used as a replacement.</p>
+</td>
+</tr>
+<tr>
+<td><center>plot2dex</center></td>
+<td><p>plot2dex(6...) :</p>
+<p>	Function plot2DEX calls plot_multi_xy function to plot at most eight 2D-curves in one chart. It has the following parameters: 1. chart name (i.e. chart file name); 2. chart title; 3. X axis title; 4. Y axis title; 5.  chart's background color; 6. show grid or not; 7. curve title; 8. curve point color; 9. curve point shape; 10. curve point size; 11. curve line color; 12. curve line pattern; 13. curve line size; 14. t values start from; 15. t values end at; 16. t values' interval; 17. X's expression (based on variable t); 18. Y's expression (based on variable t)... Note that every new curve needs additional 12 parameters (i.e. parameters 7 to 18). At most 8 curves can be included. Also note that at this moment chart's background color, curve point size, curve line color and curve line pattern are not realized yet. And curve line size only has two values, i.e. zero means no connection line and non-zero means with connection line. An example of this function is plot2DEX("chart 3", "3rd chart", "x", "y", "black", true, "cv1", "blue", "x", 2, "blue", "solid", 1, -5, 5, 0.1, "t", "t**2/2.5 - 4*t + 6", "cv2", "red", "square", 4, "square", "solid", 1, -10, 10, 0.1, "5*sin(t)", "10*cos(t)") .</p>
+</td>
+</tr>
+<tr>
+<td><center>plot3d</center></td>
+<td><p>plot3d(5...) :</p>
+<p>	Function plot3D calls plot_multi_xyz function to plot at most eight 3D-surfaces in one chart. It has the following parameters: 1. chart name (i.e. chart file name); 2. chart title; 3. X axis title; 4. Y axis title; 5. Z axis title; 6. curve title; 7. grid or not (if false, a filled surface will be drawn); 8. color at minimum z value; 9. minimum z value (null means automatically determined by software); 10. color at maximum z value; 11. maximum z value (null means automatically determined by software); 12. u values start from; 13. u values end at; 14. u values' interval; 15. v values start from; 16. v values end at; 17. v values' interval; 18. X's expression (based on variables u and v); 19. Y's expression (based on variables u and v); 20. Z's expression (based on variables u and v); ... Note that every new curve needs additional 15 parameters (i.e. parameters 6 to 20). At most 8 curves can be included. A Example of this function is plot3D("chartI", "first chart", "x", "y", "z", "Curve1", true, "red", -0.5, "green", null, 0, pi, pi/8, -pi/2, pi/2, 0, "sin(u)*cos(v)", "sin(u)*sin(v)", "cos(u)") .</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_2d_data</center></td>
+<td><p>plot_2d_data(16) :</p>
+<p> Function plot_2d_data analyses at least one at most eight groups of data lists and each data group will be plotted as one curve. The number of parameters in these function can be 1 (one curve), 2 (one curve), 4 (two curves), 6 (three curves), 8 (four curves), 10 (five curves), 12 (six curves), 14 (seven curves) and 16 (eight curves). Each parameter is a data list (i.e. 1-D data array). If only one parameter, each element value in the parameter will be a point in the curve, otherwise, the odd number of parameters are the x values of the points and the even number of parameters are the y values. Note that the size of x value parameter must match the size of y value parameter. For example, plot_2d_data([5.5, -7, 8.993, 2.788]) or plot_2d_data([2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1], [28, 42, 33, 16, 7]).</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_3d_data</center></td>
+<td><p>plot_3d_data(24) :</p>
+<p> Function plot_3d_data analyses at least one at most eight groups of data lists and each data group will be plotted as one surface in 3D chart. The number of parameters in these function can be 1 (one curve), 3 (one curve), 6 (two curves), 9 (three curves), 12 (four curves), 15 (five curves), 18 (six curves), 21 (seven curves) and 24 (eight curves). If only one parameter, the parameter must be a 2-D array each element value in the parameter will be a point's z value in the surface, otherwise, every 3 parameters construct a group. In the group, the first parameter is a 1-D array whose elements are the x values of the points, the second parameter is a 1-D array whose elements are the y values, the third parameter is a 2-D array whose elements are the z values of the points in the surface. Note that the size of x value parameter and the size of y value parameter must match the size of z value parameter. Examples of this function are plot_3d_data([[2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1]]) and plot_3d_data([1,2,3],[4,5,6,8],[[3,7,2],[5,8,9],[2,6,3],[7,4,4]],[8,7,4,8],[2,1],[[9,3,2,6],[4,5,3,7]]).</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_exprs</center></td>
+<td><p>plot_exprs(8) :</p>
+<p> Function plot_exprs analyses at least one expression at most 8 expressions and draw 2D, polar or 3D curves based on the number of variables in the expression. The expression should be an equation, e.g. "4*x+9 == y +z**2" and "log(x*y) == x", or an assignment with an unknown variable on the left side, e.g. "k= 3+ 7 * sin(z)", or an expression which can be recognized as an assignment, e.g. "9*log(y)" may be looked on as "x = 9 * log(y)".  Note that the total number of unknown variables in the expressions should be no more than 3 and each expression should include at most one unknown variable less than the total number of unknown variables. The initial range of each unknown variable is configurable, by default is from -5 to 5 but user can adjust the range after the chart is plotted. If there are two unknown variables and one of the unknown variables is Greek letter α, β, γ or θ, instead of plotting 2D chart, polar graph is drawn. One example of this function is plot_exprs("4*x+sin(y)", "4-y**2==(x**2 + z**2)", "x*lg(x)/log2(z)==y"). Also note that when plotting a 2D expression which is actually an implicit function, this function can plot at most 4 root expressions; when plotting a 3D implicit function, it could be very slow because this function may solve all of the three variables and plot at most 2 root expressions for each of the variables.</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_polar</center></td>
+<td><p>plot_polar(6...) :</p>
+<p> Function plot_polar calls plot_multi_xy function to plot at most eight polar-curves in one chart. It has the following parameters: 1. chart name (i.e. chart file name); 2. chart title; 3. R axis title; 4. Angle axis title; 5.  chart's background color; 6. show grid or not; 7. curve title; 8. curve point color; 9. curve point shape; 10. curve point size; 11. curve line color; 12. curve line pattern; 13. curve line size; 14. t values start from; 15. t values end at; 16. t values' interval; 17. R's expression (based on variable t); 18. Angle's expression (based on variable t)... Note that every new curve needs additional 12 parameters (i.e. parameters 7 to 18). At most 8 curves can be included. Also note that at this moment chart's background color, curve point size, curve line color and curve line pattern are not realized yet. And curve line size only has two values, i.e. zero means no connection line and non-zero means with connection line. An example of this function is plot_polar("chart 3", "3rd chart", "R", "Angle", "black", true, "cv1", "blue", "point", 0, "yellow", "solid", 1, -5, 5, 0.1, "cos(t)", "t", "cv2", "red", "square", 4, "green", "solid", 1, 0, PI*2.23, PI/10, "5*sqrt(t)", "t + PI") .</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_polar_data</center></td>
+<td><p>plot_polar_data(16) :</p>
+<p> Function plot_polar_data analyses at least one at most eight groups of data lists and each data group will be plotted as one polar curve. The number of parameters in these function can be 2 (one curve), 4 (two curves), 6 (three curves), 8 (four curves), 10 (five curve), 12 (six curves), 14 (seven curves) and 16 (eight curves). Each parameter is a data list (i.e. 1-D data array). The odd number of parameters are the R values of the points and the even number of parameters are the angle values. Note that the size of R value parameter must match the size of angle value parameter. For example, plot_polar_data([2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1], [28, 42, 33, 16, 7]).</p>
+</td>
+</tr>
+<tr>
+<td><center>quick_sort</center></td>
+<td><p>quick_sort(2) :</p>
+<p>	Function quick_sort(desc, original_list) returns a sorted list of an arbitary number of parameters. If desc is true (or 1), list elements are from largest to smallest, otherwise (desc is false or 0), from smallest to largest. For example, quick_sort(1, [5,6,7,9,4])'s result is [9,7,6,5,4] while quick_sort(0, [5,6,7,9,4]) is [4,5,6,7,9].</p>
+</td>
+</tr>
+<tr>
+<td><center>roots</center></td>
+<td><p>roots(1...) :</p>
+<p>	Function roots(a, ...) returns roots of a polynomial. If a is a list of real or complex numbers, this function should only have one parameter and return roots of a polynomial a[0] * x**(N-1) + a[1] * x**(N-2) + ... + a[N-2] * x + a[N-1] = 0. If a is a single value (real or complex), this function should have at least two parameters and return roots of a polynomial a * x**(number_of_optional_params) + optional_params[0] * x**(number_of_optional_params - 1) + ... + optional_params[number_of_optional_params - 2] * x + optional_params[number_of_optional_params - 1] = 0.</p>
+<p>Note that if degree of the polynomial is equal to or larger than 4, Newton-Raphson method is used so that the roots are approximated values. Because of the iterations required by Newton-Raphson method, the calculation time will be long (depends on device's performance).</p>
+<p>Examples of this function:</p>
+<p>To get roots of polynomial 3 * x**2 - 4 * x + 1 == 0, type in command: roots([3, -4, 1]) and the result is [1, 0.33333333];</p>
+<p>To get roots of polynomial (1+2i) * x**3 + (7-6i) * x**2 + 0.54 * x - 4.31 - 9i == 0, type in command: roots(1+2i, 7-6i, 0.54, -4.31-9i) and the result is [0.79288607 + 3.9247084 * i, -0.56361748 - 0.78399569 * i, 0.7707314 + 0.85928729 * i].</p>
+</td>
+</tr>
+<tr>
+<td><center>sind</center></td>
+<td><p>sind(1) :</p>
+<p>	Function sind(x) calculates sin value of x, where x is a degree.</p>
+</td>
+</tr>
+<tr>
+<td><center>sinh</center></td>
+<td><p>sinh(1) :</p>
+<p>	Function sinh(x) calculates hyperbolic sin of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>sqrt</center></td>
+<td><p>sqrt(1) :</p>
+<p>	Function sqrt(x) returns square root of real number x.</p>
+</td>
+</tr>
+<tr>
+<td><center>stdev</center></td>
+<td><p>stdev(0...) :</p>
+<p>	Function stdev(...) returns standard deviation of an arbitary number of parameters.</p>
+<p>	Note that the parameters are a sample of a larger set.</p>
+</td>
+</tr>
+<tr>
+<td><center>stdevp</center></td>
+<td><p>stdevp(0...) :</p>
+<p>	Function stdevp(...) returns standard deviation of an arbitary number of parameters.</p>
+</td>
+</tr>
+<tr>
+<td><center>sum</center></td>
+<td><p>sum(0...) :</p>
+<p>	Function sum(...) returns sum value of an arbitary number of parameters.</p>
+</td>
+</tr>
+<tr>
+<td><center>tand</center></td>
+<td><p>tand(1) :</p>
+<p>	Function tand(x) calculates tan value of x, where x is a degree.</p>
+</td>
+</tr>
+<tr>
+<td><center>tanh</center></td>
+<td><p>tanh(1) :</p>
+<p>	Function tanh(x) calculates hyperbolic tan of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>tip</center></td>
+<td><p>tip(2) :</p>
+<p>	Function tip(x, y) is used to calculate total money to pay in a American restaurant with known price x and tip ratio y.</p>
+</td>
+</tr>
+<tr>
+<td><center>todeg</center></td>
+<td><p>todeg(1) :</p>
+<p>	Function todeg(x) converts radian value x to degree value.</p>
+</td>
+</tr>
+<tr>
+<td><center>torad</center></td>
+<td><p>torad(1) :</p>
+<p>	Function torad(x) converts degree value x to radian value.</p>
+</td>
+</tr>
+<tr>
+<td><center>xor</center></td>
+<td><p>xor(2) :</p>
+<p>	Function xor calculates xor(x, y), where x, y can be any value.</p>
+<p>	If x == y return false, else return true</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

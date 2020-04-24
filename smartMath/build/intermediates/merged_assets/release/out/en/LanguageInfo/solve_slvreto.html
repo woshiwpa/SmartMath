@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>Scientific Calculator Plus Help</title>
+</head>
+<body style="background-color:white;">
+<h2 style="color:blue">MFP language solve and slvreto statements:</h2>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+Solve statement starts an in-line solver block. It takes an arbitary number of variables as parameters. These variables must be declared before. These variables will be the to-be-solved variables in the solve block. In the following example, user first defines three variables x, y and z, then starts a solve block to solve the values of variables x, y and z.</p>
+<p style="font-family:verdana;color:blue;">variable x = 3, y, z = [2, 7]</p>
+<p style="font-family:verdana;color:blue;">solve x, y, z</p>
+<p style="font-family:verdana;color:black;">...</p>
+<p style="font-family:verdana;color:black;">
+It doesn't matter what the initial values of x, y and z are. If in the solve block x, y or z is solved it will be assigned a new value. If the solve block cannot solve any or all of the variables, the value of the variable(s) does not change.</p>
+<p style="font-family:verdana;color:black;">
+Slvreto statement finishes an in-line solver block. It has one optional parameter, a variable declared before the solve block. This variable is used to store all the roots of each to-be-solved variables (i.e. variables as parameters in solve statement). However, to retrive roots of a variable or a result set, user should use built-in functions including <a href="../FunctionInfo/solver.html" target="_self">get_num_of_results_sets</a>, <a href="../FunctionInfo/solver.html" target="_self">get_solved_results_set</a> and <a href="../FunctionInfo/solver.html" target="_self">get_variable_results</a>. For example, the following statements are all valid:</p>
+<p style="font-family:verdana;color:blue;">slvreto</p>
+<p style="font-family:verdana;color:blue;">slvreto all_results</p>
+<p style="font-family:verdana;color:black;">
+The follows are a solve example.</p>
+<pre style="font-family:verdana;color:blue;">
+Function testtry2()
+	Variable a, b, c, x, y, z
+	a = 3
+	b = 4
+	c = 5
+	x = 6
+	y = 7
+	z = 8
+	solve x, y, z 	<i style="font-family:verdana;color:green;">// x, y and z are to-be-solved variables in the solve block.</i>
+		<i style="font-family:verdana;color:green;">// a, b and c are also used in the solve block.
+		// However, different from x, y and z, they are
+		// not to solve variables so that their values
+		// are not gonna change.</i>
+		a * x**2 + 7 * log(b) *x + 6.5 == 8 <i style="font-family:verdana;color:green;">// note that '==' should be used
+											// instead of '=' because '='
+											// assigns value to a variable.</i>
+		y * b - z + 6 == 3.7 + x/(a + 7)
+		y * x + z/(c - 3) == 6 + a + y
+	slvreto a	<i style="font-family:verdana;color:green;">// a is optional. If used, solve block saves all roots of all
+				// variables to a.</i>
+	print("\nx == " + x + "\ny == " + y + "\nz == " + z)
+	print("\nNumber of results sets is " + get_num_of_results_sets(a))
+	
+	<i style="font-family:verdana;color:green;">// it's possible that MFP cannot solve the expressions in a solve block. In
+	// this case solve block does not throw any exception but simply returns an
+	// empty result to returned variable (which is a in this function).</i>
+	if (get_num_of_results_sets(a) > 0)
+		
+		<i style="font-family:verdana;color:green;">// 0 means the first results set, 1 means the second, etc.</i>
+		print("\nResults set No. 2 is " + get_solved_results_set(a, 1))
+		
+		<i style="font-family:verdana;color:green;">// note that get_variable_results has two parameters, first is solve
+		// returned result, second is the variable place in the corresponding
+		// solve statement. 0 means the first variable (which is x in this
+		// example), 1 means the second variable (which is y in this example),
+		// etc. It is also possible that some variables can be solved in a
+		// solve block while other variables cannot be solved. In this case,
+		// roots of unsolved variables are NULL.</i>
+		print("\nAll results of y are " + get_variable_results(a, 1))
+	else
+		print("\nSorry, cannot solve the expressions and get x, y, z's values")
+	endif
+	return
+Endf
+</pre>
+<p style="font-family:verdana;color:black;">
+In the above example, we get
+</p>
+<p style="font-family:verdana;color:black;">
+x == 0.14781939
+</p>
+<p style="font-family:verdana;color:black;">
+y == 6.84549421
+</p>
+<p style="font-family:verdana;color:black;">
+z == 29.66719489
+</p>
+<p style="font-family:verdana;color:black;">
+Number of results sets is 2
+</p>
+<p style="font-family:verdana;color:black;">
+Results set No. 2 is [-3.38250623, -3.22386342, -10.25720306]
+</p>
+<p style="font-family:verdana;color:black;">
+All results of y are [6.84549421, -3.22386342] .
+</p>
+<p style="font-family:verdana;color:black;">
+To write a solve block, user needs to know the following things:
+</p>
+<p style="font-family:verdana;color:black;">
+1. There are two types of variables in a solve block, normal variables and to-be-solved variables. To-be-solved variables are the variables in the solve statement definition. In the above example, to-be-solved variables are x, y and z while a, b and c are normal variables. Values of normal variables are known to solve block while values of to-be-solved variables will be assigned in a solve block. Also, both normal variables and to-be-solved variables should be declared before a solve block.
+</p>
+<p style="font-family:verdana;color:black;">
+2. To set up a to-be-solved expression in a solve block, '==' should be used instead of '=' since '=' is to assign value to a variable. However, it is fine if user assigns value to a variable (whether normal or to-be-solved) in a solve block. An example is:
+</p>
+<pre style="font-family:verdana;color:blue;">
+variable a = 3, b = 4, c = 5, x, y
+solve x, y
+	a * x + y / c == 9
+	c = 7
+	y * b - x * c  == 6
+slvreto
+</pre>
+<p style="font-family:verdana;color:black;">
+In the above example, if we comment the line c = 7, we actually solve an expression group which includes 3 * x + y / 5 == 9 and y * 4 - x * 5 == 6. But if we have the line c = 7, we actually solve an expression group which includes 3 * x + y / 5 == 9 and y * 4 - x * 7 == 6.
+</p>
+<p style="font-family:verdana;color:black;">
+If user assigns value to a to-be-solved variable, this to-be-solved variable is no longer unknown so that it becomes a normal variable. However, user has to be very careful because assigning may affect expressions before it. An example is:
+</p>
+<pre style="font-family:verdana;color:blue;">
+variable a = 3, b = 4, c = 5, x, y
+solve x, y
+	a * x + y / c == 9
+	x = 7
+	y * b - x * c  == 6
+slvreto
+</pre>
+<p style="font-family:verdana;color:black;">
+In the above example, if we comment the line x = 7, we actually solve an expression group which includes 3 * x + y / 5 == 9 and y * 4 - x * 5 == 6. But if we have the line x = 7, we actually solve a single expression which is y * 4 - 7 * 5 == 6. This is because, clearly, MFP cannot solve x and y values only from the first expression a * x + y / c == 9 so it goes to the next statement. In the second statement, x is assigned a value, which is 7, and becomes a normal variable. In the third statement, variables b, c and x are normal variables with valid value so that MFP uses their values and gets that y should be 10.25. Then MFP goes back to the first expression a * x + y / c == 9. But now both x and y become normal variables and have known values so that MFP uses their values and simplifies the expression to 3 * 7 + 10.25 / 5 == 9. This is a compare expression and its value is FALSE. In this way, MFP solves x should be 7 and y should be 10.25.
+</p>
+<p style="font-family:verdana;color:black;">
+3. We can see all the roots of all the variables are stored in the returned variable in slvreto statement. In current MFP language, the returned variable is actually a 2-D matrix, each row is a root set for every variable. However, <b>please note that in the future the data structure of solve returned value may change</b>. As such make sure to use functions provided by system (i.e. <a href="../FunctionInfo/solver.html" target="_self">get_num_of_results_sets</a>, <a href="../FunctionInfo/solver.html" target="_self">get_solved_results_set</a>, <a href="../FunctionInfo/solver.html" target="_self">get_variable_results</a>, etc.) to obtain the roots. After solve block finishes, the value of each to-be-solved variable is the root of this variable in the first root set. Only exception is that in the first root set this variable cannot be solved.</p>
+<p style="font-family:verdana;color:black;">
+MFP in-line solver is not almighty. It is possible that MFP cannot solve some mathematic expressions. In this case, slvreto returns empty result to its returned variable. Function <a href="../FunctionInfo/solver.html" target="_self">get_num_of_results_sets</a> returns zero. The to-be-solved variables keep their original values before solve block. It is also possible that some to-be-solved variables are solved while others cannot be solved. In this case, the unsolved to-be-solved variables keep their original values before solve block. If we use <a href="../FunctionInfo/solver.html" target="_self">get_solved_results_set</a> or <a href="../FunctionInfo/solver.html" target="_self">get_variable_results</a> function to obtain the unsolved variable values, we get NULL.</p>
+<p style="font-family:verdana;color:black;">
+4. The number of results sets returned by solve block is determined by multiplying number of roots of each individual to-be-solved variable. For example,
+</p>
+<pre style="font-family:verdana;color:blue;">
+variable x, y, z
+solve x, y
+	log(x) == 3
+	y**3 + 3 * y**2 + 3 * y+ 1 == 0
+slvreto z
+</pre>
+<p style="font-family:verdana;color:black;">
+returns three sets of results. All of them are [20.08553692318766792368478490971028804779052734375, -1]. This is because y**3 + 3 * y**2 + 3 * y+ 1 == 0 has three roots but with same value. Although log(x) == 3 has only one root, each y root should has a corresponding x value so that we get three sets of results.
+</p>
+
+</body>
+</html>

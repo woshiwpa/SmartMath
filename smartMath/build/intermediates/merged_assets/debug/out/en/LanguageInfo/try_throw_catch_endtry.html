@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Scientific Calculator Plus Help</title>
+</head>
+<body style="background-color:white;">
+<h2 style="color:blue">MFP language try, throw, catch, endtry statements:</h2>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+Try statement starts a try block. It does not take any parameter. Any exception triggered by MFP in the try block will be thrown to the following catch statements until one of the catch statements process it. If no catch statement following this try block is able to process the thrown exception, it is thrown to the higher level.</p>
+<p style="font-family:verdana;color:black;">
+Throw statement has a string as parameter. MFP exits if a throw statement is hit, and the string following throw keyword is printed.</p>
+<p style="font-family:verdana;color:black;">
+Catch statement may have an expression as parameter. If it does not take any parameter, it catches any exception. If it is followed by an expression, the expression is an exception filter which identifies an exception should be processed by this catch block or not. If exception filter value is true, the exception is caught. Otherwise, the exception is conveyed to the next catch statement, or thrown to upper level. Catch statement provides three string type internal parameters, i.e. level, type and info. Parameter level is exception level, its value can be either "LANGUAGE" (i.e. language level exception like no endif statement follows a if statement or a user defined expression to throw a string) or "EXPRESSION" (i.e. expression level exception like divided by zero or lack of right parenthesis). Parameter type is exception type which is internally defined in MFP language. Parameter info is the information provided by the exception. If developer uses a throw statement to throw a string, info value is the string. These three parameters can only be used in exception filter in a catch statement. However, exception filter can use any variables defined in the name scope. If a variable has the same name as any of the three internal parameters, it's overridden by the internal parameter.</p>
+<p style="font-family:verdana;color:black;">
+Endtry statement finishes a try/catch block. It does not take any parameter.</p>
+<p style="font-family:verdana;color:black;">
+The follows are a try/throw/catch/endtry example.</p>
+<pre style="font-family:verdana;color:black;">
+Function testtry1()
+	Variable a, b, c
+	a = 3
+	Try
+		Select a
+		Case 3
+			print("a == 1\n")
+			Try
+				print (NULL==FALSE)
+				dbc
+			Catch
+				print ("Cannot cvt NULL to boolean or dbc is undefined\n")
+			EndTry
+		EndS
+		Throw "my exception"
+	Catch (1+2)==4
+		print ("IN (1+2) == 4")
+	catch false
+		print ("In false")
+	Catch and((b=level)=="LANGUAGE", (c=info) == "my exception")
+		print ("In catch and, b = ")
+		print (b)
+		print ("\n")
+		Help
+		 Try 
+		 	c = adb
+		 Catch
+		 	print (" c= adb")
+		 EndTry
+			Help
+		Endh
+		Try
+			c = 3/0
+		Catch And((c= info)==c, level == "LANGUAGE")
+			print ("In Language\n")
+			print (c) 
+		Catch And((c= info)==c, level=="EXPRESSION")
+			print ("In Expression\n")
+			print (c)
+		EndTry
+		print ("In upper level try\n")
+		print (b)
+		print (" , c = ")
+		print (c)
+		print ("\n")
+	Catch or((b=level)=="LANGUAGE", (c=info) == "my exception")
+		print ("In catch or, b = ")
+		print (b)
+		print (" , c = ")
+		print (c)
+		print ("\n")
+	Endtry
+Endf
+</pre>
+<p style="font-family:verdana;color:black;">
+And the output of this function would be:</p>
+<pre style="font-family:verdana;color:black;">
+a == 1
+FALSECannot cvt NULL to boolean or dbc is undefined
+In catch and, b = LANGUAGE
+In Expression
+Zero division!In upper level try
+LANGUAGE , c = Zero division!
+</pre>
+</body>
+</html>

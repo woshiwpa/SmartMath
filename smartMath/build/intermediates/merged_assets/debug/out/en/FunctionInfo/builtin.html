@@ -1,0 +1,894 @@
+<html>
+<head>
+<title>Scientific Calculator Plus Help</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">Scientific Calculator Plus Help : built-in functions</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>Function name</th>
+<th>Function info</th>
+</tr>
+<tr>
+<td><center>abs</center></td>
+<td><p>abs(1) :</p>
+<p>abs(x) returns modulus of a complex number or absolute value of a real number.</p>
+</td>
+</tr>
+<tr>
+<td><center>acos</center></td>
+<td><p>acos(1) :</p>
+<p>acos(x), where x can be a complex number, returns arccos value of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>alloc_array</center></td>
+<td><p>alloc_array(1...) :</p>
+<p>alloc_array(x...) returns a newly allocated array whose size is determined by parameters. All the parameters must be positive integers.</p>
+<p>alloc_array(2) :</p>
+<p>alloc_array(x, y) returns a newly allocated array whose size is determined by parameter x which is a list of integer. Parameter y is the default value of array elements. Note that y is optional, by default all the elements are initialized as zero.</p>
+</td>
+</tr>
+<tr>
+<td><center>and</center></td>
+<td><p>and(1...) :</p>
+<p>and(x...) which accepts an arbitary number (> 0) of boolean parameters, returns logical and of the parameters. If a parameter's type is not boolean, it will be automatically converted to boolean first.</p>
+</td>
+</tr>
+<tr>
+<td><center>angle</center></td>
+<td><p>angle(1) :</p>
+<p>angle(x) returns radian based angle of a complex number</p>
+</td>
+</tr>
+<tr>
+<td><center>asin</center></td>
+<td><p>asin(1) :</p>
+<p>asin(x), where x can be a complex number, returns arcsin value of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>atan</center></td>
+<td><p>atan(1) :</p>
+<p>atan(x), where x can be a complex number, returns arctan value of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>cd</center></td>
+<td><p>cd(1) :</p>
+<p>change_dir(path) (with alias cd(path)) changes current directory to string based value path. If successful, return true. Otherwise, return falses. Examples are change_dir("D:\\Windows") (Windows) and cd("/") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>ceil</center></td>
+<td><p>ceil(1) :</p>
+<p>ceil(x), where x is a float value, returns the smallest integer no smaller than x.</p>
+<p>ceil(2) :</p>
+<p>ceil(x,y), where x is a float value and y is a positive integer, returns the smallest float value with y digits after decimal point no smaller than x.</p>
+</td>
+</tr>
+<tr>
+<td><center>change_dir</center></td>
+<td><p>change_dir(1) :</p>
+<p>change_dir(path) (with alias cd(path)) changes current directory to string based value path. If successful, return true. Otherwise, return falses. Examples are change_dir("D:\\Windows") (Windows) and cd("/") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>clone</center></td>
+<td><p>clone(1) :</p>
+<p>clone(source_value) clones source value and returns cloned copy of the source value. Source value can be anything including string, number, complex number and array. For example, if variable a is [1,2], user executes statement variable b = clone(a) and gets b = [1,2]. However, the returned [1,2] is not the same copy as parameter a. So if user changes a[0] to 3, a's new value is [3, 2] while b is still [1, 2].</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_bin_to_dec</center></td>
+<td><p>conv_bin_to_dec(1) :</p>
+<p>conv_bin_to_dec(x) converts a non-negative binary value or string x (can be float or integer) to a decimal value.</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_bin_to_hex</center></td>
+<td><p>conv_bin_to_hex(1) :</p>
+<p>conv_bin_to_hex(x) converts a non-negative binary value or string x (can be float or integer) to a hexadecimal string.</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_bin_to_oct</center></td>
+<td><p>conv_bin_to_oct(1) :</p>
+<p>conv_bin_to_oct(x) converts a non-negative binary value or string x (can be float or integer) to an octal string.</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_dec_to_bin</center></td>
+<td><p>conv_dec_to_bin(1) :</p>
+<p>conv_dec_to_bin(x) converts a non-negative decimal value or string x (can be float or integer) to a binary string.</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_dec_to_hex</center></td>
+<td><p>conv_dec_to_hex(1) :</p>
+<p>conv_dec_to_hex(x) converts a non-negative decimal value or string x (can be float or integer) to a hexadecimal string.</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_dec_to_oct</center></td>
+<td><p>conv_dec_to_oct(1) :</p>
+<p>conv_dec_to_oct(x) converts a non-negative decimal value or string x (can be float or integer) to an octal string.</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_hex_to_bin</center></td>
+<td><p>conv_hex_to_bin(1) :</p>
+<p>conv_hex_to_bin(x) converts a non-negative hexadecimal value or string x (can be float or integer) to a binary string.</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_hex_to_dec</center></td>
+<td><p>conv_hex_to_dec(1) :</p>
+<p>conv_hex_to_dec(x) converts a non-negative hexadecimal value or string x (can be float or integer) to a decimal value.</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_hex_to_oct</center></td>
+<td><p>conv_hex_to_oct(1) :</p>
+<p>conv_hex_to_oct(x) converts a non-negative hexadecimal value or string x (can be float or integer) to an octal string.</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_ints_to_str</center></td>
+<td><p>conv_ints_to_str(1) :</p>
+<p>conv_ints_to_str(int_or_array) converts a single integer or a list of integer to a unicode string. If int_or_array is a single integer, then returned string includes a single char. Otherwise, returned string should have same number of characters as the element number in the integer array. If an integer is negative or beyond unicode char set range, this integer will be converted to the unicode char whose integer value is 0. For example, conv_ints_to_str([97, 98, 99]) returns "abc" and conv_ints_to_str(97) returns "a".</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_oct_to_bin</center></td>
+<td><p>conv_oct_to_bin(1) :</p>
+<p>conv_oct_to_bin(x) converts a non-negative octal value or string x (can be float or integer) to a binary string.</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_oct_to_dec</center></td>
+<td><p>conv_oct_to_dec(1) :</p>
+<p>conv_oct_to_dec(x) converts a non-negative octal value or string x (can be float or integer) to a decimal value.</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_oct_to_hex</center></td>
+<td><p>conv_oct_to_hex(1) :</p>
+<p>conv_oct_to_hex(x) converts a non-negative octal value or string x (can be float or integer) to a hexadecimal string.</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_str_to_ints</center></td>
+<td><p>conv_str_to_ints(1) :</p>
+<p>conv_str_to_ints(str) converts a unicode string to an integer array. Each unicode char in general corresponds to one integer (could be two integers, if the unicode char is beyond UTF-16 char set. However, this kind of unicode chars are not widely used). If string is empty, return a zero length array. For example, conv_str_to_ints("abc") returns [97, 98, 99].</p>
+</td>
+</tr>
+<tr>
+<td><center>copy_file</center></td>
+<td><p>copy_file(3) :</p>
+<p>copy_file(source, destination, replace_exist) copies file or folder whose path is string source to file or folder whose path is string destination. If the 3rd parameter, replace_exist, is true, then source file (or any file in source folder) will replace destination file (or corresponding file in destination folder) if destination exists. Note that the 3rd parameter is optional. By default it is false. Examples are copy_file("c:\\temp\\try1", "D:\\", true) (Windows) and copy_file("/mnt/sdcard/testfile.txt", "./testfile_copy.txt") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>cos</center></td>
+<td><p>cos(1) :</p>
+<p>cos(x) returns cos value of x, where x can be a complex number.</p>
+</td>
+</tr>
+<tr>
+<td><center>create_file</center></td>
+<td><p>create_file(2) :</p>
+<p>create_file(path, is_folder) create a file (if is_folder is false or does not exist) or folder (if is_folder is true). If the parent of string based parameter path does not exist, the parent will be created. If the file can be created, this function returns true, otherwise, returns false. Examples are create_file("c:\\temp\\try1", true) (Windows) and create_file("testfile_copy.txt") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>delete_file</center></td>
+<td><p>delete_file(2) :</p>
+<p>delete_file(path, delete_children_in_folder) deletes a file or folder at string based parameter path. If it is a folder and the second parameter is true, all the files in the folder will be recursively deleted. The second parameter is optional. By default, it is false. If the file or folder can be deleted, this function returns true, otherwise, returns false. Examples are delete_file("c:\\temp\\try1", true) (Windows) and delete_file("testfile_copy.txt") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>det</center></td>
+<td><p>det(1) :</p>
+<p>Function det(x) calculates determinant of square matrix x.</p>
+</td>
+</tr>
+<tr>
+<td><center>deter</center></td>
+<td><p>deter(1) :</p>
+<p>Function deter(x) calculates determinant of square matrix x.</p>
+</td>
+</tr>
+<tr>
+<td><center>dir</center></td>
+<td><p>dir(1) :</p>
+<p>print_file_list(path) (alias ls(path) or dir(path)) works like ls command in Linux or dir command in Windows. It print the information for the file or all the files in folder at string based path. It returns the number of entries that printed. If the path does not corresponds to an existing file or folder, it returns -1. Note that path is optional. By default it is current folder ("."). Examples are dir() (Windows) and ls("../testfile_copy.txt") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>eig</center></td>
+<td><p>eig(1) :</p>
+<p>eig(A) calculates 2D square matrix A's eigen vectors and eigen values. This function returns a two element list. First element is the eigen vector matrix, each column is an eigen vector. Second element is a diagonal matrix. Each diagonal element is an eigen value. Note that this function needs big memory to run and consumes significant CPU time. If running in mobile device, size of A and B should be no greater than 6*6. If running on PC, A and B should be no greater than 8*8. Otherwise, it may fail because lack of memory or run for very long time.</p>
+<p>eig(2) :</p>
+<p>eig(A, B) calculates 2D square matrix A's eigen vectors and eigen values against same size matrix B, i.e. Av = lambda * Bv, where lambda is an eigen value and v is an eigen vector. The second parameter, B, is optional. By default, B is an I matrix. This function returns a two element list. First element is the eigen vector matrix, each column is an eigen vector. Second element is a diagonal matrix. Each diagonal element is an eigen value. Note that this function needs big memory to run and consumes significant CPU time. If running in mobile device, size of A and B should be no greater than 6*6. If running on PC, A and B should be no greater than 8*8. Otherwise, it may fail because lack of memory or run for very long time.</p>
+</td>
+</tr>
+<tr>
+<td><center>evaluate</center></td>
+<td><p>evaluate(1...) :</p>
+<p>evaluate(expr_string,var_string1,var_value1,var_string2,var_value2, ...) returns the value of string based expression expr_string when the string based variable var_string1 equals var_value1, variable var_string2 equals var_value2, ... respectively. Note that var_value1, var_value2, ... can be any type and the number of variables can be zero, i.e. evaluate("3+2") is valid.</p>
+</td>
+</tr>
+<tr>
+<td><center>exp</center></td>
+<td><p>exp(1) :</p>
+<p>exp(x), where x is a real or complex number, returns x powers of e.</p>
+</td>
+</tr>
+<tr>
+<td><center>eye</center></td>
+<td><p>eye(1) :</p>
+<p>eye(x), where x is a positive integer, returns 2-D matrix I whose size is x times x. Note that eye(0) returns 1.</p>
+<p>eye(2) :</p>
+<p>eye(x,y), where x and y are both positive integer numbers, returns y-D matrix I whose size of each dimension is x.</p>
+</td>
+</tr>
+<tr>
+<td><center>fclose</center></td>
+<td><p>fclose(1) :</p>
+<p>fclose(fd) closes the file whose id is fd. If the fd is invalid, returns -1. Otherwise, returns 0.</p>
+</td>
+</tr>
+<tr>
+<td><center>feof</center></td>
+<td><p>feof(1) :</p>
+<p>feof(fd) identifies if it has been the end of a read mode file whose id is fd. If so, returns true. Otherwise, returns false. If fd is invalid, throws an exception.</p>
+</td>
+</tr>
+<tr>
+<td><center>floor</center></td>
+<td><p>floor(1) :</p>
+<p>floor(x), where x is a float value, returns the largest integer no larger than x.</p>
+<p>floor(2) :</p>
+<p>floor(x,y), where x is a float value and y is a positive integer, returns the largest float value with y digits after decimal point no larger than x.</p>
+</td>
+</tr>
+<tr>
+<td><center>fopen</center></td>
+<td><p>fopen(2) :</p>
+<p>fopen(path, mode) opens file at path to read or write and returns the file id number. It is similar to C and Matlab's same name function. However, only "r", "a", "w", "rb", "ab" and "wb" modes are supported. Examples are fopen("C:\\Temp\\Hello.dat", "ab") (Windows) and fopen("./hello.txt", "r") (Android).</p>
+<p>fopen(3) :</p>
+<p>fopen(path, mode, encoding) opens a text file at path using character set encoding to read or write and returns the file id number. Because only text file supports encoding, parameter mode can only be "r", "a" and "w". Examples are fopen("C:\\Temp\\Hello.txt", "a", "LATIN-1") (Windows) and fopen("./hello.txt", "r", "UTF-8") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>fprintf</center></td>
+<td><p>fprintf(2...) :</p>
+<p>printf(format_string, ...), sprintf(format_string, ...) and fprintf(fd, format_string, ...) work like corresponding C/C++ functions. Function printf prints formatted string constructed from format_string and other parameter values to output console, sprintf constructs a new string from format_string and other parameters, and returns the new string, fprintf prints the formated string from format_string and other parameter values to the text file whose id is fd. The format_string parameter supports integer (%d, %i, %x, etc), float (%e, %f, etc), character(%c), string(%s) etc. User can find detailed information for construction of a format string by reading C language manual for these functions. For example, printf("Hello world!%f", 3.14) will output "Hello world!3.140000" on the screen, sprintf("%c%d", "A", 9) returns "A9" (MFP does not support single character type, so single character is stored as a one-char string).</p>
+</td>
+</tr>
+<tr>
+<td><center>fread</center></td>
+<td><p>fread(4) :</p>
+<p>fread(fd, buffer, from, length) reads length number of bytes from file whose id is fd and stores the bytes in buffer starting from parameter from. Note that from and length must be non-negative and from + length should be no greater than buffer size. From and length are optional. If they do not exist, fread reads buffer size of bytes and fill the buffer. Buffer is also optional. If Buffer does not exist, fread returns a single byte. If fread find that it is end of the file before reading, returns -1. Otherwise, if using buffer, returns number of bytes that are read (if buffer is provided). If file does not exist, or is invalid or inaccessable, exception will be thrown. Examples are fread(1), fread(2, byte_buffer) and fread(2, byte_buffer, 3, 7).</p>
+</td>
+</tr>
+<tr>
+<td><center>freadline</center></td>
+<td><p>freadline(1) :</p>
+<p>freadline(fd) reads one line from text file whose id is fd. If before reading, freadline finds it is end of the file, it returns NULL. Otherwise, it returns the string based line excluding the change-line character(s) at the end.</p>
+</td>
+</tr>
+<tr>
+<td><center>fscanf</center></td>
+<td><p>fscanf(2) :</p>
+<p>scanf(format_string), sscanf(input_from, format_string) and fscanf(fd, format_string) work like corresponding C/C++ functions. Function scanf reads one line input from user, sscanf reads string based parameter input_from, and fscanf reads content from a file whose id is fd. The format_string parameter supports integer (%d, %i, %x, etc), float (%e, %f, etc), character(%c), string(%s) etc. User can find detailed information for construction of a format string by reading C language manual for these functions. Different from C language, these functions do not accept additional parameters to store read values. These functions simply return all the read values in an array. For example, sscanf("3Hello world!", "%d%c%c%s") will returns [3, "H", "e", "llo"] (MFP does not support single character type, so single character is stored as a one-char string).</p>
+</td>
+</tr>
+<tr>
+<td><center>fwrite</center></td>
+<td><p>fwrite(4) :</p>
+<p>fwrite(fd, buffer, from, length) writes length number of bytes to file whose id is fd. The data to write store in parameter buffer starting from parameter from. Note that from and length must be non-negative and from + length should be no greater than buffer size. From and length are optional. If they do not exist, fwrite writes whole buffer to file. Buffer can also be a single byte which means fwrite writes only 1 byte to file. If file does not exist, or is invalid or inaccessable, exception will be thrown. Examples are fwrite(1, 108), fwrite(2, byte_buffer) and fwrite(2, byte_buffer, 3, 7).</p>
+</td>
+</tr>
+<tr>
+<td><center>get_absolute_path</center></td>
+<td><p>get_absolute_path(1) :</p>
+<p>get_absolute_path(fd_or_path) returns a string value which is the absolute path of file either whose id number is fd_or_path (here fd_or_path is an integer) or whose relative path is fd_or_path (here fd_or_path is a string).</p>
+</td>
+</tr>
+<tr>
+<td><center>get_canonical_path</center></td>
+<td><p>get_canonical_path(1) :</p>
+<p>get_canonical_path(fd_or_path) returns a string value which is the canonical path (path which is absolute and does not rely on symbol link) of file either whose id number is fd_or_path (here fd_or_path is an integer) or whose relative path is fd_or_path (here fd_or_path is a string).</p>
+</td>
+</tr>
+<tr>
+<td><center>get_day_of_month</center></td>
+<td><p>get_day_of_month(1) :</p>
+<p>get_year(timestamp), get_month(timestamp), get_day_of_year(timestamp), get_day_of_month(timestamp), get_day_of_week(timestamp), get_hour(timestamp), get_minute(timestamp), get_second(timestamp) and get_millisecond(timestamp) return the year, month, day of year, day of month, day of week, hour minute, second and millisecond of the time stamp parameter respectively. Timestamp is the difference, measured in milliseconds, between the time and midnight, January 1, 1970 UTC. And day of week is an integer corresponding to Sunday if 0, Monday if 1, ... Saturday if 6. For example, get_day_of_week(get_time_stamp(2014, 12, 21)) returns 0 (Sunday).</p>
+</td>
+</tr>
+<tr>
+<td><center>get_day_of_week</center></td>
+<td><p>get_day_of_week(1) :</p>
+<p>get_year(timestamp), get_month(timestamp), get_day_of_year(timestamp), get_day_of_month(timestamp), get_day_of_week(timestamp), get_hour(timestamp), get_minute(timestamp), get_second(timestamp) and get_millisecond(timestamp) return the year, month, day of year, day of month, day of week, hour minute, second and millisecond of the time stamp parameter respectively. Timestamp is the difference, measured in milliseconds, between the time and midnight, January 1, 1970 UTC. And day of week is an integer corresponding to Sunday if 0, Monday if 1, ... Saturday if 6. For example, get_day_of_week(get_time_stamp(2014, 12, 21)) returns 0 (Sunday).</p>
+</td>
+</tr>
+<tr>
+<td><center>get_day_of_year</center></td>
+<td><p>get_day_of_year(1) :</p>
+<p>get_year(timestamp), get_month(timestamp), get_day_of_year(timestamp), get_day_of_month(timestamp), get_day_of_week(timestamp), get_hour(timestamp), get_minute(timestamp), get_second(timestamp) and get_millisecond(timestamp) return the year, month, day of year, day of month, day of week, hour minute, second and millisecond of the time stamp parameter respectively. Timestamp is the difference, measured in milliseconds, between the time and midnight, January 1, 1970 UTC. And day of week is an integer corresponding to Sunday if 0, Monday if 1, ... Saturday if 6. For example, get_day_of_week(get_time_stamp(2014, 12, 21)) returns 0 (Sunday).</p>
+</td>
+</tr>
+<tr>
+<td><center>get_eigen_values</center></td>
+<td><p>get_eigen_values(1) :</p>
+<p>get_eigen_values(A) calculates 2D square matrix A's eigen values. This function returns an eigen value list which includes all the eigen values including duplicated ones. Note that this function needs big memory to run and consumes significant CPU time. If running in mobile device, size of A and B should be no greater than 6*6. If running on PC, A and B should be no greater than 8*8. Otherwise, it may fail because lack of memory or run for very long time.</p>
+<p>get_eigen_values(2) :</p>
+<p>get_eigen_values(A, B) calculates 2D square matrix A's eigen values against same size matrix B, i.e. Av = lambda * Bv, where lambda is an eigen value and v is an eigen vector. The second parameter, B, is optional. By default, B is an I matrix. This function returns an eigen value list which includes all the eigen values including duplicated ones. Note that this function needs big memory to run and consumes significant CPU time. If running in mobile device, size of A and B should be no greater than 6*6. If running on PC, A and B should be no greater than 8*8. Otherwise, it may fail because lack of memory or run for very long time.</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_last_modified_time</center></td>
+<td><p>get_file_last_modified_time(1) :</p>
+<p>get_file_last_modified_time(path) returns the last modified time of the file or folder corresponding to a string based path. The time is measured by the number of milliseconds since midnight on January 1st, 1970. If path does not exist or the file is not accessable, returns -1.</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_path</center></td>
+<td><p>get_file_path(1) :</p>
+<p>get_file_path(fd) returns a string value which is the path of file whose id number is fd.</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_separator</center></td>
+<td><p>get_file_separator(0) :</p>
+<p>get_file_separator() returns the seperator used in path. In Windows it returns string "\\". In Linux or Android it returns string "/".</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_size</center></td>
+<td><p>get_file_size(1) :</p>
+<p>get_file_size(path) returns the size of the file corresponding to a string based path. If path does not corresponds to a file, or the file does not exist or the file is not accessable, returns -1.</p>
+</td>
+</tr>
+<tr>
+<td><center>get_hour</center></td>
+<td><p>get_hour(1) :</p>
+<p>get_year(timestamp), get_month(timestamp), get_day_of_year(timestamp), get_day_of_month(timestamp), get_day_of_week(timestamp), get_hour(timestamp), get_minute(timestamp), get_second(timestamp) and get_millisecond(timestamp) return the year, month, day of year, day of month, day of week, hour minute, second and millisecond of the time stamp parameter respectively. Timestamp is the difference, measured in milliseconds, between the time and midnight, January 1, 1970 UTC. And day of week is an integer corresponding to Sunday if 0, Monday if 1, ... Saturday if 6. For example, get_day_of_week(get_time_stamp(2014, 12, 21)) returns 0 (Sunday).</p>
+</td>
+</tr>
+<tr>
+<td><center>get_millisecond</center></td>
+<td><p>get_millisecond(1) :</p>
+<p>get_year(timestamp), get_month(timestamp), get_day_of_year(timestamp), get_day_of_month(timestamp), get_day_of_week(timestamp), get_hour(timestamp), get_minute(timestamp), get_second(timestamp) and get_millisecond(timestamp) return the year, month, day of year, day of month, day of week, hour minute, second and millisecond of the time stamp parameter respectively. Timestamp is the difference, measured in milliseconds, between the time and midnight, January 1, 1970 UTC. And day of week is an integer corresponding to Sunday if 0, Monday if 1, ... Saturday if 6. For example, get_day_of_week(get_time_stamp(2014, 12, 21)) returns 0 (Sunday).</p>
+</td>
+</tr>
+<tr>
+<td><center>get_minute</center></td>
+<td><p>get_minute(1) :</p>
+<p>get_year(timestamp), get_month(timestamp), get_day_of_year(timestamp), get_day_of_month(timestamp), get_day_of_week(timestamp), get_hour(timestamp), get_minute(timestamp), get_second(timestamp) and get_millisecond(timestamp) return the year, month, day of year, day of month, day of week, hour minute, second and millisecond of the time stamp parameter respectively. Timestamp is the difference, measured in milliseconds, between the time and midnight, January 1, 1970 UTC. And day of week is an integer corresponding to Sunday if 0, Monday if 1, ... Saturday if 6. For example, get_day_of_week(get_time_stamp(2014, 12, 21)) returns 0 (Sunday).</p>
+</td>
+</tr>
+<tr>
+<td><center>get_month</center></td>
+<td><p>get_month(1) :</p>
+<p>get_year(timestamp), get_month(timestamp), get_day_of_year(timestamp), get_day_of_month(timestamp), get_day_of_week(timestamp), get_hour(timestamp), get_minute(timestamp), get_second(timestamp) and get_millisecond(timestamp) return the year, month, day of year, day of month, day of week, hour minute, second and millisecond of the time stamp parameter respectively. Timestamp is the difference, measured in milliseconds, between the time and midnight, January 1, 1970 UTC. And day of week is an integer corresponding to Sunday if 0, Monday if 1, ... Saturday if 6. For example, get_day_of_week(get_time_stamp(2014, 12, 21)) returns 0 (Sunday).</p>
+</td>
+</tr>
+<tr>
+<td><center>get_num_of_results_sets</center></td>
+<td><p>get_num_of_results_sets(1) :</p>
+<p>get_num_of_results_sets(x), where variable x is return of an in-line solve block, returns the number of results sets stored in variable x.</p>
+</td>
+</tr>
+<tr>
+<td><center>get_second</center></td>
+<td><p>get_second(1) :</p>
+<p>get_year(timestamp), get_month(timestamp), get_day_of_year(timestamp), get_day_of_month(timestamp), get_day_of_week(timestamp), get_hour(timestamp), get_minute(timestamp), get_second(timestamp) and get_millisecond(timestamp) return the year, month, day of year, day of month, day of week, hour minute, second and millisecond of the time stamp parameter respectively. Timestamp is the difference, measured in milliseconds, between the time and midnight, January 1, 1970 UTC. And day of week is an integer corresponding to Sunday if 0, Monday if 1, ... Saturday if 6. For example, get_day_of_week(get_time_stamp(2014, 12, 21)) returns 0 (Sunday).</p>
+</td>
+</tr>
+<tr>
+<td><center>get_solved_results_set</center></td>
+<td><p>get_solved_results_set(2) :</p>
+<p>get_solved_results_set(x, y), where variable x is return of an in-line solve block, returns No. y + 1 results set stored in variable x. Note that this function returns an 1-dim array. The first element in the array is the result of the first to-be-solved variable in the solve block; the second element in the array is the result of the second to-be-solved variable in the solve block; etc ...</p>
+</td>
+</tr>
+<tr>
+<td><center>get_time_stamp</center></td>
+<td><p>get_time_stamp(1...) :</p>
+<p>get_time_stamp(string_or_year, ...) returns the timestamp determined by the parameters. Timestamp is the difference, measured in milliseconds, between the time and midnight, January 1, 1970 UTC. This function supports two modes. First mode is get_time_stamp(string_time_stamp) where there is only one string based parameter which must be formatted as yyyy-mm-dd hh:mm:ss[.f...]. The fractional second may be omitted. The second mode is get_time_stamp(year, month, day, hour, minute, second, millisecond). All the parameters except year are optional. If omitted, the default value for the parameters hour, minute, second and millisecond is 0, and the default value for the parameters month and day is 1. For example, get_time_stamp("1981-05-30 17:05:06") will return timestamp at 17:05:06.000 on May 30, 1981. And it works exactly same as get_time_stamp(1981, 5, 30, 17, 5, 6, 0).</p>
+</td>
+</tr>
+<tr>
+<td><center>get_variable_results</center></td>
+<td><p>get_variable_results(2) :</p>
+<p>get_variable_results(x, y), where variable x is return of an in-line solve block, returns all results of No. y + 1 to-be-solved variable in the solve block which returns x. Note that this function returns an 1-dim array. Each element in the array is one root of the to-be-solved variable.</p>
+</td>
+</tr>
+<tr>
+<td><center>get_working_dir</center></td>
+<td><p>get_working_dir(0) :</p>
+<p>get_working_dir() (with alias pwd()) return string based current directory.</p>
+</td>
+</tr>
+<tr>
+<td><center>get_year</center></td>
+<td><p>get_year(1) :</p>
+<p>get_year(timestamp), get_month(timestamp), get_day_of_year(timestamp), get_day_of_month(timestamp), get_day_of_week(timestamp), get_hour(timestamp), get_minute(timestamp), get_second(timestamp) and get_millisecond(timestamp) return the year, month, day of year, day of month, day of week, hour minute, second and millisecond of the time stamp parameter respectively. Timestamp is the difference, measured in milliseconds, between the time and midnight, January 1, 1970 UTC. And day of week is an integer corresponding to Sunday if 0, Monday if 1, ... Saturday if 6. For example, get_day_of_week(get_time_stamp(2014, 12, 21)) returns 0 (Sunday).</p>
+</td>
+</tr>
+<tr>
+<td><center>iff</center></td>
+<td><p>iff(3...) :</p>
+<p>iff(condition1, true_result1, condition2, true_result2, ..., false_result), where condition1, condition2, ... are boolean values, returns the result based on the condition values. For example, iff(true, 3, 2) returns 3, iff(3 &lt; 2, 3, 2) returns 2 (because 3 &lt; 2 is false), iff(3 &lt; 2, 3, 5 &gt; 4, 5, 6 == 9, 6, 9) returns 5,  and iff(3 &lt; 2, 3, 5 &lt; 4, 5, 6 == 9, 6, 9) returns 9.</p>
+</td>
+</tr>
+<tr>
+<td><center>image</center></td>
+<td><p>image(1) :</p>
+<p>image(x) returns image part (a real value) of complex value x.</p>
+<p>image(2) :</p>
+<p>image(x, mode) returns image part of complex value x. If mode is true, returns image value. Otherwise, returns real value. For example, image(3+2i, true) = 2i while image(3+2i, false) = 2.</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_inf</center></td>
+<td><p>includes_inf(1) :</p>
+<p>includes_inf(x) determines if x includes positive infinite or negative infinite. Include means, if x is an array, then one of its elements is or includes the destination value(s), if x is a complex value, then its real or image is the destination value(s), if x is a single value, then it is the destination values(s). If it is, return true. Otherwise, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan</center></td>
+<td><p>includes_nan(1) :</p>
+<p>includes_nan(x) determines if x includes Nan. Include means, if x is an array, then one of its elements is or includes the destination value(s), if x is a complex value, then its real or image is the destination value(s), if x is a single value, then it is the destination values(s). If it is, return true. Otherwise, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan_or_inf</center></td>
+<td><p>includes_nan_or_inf(1) :</p>
+<p>includes_nan_or_inf(x) determines if x includes Nan or positive infinite or negative infinite. Include means, if x is an array, then one of its elements is or includes the destination value(s), if x is a complex value, then its real or image is the destination value(s), if x is a single value, then it is the destination values(s). If it is, return true. Otherwise, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_nan_or_inf_or_null</center></td>
+<td><p>includes_nan_or_inf_or_null(1) :</p>
+<p>includes_nan_or_inf_or_null(x) determines if x includes Nan or positive infinite or negative infinite or null. Include means, if x is an array, then one of its elements is or includes the destination value(s), if x is a complex value, then its real or image is the destination value(s), if x is a single value, then it is the destination values(s). If it is, return true. Otherwise, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>includes_null</center></td>
+<td><p>includes_null(1) :</p>
+<p>includes_null(x) determines if x includes null. Include means, if x is an array, then one of its elements is or includes the destination value(s), if x is a complex value, then its real or image is the destination value(s), if x is a single value, then it is the destination values(s). If it is, return true. Otherwise, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>input</center></td>
+<td><p>input(2) :</p>
+<p>input(prompt,input_type) prints string prompt on the console and waiting for user to input. The second parameter, input_type, is optional. At this stage only if the second parameter exists and it is string "s" or "S", user's input is looked on as a string and this function returns the string. Otherwise, input is treated as an expression and this function returns the value of the expression. If input is not a valid expression, this functions will reprint the prompt and wait for user to input again. An input is finished by press ENTER key. If multiple lines are input, only the first line is read. For example, user runs input("$", "S"), then types 4 + 3 after prompt, presses ENTER, this function returns a string "4 + 3". If user runs input("%"), then type 4 + 3 after prompt, presses ENTER, this function returns 7.</p>
+</td>
+</tr>
+<tr>
+<td><center>integrate</center></td>
+<td><p>integrate(2) :</p>
+<p>integrate(x,y) returns the indefinite integrated expression of expression x based on variable y where x and y are both strings. Note that if x cannot be indefinitely integrated or x is too complicated to solve, this function will throw an exception.</p>
+<p>integrate(4) :</p>
+<p>integrate(x,y,z,w) returns the integrated value of expression x based on variable y changing from z to w. Note that x and y are string type and z and w can be real numbers, complex numbers or strings. The integrating algorithm selected is adaptive Gauss-Kronrod method.</p>
+<p>integrate(5) :</p>
+<p>integrate(x,y,z,w,v) returns integrated value given a string expression x of a variable y (also a string type) and an interval [z, w]. In calculation, one step length is (w - z)/v, note that v must be a positive integer while w and z can be real numbers, complex values or strings. If v is zero, this function is the same as integrate(x,y,z,w).</p>
+</td>
+</tr>
+<tr>
+<td><center>invert</center></td>
+<td><p>invert(1) :</p>
+<p>invert(x) inverted 2D matrix x. Note that the elements of x can be complex numbers but x must be a square matrix (i.e. number of rows equals number of columns).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_directory</center></td>
+<td><p>is_directory(1) :</p>
+<p>is_directory(path) identifies if the file (or folder) at string based parameter path is a directory or not. If it exists and is a directory the function returns true, otherwise false. Examples are is_directory("E:\\") (Windows) and is_directory("/home/tony/Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_eye</center></td>
+<td><p>is_eye(2) :</p>
+<p>is_eye(x,y), where x is an array or number and y is a boolean, identifies x is matrix I (or 1) or not. If x is matrix I (or 1), returns true, otherwise, returns false. If y is true, looks on all null values as zero, otherwise, null values are not looked on as zero. Y is optional. By default, it is false.</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_executable</center></td>
+<td><p>is_file_executable(1) :</p>
+<p>is_file_executable(path) identifies if the file (or folder) at string based parameter path is executable or not. If it exists and is executable the function returns true, otherwise false. Examples are is_file_executable("E:\\") (Windows) and is_file_executable("/home/tony/Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_existing</center></td>
+<td><p>is_file_existing(1) :</p>
+<p>is_file_existing(path) identifies if the file (or folder) at string based parameter path exists or not. If exists it returns true, otherwise false. Examples are is_file_existing("E:\\") (Windows) and is_file_existing("/home/tony/Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_hidden</center></td>
+<td><p>is_file_hidden(1) :</p>
+<p>is_file_hidden(path) identifies if the file (or folder) at string based parameter path is hidden or not. If it exists and is hidden the function returns true, otherwise false. Examples are is_file_hidden("E:\\") (Windows) and is_file_hidden("/home/tony/Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_normal</center></td>
+<td><p>is_file_normal(1) :</p>
+<p>is_file_normal(path) identifies if the file (or folder) at string based parameter path is a normal file (not a folder) or not. If it exists and is a normal file the function returns true, otherwise false. Examples are is_file_normal("E:\\") (Windows) and is_file_normal("/home/tony/Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_readable</center></td>
+<td><p>is_file_readable(1) :</p>
+<p>is_file_readable(path) identifies if the file (or folder) at string based parameter path is readable or not. If it exists and is readable the function returns true, otherwise false. Examples are is_file_readable("E:\\") (Windows) and is_file_readable("/home/tony/Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_writable</center></td>
+<td><p>is_file_writable(1) :</p>
+<p>is_file_writable(path) identifies if the file (or folder) at string based parameter path is writable or not. If it exists and is writable the function returns true, otherwise false. Examples are is_file_writable("E:\\") (Windows) and is_file_writable("/home/tony/Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_inf</center></td>
+<td><p>is_inf(1) :</p>
+<p>is_inf(x) determines if x is positive infinite or negative infinite. If it is, return true. Otherwise, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>is_nan_or_inf</center></td>
+<td><p>is_nan_or_inf(1) :</p>
+<p>is_nan_or_inf(x) determines if x is Nan or positive infinite or negative infinite. If it is, return true. Otherwise, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>is_nan_or_inf_or_null</center></td>
+<td><p>is_nan_or_inf_or_null(1) :</p>
+<p>is_nan_or_inf_or_null(x) determines if x is Nan or positive infinite or negative infinite or null. If it is, return true. Otherwise, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>is_path_absolute</center></td>
+<td><p>is_path_absolute(1) :</p>
+<p>is_path_absolute(path) identifies if the string based path is an absolute path (i.e. not relative to current folder). If it is an absolute path the function returns true, otherwise false. Examples are is_path_absolute("E:\\temp") (Windows) and is_path_absolute("Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_path_parent</center></td>
+<td><p>is_path_parent(2) :</p>
+<p>is_path_parent(path1, path2) identifies if the string based path1 is the parent of string based path2. If it is returns true, otherwise false. Examples are is_path_parent("E:\\temp", "E:\\temp\\..\\temp\\test") (Windows) and is_path_parent(".", "Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_path_same</center></td>
+<td><p>is_path_same(2) :</p>
+<p>is_path_same(path1, path2) identifies if the string based path1 is actually the same as string based path2. If it is returns true, otherwise false. Examples are is_path_same("E:\\temp", "E:\\temp\\..\\temp\\") (Windows) and is_path_parent("/home/tony/Documents", "Documents/") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_symbol_link</center></td>
+<td><p>is_symbol_link(1) :</p>
+<p>is_symbol_link(path) identifies if the file (or folder) at string based parameter path is a symbol link or not. If it exists and is a symbol link the function returns true, otherwise false. Examples are is_symbol_link("E:\\") (Windows) and is_symbol_link("/home/tony/Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_zeros</center></td>
+<td><p>is_zeros(2) :</p>
+<p>is_zeros(x,y), where x is an array or number and y is a boolean, identifies x is matrix zeor (or number zero) or not. If x is, returns true, otherwise, returns false. If y is true, looks on all null values as zero, otherwise, null values are not looked on as zero. Y is optional. By default, it is false.</p>
+</td>
+</tr>
+<tr>
+<td><center>left_recip</center></td>
+<td><p>left_recip(1) :</p>
+<p>left_recip(x) calculates left-division reciprocal of x. Note that so far x can only be a number or a 2D matrix.</p>
+</td>
+</tr>
+<tr>
+<td><center>lim</center></td>
+<td><p>lim(3) :</p>
+<p>lim(expr, var, dest_value) calculates the limit value of expression expr when variable var is closing to dest_value. expr and var should be string and dest_value can be expression or value, whether string based or not. For example, lim("1/x", "x", 0) or lim("(x+2)/(x+3)","x","3+0"). Note that this function is still under development.</p>
+</td>
+</tr>
+<tr>
+<td><center>list_files</center></td>
+<td><p>list_files(1) :</p>
+<p>list_files(path) returns all the file names in the folder whose path is the string based parameter path, or it returns the file at path if path corresponds to a file. If the path does not correspond to a file or folder, it returns NULL. Note that parameter path is optional. By default it is current folder ("."). Examples are list_files("c:\\temp\\try1") (Windows) and list_files("../testfile_copy.txt") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>log</center></td>
+<td><p>log(1) :</p>
+<p>log(x), where x can be a complex number, returns e based logarithm value of x.</p>
+</td>
+</tr>
+<tr>
+<td><center>ls</center></td>
+<td><p>ls(1) :</p>
+<p>print_file_list(path) (alias ls(path) or dir(path)) works like ls command in Linux or dir command in Windows. It print the information for the file or all the files in folder at string based path. It returns the number of entries that printed. If the path does not corresponds to an existing file or folder, it returns -1. Note that path is optional. By default it is current folder ("."). Examples are dir() (Windows) and ls("../testfile_copy.txt") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>mod</center></td>
+<td><p>mod(2) :</p>
+<p>mod(x,y) returns the remainder of x/y (y must be positive). If x and y are not integers, they will be converted to integer numbers first.</p>
+</td>
+</tr>
+<tr>
+<td><center>move_file</center></td>
+<td><p>move_file(3) :</p>
+<p>move_file(source, destination, replace_exist) moves file or folder whose path is string source to file or INTO (not to) folder whose path is string destination. If the 3rd parameter, replace_exist, is true, then source file (or any file in source folder) will replace destination file (or corresponding file in destination folder) if corresponding file exists. Note that the 3rd parameter is optional. By default it is false. Examples are move_file("c:\\temp\\try1", "D:\\", true) (Windows) and move_file("/mnt/sdcard/testfile.txt", "./testfile_copy.txt") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>now</center></td>
+<td><p>now(0) :</p>
+<p>now() returns the difference, measured in milliseconds, between the current time and midnight, January 1, 1970 UTC.</p>
+</td>
+</tr>
+<tr>
+<td><center>ones</center></td>
+<td><p>ones(1...) :</p>
+<p>Function ones generates a matrix whose elements are all one. The dimension of the matrix is determined by the parameters of ones function, which is either a number of positive integers or a single positive integer list. Note that ones([]) returns 1.</p>
+</td>
+</tr>
+<tr>
+<td><center>or</center></td>
+<td><p>or(1...) :</p>
+<p>or(x...) which accepts an arbitary number (> 0) of boolean parameters, returns logical or of the parameters. If a parameter's type is not boolean, it will be automatically converted to boolean first.</p>
+</td>
+</tr>
+<tr>
+<td><center>pause</center></td>
+<td><p>pause(1) :</p>
+<p>pause(message) suspends current running program waiting for an enter input by user. Message, which is a string and is optional, will be printed on screen as a prompt if provided.</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_multi_xy</center></td>
+<td><p>plot_multi_xy(26) :</p>
+<p>plot_multi_xy(2-26 parameters) plots a 2-dim or polar chart which includes at most eight curves. Parameters 1 and 2 are chart name and settings respectively. The chart settings parameter is a string like "chart_type:multiXY;chart_title:1 chart;x_title:x;x_min:-6.2796950076838645;x_max:6.918480857169536;x_labels:10;y_title:y;y_min:-4.487378580559947;y_max:4.1268715788884345;y_labels:10;background_color:black;show_grid:true". Note that chart_type session should be multiXY (2D chart) or multiRangle (polar chart), and x_labels and y_labels means how many tick marks are in the x and y axises (or R axis and angle, angle tick marks are ignored) respectively. From parameter 3 to 26, every three parameters define a curve. Among the three parameters, the first describes curve settings, the second is a list of x (or R) values and the third is a list of y (or angle) values. An example of curve settings parameter is "curve_label:cv2;point_color:blue;point_style:point;point_size:1;line_color:blue;line_style:solid;line_size:1". Note that number of x should equal number of y and x and y values must be real. This function returns nothing. An example of this function is plot_multi_xy("chart2", "chart_type:multiXY;chart_title:1 chart;x_title:x;x_min:-6;x_max:6;x_labels:6;y_title:y;y_min:-4;y_max:4;y_labels:5;background_color:black;show_grid:true", "curve_label:cv2;point_color:blue;point_style:circle;point_size:3;line_color:blue;line_style:solid;line_size:1", [-5, -3, -1, 0, 1, 2, 3, 4, 5], [-3.778, -2.9793, -2.0323, -1.1132, 0.2323, 1.2348, 3.9865, 2.3450, 0.4356]) .</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_multi_xyz</center></td>
+<td><p>plot_multi_xyz(34) :</p>
+<p>plot_multi_xyz(2-34 parameters) plots a 3-dim chart which includes at most eight surface curves. Parameters 1 and 2 are chart name and settings respectively. The chart settings parameter is a string like "chart_type:multiXYZ;chart_title:This is a graph;x_title:x axis;x_min:-24.43739154366772;x_max:24.712391543667717;x_labels:10;y_title:Y axis;y_min:-251.3514430737091;y_max:268.95144307370913;y_labels:10;z_title:Z axis;z_min:-1.6873277335234405;z_max:1.7896774628184482;z_labels:10". Note that chart_type session should always be multiXYZ, and x_labels, y_labels and z_labels means how many tick marks are in the x, y and z axises respectively. From parameter 3 to 34, every four parameters define a curve. Among the four parameters, the first describes curve settings, the second is an array of x values, the third is an array of y values and the fourth is an array of z values. An example of curve settings parameter is "curve_label:cv2;is_grid:true;min_color:blue;min_color_1:cyan;min_color_value:-2.0;max_color:white;max_color_1:yellow;max_color_value:2.0". Note that the dimension of x, y and z arrays should equal and they should only include real value elements. This function returns nothing. An example of this function is plot_multi_xyz("chartII", "chart_type:multiXYZ;chart_title:This is a graph;x_title:x;x_min:-5;x_max:5;x_labels:6;y_title:Y;y_min:-6;y_max:6;y_labels:3;z_title:Z;z_min:-3;z_max:1;z_labels:4", "curve_label:cv1;min_color:blue;min_color_1:green;max_color:yellow;max_color_1:red", [[-4, -2, 0, 2, 4],[-4, -2, 0, 2, 4],[-4, -2, 0, 2, 4]], [[-5, -5, -5, -5, -5], [0, 0, 0, 0, 0], [-5, -5, -5, -5, -5]], [[-2.71, -2.65, -2.08, -1.82, -1.77], [-2.29, -2.36, -1.88, -1.45, -1.01], [-1.74, -1.49, -0.83, -0.17, 0.44]]) .</p>
+</td>
+</tr>
+<tr>
+<td><center>pow</center></td>
+<td><p>pow(2) :</p>
+<p>pow(x,y) returns y powers of x. Note that both x and y can be either a real or a complex number. If there are more than one results of pow(x,y), return the first result.</p>
+<p>pow(3) :</p>
+<p>pow(x,y,z) returns a list including first z values of y powers of x. If y powers of x has less than z values, returns all the values. Note that y must be a real number while x can be either a real or a complex number. Z must be a positive integer.</p>
+</td>
+</tr>
+<tr>
+<td><center>print</center></td>
+<td><p>print(1) :</p>
+<p>print(x) prints the value of x to output, x can be any value type.</p>
+</td>
+</tr>
+<tr>
+<td><center>print_file_list</center></td>
+<td><p>print_file_list(1) :</p>
+<p>print_file_list(path) (alias ls(path) or dir(path)) works like ls command in Linux or dir command in Windows. It print the information for the file or all the files in folder at string based path. It returns the number of entries that printed. If the path does not corresponds to an existing file or folder, it returns -1. Note that path is optional. By default it is current folder ("."). Examples are dir() (Windows) and ls("../testfile_copy.txt") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>printf</center></td>
+<td><p>printf(1...) :</p>
+<p>printf(format_string, ...), sprintf(format_string, ...) and fprintf(fd, format_string, ...) work like corresponding C/C++ functions. Function printf prints formatted string constructed from format_string and other parameter values to output console, sprintf constructs a new string from format_string and other parameters, and returns the new string, fprintf prints the formated string from format_string and other parameter values to the text file whose id is fd. The format_string parameter supports integer (%d, %i, %x, etc), float (%e, %f, etc), character(%c), string(%s) etc. User can find detailed information for construction of a format string by reading C language manual for these functions. For example, printf("Hello world!%f", 3.14) will output "Hello world!3.140000" on the screen, sprintf("%c%d", "A", 9) returns "A9" (MFP does not support single character type, so single character is stored as a one-char string).</p>
+</td>
+</tr>
+<tr>
+<td><center>product_over</center></td>
+<td><p>product_over(3) :</p>
+<p>product_over(x, y, z) calculates the product of string based expression x over integer value y to z. Note that y and z are also string based value, y should be written like "a=10" (where a is the variable) and z should be like "20". For example, product_over("x+1", "x=1", "10").</p>
+</td>
+</tr>
+<tr>
+<td><center>pwd</center></td>
+<td><p>pwd(0) :</p>
+<p>get_working_dir() (with alias pwd()) return string based current directory.</p>
+</td>
+</tr>
+<tr>
+<td><center>rand</center></td>
+<td><p>rand(0) :</p>
+<p>rand() function returns a random float number between 0 (inclusive) and 1 (exclusive).</p>
+</td>
+</tr>
+<tr>
+<td><center>rank</center></td>
+<td><p>rank(1) :</p>
+<p>rank(matrix) returns the rank of a matrix. For example rank([[1,2],[2,4]]) returns 1.</p>
+</td>
+</tr>
+<tr>
+<td><center>real</center></td>
+<td><p>real(1) :</p>
+<p>real(x) returns real part of complex value x.</p>
+</td>
+</tr>
+<tr>
+<td><center>recip</center></td>
+<td><p>recip(1) :</p>
+<p>recip(x) calculates reciprocal of x. Note that so far x can only be a number or a 2D matrix.</p>
+</td>
+</tr>
+<tr>
+<td><center>round</center></td>
+<td><p>round(1) :</p>
+<p>round(x) returns rounded integer value of x.</p>
+<p>round(2) :</p>
+<p>round(x,y) returns rounded value of x with y digits after decimal point.</p>
+</td>
+</tr>
+<tr>
+<td><center>scanf</center></td>
+<td><p>scanf(1) :</p>
+<p>scanf(format_string), sscanf(input_from, format_string) and fscanf(fd, format_string) work like corresponding C/C++ functions. Function scanf reads one line input from user, sscanf reads string based parameter input_from, and fscanf reads content from a file whose id is fd. The format_string parameter supports integer (%d, %i, %x, etc), float (%e, %f, etc), character(%c), string(%s) etc. User can find detailed information for construction of a format string by reading C language manual for these functions. Different from C language, these functions do not accept additional parameters to store read values. These functions simply return all the read values in an array. For example, sscanf("3Hello world!", "%d%c%c%s") will returns [3, "H", "e", "llo"] (MFP does not support single character type, so single character is stored as a one-char string).</p>
+</td>
+</tr>
+<tr>
+<td><center>set_array_elem</center></td>
+<td><p>set_array_elem(3) :</p>
+<p>set_array_elem(x,y,z) sets x[y] to be z, and returns new x. Note that x can be an array or a single element, y must be a list of positive integers which are the indices. Y can be beyond the size of x. For example x = 3, y = [1, 2], z = 2 + 3i then set_array_elem(x,y,z) = [3, [0, 0, 2+3i]].</p>
+</td>
+</tr>
+<tr>
+<td><center>set_file_last_modified_time</center></td>
+<td><p>set_file_last_modified_time(2) :</p>
+<p>set_file_last_modified_time(path, time) sets the last modified time of the file or folder corresponding to a string based path to be time. Here time is measured by the number of milliseconds since midnight on January 1st, 1970. If path does not exist or the file is not accessable, returns false. Otherwise, returns true. Examples are set_file_last_modified_time("C:\\Temp\\Hello\\", 99999999) (Windows) and set_file_last_modified_time("./hello.txt", 1111111111) (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>sin</center></td>
+<td><p>sin(1) :</p>
+<p>sin(x) returns sin value of x, where x can be a complex number.</p>
+</td>
+</tr>
+<tr>
+<td><center>size</center></td>
+<td><p>size(1) :</p>
+<p>size(x) returns a size list of array x. Note that if x is not an array, it always return [].</p>
+<p>size(2) :</p>
+<p>size(x,y) returns a size list of array x which includes the first y dimension sizes. If x has less than y dimensions, return full size list. Note that y must be a positive integer. Note that if x is not an array, it always return [].</p>
+</td>
+</tr>
+<tr>
+<td><center>sleep</center></td>
+<td><p>sleep(1) :</p>
+<p>sleep(x) suspends processing for positive real value x milliseconds. It returns nothing.</p>
+</td>
+</tr>
+<tr>
+<td><center>split</center></td>
+<td><p>split(2) :</p>
+<p>split(string_input, string_regex) splits string_input around matches of the given regular expression defined by parameter string_regex and returns the array of strings computed by splitting string_input around matches of the given regular expression. User could refer to JAVA documents for the Pattern class and String.split function for detailed usage about regular express. For example, split("boo:and:foo", ":") returns ["boo", "and", "foo"] and split("boo:and:foo", "o") returns ["b", "", ":and:f"].</p>
+</td>
+</tr>
+<tr>
+<td><center>sprintf</center></td>
+<td><p>sprintf(1...) :</p>
+<p>printf(format_string, ...), sprintf(format_string, ...) and fprintf(fd, format_string, ...) work like corresponding C/C++ functions. Function printf prints formatted string constructed from format_string and other parameter values to output console, sprintf constructs a new string from format_string and other parameters, and returns the new string, fprintf prints the formated string from format_string and other parameter values to the text file whose id is fd. The format_string parameter supports integer (%d, %i, %x, etc), float (%e, %f, etc), character(%c), string(%s) etc. User can find detailed information for construction of a format string by reading C language manual for these functions. For example, printf("Hello world!%f", 3.14) will output "Hello world!3.140000" on the screen, sprintf("%c%d", "A", 9) returns "A9" (MFP does not support single character type, so single character is stored as a one-char string).</p>
+</td>
+</tr>
+<tr>
+<td><center>sscanf</center></td>
+<td><p>sscanf(2) :</p>
+<p>scanf(format_string), sscanf(input_from, format_string) and fscanf(fd, format_string) work like corresponding C/C++ functions. Function scanf reads one line input from user, sscanf reads string based parameter input_from, and fscanf reads content from a file whose id is fd. The format_string parameter supports integer (%d, %i, %x, etc), float (%e, %f, etc), character(%c), string(%s) etc. User can find detailed information for construction of a format string by reading C language manual for these functions. Different from C language, these functions do not accept additional parameters to store read values. These functions simply return all the read values in an array. For example, sscanf("3Hello world!", "%d%c%c%s") will returns [3, "H", "e", "llo"] (MFP does not support single character type, so single character is stored as a one-char string).</p>
+</td>
+</tr>
+<tr>
+<td><center>strcat</center></td>
+<td><p>strcat(2...) :</p>
+<p>strcat(string1, string2...) catenates the string parameters and return the new catenated string. Need at least two parameters.</p>
+</td>
+</tr>
+<tr>
+<td><center>strcmp</center></td>
+<td><p>strcmp(6) :</p>
+<p>strcmp(src, dest, src_start, src_end, dest_start, dest_end) compare src string from src_start to src_end to dest string from dest_start to dest_end. It returns 0 if they are equal, positive value if src is greater or negative value if dest is greater. Note that string index is from 0, src_end and dest_end are one passed last selected character. Also note that the last four parameters can be omitted. If omitted, starts by default are 0 and ends by default are string length.</p>
+</td>
+</tr>
+<tr>
+<td><center>strcpy</center></td>
+<td><p>strcpy(6) :</p>
+<p>strcpy(src, dest, src_start, src_end, dest_start, dest_end) returns a string which is the string value copying src string from src_start to src_end to dest string from dest_start to dest_end. Note that string index is from 0, src_end and dest_end are one passed last selected character. Also note that the last four parameters can be omitted. If omitted, starts by default are 0 and ends by default are string length.</p>
+</td>
+</tr>
+<tr>
+<td><center>stricmp</center></td>
+<td><p>stricmp(6) :</p>
+<p>stricmp(src, dest, src_start, src_end, dest_start, dest_end) compare src string from src_start to src_end to dest string from dest_start to dest_end ignoring case of letters. It returns 0 if they are equal, positive value if src is greater or negative value if dest is greater. Note that string index is from 0, src_end and dest_end are one passed last selected character. Also note that the last four parameters can be omitted. If omitted, starts by default are 0 and ends by default are string length.</p>
+</td>
+</tr>
+<tr>
+<td><center>strlen</center></td>
+<td><p>strlen(1) :</p>
+<p>strlen(x) returns length of string x.</p>
+</td>
+</tr>
+<tr>
+<td><center>strsub</center></td>
+<td><p>strsub(2) :</p>
+<p>strsub(str, start) returns substring of string parameter str, the substring is from character start (the first character is character 0) to the end of str.</p>
+<p>strsub(3) :</p>
+<p>strsub(str, start, end) returns substring of string parameter str, the substring is from character start to character end - 1 (the first character is character 0).</p>
+</td>
+</tr>
+<tr>
+<td><center>sum_over</center></td>
+<td><p>sum_over(3) :</p>
+<p>sum_over(x, y, z) calculates the sum of string based expression x over integer value y to z. Note that y and z are also string based value, y should be written like "a=10" (where a is the variable) and z should be like "20". For example, sum_over("x+1", "x=1", "10").</p>
+</td>
+</tr>
+<tr>
+<td><center>system</center></td>
+<td><p>system(1) :</p>
+<p>system(str) runs a system command str and returns the value that the system command returns. Note that the command should be an executable file with its parameters. Like system("dir") in windows cannot be executed because dir is an internal function of cmd.exe. User should use system("cmd /c dir") instead. Also note that at this stage, user can only see any output from the running command but cannot input to the system command. If the command does not exist, throws an exception.</p>
+</td>
+</tr>
+<tr>
+<td><center>tan</center></td>
+<td><p>tan(1) :</p>
+<p>tan(x) returns tan value of x, where x can be a complex number.</p>
+</td>
+</tr>
+<tr>
+<td><center>to_lowercase_string</center></td>
+<td><p>to_lowercase_string(1) :</p>
+<p>to_lowercase_string(x) returns a lower case string output of datum x.</p>
+</td>
+</tr>
+<tr>
+<td><center>to_string</center></td>
+<td><p>to_string(1) :</p>
+<p>to_string(x) returns a string output of datum x.</p>
+</td>
+</tr>
+<tr>
+<td><center>to_uppercase_string</center></td>
+<td><p>to_uppercase_string(1) :</p>
+<p>to_uppercase_string(x) returns a upper case string output of datum x.</p>
+</td>
+</tr>
+<tr>
+<td><center>tostring</center></td>
+<td><p>tostring(1) :</p>
+<p>tostring(x) returns a string output of datum x.</p>
+</td>
+</tr>
+<tr>
+<td><center>trim</center></td>
+<td><p>trim(1) :</p>
+<p>trim(string), trim_left(string) and trim_right(string) trim the white space and the characters whose asci value is less than white space (e.g. \n, \t, \r, \0 etc.) off from the string from one or both sides. In particular, trim removes the characters from both the left and right sides until it sees a character whose asci value is greater than white space on each side; trim_left removes the characters from left side until it sees a character whose asci value is greater than white space; trim_right removes the characters from right side until it sees a character whose asci value is greater than white space. Examples are trim(" \n hello world ") (returns "hello world"), trim_left(" \n hello world ") (returns "hello world ") and trim_right(" \n hello world ") (returns " hello world").</p>
+</td>
+</tr>
+<tr>
+<td><center>trim_left</center></td>
+<td><p>trim_left(1) :</p>
+<p>trim(string), trim_left(string) and trim_right(string) trim the white space and the characters whose asci value is less than white space (e.g. \n, \t, \r, \0 etc.) off from the string from one or both sides. In particular, trim removes the characters from both the left and right sides until it sees a character whose asci value is greater than white space on each side; trim_left removes the characters from left side until it sees a character whose asci value is greater than white space; trim_right removes the characters from right side until it sees a character whose asci value is greater than white space. Examples are trim(" \n hello world ") (returns "hello world"), trim_left(" \n hello world ") (returns "hello world ") and trim_right(" \n hello world ") (returns " hello world").</p>
+</td>
+</tr>
+<tr>
+<td><center>trim_right</center></td>
+<td><p>trim_right(1) :</p>
+<p>trim(string), trim_left(string) and trim_right(string) trim the white space and the characters whose asci value is less than white space (e.g. \n, \t, \r, \0 etc.) off from the string from one or both sides. In particular, trim removes the characters from both the left and right sides until it sees a character whose asci value is greater than white space on each side; trim_left removes the characters from left side until it sees a character whose asci value is greater than white space; trim_right removes the characters from right side until it sees a character whose asci value is greater than white space. Examples are trim(" \n hello world ") (returns "hello world"), trim_left(" \n hello world ") (returns "hello world ") and trim_right(" \n hello world ") (returns " hello world").</p>
+</td>
+</tr>
+<tr>
+<td><center>zeros</center></td>
+<td><p>zeros(1...) :</p>
+<p>Function zeros generates a matrix whose elements are all zero. The dimension of the matrix is determined by the parameters of zeros function, which is either a number of positive integers or a single positive integer list. Note that zeros([]) returns 0.</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

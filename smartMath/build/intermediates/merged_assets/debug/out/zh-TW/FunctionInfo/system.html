@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>程式開發科學計算器幫助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">程式開發科學計算器幫助：系統函數</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函數名</th>
+<th>函數幫助資訊</th>
+</tr>
+<tr>
+<td><center>input</center></td>
+<td><p>input(2) :</p>
+<p>input(prompt,input_type)程式打印出提示符prompt並等待用戶輸入。第二個參數input_type可以省略。如果第二個參數不省略並且其為字串"s"或"S"，用戶的輸入將會被看成一個字串，並且這個程式返回輸入的字串。否則，輸入被當作一個表達式來處理，而這個程式返回表達式的值。如果輸入的不是一個合法的表達式，本程式將再次打印出提示符，等待用戶重新輸入。用戶如果要結束一次輸入需要按回車鍵。如果一次輸入多行，只有第一行會被處理。本程式的一個例子為，用戶運行input("$", "S")，然後在提示符後輸入4 + 3，按回車鍵，本程式將會返回字串"4 + 3"。而如果用戶運行input("%")，然後在提示符後輸入4 + 3，按回車鍵，本程式將會返回7。</p>
+</td>
+</tr>
+<tr>
+<td><center>pause</center></td>
+<td><p>pause(1) :</p>
+<p>pause(message)將暫停當前運行的程式，等待用戶輸入一個回車，然後繼續。字串參數message可以省略。如果不省略，message將作為提示被打印在熒幕上。</p>
+</td>
+</tr>
+<tr>
+<td><center>print</center></td>
+<td><p>print(1) :</p>
+<p>print(x)向輸出端列印任意資料類型x的值。</p>
+</td>
+</tr>
+<tr>
+<td><center>printf</center></td>
+<td><p>printf(1...) :</p>
+<p>printf(format_string, ...)，sprintf(format_string, ...)和fprintf(fd, format_string, ...)和C/C++中的对应函数程式工作方式相似。这些函数程式通过format_string和其后的数值参数构造出一个新的字串，printf将字串打印到标准输出，sprintf将字串作为返回值返回，fprintf则将字串输出到档案号为fd的文本档案。字串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字串（%c和%s）等等。用户可以在C语言的帮助手册中找到format_string的构造方法。例如，printf("Hello world!%f", 3.14)将会打印输出"Hello world!3.140000"，而sprintf("%c%d", "A", 9)则返回"A9"（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>scanf</center></td>
+<td><p>scanf(1) :</p>
+<p>scanf(format_string)，sscanf(input_from, format_string)和fscanf(fd, format_string)和C/C++中的對應函數程式工作方式相似。scanf讀取用戶的一行輸入，sscanf讀取字串input_from，fscanf從檔案（檔案號fd）中讀取檔案內容。字串format_string支持輸入整數（%d、%i、%x等），浮點數（%e、%f等），字符和字串（%c和%s）等等。用戶可以在C語言的幫助文檔中找到format_string的構造方法。但是，和C語言有所不同，MFP中的這些函數程式不需要輸入用於存儲讀取數值的參數。所有的讀取的數值將會保存在一個數組中作為返回值返回。比如，sscanf("3Hello world!", "%d%c%c%s")將會返回[3, "H", "e", "llo"]（註意MFP不支持單一字符數據類型，所以單一的字符將會存儲為一個只包括一個字符的字串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>sleep</center></td>
+<td><p>sleep(1) :</p>
+<p>sleep(x)休眠x毫秒（x必須為正實數），此函數不返回任何值。</p>
+</td>
+</tr>
+<tr>
+<td><center>system</center></td>
+<td><p>system(1) :</p>
+<p>system(str)運行一個系統指令並且返回該系統指令的返回值。註意系統指令必須是一個可執行的檔案以及它的命令參數。由於這個原因，在Windows平臺上，諸如system("dir")無法正確執行是因為dir並非是一個單獨的可執行檔案，而是cmd.exe的一個內部功能。要執行dir指令，用戶需要運行system("cmd /c dir")。還要註意，在現階段，這個函數程式只能將系統指令的輸出打印出來，還無法接受在運行中用戶對於該系統指令的輸入。此外，如果該系統指令不存在，則會拋出異常。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

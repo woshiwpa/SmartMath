@@ -1,0 +1,124 @@
+<html>
+<head>
+<title>可编程科学计算器帮助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">可编程科学计算器帮助：字符串函数</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函数名</th>
+<th>函数帮助信息</th>
+</tr>
+<tr>
+<td><center>conv_ints_to_str</center></td>
+<td><p>conv_ints_to_str(1) :</p>
+<p>conv_ints_to_str(int_or_array)将一个整数或者一组整数转换成一个Unicode字符串。如果只有一个整数，返回的字符串只包含一个Unicode字符，否则，返回字符串的字符数目和int_or_array中的元素数目一致。如果需要转换的整数是负数或者超出了Unicode字符集的定义范围，则被转换成整数0所对应的Unicode字符。示例包括conv_ints_to_str([20320, 22909, 25105, 22909, 22823, 23478, 22909])返回"你好我好大家好"，以及conv_ints_to_str(20320)返回"你"。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv_str_to_ints</center></td>
+<td><p>conv_str_to_ints(1) :</p>
+<p>conv_str_to_ints(str)将一个Unicode字符串转换成一个整数数组。通常，一个Unicode字符对应一个整数（但也有可能对应两个整数，如果该Unicode字符超出了UTF-16字符集的范围。但这种情况很少出现）。如果字符串是空的，则返回一个空数组。一个示例为conv_str_to_ints("你好我好大家好")返回[20320, 22909, 25105, 22909, 22823, 23478, 22909]。</p>
+</td>
+</tr>
+<tr>
+<td><center>split</center></td>
+<td><p>split(2) :</p>
+<p>split(string_input, string_regex)j将字符串string_input按照正则表达式string_regex分割为若干个子字符串并返回包含所有子字符串的数组。用户可以阅读JAVA语言的Pattern类和String.split函数的帮助文档获得更多关于正则表达式使用方法的信息。例子包括split("boo:and:foo", ":")返回["boo", "and", "foo"]以及split("boo:and:foo", "o")返回["b", "", ":and:f"]。</p>
+</td>
+</tr>
+<tr>
+<td><center>sprintf</center></td>
+<td><p>sprintf(1...) :</p>
+<p>printf(format_string, ...)，sprintf(format_string, ...)和fprintf(fd, format_string, ...)和C/C++中的对应函数工作方式相似。这些函数通过format_string和其后的数值参数构造出一个新的字符串，printf函数将字符串打印到标准输出，sprintf函数将字符串作为返回值返回，fprintf函数则将字符串输出到文件号为fd的文本文件。字符串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字符串（%c和%s）等等。用户可以在C语言的帮助文档中找到format_string的构造方法。例如，printf("Hello world!%f", 3.14)将会打印输出"Hello world!3.140000"，而sprintf("%c%d", "A", 9)则返回"A9"（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字符串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>sscanf</center></td>
+<td><p>sscanf(2) :</p>
+<p>scanf(format_string)，sscanf(input_from, format_string)和fscanf(fd, format_string)和C/C++中的对应函数工作方式相似。scanf读取用户的一行输入，sscanf读取字符串input_from，fscanf从文件（文件号fd）中读取文件内容。字符串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字符串（%c和%s）等等。用户可以在C语言的帮助文档中找到format_string的构造方法。但是，和C语言有所不同，MFP中的这些函数不需要输入用于存储读取数值的参数。所有的读取的数值将会保存在一个数组中作为返回值返回。比如，sscanf("3Hello world!", "%d%c%c%s")将会返回[3, "H", "e", "llo"]（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字符串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>strcat</center></td>
+<td><p>strcat(2...) :</p>
+<p>strcat(string1, string2...)将字符串参数顺次连接在一起，返回新的连接好的字符串。本函数需要至少两个参数。</p>
+</td>
+</tr>
+<tr>
+<td><center>strcmp</center></td>
+<td><p>strcmp(6) :</p>
+<p>strcmp(src, dest, src_start, src_end, dest_start, dest_end)比较源字符串src（从src_start到src_end）和目标字符串dest（从dest_start到dest_end）。如果src和dest相等返回0，如果src大于dest返回大于0的值，如果src小于dest返回小于0的值。注意字符串索引从0开始，src_end和dest_end的索引位置为最后一个被选中字符的索引位置加一。另外，最后四个参数可以省略，如果被省略，src_start和dest_start的缺省值为0，src_end和dest_end的缺省值为对应字符串的长度。</p>
+</td>
+</tr>
+<tr>
+<td><center>strcpy</center></td>
+<td><p>strcpy(6) :</p>
+<p>strcpy(src, dest, src_start, src_end, dest_start, dest_end)返回将源字符串src从src_start到src_end拷贝到目标字符串dest从dest_start到dest_end的新字符串值。注意字符串索引从0开始，src_end和dest_end的索引位置为最后一个被选中字符的索引位置加一。另外，最后四个参数可以省略，如果被省略，src_start和dest_start的缺省值为0，src_end和dest_end的缺省值为对应字符串的长度。</p>
+</td>
+</tr>
+<tr>
+<td><center>stricmp</center></td>
+<td><p>stricmp(6) :</p>
+<p>stricmp(src, dest, src_start, src_end, dest_start, dest_end)在忽略字母大小写的前提下比较源字符串src（从src_start到src_end）和目标字符串dest（从dest_start到dest_end）。如果src和dest相等返回0，如果src大于dest返回大于0的值，如果src小于dest返回小于0的值。注意字符串索引从0开始，src_end和dest_end的索引位置为最后一个被选中字符的索引位置加一。另外，最后四个参数可以省略，如果被省略，src_start和dest_start的缺省值为0，src_end和dest_end的缺省值为对应字符串的长度。</p>
+</td>
+</tr>
+<tr>
+<td><center>strlen</center></td>
+<td><p>strlen(1) :</p>
+<p>strlen(x)返回字符串x的长度。</p>
+</td>
+</tr>
+<tr>
+<td><center>strsub</center></td>
+<td><p>strsub(2) :</p>
+<p>strsub(str, start)返回字符串str的子字符串。该子字符串从字符start开始到str的最后一个字符。注意字符串的第一个字符是0号字符。</p>
+<p>strsub(3) :</p>
+<p>strsub(str, start, end)返回字符串str的子字符串。该子字符串从字符start开始到字符end-1。注意字符串的第一个字符是0号字符。</p>
+</td>
+</tr>
+<tr>
+<td><center>to_lowercase_string</center></td>
+<td><p>to_lowercase_string(1) :</p>
+<p>to_lowercase_string(x)返回数据x的打印值（所有的字母均为小写）。</p>
+</td>
+</tr>
+<tr>
+<td><center>to_string</center></td>
+<td><p>to_string(1) :</p>
+<p>to_string(x)返回数据x的打印值。</p>
+</td>
+</tr>
+<tr>
+<td><center>to_uppercase_string</center></td>
+<td><p>to_uppercase_string(1) :</p>
+<p>to_uppercase_string(x)返回数据x的打印值（所有的字母均为大写）。</p>
+</td>
+</tr>
+<tr>
+<td><center>tostring</center></td>
+<td><p>tostring(1) :</p>
+<p>tostring(x) 返回数据x的打印值。</p>
+</td>
+</tr>
+<tr>
+<td><center>trim</center></td>
+<td><p>trim(1) :</p>
+<p>trim(string)，trim_left(string)和trim_right(string)从字符串的两边或者一边删除任何一个ASCI值小于等于空白字符（' '）的字符。具体说来，trim从左右两边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到左边和右边都遇到了一个ASCI值大于空白字符（' '）的字符；trim_left从左边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到遇到了一个ASCI值大于空白字符（' '）的字符；trim_right从右边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到遇到了一个ASCI值大于空白字符（' '）的字符。例子包括trim(" \n hello world ") （返回"hello world"）, trim_left(" \n hello world "）, （返回"hello world "）以及trim_right(" \n hello world ") （返回" hello world")。</p>
+</td>
+</tr>
+<tr>
+<td><center>trim_left</center></td>
+<td><p>trim_left(1) :</p>
+<p>trim(string)，trim_left(string)和trim_right(string)从字符串的两边或者一边删除任何一个ASCI值小于等于空白字符（' '）的字符。具体说来，trim从左右两边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到左边和右边都遇到了一个ASCI值大于空白字符（' '）的字符；trim_left从左边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到遇到了一个ASCI值大于空白字符（' '）的字符；trim_right从右边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到遇到了一个ASCI值大于空白字符（' '）的字符。例子包括trim(" \n hello world ") （返回"hello world"）, trim_left(" \n hello world "）, （返回"hello world "）以及trim_right(" \n hello world ") （返回" hello world")。</p>
+</td>
+</tr>
+<tr>
+<td><center>trim_right</center></td>
+<td><p>trim_right(1) :</p>
+<p>trim(string)，trim_left(string)和trim_right(string)从字符串的两边或者一边删除任何一个ASCI值小于等于空白字符（' '）的字符。具体说来，trim从左右两边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到左边和右边都遇到了一个ASCI值大于空白字符（' '）的字符；trim_left从左边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到遇到了一个ASCI值大于空白字符（' '）的字符；trim_right从右边删除任何一个ASCI值小于等于空白字符（' '）的字符，直到遇到了一个ASCI值大于空白字符（' '）的字符。例子包括trim(" \n hello world ") （返回"hello world"）, trim_left(" \n hello world "）, （返回"hello world "）以及trim_right(" \n hello world ") （返回" hello world")。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

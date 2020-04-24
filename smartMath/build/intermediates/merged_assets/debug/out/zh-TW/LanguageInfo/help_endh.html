@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>程式開發科學計算器幫助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+</head>
+<body style="background-color:white;">
+<h2 style="color:blue">MFP編程語言help和endh語句：</h2>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+在MFP語言中，Help語句是一個幫助資訊塊的開始而endh語句是一個幫助資訊塊的終止。</p>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+注意雖然在一個幫助資訊塊中的語句不會影響函數的運行，當使用者輸入"help 函數名"或者"help 函數名(函數參數個數)"時幫助資訊塊卻能提供必要的幫助資訊。條件是該幫助資訊塊正好位於函數聲明的上方。在以下例子中一個幫助資訊塊位於函數abcd的上方：</p>
+<p style="font-family:verdana;color:black;">
+Help</p>
+<p style="font-family:verdana;color:black;">
+  This line will be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+  @language:</p>
+<p style="font-family:verdana;color:black;">
+  This line will be shown for default system language.</p>
+<p style="font-family:verdana;color:black;">
+  @end</p>
+<p style="font-family:verdana;color:black;">
+&nbsp;&nbsp;&nbsp;&nbsp;This line will also be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+  @language:simplified_chinese</p>
+<p style="font-family:verdana;color:black;">
+  這一行將在系統語言為中文時顯示（This line will be shown when system language is simplified Chinese.）。</p>
+<p style="font-family:verdana;color:black;">
+  @end</p>
+<p style="font-family:verdana;color:black;">
+    This line is also a line for any system language.</p>
+<p style="font-family:verdana;color:black;">
+Endh</p>
+<p style="font-family:verdana;color:black;">
+Function abcd(x, y)</p>
+<p style="font-family:verdana;color:black;">
+Endf</p>
+<p style="font-family:verdana;color:black;">
+。當使用者輸入"help abcd"或者"help abcd(2)"時，如果系統語言是英文並且英文也是預設語言，該使用者將看到如下幫助資訊：</p>
+<p style="font-family:verdana;color:black;">
+  This line will be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+  This line will be shown for default system language.</p>
+<p style="font-family:verdana;color:black;">
+&nbsp;&nbsp;&nbsp;&nbsp;This line will also be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+    This line is also a line for any system language.</p>
+<p style="font-family:verdana;color:black;">
+，如果系統語言是日文但是日文不是預設語言，該使用者將看到如下幫助資訊：</p>
+<p style="font-family:verdana;color:black;">
+  This line will be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+&nbsp;&nbsp;&nbsp;&nbsp;This line will also be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+    This line is also a line for any system language.</p>
+<p style="font-family:verdana;color:black;">
+，如果系統語言是簡體中文但簡體中文不是預設語言，，該使用者將看到如下幫助資訊：</p>
+<p style="font-family:verdana;color:black;">
+  This line will be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+&nbsp;&nbsp;&nbsp;&nbsp;This line will also be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+  這一行將在系統語言為中文時顯示（This line will be shown when system language is simplified Chinese.）。</p>
+<p style="font-family:verdana;color:black;">
+    This line is also a line for any system language.</p>
+<p style="font-family:verdana;color:black;">
+，如果系統語言是簡體中文而且簡體中文是預設語言，，該使用者將看到如下幫助資訊：</p>
+<p style="font-family:verdana;color:black;">
+  This line will be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+  This line will be shown for default system language.</p>
+<p style="font-family:verdana;color:black;">
+&nbsp;&nbsp;&nbsp;&nbsp;This line will also be shown for any system language.</p>
+<p style="font-family:verdana;color:black;">
+  這一行將在系統語言為中文時顯示（This line will be shown when system language is simplified Chinese.）。</p>
+<p style="font-family:verdana;color:black;">
+    This line is also a line for any system language.</p>
+<p style="font-family:verdana;color:black;">
+。</p>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+如果使用者僅僅只是想在一行的末尾加一些註釋，可以使用類似於C++的"//"，在一行中，"//"之後的內容均為註釋。"//"可以位於一行最開始。</p>
+</body>
+</html>

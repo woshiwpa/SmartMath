@@ -1,0 +1,136 @@
+<html>
+<head>
+<title>程式開發科學計算器幫助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+</head>
+<body style="background-color:white;">
+<h2 style="color:blue">MFP程式solve和slvreto語句：</h2>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+Solve語句開始了一個內聯求解代數方程程式塊。Solve語句可以擁有任意個數的變數作為參數。這些變數必須預先聲明。這些作為參數的變數將成為內聯求解代數方程程式塊的待解變數。在以下例子中，程式開發人員首先聲明了三個變數x，y和z，然後開始執行一個內聯求解代數方程程式塊以解出這三個變數的值。</p>
+<p style="font-family:verdana;color:blue;">variable x = 3, y, z = [2, 7]</p>
+<p style="font-family:verdana;color:blue;">solve x, y, z</p>
+<p style="font-family:verdana;color:black;">...</p>
+<p style="font-family:verdana;color:black;">
+待解變數x，y和z的初始值是什麽無關緊要。如果solve程式塊能夠解出x，y或z的值，x，y或z將被賦予這個新值，否則，x，y或z的值將保持為進入solve程式塊之前的值不變。.</p>
+<p style="font-family:verdana;color:black;">
+Slvreto語句結束了一個內聯求解代數方程程式塊。它有一個可選參數。該參數必須為內聯求解代數方程程式塊之前聲明的一個變數。該變數用於儲存每一個待解變數的所有的根。程式開發人員需要調用系統提供的函數程式<a href="../FunctionInfo/solver.html" target="_self">get_num_of_results_sets</a>，<a href="../FunctionInfo/solver.html" target="_self">get_solved_results_set</a>和<a href="../FunctionInfo/solver.html" target="_self">get_variable_results</a>去獲得所有變數的一組解或者某一個變數的所有的根。比如，以下語句都是合法的：</p>
+<p style="font-family:verdana;color:blue;">slvreto</p>
+<p style="font-family:verdana;color:blue;">slvreto all_results</p>
+<p style="font-family:verdana;color:black;">
+以下代碼是一個內聯求解代數方程程式塊的完整示例</p>
+<pre style="font-family:verdana;color:blue;">
+Function testtry2()
+	Variable a, b, c, x, y, z
+	a = 3
+	b = 4
+	c = 5
+	x = 6
+	y = 7
+	z = 8
+	solve x, y, z 	<i style="font-family:verdana;color:green;">//x，y和z為待解變數</i>
+		<i style="font-family:verdana;color:green;">//變數a，b和c也用於本內聯求解代數方程程式塊
+		//但是，a，b和c不是待解變數所以它們的值不會改變。</i>
+		a * x**2 + 7 * log(b) *x + 6.5 == 8 <i style="font-family:verdana;color:green;">//註意必須使用‘==’而不是賦值符號‘=’。</i>
+		y * b - z + 6 == 3.7 + x/(a + 7)
+		y * x + z/(c - 3) == 6 + a + y
+	slvreto a	<i style="font-family:verdana;color:green;">//a用於存放每一個變數的所有的根，可以省略</i>
+	print("\nx == " + x + "\ny == " + y + "\nz == " + z)
+	print("\n解集個數為" + get_num_of_results_sets(a))
+	
+	<i style="font-family:verdana;color:green;">//存在MFP無法解出方程的情況，如果是這樣，
+	//內聯求解代數方程程式塊返回一個空值。</i>
+	if (get_num_of_results_sets(a) > 0)
+		
+		<i style="font-family:verdana;color:green;">//0意味著第一組解，1是第二組解，依次類推。</i>
+		print("\n第二組解是" + get_solved_results_set(a, 1))
+		
+		<i style="font-family:verdana;color:green;">//註意get_variable_results有兩個參數，第一個是solve程式塊返回的包含所有解的變數，
+		//第二個是待解變數在solve語句中的位子。0表示第一個待解變數，1表示第二個，依次類推。
+		//也有可能一些變數能夠解出但另一些變數無法解出，在這種情況下，在solve程式塊返回值
+		//中，沒有解出的變數的值為NULL。</i>
+		print("\ny的所有根為" + get_variable_results(a, 1))
+	else
+		print("\n對不起，無法通過上述方程解出x，y和z的值。")
+	endif
+	return
+Endf
+</pre>
+<p style="font-family:verdana;color:black;">
+在以上例子中，我們可以得到
+</p>
+<p style="font-family:verdana;color:black;">
+x == 0.14781939
+</p>
+<p style="font-family:verdana;color:black;">
+y == 6.84549421
+</p>
+<p style="font-family:verdana;color:black;">
+z == 29.66719489
+</p>
+<p style="font-family:verdana;color:black;">
+解集個數為2
+</p>
+<p style="font-family:verdana;color:black;">
+第二組解是[-3.38250623, -3.22386342, -10.25720306]
+</p>
+<p style="font-family:verdana;color:black;">
+y的所有根為[6.84549421, -3.22386342] 。
+</p>
+<p style="font-family:verdana;color:black;">
+如果想編寫內聯求解代數方程程式塊，程式開發人員需要註意以下事項：
+</p>
+<p style="font-family:verdana;color:black;">
+1. 在內聯求解代數方程程式塊有兩種變數，普通變數和待解變數。待解變數為solve語句的參數。在上述例子裏，x，y和z為待解變數而a，b和c為常規變數。常規變數的值在內聯求解代數方程程式塊中是已知的而待解變數的值是未知的。無論是哪一種變數，都必須在內聯求解代數方程程式塊之前預先聲明。
+</p>
+<p style="font-family:verdana;color:black;">
+2. 在內聯求解代數方程程式塊中的方程表達式必須使用‘==’而不是賦值號‘=’。但是，在內聯求解代數方程程式塊中程式開發人員可以賦值給普通變數和待解變數（雖然不推薦這樣做）。比如：
+</p>
+<pre style="font-family:verdana;color:blue;">
+variable a = 3, b = 4, c = 5, x, y
+solve x, y
+	a * x + y / c == 9
+	c = 7
+	y * b - x * c  == 6
+slvreto
+</pre>
+<p style="font-family:verdana;color:black;">
+在上述例子中，如果我們刪掉c = 7這一行，我們所解的方程為3 * x + y / 5 == 9和y * 4 - x * 5 == 6。但如果我們保留c = 7這一行，我們所解的方程則為3 * x + y / 5 == 9和y * 4 - x * 7 == 6。
+</p>
+<p style="font-family:verdana;color:black;">
+如果程式開發人員給一個待解變數賦值，該待解變數將不再待解而自動轉變為普通變數。這樣做必須非常小心，因為賦值待解變數可能會影響到賦值語句之前的方程式。比如：
+</p>
+<pre style="font-family:verdana;color:blue;">
+variable a = 3, b = 4, c = 5, x, y
+solve x, y
+	a * x + y / c == 9
+	x = 7
+	y * b - x * c  == 6
+slvreto
+</pre>
+<p style="font-family:verdana;color:black;">
+在上述例子中，如果我們刪掉x = 7這一行，我們所解的方程為3 * x + y / 5 == 9和y * 4 - x * 5 == 6。但如果我們保留x = 7這一行，我們實際上解得方程為y * 4 - 7 * 5 == 6。這是由於一開始，MFP語言無法通過第一個方程式解出x或者y，所以，它繼續分析第二個表達式。在這個表達式中，x被賦值為7，這樣一來，x和a，b以及c一樣不再為待解變數，所以，第三個方程式變成了y * 4 - 7 * 5 == 6。我們可以得到y的值為10.25。然後MFP語言回過頭來分析第一個方程式，這時，x，y和a，b以及c一樣都不再為待解變數，該方程式變成3 * 7 + 10.25 / 5 == 9。這是一個比較表達式，返回值為FALSE。所以，我們最後得到的解是x為7而y為10.25。
+</p>
+<p style="font-family:verdana;color:black;">
+3. 從上述例子中可以看到，每一個待解變數的所有的根都存放在內聯求解代數方程程式塊的最後的slvreto語句的返回變數中。在當前的MFP語言中，slvreto語句的返回變數實際上是一個2維矩陣，矩陣的每一列為所有待解變數的一個解集。但是，<b>請註意在後續版本中slvreto語句返回變數的數據結構可能會發生改變</b>。所以，程式開發人員必須使用系統所提供的函數程式，也就是<a href="../FunctionInfo/solver.html" target="_self">get_num_of_results_sets</a>，<a href="../FunctionInfo/solver.html" target="_self">get_solved_results_set</a>和<a href="../FunctionInfo/solver.html" target="_self">get_variable_results</a>等函數程式從slvreto語句的返回變數提取待解變數的根。所有待解變數在第一個解集中的根為待解變數在內聯求解代數方程程式塊運行完畢之後的值，除非在第一個解集中該待解變數無解。
+</p>
+<p style="font-family:verdana;color:black;">
+很顯然，MFP語言內聯求解代數方程的功能並非是萬能的。過於復雜的代數方程（組）無法被MFP語言解出。在這種情況下，slvreto語句返回空值，調用函數程式<a href="../FunctionInfo/solver.html" target="_self">get_num_of_results_sets</a>返回值為0。而待解變數則都保持它們進入solve程式塊之前的原始值不變。還有一種可能是一些待解變數能夠被MFP語言解出，但另外的待解變數的值無法被解出。這時，無法被解出的待解變數保持它們的原始值不變。而如果我們使用函數程式<a href="../FunctionInfo/solver.html" target="_self">get_solved_results_set</a>或者<a href="../FunctionInfo/solver.html" target="_self">get_variable_results</a>從slvreto語句返回值中取回無解變數的值，我們取回的是NULL。
+</p>
+<p style="font-family:verdana;color:black;">
+4. MFP語言內聯求解代數方程所獲得的解集個數為每個待解變數的解的個數的乘積。比如，
+</p>
+<pre style="font-family:verdana;color:blue;">
+variable x, y, z
+solve x, y
+	log(x) == 3
+	y**3 + 3 * y**2 + 3 * y+ 1 == 0
+slvreto z
+</pre>
+<p style="font-family:verdana;color:black;">
+返回3組解集，每一組解集都是[20.08553692318766792368478490971028804779052734375, -1]。這是由於y**3 + 3 * y**2 + 3 * y+ 1 == 0有三個相同的根。這樣一來，雖然log(x) == 3只有一個根，但每一個y的根必須有一個x來對應，所以我們最後得到3組解集。
+</p>
+
+</body>
+</html>

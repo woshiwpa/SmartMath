@@ -1,0 +1,244 @@
+<html>
+<head>
+<title>可编程科学计算器帮助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">可编程科学计算器帮助：文件函数</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函数名</th>
+<th>函数帮助信息</th>
+</tr>
+<tr>
+<td><center>cd</center></td>
+<td><p>cd(1) :</p>
+<p>change_dir(path)（别名cd(path)）将当前路径变为字符串路径path。如果成功，返回true，否则返回false。例子包括change_dir("D:\\Windows") (Windows)和cd("/") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>change_dir</center></td>
+<td><p>change_dir(1) :</p>
+<p>change_dir(path)（别名cd(path)）将当前路径变为字符串路径path。如果成功，返回true，否则返回false。例子包括change_dir("D:\\Windows") (Windows)和cd("/") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>copy_file</center></td>
+<td><p>copy_file(3) :</p>
+<p>copy_file(source, destination, replace_exist)函数拷贝位于字符串source路径的文件或文件夹到位于字符串destination路径的文件或文件夹。如果第三个参数，replace_exist，是true，那么如果目标文件已经存在，它将会被源文件（或者源文件夹中的对应文件）替换。注意第三个参数可以省略，它的缺省值为false。 例子包括copy_file("c:\\temp\\try1", "D:\\", true) (Windows)和copy_file("/mnt/sdcard/testfile.txt", "./testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>create_file</center></td>
+<td><p>create_file(2) :</p>
+<p>create_file(path, is_folder)创建一个文件（如果is_folder是false或者不存在）或者目录（如果if_folder是true）。如果这个基于字符串的路径path的上级目录不存在，不存在的上级目录将会被创建。如果文件能够被创建，这个函数返回true，否则返回false。例子包括create_file("c:\\temp\\try1", true) (Windows)和create_file("testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>delete_file</center></td>
+<td><p>delete_file(2) :</p>
+<p>delete_file(path, delete_children_in_folder)删除一个位于字符串path的文件或者目录。如果是一个目录且第二个参数delete_children_in_folder是true，目录中的所以文件和子目录将会被删除。注意第二个参数可以省略，它的缺省值是false。如果删除成功，本函数返回true，否则返回false。例子包括delete_file("c:\\temp\\try1", true) (Windows)和delete_file("testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>dir</center></td>
+<td><p>dir(1) :</p>
+<p>print_file_list(path) (别名ls(path)或者dir(path))函数和Windows平台上的dir命令以及Linux平台上的ls命令类似。它打印出位于字符串path路径的文件或者目录中的所有子文件和子目录的信息。它返回打印的条目的个数。如果不存在一个文件或者目录对应于path路径，它返回-1。注意参数path是可以省略的。它的缺省值是当前目录。例子包括dir() (Windows)和ls("../testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>fclose</center></td>
+<td><p>fclose(1) :</p>
+<p>fclose(fd)关闭文件号fd所对应的文件。如果文件号不存在，返回-1，否则返回0。</p>
+</td>
+</tr>
+<tr>
+<td><center>feof</center></td>
+<td><p>feof(1) :</p>
+<p>feof(fd)用于确定是否已经到达文件号为fd的读模式文件的末尾。如果是，返回true，否则返回false。如果文件号不合法，抛出异常。</p>
+</td>
+</tr>
+<tr>
+<td><center>fopen</center></td>
+<td><p>fopen(2) :</p>
+<p>fopen(path, mode)打开位于path路径的文件并返回文件号以进行后续读写操作。它和C以及Matlab中的同名函数用法相似。但它仅支持"r"、"a"、"w"、"rb"、"ab"和"wb"六种读写模式。例子包括fopen("C:\\Temp\\Hello.dat", "ab") (Windows)和fopen("./hello.txt", "r") (Android)。</p>
+<p>fopen(3) :</p>
+<p>fopen(path, mode, encoding)用字符编码encoding打开位于path路径的文件并返回文件号以进行后续读写操作。由于只有文本文件支持字符编码，参数mode只能为"r"、"a"和"w"3种读写模式。例子包括fopen("C:\\Temp\\Hello.txt", "a", "LATIN-1") (Windows)和fopen("./hello.txt", "r", "UTF-8") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>fprintf</center></td>
+<td><p>fprintf(2...) :</p>
+<p>printf(format_string, ...)，sprintf(format_string, ...)和fprintf(fd, format_string, ...)和C/C++中的对应函数工作方式相似。这些函数通过format_string和其后的数值参数构造出一个新的字符串，printf函数将字符串打印到标准输出，sprintf函数将字符串作为返回值返回，fprintf函数则将字符串输出到文件号为fd的文本文件。字符串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字符串（%c和%s）等等。用户可以在C语言的帮助文档中找到format_string的构造方法。例如，printf("Hello world!%f", 3.14)将会打印输出"Hello world!3.140000"，而sprintf("%c%d", "A", 9)则返回"A9"（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字符串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>fread</center></td>
+<td><p>fread(4) :</p>
+<p>fread(fd, buffer, from, length)从文件（文件号fd）中读取length个字节数据，并把读出的数据保存在数组buffer中（从buffer的索引from开始保存）。注意from和length必须非负，并且from+length必须不比buffer的容量大。参数from和length可以同时省略。如果它们被省略，意味着fread读取整个buffer容量的字节数据并保存在整个buffer中。Buffer也可以省略，如果buffer省略，fread读取一个字节并返回。如果fread在读取之前发现已经到达文件末尾，则返回-1，否则返回读取字节的个数（如果buffer不省略）。如果文件不存在或非法或不可以访问，将会抛出异常。例子包括fread(1)、fread(2, byte_buffer)以及fread(2, byte_buffer, 3, 7)。</p>
+</td>
+</tr>
+<tr>
+<td><center>freadline</center></td>
+<td><p>freadline(1) :</p>
+<p>freadline(fd)读取文本文件（文件号是fd）的一行。如果freadline在读取之前发现已经到达文件末尾，它返回NULL。否则，它返回基于字符串的这一行的内容，但不包括结尾的换行符。</p>
+</td>
+</tr>
+<tr>
+<td><center>fscanf</center></td>
+<td><p>fscanf(2) :</p>
+<p>scanf(format_string)，sscanf(input_from, format_string)和fscanf(fd, format_string)和C/C++中的对应函数工作方式相似。scanf读取用户的一行输入，sscanf读取字符串input_from，fscanf从文件（文件号fd）中读取文件内容。字符串format_string支持输入整数（%d、%i、%x等），浮点数（%e、%f等），字符和字符串（%c和%s）等等。用户可以在C语言的帮助文档中找到format_string的构造方法。但是，和C语言有所不同，MFP中的这些函数不需要输入用于存储读取数值的参数。所有的读取的数值将会保存在一个数组中作为返回值返回。比如，sscanf("3Hello world!", "%d%c%c%s")将会返回[3, "H", "e", "llo"]（注意MFP不支持单一字符数据类型，所以单一的字符将会存储为一个只包括一个字符的字符串）。</p>
+</td>
+</tr>
+<tr>
+<td><center>fwrite</center></td>
+<td><p>fwrite(4) :</p>
+<p>fwrite(fd, buffer, from, length)向文件（文件号fd）中写入length个字节数据。这些字节数据保存在数组buffer中（从buffer的索引from开始）。注意from和length必须非负，并且from+length必须不比buffer的容量大。参数from和length可以同时省略。如果它们被省略，意味着fwrite写入整个buffer的字节数据。Buffer也可以是一个单独的字节，在这种情况下fwrite仅写入一个字节的数据。如果文件不存在或非法或不可以访问，将会抛出异常。例子包括fwrite(1, 108)、fwrite(2, byte_buffer)以及fwrite(2, byte_buffer, 3, 7)。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_absolute_path</center></td>
+<td><p>get_absolute_path(1) :</p>
+<p>get_absolute_path(fd_or_path)返回文件号fd_or_path（这里fd_or_path是一个整数）或者相对路径为fd_or_path（这里fd_or_path是一个字符串）所对应的文件的绝对路径字符串。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_canonical_path</center></td>
+<td><p>get_canonical_path(1) :</p>
+<p>get_canonical_path(fd_or_path)返回文件号fd_or_path（这里fd_or_path是一个整数）或者相对路径为fd_or_path（这里fd_or_path是一个字符串）所对应的文件的标准路径（不依赖符号链接的绝对路径）字符串。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_last_modified_time</center></td>
+<td><p>get_file_last_modified_time(1) :</p>
+<p>get_file_last_modified_time(path)返回基于字符串路径的path的文件或目录的上一次更改时间。该时间等于从1970年1月1日午夜开始到上一次更改时刻所经历的毫秒数。如果path不存在或者没有访问权限，返回-1。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_path</center></td>
+<td><p>get_file_path(1) :</p>
+<p>get_file_path(fd)返回文件号fd（fd是一个整数）所对应的文件的路径字符串。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_separator</center></td>
+<td><p>get_file_separator(0) :</p>
+<p>get_file_separator()返回路径分割符。在Windows平台下返回字符串"\\"，在Linux和Android平台下返回字符串"/"。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_size</center></td>
+<td><p>get_file_size(1) :</p>
+<p>get_file_size(path)返回基于字符串路径的path的文件大小。如果path不是对应一个文件或者没有权限或者不存在，返回-1。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_working_dir</center></td>
+<td><p>get_working_dir(0) :</p>
+<p>get_working_dir()（别名pwd()）返回基于字符串的当前路径。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_directory</center></td>
+<td><p>is_directory(1) :</p>
+<p>is_directory(path)用于判断位于字符串path的文件（或者目录）是否是一个目录。如果该文件或目录存在并且是一个目录返回true，否则返回false。例子包括is_directory("E:\\") (Windows)和is_directory("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_executable</center></td>
+<td><p>is_file_executable(1) :</p>
+<p>is_file_executable(path)用于判断位于字符串path的文件（或者目录）是否可执行。如果该文件或目录存在并且可执行返回true，否则返回false。例子包括is_file_executable("E:\\") (Windows)和is_file_executable("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_existing</center></td>
+<td><p>is_file_existing(1) :</p>
+<p>is_file_existing(path)用于判断位于字符串path的文件（或者目录）是否存在。如果存在返回true，否则返回false。例子包括is_file_existing("E:\\") (Windows)和is_file_existing("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_hidden</center></td>
+<td><p>is_file_hidden(1) :</p>
+<p>is_file_hidden(path)用于判断位于字符串path的文件（或者目录）是否隐藏。如果该文件或目录存在并且隐藏返回true，否则返回false。例子包括is_file_hidden("E:\\") (Windows)和is_file_hidden("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_normal</center></td>
+<td><p>is_file_normal(1) :</p>
+<p>is_file_normal(path)用于判断位于字符串path的文件（或者目录）是否是一个常规文件而不是目录。如果该文件或目录存在并且是一个常规文件而不是目录返回true，否则返回false。例子包括is_file_normal("E:\\") (Windows)和is_file_normal("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_readable</center></td>
+<td><p>is_file_readable(1) :</p>
+<p>is_file_readable(path)用于判断位于字符串path的文件（或者目录）是否可读。如果该文件或目录存在并且可读返回true，否则返回false。例子包括is_file_readable("E:\\") (Windows)和is_file_readable("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_writable</center></td>
+<td><p>is_file_writable(1) :</p>
+<p>is_file_writable(path)用于判断位于字符串path的文件（或者目录）是否可写。如果该文件或目录存在并且可写返回true，否则返回false。例子包括is_file_writable("E:\\") (Windows)和is_file_writable("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_path_absolute</center></td>
+<td><p>is_path_absolute(1) :</p>
+<p>is_path_absolute(path)用于判断位于字符串path是否是一个绝对路径（也就是不是相对于当前目录的路径）。如果是返回true，否则返回false。例子包括is_path_absolute("E:\\temp") (Windows)和is_path_absolute("Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_path_parent</center></td>
+<td><p>is_path_parent(2) :</p>
+<p>is_path_parent(path1, path2)用于判断位于字符串path1是否是字符串path2的上级目录。如果是返回true，否则返回false。例子包括is_path_parent("E:\\temp", "E:\\temp\\..\\temp\\test") (Windows)和is_path_parent(".", "Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_path_same</center></td>
+<td><p>is_path_same(2) :</p>
+<p>is_path_same(path1, path2)用于判断位于字符串path1是否和字符串path2指向同一条路径。如果是返回true，否则返回false。例子包括is_path_same("E:\\temp", "E:\\temp\\..\\temp\\") (Windows)和is_path_parent("/home/tony/Documents", "Documents/") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>is_symbol_link</center></td>
+<td><p>is_symbol_link(1) :</p>
+<p>is_symbol_link(path)用于判断位于字符串path的文件（或者目录）是否是一个符号链接。如果该文件或目录存在并且是一个符号链接返回true，否则返回false。例子包括is_symbol_link("E:\\") (Windows)和is_symbol_link("/home/tony/Documents/cv.pdf") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>list_files</center></td>
+<td><p>list_files(1) :</p>
+<p>list_files(path)返回位于字符串path路径的目录中的所有子文件或者子目录的名字，或者如果path路径对应的是一个文件，它返回该文件的文件名。如果不存在一个文件或者目录对应于path路径，它返回NULL。注意参数path是可以省略的。它的缺省值是当前目录。例子包括list_files("c:\\temp\\try1") (Windows)和list_files("../testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>ls</center></td>
+<td><p>ls(1) :</p>
+<p>print_file_list(path) (别名ls(path)或者dir(path))函数和Windows平台上的dir命令以及Linux平台上的ls命令类似。它打印出位于字符串path路径的文件或者目录中的所有子文件和子目录的信息。它返回打印的条目的个数。如果不存在一个文件或者目录对应于path路径，它返回-1。注意参数path是可以省略的。它的缺省值是当前目录。例子包括dir() (Windows)和ls("../testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>move_file</center></td>
+<td><p>move_file(3) :</p>
+<p>move_file(source, destination, replace_exist)函数移动位于字符串source路径的文件或文件夹到位于字符串destination路径的文件或位于destination路径的文件夹内（而不是位于destination路径的文件夹本身）。如果第三个参数，replace_exist，是true，那么如果目标文件已经存在，它将会被源文件（或者源文件夹中的对应文件）替换。注意第三个参数可以省略，它的缺省值为false。例子包括move_file("c:\\temp\\try1", "D:\\", true) (Windows)和copy_file("/mnt/sdcard/testfile.txt", "./testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>print_file_list</center></td>
+<td><p>print_file_list(1) :</p>
+<p>print_file_list(path) (别名ls(path)或者dir(path))函数和Windows平台上的dir命令以及Linux平台上的ls命令类似。它打印出位于字符串path路径的文件或者目录中的所有子文件和子目录的信息。它返回打印的条目的个数。如果不存在一个文件或者目录对应于path路径，它返回-1。注意参数path是可以省略的。它的缺省值是当前目录。例子包括dir() (Windows)和ls("../testfile_copy.txt") (Android)。</p>
+</td>
+</tr>
+<tr>
+<td><center>pwd</center></td>
+<td><p>pwd(0) :</p>
+<p>get_working_dir()（别名pwd()）返回基于字符串的当前路径。</p>
+</td>
+</tr>
+<tr>
+<td><center>set_file_last_modified_time</center></td>
+<td><p>set_file_last_modified_time(2) :</p>
+<p>set_file_last_modified_time(path, time)设置基于字符串路径的path的文件或目录的上一次更改时间为time。该时间等于从1970年1月1日午夜开始到上一次更改时刻所经历的毫秒数。如果path不存在或者没有访问权限，返回false，否则返回true。例子包括("C:\\Temp\\Hello\\", 99999999) (Windows)和set_file_last_modified_time("./hello.txt", 1111111111) (Android)。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

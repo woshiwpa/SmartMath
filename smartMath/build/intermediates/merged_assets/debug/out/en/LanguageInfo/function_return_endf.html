@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Scientific Calculator Plus Help</title>
+</head>
+<body style="background-color:white;">
+<h2 style="color:blue">MFP language function, return and endf statements:</h2>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+Function statement in MFP is a start of a function. It should be used as</p>
+<p style="font-family:verdana;color:black;">
+Function name(parameter1, parameter2, parameter3, ...)</p>
+<p style="font-family:verdana;color:black;">
+. Note that "..." here means there are various number of parameters following parameters 1 to 3. If there is no optional parameter, no "..." should be used. For example:</p>
+<p style="font-family:verdana;color:black;">
+Function abcd(para1, para2, para3, para4)</p>
+<p style="font-family:verdana;color:black;">
+is a function named abcd with four parameters, while</p>
+<p style="font-family:verdana;color:black;">
+Function abcdx(para1, para2, para3, para4, ...)</p>
+<p style="font-family:verdana;color:black;">
+is a function with >= 4 parameters. The number of optional parameters (excluding para1 to para4) is stored in a system variable named opt_argc. The first to fourth parameters have defined name which are para1, para2, para3 and para4 respectively. The first optional parameter's value is stored in opt_argv[0] where opt_argv is a system array variable. Similarly, the second optional parameter's value is opt_argv[1], the third is opt_argv[2], etc.</p>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+A function statement can return a value or return nothing. However, user needs not to clare the return variable name in function statement. MFP can automatically process the return.</p>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+Return statement in MFP is used to exit from a function and return a value (which can be any data type) to caller if needed. For example:</p>
+<p style="font-family:verdana;color:black;">
+Return "Hello word"&nbsp;&nbsp;&nbsp;&nbsp;// return a string "Hello word"</p>
+<p style="font-family:verdana;color:black;">
+or</p>
+<p style="font-family:verdana;color:black;">
+Return&nbsp;&nbsp;&nbsp;&nbsp;// return nothing</p>
+<p style="font-family:verdana;color:black;">
+.</p>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+Endf statement is the end of function block. It is simple and does not take any parameter.</p>
+<p style="font-family:verdana;color:black;">
+</p>
+<p style="font-family:verdana;color:black;">
+</p>
+</body>
+</html>

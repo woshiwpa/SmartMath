@@ -1,0 +1,269 @@
+Function conv1d(series_a, series_b)
+	
+	if or(size(size(series_a))[0] != 1, size(size(series_b))[0] != 1)
+		throw "Need 1-D array as input!"
+	endif
+	
+	variable len_a = size(series_a)[0], len_b = size(series_b)[0]
+	variable Output = alloc_array([len_a + len_b - 1])
+	for variable idx = 0 to len_a + len_b - 2 step 1
+		variable idxk, idxj = 0
+		Output[idx] = 0
+		for idxk = idx to 0 step -1
+			if and(idxk < len_a, idxj < len_b)
+				Output[idx] = Output[idx] + series_a[idxk] * series_b[idxj]
+			endif
+			idxj = idxj + 1
+		next
+	next
+	return Output
+Endf
+
+Function conv2d(array_a, array_b)
+	if or(size(size(array_a))[0] != 2, size(size(array_b))[0] != 2)
+		throw "Need 2D array as input!"
+	endif
+	
+	variable Na = size(array_a)[0], Ma = size(array_a)[1], Nb = size(array_b)[0], Mb = size(array_b)[1]
+	variable Output = alloc_array([Na + Nb - 1, Ma + Mb - 1])
+	variable idxI, idxJ, idxM, idxN
+	for idxI = 0 to Na + Nb - 2 step 1
+		for idxJ = 0 to Ma + Mb - 2 step 1
+			variable temp = 0
+			for idxM = 0 to Na - 1 step 1
+				for idxN = 0 to Ma - 1 step 1
+					if and((idxI - idxM) >= 0, (idxI - idxM) < Nb, (idxJ - idxN) >= 0, (idxJ - idxN) < Mb)
+						temp = temp + array_a[idxM][idxN] * array_b[idxI - idxM][idxJ - idxN]
+					endif
+				next
+			next
+			Output[idxI][idxJ] = temp
+		next
+	next
+	return Output
+endf
+
+Help
+	@language:
+	conv(input_a, inputb) returns convolution of input_a and input_b. input_a and input_b can either be two 1-D lists or two 2-D arrays. So far conv function only support 1-D and 2-D convolution. For example, 
+	conv([4,8,2,9],[5,3,8,9,6,7,8]) = [20, 52, 66, 151, 139, 166, 181, 132, 79, 72]
+	conv([[4,8,2,9],[8,6,7,9],[2,2,8,-4]],[[-5,i,7],[0.6,8,4]]) = [[-20, -40 + 4 * i, 18 + 8 * i, 11 + 2 * i, 14 + 9 * i, 63], [-37.6, 6.8 + 8 * i, 102.2 + 6 * i, 50.4 + 7 * i, 129 + 9 * i, 99], [-5.2, 57.6 + 2 * i, 58.2 + 2 * i, 119.4 + 8 * i, 156 - 4 * i, 8], [1.2, 17.2, 28.8, 69.6, 0, -16]]
+	@end
+	@language:simplified_chinese
+	conv(input_a, inputb)返回input_a和input_b的卷积。Input_a和input_b要么都是一维向量，要么都是二维矩阵。当前本函数仅仅支持一维和二维卷积，比如：
+	conv([4,8,2,9],[5,3,8,9,6,7,8]) = [20, 52, 66, 151, 139, 166, 181, 132, 79, 72]
+	conv([[4,8,2,9],[8,6,7,9],[2,2,8,-4]],[[-5,i,7],[0.6,8,4]]) = [[-20, -40 + 4 * i, 18 + 8 * i, 11 + 2 * i, 14 + 9 * i, 63], [-37.6, 6.8 + 8 * i, 102.2 + 6 * i, 50.4 + 7 * i, 129 + 9 * i, 99], [-5.2, 57.6 + 2 * i, 58.2 + 2 * i, 119.4 + 8 * i, 156 - 4 * i, 8], [1.2, 17.2, 28.8, 69.6, 0, -16]]
+	@end
+	@language:traditional_chinese
+	conv(input_a, inputb)返回input_a和input_b的卷積。Input_a和input_b要麼都是一維向量，要麼都是二維矩陣。當前本函數程式僅僅支持一維和二維卷積，比如：
+	conv([4,8,2,9],[5,3,8,9,6,7,8]) = [20, 52, 66, 151, 139, 166, 181, 132, 79, 72]
+	conv([[4,8,2,9],[8,6,7,9],[2,2,8,-4]],[[-5,i,7],[0.6,8,4]]) = [[-20, -40 + 4 * i, 18 + 8 * i, 11 + 2 * i, 14 + 9 * i, 63], [-37.6, 6.8 + 8 * i, 102.2 + 6 * i, 50.4 + 7 * i, 129 + 9 * i, 99], [-5.2, 57.6 + 2 * i, 58.2 + 2 * i, 119.4 + 8 * i, 156 - 4 * i, 8], [1.2, 17.2, 28.8, 69.6, 0, -16]]	
+	@end
+Endh
+Function conv(input_a, input_b)
+	if and(size(size(input_a))[0] == 1, size(size(input_b))[0] == 1)
+		return conv1d(input_a, input_b)
+	elseif and(size(size(input_a))[0] == 2, size(size(input_b))[0] == 2)
+		return conv2d(input_a, input_b)
+	else
+		throw "Only support 1D or 2D convolution!"
+	endif
+endf
+
+Help
+	@language:
+	Function FFT(a, ...) returns fast fourier transform of a series of values, note that the number of values in the series should always be 2 to a positive integer. If a is a list of real or complex numbers, this function should only have one parameter and return fast fourier transform of a[0], a[1], ... a[N-1] where N is the number of values in a. If a is a single value (real or complex), this function should have at least two parameters and return fast fourier transform of a, optional_params[0], optional_params[1], ..., optional_params[number_of_optional_params - 1]. The returned value is always an array.
+	Examples of this function:
+	FFT(1, 2, 3, 4) returns [10, -2 + 2i, -2, -2 - 2i];
+	FFT([1, 2, 3, 4]) also returns [10, -2 + 2i, -2, -2 - 2i].
+	@end
+	@language:simplified_chinese
+	FFT(a, ...)返回对一个数值向量作快速傅立叶变换后的值。注意数值向量中数值的个数必须是2的整数次方。如果参数a是一个数值序列，则本函数只可能拥有一个参数，返回值为对序列a[0], a[1], ..., a[N-1]作快速傅立叶变换的返回值。如果参数a仅仅是一个实数或者虚数，则本函数最少包含2个参数，而返回序列a， optional_params[0]， ...， optional_params[number_of_optional_params - 2]， optional_params[number_of_optional_params - 1]快速傅立叶变换后的值。注意返回值总是一个数组。
+	函数例子：
+	FFT(1, 2, 3, 4)返回[10, -2+2i, -2, -2 - 2i]；
+	FFT([1, 2, 3, 4])同样也是返回[10, -2+2i, -2, -2 - 2i]；
+	@end
+	@language:traditional_chinese
+	FFT(a, ...)返回對一個數值向量作快速傅立葉變換後的值。註意數值向量中數值的個數必須是2的整數次方。如果參數a是一個數值序列，則本函數程式只可能擁有一個參數，返回值為對序列a[0], a[1], ..., a[N-1]作快速傅立葉變換的返回值。如果參數a僅僅是一個實數或者虛數，則本函數程式最少包含2個參數，而返回序列a， optional_params[0]， ...， optional_params[number_of_optional_params - 2]， optional_params[number_of_optional_params - 1]快速傅立葉變換後的值。註意返回值總是一個數組。
+	函數程式例子：
+	FFT(1, 2, 3, 4)返回[10, -2+2i, -2, -2 - 2i]；
+	FFT([1, 2, 3, 4])同樣也是返回[10, -2+2i, -2, -2 - 2i]；
+	@end
+Endh
+function FFT(param, ...)
+	// Fast Fourier Transform, return an array.
+	variable xarray_copy, idx = 0, j, a, b, p = 0, n
+	if size(param) == []	// param is a single real or complex value
+		if opt_argc == 0
+			throw "Need at least two parameters!"
+		endif
+		n = opt_argc + 1
+		xarray_copy = alloc_array([n])
+		xarray_copy[0] = param
+		for idx = 0 to opt_argc - 1 step 1
+			xarray_copy[idx + 1] = opt_argv[idx]
+		next
+	else	// param is a list real or complex values
+		if opt_argc != 0
+			throw "Need only one parameter!"
+		endif
+		// Use xarray_copy to do calculation. Otherwise, xarray may be affected.
+		n = size(param)[0]
+		xarray_copy = alloc_array([n])
+		while idx < n
+			xarray_copy[idx] = param[idx]
+			idx = idx + 1
+		loop
+	endif
+	
+	// Validate n
+	idx = n
+	while idx > 1
+		if mod(idx, 2) != 0
+			throw "n should be 2 to an integer value!"
+		endif
+		idx = idx / 2
+	loop
+	
+	// Bit-reversal Permutation
+	idx = 1
+	while idx < n
+		p = p + 1
+		idx = idx * 2
+	loop
+	
+	for idx = 0 to n - 1 step 1
+		a = idx
+		b = 0
+		for j = 0 to p - 1 step 1
+			b = b * 2 + mod(a, 2)
+			a = a / 2
+		next
+		if b > idx
+			variable tmp = xarray_copy[idx]
+			xarray_copy[idx] = xarray_copy[b]
+			xarray_copy[b] = tmp
+		endif
+		
+	next
+	
+	// calculate conjuated values of the first n/2 roots of pow(1, 1/n)
+	variable roots = pow(1, 1/n, n/2)
+	
+	variable m = 2
+	while m <= n
+		for variable k = 0 to n - 1 step m
+			for j = 0 to m/2 - 1 step 1
+				variable index1 = k + j
+				variable index2 = index1 + m / 2
+				variable t = n * j / m
+				variable tcomplex = (real(roots[t]) - i * image(roots[t])) * xarray_copy[index2], xarray_idx1_original = xarray_copy[index1]
+				xarray_copy[index1] = xarray_idx1_original + tcomplex
+				xarray_copy[index2] = xarray_idx1_original - tcomplex
+			next
+		next
+		m = m * 2
+	loop
+	return xarray_copy
+endf
+
+Help
+	@language:
+	Function IFFT(a, ...) returns inverse fast fourier transform of a series of values, note that the number of values in the series should always be 2 to a positive integer. If a is a list of real or complex numbers, this function should only have one parameter and return inverse fast fourier transform of a[0], a[1], ... a[N-1] where N is the number of values in a. If a is a single value (real or complex), this function should have at least two parameters and return inverse fast fourier transform of a, optional_params[0], optional_params[1], ..., optional_params[number_of_optional_params - 1]. The returned value is always an array.
+	Examples of this function:
+	IFFT(10, -2 + 2i, -2, -2 - 2i) returns [1, 2, 3, 4];
+	IFFT([10, -2 + 2i, -2, -2 - 2i]) returns [1, 2, 3, 4];
+	@end
+	@language:simplified_chinese
+	IFFT(a, ...)返回对一个数值向量作快速傅立叶变换的逆变换后的值。注意数值向量中数值的个数必须是2的整数次方。如果参数a是一个数值序列，则本函数只可能拥有一个参数，返回值为对序列a[0], a[1], ..., a[N-1]作快速傅立叶变换德逆变换的返回值。如果参数a仅仅是一个实数或者虚数，则本函数最少包含2个参数，而返回序列a， optional_params[0]， ...， optional_params[number_of_optional_params - 2]， optional_params[number_of_optional_params - 1]快速傅立叶变换的逆变换后的值。注意返回值总是一个数组。
+	函数例子：
+	IFFT(10, -2 + 2i, -2, -2 - 2i)返回[1, 2, 3, 4]；
+	IFFT([10, -2 + 2i, -2, -2 - 2i])同样也是返回[1, 2, 3, 4]；
+	@end
+	@language:traditional_chinese
+	IFFT(a, ...)返回對一個數值向量作快速傅立葉變換的逆變換後的值。註意數值向量中數值的個數必須是2的整數次方。如果參數a是一個數值序列，則本函數程式只可能擁有一個參數，返回值為對序列a[0], a[1], ..., a[N-1]作快速傅立葉變換的逆變換的返回值。如果參數a僅僅是一個實數或者虛數，則本函數程式最少包含2個參數，而返回序列a， optional_params[0]， ...， optional_params[number_of_optional_params - 2]， optional_params[number_of_optional_params - 1]快速傅立葉變換的逆變換後的值。註意返回值總是一個數組。
+	函數程式例子：
+	IFFT(10, -2 + 2i, -2, -2 - 2i)返回[1, 2, 3, 4]；
+	IFFT([10, -2 + 2i, -2, -2 - 2i])同樣也是返回[1, 2, 3, 4]；
+	@end
+Endh
+function IFFT(param, ...)
+	//invert fast fourier transform, and return value is an array
+	variable xarray_copy, idx = 0, j, a, b, p = 0, n
+	if size(param) == []	// param is a single real or complex value
+		if opt_argc == 0
+			throw "Need at least two parameters!"
+		endif
+		n = opt_argc + 1
+		xarray_copy = alloc_array([n])
+		xarray_copy[0] = param
+		for idx = 0 to opt_argc - 1 step 1
+			xarray_copy[idx + 1] = opt_argv[idx]
+		next
+	else	// param is a list real or complex values
+		if opt_argc != 0
+			throw "Need only one parameter!"
+		endif
+		// Use xarray_copy to do calculation. Otherwise, xarray may be affected.
+		n = size(param)[0]
+		xarray_copy = alloc_array([n])
+		while idx < n
+			xarray_copy[idx] = param[idx]
+			idx = idx + 1
+		loop
+	endif
+	
+	// Validate n
+	idx = n
+	while idx > 1
+		if mod(idx, 2) != 0
+			throw "n should be 2 to an integer value!"
+		endif
+		idx = idx / 2
+	loop
+	
+	// Bit-reversal Permutation
+	idx = 1
+	while idx < n
+		p = p + 1
+		idx = idx * 2
+	loop
+	
+	for idx = 0 to n - 1 step 1
+		a = idx
+		b = 0
+		for j = 0 to p - 1 step 1
+			b = b * 2 + mod(a, 2)
+			a = a / 2
+		next
+		if b > idx
+			variable tmp = xarray_copy[idx]
+			xarray_copy[idx] = xarray_copy[b]
+			xarray_copy[b] = tmp
+		endif
+		
+	next
+	
+	// calculate conjuated values of the first n/2 roots of pow(1, 1/n)
+	variable roots = pow(1, 1/n, n/2)
+	
+	variable m = 2
+	while m <= n
+		for variable k = 0 to n - 1 step m
+			for j = 0 to m/2 - 1 step 1
+				variable index1 = k + j
+				variable index2 = index1 + m / 2
+				variable t = n * j / m
+				variable tcomplex = roots[t] * xarray_copy[index2], xarray_idx1_original = xarray_copy[index1]
+				xarray_copy[index1] = xarray_idx1_original + tcomplex
+				xarray_copy[index2] = xarray_idx1_original - tcomplex
+			next
+		next
+		m = m * 2
+	loop
+	
+	for variable j = 0 to n - 1 step 1
+		xarray_copy[j] = xarray_copy[j] / n
+	next
+	return xarray_copy
+endf

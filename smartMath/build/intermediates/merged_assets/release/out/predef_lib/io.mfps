@@ -1,0 +1,2457 @@
+﻿
+function test_io()
+	test_cd_pwd()
+	test_scanf_printf()
+	test_file_operations()
+endf
+
+function test_cd_pwd()
+	variable var1
+
+	variable current_directory = pwd()
+	printf("Current directory is : " + pwd())
+
+	printf("\nNow move to c:\\windows\\\n")
+	cd ("c:\\windows\\")
+	printf("Current directory is : " + pwd())
+	printf("\nNow move to \n")
+	cd ("")
+	printf("Current directory is : " + pwd())
+	printf("\nNow move to      \n")
+	cd ("   ")
+	printf("Current directory is : " + pwd())
+	printf("\nNow move to 	\n")
+	cd ("	")
+	printf("Current directory is : " + pwd())
+	printf("\nNow move to .\n")
+	cd (".")
+	printf("Current directory is : " + pwd())
+	printf("\nNow move to \\\n")
+	cd ("\\")
+	printf("Current directory is : " + pwd())
+	printf("\nNow move to x:\\\n")
+	cd ("x:\\")
+	printf("Current directory is : " + pwd())
+	printf("\nNow move to \\system32\\\n")
+	cd ("\\system32\\")
+	printf("Current directory is : " + pwd())
+	printf("\nNow restore original directory\n")
+	cd (current_directory)
+	printf("Current directory is : " + pwd())
+endf
+
+function test_cd_pwd_x()
+	variable var1
+
+	variable current_directory = pwd()
+	printf("Current directory is : " + pwd())
+
+	printf("\nNow move to /root\n")
+	cd ("/root")
+	printf("Current directory is : " + pwd())
+	printf("\nNow move to \n")
+	cd ("")
+	printf("Current directory is : " + pwd())
+	printf("\nNow move to      \n")
+	cd ("   ")
+	printf("Current directory is : " + pwd())
+	printf("\nNow move to 	\n")
+	cd ("	")
+	printf("Current directory is : " + pwd())
+	printf("\nNow move to .\n")
+	cd (".")
+	printf("Current directory is : " + pwd())
+	printf("\nNow move to \\\n")
+	cd ("\\")
+	printf("Current directory is : " + pwd())
+	printf("\nNow move to /\n")
+	cd ("/")
+	printf("Current directory is : " + pwd())
+	printf("\nNow move to ..\n")
+	cd ("..")
+	printf("Current directory is : " + pwd())
+	printf("\nNow move to proc\n")
+	cd ("proc")
+	printf("Current directory is : " + pwd())
+	printf("\nNow restore original directory\n")
+	cd (current_directory)
+	printf("Current directory is : " + pwd())
+endf
+	
+function test_scanf_printf()
+	variable var1
+	try
+		print("\n\nsscanf(\"3,4.0\", \"%d,%f\") = ")
+		print(sscanf("3,4.0", "%d,%f"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nscanf(\"3,4.0\", \"%d,  %f\") = ")
+		print(sscanf("3,4.0", "%d,  %f"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3,4.0\", \"%d   ,  %f\") = ")
+		print(sscanf("3,4.0", "%d   ,  %f"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3,4.0\", \"%d   %f\") = ")
+		print(sscanf("3,4.0", "%d   %f"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3 4.0\", \"%d   %f\") = ")
+		print(sscanf("3 4.0", "%d   %f"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3.1  5\", \"%d   %f\") = ")
+		print(sscanf("3.1  5", "%d   %f"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3-1 5\", \"%d   %f\") = ")
+		print(sscanf("3-1 5", "%d   %f"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"-7 5\", \"%d   %f\") = ")
+		print(sscanf("-7 5", "%d   %f"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"+7 5\", \"%d   %f\") = ")
+		print(sscanf("+7 5", "%d   %f"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3.1  5\", \"%d%f\") = ")
+		print(sscanf("3.1  5", "%d%f"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3.1  5\", \"%f%d\") = ")
+		print(sscanf("3.1  5", "%f%d"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3.15\", \"%f%d\") = ")
+		print(sscanf("3.15", "%f%d"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3 0.15\", \"%f %d\") = ")
+		print(sscanf("3 0.15", "%f %d"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3 0.15,-7\", \"%f %d  , %d\") = ")
+		print(sscanf("3 0.15,-7", "%f %d  , %d"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3 0.15,-7\", \"%f %f  , %d\") = ")
+		print(sscanf("3 0.15,-7", "%f %f  , %d"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3 	 0.15,-7\", \"%f %f  , %d\") = ")
+		print(sscanf("3 	 0.15,-7", "%f %f  , %d"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3 0.15,-7\", \"%f 	 %f  , %d\") = ")
+		print(sscanf("3 0.15,-7", "%f 	 %f  , %d"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3 	0.15,-7\", \"%f 	 %f  , %d\") = ")
+		print(sscanf("3 	0.15,-7", "%f 	 %f  , %d"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3	0.15,-7\", \"%f	 %f  , %d\") = ")
+		print(sscanf("3	0.15,-7", "%f	 %f  , %d"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try	
+		print("\n\nsscanf(\"0x3427e52-6058   -3a4effg2.884\",\"%i-%o -%x%c%s\") = ")
+		print(sscanf("0x3427e52-6058   -3a4effg2.884","%i-%o -%x%c%s"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"0x3427e52-6057   -3a4effg2.884	9\",\"%i-%o -%x%c%s\") = ")
+		print(sscanf("0x3427e52-6057   -3a4effg2.884	9","%i-%o -%x%c%s"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+		
+	try
+		print("\n\nsscanf(\"3427e2-6057   -3a4effg2.884	-9.81e-3+0546\",\"%i-%o -%x%c%s %g%i\") = ")
+		print(sscanf("3427e2-6057   -3a4effg2.884	-9.81e-3+0546","%i-%o -%x%c%s %g%i"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3427e2-6057   -3a4effg2.884	-9.81e-3+0546\",\"%e-%o -%x%c%s %g%i\") = ")
+		print(sscanf("3427e2-6057   -3a4effg2.884	-9.81e-3+0546","%e-%o -%x%c%s %g%i"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"-9.81e3+0546\",\"%g%o\") = ")
+		print(sscanf("-9.81e3+0546","%g%o"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"-9.81e3+0546\",\"%g%x\") = ")
+		print(sscanf("-9.81e3+0546","%g%x"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"-9.81e3+0546\",\"%g%u\") = ")
+		print(sscanf("-9.81e3+0546","%g%u"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"aeky237%376\",\"%x%4%d%%%376\") = ")
+		print(sscanf("aeky237%376","%x%4%d%%%376"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"aeky237%376\",\"%x%4%d%%%376%g\") = ")
+		print(sscanf("aeky237%376","%x%4%d%%%376%g"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"aeky237%376\",\"%x%4%d%%%1.76\") = ")
+		print(sscanf("aeky237%376","%x%4%d%%%1.76"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"aeky237%376\",\"%x%4%d%%%1%c6\") = ")
+		print(sscanf("aeky237%376","%x%4%d%%%1%c6"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"aeky237%376\",\"%x%4%d%%%1%c7\") = ")
+		print(sscanf("aeky237%376","%x%4%d%%%1%c7"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"aeky237%376\",\"%x%4%d%%%-1\") = ")
+		print(sscanf("aeky237%376","%x%4%d%%%-1"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"aeky237%376\",\"%x%4%d%%%1\") = ")
+		print(sscanf("aeky237%376","%x%4%d%%%1"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"aeky237%376\",\"%x%4%d%%%0%d\") = ")
+		print(sscanf("aeky237%376","%x%4%d%%%0%d"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"aeky237%376\",\"%x%4%d%%%1%d\") = ")
+		print(sscanf("aeky237%376","%x%4%d%%%1%d"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"aeky237%376\",\"%x%4%d%%%04\") = ")
+		print(sscanf("aeky237%376","%x%4%d%%%04"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+		
+	try
+		print("\n\nsscanf(\"5.71+4\",\"%d.71%f\") = ")
+		print(sscanf("5.71+4","%d.71%f"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+		
+	try
+		print("\n\nsscanf(\"5.71+4\",\"%d%f\") = ")
+		print(sscanf("5.71+4","%d%f"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+		
+	try
+		print("\n\nsscanf(\"5.71+4\",\"%d%f%g\") = ")
+		print(sscanf("5.71+4","%d%f%g"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"\", \"  %s %s%s  \") = ")
+		print(sscanf("", "  %s %s%s  "))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"\",\"%s\") = ")
+		print(sscanf("","%s"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"\", \"5\") = ")
+		print(sscanf("", "5"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"\", \"%d\") = ")
+		print(sscanf("", "%d"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3\", \"%d %s\") = ")
+		print(sscanf("3", "%d %s"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3 \", \"%d %s\") = ")
+		print(sscanf("3 ", "%d %s"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3 \", \"%d%s\") = ")
+		print(sscanf("3 ", "%d%s"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"3.723 adef,6    	  ,l 449 \", \"%s%s%s  %s %s %s %s\") = ")
+		print(sscanf("3.723 adef,6    	  ,l 449 ", "%s%s%s  %s %s %s %s"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"   3 \",\"%s%c\") = ")
+		print(sscanf("   3 ","%s%c"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"   3\",\"%s%c\") = ")
+		print(sscanf("   3","%s%c"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"		k	\",\"%s					%s\") = ")
+		print(sscanf("		k	","%s					%s"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"		k	\",\"%s					%c\") = ")
+		print(sscanf("		k	","%s					%c"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"		k	\",\"%s%c\") = ")
+		print(sscanf("		k	","%s%c"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"ky237%376\",\"%4\") = ")
+		print(sscanf("ky237%376","%4"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"\", \"%30\") = ")
+		print(sscanf("", "%30"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"\", \"%30d\") = ")
+		print(sscanf("", "%30d"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"\", \"%30s\") = ")
+		print(sscanf("", "%30s"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"\", \"%s\") = ")
+		print(sscanf("", "%s"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"\\n\", \"%s%c\") = ")
+		print(sscanf("\n", "%s%c"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"hello , 370\", \"%s%d\") = ")
+		print(sscanf("hello , 370", "%s%d"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"aef9006     48wefj  \\n\", \"%0%5x%i%10c%s%c\") = ")
+		print(sscanf("aef9006     48wefj  \n", "%0%5x%i%10c%s%c"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"aef9006     48wefj  \\n\", \"%0%5x%i%10c%s%s%c\") = ")
+		print(sscanf("aef9006     48wefj  \n", "%0%5x%i%10c%s%s%c"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"aef9006     48xwefj  \\n\", \"%0%15x%i%10c%s%c\") = ")
+		print(sscanf("aef9006     48xwefj  \n", "%0%15x%i%10c%s%c"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"aef9006     048ixwefj  \\n\", \"%0%15x%7i%10c%s%c\") = ")
+		print(sscanf("aef9006     048ixwefj  \n", "%0%15x%7i%10c%s%c"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"aef9006     048ixwefj  \\n\", \"%0%15x%7i%10c%s%c%c%c\") = ")
+		print(sscanf("aef9006     048ixwefj  \n", "%0%15x%7i%10c%s%c%c%c"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsscanf(\"aef9006     048ixwefj  \\n\", \"%0%15x%7i%10c%4s%c%c%c\") = ")
+		print(sscanf("aef9006     048ixwefj  \n", "%0%15x%7i%10c%4s%c%c%c"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsprintf(\"%13.7f,%d,%f,%c,%s,%8d\\n\",3796342e5047, 58.99674, 3893421423456022562340592034, \"hello kitty\", \"hello world\", 98.32421) = ")
+		print(sprintf("%13.7f,%d,%f,%c,%s,%8d\n",3796342e5047, 58.99674, 3893421423456022562340592034, "hello kitty", "hello world", 98.32421))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+
+	try
+		print("\n\nsprintf(\"%3.7f,%d,%f,%c,%s,%8d\\n\",3796342e5047, 58.99674, 3893421423456022562340592034, \" \", \"hello world\", 98.32421) = ")
+		print(sprintf("%3.7f,%d,%f,%c,%s,%8d\n",3796342e5047, 58.99674, 3893421423456022562340592034, " ", "hello world", 98.32421))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsprintf(\"%b%%%o%x   %Ekk\\t%g\\n\", 3.81, -2354315.3242, -98.3312, -321419023643.23456, +32341.14) = ")
+		print(sprintf("%b%%%o%x   %Ekk\t%g\n", 3.81, -2354315.3242, -98.3312, -321419023643.23456, +32341.14))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsprintf(\"3.142523% \") = ")
+		print(sprintf("3.142523% "))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsprintf(\"3.142523%\") = ")
+		print(sprintf("3.142523%"))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nsprintf(\"3.142523 \") = ")
+		print(sprintf("3.142523 "))
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%b%%%o%x   %Ekk\\t%g\\n\", 3.81, -2354315.3242, -98.3312, -321419023643.23456, +32341.14) ->\n")
+		printf("%b%%%o%x   %Ekk\t%g\n", 3.81, -2354315.3242, -98.3312, -321419023643.23456, +32341.14)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%B\", nan) ->\n")
+		printf("%B", nan)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%b\", nan) ->\n")
+		printf("%b", nan)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%b\", 1) ->\n")
+		printf("%b", 1)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%b\", 0) ->\n")
+		printf("%b", 0)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%b\", null) ->\n")
+		printf("%b", null)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%1$13.7f\", 32) ->\n")
+		printf("%1$13.7f", 32)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%1$15d\", - 32.894e53) ->\n")
+		printf("%1$15d", - 32.894e53)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%1$155d\", - 32.894e53) ->\n")
+		printf("%1$155d", - 32.894e53)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%1$b\", - 32.894e53) ->\n")
+		printf("%1$b", - 32.894e53)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%%%31f\", -inf) ->\n")
+		printf("%%%31f", -inf)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%%%31f\", -nan) ->\n")
+		printf("%%%31f", -nan)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%%%31a\", -nan) ->\n")
+		printf("%%%31a", -nan)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%%%31B\", -inf) ->\n")
+		printf("%%%31B", -inf)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%%%31B\", -NaNi) ->\n")
+		printf("%%%31B", -NaNi)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%%%31B\", -NaN) ->\n")
+		printf("%%%31B", -NaN)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%f\",false) ->\n")
+		printf("%f",false)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%f\",true) ->\n")
+		printf("%f",true)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%x\",true) ->\n")
+		printf("%x",true)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%s %s %s %s %s %s\",true, 3.817 -0.04i, 58, [6, 8, [9, \"hello\"]], Nan, -infi) ->\n")
+		printf("%s %s %s %s %s %s",true, 3.817 -0.04i, 58, [6, 8, [9, "hello"]], Nan, -infi)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%x\",false) ->\n")
+		printf("%x",false)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%x\",-37234.562345) ->\n")
+		printf("%x",-37234.562345)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"%o\",-37234.562345) ->\n")
+		printf("%o",-37234.562345)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"ewfasdf%%ew  wds\\n%n%h\\\"hello\\\"\",-37234.562345, 5476234.234) ->\n")
+		printf("ewfasdf%%ew  wds\n%n%h\"hello\"",-37234.562345, 5476234.234)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"afda %k\",-37234.562345) ->\n")
+		printf("afda %k",-37234.562345)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"afda %k\") ->\n")
+		printf("afda %k")
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"afda %18\", 3723) ->\n")
+		printf("afda %18", 3723)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"afda %%18\", 3723) ->\n")
+		printf("afda %%18", 3723)
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+	try
+		print("\n\nprintf(\"afda %%18\") ->\n")
+		printf("afda %%18")
+	catch (var1 = info) == info
+		print("throws an exception")
+	endtry
+
+endf
+
+function test_file_operations()
+	variable var1
+	try
+		variable fd1 = fopen("testfile1.txt", "w+")
+		printf("\n\nfd is %d\n", fd1) 
+		fwrite(fd1, [38, 64, 57, 42])
+		fwrite(fd1, 99)
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nwriting binary file testfile1.txt throws an exception")
+	endtry
+
+	try
+		variable fd1 = fopen("testfile1.txt", "w+b")
+		printf("\n\nfd is %d\n", fd1) 
+		fwrite(fd1, [38, 64, 57, 42])
+		fwrite(fd1, 99)
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nwriting binary file testfile1.txt throws an exception")
+	endtry
+
+	try
+		variable fd1 = fopen("testfile1.txt", "r")
+		print("\n\nfd is " + fd1 + "\n")
+		variable input = fscanf(fd1, "%s")
+		printf("input is %s", input[0])
+		print("\n")
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nreading text file testfile1.txt throws an exception")
+	endtry
+
+	try
+		variable fd1 = fopen("C:\\Program Files (x86)\\Notepad++\\license.txt", "r")
+		print("\n\nfd is " + fd1 + "\n")
+		while (!feof(fd1))
+			variable input = fscanf(fd1, "%s")
+			printf("%s\n", input[0])
+		loop
+		print("Reading C:\\Program Files (x86)\\Notepad++\\license.txt finishes!\n")
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nreading text file testfile1.txt throws an exception")
+	endtry
+
+	try
+		variable fd1 = fopen("testfile1.txt", "a+")
+		printf("\n\nfd is %d\n", fd1) 
+		fprintf(fd1, "\n%8d\t%13.5f  %c%x   %s\n\n",- 8471,91.3423,"2",-234123e3,"Hello world!")
+		fprintf(fd1, "%o\t   \t %b", -274.325e9, 3-3)
+		fprintf(fd1, "\n")
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nappending text file testfile1.txt throws an exception")
+	endtry
+
+	try
+		variable fd1 = fopen("testfile1.txt", "r+")
+		printf("\n\nfd is %d\n", fd1) 
+		variable a1 = fscanf(fd1, "%2%f*%s%d%3%x%f%d-%x%c%c")
+		printf("\nFirst inputs are :\n")
+		print(a1)
+		variable a2 = fscanf(fd1, "")
+		printf("")
+		printf("\nSecond %s%c are :\n", "input", "s")
+		print(a2)
+		variable a3 = fscanf(fd1, "%s%s%c%c%g%c%s")
+		printf("\nThird inputs are : \n")
+		print(a3)
+		variable a4 = fscanf(fd1, "%s%c%d%d")
+		printf("\nFourth inputs are : \n")
+		print(a4)
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nreading text file testfile1.txt throws an exception")
+	endtry
+
+	try
+		variable fd1 = fopen("testfile1.txt", "ba+")
+		printf("\n\nfd is %d\n", fd1) 
+		fwrite(fd1, [100, 9, 0, 10])
+		fwrite(fd1, 76)
+		fwrite(fd1, [44])
+		fwrite(fd1, [10])
+		//fwrite(fd1, [])
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nappending binary file testfile1.txt throws an exception")
+	endtry
+
+	try
+		variable fd1 = fopen("C:\\Program Files (x86)\\Notepad++\\user.manual\\user.html", "r+")
+		print("\n\nfd is " + fd1 + "\n")
+		while (!feof(fd1))
+			variable input = fscanf(fd1, "%s")
+			printf("%s\n", input[0])
+		loop
+		print("Reading C:\\Program Files (x86)\\Notepad++\\user.manual\\user.html finishes!\n")
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nreading text file testfile1.txt throws an exception")
+	endtry
+
+	try
+		variable fd1 = fopen("C:\\Program Files (x86)\\Notepad++\\user.manual\\user.html", "r+b")
+		variable fd2 = fopen("testfile2.txt", "w+b")
+		print("\n\nfd1 is " + fd1 + ", fd2 is " + fd2 + "\n")
+		variable buf = alloc_array([45])
+		while (true)
+			variable readBytes = fread(fd1, buf)
+			printf("Read %d number of bytes:\n", readBytes)
+			if (readBytes > 0)
+				variable buf1 = alloc_array([readBytes])
+				for variable idx = 0 to readBytes - 1 step 1
+					printf("%d ", buf[idx])
+					buf1[idx] = buf[idx]
+				next
+				printf("\n")
+				fwrite(fd2, buf1)
+			else
+				break
+			endif
+			printf("\n")
+		loop
+		print("Reading C:\\Program Files (x86)\\Notepad++\\user.manual\\user.html and writing testfile2.txt in binary mode finishes!\n")
+		fclose(fd1)
+		fclose(fd2)
+	catch (var1 = info) == info
+		print("\n\nreading and writing binary files throw an exception")
+	endtry
+
+	try
+		fopen("c:\\pagefile.sys", "r+b")
+	catch (var1 = info) == info
+		print("\n\nreading C:\\pagefile.sys throw an exception")
+	endtry
+
+	try
+		fopen("c:\\pagefile.sys", "a")
+	catch (var1 = info) == info
+		print("\n\nappending C:\\pagefile.sys throw an exception")
+	endtry
+
+	try
+		fopen("c:\\pagefile.sys", "w+")
+	catch (var1 = info) == info
+		print("\n\nwriting C:\\pagefile.sys throw an exception")
+	endtry
+
+	print("\nNow delete c:\\temp, delete return " + delete_file("c:\\temp", true))
+	print("\nNow create c:\\temp, create return " + create_file("c:\\temp", true))
+
+	copy_file("testfile1.txt", "c:\\temp")
+	cd("c:\\temp")
+	copy_file("C:\\Program Files (x86)\\Notepad++\\user.manual", "")
+
+	variable fd1
+	try
+		fd1 = fopen("documentation\\notepad-user-manual\\commands.html", "wb")
+		fwrite(fd1, 11)
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nwriting commands.html throw an exception")
+		if (fd1 != NULL)
+			fclose(fd1)
+			fclose(fd1)
+		endif
+	endtry
+
+	copy_file("C:\\Program Files (x86)\\Notepad++\\user.manual", "")
+	try
+		variable fd1 = fopen("documentation\\notepad-user-manual\\commands.html", "rb")
+		variable c = fread(fd1)
+		printf("\n Now read commands.html after change:\n")
+		while (c != -1)
+			print(c)
+			c = fread(fd1)
+		loop
+		printf("\n")
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nreading commands.html throw an exception")
+	endtry
+
+	copy_file("C:\\Program Files (x86)\\Notepad++\\user.manual", "", true)
+	try
+		variable fd1 = fopen("documentation\\notepad-user-manual\\commands.html", "r")
+		variable fd2 = fopen("\\commands_windows_format.html", "w")
+		variable fd3 = fopen("\\commands_unix_format.html", "w")
+		delete_file("\\commands_macos_format.html")
+		variable fd4 = fopen("commands_macos_format.html", "a+")
+		variable strLine = freadline(fd1)
+		printf("\n Now read commands.html after change:\n")
+		while (strLine != NULL)
+			//printf("%s\n", strLine)
+			strLine = freadline(fd1)
+			fprintf(fd2, "%s\r\n", strLine)
+			fprintf(fd3, "%s\n", strLine)
+			fprintf(fd4, "%s\r", strLine)
+		loop
+		printf("\n")
+		fclose(fd4)
+		fclose(fd3)
+		fclose(fd2)
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nreading commands.html again throw an exception")
+	endtry
+
+	// there should be a NULL in the end of the file
+	try
+		printf("\n Now read commands.html at different formats:\n")
+		variable fd1 = fopen("commands_windows_format.html", "r")
+		variable fd2 = fopen("C:\\temp\\commands_unix_format.html", "r+")
+		variable fd3 = fopen("C:\\temp\\commands_windows_format.html", "r")
+		variable strLine1 = freadline(fd1)
+		variable strLine2 = freadline(fd2)
+		variable strLine3 = freadline(fd3)
+		while or(strLine1 != NULL, strLine2 != NULL, strLine3 != NULL)
+			if or(strLine1 != strLine2, strLine2 != strLine3)
+				printf("Reading do not match :\nline in windows format file is %s\nline in unix format file is %s\nline in macos format file is %s\n", strLine1, strLine2, strLine3)
+				throw("Something wrong!")
+			endif
+			printf("%s\n", strLine1)
+			strLine1 = freadline(fd1)
+			strLine2 = freadline(fd2)
+			strLine3 = freadline(fd3)
+		loop
+		printf("\n")
+		fclose(fd1)
+		fclose(fd2)
+		fclose(fd3)
+	catch (var1 = info) == info
+		print("\n\nreading commands*.html throw an exception")
+	endtry
+
+	try
+		printf("\n Now mix scanf and readline:\n")
+		variable fd1 = fopen("commands_windows_format.html", "r")
+		printf("\n Now windows format:\n")
+		print(fscanf(fd1, "%s%s%s%4%x") + "\n")
+		printf("%s\n", freadline(fd1))
+		print(fscanf(fd1, "%s%24%2i") + "\n")
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		print(fscanf(fd1, "%88s%x") + "\n")
+		printf("%s\n", freadline(fd1))
+		fclose(fd1)
+		fd1 = fopen("C:\\temp\\commands_unix_format.html", "r+")
+		printf("\n Now unix format:\n")
+		print(fscanf(fd1, "%s%s%s%4%x") + "\n")
+		printf("%s\n", freadline(fd1))
+		print(fscanf(fd1, "%s%24%2i") + "\n")
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		print(fscanf(fd1, "%88s%x") + "\n")
+		printf("%s\n", freadline(fd1))
+		fclose(fd1)
+		fd1 = fopen("C:\\temp\\commands_windows_format.html", "r")
+		printf("\n Now unix format:\n")
+		print(fscanf(fd1, "%s%s%s%4%x") + "\n")
+		printf("%s\n", freadline(fd1))
+		print(fscanf(fd1, "%s%24%2i") + "\n")
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		print(fscanf(fd1, "%88s%x") + "\n")
+		printf("%s\n", freadline(fd1))
+		fclose(fd1)
+
+		fd1 = fopen("commands_windows_format.html", "r")
+		printf("\n Now retest windows format:\n")
+		print(fscanf(fd1, "%s%s%s%6%x") + "\n")
+		printf("%s\n", freadline(fd1))
+		print(fscanf(fd1, "%s%26%2i") + "\n")
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		print(fscanf(fd1, "%88s%x%77%16x") + "\n")
+		printf("%s\n", freadline(fd1))
+		fclose(fd1)
+		fd1 = fopen("C:\\temp\\commands_unix_format.html", "r+")
+		printf("\n Now retest unix format:\n")
+		print(fscanf(fd1, "%s%s%s%6%x") + "\n")
+		printf("%s\n", freadline(fd1))
+		print(fscanf(fd1, "%s%26%2i") + "\n")
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		print(fscanf(fd1, "%88s%x%77%16x") + "\n")
+		printf("%s\n", freadline(fd1))
+		fclose(fd1)
+		fd1 = fopen("C:\\temp\\commands_windows_format.html", "r")
+		printf("\n Now retest unix format:\n")
+		print(fscanf(fd1, "%s%s%s%6%x") + "\n")
+		printf("%s\n", freadline(fd1))
+		print(fscanf(fd1, "%s%26%2i") + "\n")
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		printf("%s\n", freadline(fd1))
+		print(fscanf(fd1, "%88s%x") + "\n")
+		printf("%s\n", freadline(fd1))
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nmix scanf and readline throw an exception")
+	endtry
+
+	try
+		variable fp1 = fopen("testfile1.txt", "w+b")
+		fwrite(fp1, 138)
+		fwrite(fp1, [78, 24, 66, 93, 111])
+		fclose(fp1)
+		fp1 = fopen("testfile1.txt", "a+b")
+		fwrite(fp1, [43, 59, 198, 205, 78, 207, 188, 132, 111], 4, 5)
+		fclose(fp1)
+		fp1 = fopen("testfile1.txt", "r+b")
+		variable buf = alloc_array(19)
+		fread(fp1, buf, 4, 5)
+		printf("buf == %s\n", buf)
+		printf("new char = %d\n", fread(fp1))
+		variable freadreturn = fread(fp1, buf)
+		printf("new read return = %d, buf = %s\n", freadreturn, buf)
+		printf("new char = %d\n", fread(fp1))
+		fclose(fp1)
+	catch (var1 = info) == info
+		print("\n\nmix scanf and readline throw an exception")
+	endtry
+
+	delete_file("index.html")
+	printf("after delete index.html\n")
+	delete_file("c:\\temp\\documentation")
+	printf("after delete non-empty folder\n")
+	delete_file("\\documentation", true)
+	printf("after delete non-empty folder with true\n")
+	delete_file("KKK", true)
+	printf("after delete non-existin file\n")
+	delete_file("c:\\temp\\user.html\\")
+	printf("after delete file written as folder\n")
+	delete_file("c:\\temp\\user.html")
+	printf("after delete file\n")
+	create_file("empty_folder", true)
+	printf("after create empty folder\n")
+	delete_file("empty_folder")
+	printf("after delete empty folder\n")
+
+	delete_file("test", true)
+	create_file("test\\test1\\test2\\test3.txt", true)
+	create_file("test\\test1\\test2\\test4.txt")
+	delete_file("test", true)
+		
+	try
+		print("Now write read non-existing binary file\n")
+		variable fp1 = fopen("test1\\test2\\test3.txt", "a+b")
+		fwrite(fp1, [23, 74, 99])
+		fclose(fp1)
+		fp1 = fopen("test1\\test2\\test3.txt", "r+b")
+		print(fread(fp1) + ", ")
+		print(fread(fp1) + ", ")
+		print(fread(fp1) + ", ")
+		print(fread(fp1) + "\n")
+		fclose(fp1)
+		print("Now write read non-existing text file\n")
+		fp1 = fopen("test1\\test2\\test4.txt", "a")
+		fprintf(fp1, "hello world!\nthanks a lot!")
+		fclose(fp1)
+		fp1 = fopen("test1\\test2\\test4.txt", "r")
+		print(freadline(fp1) + "\n")
+		print(freadline(fp1) + "\n")
+		fclose(fp1)
+	catch (var1 = info) == info
+		print("\n\nmix scanf and readline throw an exception")
+	endtry
+
+	try
+		print("Now test feof in binary mode\n")
+		variable fp1 = fopen("test1\\test2\\test4.txt", "rb")
+		while(!feof(fp1))
+			print(fread(fp1) + " ")
+		loop
+		fclose(fp1)
+	catch (var1 = info) == info
+		print("\n\nmix scanf and readline throw an exception")
+	endtry
+
+	print("\n\nis_path_same(\"\\\\test1\", \"..\\\\.\\\\TemP\\\\TESt1\") ====> ")
+	print(is_path_same("\\test1", "..\\.\\TemP\\TESt1"))
+
+	print("\n\nis_path_same(\"\\\\test1\", \"..\\\\.\\\\TemP1\\\\TESt1\") ====> ")
+	print(is_path_same("\\test1", "..\\.\\TemP1\\TESt1"))
+
+	print("\n\nis_path_same(\"\\\\testt1\", \"..\\\\.\\\\TemP\\\\TEStt1\") ====> ")
+	print(is_path_same("\\testt1", "..\\.\\TemP\\TEStt1"))
+
+	print("\n\nis_path_parent(\"\\\\testt1\", \"..\\\\.\\\\TemP\\\\TEStt1\\\\.\\\\.\\\\abc\") ====> ")
+	print(is_path_parent("\\testt1", "..\\.\\TemP\\TEStt1\\.\\.\\abc"))
+
+	print("\n\nis_path_parent(\"\\\\testt1\", \"..\\\\.\\\\TemP\\\\TEStt1\\\\.\") ====> ")
+	print(is_path_parent("\\testt1", "..\\.\\TemP\\TEStt1\\."))
+
+	print("\n\nis_path_parent(\"\\\\testt1\", \"..\\\\.\\\\TemP\\\\TEStt1\") ====> ")
+	print(is_path_parent("\\testt1", "..\\.\\TemP\\TEStt1"))
+
+	print("\n\nis_path_parent(\"c:\\\\Temp\\\\..\\\\.\\\\TemP\\\\\",\"\\\\Testt1\") ====> ")
+	print(is_path_parent("c:\\Temp\\..\\.\\TemP\\","\\Testt1"))
+
+	print("\n\nis_path_parent(\"c:\\\\Temp\\\\..\\\\.\\\\TemP\\\\\",\"\\\\Test1\") ====> ")
+	print(is_path_parent("c:\\Temp\\..\\.\\TemP\\","\\Test1"))
+
+	delete_file("test2")
+	copy_file("test1",".")
+
+	print("\n\ncopy_file(\"testfile1.txt\", \"test1\") ====> ")
+	print(copy_file("testfile1.txt", "test1"))
+
+	print("\n\ncopy_file(\"testfile1.txt\", \"test1/testfile2.txt\") ====> ")
+	print(copy_file("testfile1.txt", "test1/testfile2.txt"))
+
+	print("\n\ncopy_file(\"testfile1.txt\", \"test1/\\\\\\\\testfile2.txt\", true) ====> ")
+	print(copy_file("testfile1.txt", "test1/\\\\testfile2.txt", true))
+
+	print("\n\ncopy_file(\"testfile1.txt\", \"test1/\\\\\\\\testfile2.txt\") ====> ")
+	print(copy_file("testfile1.txt", "test1/\\\\testfile2.txt"))
+
+	print("\n\ncopy_file(\"testfile1.txt\", \"test1/\\\\\\\\testfile2.txt\", false) ====> ")
+	print(copy_file("testfile1.txt", "test1/\\\\testfile2.txt", false))
+
+	copy_file("user", "user_original")
+
+	print("\n\nmove_file(\"user\", \"test1\") ====> ")
+	print(move_file("user", "test1"))
+
+	copy_file("user_original", "user")
+	print("\n\nmove_file(\"user\", \"user\") ====> ")
+	print(move_file("user", "user"))
+
+	copy_file("user_original", "user")
+	print("\n\nmove_file(\"user\", \"user1\") ====> ")
+	print(move_file("user", "user1"))
+
+	copy_file("user_original", "user")
+	print("\n\ncreate_file(\"\\\\/user/abc/abc.txt\") ====> ")
+	print(create_file("\\/user/abc/abc.txt"))	// this will not work on windows
+	print("\n\ncreate_file(\"\\\\user/abc/abc.txt\") ====> ")
+	print(create_file("\\user/abc/abc.txt"))	// this will work on windows
+
+	print("\n\nmove_file(\"user\", \"user/abc\") ====> ")
+	print(move_file("user", "user/abc"))
+
+	copy_file("user_original", "user")
+	print("\n\nmove_file(\"user\", \"user2/abc\") ====> ")
+	print(move_file("user", "user2/abc"))
+		
+	print("\n\nmove_file(\"commands_windows_format.html\", \"..\\\\temp\\\\user2\\\\abc\") ====> ")
+	print(move_file("commands_windows_format.html", "..\\temp\\user2\\abc"))
+
+	print("\n\nmove_file(\"c:\\\\temp\\\\commands_unix_format.html\", \"..\\\\temp\\\\user2\\\\abc\\\\cmds_unix_format.html\") ====> ")
+	print(move_file("c:\\temp\\commands_unix_format.html", "..\\temp\\user2\\abc\\cmds_unix_format.html"))
+
+	print("\n\nmove_file(\"c:\\\\temp\\\\commands_macos_format.html\", \"\\\\user2\\\\abc\\\\cmds_unix_format.html\") ====> ")
+	print(move_file("c:\\temp\\commands_macos_format.html", "\\user2\\abc\\cmds_unix_format.html"))
+
+	print("\n\nmove_file(\"c:\\\\temp\\\\commands_macos_format.html\", \"\\\\user2\\\\abc\\\\cmds_unix_format.html\", true) ====> ")
+	print(move_file("c:\\temp\\commands_macos_format.html", "\\user2\\abc\\cmds_unix_format.html", true))
+
+	print("\n\nis_path_absolute(\"..\\\\temp\\\\testfile1.txt\") ====> ")
+	print(is_path_absolute("..\\temp\\testfile1.txt"))
+
+	print("\n\nis_path_absolute(\"C:\\\\temp\\\\..\\\\temp\\\\testfile1.txt\") ====> ")
+	print(is_path_absolute("C:\\temp\\..\\temp\\testfile1.txt"))
+
+	print("\n\nis_path_absolute(\"c:\\\\temp\\\\testfile1.txt\") ====> ")
+	print(is_path_absolute("c:\\temp\\testfile1.txt"))
+
+	print("\n\nget_absolute_path(\"..\\\\temp\\\\testfile1.txt\") ====> ")
+	print(get_absolute_path("..\\temp\\testfile1.txt"))
+
+	print("\n\nget_absolute_path(\"C:\\\\temp\\\\..\\\\temp\\\\testfile1.txt\") ====> ")
+	print(get_absolute_path("C:\\temp\\..\\temp\\testfile1.txt"))
+
+	print("\n\nget_absolute_path(\"c:\\\\temp\\\\testfile1.txt\") ====> ")
+	print(get_absolute_path("c:\\temp\\testfile1.txt"))
+
+	print("\n\nget_absolute_path(\"non_exist\\\\..\\\\..\\\\temp\\\\..\\\\temp\\\\tmp_non_exist\\\\..\\\\non_exist\\\\testfile1.txt\") ====> ")
+	print(get_absolute_path("non_exist\\..\\..\\temp\\..\\temp\\tmp_non_exist\\..\\non_exist\\testfile1.txt"))
+
+	print("\n\nget_canonical_path(\"..\\\\temp\\\\testfile1.txt\") ====> ")
+	print(get_canonical_path("..\\temp\\testfile1.txt"))
+
+	print("\n\nget_canonical_path(\"C:\\\\temp\\\\..\\\\temp\\\\testfile1.txt\") ====> ")
+	print(get_canonical_path("C:\\temp\\..\\temp\\testfile1.txt"))
+
+	print("\n\nget_canonical_path(\"c:\\\\temp\\\\testfile1.txt\") ====> ")
+	print(get_canonical_path("c:\\temp\\testfile1.txt"))
+
+	print("\n\nget_canonical_path(\"non_exist\\\\..\\\\..\\\\temp\\\\..\\\\temp\\\\tmp_non_exist\\\\..\\\\non_exist\\\\testfile1.txt\") ====> ")
+	print(get_canonical_path("non_exist\\..\\..\\temp\\..\\temp\\tmp_non_exist\\..\\non_exist\\testfile1.txt"))
+
+	printf("\n\n[] = %s", [    ])
+	printf("\n\nsize([]) = %s", size([ ]))
+	printf("\n\nalloc_array([0]) = %s", alloc_array([0]))
+	try
+		print("\n\n[][0] = " + [][0])
+	catch (var1 = info) == info
+		print("\n\n[][0] throws an exception")
+	endtry
+
+	try
+		variable fp1 = fopen("testfile1.txt","w+b")
+		fwrite(fp1, [])
+		fclose(fp1)
+		fp1 = fopen("testfile1.txt","a+b")
+		fwrite(fp1, [])
+		fwrite(fp1,[27, 68, 99, 42, 77, 38],1,5)
+		fclose(fp1)
+		fp1 = fopen("testfile1.txt","r+b")
+		variable var=[]
+		print("\n\nfread(1, var) = " + fread(1, var))
+		var = [NULL,NAN,NULL]
+		print("\n\nfread(1, var) = " + fread(1, var))
+		print("\n\nvar = " + var)
+		fclose(fp1)
+	catch (var1 = info) == info
+		print("\n\nTesting file read write [] throws an exception")
+	endtry
+
+	print("\n\nlist_files() = " + list_files())
+
+	print("\n\nlist_files(\"  \") = " + list_files("  "))
+
+	print("\n\nlist_files(\" . \") = " + list_files(" . "))
+
+	print("\n\nlist_files(\"C:\") = " + list_files("C:"))
+
+	print("\n\nlist_files(\"C:\\\\\") = " + list_files("C:\\"))
+
+	print("\n\nlist_files(\"\\\\\\\\tempstore-syd\") = " + list_files("\\\\tempstore-syd"))
+
+	print("\n\nlist_files(\" .. \") = " + list_files(" .. "))
+
+	print("\n\nlist_files(\"\\\\\") = " + list_files("\\"))
+
+	print("\n\nlist_files(\"..\\\\temp\\\\testfile1.txt\") = " + list_files("..\\temp\\testfile1.txt"))
+
+	print("\n\nlist_files(\"..\\\\temppp\\\\testfile1.txt\") = " + list_files("..\\temppp\\testfile1.txt"))
+
+	print("\n\nget_file_size(\"c:\") = " + get_file_size("c:"))
+
+	print("\n\nget_file_size(\"c:\\\\\") = " + get_file_size("c:\\"))
+
+	print("\n\nget_file_size(\"c:\\\\pagefile.sys\") = " + get_file_size("c:\\pagefile.sys"))
+
+	print("\n\nget_file_size(\".\\\\testfile1.txt\") = " + get_file_size(".\\testfile1.txt"))
+
+	print("\n\nget_file_size(\".\\\\testfile11.txt\") = " + get_file_size(".\\testfile11.txt"))
+
+	print("\n\nget_file_size(\".\\\\\") = " + get_file_size(".\\"))
+
+	print("\n\nNow test ls()\n")
+
+	print("\n\nls() = " + ls())
+
+	print("\n\nNow test dir(\"c:\")\n")
+
+	print("\n\ndir(\"c:\") = " + dir("c:") + "\n")
+
+	print("\n\nNow test dir(\"c:\\\\\")\n")
+
+	print("\n\ndir(\"c:\\\\\") = " + dir("c:\\") + "\n")
+
+	print("\n\ndir(\" \") = " + dir(" ") + "\n")
+
+	print("\n\ndir(\"..\\\\temp \") = " + dir("..\\temp ") + "\n")
+
+	delete_file("empty_folder", true)
+	printf("\n\nBefore create empty folder:")
+
+	print("\n\ndir(\" empty_folder \") = " + dir(" empty_folder ") + "\n")
+
+	print("\n\ndir(\"empty_folder \") = " + dir("empty_folder ") + "\n")
+
+	print("\n\nlist_files(\" empty_folder \") = " + list_files(" empty_folder "))
+
+	print("\n\nlist_files(\"empty_folder \") = " + list_files("empty_folder "))
+
+	create_file("empty_folder", true)
+	printf("\n\nAfter create empty folder:")
+
+	print("\n\ndir(\" empty_folder \") = " + dir(" empty_folder ") + "\n")
+
+	print("\n\ndir(\"empty_folder \") = " + dir("empty_folder ") + "\n")
+
+	print("\n\nlist_files(\" empty_folder \") = " + list_files(" empty_folder "))
+
+	print("\n\nlist_files(\"empty_folder \") = " + list_files("empty_folder "))
+
+	print("\n\nget_file_last_modified_time(\"testfile1.txt\") = " + get_file_last_modified_time("testfile1.txt"))
+
+	print("\n\nset_file_last_modified_time(\"testfile1.txt\", 0) = " + set_file_last_modified_time("testfile1.txt", 0))
+
+	print("\n\nget_file_last_modified_time(\"..\\\\temp\\\\testfile1.txt\") = " + get_file_last_modified_time("..\\temp\\testfile1.txt"))
+
+	print("\n\nset_file_last_modified_time(\"..\\\\temp\\\\testfile1.txt\", 1000000000000) = " + set_file_last_modified_time("..\\temp\\testfile1.txt", 1000000000000))
+
+	print("\n\nget_file_last_modified_time(\"c:\\\\temp\\\\..\\\\temp\\\\testfile1.txt\") = " + get_file_last_modified_time("c:\\temp\\..\\temp\\testfile1.txt"))
+
+	print("\n\nset_file_last_modified_time(\"c:\\\\temp\\\\..\\\\temp\\\\testfile1.txt\", -1) = " + set_file_last_modified_time("c:\\temp\\..\\temp\\testfile1.txt", -1))
+
+	sleep(3000)
+
+	print("\n\nget_file_last_modified_time(\"c:\\\\temp\\\\testfile1.txt\") = " + get_file_last_modified_time("c:\\temp\\testfile1.txt"))
+
+	print("\n\nset_file_last_modified_time(\"c:\\\\temp\\\\testfile1.txt\") = " + set_file_last_modified_time("c:\\temp\\testfile1.txt"))
+
+	print("\n\nget_file_last_modified_time(\"..\") = " + get_file_last_modified_time(".."))
+
+	print("\n\nset_file_last_modified_time(\"..\", 1100000000000) = " + set_file_last_modified_time("..", 1100000000000))
+
+	print("\n\nget_file_last_modified_time(\"c:\\\\\") = " + get_file_last_modified_time("c:\\"))
+
+	print("\n\nget_file_last_modified_time(\".\") = " + get_file_last_modified_time("."))
+
+	print("\n\nset_file_last_modified_time(\".\", 1200000000000) = " + set_file_last_modified_time(".", 1200000000000))
+
+	print("\n\nget_file_last_modified_time(\"c:\\\\temp\") = " + get_file_last_modified_time("c:\\temp"))
+
+	print("\n\ncd(\"c:\\\\\") = " + cd("c:\\"))
+	print("\n\npwd() = " + pwd())
+	print("\n\ncd(\"..\\\\\") = " + cd("..\\"))
+	print("\n\npwd() = " + pwd())
+	print("\n\ncd(\"c:\\\\temp\") = " + cd("c:\\temp"))
+	print("\n\npwd() = " + pwd())
+
+	try
+		print("Now test get_file_path\n")
+		variable fp1 = fopen("testfile1.txt", "rb")
+		print("\n\ntestfile1.txt's path is " + get_file_path(fp1))
+		fclose(fp1)
+		fp1 = fopen("..\\temp\\testfile1.txt", "w+")
+		print("\n\n..\\\\temp\\\\testfile1.txt's path is " + get_file_path(fp1))
+		fclose(fp1)
+		fp1 = fopen("c:\\temp\\..\\temp\\testfile1.txt", "a+b")
+		print("\n\nC:\\\\temp\\\\..\\\\temp\\\\testfile1.txt's path is " + get_file_path(fp1))
+		fclose(fp1)
+		fp1 = fopen("c:\\temp\\testfile1.txt", "a")
+		print("\n\nC:\\\\temp\\\\testfile1.txt's path is " + get_file_path(fp1))
+		fclose(fp1)
+	catch (var1 = info) == info
+		print("\n\ntest get_file_path throw an exception")
+	endtry
+
+	print("\n\nis_directory(\".\") = " + is_directory("."))
+
+	print("\n\nis_directory(\"..\\\\temp\") = " + is_directory("..\\temp"))
+
+	print("\n\nis_directory(\"..\\\\temp\\\\testfile1\") = " + is_directory("..\\temp\\testfile1"))
+
+	print("\n\nis_directory(\"c:\") = " + is_directory("c:"))
+
+	print("\n\nis_directory(\"c:\\\\\") = " + is_directory("c:\\"))
+
+	print("\n\nis_directory(\"c:\\\\temp\\\\\") = " + is_directory("c:\\temp\\"))
+
+	print("\n\nis_directory(\"c:\\\\temp\\\\testfile1.txt\") = " + is_directory("c:\\temp\\testfile1.txt"))
+
+	print("\n\nis_directory(\"..\\\\temp\\\\testfile1.txt\") = " + is_directory("..\\temp\\testfile1.txt"))
+
+	print("\n\nis_file_existing(\".\") = " + is_file_existing("."))
+
+	print("\n\nis_file_existing(\"..\\\\temp\") = " + is_file_existing("..\\temp"))
+
+	print("\n\nis_file_existing(\"..\\\\temp\\\\testfile1\") = " + is_file_existing("..\\temp\\testfile1"))
+
+	print("\n\nis_file_existing(\"c:\") = " + is_file_existing("c:"))
+
+	print("\n\nis_file_existing(\"c:\\\\\") = " + is_file_existing("c:\\"))
+
+	print("\n\nis_file_existing(\"c:\\\\temp\\\\\") = " + is_file_existing("c:\\temp\\"))
+
+	print("\n\nis_file_existing(\"c:\\\\temp\\\\testfile1.txt\") = " + is_file_existing("c:\\temp\\testfile1.txt"))
+
+	print("\n\nis_file_existing(\"..\\\\temp\\\\testfile1.txt\") = " + is_file_existing("..\\temp\\testfile1.txt"))
+
+	print("\n\nis_file_existing(\"\\\\\\\\tempstore-syd\") = " + is_file_existing("\\\\tempstore-syd"))
+
+	print("\n\nis_file_readable(\".\") = " + is_file_readable("."))
+
+	print("\n\nis_file_readable(\"..\\\\temp\") = " + is_file_readable("..\\temp"))
+
+	print("\n\nis_file_readable(\"..\\\\temp\\\\testfile1\") = " + is_file_readable("..\\temp\\testfile1"))
+
+	print("\n\nis_file_readable(\"c:\") = " + is_file_readable("c:"))
+
+	print("\n\nis_file_readable(\"c:\\\\\") = " + is_file_readable("c:\\"))
+
+	print("\n\nis_file_readable(\"c:\\\\temp\\\\\") = " + is_file_readable("c:\\temp\\"))
+
+	print("\n\nis_file_readable(\"c:\\\\temp\\\\testfile1.txt\") = " + is_file_readable("c:\\temp\\testfile1.txt"))
+
+	print("\n\nis_file_readable(\"..\\\\temp\\\\testfile1.txt\") = " + is_file_readable("..\\temp\\testfile1.txt"))
+
+	print("\n\nis_file_writable(\".\") = " + is_file_writable("."))
+
+	print("\n\nis_file_writable(\"..\\\\temp\") = " + is_file_writable("..\\temp"))
+
+	print("\n\nis_file_writable(\"..\\\\temp\\\\testfile1\") = " + is_file_writable("..\\temp\\testfile1"))
+
+	print("\n\nis_file_writable(\"c:\") = " + is_file_writable("c:"))
+
+	print("\n\nis_file_writable(\"c:\\\\\") = " + is_file_writable("c:\\"))
+
+	print("\n\nis_file_writable(\"c:\\\\temp\\\\\") = " + is_file_writable("c:\\temp\\"))
+
+	print("\n\nis_file_writable(\"c:\\\\temp\\\\testfile1.txt\") = " + is_file_writable("c:\\temp\\testfile1.txt"))
+
+	print("\n\nis_file_writable(\"..\\\\temp\\\\testfile1.txt\") = " + is_file_writable("..\\temp\\testfile1.txt"))
+
+	print("\n\nis_file_executable(\".\") = " + is_file_executable("."))
+
+	print("\n\nis_file_executable(\"..\\\\temp\") = " + is_file_executable("..\\temp"))
+
+	print("\n\nis_file_executable(\"..\\\\temp\\\\testfile1\") = " + is_file_executable("..\\temp\\testfile1"))
+
+	print("\n\nis_file_executable(\"c:\") = " + is_file_executable("c:"))
+
+	print("\n\nis_file_executable(\"c:\\\\\") = " + is_file_executable("c:\\"))
+
+	print("\n\nis_file_executable(\"c:\\\\temp\\\\\") = " + is_file_executable("c:\\temp\\"))
+
+	print("\n\nis_file_executable(\"c:\\\\temp\\\\testfile1.txt\") = " + is_file_executable("c:\\temp\\testfile1.txt"))
+
+	print("\n\nis_file_executable(\"..\\\\temp\\\\testfile1.txt\") = " + is_file_executable("..\\temp\\testfile1.txt"))
+
+	print("\n\nis_file_normal(\".\") = " + is_file_normal("."))
+
+	print("\n\nis_file_normal(\"..\\\\temp\") = " + is_file_normal("..\\temp"))
+
+	print("\n\nis_file_normal(\"..\\\\temp\\\\testfile1\") = " + is_file_normal("..\\temp\\testfile1"))
+
+	print("\n\nis_file_normal(\"c:\") = " + is_file_normal("c:"))
+
+	print("\n\nis_file_normal(\"c:\\\\\") = " + is_file_normal("c:\\"))
+
+	print("\n\nis_file_normal(\"c:\\\\temp\\\\\") = " + is_file_normal("c:\\temp\\"))
+
+	print("\n\nis_file_normal(\"c:\\\\temp\\\\testfile1.txt\") = " + is_file_normal("c:\\temp\\testfile1.txt"))
+
+	print("\n\nis_file_normal(\"..\\\\temp\\\\testfile1.txt\") = " + is_file_normal("..\\temp\\testfile1.txt"))
+
+	print("\n\nis_file_hidden(\".\") = " + is_file_hidden("."))
+
+	print("\n\nis_file_hidden(\"..\\\\temp\") = " + is_file_hidden("..\\temp"))
+
+	print("\n\nis_file_hidden(\"..\\\\temp\\\\testfile1\") = " + is_file_hidden("..\\temp\\testfile1"))
+
+	print("\n\nis_file_hidden(\"c:\") = " + is_file_hidden("c:"))
+
+	print("\n\nis_file_hidden(\"c:\\\\\") = " + is_file_hidden("c:\\"))
+
+	print("\n\nis_file_hidden(\"c:\\\\temp\\\\\") = " + is_file_hidden("c:\\temp\\"))
+
+	print("\n\nis_file_hidden(\"c:\\\\temp\\\\testfile1.txt\") = " + is_file_hidden("c:\\temp\\testfile1.txt"))
+
+	print("\n\nis_file_hidden(\"..\\\\temp\\\\testfile1.txt\") = " + is_file_hidden("..\\temp\\testfile1.txt"))
+
+	print("\n\nis_file_hidden(\"c:\\\\pagefile.sys\") = " + is_file_hidden("c:\\pagefile.sys"))
+
+	print("\n\nis_file_normal(\"c:\\\\pagefile.sys\") = " + is_file_normal("c:\\pagefile.sys"))
+
+	print("\n\nis_file_readable(\"c:\\\\pagefile.sys\") = " + is_file_readable("c:\\pagefile.sys"))
+
+	print("\n\nis_file_writable(\"c:\\\\pagefile.sys\") = " + is_file_writable("c:\\pagefile.sys"))
+
+	print("\n\nis_file_executable(\"c:\\\\pagefile.sys\") = " + is_file_executable("c:\\pagefile.sys"))
+	
+	print("\n\nis_symbol_link(\".\") = " + is_symbol_link("."))
+
+	print("\n\nis_symbol_link(\"..\") = " + is_symbol_link(".."))
+
+	print("\n\nis_symbol_link(\"\") = " + is_symbol_link(""))
+
+	print("\n\nis_symbol_link(\" \") = " + is_symbol_link(" "))
+
+	print("\n\nis_symbol_link(\"C:\\\") = " + is_symbol_link("C:\\"))
+
+	print("\n\nis_symbol_link(\"C:\") = " + is_symbol_link("C:"))
+
+	print("\n\nis_symbol_link(\"C:\\temp\") = " + is_symbol_link("C:\\temp"))
+
+	print("\n\nis_symbol_link(\"C:\\temp\\testfile1.txt\") = " + is_symbol_link("C:\\temp\\testfile1.txt"))
+	
+	variable fpTest = fopen("testfile1.txt","ab")
+	print("\n\ntestfile1.txt's full path = " + get_file_path(fpTest))
+	print("\n\ntestfile1.txt's absolute path = " + get_absolute_path(fpTest))
+	print("\n\ntestfile1.txt's canonical path = " + get_canonical_path(fpTest))
+	print("\n\nNow change dir to c:\\windows")
+	cd("c:\\windows")
+	print("\n\nAfter change dir, testfile1.txt's full path = " + get_file_path(fpTest))
+	print("\n\nAfter change dir, testfile1.txt's absolute path = " + get_absolute_path(fpTest))
+	print("\n\nAfter change dir, testfile1.txt's canonical path = " + get_canonical_path(fpTest))
+	
+endf
+
+function test_file_operations_x(myFolder)
+	variable var1
+
+	delete_file("./temp", true)
+	create_file("./temp", true)
+	
+	cd("temp")
+	
+	try
+		variable fd1 = fopen("testfile1.txt", "w+")
+		printf("\n\nfd is %d\n", fd1) 
+		fwrite(fd1, [38, 64, 57, 42])
+		fwrite(fd1, 99)
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nwriting binary file testfile1.txt throws an exception")
+	endtry
+
+	try
+		variable fd1 = fopen("testfile1.txt", "w+b")
+		printf("\n\nfd is %d\n", fd1) 
+		fwrite(fd1, [38, 64, 57, 42])
+		fwrite(fd1, 99)
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nwriting binary file testfile1.txt throws an exception")
+	endtry
+
+	try
+		variable fd1 = fopen("testfile1.txt", "r")
+		print("\n\nfd is " + fd1 + "\n")
+		variable input = fscanf(fd1, "%s")
+		printf("input is %s", input[0])
+		print("\n")
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nreading text file testfile1.txt throws an exception")
+	endtry
+
+	try
+		variable fd1 = fopen("testfile1.txt", "a+")
+		printf("\n\nfd is %d\n", fd1) 
+		fprintf(fd1, "\n%8d\t%13.5f  %c%x   %s\n\n",- 8471,91.3423,"2",-234123e3,"Hello world!")
+		fprintf(fd1, "%o\t   \t %b", -274.325e9, 3-3)
+		fprintf(fd1, "\n")
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nappending text file testfile1.txt throws an exception")
+	endtry
+
+	try
+		variable fd1 = fopen("testfile1.txt", "r+")
+		printf("\n\nfd is %d\n", fd1) 
+		variable a1 = fscanf(fd1, "%2%f*%s%d%3%x%f%d-%x%c%c")
+		printf("\nFirst inputs are :\n")
+		print(a1)
+		variable a2 = fscanf(fd1, "")
+		printf("")
+		printf("\nSecond %s%c are :\n", "input", "s")
+		print(a2)
+		variable a3 = fscanf(fd1, "%s%s%c%c%g%c%s")
+		printf("\nThird inputs are : \n")
+		print(a3)
+		variable a4 = fscanf(fd1, "%s%c%d%d")
+		printf("\nFourth inputs are : \n")
+		print(a4)
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nreading text file testfile1.txt throws an exception")
+	endtry
+
+	try
+		variable fd1 = fopen("testfile1.txt", "ba+")
+		printf("\n\nfd is %d\n", fd1) 
+		fwrite(fd1, [100, 9, 0, 10])
+		fwrite(fd1, 76)
+		fwrite(fd1, [44])
+		fwrite(fd1, [10])
+		//fwrite(fd1, [])
+		fclose(fd1)
+	catch (var1 = info) == info
+		print("\n\nappending binary file testfile1.txt throws an exception")
+	endtry
+
+	delete_file("test", true)
+	print("\n\nafter delete test, list_files(\"test\") = " + list_files("test"))
+	create_file("test/test1/test2/test3.txt", true)
+	print("\n\nafter create test/test1/test2/test3.txt, list_files(\"test/test1/test2\") = " + list_files("test/test1/test2"))
+	create_file("test/test1/test2/test4.txt")
+	print("\n\nafter create test/test1/test2/test4.txt, list_files(\"test/test1/test2/\") = " + list_files("test/test1/test2/"))
+	delete_file("test", true)
+	print("\n\nafter delete test, list_files(\"test\") = " + list_files("test"))
+
+	pause("\nNow create a symbol link in temp folder linking to ../Documents please. Press enter after it is done\n")
+	print("\n\nis_path_absolute(\"docs\") = " + is_path_absolute("docs"))
+	
+	print("\n\nget_absolute_path(\"docs\") = " + get_absolute_path("docs"))
+
+	print("\n\nget_absolute_path(\"docs/JMFP/assets\") = " + get_absolute_path("docs/JMFP/assets"))
+
+	print("\n\nget_canonical_path(\"docs/JMFP/assets\") = " + get_canonical_path("docs/JMFP/assets"))
+
+	print("\n\nis_path_parent(\"~/Documents\", \"docs/JMFP/assets\") = " + is_path_parent("~/Documents", "docs/JMFP/assets"))
+
+	print("\n\nget_canonical_path(\"~/Documents\") = " + get_canonical_path("~/Documents"))
+
+	print("\n\nis_path_parent(\"../Documents\", \"docs/JMFP/assets\") = " + is_path_parent("../Documents", "docs/JMFP/assets"))
+
+	print("\n\nis_file_readable(\"../Documents\") = " + is_file_readable("../Documents"))
+	print("\n\nis_file_writable(\"../Documents\") = " + is_file_writable("../Documents"))
+	print("\n\nis_file_executable(\"../Documents\") = " + is_file_executable("../Documents"))
+	print("\n\nis_directory(\"../Documents\") = " + is_directory("../Documents"))
+	print("\n\nis_directory(\"../Documents\") = " + is_directory("../Documents"))
+	print("\n\nis_file_readable(\"testfile1.txt\") = " + is_file_readable("testfile1.txt"))
+	print("\n\nis_file_writable(\"testfile1.txt\") = " + is_file_writable("testfile1.txt"))
+	print("\n\nis_file_executable(\"testfile1.txt\") = " + is_file_executable("testfile1.txt"))
+	print("\n\nis_file_hidden(\"testfile1.txt\") = " + is_file_hidden("testfile1.txt"))
+	print("\n\nis_file_normal(\"testfile1.txt\") = " + is_file_normal("testfile1.txt"))
+	print("\n\nis_directory(\"/root\") = " + is_directory("/root"))
+	print("\n\nis_file_readable(\"/root\") = " + is_file_readable("/root"))
+	print("\n\nis_file_writable(\"/root\") = " + is_file_writable("/root"))
+	print("\n\nis_file_executable(\"/root\") = " + is_file_executable("/root"))
+	print("\n\nis_file_hidden(\"/root\") = " + is_file_hidden("/root"))
+	print("\n\nis_file_normal(\"/root\") = " + is_file_normal("/root"))
+	print("\n\nis_directory(\"/root\") = " + is_directory("/root"))
+
+	print("\n\nnow ls(), not that we should see docs/ not Documents/\n")
+	ls()
+	
+	print("\n\nnow cd docs")
+	cd("docs")
+	print("\n\npwd = " + pwd())
+	
+	cd("/home/" + myFolder + "/temp")
+	print("\n\nNow try to open /home/" + myFolder + "/temp/docs/../testfile1.txt")
+	try
+		variable fp1 = fopoen("/home/" + myFolder + "/temp/docs/../testfile1.txt","r")
+		fclose(fp1)
+	catch (var1 = info) == info
+		print("\n\nFile /home/" + myFolder + "/temp/docs/../testfile1.txt does not exist.")
+	endtry
+	
+	create_file("dir1")
+	print("\n\nNow try to open /home/" + myFolder + "/temp/dir1/../testfile1.txt")
+	try
+		variable fp1 = fopoen("/home/" + myFolder + "/temp/dir1/../testfile1.txt","r")
+		fclose(fp1)
+	catch (var1 = info) == info
+		print("\n\nFile /home/" + myFolder + "/temp/dir1/../testfile1.txt does not exist.")
+	endtry
+
+	print("\n\nis_path_same(\"docs/../docs/./\", \"/home/" + myFolder + "/Documents\") = " + is_path_same("docs/../docs/./", "/home/" + myFolder + "/Documents"))
+
+	print("\n\nget_canonical_path(\"docs/../docs/./\") = " + get_canonical_path("docs/../docs/./"))
+	
+	print("\n\nnow ls(docs/..)\n")
+	ls("docs/..")
+	
+	print("\n\nnow please hard link /home/" + myFolder + "/Downloads/1.rar to /home/" + myFolder + "/temp/down1.rar\n")
+	pause("press enter to continue\n")
+	
+	print("\n\nget_canonical_path(\"down1.rar\") = " + get_canonical_path("down1.rar"))
+
+	print("\n\nnow ls(), note that we should see down1.rar not 1.rar\n")
+	ls()
+	
+	print("\n\nget_file_size(down1.rar) = " + get_file_size("down1.rar"))
+	
+	print("\n\nget_file_size(../Downloads/1.rar) = " + get_file_size("../Downloads/1.rar"))
+	
+	print("\n\nset_file_last_modified_time(down1.rar) = " + set_file_last_modified_time("down1.rar"))
+	
+	print("\n\nget_file_last_modified_time(down1.rar) = " + get_file_last_modified_time("down1.rar"))
+	
+	print("\n\nget_file_last_modified_time(../Downloads/1.rar) = " + get_file_last_modified_time("../Downloads/1.rar"))
+	
+	print("\n\nset_file_last_modified_time(down1.rar, 1800000000000) = " + set_file_last_modified_time("down1.rar", 1800000000000))
+	
+	print("\n\nget_file_last_modified_time(down1.rar) = " + get_file_last_modified_time("down1.rar"))
+	
+	print("\n\nget_file_last_modified_time(../Downloads/1.rar) = " + get_file_last_modified_time("../Downloads/1.rar"))
+	
+	cd("/home/" + myFolder + "/temp")
+	print("\n\nis_symbol_link(\"docs\") = " + is_symbol_link("docs"))
+	
+	create_file("../Documents/doc_child.txt")
+	print("\n\nlist_files(\"docs\") = " + list_files("docs"))
+	print("\n\nNow delete docs")
+	print("\n\ndelete_file(\"docs\") = " + delete_file("docs"))
+	print("\n\nlist_files(\"../Documents/doc_child.txt\") = " + list_files("../Documents/doc_child.txt"))
+	
+	print("\n\nnow please symobl link /home/" + myFolder + "/Documents/doc_child.txt to /home/" + myFolder + "/temp/doc_child1.txt\n")
+	pause("press enter to continue\n")
+	print("\n\nlist_files(\"doc_child1.txt\") = " + list_files("doc_child1.txt"))
+	print("\n\ndelete_file(\"doc_child1.txt\") = " + delete_file("doc_child1.txt"))
+	print("\n\nlist_files(\"../Documents/doc_child.txt\") = " + list_files("../Documents/doc_child.txt"))
+	print("\n\ndelete_file(\".\") = " + delete_file("."))
+	print("\n\ndelete_file(\".\", true) = " + delete_file(".", true))
+	
+endf
+
+function test_windows_partition_map()
+	print("\n\nnow go back to windows. Please map a network location to z:\\\n")
+	pause("press enter to continue\n")
+	print("\n\nnow ls(z:)\n")
+	ls("z:\\")
+	print("\n\nget_canonical_path(\"z:\\\") = " + get_canonical_path("z:\\"))
+endf
+
+function read_txt_function_infos(input_file, defined_to_add)
+	variable max_number_of_functions = 256
+	variable function_infos = alloc_array([max_number_of_functions, 10]), info_idx = 0
+	// read in first
+	variable fdInput = fopen(input_file, "r", "UTF-8")	// don't forget to add UTF-8 encoding here.
+	variable strLine = freadline(fdInput)
+	if strLine != NULL
+		strLine = trim(strLine)
+	endif
+	while strLine != NULL
+		variable lineChildren = split(strLine, " ")
+		variable bStartBlock = false
+		variable number_of_param = 0, var1
+		//print("lineChildren = " + lineChildren + "\n")
+		if size(lineChildren) == [3]
+			if and(or(stricmp(lineChildren[2], "true") == 0, stricmp(lineChildren[2], "false") == 0), strlen(lineChildren[0]) > 1)	// function name must be more then 1 char
+				try
+					number_of_param = evaluate(lineChildren[1])
+					if and(number_of_param >= 0, round(number_of_param) == number_of_param)
+						bStartBlock = true
+					endif
+				catch (var1 = info) == info
+				endtry
+			endif
+		endif
+		if(bStartBlock)
+			// ok, now it is a new block
+			variable func_name = lineChildren[0], param_cnt = number_of_param, bIsOptional = evaluate(lineChildren[2])
+			variable builtin_or_predef = "builtin", html_name = ""
+			if defined_to_add
+				strLine = trim(freadline(fdInput))
+				lineChildren = split(strLine, " ")
+				if size(lineChildren) != [2]
+					fclose(fdInput)
+					throw "Incorrect format at line :" + strLine
+				elseif and(stricmp(lineChildren[0], "builtin") != 0, stricmp(lineChildren[0], "predefined") != 0)
+					fclose(fdInput)
+					throw "Is not either built-in or predefined for line :" + strLine
+				elseif strlen(lineChildren[1]) == 0
+					fclose(fdInput)
+					throw "html name is invalid for line : " + strLine
+				else
+					builtin_or_predef = lineChildren[0]
+					html_name = lineChildren[1]
+				endif
+			endif
+			
+			strLine = trim(freadline(fdInput))
+			if (stricmp(strLine, "help") != 0)
+				fclose(fdInput)
+				throw "Incorrect format (should be Help) at line :" + strLine
+			endif
+			strLine = trim(freadline(fdInput))
+			if (stricmp(strLine, "@language:") != 0)
+				fclose(fdInput)
+				throw "Incorrect format (should be @language:) at line :" + strLine
+			endif
+			strLine = trim(freadline(fdInput))
+			variable default_help = ""
+			while (stricmp(strLine, "@end") != 0)
+				default_help = default_help + strLine + "\n"
+				strLine = trim(freadline(fdInput))
+			Loop
+			strLine = trim(freadline(fdInput))
+			if (stricmp(strLine, "@language:simplified_chinese") != 0)
+				fclose(fdInput)
+				throw "Incorrect format (should be @language:) at line :" + strLine
+			endif
+			strLine = trim(freadline(fdInput))
+			variable schinese_help = ""
+			while (stricmp(strLine, "@end") != 0)
+				schinese_help = schinese_help + strLine + "\n"
+				strLine = trim(freadline(fdInput))
+			Loop
+			strLine = trim(freadline(fdInput))
+			if (stricmp(strLine, "@language:traditional_chinese") != 0)
+				fclose(fdInput)
+				throw "Incorrect format (should be @language:) at line :" + strLine
+			endif
+			strLine = trim(freadline(fdInput))
+			variable tchinese_help = ""
+			while (stricmp(strLine, "@end") != 0)
+				tchinese_help = tchinese_help + strLine + "\n"
+				strLine = trim(freadline(fdInput))
+			Loop
+			strLine = trim(freadline(fdInput))
+			if (stricmp(strLine, "endh") != 0)
+				fclose(fdInput)
+				throw "Incorrect format (should be endh) at line :" + strLine
+			endif
+			function_infos[info_idx][0] = func_name
+			function_infos[info_idx][1] = param_cnt
+			function_infos[info_idx][2] = bIsOptional
+			function_infos[info_idx][3] = builtin_or_predef
+			function_infos[info_idx][4] = html_name
+			function_infos[info_idx][5] = default_help
+			function_infos[info_idx][6] = schinese_help
+			function_infos[info_idx][7] = tchinese_help
+			info_idx = info_idx + 1
+			
+			strLine = freadline(fdInput)
+			if (strLine != NULL)
+				strLine = trim(strLine)
+			endif
+		elseif strlen(strLine) == 0
+			strLine = freadline(fdInput)
+			if (strLine != NULL)
+				strLine = trim(strLine)
+			endif
+			continue
+		else
+			fclose(fdInput)
+			throw "Incorrect format (should be empty) at line :" + strLine
+		endif
+	Loop
+
+	variable return_value = [info_idx, function_infos]
+	fclose(fdInput)
+	return return_value
+endf
+
+function read_html_function_infos(file_name, language_version)
+	// read in first
+	variable max_number_of_functions = 256
+	variable function_infos = alloc_array([max_number_of_functions, 10]), info_idx = 0
+	variable fdInput = fopen(file_name, "r", "UTF-8")
+	variable strLine = freadline(fdInput)
+	if (strLine != NULL)
+		//print("strLine is " + strLine + "\n")
+		strLine = trim(strLine)
+	endif
+	while true
+		if strLine == NULL
+			break
+		elseif strlen(strLine) > 26
+			if and(stricmp(strsub(strLine, 0, 12), "<td><center>") == 0, stricmp(strsub(strLine, strlen(strLine) - 14, strlen(strLine)), "</center></td>") == 0)
+				break
+			endif
+		endif
+		strLine = freadline(fdInput)
+		if (strLine != NULL)
+			//print("strLine is " + strLine + "\n")
+			strLine = trim(strLine)
+		endif
+	Loop
+	if (strLine == NULL)
+		fclose(fdInput)
+		throw "No help Info found in file " + file_name
+	endif
+	while true
+		if(strlen(strLine) <= 26)
+			break
+		elseif or(stricmp(strsub(strLine, 0, 12), "<td><center>") != 0, stricmp(strsub(strLine, strlen(strLine) - 14, strlen(strLine)), "</center></td>") != 0)
+			break
+		endif
+		// ok, this is a new item
+		variable func_name = strsub(strLine, 12, strlen(strLine) - 14)
+		strLine = freadline(fdInput)
+		if (strLine != NULL)
+			//print("strLine is " + strLine + "\n")
+			strLine = trim(strLine)
+		endif
+		if or(strLine == NULL, strlen(strLine) <= 15, stricmp(strsub(strLine, 0, 7), "<td><p>") != 0, stricmp(strsub(strLine, strlen(strLine) - 4, strlen(strLine)), "</p>") != 0)
+			fclose(fdInput)
+			throw "Incorrect format at line:" + strLine
+		endif
+		while strlen(strLine) > 14	// function description can be <td><p>funcname 1 true :</p> or <p>funcname 1 true :</p>
+			variable strLineNoEndP = trim(strsub(strLine, 0, strlen(strLine) - 4))
+			variable strLineNoColum = trim(strsub(strLineNoEndP, 0, strlen(strLineNoEndP) - 2))
+			if (strlen(strLineNoColum) < 5)
+				break
+			elseif stricmp(strsub(strLineNoColum, strlen(strLineNoColum) - 1, strlen(strLineNoColum)), ")") != 0
+				break	// should be true : or false :
+			elseif strcmp(strsub(strLineNoEndP, strlen(strLineNoEndP) - 2, strlen(strLineNoEndP)), " :") != 0
+				break	// last 2 characters before <p> should be " :"
+			elseif stricmp(strsub(strLine, strlen(strLine) - 4, strlen(strLine)), "</p>") != 0
+				break	// should be ended by </p>
+			endif
+			variable func_name_param = trim(strsub(strLine, 7, strlen(strLine) - 4))
+			if (stricmp(strsub(strLine, 0, 3), "<p>") == 0)	// it is started from <p> not <td><p>
+				func_name_param = trim(strsub(strLine, 3, strlen(strLine) - 4))
+			endif
+			if strsub(func_name_param, strlen(func_name_param) - 1, strlen(func_name_param)) != ":"
+				fclose(fdInput)
+				throw "Incorrect format at line:" + strLine
+			endif
+			func_name_param = trim(strsub(func_name_param, 0, strlen(func_name_param) - 1))
+			if strsub(func_name_param, strlen(func_name_param) - 1, strlen(func_name_param)) != ")"
+				fclose(fdInput)
+				throw "Incorrect format at line:" + strLine
+			endif
+			func_name_param = trim(strsub(func_name_param, 0, strlen(func_name_param) - 1))
+			variable bOptional = false
+			if and(strlen(func_name_param) > 5, strsub(func_name_param, strlen(func_name_param) - 3, strlen(func_name_param)) == "...")
+				bOptional = true
+				func_name_param = strsub(func_name_param, 0, strlen(func_name_param) - 3)
+			endif
+			variable func_name1 = split(func_name_param, "\\(")[0]
+			if (stricmp(func_name, func_name1) != 0)
+				fclose(fdInput)
+				throw "Incorrect format (different name) at line:" + strLine
+			endif
+			variable param_cnt = split(func_name_param, "\\(")[1]
+			param_cnt = evaluate(param_cnt)
+			if param_cnt != round(param_cnt)
+				fclose(fdInput)
+				throw "Incorrect format (non-integer number of params) at line:" + strLine
+			endif
+			variable help_info = ""
+			strLine = freadline(fdInput)
+			if (strLine != NULL)
+				//print("strLine is " + strLine + "\n")
+				strLine = trim(strLine)
+				while strlen(strLine) > 7
+					variable strLineNoEndP = trim(strsub(strLine, 0, strlen(strLine) - 4))	// remove last </p>
+					if strlen(strLineNoEndP) > 2
+						if (strsub(strLineNoEndP, strlen(strLineNoEndP) - 2, strlen(strLineNoEndP)) == " :")	// ensure it is ended by " :"
+							variable strLineNoColum = trim(strsub(strLineNoEndP, 0, strlen(strLineNoEndP) - 1))
+							if (strlen(strLineNoColum) >= 5)
+								if stricmp(strsub(strLineNoColum, strlen(strLineNoColum) - 1, strlen(strLineNoColum)), ")") == 0	// ensure it is ended by ")"
+									break	// a new function help info
+								endif
+							endif
+						endif
+					endif
+					if and(stricmp(strsub(strLine, 0, 3), "<p>") == 0, _
+						stricmp(strsub(strLine, strlen(strLine) - 4, strlen(strLine)), "</p>") == 0)
+						variable help_line = trim(strsub(strLine, 3, strlen(strLine) - 4))
+						help_info = help_info + help_line + "\n"
+						strLine = freadline(fdInput)
+						if (strLine == NULL)
+							break
+						else
+							//print("strLine is " + strLine + "\n")
+							strLine = trim(strLine)
+						endif
+					else
+						break
+					endif
+				Loop
+			endif
+			function_infos[info_idx][0] = func_name
+			function_infos[info_idx][1] = param_cnt
+			function_infos[info_idx][2] = bOptional
+			if (stricmp(language_version, "en") == 0)
+				function_infos[info_idx][5] = help_info	
+			elseif (stricmp(language_version, "zh-CN") == 0)
+				function_infos[info_idx][6] = help_info	
+			elseif (stricmp(language_version, "zh-TW") == 0)
+				function_infos[info_idx][7] = help_info	
+			else
+				function_infos[info_idx][5] = help_info	
+			endif
+			info_idx = info_idx + 1
+		Loop
+		if (stricmp(strLine, "</td>") != 0)
+			fclose(fdInput)
+			throw "Incorrect format (not </td>) at line:" + strLine
+		endif
+		strLine = freadline(fdInput)
+		if (strLine != NULL)
+			//print("strLine is " + strLine + "\n")
+			strLine = trim(strLine)
+		endif
+		if (stricmp(strLine, "</tr>") != 0)
+			fclose(fdInput)
+			throw "Incorrect format (not </tr>) at line:" + strLine
+		endif
+		strLine = freadline(fdInput)
+		if (strLine != NULL)
+			//print("strLine is " + strLine + "\n")
+			strLine = trim(strLine)
+		endif
+		if(stricmp(strLine, "<tr>") == 0)
+			strLine = freadline(fdInput)
+			if (strLine != NULL)
+				//print("strLine is " + strLine + "\n")
+				strLine = trim(strLine)
+			endif
+			continue
+		elseif (stricmp(strLine, "</table>") == 0)
+			break
+		else
+			fclose(fdInput)
+			throw "Incorrect format (not </table>) at line:" + strLine
+		endif
+	Loop
+	variable return_value = [info_idx, function_infos]
+	fclose(fdInput)
+	return return_value
+endf
+
+function sort_function_info(function_infos, total_number)
+	variable sorted_function_infos = alloc_array(total_number)
+	variable new_number = total_number
+	for variable idx = 0 to total_number - 1 step 1
+		if idx == 0
+			sorted_function_infos[idx] = function_infos[idx]
+		else
+			variable idx1 = 0
+			variable bShouldReplace = false
+			
+			for idx1 = 0 to idx - 1 step 1
+				if stricmp(sorted_function_infos[idx1][0], function_infos[idx][0]) > 0	// compare name
+					break	// ok, should be inserted before idx1
+				elseif stricmp(sorted_function_infos[idx1][0], function_infos[idx][0]) < 0	// compare name
+					continue	// should continue
+				elseif sorted_function_infos[idx1][1] > function_infos[idx][1]	// compare parameter count
+					break	// ok, should be inserted before idx1
+				elseif sorted_function_infos[idx1][1] < function_infos[idx][1]	// compare parameter count
+					continue	// should continue
+				elseif sorted_function_infos[idx1][2] > function_infos[idx][2]	// compare has optional params
+					break	// ok, should be inserted before idx1
+				elseif sorted_function_infos[idx1][2] < function_infos[idx][2]	// compare has optional params
+					continue	// should continue
+				else
+					bShouldReplace = true
+					break
+				endif
+			next
+			if bShouldReplace
+				sorted_function_infos[idx1] = function_infos[idx]
+				new_number = new_number - 1
+			else
+				for variable idx2 = total_number - 2 to idx1 step -1
+					sorted_function_infos[idx2 + 1] = sorted_function_infos[idx2]
+				next
+				sorted_function_infos[idx1] = function_infos[idx]
+			endif
+		endif
+	next
+	variable return_value = [new_number, sorted_function_infos]
+	return return_value
+endf
+
+function write_internal_func_infos(sorted_function_infos, total_number, file_name)
+	variable fd = fopen(file_name, "w", "UTF-8")
+	for variable idx = 0 to total_number - 1 step 1
+		fprintf(fd, "%s %d %s\n", sorted_function_infos[idx][0], sorted_function_infos[idx][1], sorted_function_infos[idx][2])
+		fprintf(fd, "Help\n")
+		fprintf(fd, " @language:\n")
+		fprintf(fd, " %s", sorted_function_infos[idx][5])
+		fprintf(fd, " @end\n")
+		fprintf(fd, " @language:simplified_chinese\n")
+		fprintf(fd, " %s", sorted_function_infos[idx][6])
+		fprintf(fd, " @end\n")
+		fprintf(fd, " @language:traditional_chinese\n")
+		fprintf(fd, " %s", sorted_function_infos[idx][7])
+		fprintf(fd, " @end\n")
+		fprintf(fd, "Endh\n")
+	next
+	fclose(fd)
+endf
+
+function get_new_help_small_title(file_name, language_version)
+	// NEED TO MANNUALLY ADD TITLE IF NEW FILE IS ADDED
+	variable small_title = ""
+	if stricmp(file_name, "file") == 0
+		if stricmp(language_version, "zh-CN") == 0
+			small_title =small_title + "文件函数"
+		elseif stricmp(language_version, "zh-TW") == 0
+			small_title =small_title + "文件函數"
+		else
+			small_title =small_title + "file functions"
+		endif
+	elseif stricmp(file_name, "time_and_date") == 0
+		if stricmp(language_version, "zh-CN") == 0
+			small_title =small_title + "日期和时间函数"
+		elseif stricmp(language_version, "zh-TW") == 0
+			small_title =small_title + "日期和時間函數"
+		else
+			small_title =small_title + "time and date functions"
+		endif
+	else
+		throw "File name " + file_name + " does not have a small title!\n"
+	endif
+	return small_title
+endf
+
+function write_html_func_infos(sorted_function_infos, total_number, srcTopFolder, destTopFolder, language_version, file_name)
+	variable src_file_full_name = srcTopFolder + get_file_separator() + language_version + get_file_separator() + "FunctionInfo" + get_file_separator() + file_name + ".html"
+	variable bFileExist = is_file_existing(src_file_full_name)
+	variable file_head = "", file_tail = "</table>\n</body>\n</html>\n"
+	if (!bFileExist)
+		variable scp_help = "Scientific Calculator Plus Help"
+		variable small_title = scp_help + " : " + get_new_help_small_title(file_name, language_version)
+		variable col1_name = "Function name", col2_name = "Function info"
+		if stricmp(language_version, "zh-CN") == 0
+			scp_help = "可编程科学计算器帮助"
+			small_title = scp_help + ":" + get_new_help_small_title(file_name, language_version)
+			col1_name = "函数名"
+			col2_name = "函数帮助信息"
+		elseif stricmp(language_version, "zh-TW") == 0
+			scp_help = "程式開發科學計算器幫助"
+			small_title = scp_help + ":" + get_new_help_small_title(file_name, language_version)
+			col1_name = "函數名"
+			col2_name = "函數幫助信息"
+		endif
+		file_head = "<html>\n<head>\n<title>" + scp_help + "</title>\n<meta http-equiv=Content-Type content=\"text/html; charset=UTF-8\"></head>\n<body style=\"background-color:white;\">\n<h2 style=\"color:blue\">"	//"
+		file_head = file_head + small_title + "</h2>\n<table border=\"1\" style=\"font-family:times;color:green;\">\n<tr>\n<th>" + col1_name + "</th>\n<th>" + col2_name + "</th>\n</tr>\n" //"
+	else
+		variable src_file_full_name = srcTopFolder + get_file_separator() + language_version + get_file_separator() + "FunctionInfo" + get_file_separator() + file_name + ".html"
+		variable fd = fopen(src_file_full_name, "r", "UTF-8")
+		for variable idx = 0 to 10 step 1
+			file_head = file_head + freadline(fd) + "\n"
+		next
+		fclose(fd)
+	endif
+	
+	variable dest_file_full_name = destTopFolder + get_file_separator() + language_version + get_file_separator() + "FunctionInfo" + get_file_separator() + file_name + ".html"
+	variable fd = fopen(dest_file_full_name, "w", "UTF-8")
+	fprintf(fd, "%s", file_head)
+	variable last_func_name = "", last_func_tail = ""
+//printf("total_number = %s\n", total_number)
+	for variable idx = 0 to total_number - 1 step 1
+		variable func_name = sorted_function_infos[idx][0]
+//printf("func_name = %s, last_func_name = %s, they compare is %d\n", func_name, last_func_name, stricmp(func_name, last_func_name))
+		if stricmp(func_name, last_func_name) != 0
+			fprintf(fd, "%s", last_func_tail)
+			fprintf(fd, "<tr>\n")
+			fprintf(fd, "<td><center>%s</center></td>\n<td>", func_name)
+		endif
+		variable str_optional = ""
+		if (sorted_function_infos[idx][2])
+			str_optional = "..."
+		endif
+		fprintf(fd, "<p>%s(%d%s) :</p>\n", sorted_function_infos[idx][0], sorted_function_infos[idx][1], str_optional)
+		variable help_info = sorted_function_infos[idx][5]
+		if stricmp(language_version, "zh-CN") == 0
+			help_info = sorted_function_infos[idx][6]
+		elseif stricmp(language_version, "zh-TW") == 0
+			help_info = sorted_function_infos[idx][7]
+		endif
+		variable help_info_array = split(help_info, "\\n")
+		for variable idx1 = 0 to size(help_info_array)[0] - 1 step 1
+			fprintf(fd, "<p>%s</p>\n", help_info_array[idx1])
+		next
+		last_func_name = func_name
+		last_func_tail = "</td>\n</tr>\n"
+	next
+	if last_func_name != ""
+		fprintf(fd, "%s", last_func_tail)
+	endif
+	fprintf(fd, "%s", file_tail)
+	fclose(fd)
+endf
+
+function add_function_info(folder_src, file_to_add, folder_dest)
+	printf("Now read function info to add\n")
+	variable info_struct_to_add = read_txt_function_infos(file_to_add, true)
+	
+	printf("Now edit internal function info\n")
+	variable info_struct_internal = read_txt_function_infos(folder_src +  get_file_separator() + "InternalFuncInfo.txt", false)
+	variable total_internal = info_struct_internal[0], function_infos_internal = info_struct_internal[1]
+	for variable idx = 0 to info_struct_to_add[0] - 1 step 1
+		if (info_struct_to_add[1][idx][3] == "builtin")
+			function_infos_internal[total_internal] = info_struct_to_add[1][idx]
+			total_internal = total_internal + 1
+		endif
+	next
+	variable info_struct = sort_function_info(function_infos_internal, total_internal)
+	printf("After adding, total number of internal functions = %d\n", info_struct[0])
+	write_internal_func_infos(info_struct[1], info_struct[0], folder_dest +  get_file_separator() + "InternalFuncInfo.txt")
+	
+	printf("Now edit html function info\n")
+	variable all_infos_to_add = []
+	for variable idx = 0 to info_struct_to_add[0] - 1 step 1
+		variable all_size = size(all_infos_to_add)[0]
+		variable html_name = info_struct_to_add[1][idx][4]
+		variable idx1 = 0
+		for idx1 = 0 to all_size - 1 step 1
+			//print("all_infos_to_add[idx1][0] = " + all_infos_to_add[idx1][0] + "\n")
+			//print("info_struct_to_add[1][idx] = " + info_struct_to_add[1][idx] + "\n")
+			if stricmp(all_infos_to_add[idx1][0], info_struct_to_add[1][idx][4]) == 0
+				variable this_size = size(all_infos_to_add[idx1, 1])[0]
+				set_array_elem(all_infos_to_add, [idx1, 1, this_size], info_struct_to_add[1][idx])
+				break
+			endif
+		next
+		if (idx1 == all_size)
+			// this is another html
+			set_array_elem(all_infos_to_add, [idx1, 0], html_name)
+			set_array_elem(all_infos_to_add, [idx1, 1, 0], info_struct_to_add[1][idx])
+		endif
+	next
+	
+	variable builtin_predef_infos_to_add = []
+	for variable idx = 0 to info_struct_to_add[0] - 1 step 1
+		variable all_size = size(builtin_predef_infos_to_add)[0]
+		variable html_name = info_struct_to_add[1][idx][3]
+		variable idx1 = 0
+		for idx1 = 0 to all_size - 1 step 1
+			if stricmp(builtin_predef_infos_to_add[idx1][0], info_struct_to_add[1][idx][3]) == 0
+				variable this_size = size(builtin_predef_infos_to_add[idx1, 1])[0]
+				set_array_elem(builtin_predef_infos_to_add, [idx1, 1, this_size], info_struct_to_add[1][idx])
+				break
+			endif
+		next
+		if (idx1 == all_size)
+			// this is another html
+			set_array_elem(builtin_predef_infos_to_add, [idx1, 0], html_name)
+			set_array_elem(builtin_predef_infos_to_add, [idx1, 1, 0], info_struct_to_add[1][idx])
+		endif
+	next
+	
+	for variable idx = 0 to size(all_infos_to_add)[0] - 1 step 1
+		variable language_version = "en"
+		printf("Now edit %s/%s.html function info\n", language_version, all_infos_to_add[idx][0])
+		variable html_full_path = folder_src +  get_file_separator() + language_version + get_file_separator() + "FunctionInfo" + get_file_separator() + all_infos_to_add[idx][0] + ".html"
+		variable this_html_info = [0, []]
+		if (is_file_existing(html_full_path))
+			this_html_info = read_html_function_infos(html_full_path, language_version)
+		endif
+		variable this_html_info_size = this_html_info[0]
+		for variable idx1 = 0 to size(all_infos_to_add[idx, 1])[0] - 1 step 1
+			//printf("all_infos_to_add[%d] = %s", idx, all_infos_to_add[idx])
+			set_array_elem(this_html_info[1], this_html_info_size, all_infos_to_add[idx,1,idx1])
+			this_html_info_size = this_html_info_size + 1
+		next
+		variable info_struct = sort_function_info(this_html_info[1], this_html_info_size)
+		write_html_func_infos(info_struct[1], info_struct[0], folder_src, folder_dest, language_version, all_infos_to_add[idx][0])
+		
+		language_version = "zh-CN"
+		printf("Now edit %s/%s.html function info\n", language_version, all_infos_to_add[idx][0])
+		html_full_path = folder_src +  get_file_separator() + language_version + get_file_separator() + "FunctionInfo" + get_file_separator() + all_infos_to_add[idx][0] + ".html"
+		this_html_info = [0, []]
+		if (is_file_existing(html_full_path))
+			this_html_info = read_html_function_infos(html_full_path, language_version)
+		endif
+		this_html_info_size = this_html_info[0]
+		for variable idx1 = 0 to size(all_infos_to_add[idx, 1])[0] - 1 step 1
+			set_array_elem(this_html_info[1], this_html_info_size, all_infos_to_add[idx,1,idx1])
+			this_html_info_size = this_html_info_size + 1
+		next
+		info_struct = sort_function_info(this_html_info[1], this_html_info_size)
+		write_html_func_infos(info_struct[1], info_struct[0], folder_src, folder_dest, language_version, all_infos_to_add[idx][0])
+
+		language_version = "zh-TW"
+		printf("Now edit %s/%s.html function info\n", language_version, all_infos_to_add[idx][0])
+		html_full_path = folder_src +  get_file_separator() + language_version + get_file_separator() + "FunctionInfo" + get_file_separator() + all_infos_to_add[idx][0] + ".html"
+		this_html_info = [0, []]
+		if (is_file_existing(html_full_path))
+			this_html_info = read_html_function_infos(html_full_path, language_version)
+		endif
+		this_html_info_size = this_html_info[0]
+		for variable idx1 = 0 to size(all_infos_to_add[idx, 1])[0] - 1 step 1
+			set_array_elem(this_html_info[1], this_html_info_size, all_infos_to_add[idx,1,idx1])
+			this_html_info_size = this_html_info_size + 1
+		next
+		info_struct = sort_function_info(this_html_info[1], this_html_info_size)
+		write_html_func_infos(info_struct[1], info_struct[0], folder_src, folder_dest, language_version, all_infos_to_add[idx][0])
+	next
+	
+	for variable idx = 0 to size(builtin_predef_infos_to_add)[0] - 1 step 1
+		variable language_version = "en"
+		printf("Now edit %s/%s.html function info\n", language_version, builtin_predef_infos_to_add[idx][0])
+		variable html_full_path = folder_src +  get_file_separator() + language_version + get_file_separator() + "FunctionInfo" + get_file_separator() + builtin_predef_infos_to_add[idx][0] + ".html"
+		variable this_html_info = [0, []]
+		if (is_file_existing(html_full_path))
+			this_html_info = read_html_function_infos(html_full_path, language_version)
+		endif
+		variable this_html_info_size = this_html_info[0]
+		for variable idx1 = 0 to size(builtin_predef_infos_to_add[idx, 1])[0] - 1 step 1
+			//printf("builtin_predef_infos_to_add[%d] = %s", idx, builtin_predef_infos_to_add[idx])
+			set_array_elem(this_html_info[1], this_html_info_size, builtin_predef_infos_to_add[idx,1,idx1])
+			this_html_info_size = this_html_info_size + 1
+		next
+		variable info_struct = sort_function_info(this_html_info[1], this_html_info_size)
+		write_html_func_infos(info_struct[1], info_struct[0], folder_src, folder_dest, language_version, builtin_predef_infos_to_add[idx][0])
+		
+		language_version = "zh-CN"
+		printf("Now edit %s/%s.html function info\n", language_version, builtin_predef_infos_to_add[idx][0])
+		html_full_path = folder_src +  get_file_separator() + language_version + get_file_separator() + "FunctionInfo" + get_file_separator() + builtin_predef_infos_to_add[idx][0] + ".html"
+		this_html_info = [0, []]
+		if (is_file_existing(html_full_path))
+			this_html_info = read_html_function_infos(html_full_path, language_version)
+		endif
+		this_html_info_size = this_html_info[0]
+		for variable idx1 = 0 to size(builtin_predef_infos_to_add[idx, 1])[0] - 1 step 1
+			set_array_elem(this_html_info[1], this_html_info_size, builtin_predef_infos_to_add[idx,1,idx1])
+			this_html_info_size = this_html_info_size + 1
+		next
+		info_struct = sort_function_info(this_html_info[1], this_html_info_size)
+		write_html_func_infos(info_struct[1], info_struct[0], folder_src, folder_dest, language_version, builtin_predef_infos_to_add[idx][0])
+		
+		language_version = "zh-TW"
+		printf("Now edit %s/%s.html function info\n", language_version, builtin_predef_infos_to_add[idx][0])
+		html_full_path = folder_src +  get_file_separator() + language_version + get_file_separator() + "FunctionInfo" + get_file_separator() + builtin_predef_infos_to_add[idx][0] + ".html"
+		this_html_info = [0, []]
+		if (is_file_existing(html_full_path))
+			this_html_info = read_html_function_infos(html_full_path, language_version)
+		endif
+		this_html_info_size = this_html_info[0]
+		for variable idx1 = 0 to size(builtin_predef_infos_to_add[idx, 1])[0] - 1 step 1
+			set_array_elem(this_html_info[1], this_html_info_size, builtin_predef_infos_to_add[idx,1,idx1])
+			this_html_info_size = this_html_info_size + 1
+		next
+		info_struct = sort_function_info(this_html_info[1], this_html_info_size)
+		write_html_func_infos(info_struct[1], info_struct[0], folder_src, folder_dest, language_version, builtin_predef_infos_to_add[idx][0])
+	next
+	
+	// for all.html
+	variable language_version = "en"
+	printf("Now edit %s/all.html function info\n", language_version)
+	variable html_full_path = folder_src +  get_file_separator() + language_version + get_file_separator() + "FunctionInfo" + get_file_separator() + "all.html"
+	variable this_html_info = [0, []]
+	if (is_file_existing(html_full_path))
+		this_html_info = read_html_function_infos(html_full_path, language_version)
+	endif
+	variable this_html_info_size = this_html_info[0]
+	for variable idx1 = 0 to info_struct_to_add[0] - 1 step 1
+		set_array_elem(this_html_info[1], this_html_info_size, info_struct_to_add[1,idx1])
+		this_html_info_size = this_html_info_size + 1
+	next
+	info_struct = sort_function_info(this_html_info[1], this_html_info_size)
+	write_html_func_infos(info_struct[1], info_struct[0], folder_src, folder_dest, language_version, "all")
+	
+	language_version = "zh-CN"
+	printf("Now edit %s/all.html function info\n", language_version)
+	html_full_path = folder_src +  get_file_separator() + language_version + get_file_separator() + "FunctionInfo" + get_file_separator() + "all.html"
+	this_html_info = [0, []]
+	if (is_file_existing(html_full_path))
+		this_html_info = read_html_function_infos(html_full_path, language_version)
+	endif
+	this_html_info_size = this_html_info[0]
+	for variable idx1 = 0 to info_struct_to_add[0] - 1 step 1
+		set_array_elem(this_html_info[1], this_html_info_size, info_struct_to_add[1,idx1])
+		this_html_info_size = this_html_info_size + 1
+	next
+	info_struct = sort_function_info(this_html_info[1], this_html_info_size)
+	write_html_func_infos(info_struct[1], info_struct[0], folder_src, folder_dest, language_version, "all")
+	
+	language_version = "zh-TW"
+	printf("Now edit %s/all.html function info\n", language_version)
+	html_full_path = folder_src +  get_file_separator() + language_version + get_file_separator() + "FunctionInfo" + get_file_separator() + "all.html"
+	this_html_info = [0, []]
+	if (is_file_existing(html_full_path))
+		this_html_info = read_html_function_infos(html_full_path, language_version)
+	endif
+	this_html_info_size = this_html_info[0]
+	for variable idx1 = 0 to info_struct_to_add[0] - 1 step 1
+		set_array_elem(this_html_info[1], this_html_info_size, info_struct_to_add[1,idx1])
+		this_html_info_size = this_html_info_size + 1
+	next
+	info_struct = sort_function_info(this_html_info[1], this_html_info_size)
+	write_html_func_infos(info_struct[1], info_struct[0], folder_src, folder_dest, language_version, "all")
+	
+	print("Now everything is done correctly!\n")
+endf

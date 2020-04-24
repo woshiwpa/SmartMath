@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>Scientific Calculator Plus Help</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">Scientific Calculator Plus Help : others functions</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>Function name</th>
+<th>Function info</th>
+</tr>
+<tr>
+<td><center>clone</center></td>
+<td><p>clone(1) :</p>
+<p>clone(source_value) clones source value and returns cloned copy of the source value. Source value can be anything including string, number, complex number and array. For example, if variable a is [1,2], user executes statement variable b = clone(a) and gets b = [1,2]. However, the returned [1,2] is not the same copy as parameter a. So if user changes a[0] to 3, a's new value is [3, 2] while b is still [1, 2].</p>
+</td>
+</tr>
+<tr>
+<td><center>convert_unit</center></td>
+<td><p>convert_unit(3) :</p>
+<p>Function convert_unit(value, from_unit, to_unit) converts value based on one unit to value based on another unit. The first parameter is the value to be converted, the second parameter is the from unit (a case sensitive string), the third parameter is the to unit (a case sensitive string). For example, convert_unit(23.71, "m", "km").</p>
+<p>This function supports the following units:</p>
+<p>1. length units: "um" (microns), "mm" (millimetres), "cm" (centimetres), "m" (metres), "km" (kilometres), "in" (inches), "ft" (feet), "yd" (yards), "mi" (miles), "nmi" (nautical miles), "AU" (Astronomical units), "ly" (light years), "pc" (parsecs);</p>
+<p>2. area units: "mm2" (square millimetres), "cm2" (square centimetres), "m2" (square metres), "ha" (hectares), "km2" (square kilometres), "sq in" (square inches), "sq ft" (square feet), "sq yd" (square yards), "ac" (acres), "sq mi" (square miles);</p>
+<p>3. volume units: "mL" (millilitres (cc)), "L" (litres), "m3" (cubic metres), "cu in" (cubic inches), "cu ft" (cubic feet), "cu yd" (cubic yards), "km3" (cubic kilometres), "fl oz(Imp)" (fluid ounce (Imp)), "pt(Imp)" (pint (Imp)), "gal(Imp)" (gallon (Imp)), "fl oz(US)" (fluid ounce (US)), "pt(US)" (pint (US)), "gal(US)" (gallon (US));</p>
+<p>4. mass units: "ug" (micrograms), "mg" (milligrams), "g" (grams), "kg" (kilograms), "t" (tonnes), "oz" (ounces), "lb" (pounds), "jin" (market catties), "jin(HK)" (catties (HK)), "jin(TW)" (catties (TW));</p>
+<p>5. speed units: "m/s" (metres per second), "km/h" (kilometres per hour), "ft/s" (feet per second), "mph" (miles per hour), "knot" (knots);</p>
+<p>6. time units: "ns" (nanoseconds), "us" (microseconds), "ms" (milliseconds), "s" (seconds), "min" (minutes), "h" (hours), "d" (days), "wk" (weeks), "yr" (years);</p>
+<p>7. force units: "N" (newtons), "kgf" (kilogram-force), "lbF" (pound-force);</p>
+<p>8. pressure units: "Pa" (pascal), "hPa" (hectopascal), "kPa" (kilopascal), "MPa" (megapascal), "atm" (atomsphere), "psi" (pounds per square inch), "Torr" (torrs (millimetres of mercury);</p>
+<p>9. energy units: "J" (joules), "kJ" (kilojoules), "MJ" (megajoules), "kWh" (kilowatt-hours), "cal" (calories), "kcal" (kilocalories), "BTU" (British Thermal Units);</p>
+<p>10. power units: "W" (Watts), "kW" (kilowatts), "MW" (megawatts), "cal/s" (calories per second), "BTU/h" (BTUs per hour), "hp" (horse power);</p>
+<p>11. temperature units: "0C" (celsius), "0F" (fahrenheit), "K" (Kelvin);</p>
+</td>
+</tr>
+<tr>
+<td><center>get_constant</center></td>
+<td><p>get_constant(2) :</p>
+<p>get_constant(const_name, n) fetches a constant value (identified by a case-sensative string consta_name) wih n significant digits after decimal point. The second parameter n a non-negative integer and is optional. If it is omitted, this function returns the value without rounding. It supports the following constants:</p>
+<p>1. Ratio of circumference of a circle to its diameter (const_name == "pi");</p>
+<p>2. Natural logarithm (const_name == "e");</p>
+<p>3. Light speed in vacuum [m/s] (const_name == "light_speed_in_vacuum");</p>
+<p>4. Gravitational constant [m**3/kg/(s**2)] (const_name == "gravitational_constant");</p>
+<p>5. Planck constant [J*s] (const_name == "planck_constant");</p>
+<p>6. Magnetic constant [N/(A**2)] (const_name == "magnetic_constant");</p>
+<p>7. Electric constant [F/m] (const_name == "electric_constant");</p>
+<p>8. Elementary charge [c] (const_name == "elementary_charge_constant");</p>
+<p>9. Avogadro constant [1/mol] (const_name == "avogadro_constant");</p>
+<p>10. Faraday constant [C/mol] (const_name == "faraday_constant");</p>
+<p>11. Molar gas constant [J/mol/K] (const_name == "molar_gas_constant");</p>
+<p>12. Boltzman constant [J/K] (const_name == "boltzman_constant");</p>
+<p>13. Standard gravity [m/(s**2)] (const_name == "standard_gravity");</p>
+<p>For example, if user inputs get_constant("pi", 4), the result will be 3.1416; if user inputs get_constant("pi", 8), the result will be 3.14159265; if user inputs get_constant("pi", 0), s\he will get 3; if user inputs get_constant("pi"), the result will be 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 (with 100 digits after decimal point), which is the pi value internally used by the software.</p>
+</td>
+</tr>
+<tr>
+<td><center>is_inf</center></td>
+<td><p>is_inf(1) :</p>
+<p>is_inf(x) determines if x is positive infinite or negative infinite. If it is, return true. Otherwise, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>is_nan_or_inf</center></td>
+<td><p>is_nan_or_inf(1) :</p>
+<p>is_nan_or_inf(x) determines if x is Nan or positive infinite or negative infinite. If it is, return true. Otherwise, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>is_nan_or_inf_or_null</center></td>
+<td><p>is_nan_or_inf_or_null(1) :</p>
+<p>is_nan_or_inf_or_null(x) determines if x is Nan or positive infinite or negative infinite or null. If it is, return true. Otherwise, return false.</p>
+</td>
+</tr>
+<tr>
+<td><center>tip</center></td>
+<td><p>tip(2) :</p>
+<p>Function tip(x, y) is used to calculate total money to pay in a American restaurant with known price x and tip ratio y.</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

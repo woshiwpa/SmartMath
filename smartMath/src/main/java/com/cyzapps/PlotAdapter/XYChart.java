@@ -406,16 +406,21 @@ public class XYChart extends FlatChart {
 		if (mbShowGrid)	{
 			drawGrid(canvas, paint);
 		}
-		
+
 		Rect rectClip = canvas.getClipBounds();
-		canvas.clipRect(fCoordLeft, fCoordTop, fCoordRight, fCoordBottom, Op.REPLACE);
+		canvas.save();	// IMPORTANT: save current state of clip and matrix (i.e. unclipped state) (let's say it's state #1)
+		canvas.clipRect(fCoordLeft, fCoordTop, fCoordRight, fCoordBottom/*, Op.REPLACE*/);	// Op.REPLACE is no longer supported from sdk 28
 		drawDataCurves(canvas, mmapperP2P, mDataSet, mp3CoordLeftBottomInTO.getX(), mp3CoordLeftBottomInTO.getY() - mdCoordHeight,
 				mdCoordWidth, mdCoordHeight, paint);
-		canvas.clipRect(rectClip, Op.REPLACE);
-		
+		canvas.restore();     // IMPORTANT: get back to previously saved (unclipped) state of the canvas (restores state #1)
+
+		canvas.save(); // now save again the current state of canvas (clip and matrix) (it's state #2)
+		canvas.clipRect(rectClip/*, Op.REPLACE*/);	// Op.REPLACE is no longer supported from sdk 28
+
 		drawLegends(canvas, mdCoordWidth <= mdCoordHeight, paint);
-		
-        drawButtons(canvas, x, y, width, height, paint);
+
+		drawButtons(canvas, x, y, width, height, paint);
+		canvas.restore(); // get back go previously saved state (to state #2)
 
 		paint.setColor(nPaintOriginalColor);
 		

@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>程式開發科學計算器幫助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">程式開發科學計算器幫助：信號處理函數</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函數名</th>
+<th>函數幫助資訊</th>
+</tr>
+<tr>
+<td><center>conv</center></td>
+<td><p>conv(2) :</p>
+<p>conv(input_a, inputb)返回input_a和input_b的卷積。Input_a和input_b要麼都是一維向量，要麼都是二維矩陣。當前本函數程式僅僅支持一維和二維卷積，比如：</p>
+<p>conv([4,8,2,9],[5,3,8,9,6,7,8]) = [20, 52, 66, 151, 139, 166, 181, 132, 79, 72]</p>
+<p>conv([[4,8,2,9],[8,6,7,9],[2,2,8,-4]],[[-5,i,7],[0.6,8,4]]) = [[-20, -40 + 4 * i, 18 + 8 * i, 11 + 2 * i, 14 + 9 * i, 63], [-37.6, 6.8 + 8 * i, 102.2 + 6 * i, 50.4 + 7 * i, 129 + 9 * i, 99], [-5.2, 57.6 + 2 * i, 58.2 + 2 * i, 119.4 + 8 * i, 156 - 4 * i, 8], [1.2, 17.2, 28.8, 69.6, 0, -16]]</p>
+</td>
+</tr>
+<tr>
+<td><center>FFT</center></td>
+<td><p>FFT(1...) :</p>
+<p>	FFT(a, ...)返回對一個數值向量作快速傅立葉變換後的值。註意數值向量中數值的個數必須是2的整數次方。如果參數a是一個數值序列，則本函數程式只可能擁有一個參數，返回值為對序列a[0], a[1], ..., a[N-1]作快速傅立葉變換的返回值。如果參數a僅僅是一個實數或者虛數，則本函數程式最少包含2個參數，而返回序列a， optional_params[0]， ...， optional_params[number_of_optional_params - 2]， optional_params[number_of_optional_params - 1]快速傅立葉變換後的值。註意返回值總是一個數組。</p>
+<p>函數程式例子：</p>
+<p>FFT(1, 2, 3, 4)返回[10, -2+2i, -2, -2 - 2i]；</p>
+<p>FFT([1, 2, 3, 4])同樣也是返回[10, -2+2i, -2, -2 - 2i]；</p>
+</td>
+</tr>
+<tr>
+<td><center>IFFT</center></td>
+<td><p>IFFT(1...) :</p>
+<p>	IFFT(a, ...)返回對一個數值向量作快速傅立葉變換的逆變換後的值。註意數值向量中數值的個數必須是2的整數次方。如果參數a是一個數值序列，則本函數程式只可能擁有一個參數，返回值為對序列a[0], a[1], ..., a[N-1]作快速傅立葉變換的逆變換的返回值。如果參數a僅僅是一個實數或者虛數，則本函數程式最少包含2個參數，而返回序列a， optional_params[0]， ...， optional_params[number_of_optional_params - 2]， optional_params[number_of_optional_params - 1]快速傅立葉變換的逆變換後的值。註意返回值總是一個數組。</p>
+<p>函數程式例子：</p>
+<p>IFFT(10, -2 + 2i, -2, -2 - 2i)返回[1, 2, 3, 4]；</p>
+<p>IFFT([10, -2 + 2i, -2, -2 - 2i])同樣也是返回[1, 2, 3, 4]；</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

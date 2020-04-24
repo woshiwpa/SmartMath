@@ -1,0 +1,244 @@
+<html>
+<head>
+<title>Scientific Calculator Plus Help</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">Scientific Calculator Plus Help : file functions</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>Function name</th>
+<th>Function info</th>
+</tr>
+<tr>
+<td><center>cd</center></td>
+<td><p>cd(1) :</p>
+<p>change_dir(path) (with alias cd(path)) changes current directory to string based value path. If successful, return true. Otherwise, return falses. Examples are change_dir("D:\\Windows") (Windows) and cd("/") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>change_dir</center></td>
+<td><p>change_dir(1) :</p>
+<p>change_dir(path) (with alias cd(path)) changes current directory to string based value path. If successful, return true. Otherwise, return falses. Examples are change_dir("D:\\Windows") (Windows) and cd("/") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>copy_file</center></td>
+<td><p>copy_file(3) :</p>
+<p>copy_file(source, destination, replace_exist) copies file or folder whose path is string source to file or folder whose path is string destination. If the 3rd parameter, replace_exist, is true, then source file (or any file in source folder) will replace destination file (or corresponding file in destination folder) if destination exists. Note that the 3rd parameter is optional. By default it is false. Examples are copy_file("c:\\temp\\try1", "D:\\", true) (Windows) and copy_file("/mnt/sdcard/testfile.txt", "./testfile_copy.txt") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>create_file</center></td>
+<td><p>create_file(2) :</p>
+<p>create_file(path, is_folder) create a file (if is_folder is false or does not exist) or folder (if is_folder is true). If the parent of string based parameter path does not exist, the parent will be created. If the file can be created, this function returns true, otherwise, returns false. Examples are create_file("c:\\temp\\try1", true) (Windows) and create_file("testfile_copy.txt") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>delete_file</center></td>
+<td><p>delete_file(2) :</p>
+<p>delete_file(path, delete_children_in_folder) deletes a file or folder at string based parameter path. If it is a folder and the second parameter is true, all the files in the folder will be recursively deleted. The second parameter is optional. By default, it is false. If the file or folder can be deleted, this function returns true, otherwise, returns false. Examples are delete_file("c:\\temp\\try1", true) (Windows) and delete_file("testfile_copy.txt") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>dir</center></td>
+<td><p>dir(1) :</p>
+<p>print_file_list(path) (alias ls(path) or dir(path)) works like ls command in Linux or dir command in Windows. It print the information for the file or all the files in folder at string based path. It returns the number of entries that printed. If the path does not corresponds to an existing file or folder, it returns -1. Note that path is optional. By default it is current folder ("."). Examples are dir() (Windows) and ls("../testfile_copy.txt") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>fclose</center></td>
+<td><p>fclose(1) :</p>
+<p>fclose(fd) closes the file whose id is fd. If the fd is invalid, returns -1. Otherwise, returns 0.</p>
+</td>
+</tr>
+<tr>
+<td><center>feof</center></td>
+<td><p>feof(1) :</p>
+<p>feof(fd) identifies if it has been the end of a read mode file whose id is fd. If so, returns true. Otherwise, returns false. If fd is invalid, throws an exception.</p>
+</td>
+</tr>
+<tr>
+<td><center>fopen</center></td>
+<td><p>fopen(2) :</p>
+<p>fopen(path, mode) opens file at path to read or write and returns the file id number. It is similar to C and Matlab's same name function. However, only "r", "a", "w", "rb", "ab" and "wb" modes are supported. Examples are fopen("C:\\Temp\\Hello.dat", "ab") (Windows) and fopen("./hello.txt", "r") (Android).</p>
+<p>fopen(3) :</p>
+<p>fopen(path, mode, encoding) opens a text file at path using character set encoding to read or write and returns the file id number. Because only text file supports encoding, parameter mode can only be "r", "a" and "w". Examples are fopen("C:\\Temp\\Hello.txt", "a", "LATIN-1") (Windows) and fopen("./hello.txt", "r", "UTF-8") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>fprintf</center></td>
+<td><p>fprintf(2...) :</p>
+<p>printf(format_string, ...), sprintf(format_string, ...) and fprintf(fd, format_string, ...) work like corresponding C/C++ functions. Function printf prints formatted string constructed from format_string and other parameter values to output console, sprintf constructs a new string from format_string and other parameters, and returns the new string, fprintf prints the formated string from format_string and other parameter values to the text file whose id is fd. The format_string parameter supports integer (%d, %i, %x, etc), float (%e, %f, etc), character(%c), string(%s) etc. User can find detailed information for construction of a format string by reading C language manual for these functions. For example, printf("Hello world!%f", 3.14) will output "Hello world!3.140000" on the screen, sprintf("%c%d", "A", 9) returns "A9" (MFP does not support single character type, so single character is stored as a one-char string).</p>
+</td>
+</tr>
+<tr>
+<td><center>fread</center></td>
+<td><p>fread(4) :</p>
+<p>fread(fd, buffer, from, length) reads length number of bytes from file whose id is fd and stores the bytes in buffer starting from parameter from. Note that from and length must be non-negative and from + length should be no greater than buffer size. From and length are optional. If they do not exist, fread reads buffer size of bytes and fill the buffer. Buffer is also optional. If Buffer does not exist, fread returns a single byte. If fread find that it is end of the file before reading, returns -1. Otherwise, if using buffer, returns number of bytes that are read (if buffer is provided). If file does not exist, or is invalid or inaccessable, exception will be thrown. Examples are fread(1), fread(2, byte_buffer) and fread(2, byte_buffer, 3, 7).</p>
+</td>
+</tr>
+<tr>
+<td><center>freadline</center></td>
+<td><p>freadline(1) :</p>
+<p>freadline(fd) reads one line from text file whose id is fd. If before reading, freadline finds it is end of the file, it returns NULL. Otherwise, it returns the string based line excluding the change-line character(s) at the end.</p>
+</td>
+</tr>
+<tr>
+<td><center>fscanf</center></td>
+<td><p>fscanf(2) :</p>
+<p>scanf(format_string), sscanf(input_from, format_string) and fscanf(fd, format_string) work like corresponding C/C++ functions. Function scanf reads one line input from user, sscanf reads string based parameter input_from, and fscanf reads content from a file whose id is fd. The format_string parameter supports integer (%d, %i, %x, etc), float (%e, %f, etc), character(%c), string(%s) etc. User can find detailed information for construction of a format string by reading C language manual for these functions. Different from C language, these functions do not accept additional parameters to store read values. These functions simply return all the read values in an array. For example, sscanf("3Hello world!", "%d%c%c%s") will returns [3, "H", "e", "llo"] (MFP does not support single character type, so single character is stored as a one-char string).</p>
+</td>
+</tr>
+<tr>
+<td><center>fwrite</center></td>
+<td><p>fwrite(4) :</p>
+<p>fwrite(fd, buffer, from, length) writes length number of bytes to file whose id is fd. The data to write store in parameter buffer starting from parameter from. Note that from and length must be non-negative and from + length should be no greater than buffer size. From and length are optional. If they do not exist, fwrite writes whole buffer to file. Buffer can also be a single byte which means fwrite writes only 1 byte to file. If file does not exist, or is invalid or inaccessable, exception will be thrown. Examples are fwrite(1, 108), fwrite(2, byte_buffer) and fwrite(2, byte_buffer, 3, 7).</p>
+</td>
+</tr>
+<tr>
+<td><center>get_absolute_path</center></td>
+<td><p>get_absolute_path(1) :</p>
+<p>get_absolute_path(fd_or_path) returns a string value which is the absolute path of file either whose id number is fd_or_path (here fd_or_path is an integer) or whose relative path is fd_or_path (here fd_or_path is a string).</p>
+</td>
+</tr>
+<tr>
+<td><center>get_canonical_path</center></td>
+<td><p>get_canonical_path(1) :</p>
+<p>get_canonical_path(fd_or_path) returns a string value which is the canonical path (path which is absolute and does not rely on symbol link) of file either whose id number is fd_or_path (here fd_or_path is an integer) or whose relative path is fd_or_path (here fd_or_path is a string).</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_last_modified_time</center></td>
+<td><p>get_file_last_modified_time(1) :</p>
+<p>get_file_last_modified_time(path) returns the last modified time of the file or folder corresponding to a string based path. The time is measured by the number of milliseconds since midnight on January 1st, 1970. If path does not exist or the file is not accessable, returns -1.</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_path</center></td>
+<td><p>get_file_path(1) :</p>
+<p>get_file_path(fd) returns a string value which is the path of file whose id number is fd.</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_separator</center></td>
+<td><p>get_file_separator(0) :</p>
+<p>get_file_separator() returns the seperator used in path. In Windows it returns string "\\". In Linux or Android it returns string "/".</p>
+</td>
+</tr>
+<tr>
+<td><center>get_file_size</center></td>
+<td><p>get_file_size(1) :</p>
+<p>get_file_size(path) returns the size of the file corresponding to a string based path. If path does not corresponds to a file, or the file does not exist or the file is not accessable, returns -1.</p>
+</td>
+</tr>
+<tr>
+<td><center>get_working_dir</center></td>
+<td><p>get_working_dir(0) :</p>
+<p>get_working_dir() (with alias pwd()) return string based current directory.</p>
+</td>
+</tr>
+<tr>
+<td><center>is_directory</center></td>
+<td><p>is_directory(1) :</p>
+<p>is_directory(path) identifies if the file (or folder) at string based parameter path is a directory or not. If it exists and is a directory the function returns true, otherwise false. Examples are is_directory("E:\\") (Windows) and is_directory("/home/tony/Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_executable</center></td>
+<td><p>is_file_executable(1) :</p>
+<p>is_file_executable(path) identifies if the file (or folder) at string based parameter path is executable or not. If it exists and is executable the function returns true, otherwise false. Examples are is_file_executable("E:\\") (Windows) and is_file_executable("/home/tony/Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_existing</center></td>
+<td><p>is_file_existing(1) :</p>
+<p>is_file_existing(path) identifies if the file (or folder) at string based parameter path exists or not. If exists it returns true, otherwise false. Examples are is_file_existing("E:\\") (Windows) and is_file_existing("/home/tony/Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_hidden</center></td>
+<td><p>is_file_hidden(1) :</p>
+<p>is_file_hidden(path) identifies if the file (or folder) at string based parameter path is hidden or not. If it exists and is hidden the function returns true, otherwise false. Examples are is_file_hidden("E:\\") (Windows) and is_file_hidden("/home/tony/Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_normal</center></td>
+<td><p>is_file_normal(1) :</p>
+<p>is_file_normal(path) identifies if the file (or folder) at string based parameter path is a normal file (not a folder) or not. If it exists and is a normal file the function returns true, otherwise false. Examples are is_file_normal("E:\\") (Windows) and is_file_normal("/home/tony/Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_readable</center></td>
+<td><p>is_file_readable(1) :</p>
+<p>is_file_readable(path) identifies if the file (or folder) at string based parameter path is readable or not. If it exists and is readable the function returns true, otherwise false. Examples are is_file_readable("E:\\") (Windows) and is_file_readable("/home/tony/Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_file_writable</center></td>
+<td><p>is_file_writable(1) :</p>
+<p>is_file_writable(path) identifies if the file (or folder) at string based parameter path is writable or not. If it exists and is writable the function returns true, otherwise false. Examples are is_file_writable("E:\\") (Windows) and is_file_writable("/home/tony/Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_path_absolute</center></td>
+<td><p>is_path_absolute(1) :</p>
+<p>is_path_absolute(path) identifies if the string based path is an absolute path (i.e. not relative to current folder). If it is an absolute path the function returns true, otherwise false. Examples are is_path_absolute("E:\\temp") (Windows) and is_path_absolute("Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_path_parent</center></td>
+<td><p>is_path_parent(2) :</p>
+<p>is_path_parent(path1, path2) identifies if the string based path1 is the parent of string based path2. If it is returns true, otherwise false. Examples are is_path_parent("E:\\temp", "E:\\temp\\..\\temp\\test") (Windows) and is_path_parent(".", "Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_path_same</center></td>
+<td><p>is_path_same(2) :</p>
+<p>is_path_same(path1, path2) identifies if the string based path1 is actually the same as string based path2. If it is returns true, otherwise false. Examples are is_path_same("E:\\temp", "E:\\temp\\..\\temp\\") (Windows) and is_path_parent("/home/tony/Documents", "Documents/") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>is_symbol_link</center></td>
+<td><p>is_symbol_link(1) :</p>
+<p>is_symbol_link(path) identifies if the file (or folder) at string based parameter path is a symbol link or not. If it exists and is a symbol link the function returns true, otherwise false. Examples are is_symbol_link("E:\\") (Windows) and is_symbol_link("/home/tony/Documents/cv.pdf") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>list_files</center></td>
+<td><p>list_files(1) :</p>
+<p>list_files(path) returns all the file names in the folder whose path is the string based parameter path, or it returns the file at path if path corresponds to a file. If the path does not correspond to a file or folder, it returns NULL. Note that parameter path is optional. By default it is current folder ("."). Examples are list_files("c:\\temp\\try1") (Windows) and list_files("../testfile_copy.txt") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>ls</center></td>
+<td><p>ls(1) :</p>
+<p>print_file_list(path) (alias ls(path) or dir(path)) works like ls command in Linux or dir command in Windows. It print the information for the file or all the files in folder at string based path. It returns the number of entries that printed. If the path does not corresponds to an existing file or folder, it returns -1. Note that path is optional. By default it is current folder ("."). Examples are dir() (Windows) and ls("../testfile_copy.txt") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>move_file</center></td>
+<td><p>move_file(3) :</p>
+<p>move_file(source, destination, replace_exist) moves file or folder whose path is string source to file or INTO (not to) folder whose path is string destination. If the 3rd parameter, replace_exist, is true, then source file (or any file in source folder) will replace destination file (or corresponding file in destination folder) if corresponding file exists. Note that the 3rd parameter is optional. By default it is false. Examples are move_file("c:\\temp\\try1", "D:\\", true) (Windows) and move_file("/mnt/sdcard/testfile.txt", "./testfile_copy.txt") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>print_file_list</center></td>
+<td><p>print_file_list(1) :</p>
+<p>print_file_list(path) (alias ls(path) or dir(path)) works like ls command in Linux or dir command in Windows. It print the information for the file or all the files in folder at string based path. It returns the number of entries that printed. If the path does not corresponds to an existing file or folder, it returns -1. Note that path is optional. By default it is current folder ("."). Examples are dir() (Windows) and ls("../testfile_copy.txt") (Android).</p>
+</td>
+</tr>
+<tr>
+<td><center>pwd</center></td>
+<td><p>pwd(0) :</p>
+<p>get_working_dir() (with alias pwd()) return string based current directory.</p>
+</td>
+</tr>
+<tr>
+<td><center>set_file_last_modified_time</center></td>
+<td><p>set_file_last_modified_time(2) :</p>
+<p>set_file_last_modified_time(path, time) sets the last modified time of the file or folder corresponding to a string based path to be time. Here time is measured by the number of milliseconds since midnight on January 1st, 1970. If path does not exist or the file is not accessable, returns false. Otherwise, returns true. Examples are set_file_last_modified_time("C:\\Temp\\Hello\\", 99999999) (Windows) and set_file_last_modified_time("./hello.txt", 1111111111) (Android).</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

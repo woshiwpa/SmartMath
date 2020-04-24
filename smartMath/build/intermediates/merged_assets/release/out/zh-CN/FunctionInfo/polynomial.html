@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>可编程科学计算器帮助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">可编程科学计算器帮助：三角函数</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函数名</th>
+<th>函数帮助信息</th>
+</tr>
+<tr>
+<td><center>roots</center></td>
+<td><p>roots(1...) :</p>
+<p>函数roots(a, ...)返回一个多项式的根数列。如果a是一个实数或虚数数列，返回多项式a[0] * x**(N-1) + a[1] * x**(N-2) + ... + a[N-2] * x + a[N-1] = 0的根数列。如果a是一个单一的实数，此函数则必须拥有至少两个参数，返回多项式a * x**(number_of_optional_params) + optional_params[0] * x**(number_of_optional_params - 1) + ... + optional_params[number_of_optional_params - 2] * x + optional_params[number_of_optional_params - 1] = 0的根数列。</p>
+<p>需要注意的是，如果该多项式次数大于等于4，根的计算是通过牛顿拉夫逊法给出的近似值。由于牛顿拉夫逊法需要迭代计算，运算时间会比较长（取决于设备的性能）。</p>
+<p>函数例子：</p>
+<p>如果要计算多项式3 * x**2 - 4 * x + 1 == 0的根，输入命令：roots([3, -4, 1])获得的结果是[1, 0.33333333]；</p>
+<p>如果要计算多项式(1+2i) * x**3 + (7-6i) * x**2 + 0.54 * x - 4.31 - 9i == 0的根，输入命令：roots(1+2i, 7-6i, 0.54, -4.31-9i)获得的结果是[0.79288607 + 3.9247084 * i, -0.56361748 - 0.78399569 * i, 0.7707314 + 0.85928729 * i]。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

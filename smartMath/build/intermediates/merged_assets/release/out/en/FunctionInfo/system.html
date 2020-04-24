@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Scientific Calculator Plus Help</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">Scientific Calculator Plus Help : system functions</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>Function name</th>
+<th>Function info</th>
+</tr>
+<tr>
+<td><center>input</center></td>
+<td><p>input(2) :</p>
+<p>input(prompt,input_type) prints string prompt on the console and waiting for user to input. The second parameter, input_type, is optional. At this stage only if the second parameter exists and it is string "s" or "S", user's input is looked on as a string and this function returns the string. Otherwise, input is treated as an expression and this function returns the value of the expression. If input is not a valid expression, this functions will reprint the prompt and wait for user to input again. An input is finished by press ENTER key. If multiple lines are input, only the first line is read. For example, user runs input("$", "S"), then types 4 + 3 after prompt, presses ENTER, this function returns a string "4 + 3". If user runs input("%"), then type 4 + 3 after prompt, presses ENTER, this function returns 7.</p>
+</td>
+</tr>
+<tr>
+<td><center>pause</center></td>
+<td><p>pause(1) :</p>
+<p>pause(message) suspends current running program waiting for an enter input by user. Message, which is a string and is optional, will be printed on screen as a prompt if provided.</p>
+</td>
+</tr>
+<tr>
+<td><center>print</center></td>
+<td><p>print(1) :</p>
+<p>print(x) prints the value of x to output, x can be any value type.</p>
+</td>
+</tr>
+<tr>
+<td><center>printf</center></td>
+<td><p>printf(1...) :</p>
+<p>printf(format_string, ...), sprintf(format_string, ...) and fprintf(fd, format_string, ...) work like corresponding C/C++ functions. Function printf prints formatted string constructed from format_string and other parameter values to output console, sprintf constructs a new string from format_string and other parameters, and returns the new string, fprintf prints the formated string from format_string and other parameter values to the text file whose id is fd. The format_string parameter supports integer (%d, %i, %x, etc), float (%e, %f, etc), character(%c), string(%s) etc. User can find detailed information for construction of a format string by reading C language manual for these functions. For example, printf("Hello world!%f", 3.14) will output "Hello world!3.140000" on the screen, sprintf("%c%d", "A", 9) returns "A9" (MFP does not support single character type, so single character is stored as a one-char string).</p>
+</td>
+</tr>
+<tr>
+<td><center>scanf</center></td>
+<td><p>scanf(1) :</p>
+<p>scanf(format_string), sscanf(input_from, format_string) and fscanf(fd, format_string) work like corresponding C/C++ functions. Function scanf reads one line input from user, sscanf reads string based parameter input_from, and fscanf reads content from a file whose id is fd. The format_string parameter supports integer (%d, %i, %x, etc), float (%e, %f, etc), character(%c), string(%s) etc. User can find detailed information for construction of a format string by reading C language manual for these functions. Different from C language, these functions do not accept additional parameters to store read values. These functions simply return all the read values in an array. For example, sscanf("3Hello world!", "%d%c%c%s") will returns [3, "H", "e", "llo"] (MFP does not support single character type, so single character is stored as a one-char string).</p>
+</td>
+</tr>
+<tr>
+<td><center>sleep</center></td>
+<td><p>sleep(1) :</p>
+<p>sleep(x) suspends processing for positive real value x milliseconds. It returns nothing.</p>
+</td>
+</tr>
+<tr>
+<td><center>system</center></td>
+<td><p>system(1) :</p>
+<p>system(str) runs a system command str and returns the value that the system command returns. Note that the command should be an executable file with its parameters. Like system("dir") in windows cannot be executed because dir is an internal function of cmd.exe. User should use system("cmd /c dir") instead. Also note that at this stage, user can only see any output from the running command but cannot input to the system command. If the command does not exist, throws an exception.</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

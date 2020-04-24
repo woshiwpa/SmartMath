@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>程式開發科學計算器幫助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">程式開發科學計算器幫助：運算式和積分函數</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函數名</th>
+<th>函數幫助資訊</th>
+</tr>
+<tr>
+<td><center>evaluate</center></td>
+<td><p>evaluate(1...) :</p>
+<p> evaluate(expr_string,var_string1,var_value1,var_string2,var_value2, ...) 返回當基於字串的變數var_string1等於var_value1，var_string2等於var_value2，...時，基於字串的表達式expr_string的值。註意變數var_string1，var_string2，...的值可以為任意類型。變數的數目可以為0，也就是說，evaluate("3+2")是合法的。</p>
+</td>
+</tr>
+<tr>
+<td><center>integrate</center></td>
+<td><p>integrate(2) :</p>
+<p> integrate(x,y)返回基於變數y的表達式x的不定積分，表達式x和變數y均為字串。註意如果表達式x不存在不定積分，或者x過於復雜無法解出其不定積分，本函數程式將會拋出異常。</p>
+<p>integrate(4) :</p>
+<p> integrate(x,y,z,w)返回表達式x在變數y從z到w的積分值。表達式x和變數y均為字串，z和w可以為實數，復數或字串。註意本函數程式采用的積分算法是自適應Gauss-Kronrod積分法。</p>
+<p>integrate(5) :</p>
+<p> integrate(x,y,z,w,v)返回表達式x相對於變數y從w到z的積分。計算時每一步步長為(w-z)/v。表達式x和變數y均為字串，z和w可以為實數，復數或字串，v必須為正整數。註意如果v是0，則相當於執行integrate(x,y,z,w)。</p>
+</td>
+</tr>
+<tr>
+<td><center>lim</center></td>
+<td><p>lim(3) :</p>
+<p> lim(expr, var, dest_value)用於計算表達式expr在變數var趨近於dest_value時的值。expr和var必須為字串，dest_value為表達式或者數值，可以基於字串，也可以不基於字串。比如，lim("1/x", "x", 0)或者lim("(x+2)/(x+3)","x","3+0")。註意這個函數程式還在開發中。</p>
+</td>
+</tr>
+<tr>
+<td><center>product_over</center></td>
+<td><p>product_over(3) :</p>
+<p> 函數程式product_over(x, y, z)計算基於字串的表達式x中的變數取值從整數y逐步變化到整數z的值的乘積。y和z必須是字串的形式，其中，y必須寫成一個賦值表達式，比如"a=10"，這裏，a是變數名。本函數程式的一個例子為product_over("x+1", "x=1", "10")。</p>
+</td>
+</tr>
+<tr>
+<td><center>sum_over</center></td>
+<td><p>sum_over(3) :</p>
+<p>	函數程式sum_over(x, y, z)計算基於字串的表達式x中的變數取值從整數y逐步變化到整數z的值的總合。y和z必須是字串的形式，其中，y必須寫成一個賦值表達式，比如"a=10"，這裏，a是變數名。本函數程式的一個例子為sum_over("x+1", "x=1", "10")。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,1 @@
+[{"outputType":{"type":"BUNDLE_MANIFEST"},"apkData":{"type":"MAIN","splits":[],"versionCode":19,"versionName":"1.6.5.19","enabled":true,"outputFile":"smartMath-debug.apk","fullName":"debug","baseName":"debug","dirName":""},"path":"AndroidManifest.xml","properties":{"packageId":"com.cyzapps.SmartMath","split":"","minSdkVersion":"14"}}]

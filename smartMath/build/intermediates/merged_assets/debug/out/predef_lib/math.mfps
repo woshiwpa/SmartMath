@@ -1,0 +1,1121 @@
+Help
+	@language:
+	Function acosd(x) calculates degree based arccos value of x.
+	@end
+	@language:simplified_chinese
+	函数acosd(x)返回基于角度的x反余弦值。
+	@end
+	@language:traditional_chinese
+	函數acosd(x)返回基於角度的x反余弦值。
+	@end
+Endh
+Function acosd(Number_value)
+	Return toDeg(acos(Number_value))
+Endf
+
+Help
+	@language:
+	Function acosh(x) calculates inverse hyperbolic cos of x.
+	@end
+	@language:simplified_chinese
+	函数acosh(x)为双曲余弦函数的反函数。
+	@end
+	@language:traditional_chinese
+	函數acosh(x)為雙曲余弦函數的反函數。
+	@end
+Endh
+Function acosh(Number_value)
+	Return log(Number_value + pow(Number_value * Number_value - 1, 0.5))
+Endf
+
+Help
+	@language:
+	Function adj(x) calculates adjugate matrix of a 2D square matrix x.
+	@end
+	@language:simplified_chinese
+	函数adj(x)返回2维方阵x的伴随矩阵。
+	@end
+	@language:traditional_chinese
+	函數程式adj(x)返回2維方陣x的伴隨陣列。
+	@end
+Endh
+Function adj(minput)
+	variable sizeofm = size(minput)
+	if or(size(sizeofm) != [2], sizeofm[0] < 2, sizeofm[1] < 2, sizeofm[0] != sizeofm[1])
+		throw "need a 2D square matrix!"
+	endif
+	Variable moutput = alloc_array(sizeofm)
+
+	for variable idx0 = 0 to sizeofm[0] - 1
+		for variable idx1 = 0 to sizeofm[1] - 1
+			Variable mdetinput = alloc_array(sizeofm[0] - 1, sizeofm[1] - 1)
+			for variable idx2 = 0 to sizeofm[0] - 1
+				variable newidx2 = idx2
+				if (idx2 == idx0)
+					continue
+				elseif (idx2 > idx0)
+					newidx2 = idx2 - 1
+				endif
+				for variable idx3 = 0 to sizeofm[1] - 1
+					variable newidx3 = idx3
+					if (idx3 == idx1)
+						continue
+					elseif (idx3 > idx1)
+						newidx3 = idx3 - 1
+					endif
+					mdetinput[newidx2, newidx3] = minput[idx2, idx3]
+				next
+			next
+			variable cofactor4thiselem = det(mdetinput)
+			moutput[idx1, idx0] = (-1)**(idx0 + idx1) * cofactor4thiselem
+		next
+	next
+	return moutput
+endf
+
+Help
+	@language:
+	Function asind(x) calculates degree based arcsin value of x.
+	@end
+	@language:simplified_chinese
+	函数asind(x)返回基于角度的x反正弦值。
+	@end
+	@language:traditional_chinese
+	函數asind(x)返回基於角度的x反正弦值。
+	@end
+Endh
+Function asind(Number_value)
+	Return toDeg(asin(Number_value))
+Endf
+
+Help
+	@language:
+	Function asinh(x) calculates inverse hyperbolic sin of x.
+	@end
+	@language:simplified_chinese
+	函数asinh(x)为双曲正弦函数的反函数。
+	@end
+	@language:traditional_chinese
+	函數asinh(x)為雙曲正弦函數的反函數。
+	@end
+Endh
+Function asinh(Number_value)
+	Return log(Number_value + pow(Number_value * Number_value + 1, 0.5))
+Endf
+
+Help
+	@language:
+	Function atand(x) calculates degree based arctan value of x.
+	@end
+	@language:simplified_chinese
+	函数atand(x)返回基于角度的x反正切值。
+	@end
+	@language:traditional_chinese
+	函數atand(x)返回基於角度的x反正切值。
+	@end
+Endh
+Function atand(Number_value)
+	Return toDeg(atan(Number_value))
+Endf
+
+Help
+	@language:
+	Function atanh(x) calculates inverse hyperbolic tan of x.
+	@end
+	@language:simplified_chinese
+	函数atanh(x)为双曲正切函数的反函数。
+	@end
+	@language:traditional_chinese
+	函數atanh(x)為雙曲正切函數的反函數。
+	@end
+Endh
+Function atanh(Number_value)
+	Return log((1 + Number_value)/(1 - Number_value))/2
+Endf
+
+Help
+	@language:
+	Function avg(...) returns average value of an arbitary number of parameters.
+	@end
+	@language:simplified_chinese
+	函数avg(…)返回任意个数参数的平均值。
+@end
+	@language:traditional_chinese
+	函數avg(…)返回任意個數參數的平均值。
+	@end
+Endh
+Function avg(...)
+	If opt_argc < 1
+		Throw "Need at least one parameter!"
+	Endif
+	Variable avg_value
+	avg_value = 0
+	For variable index = 1 to opt_argc step 1
+		avg_value = avg_value + opt_argv[index - 1]
+	Next
+	Return avg_value/opt_argc
+Endf
+
+Help
+	@language:
+	Function cofactor(x) calculates cofactor matrix of a 2D square matrix x.
+	@end
+	@language:simplified_chinese
+	函数cofactor(x)返回2维方阵x的余因子矩阵。
+	@end
+	@language:traditional_chinese
+	函數程式cofactor(x)返回2維方陣x的余因子陣列。
+	@end
+Endh
+Function cofactor(minput)
+	variable sizeofm = size(minput)
+	if or(size(sizeofm) != [2], sizeofm[0] < 2, sizeofm[1] < 2, sizeofm[0] != sizeofm[1])
+		throw "need a 2D square matrix!"
+	endif
+	Variable moutput = alloc_array(sizeofm)
+
+	for variable idx0 = 0 to sizeofm[0] - 1
+		for variable idx1 = 0 to sizeofm[1] - 1
+			Variable mdetinput = alloc_array(sizeofm[0] - 1, sizeofm[1] - 1)
+			for variable idx2 = 0 to sizeofm[0] - 1
+				variable newidx2 = idx2
+				if (idx2 == idx0)
+					continue
+				elseif (idx2 > idx0)
+					newidx2 = idx2 - 1
+				endif
+				for variable idx3 = 0 to sizeofm[1] - 1
+					variable newidx3 = idx3
+					if (idx3 == idx1)
+						continue
+					elseif (idx3 > idx1)
+						newidx3 = idx3 - 1
+					endif
+					mdetinput[newidx2, newidx3] = minput[idx2, idx3]
+				next
+			next
+			variable cofactor4thiselem = det(mdetinput)
+			moutput[idx0, idx1] = (-1)**(idx0 + idx1) * cofactor4thiselem
+		next
+	next
+	return moutput
+endf
+
+Help
+	@language:
+	Function cosd(x) calculates cos value of x where x is a degree value.
+	@end
+	@language:simplified_chinese
+	函数cosd(x)返回角度数x的余弦值。
+	@end
+	@language:traditional_chinese
+	函數cosd(x)返回角度數x的余弦值。
+	@end
+Endh
+Function cosd(Number_value)
+	if and(ceil(Number_value/180.0) != Number_value/180.0, _
+			ceil(Number_value/90.0) == Number_value/90.0)
+		Return 0
+	else
+		Return cos(toRad(Number_value))
+	endif
+Endf
+
+Help
+	@language:
+	Function cosh(x) calculates hyperbolic cos of x.
+	@end
+	@language:simplified_chinese
+	函数cosh(x)为双曲余弦函数。
+	@end
+	@language:traditional_chinese
+	函數cosh(x)為雙曲余弦函數。
+	@end
+Endh
+Function cosh(Number_value)
+	Return (exp(Number_value)+exp(-Number_value))/2
+Endf
+
+Help
+	@language:
+	Function dprod calculates dot product of two vectors [x1, x2, ... xn] and [y1, y2, ... yn].
+	@end
+	@language:simplified_chinese
+	函数dprod用于计算两个向量 [x1, x2, ... xn]和[y1, y2, ... yn]的点乘值。
+	@end
+	@language:traditional_chinese
+	函數dprod用於計算兩個向量 [x1, x2, ... xn]和[y1, y2, ... yn]的點乘值。
+	@end
+Endh
+Function dprod(Vector1, Vector2)
+	Variable Vector1_size, Vector2_size
+	Vector1_size = size(Vector1)
+	Vector2_size = size(Vector2)
+	If Or(size(Vector1_size) != [1], size(Vector2_size) != [1])
+		Throw "Parameter must be vector!"
+	Elseif Vector1_size[0] != Vector2_size[0]
+		Throw "Parameter 1 must have the same length as parameter 2!"
+	Endif
+	Variable Return_value
+	Return_value = 0
+	For variable index = 0 to Vector1_size[0] - 1 step 1
+		Return_value = Return_value + Vector1[index] * Vector2[index]
+	next
+	Return Return_value
+Endf
+
+Help
+	@language:
+	Function fact(x) calculates factorial of a non-negative integer x.
+	@end
+	@language:simplified_chinese
+	函数fact(x)计算非负整数x的阶乘。
+	@end
+	@language:traditional_chinese
+	函數fact(x)計算非負整數x的階乘。
+	@end
+Endh
+Function fact(Number_value)
+	If Number_value < 0	// if parameter is not a positive integer
+		Throw "Invalid parameter range!"
+	Endif
+	
+	Number_value = round(Number_value)
+	Variable Return_value
+	Return_value = 1
+	For variable index = 2 to Number_value step 1
+		Return_value = index * Return_value
+	next
+	Return Return_value
+Endf
+
+Help
+	@language:
+	Function gavg(...) returns geometric mean value of an arbitary number of parameters.
+	@end
+	@language:simplified_chinese
+	函数gavg(…)返回任意个数参数的几何平均数值。
+	@end
+	@language:traditional_chinese
+	函數gavg(…)返回任意個數參數的幾何平均數值。
+	@end
+Endh
+Function gavg(...)
+	If opt_argc < 1
+		Throw "Need at least one parameter!"
+	Endif
+	Variable avg_value
+	avg_value = 1
+	For variable index = 1 to opt_argc step 1
+		avg_value = avg_value * opt_argv[index - 1]
+	Next
+	Return pow(avg_value, 1/opt_argc)
+Endf
+
+Help
+	@language:
+	Function havg(...) returns harmonic mean value of an arbitary number of parameters.
+	@end
+	@language:simplified_chinese
+	函数havg(…)返回任意个数参数的调和平均数值。
+	@end
+	@language:traditional_chinese
+	函數havg(…)返回任意個數參數的調和平均數值。
+	@end
+Endh
+Function havg(...)
+	If opt_argc < 1
+		Throw "Need at least one parameter!"
+	Endif
+	Variable avg_value
+	avg_value = 0
+	For variable index = 1 to opt_argc step 1
+		avg_value = avg_value + 1/opt_argv[index - 1]
+	Next
+	Return opt_argc/avg_value
+Endf
+
+Help
+	@language:
+	Function Is_Prime(x) is used to determine if a positive integer x(>=2) is a prime number or not. If x is not a positive integer or it is less than 2, return false.
+	@end
+	@language:simplified_chinese
+	函数Is_Prime(x)用于测定正整数x(>=2)是否为素数。如果x不是大于等于二的正整数，则返回false。
+	@end
+	@language:traditional_chinese
+	函數Is_Prime(x)用於測定正整數x(>=2)是否為素數。如果x不是大於等於二的正整數，則返回false。
+	@end
+Endh
+Function Is_Prime(Number_value)
+	If or(Number_value < 2, round(Number_value) != Number_value)	// if parameter is not a positive integer
+		Return false
+	Endif
+	
+	Variable Sqrt_number_value, index
+	Sqrt_number_value = pow(Number_value, 0.5)
+	index = 2
+	do
+		Variable value_over_index
+		value_over_index = floor(Number_value/index)
+		If and(Number_value != 2, (Number_value - value_over_index * index) == 0)
+			Return false
+		Endif
+		index = index + 1
+		If index > Sqrt_number_value
+			Break
+		Elseif index < Sqrt_number_value
+			Continue
+		Else	// index == Sqrt_number_value
+			Continue
+		Endif
+		index = index+2
+	Until false
+	Return true
+Endf
+
+Help
+	@language:
+	Function lg(x) returns e based log value of x.
+	@end
+	@language:simplified_chinese
+	函数lg(x)返回x的自然对数。
+	@end
+	@language:traditional_chinese
+	函數lg(x)返回x的自然對數。
+	@end
+Endh
+Function lg(x)
+	Return log(x)
+Endf
+
+Help
+	@language:
+	Function ln(x) returns e based log value of x.
+	@end
+	@language:simplified_chinese
+	函数ln(x)返回x的自然对数。
+	@end
+	@language:traditional_chinese
+	函數ln(x)返回x的自然對數。
+	@end
+Endh
+Function ln(x)
+	Return log(x)
+Endf
+
+Help
+	@language:
+	Function log10(x) returns 10 based log value of x.
+	@end
+	@language:simplified_chinese
+	函数log10(x)返回x以十为底的对数。
+	@end
+	@language:traditional_chinese
+	函數log10(x)返回x以十為底的對數。
+	@end
+Endh
+Function log10(x)
+	Return log(x)/log(10)
+Endf
+
+Help
+	@language:
+	Function log2(x) returns 2 based log value of x.
+	@end
+	@language:simplified_chinese
+	函数log2(x)返回x以2为底的对数。
+	@end
+	@language:traditional_chinese
+	函數log2(x)返回x以2為底的對數。
+	@end
+Endh
+Function log2(x)
+	Return log(x)/log(2)
+Endf
+
+Help
+	@language:
+	Function loge(x) returns e based log value of x.
+	@end
+	@language:simplified_chinese
+	函数loge(x)返回x的自然对数。
+	@end
+	@language:traditional_chinese
+函數loge(x)返回x的自然對數。
+	@end
+Endh
+Function loge(x)
+	Return log(x)
+Endf
+
+Help
+	@language:
+	Function max(...) returns maximum value of an arbitary number of parameters.
+	@end
+	@language:simplified_chinese
+	函数max(...)返回任意数目参数中的最大值。
+	@end
+	@language:traditional_chinese
+	函數max(...)返回任意數目參數中的最大值。
+	@end
+Endh
+Function max(...)
+	If opt_argc < 1
+		Throw "Need at least one parameter!"
+	Endif
+	Variable max_value
+	max_value = opt_argv[0]
+	For variable index = 1 to opt_argc - 1 step 1
+		If max_value < opt_argv[index]
+			max_value = opt_argv[index]
+		Endif
+	Next
+	Return max_value
+Endf
+
+Help
+	@language:
+	Function med(...) returns medium value of an arbitary number of parameters. If the number of parameters is even, returns average of the middle two 	parameters.
+	@end
+	@language:simplified_chinese
+	函数med(…)返回任意数目参数的中位数。如果参数的个数为偶数个，返回中间两个参数的平均值。
+	@end
+	@language:traditional_chinese
+	函數med(…)返回任意數目參數的中位數。如果參數的個數為偶數個，返回中間兩個參數的平均值。
+	@end
+Endh
+Function med(...)
+	If opt_argc < 1
+		Throw "Need at least one parameter!"
+	Endif
+	Variable sorted_argv
+	sorted_argv = quick_sort(true, opt_argv)
+	If ceil(opt_argc / 2) * 2 == opt_argc	// even
+		Return (sorted_argv[opt_argc / 2 - 1] + sorted_argv[opt_argc / 2])/2
+	Else
+		Return sorted_argv[floor(opt_argc / 2)]
+	Endif
+Endf
+
+Help
+	@language:
+	Function min(...) returns minimum value of an arbitary number of parameters.
+	@end
+	@language:simplified_chinese
+	函数min(...)返回任意数目参数中的最小值。
+	@end
+	@language:traditional_chinese
+	函數min(...)返回任意數目參數中的最小值。
+	@end
+Endh
+Function min(...)
+	If opt_argc < 1
+		Throw "Need at least one parameter!"
+	Endif
+	Variable min_value
+	min_value = opt_argv[0]
+	For variable index = 1 to opt_argc - 1 step 1
+		if min_value > opt_argv[index]
+			min_value = opt_argv[index]
+		Endif
+	Next
+	Return min_value
+Endf
+
+Help
+	@language:
+	Function nCr(x, y) calculates the number of y-combination of a set S which has x elements. Note that x, y are non-negative integer, x >= y.
+	@end
+	@language:simplified_chinese
+	函数nCr(x, y)计算有x个元素的集合S的k个元素组合的个数。注意x，y都是非负整数，x >= y。
+	@end
+	@language:traditional_chinese
+	函數程式nCr(x, y)計算有x個元素的集合S的k個元素組合的個數。註意x，y都是非負整數，x >= y。
+	@end
+Endh
+Function nCr(x, y)
+	if x < y
+		throw "The first parameter should be no smaller than the second one!"
+	elseif y < 0
+		throw "Parameter values should not be negative!"
+	endif
+	// comment the following line because x! might be too large to overflow integer.
+	//Return x!/y!/(x-y)!
+	variable return_value, larger_dividor
+	return_value = 1
+	if y > (x-y)
+		larger_dividor = y
+	else
+		larger_dividor = x-y
+	endif
+	for variable idx = x to larger_dividor+ 1 step -1
+		return_value = return_value * idx
+	next
+	for variable idx = x - larger_dividor to 2 step -1
+		return_value = return_value / idx
+	next
+	return return_value
+Endf
+
+Help
+	@language:
+	Function not(x) convert x to a boolean, then calculate not x.
+	@end
+	@language:simplified_chinese
+	函数not(x)将x转换为一个布尔值，然后返回x的否。
+	@end
+	@language:traditional_chinese
+	函數not(x)將x轉換為一個布爾值，然後返回x的否。
+	@end
+Endh
+Function not(number_value)
+	Return !number_value
+Endf
+
+Help
+	@language:
+	Function nPr(x, y) calculates the number of y-permutation of a set S which has x elements. Note that x, y are non-negative integer, x >= y.
+	@end
+	@language:simplified_chinese
+	函数nPr(x, y)计算有x个元素的集合S的k个元素排列的个数。注意x，y都是非负整数，x >= y。
+	@end
+	@language:traditional_chinese
+	函數程式nPr(x, y)計算有x個元素的集合S的k個元素置換的個數。註意x，y都是非負整數，x >= y。
+	@end
+Endh
+Function nPr(x, y)
+	if x < y
+		throw "The first parameter should be no smaller than the second one!"
+	elseif y < 0
+		throw "Parameter values should not be negative!"
+	endif
+	// comment the following line because x! might be too large to overflow integer.
+	//Return x!/(x-y)!
+	variable return_value
+	return_value = 1
+	for variable idx = x to x - y + 1 step -1
+		return_value = return_value * idx
+	next
+	return return_value
+Endf
+
+Help
+	@language:
+	Function quick_sort(desc, original_list) returns a sorted list of an arbitary number of
+	parameters. If desc is true (or 1), list elements are from largest to smallest,
+	otherwise (desc is false or 0), from smallest to largest. For example, quick_sort(1, [5,6,7,9,4])'s
+	result is [9,7,6,5,4] while quick_sort(0, [5,6,7,9,4]) is [4,5,6,7,9].
+	@end
+	@language:simplified_chinese
+	函数quick_sort(desc, original_list)将拥有至少一个元素的向量original_list排序并返回排序后的向量。如果desc是true或者1，按照从大到小排序，否则（false或者0）按照从小到大排序。比如，输入quick_sort(1, [5,6,7,9,4])得到[9,7,6,5,4]而输入quick_sort(0, [5,6,7,9,4])的结果是[4,5,6,7,9]。
+	@end
+	@language:traditional_chinese
+	函數程式quick_sort(desc, original_list)將擁有至少一個元素的向量original_list排序並返回排序後的向量。如果desc是true或者1，按照從大到小排序，否則（false或者0）按照從小到大排序。比如，輸入quick_sort(1, [5,6,7,9,4])得到[9,7,6,5,4]而輸入quick_sort(0, [5,6,7,9,4])的結果是[4,5,6,7,9]。
+	@end
+Endh
+Function quick_sort(desc, original_list)
+	Variable return_val, larger_array, smaller_array, larger_array_size, smaller_array_size
+	larger_array_size = 0
+	smaller_array_size = 0
+	Variable original_size, original_size1
+	If original_list == null
+		Return original_list
+	Endif
+	original_size = size(original_list)
+	original_size1 = original_size[0]
+	If original_size1 == 0
+		Return original_list
+	Elseif original_size1 == 1
+		set_array_elem(return_val, [0], original_list[0])
+		Return return_val
+	Else
+		For variable index = 1 to original_size1 -1 step 1
+			If original_list[index] > original_list[0]
+				set_array_elem(larger_array, [larger_array_size], original_list[index])
+				larger_array_size = larger_array_size + 1
+			Else
+				set_array_elem(smaller_array, [smaller_array_size], original_list[index])
+				smaller_array_size = smaller_array_size + 1
+			Endif
+		Next
+		larger_array = quick_sort(desc, larger_array)
+		smaller_array = quick_sort(desc, smaller_array)
+		If desc == TRUE
+			For variable index1 = 0 to larger_array_size - 1 step 1
+				set_array_elem(return_val, [index1], larger_array[index1])
+			Next
+			set_array_elem(return_val, [larger_array_size], original_list[0])
+			For variable index1 = 1 to smaller_array_size step 1
+				set_array_elem(return_val, [index1 + larger_array_size], smaller_array[index1 - 1])
+			Next
+		Else
+			For variable index1 = 0 to smaller_array_size - 1 step 1
+				set_array_elem(return_val, [index1], smaller_array[index1])
+			Next
+			set_array_elem(return_val, [smaller_array_size], original_list[0])
+			For variable index1 = 1 to larger_array_size step 1
+				set_array_elem(return_val, [index1 + smaller_array_size], larger_array[index1 - 1])
+			Next
+		Endif
+	Endif
+	Return return_val
+Endf
+
+Help
+	@language:
+	Function roots(a, ...) returns roots of a polynomial. If a is a list of real or complex numbers, this function should only have one parameter and return roots of a polynomial a[0] * x**(N-1) + a[1] * x**(N-2) + ... + a[N-2] * x + a[N-1] = 0. If a is a single value (real or complex), this function should have at least two parameters and return roots of a polynomial a * x**(number_of_optional_params) + optional_params[0] * x**(number_of_optional_params - 1) + ... + optional_params[number_of_optional_params - 2] * x + optional_params[number_of_optional_params - 1] = 0.
+	Note that if degree of the polynomial is equal to or larger than 4, Newton-Raphson method is used so that the roots are approximated values. Because of the iterations required by Newton-Raphson method, the calculation time will be long (depends on device's performance).
+	Examples of this function:
+	To get roots of polynomial 3 * x**2 - 4 * x + 1 == 0, type in command: roots([3, -4, 1]) and the result is [1, 0.33333333];
+	To get roots of polynomial (1+2i) * x**3 + (7-6i) * x**2 + 0.54 * x - 4.31 - 9i == 0, type in command: roots(1+2i, 7-6i, 0.54, -4.31-9i) and the result is [0.79288607 + 3.9247084 * i, -0.56361748 - 0.78399569 * i, 0.7707314 + 0.85928729 * i].
+	@end
+	@language:simplified_chinese
+	函数roots(a, ...)返回一个多项式的根数列。如果a是一个实数或虚数数列，返回多项式a[0] * x**(N-1) + a[1] * x**(N-2) + ... + a[N-2] * x + a[N-1] = 0的根数列。如果a是一个单一的实数，此函数则必须拥有至少两个参数，返回多项式a * x**(number_of_optional_params) + optional_params[0] * x**(number_of_optional_params - 1) + ... + optional_params[number_of_optional_params - 2] * x + optional_params[number_of_optional_params - 1] = 0的根数列。
+	需要注意的是，如果该多项式次数大于等于4，根的计算是通过牛顿拉夫逊法给出的近似值。由于牛顿拉夫逊法需要迭代计算，运算时间会比较长（取决于设备的性能）。
+	函数例子：
+	如果要计算多项式3 * x**2 - 4 * x + 1 == 0的根，输入命令：roots([3, -4, 1])获得的结果是[1, 0.33333333]；
+	如果要计算多项式(1+2i) * x**3 + (7-6i) * x**2 + 0.54 * x - 4.31 - 9i == 0的根，输入命令：roots(1+2i, 7-6i, 0.54, -4.31-9i)获得的结果是[0.79288607 + 3.9247084 * i, -0.56361748 - 0.78399569 * i, 0.7707314 + 0.85928729 * i]。
+	@end
+	@language:traditional_chinese
+	函數程式roots(a, ...)返回一個多項式的根數列。如果a是一個實數或虛數數列，返回多項式a[0] * x**(N-1) + a[1] * x**(N-2) + ... + a[N-2] * x + a[N-1] = 0的根數列。如果a是一個單一的實數，此函數程式則必須擁有至少兩個參數，返回多項式a * x**(number_of_optional_params) + optional_params[0] * x**(number_of_optional_params - 1) + ... + optional_params[number_of_optional_params - 2] * x + optional_params[number_of_optional_params - 1] = 0的根數列。
+	需要註意的是，如果該多項式次數大於等於4，根的計算是通過牛頓拉夫遜法給出的近似值。由於牛頓拉夫遜法需要叠代計算，運算時間會比較長（取決於設備的性能）。
+	函數程式例子：
+	如果要計算多項式3 * x**2 - 4 * x + 1 == 0的根，輸入命令：roots([3, -4, 1])獲得的結果是[1, 0.33333333]；
+	如果要計算多項式(1+2i) * x**3 + (7-6i) * x**2 + 0.54 * x - 4.31 - 9i == 0的根，輸入命令：roots(1+2i, 7-6i, 0.54, -4.31-9i)獲得的結果是[0.79288607 + 3.9247084 * i, -0.56361748 - 0.78399569 * i, 0.7707314 + 0.85928729 * i]。
+	@end
+Endh
+Function roots(param, ...)
+	variable params_list
+	if size(param) == []	// param is a single real or complex value
+		if opt_argc == 0
+			throw "Need at least two parameters!"
+		endif
+		set_array_elem(params_list, [0], param)
+		for variable idx = 0 to opt_argc - 1 step 1
+			set_array_elem(params_list, [idx + 1], opt_argv[idx])
+		next
+	else	// param is a list real or complex values
+		if opt_argc != 0
+			throw "Need only one parameter!"
+		endif
+		params_list = param
+	endif
+	// return roots_external(params_list)	// we can call either roots_external (the following predefined function)
+	return roots_internal(params_list)	// or roots_internal ( a built-in function which runs faster).
+Endf
+
+Function roots_external(param, ...)
+	variable params_list
+	if size(param)[0] == 0	// param is a single real or complex value
+		if opt_argc == 0
+			throw "Need at least two parameters!"
+		endif
+		set_array_elem(params_list, [0], param)
+		for variable idx = 0 to opt_argc - 1 step 1
+			set_array_elem(params_list, [idx + 1], opt_argv[idx])
+		next
+	else	// param is a list real or complex values
+		if opt_argc != 0
+			throw "Need only one parameter!"
+		endif
+		params_list = param
+	endif
+	
+	if or(size(size(params_list))[0] != 1, size(params_list)[0] < 2)
+		throw "Cannot construct a polynomial!"
+	endif
+	variable param_number, nonzero_start
+	param_number = size(params_list)[0]
+	nonzero_start = 0
+	for variable idx = 0 to param_number - 1 step 1
+		if params_list[idx] == 0
+			nonzero_start = idx + 1
+		else
+			break
+		endif
+	next
+	if nonzero_start >= param_number - 1
+		throw "Invalid polynomial!"
+	endif
+	variable roots_list
+	select param_number - 1 - nonzero_start
+	case 1
+		// ax + b = 0
+		set_array_elem(roots_list, [0], -params_list[param_number - 1]/params_list[param_number - 2])
+		break
+	case 2
+		// ax**2 + bx + c = 0
+		variable a, b, c, sqrt_b2_4ac
+		a = params_list[param_number - 3]
+		b = params_list[param_number - 2]
+		c = params_list[param_number - 1]
+		sqrt_b2_4ac = pow(b**2 - 4*a*c, 0.5)
+		if c == 0
+			set_array_elem(roots_list, [0], 0)
+			set_array_elem(roots_list, [1], -b/a)
+		else
+			set_array_elem(roots_list, [0], (-b + sqrt_b2_4ac)/2/a)
+			set_array_elem(roots_list, [1], (-b - sqrt_b2_4ac)/2/a)
+		endif
+		break
+	case 3
+		// ax**3 + bx**2 + cx + d = 0
+		variable a, b, c, d, delta, big_A, big_B, big_C
+		a = params_list[param_number - 4]
+		b = params_list[param_number - 3]
+		c = params_list[param_number - 2]
+		d = params_list[param_number - 1]
+		big_A = b**2 - 3 * a * c
+		big_B = b * c - 9 * a * d
+		big_C = c**2 - 3 * b * d
+		delta = big_B**2 - 4 * big_A * big_C
+		if and(big_A == big_B, big_A == 0)
+			set_array_elem(roots_list, [0], -b/3/a)
+			set_array_elem(roots_list, [1], -b/3/a)
+			set_array_elem(roots_list, [2], -b/3/a)
+		elseif delta == 0
+			set_array_elem(roots_list, [0], -b/a + big_B/big_A)
+			set_array_elem(roots_list, [1], -0.5 * big_B/big_A)
+			set_array_elem(roots_list, [2], -0.5 * big_B/big_A)
+		else
+			variable Y1, Y2, X1, X2, X3
+			Y1 = big_A * b + 3 * a * (-big_B + pow(delta, 0.5))/2
+			Y1 = pow(Y1, 1/3)
+			Y2 = big_A * b + 3 * a * (-big_B - pow(delta, 0.5))/2
+			Y2 = pow(Y2, 1/3)
+			Variable selected_X1, selected_X2, selected_X3, min_abs_YX
+			min_abs_YX = -1
+			for variable idxY1 = 0 to 2 step 1
+				for variable idxY2 = 0 to 2 step 1
+					Variable Y1_rotated, Y2_rotated, YX1, YX2, YX3, abs_YX
+					if idxY1 == 0
+						Y1_rotated = Y1
+					elseif idxY1 == 1
+						Y1_rotated = Y1 * (-1/2 + sqrt(3) * 0.5i)
+					else	// idxY1 == 2
+						Y1_rotated = Y1 * (-1/2 - sqrt(3) * 0.5i)
+					endif
+					if idxY2 == 0
+						Y2_rotated = Y2
+					elseif idxY2 == 1
+						Y2_rotated = Y2 * (-1/2 + sqrt(3) * 0.5i)
+					else	// idxY2 == 2
+						Y2_rotated = Y2 * (-1/2 - sqrt(3) * 0.5i)
+					endif
+					X1 = (-b - (Y1_rotated + Y2_rotated))/3/a
+					X2 = (-b + 0.5 * (Y1_rotated + Y2_rotated) + sqrt(3) * 0.5i * (Y1_rotated - Y2_rotated))/3/a
+					X3 = (-b + 0.5 * (Y1_rotated + Y2_rotated) - sqrt(3) * 0.5i * (Y1_rotated - Y2_rotated))/3/a
+					YX1 = a * X1 ** 3 + b * X1 ** 2 + c * X1 + d
+					YX2 = a * X2 ** 3 + b * X2 ** 2 + c * X2 + d
+					YX3 = a * X3 ** 3 + b * X3 ** 2 + c * X3 + d
+					abs_YX = abs(YX1) + abs(YX2) + abs(YX3)
+					if or(min_abs_YX < 0, abs_YX < min_abs_YX)
+						min_abs_YX = abs_YX
+						selected_X1 = X1
+						selected_X2 = X2
+						selected_X3 = X3
+					endif
+				next
+			next
+			set_array_elem(roots_list, [0], selected_X1)
+			set_array_elem(roots_list, [1], selected_X2)
+			set_array_elem(roots_list, [2], selected_X3)
+		endif
+		break
+	default
+		variable x_real, x_image, y_value, y_last_value, num_tried_pnts, max_starting_pnts_try, max_iteration_steps, stop_threshold, root_found, root_avg, root_abs_avg
+		if params_list[param_number - 1] == 0
+			x_real = x_image = 0
+		else
+			y_last_value = 0
+			max_starting_pnts_try = 8
+			max_iteration_steps = 100
+			stop_threshold = 1E-8
+			root_found = FALSE
+			root_avg = params_list[nonzero_start + 1]/params_list[nonzero_start]/(param_number - 1)
+			root_abs_avg = abs(pow(params_list[param_number - 1]/params_list[nonzero_start], 1/(param_number - 1)))
+			root_abs_avg = max(root_abs_avg, abs(root_avg))
+			x_real = real(root_avg)
+			x_image = image(root_avg)
+			num_tried_pnts = 0
+			do
+				// try to use Newton Raphson method to find roots
+				variable idx
+				for idx = 0 to max_iteration_steps step 1
+					y_value = 0
+					for variable idx1 = nonzero_start to param_number - 1 step 1
+						y_value = y_value + params_list[idx1] * (x_real + i * x_image) ** (param_number - 1 - idx1)
+					next
+					if abs(y_value) < stop_threshold	//find root
+						root_found = TRUE
+						break
+					else
+						variable y_dash_value
+						y_dash_value = 0
+						for variable idx1 = nonzero_start to param_number - 2 step 1
+							y_dash_value = y_dash_value + params_list[idx1] * (param_number - 1 - idx1) * (x_real + i * x_image) ** (param_number - 2 - idx1)
+						next
+						if y_dash_value != 0
+							if mod(idx,2) == 0
+								x_real = x_real - y_value/y_dash_value
+							else
+								x_image = x_image + y_value/y_dash_value
+							endif
+						else
+							break	// have to change to another starting point
+						endif
+						variable new_x_real
+						new_x_real = real(x_real + i * x_image)
+						x_image = image(x_real + i * x_image)
+						x_real = new_x_real
+					endif
+				next
+				if root_found
+					break
+				endif
+				variable radius_4_new_x, degree_4_new_x
+				radius_4_new_x = rand() * root_abs_avg
+				degree_4_new_x = rand() * 360
+				x_real = real(root_avg) + radius_4_new_x * cosd(degree_4_new_x)
+				x_image = image(root_avg) + radius_4_new_x * cosd(degree_4_new_x)
+				num_tried_pnts = num_tried_pnts + 1
+			until num_tried_pnts >= max_starting_pnts_try
+			if !root_found
+				throw "Cannot find a root!"
+			endif
+		endif
+		// now we get one root which is x_value
+		variable x_value, new_params_list, last_param
+		x_value = x_real + i * x_image
+		last_param = 0
+		for idx = nonzero_start to param_number - 2 step 1
+			set_array_elem(new_params_list, [idx - nonzero_start], params_list[idx] + x_value * last_param)
+			last_param = new_params_list[idx - nonzero_start]
+		next
+		set_array_elem(roots_list, [0], x_value)
+		variable new_roots
+		new_roots = roots(new_params_list)
+		for idx = 0 to size(new_roots)[0] - 1 step 1
+			set_array_elem(roots_list, [idx + 1], new_roots[idx])
+		next
+	ends
+	return roots_list
+Endf
+
+Help
+	@language:
+	Function sind(x) calculates sin value of x where x is a degree value.
+	@end
+	@language:simplified_chinese
+	函数sind(x)返回角度数x的正弦值。
+	@end
+	@language:traditional_chinese
+	函數sind(x)返回角度數x的正弦值。
+	@end
+Endh
+Function sind(Number_value)
+	if ceil(Number_value/180.0) == Number_value/180.0
+		Return 0
+	else
+		Return sin(toRad(Number_value))
+	endif
+Endf
+
+Help
+	@language:
+	Function sinh(x) calculates hyperbolic sin of x.
+	@end
+	@language:simplified_chinese
+	函数sinh(x)返回x的双曲正弦值。
+	@end
+	@language:traditional_chinese
+	函數sinh(x)返回x的雙曲正弦值。
+	@end
+Endh
+Function sinh(Number_value)
+	Return (exp(Number_value)-exp(-Number_value))/2
+Endf
+
+Help
+	@language:
+	Function sqrt(x) returns square root of real number x.
+	@end
+	@language:simplified_chinese
+	函数sqrt(x)返回实数x的平方根值。
+	@end
+	@language:traditional_chinese
+	函數sqrt(x)返回實數x的平方根值。
+	@end
+Endh
+Function sqrt(x)
+	//If x < 0
+	//	Throw "parameter should be non-negative!"
+	//Endif
+	Return pow(x,0.5)
+Endf
+
+Help
+	@language:
+	Function stdev(...) returns standard deviation of an arbitary number of parameters.
+	Note that the parameters are a sample of a larger set.
+	@end
+	@language:simplified_chinese
+	函数stdev(…)返回任意个数参数的标准差，注意这些参数是一个大的集合中的采样。
+	@end
+	@language:traditional_chinese
+	函數stdev(…)返回任意個數參數的標準差，註意這些參數是一個大的集合中的采樣。
+	@end
+Endh
+Function stdev(...)
+	If opt_argc < 2
+		Throw "Need at least two parameter!"
+	Endif
+	Variable avg_value, avg_square
+	avg_value = 0
+	avg_square = 0
+	For variable index = 1 to opt_argc step 1
+		avg_value = avg_value + opt_argv[index - 1]
+		avg_square = avg_square + opt_argv[index - 1] * opt_argv[index - 1]
+	Next
+	avg_value = avg_value/opt_argc
+	avg_square = avg_square/opt_argc
+	Return sqrt(opt_argc/(opt_argc - 1) * (avg_square - avg_value ** 2))
+Endf
+
+Help
+	@language:
+	Function stdevp(...) returns standard deviation of an arbitary number of parameters.
+	@end
+	@language:simplified_chinese
+	函数stdevp(…)返回任意个数参数的标准差。
+	@end
+	@language:traditional_chinese
+	函數stdevp(…)返回任意個數參數的標準差。
+	@end
+Endh
+Function stdevp(...)
+	If opt_argc < 1
+		Throw "Need at least one parameter!"
+	Endif
+	Variable avg_value, avg_square
+	avg_value = 0
+	avg_square = 0
+	For variable index = 1 to opt_argc step 1
+		avg_value = avg_value + opt_argv[index - 1]
+		avg_square = avg_square + opt_argv[index - 1] * opt_argv[index - 1]
+	Next
+	avg_value = avg_value/opt_argc
+	avg_square = avg_square/opt_argc
+	Return sqrt(avg_square - avg_value ** 2)
+Endf
+
+Help
+	@language:
+	Function sum(...) returns sum value of an arbitary number of parameters.
+	@end
+	@language:simplified_chinese
+	函数sum(…)返回任意个数参数的总合。
+	@end
+	@language:traditional_chinese
+	函數sum(…)返回任意個數參數的總合。
+	@end
+Endh
+Function sum(...)
+	If opt_argc < 1
+		Return 0
+	Endif
+	Variable sum_value
+	sum_value = 0
+	For variable index = 0 to opt_argc - 1 step 1
+		sum_value = sum_value + opt_argv[index]
+	Next
+	Return sum_value
+Endf
+
+Help
+	@language:
+	Function tand(x) calculates tan value of x where x is a degree value.
+	@end
+	@language:simplified_chinese
+	函数tand(x)返回角度数x的正切值。
+	@end
+	@language:traditional_chinese
+	函數tand(x)返回角度數x的正切值。
+	@end
+Endh
+Function tand(Number_value)
+	if ceil(Number_value/180.0) == Number_value/180.0
+		Return 0
+	elseif ceil(Number_value/90.0) == Number_value/90.0
+		Throw "Infinite value!"
+	else
+		Return tan(toRad(Number_value))
+	endif
+Endf
+
+Help
+	@language:
+	Function tanh(x) calculates hyperbolic tan of x.
+	@end
+	@language:simplified_chinese
+	函数tanh(x)用于计算x的双曲正切值。
+	@end
+	@language:traditional_chinese
+	函數tanh(x)用於計算x的雙曲正切值。
+	@end
+Endh
+Function tanh(Number_value)
+	Return (exp(Number_value)-exp(-Number_value))/(exp(Number_value)+exp(-Number_value))
+Endf
+
+Help
+	@language:
+	Function todeg(x) converts radian value x to degree value.
+	@end
+	@language:simplified_chinese
+	函数todeg(x)将弧度x转换为度数值。
+	@end
+	@language:traditional_chinese
+	函數todeg(x)將弧度x轉換為度數值。
+	@end
+Endh
+Function todeg(x)
+	Return x/pi*180
+Endf
+
+Help
+	@language:
+	Function torad(x) converts degree value x to radian value.
+	@end
+	@language:simplified_chinese
+	函数torad(x)将度数x转换为弧度值。
+	@end
+	@language:traditional_chinese
+	函數torad(x)將度數x轉換為弧度值。
+	@end
+Endh
+Function torad(x)
+	Return pi*x/180
+Endf
+
+Help
+	@language:
+	Function xor calculates xor(x, y), where x, y can be any value.
+	If x == y return false, else return true
+	@end
+	@language:simplified_chinese
+	函数xor计算x和y的异或值，x和y可以为任何数值。如果x不等于y，返回true。
+	@end
+	@language:traditional_chinese
+	函數xor計算x和y的異或值，x和y可以為任何數值。如果x不等於y，返回true。
+	@end
+Endh
+Function xor(Number_value1, Number_value2)
+	If Number_value1 == Number_value2
+		Return false
+	Else
+		Return true
+	Endif
+Endf
+
+

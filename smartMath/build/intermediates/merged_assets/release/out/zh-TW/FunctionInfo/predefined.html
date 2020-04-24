@@ -1,0 +1,376 @@
+<html>
+<head>
+<title>可編程科學計算器幫助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">可編程科學計算器幫助：預定義函數</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函數名</th>
+<th>函數幫助信息</th>
+</tr>
+<tr>
+<td><center>acosd</center></td>
+<td><p>acosd(1) :</p>
+<p>	函數acosd(x)為余弦函數的反函數，註意返回值為角度數。</p>
+</td>
+</tr>
+<tr>
+<td><center>acosh</center></td>
+<td><p>acosh(1) :</p>
+<p>	函數acosh(x)為雙曲余弦函數的反函數。</p>
+</td>
+</tr>
+<tr>
+<td><center>adj</center></td>
+<td><p>adj(1) :</p>
+<p> 函數程式adj(x)返回2維方陣x的伴隨陣列。</p>
+</td>
+</tr>
+<tr>
+<td><center>asind</center></td>
+<td><p>asind(1) :</p>
+<p>	函數asind(x)為正弦函數的反函數，註意返回值為角度數。</p>
+</td>
+</tr>
+<tr>
+<td><center>asinh</center></td>
+<td><p>asinh(1) :</p>
+<p>	函數asinh(x)為雙曲正弦函數的反函數。</p>
+</td>
+</tr>
+<tr>
+<td><center>atand</center></td>
+<td><p>atand(1) :</p>
+<p>	函數atand(x)為正切函數的反函數，註意返回值為角度數。</p>
+</td>
+</tr>
+<tr>
+<td><center>atanh</center></td>
+<td><p>atanh(1) :</p>
+<p>	函數atanh(x)為雙曲正切函數的反函數。</p>
+</td>
+</tr>
+<tr>
+<td><center>avg</center></td>
+<td><p>avg(0...) :</p>
+<p>	函數avg(…)返回任意個數參數的平均值。</p>
+</td>
+</tr>
+<tr>
+<td><center>cofactor</center></td>
+<td><p>cofactor(1) :</p>
+<p> 函數程式cofactor(x)返回2維方陣x的余因子陣列。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv</center></td>
+<td><p>conv(2) :</p>
+<p>conv(input_a, inputb)返回input_a和input_b的卷積。Input_a和input_b要麼都是一維向量，要麼都是二維矩陣。當前本函數程式僅僅支持一維和二維卷積，比如：</p>
+<p>conv([4,8,2,9],[5,3,8,9,6,7,8]) = [20, 52, 66, 151, 139, 166, 181, 132, 79, 72]</p>
+<p>conv([[4,8,2,9],[8,6,7,9],[2,2,8,-4]],[[-5,i,7],[0.6,8,4]]) = [[-20, -40 + 4 * i, 18 + 8 * i, 11 + 2 * i, 14 + 9 * i, 63], [-37.6, 6.8 + 8 * i, 102.2 + 6 * i, 50.4 + 7 * i, 129 + 9 * i, 99], [-5.2, 57.6 + 2 * i, 58.2 + 2 * i, 119.4 + 8 * i, 156 - 4 * i, 8], [1.2, 17.2, 28.8, 69.6, 0, -16]]</p>
+</td>
+</tr>
+<tr>
+<td><center>convert_unit</center></td>
+<td><p>convert_unit(3) :</p>
+<p> 函數convert_unit(value, from_unit, to_unit)將基於某一個單位的數值轉換為基於另外一個單位的數值。第一個參數是將要轉換的數值，第二個參數是將被轉換的單位（單位是一個對大小寫敏感的字串），第三個參數是轉換後的單位（單位是一個對大小寫敏感的字串）。比如，convert_unit(23.71, "m", "km")。</p>
+<p> 本函數支持以下單位：</p>
+<p> 1. 長度單位: "um" (微米), "mm" (毫米), "cm" (厘米), "m" (米), "km" (公里), "in" (英寸), "ft" (英尺), "yd" (碼), "mi" (英里), "nmi" (海浬), "AU" (天文單位), "ly" (光年), "pc" (秒差距);</p>
+<p> 2. 面積單位: "mm2" (平方毫米), "cm2" (平方厘米), "m2" (平方米), "ha" (公頃), "km2" (平方公里), "sq in" (平方英寸), "sq ft" (平方英尺), "sq yd" (平方碼), "ac" (英畝), "sq mi" (平方英里);</p>
+<p> 3. 體積單位: "mL" (毫升), "L" (升), "m3" (立方米), "cu in" (立方英寸), "cu ft" (立方英尺), "cu yd" (立方碼), "km3" (立方公里), "fl oz(Imp)" (液盎司(英制)), "pt(Imp)" (品脫(英制)), "gal(Imp)" (加侖(英制)), "fl oz(US)" (液盎司(美制)), "pt(US)" (品脫(美制)), "gal(US)" (加侖(美制));</p>
+<p> 4. 質量單位: "ug" (微克), "mg" (毫克), "g" (克), "kg" (千克), "t" (噸), "oz" (盎司), "lb" (磅), "jin" (市斤), "jin(HK)" (斤(香港)), "jin(TW)" (臺斤);</p>
+<p> 5. 速度單位: "m/s" (米每秒), "km/h" (千米每小時), "ft/s" (英尺每秒), "mph" (英里每小時), "knot" (節);</p>
+<p> 6. 時間單位: "ns" (納秒), "us" (微秒), "ms" (毫秒), "s" (秒), "min" (分鐘), "h" (小時), "d" (天), "wk" (禮拜), "yr" (年);</p>
+<p> 7. 力單位: "N" (牛頓), "kgf" (千克力), "lbF" (磅力);</p>
+<p> 8. 壓強單位: "Pa" (帕斯卡), "hPa" (百帕), "kPa" (千帕), "MPa" (兆帕), "atm" (大氣壓), "psi" (每平方英寸上受到的磅力壓力), "Torr" (毫米汞柱);</p>
+<p> 9. 能量單位: "J" (焦耳), "kJ" (千焦), "MJ" (兆焦), "kWh" (千瓦時), "cal" (卡路里), "kcal" (千卡), "BTU" (英熱單位);</p>
+<p> 10. 功率單位: "W" (瓦特), "kW" (千瓦), "MW" (兆瓦), "cal/s" (卡路里每秒), "BTU/h" (英熱單位每小時), "hp" (馬力);</p>
+<p> 11. 溫度單位: "0C" (攝氏度), "0F" (華氏度), "K" (開氏溫標);</p>
+</td>
+</tr>
+<tr>
+<td><center>cosd</center></td>
+<td><p>cosd(1) :</p>
+<p>	函數cosd(x)返回角度數x的余弦值。</p>
+</td>
+</tr>
+<tr>
+<td><center>cosh</center></td>
+<td><p>cosh(1) :</p>
+<p>	函數cosh(x)為雙曲余弦函數。</p>
+</td>
+</tr>
+<tr>
+<td><center>dprod</center></td>
+<td><p>dprod(2) :</p>
+<p>	函數dprod用於計算兩個向量 [x1, x2, ... xn]和[y1, y2, ... yn]的點乘值。</p>
+</td>
+</tr>
+<tr>
+<td><center>fact</center></td>
+<td><p>fact(1) :</p>
+<p>	函數fact(x)計算非負整數x的階乘。</p>
+</td>
+</tr>
+<tr>
+<td><center>FFT</center></td>
+<td><p>FFT(1...) :</p>
+<p>	FFT(a, ...)返回對一個數值向量作快速傅立葉變換後的值。註意數值向量中數值的個數必須是2的整數次方。如果參數a是一個數值序列，則本函數程式只可能擁有一個參數，返回值為對序列a[0], a[1], ..., a[N-1]作快速傅立葉變換的返回值。如果參數a僅僅是一個實數或者虛數，則本函數程式最少包含2個參數，而返回序列a， optional_params[0]， ...， optional_params[number_of_optional_params - 2]， optional_params[number_of_optional_params - 1]快速傅立葉變換後的值。註意返回值總是一個數組。</p>
+<p>函數程式例子：</p>
+<p>FFT(1, 2, 3, 4)返回[10, -2+2i, -2, -2 - 2i]；</p>
+<p>FFT([1, 2, 3, 4])同樣也是返回[10, -2+2i, -2, -2 - 2i]；</p>
+</td>
+</tr>
+<tr>
+<td><center>gavg</center></td>
+<td><p>gavg(0...) :</p>
+<p>	函數gavg(…)返回任意個數參數的幾何平均數值。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_constant</center></td>
+<td><p>get_constant(2) :</p>
+<p>函數程式get_constant(const_name, n)返回一個由區分大小寫的字符串const_name所對應的常數值，返回的數值將會四舍五入後保留小數點後面n位有效數值，這裏n為非負整數並且可以省略。如果n被省略，返回值將不會被四舍五入處理。本函數程式支持以下常數：</p>
+<p>1. 圓周率 (const_name == "pi");</p>
+<p>2. 自然對數 (const_name == "e");</p>
+<p>3. 真空中的光速 [m/s] (const_name == "light_speed_in_vacuum");</p>
+<p>4. 萬有引力常數 [m**3/kg/(s**2)] (const_name == "gravitational_constant");</p>
+<p>5. 普朗克常數 [J*s] (const_name == "planck_constant");</p>
+<p>6. 磁常數（真空磁導率） [N/(A**2)] (const_name == "magnetic_constant");</p>
+<p>7. 電常數（真空電容率） [F/m] (const_name == "electric_constant");</p>
+<p>8. 基本電荷 [c] (const_name == "elementary_charge_constant");</p>
+<p>9. 亞佛加厥常數 [1/mol] (const_name == "avogadro_constant");</p>
+<p>10. 法拉第常數 [C/mol] (const_name == "faraday_constant");</p>
+<p>11. 氣體常數 [J/mol/K] (const_name == "molar_gas_constant");</p>
+<p>12. 玻茲曼常量 [J/K] (const_name == "boltzman_constant");</p>
+<p>13. 標準重力 [m/(s**2)] (const_name == "standard_gravity");</p>
+<p>例如，如果用戶輸入get_constant("pi", 4)，結果將會是3.1416；如果用戶輸入get_constant("pi", 8)，結果將會是3.14159265；如果用戶輸入get_constant("pi", 0)，將會得到3，如果用戶輸入get_constant("pi")返回值將是3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 （小數點後有100位數字），這個數值就是本軟體內部所使用的圓周率數值。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_extreme_elem</center></td>
+<td><p>get_extreme_elem(3) :</p>
+<p>函數程式get_extreme_elem分析輸入的數值陣列並返回其所有元素的最大或最小值。如果某一個元素不是實數，這個元素就會被忽略。這個函數程式有3個參數，第一個是數值陣列（也可以是一個單一的數值），第二個是起始的最大或者最小值，如果這個參數不是null並且是一個實數，本函數程式將該參數和選出的最大或最小元素進行比較，並返回新的最大或最小值。第三個參數是告訴本函數程式返回最大值還是最小值，如果是0則返回最小值，否則返回最大值。函數程式的例子包括get_extreme_elem([[2, 3], "hello", 5], null, 1)和get_extreme_elem([[3,4,6],[5+3i, 7, 9.88-4.61], [5.77 -0.03i]], -8, 0)。</p>
+</td>
+</tr>
+<tr>
+<td><center>havg</center></td>
+<td><p>havg(0...) :</p>
+<p>	函數havg(…)返回任意個數參數的調和平均數值。</p>
+</td>
+</tr>
+<tr>
+<td><center>IFFT</center></td>
+<td><p>IFFT(1...) :</p>
+<p>	IFFT(a, ...)返回對一個數值向量作快速傅立葉變換的逆變換後的值。註意數值向量中數值的個數必須是2的整數次方。如果參數a是一個數值序列，則本函數程式只可能擁有一個參數，返回值為對序列a[0], a[1], ..., a[N-1]作快速傅立葉變換的逆變換的返回值。如果參數a僅僅是一個實數或者虛數，則本函數程式最少包含2個參數，而返回序列a， optional_params[0]， ...， optional_params[number_of_optional_params - 2]， optional_params[number_of_optional_params - 1]快速傅立葉變換的逆變換後的值。註意返回值總是一個數組。</p>
+<p>函數程式例子：</p>
+<p>IFFT(10, -2 + 2i, -2, -2 - 2i)返回[1, 2, 3, 4]；</p>
+<p>IFFT([10, -2 + 2i, -2, -2 - 2i])同樣也是返回[1, 2, 3, 4]；</p>
+</td>
+</tr>
+<tr>
+<td><center>is_prime</center></td>
+<td><p>is_prime(1) :</p>
+<p>	函數Is_Prime(x)用於測定正整數x(>=2)是否為素數。如果x不是大於等於二的正整數，則返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>lg</center></td>
+<td><p>lg(1) :</p>
+<p>	函數lg(x)返回x的自然對數。</p>
+</td>
+</tr>
+<tr>
+<td><center>ln</center></td>
+<td><p>ln(1) :</p>
+<p>	函數ln(x)返回x的自然對數。</p>
+</td>
+</tr>
+<tr>
+<td><center>log10</center></td>
+<td><p>log10(1) :</p>
+<p>	函數log10(x)返回x以十為底的對數。</p>
+</td>
+</tr>
+<tr>
+<td><center>log2</center></td>
+<td><p>log2(1) :</p>
+<p>	函數log2(x)返回x以2為底的對數。</p>
+</td>
+</tr>
+<tr>
+<td><center>loge</center></td>
+<td><p>loge(1) :</p>
+<p>	函數loge(x)返回x的自然對數。</p>
+</td>
+</tr>
+<tr>
+<td><center>max</center></td>
+<td><p>max(0...) :</p>
+<p>	函數max(...)返回任意數目參數中的最大值。</p>
+</td>
+</tr>
+<tr>
+<td><center>med</center></td>
+<td><p>med(0...) :</p>
+<p>	函數med(…)返回任意數目參數的中位數。如果參數的個數為偶數個，返回中間兩個參數的平均值。</p>
+</td>
+</tr>
+<tr>
+<td><center>min</center></td>
+<td><p>min(0...) :</p>
+<p>	函數min(...)返回任意數目參數中的最小值。</p>
+</td>
+</tr>
+<tr>
+<td><center>ncr</center></td>
+<td><p>ncr(2) :</p>
+<p> 函數程式nCr(x, y)計算有x個元素的集合S的k個元素組合的個數。註意x，y都是非負整數，x >= y。</p>
+</td>
+</tr>
+<tr>
+<td><center>npr</center></td>
+<td><p>npr(2) :</p>
+<p> 函數程式nPr(x, y)計算有x個元素的集合S的k個元素置換的個數。註意x，y都是非負整數，x >= y。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot2d</center></td>
+<td><p>plot2d(5...) :</p>
+<p>	函數plot2D調用plot_multi_xy以繪制由最多8條2-D曲線所構成的圖像。其包括以下參數：1.圖像名字（圖像文件名）；2.圖像標題；3.X軸標題；4.Y軸標題；5.是否顯示網格；6.曲線標題；7.曲線顏色；8.t起始位置；9.t終止位置；10.t的間隔；11.以t為變量的X的表達式；12.以t為變量的Y的表達式...。其中，每增加一條新的曲線，需要添加7個參數（也就是參數6到12），最多定義8條曲線。需要註意的是，本函數程式不建議被使用。如果想繪制二維圖形，請使用函數程式plot2DEX。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot2dex</center></td>
+<td><p>plot2dex(6...) :</p>
+<p>	函數plot2DEX調用plot_multi_xy以繪制由最多8條2-D曲線所構成的圖像。其包括以下參數：1.圖像名字（圖像文件名）；2.圖像標題；3.X軸標題；4.Y軸標題；5.圖像背景色；6.是否顯示網格；7.曲線標題；8.曲線數據點顏色；9.曲線數據點形狀；10.曲線數據點大小；11.曲線連接線顏色；12.曲線連接線類型；13.曲線連接線粗細；14.t起始位置；15.t終止位置；16.t的間隔；17.以t為變量的X的表達式；18.以t為變量的Y的表達式...。其中，每增加一條新的曲線，需要添加12個參數（也就是參數7到18），最多定義8條曲線。另外要註意圖像背景色，曲線數據點的大小，曲線連接線顏色以及曲線連接線類型還沒有被實現，曲線連接線粗細僅支持0（意味著沒有連接線連接數據點）和非0（意味著有連接線連接數據點）。本函數程式的一個例子為：plot2DEX("chart 3", "3rd chart", "x", "y", "black", true, "cv1", "blue", "x", 2, "blue", "solid", 1, -5, 5, 0.1, "t", "t**2/2.5 - 4*t + 6", "cv2", "red", "square", 4, "square", "solid", 1, -10, 10, 0.1, "5*sin(t)", "10*cos(t)") 。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot3d</center></td>
+<td><p>plot3d(5...) :</p>
+<p>	函數plot3D調用plot_multi_xyz以繪制由最多8條3-D曲面所構成的圖像。其包括以下參數：1.圖像名字（圖像文件名）；2.圖像標題；3.X軸標題；4.Y軸標題；5.Z軸標題；6.曲線標題；7.是網格還是填充表面（true是網格，false是填充表面）；8.z值最小的時候的顏色；9.最小的z值（註意如果是null，意味著讓軟件自己找到最小的z值）；10.z值最大的時候的顏色；11.最大的z值（註意如果是null，意味著讓軟件自己找到最大的z值）；12.變數u的起始值；13.變數u的終止值；14.變數u的間隔（0意味著間隔由軟件決定）；15.變數v的起始值；16.變數v的終止值；17.變數v的間隔（0意味著間隔由軟件決定）；18.以u，v為變數的X的表達式；19.以u，v為變數的Y的表達式；20.以u，v為變數的Z的表達式；...。其中，每增加一條新的曲線，需要添加15個參數（也就是參數6到20），最多定義8條曲線。該函數的一個例子為：plot3D("chartI", "first chart", "x", "y", "z", "Curve1", true, "red", -0.5, "green", null, 0, pi, pi/8, -pi/2, pi/2, 0, "sin(u)*cos(v)", "sin(u)*sin(v)", "cos(u)")　。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_2d_data</center></td>
+<td><p>plot_2d_data(16) :</p>
+<p> 函數程式plot_2d_data分析最少1組，最多8組數值向量，每組數值向量將會被繪制為一條曲線。輸入的參數個數可以為1個（繪制一條曲線），2個（繪制一條曲線），4個（繪制2條曲線），6個（繪制3條曲線），8個（繪制4條曲線），10個（繪制5條曲線），12個（繪制6條曲線），14個（繪制7條曲線），16個（繪制8條曲線）。每一個參數都是一個數值向量（也就是一維陣列）。如果只有一個參數，該參數中的每一個元素將會是繪制出的曲線中的一個點，否則，奇數號參數決定曲線中的每一個點的x值，偶數號參數決定每一個點的y值。註意決定x值的參數中包含的元素個數應該和決定y值的參數中包含的元素相同。函數程式例子包括plot_2d_data([5.5, -7, 8.993, 2.788])以及plot_2d_data([2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1], [28, 42, 33, 16, 7])。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_3d_data</center></td>
+<td><p>plot_3d_data(24) :</p>
+<p> 函數程式plot_3d_data分析最少1組，最多8組數值陣列，每組數值陣列將會被繪制為一條曲面。輸入的參數個數可以為1個（繪制一條曲面），3個（繪制一條曲面），6個（繪制2條曲面），9個（繪制3條曲面），12個（繪制4條曲面），15個（繪制5條曲面），18個（繪制6條曲面），21個（繪制7條曲面），24個（繪制8條曲面）。如果只有一個參數，該參數必須是一個2維陣列，陣列中的每一個元素將會是繪制出的曲線中的一個點的z值，否則，每3個參數組成一個參數組，在每個參數組中，第一個參數必須是一個一維陣列，參數中的元素值決定的決定曲面中各點的x值，第二個參數也必須是一個一維陣列，參數中的元素值決定的決定曲面中各點的y值，第三個參數必須是一個二維陣列，陣列中的元素值決定每一個點的z值。註意決定x值的參數中包含的元素個數以及決定y值的參數中包含的元素應該和決定z值的參數中包含的元素個數相符。函數程式例子包括plot_3d_data([[2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1]])以及plot_3d_data([1,2,3],[4,5,6,8],[[3,7,2],[5,8,9],[2,6,3],[7,4,4]],[8,7,4,8],[2,1],[[9,3,2,6],[4,5,3,7]])。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_exprs</center></td>
+<td><p>plot_exprs(8) :</p>
+<p> 函數程式plot_exprs分析最少1條，最多8條表達式以繪制2維或者3維圖形（取決於表達式中未知變數的個數）。輸入的表達式可以是一個等式，比如"4*x+9 == y +z**2"和"log(x*y) == x"，也可以是一個左側為未知變數的賦值表達式，比如"k= 3+ 7 * sin(z)"，還可以是一個可以被看作為賦值表達式的表達式，比如"9*log(y)"可以被看作"x = 9 * log(y)"。註意所有表達式中未知變數的總數不多於3，每一條表達式中的未知變數的個數不能少於未知變數的總數減一。未知變數的起始範圍可以在設置中設定，缺省是從-5到5，但是使用者可以在圖形繪制出來之後動態調整每個未知變數的範圍。如果有兩個未知變數並且其中一個是希臘字母α、β、γ或者θ，則繪制極坐標圖形而不是普通2維圖形。本函數程式的一個例子是plot_exprs("4*x+sin(y)", "4-y**2==(x**2 + z**2)", "x*lg(x)/log2(z)==y")。需要指出的是，如果是繪制二維隱函數表達式，這個函數程式最多能繪制出4個表達式解；如果繪制的是3維隱函數表達式，這個函數程式會根據情況，可能會求每一個變數的最多兩組解，繪制出最多6個解表達式圖形，這樣一來，整個求解繪圖過程會花費比較長的時間。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_polar</center></td>
+<td><p>plot_polar(6...) :</p>
+<p> 程式plot_polar調用plot_multi_xy以繪制由最多8條極坐標曲線所構成的圖像。其包括以下參數：1.圖像名字（圖像文件名）；2.圖像標題；3.R軸標題；4.幅角軸標題；5.圖像背景色；6.是否顯示網格；7.曲線標題；8.曲線數據點顏色；9.曲線數據點形狀；10.曲線數據點大小；11.曲線連接線顏色；12.曲線連接線類型；13.曲線連接線粗細；14.t起始位置；15.t終止位置；16.t的間隔；17.以t為變量的R的表達式；18.以t為變量的幅角的表達式...。其中，每增加一條新的曲線，需要添加12個參數（也就是參數7到18），最多定義8條曲線。另外要註意圖像背景色，曲線數據點的大小，曲線連接線顏色以及曲線連接線類型還沒有被實現，曲線連接線粗細僅支持0（意味著沒有連接線連接數據點）和非0（意味著有連接線連接數據點）。本函數程式的一個例子為：plot_polar("chart 3", "3rd chart", "R", "Angle", "black", true, "cv1", "blue", "point", 0, "yellow", "solid", 1, -5, 5, 0.1, "cos(t)", "t", "cv2", "red", "square", 4, "green", "solid", 1, 0, PI*2.23, PI/10, "5*sqrt(t)", "t + PI") 。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_polar_data</center></td>
+<td><p>plot_polar_data(16) :</p>
+<p> 函數程式plot_polar_data分析最少1組，最多8組數值向量，每組數值向量將會被繪制為一條極坐標曲線。輸入的參數個數可以為2個（繪制一條曲線），4個（繪制2條曲線），6個（繪制3條曲線），8個（繪制4條曲線），10個（繪制5條曲線），12個（繪制6條曲線），14個（繪制7條曲線），16個（繪制8條曲線）。每一個參數都是一個數值向量（也就是一維陣列）。奇數號參數決定曲線中的每一個點的R值，偶數號參數決定每一個點的幅角值。註意決定R值的參數中包含的元素個數應該和決定幅角值的參數中包含的元素相同。函數程式一個例子為plot_polar_data([2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1], [28, 42, 33, 16, 7])。</p>
+</td>
+</tr>
+<tr>
+<td><center>quick_sort</center></td>
+<td><p>quick_sort(2) :</p>
+<p>	函數程式quick_sort(desc, original_list)將擁有至少一個元素的向量original_list排序並返回排序後的向量。如果desc是true或者1，按照從大到小排序，否則（false或者0）按照從小到大排序。比如，輸入quick_sort(1, [5,6,7,9,4])得到[9,7,6,5,4]而輸入quick_sort(0, [5,6,7,9,4])的結果是[4,5,6,7,9]。</p>
+</td>
+</tr>
+<tr>
+<td><center>roots</center></td>
+<td><p>roots(1...) :</p>
+<p>函數程式roots(a, ...)返回一個多項式的根數列。如果a是一個實數或虛數數列，返回多項式a[0] * x**(N-1) + a[1] * x**(N-2) + ... + a[N-2] * x + a[N-1] = 0的根數列。如果a是一個單一的實數，此函數程式則必須擁有至少兩個參數，返回多項式a * x**(number_of_optional_params) + optional_params[0] * x**(number_of_optional_params - 1) + ... + optional_params[number_of_optional_params - 2] * x + optional_params[number_of_optional_params - 1] = 0的根數列。</p>
+<p>需要註意的是，如果該多項式次數大於等於4，根的計算是通過牛頓拉夫遜法給出的近似值。由於牛頓拉夫遜法需要叠代計算，運算時間會比較長（取決於設備的性能）。</p>
+<p>函數程式例子：</p>
+<p>如果要計算多項式3 * x**2 - 4 * x + 1 == 0的根，輸入命令：roots([3, -4, 1])獲得的結果是[1, 0.33333333]；</p>
+<p>如果要計算多項式(1+2i) * x**3 + (7-6i) * x**2 + 0.54 * x - 4.31 - 9i == 0的根，輸入命令：roots(1+2i, 7-6i, 0.54, -4.31-9i)獲得的結果是[0.79288607 + 3.9247084 * i, -0.56361748 - 0.78399569 * i, 0.7707314 + 0.85928729 * i]。</p>
+</td>
+</tr>
+<tr>
+<td><center>sind</center></td>
+<td><p>sind(1) :</p>
+<p>	函數sind(x)返回角度數x的正弦值。</p>
+</td>
+</tr>
+<tr>
+<td><center>sinh</center></td>
+<td><p>sinh(1) :</p>
+<p>	函數sinh(x)返回x的雙曲正弦值。</p>
+</td>
+</tr>
+<tr>
+<td><center>sqrt</center></td>
+<td><p>sqrt(1) :</p>
+<p>	函數sqrt(x)返回實數x的平方根值。</p>
+</td>
+</tr>
+<tr>
+<td><center>stdev</center></td>
+<td><p>stdev(0...) :</p>
+<p>	函數stdev(…)返回任意個數參數的標準差，註意這些參數是一個大的集合中的采樣。</p>
+</td>
+</tr>
+<tr>
+<td><center>stdevp</center></td>
+<td><p>stdevp(0...) :</p>
+<p>	函數stdevp(…)返回任意個數參數的標準差。</p>
+</td>
+</tr>
+<tr>
+<td><center>sum</center></td>
+<td><p>sum(0...) :</p>
+<p>	函數sum(…)返回任意個數參數的總合。</p>
+</td>
+</tr>
+<tr>
+<td><center>tand</center></td>
+<td><p>tand(1) :</p>
+<p>	函數tand(x)返回角度數x的正切值。</p>
+</td>
+</tr>
+<tr>
+<td><center>tanh</center></td>
+<td><p>tanh(1) :</p>
+<p>	函數tanh(x)用於計算x的雙曲正切值。</p>
+</td>
+</tr>
+<tr>
+<td><center>tip</center></td>
+<td><p>tip(2) :</p>
+<p>	函數tip(x,y)用於計算在美國飯館吃飯時所支付的所有費用包括實際費用和小費。</p>
+</td>
+</tr>
+<tr>
+<td><center>todeg</center></td>
+<td><p>todeg(1) :</p>
+<p>	函數todeg(x)將弧度x轉換為度數值。</p>
+</td>
+</tr>
+<tr>
+<td><center>torad</center></td>
+<td><p>torad(1) :</p>
+<p>	函數torad(x)將度數x轉換為弧度值。</p>
+</td>
+</tr>
+<tr>
+<td><center>xor</center></td>
+<td><p>xor(2) :</p>
+<p>	函數xor計算x和y的異或值，x和y可以為任何數值。如果x不等於y，返回true。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

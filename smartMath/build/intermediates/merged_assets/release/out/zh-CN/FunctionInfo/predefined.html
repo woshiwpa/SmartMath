@@ -1,0 +1,376 @@
+<html>
+<head>
+<title>可编程科学计算器帮助</title>
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8"></head>
+<body style="background-color:white;">
+<h2 style="color:blue">可编程科学计算器帮助：预定义函数</h2>
+<table border="1" style="font-family:times;color:green;">
+<tr>
+<th>函数名</th>
+<th>函数帮助信息</th>
+</tr>
+<tr>
+<td><center>acosd</center></td>
+<td><p>acosd(1) :</p>
+<p>	函数acosd(x)为余弦函数的反函数，注意返回值为角度数。</p>
+</td>
+</tr>
+<tr>
+<td><center>acosh</center></td>
+<td><p>acosh(1) :</p>
+<p>	函数acosh(x)为双曲余弦函数的反函数。</p>
+</td>
+</tr>
+<tr>
+<td><center>adj</center></td>
+<td><p>adj(1) :</p>
+<p> 函数cofactor(x)返回2维方阵x的伴随矩阵。</p>
+</td>
+</tr>
+<tr>
+<td><center>asind</center></td>
+<td><p>asind(1) :</p>
+<p>	函数asind(x)为正弦函数的反函数，注意返回值为角度数。</p>
+</td>
+</tr>
+<tr>
+<td><center>asinh</center></td>
+<td><p>asinh(1) :</p>
+<p>	函数asinh(x)为双曲正弦函数的反函数。</p>
+</td>
+</tr>
+<tr>
+<td><center>atand</center></td>
+<td><p>atand(1) :</p>
+<p>	函数atand(x)为正切函数的反函数，注意返回值为角度数。</p>
+</td>
+</tr>
+<tr>
+<td><center>atanh</center></td>
+<td><p>atanh(1) :</p>
+<p>	函数atanh(x)为双曲正切函数的反函数。</p>
+</td>
+</tr>
+<tr>
+<td><center>avg</center></td>
+<td><p>avg(0...) :</p>
+<p>	函数avg(…)返回任意个数参数的平均值。</p>
+</td>
+</tr>
+<tr>
+<td><center>cofactor</center></td>
+<td><p>cofactor(1) :</p>
+<p> 函数cofactor(x)返回2维方阵x的余因子矩阵。</p>
+</td>
+</tr>
+<tr>
+<td><center>conv</center></td>
+<td><p>conv(2) :</p>
+<p>conv(input_a, inputb)返回input_a和input_b的卷积。Input_a和input_b要么都是一维向量，要么都是二维矩阵。当前本函数仅仅支持一维和二维卷积，比如：</p>
+<p>conv([4,8,2,9],[5,3,8,9,6,7,8]) = [20, 52, 66, 151, 139, 166, 181, 132, 79, 72]</p>
+<p>conv([[4,8,2,9],[8,6,7,9],[2,2,8,-4]],[[-5,i,7],[0.6,8,4]]) = [[-20, -40 + 4 * i, 18 + 8 * i, 11 + 2 * i, 14 + 9 * i, 63], [-37.6, 6.8 + 8 * i, 102.2 + 6 * i, 50.4 + 7 * i, 129 + 9 * i, 99], [-5.2, 57.6 + 2 * i, 58.2 + 2 * i, 119.4 + 8 * i, 156 - 4 * i, 8], [1.2, 17.2, 28.8, 69.6, 0, -16]]</p>
+</td>
+</tr>
+<tr>
+<td><center>convert_unit</center></td>
+<td><p>convert_unit(3) :</p>
+<p> 函数convert_unit(value, from_unit, to_unit)将基于某一个单位的数值转换为基于另外一个单位的数值。第一个参数是将要转换的数值，第二个参数是将被转换的单位（单位是一个对大小写敏感的字符串），第三个参数是转换后的单位（单位是一个对大小写敏感的字符串）。比如，convert_unit(23.71, "m", "km")。</p>
+<p> 本函数支持以下单位：</p>
+<p> 1. 长度单位: "um" (微米), "mm" (毫米), "cm" (厘米), "m" (米), "km" (公里), "in" (英寸), "ft" (英尺), "yd" (码), "mi" (英里), "nmi" (海浬), "AU" (天文单位), "ly" (光年), "pc" (秒差距);</p>
+<p> 2. 面积单位: "mm2" (平方毫米), "cm2" (平方厘米), "m2" (平方米), "ha" (公顷), "km2" (平方公里), "sq in" (平方英寸), "sq ft" (平方英尺), "sq yd" (平方码), "ac" (英亩), "sq mi" (平方英里);</p>
+<p> 3. 体积单位: "mL" (毫升), "L" (升), "m3" (立方米), "cu in" (立方英寸), "cu ft" (立方英尺), "cu yd" (立方码), "km3" (立方公里), "fl oz(Imp)" (液盎司(英制)), "pt(Imp)" (品脱(英制)), "gal(Imp)" (加仑(英制)), "fl oz(US)" (液盎司(美制)), "pt(US)" (品脱(美制)), "gal(US)" (加仑(美制));</p>
+<p> 4. 质量单位: "ug" (微克), "mg" (毫克), "g" (克), "kg" (千克), "t" (吨), "oz" (盎司), "lb" (磅), "jin" (市斤), "jin(HK)" (斤(香港)), "jin(TW)" (台斤);</p>
+<p> 5. 速度单位: "m/s" (米每秒), "km/h" (千米每小时), "ft/s" (英尺每秒), "mph" (英里每小时), "knot" (节);</p>
+<p> 6. 时间单位: "ns" (纳秒), "us" (微秒), "ms" (毫秒), "s" (秒), "min" (分钟), "h" (小时), "d" (天), "wk" (礼拜), "yr" (年);</p>
+<p> 7. 力单位: "N" (牛顿), "kgf" (千克力), "lbF" (磅力);</p>
+<p> 8. 压强单位: "Pa" (帕斯卡), "hPa" (百帕), "kPa" (千帕), "MPa" (兆帕), "atm" (大气压), "psi" (每平方英寸上受到的磅力压力), "Torr" (毫米汞柱);</p>
+<p> 9. 能量单位: "J" (焦耳), "kJ" (千焦), "MJ" (兆焦), "kWh" (千瓦时), "cal" (卡路里), "kcal" (千卡), "BTU" (英热单位);</p>
+<p> 10. 功率单位: "W" (瓦特), "kW" (千瓦), "MW" (兆瓦), "cal/s" (卡路里每秒), "BTU/h" (英热单位每小时), "hp" (马力);</p>
+<p> 11. 温度单位: "0C" (摄氏度), "0F" (华氏度), "K" (开氏温标);</p>
+</td>
+</tr>
+<tr>
+<td><center>cosd</center></td>
+<td><p>cosd(1) :</p>
+<p>	函数cosd(x)返回角度数x的余弦值。</p>
+</td>
+</tr>
+<tr>
+<td><center>cosh</center></td>
+<td><p>cosh(1) :</p>
+<p>	函数cosh(x)为双曲余弦函数。</p>
+</td>
+</tr>
+<tr>
+<td><center>dprod</center></td>
+<td><p>dprod(2) :</p>
+<p>	函数dprod用于计算两个向量 [x1, x2, ... xn]和[y1, y2, ... yn]的点乘值。</p>
+</td>
+</tr>
+<tr>
+<td><center>fact</center></td>
+<td><p>fact(1) :</p>
+<p>	函数fact(x)计算非负整数x的阶乘。</p>
+</td>
+</tr>
+<tr>
+<td><center>FFT</center></td>
+<td><p>FFT(1...) :</p>
+<p>	FFT(a, ...)返回对一个数值向量作快速傅立叶变换后的值。注意数值向量中数值的个数必须是2的整数次方。如果参数a是一个数值序列，则本函数只可能拥有一个参数，返回值为对序列a[0], a[1], ..., a[N-1]作快速傅立叶变换的返回值。如果参数a仅仅是一个实数或者虚数，则本函数最少包含2个参数，而返回序列a， optional_params[0]， ...， optional_params[number_of_optional_params - 2]， optional_params[number_of_optional_params - 1]快速傅立叶变换后的值。注意返回值总是一个数组。</p>
+<p>函数例子：</p>
+<p>FFT(1, 2, 3, 4)返回[10, -2+2i, -2, -2 - 2i]；</p>
+<p>FFT([1, 2, 3, 4])同样也是返回[10, -2+2i, -2, -2 - 2i]；</p>
+</td>
+</tr>
+<tr>
+<td><center>gavg</center></td>
+<td><p>gavg(0...) :</p>
+<p>	函数gavg(…)返回任意个数参数的几何平均数值。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_constant</center></td>
+<td><p>get_constant(2) :</p>
+<p>函数get_constant(const_name, n)返回一个由区分大小写的字符串const_name所对应的常数值，返回的数值将会四舍五入后保留小数点后面n位有效数值，这里n为非负整数并且可以省略。如果n被省略，返回值将不会被四舍五入处理。本函数支持以下常数：</p>
+<p>1. 圆周率 (const_name == "pi");</p>
+<p>2. 自然对数 (const_name == "e");</p>
+<p>3. 真空中的光速 [m/s] (const_name == "light_speed_in_vacuum");</p>
+<p>4. 万有引力常数 [m**3/kg/(s**2)] (const_name == "gravitational_constant");</p>
+<p>5. 普朗克常数 [J*s] (const_name == "planck_constant");</p>
+<p>6. 磁常数（真空磁导率） [N/(A**2)] (const_name == "magnetic_constant");</p>
+<p>7. 电常数（真空电容率） [F/m] (const_name == "electric_constant");</p>
+<p>8. 基本电荷 [c] (const_name == "elementary_charge_constant");</p>
+<p>9. 阿伏伽德罗常数 [1/mol] (const_name == "avogadro_constant");</p>
+<p>10. 法拉第常数 [C/mol] (const_name == "faraday_constant");</p>
+<p>11. 气体常数 [J/mol/K] (const_name == "molar_gas_constant");</p>
+<p>12. 玻尔兹曼常量 [J/K] (const_name == "boltzman_constant");</p>
+<p>13. 标准重力 [m/(s**2)] (const_name == "standard_gravity");</p>
+<p>例如，如果用户输入get_constant("pi", 4)，结果将会是3.1416；如果用户输入get_constant("pi", 8)，结果将会是3.14159265；如果用户输入get_constant("pi", 0)，将会得到3，如果用户输入get_constant("pi")返回值将是3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 （小数点后有100位数字），这个数值就是本软件内部所使用的圆周率数值。</p>
+</td>
+</tr>
+<tr>
+<td><center>get_extreme_elem</center></td>
+<td><p>get_extreme_elem(3) :</p>
+<p>函数get_extreme_elem分析输入的数值矩阵并返回其所有元素的最大或最小值。如果某一个元素不是实数，这个元素就会被忽略。这个函数有3个参数，第一个是数值矩阵（也可以是一个单一的数值），第二个是起始的最大或者最小值，如果这个参数不是null并且是一个实数，本函数将该参数和选出的最大或最小元素进行比较，并返回新的最大或最小值。第三个参数是告诉本函数返回最大值还是最小值，如果是0则返回最小值，否则返回最大值。函数的例子包括get_extreme_elem([[2, 3], "hello", 5], null, 1)和get_extreme_elem([[3,4,6],[5+3i, 7, 9.88-4.61], [5.77 -0.03i]], -8, 0)。</p>
+</td>
+</tr>
+<tr>
+<td><center>havg</center></td>
+<td><p>havg(0...) :</p>
+<p>	函数havg(…)返回任意个数参数的调和平均数值。</p>
+</td>
+</tr>
+<tr>
+<td><center>IFFT</center></td>
+<td><p>IFFT(1...) :</p>
+<p>	IFFT(a, ...)返回对一个数值向量作快速傅立叶变换的逆变换后的值。注意数值向量中数值的个数必须是2的整数次方。如果参数a是一个数值序列，则本函数只可能拥有一个参数，返回值为对序列a[0], a[1], ..., a[N-1]作快速傅立叶变换德逆变换的返回值。如果参数a仅仅是一个实数或者虚数，则本函数最少包含2个参数，而返回序列a， optional_params[0]， ...， optional_params[number_of_optional_params - 2]， optional_params[number_of_optional_params - 1]快速傅立叶变换的逆变换后的值。注意返回值总是一个数组。</p>
+<p>函数例子：</p>
+<p>IFFT(10, -2 + 2i, -2, -2 - 2i)返回[1, 2, 3, 4]；</p>
+<p>IFFT([10, -2 + 2i, -2, -2 - 2i])同样也是返回[1, 2, 3, 4]；</p>
+</td>
+</tr>
+<tr>
+<td><center>is_prime</center></td>
+<td><p>is_prime(1) :</p>
+<p>	函数Is_Prime(x)用于测定正整数x(>=2)是否为素数。如果x不是大于等于二的正整数，则返回false。</p>
+</td>
+</tr>
+<tr>
+<td><center>lg</center></td>
+<td><p>lg(1) :</p>
+<p>	函数lg(x)返回x的自然对数。</p>
+</td>
+</tr>
+<tr>
+<td><center>ln</center></td>
+<td><p>ln(1) :</p>
+<p>	函数ln(x)返回x的自然对数。</p>
+</td>
+</tr>
+<tr>
+<td><center>log10</center></td>
+<td><p>log10(1) :</p>
+<p>	函数log10(x)返回x以十为底的对数。</p>
+</td>
+</tr>
+<tr>
+<td><center>log2</center></td>
+<td><p>log2(1) :</p>
+<p>	函数log2(x)返回x以2为底的对数。</p>
+</td>
+</tr>
+<tr>
+<td><center>loge</center></td>
+<td><p>loge(1) :</p>
+<p>	函数loge(x)返回x的自然对数。</p>
+</td>
+</tr>
+<tr>
+<td><center>max</center></td>
+<td><p>max(0...) :</p>
+<p>	函数max(...)返回任意数目参数中的最大值。</p>
+</td>
+</tr>
+<tr>
+<td><center>med</center></td>
+<td><p>med(0...) :</p>
+<p>	函数med(…)返回任意数目参数的中位数。如果参数的个数为偶数个，返回中间两个参数的平均值。</p>
+</td>
+</tr>
+<tr>
+<td><center>min</center></td>
+<td><p>min(0...) :</p>
+<p>	函数min(...)返回任意数目参数中的最小值。</p>
+</td>
+</tr>
+<tr>
+<td><center>ncr</center></td>
+<td><p>ncr(2) :</p>
+<p> 函数nCr(x, y)计算有x个元素的集合S的k个元素组合的个数。注意x，y都是非负整数，x >= y。</p>
+</td>
+</tr>
+<tr>
+<td><center>npr</center></td>
+<td><p>npr(2) :</p>
+<p> 函数nPr(x, y)计算有x个元素的集合S的k个元素排列的个数。注意x，y都是非负整数，x >= y。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot2d</center></td>
+<td><p>plot2d(5...) :</p>
+<p>	函数plot2D调用plot_multi_xy以绘制由最多8条2-D曲线所构成的图像。其包括以下参数：1.图像名字（图像文件名）；2.图像标题；3.X轴标题；4.Y轴标题；5.是否显示网格；6.曲线标题；7.曲线颜色；8.t起始位置；9.t终止位置；10.t的间隔；11.以t为变量的X的表达式；12.以t为变量的Y的表达式...。其中，每增加一条新的曲线，需要添加7个参数（也就是参数6到12），最多定义8条曲线。需要注意的是，本函数不建议被使用。如果想绘制二维图形，请使用函数plot2DEX。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot2dex</center></td>
+<td><p>plot2dex(6...) :</p>
+<p>	函数plot2DEX调用plot_multi_xy以绘制由最多8条2-D曲线所构成的图像。其包括以下参数：1.图像名字（图像文件名）；2.图像标题；3.X轴标题；4.Y轴标题；5.图像背景色；6.是否显示网格；7.曲线标题；8.曲线数据点颜色；9.曲线数据点形状；10.曲线数据点大小；11.曲线连接线颜色；12.曲线连接线类型；13.曲线连接线粗细；14.t起始位置；15.t终止位置；16.t的间隔；17.以t为变量的X的表达式；18.以t为变量的Y的表达式...。其中，每增加一条新的曲线，需要添加12个参数（也就是参数7到18），最多定义8条曲线。另外要注意图像背景色，曲线数据点的大小，曲线连接线颜色以及曲线连接线类型还没有被实现，曲线连接线粗细仅支持0（意味着没有连接线连接数据点）和非0（意味着有连接线连接数据点）。本函数的一个例子为：plot2DEX("chart 3", "3rd chart", "x", "y", "black", true, "cv1", "blue", "x", 2, "blue", "solid", 1, -5, 5, 0.1, "t", "t**2/2.5 - 4*t + 6", "cv2", "red", "square", 4, "square", "solid", 1, -10, 10, 0.1, "5*sin(t)", "10*cos(t)") 。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot3d</center></td>
+<td><p>plot3d(5...) :</p>
+<p>	函数plot3D调用plot_multi_xyz以绘制由最多8条3-D曲面所构成的图像。其包括以下参数：1.图像名字（图像文件名）；2.图像标题；3.X轴标题；4.Y轴标题；5.Z轴标题；6.曲线标题；7.是网格还是填充表面（true是网格，false是填充表面）；8.z值最小的时候的颜色；9.最小的z值（注意如果是null，意味着让软件自己找到最小的z值）；10.z值最大的时候的颜色；11.最大的z值（注意如果是null，意味着让软件自己找到最大的z值）；12.变量u的起始值；13.变量u的终止值；14.变量u的间隔（0意味着间隔由软件决定）；15.变量v的起始值；16.变量v的终止值；17.变量v的间隔（0意味着间隔由软件决定）；18.以u，v为变量的X的表达式；19.以u，v为变量的Y的表达式；20.以u，v为变量的Z的表达式；...。其中，每增加一条新的曲线，需要添加15个参数（也就是参数6到20），最多定义8条曲线。该函数的一个例子为：plot3D("chartI", "first chart", "x", "y", "z", "Curve1", true, "red", -0.5, "green", null, 0, pi, pi/8, -pi/2, pi/2, 0, "sin(u)*cos(v)", "sin(u)*sin(v)", "cos(u)")　。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_2d_data</center></td>
+<td><p>plot_2d_data(16) :</p>
+<p> 函数plot_2d_data分析最少1组，最多8组数值向量，每组数值向量将会被绘制为一条曲线。输入的参数个数可以为1个（绘制一条曲线），2个（绘制一条曲线），4个（绘制2条曲线），6个（绘制3条曲线），8个（绘制4条曲线），10个（绘制5条曲线），12个（绘制6条曲线），14个（绘制7条曲线），16个（绘制8条曲线）。每一个参数都是一个数值向量（也就是一维矩阵）。如果只有一个参数，该参数中的每一个元素将会是绘制出的曲线中的一个点，否则，奇数号参数决定曲线中的每一个点的x值，偶数号参数决定每一个点的y值。注意决定x值的参数中包含的元素个数应该和决定y值的参数中包含的元素相同。函数例子包括plot_2d_data([5.5, -7, 8.993, 2.788])以及plot_2d_data([2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1], [28, 42, 33, 16, 7])。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_3d_data</center></td>
+<td><p>plot_3d_data(24) :</p>
+<p> 函数plot_3d_data分析最少1组，最多8组数值矩阵，每组数值矩阵将会被绘制为一条曲面。输入的参数个数可以为1个（绘制一条曲面），3个（绘制一条曲面），6个（绘制2条曲面），9个（绘制3条曲面），12个（绘制4条曲面），15个（绘制5条曲面），18个（绘制6条曲面），21个（绘制7条曲面），24个（绘制8条曲面）。如果只有一个参数，该参数必须是一个2维矩阵，矩阵中的每一个元素将会是绘制出的曲线中的一个点的z值，否则，每3个参数组成一个参数组，在每个参数组中，第一个参数必须是一个一维矩阵，参数中的元素值决定的决定曲面中各点的x值，第二个参数也必须是一个一维矩阵，参数中的元素值决定的决定曲面中各点的y值，第三个参数必须是一个二维矩阵，矩阵中的元素值决定每一个点的z值。注意决定x值的参数中包含的元素个数以及决定y值的参数中包含的元素应该和决定z值的参数中包含的元素个数相符。函数例子包括plot_3d_data([[2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1]])以及plot_3d_data([1,2,3],[4,5,6,8],[[3,7,2],[5,8,9],[2,6,3],[7,4,4]],[8,7,4,8],[2,1],[[9,3,2,6],[4,5,3,7]])。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_exprs</center></td>
+<td><p>plot_exprs(8) :</p>
+<p> 函数plot_exprs分析最少1条，最多8条表达式以绘制2维或者3维图形（取决于表达式中未知变量的个数）。输入的表达式可以是一个等式，比如"4*x+9 == y +z**2"和"log(x*y) == x"，也可以是一个左侧为未知变量的赋值表达式，比如"k= 3+ 7 * sin(z)"，还可以是一个可以被看作为赋值表达式的表达式，比如"9*log(y)"可以被看作"x = 9 * log(y)"。注意所有表达式中未知变量的总数不多于3，每一条表达式中的未知变量的个数不能少于未知变量的总数减一。未知变量的起始范围可以在设置中设定，缺省是从-5到5，但是使用者可以在图形绘制出来之后动态调整每个未知变量的范围。如果有两个未知变量并且其中一个是希腊字母α、β、γ或者θ，则绘制极坐标图形而不是普通2维图形。本函数的一个例子是plot_exprs("4*x+sin(y)", "4-y**2==(x**2 + z**2)", "x*lg(x)/log2(z)==y")。需要指出的是，如果是绘制二维隐函数表达式，这个函数最多能绘制出4个表达式解；如果绘制的是3维隐函数表达式，这个函数会根据情况，可能会求每一个变量的最多两组解，绘制出最多6个解表达式图形，这样一来，整个求解绘图过程会花费比较长的时间。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_polar</center></td>
+<td><p>plot_polar(6...) :</p>
+<p> 函数plot_polar调用plot_multi_xy以绘制由最多8条极坐标曲线所构成的图像。其包括以下参数：1.图像名字（图像文件名）；2.图像标题；3.R轴标题；4.幅角标题；5.图像背景色；6.是否显示网格；7.曲线标题；8.曲线数据点颜色；9.曲线数据点形状；10.曲线数据点大小；11.曲线连接线颜色；12.曲线连接线类型；13.曲线连接线粗细；14.t起始位置；15.t终止位置；16.t的间隔；17.以t为变量的R的表达式；18.以t为变量的幅角的表达式...。其中，每增加一条新的曲线，需要添加12个参数（也就是参数7到18），最多定义8条曲线。另外要注意图像背景色，曲线数据点的大小，曲线连接线颜色以及曲线连接线类型还没有被实现，曲线连接线粗细仅支持0（意味着没有连接线连接数据点）和非0（意味着有连接线连接数据点）。本函数的一个例子为：plot_polar("chart 3", "3rd chart", "R", "Angle", "black", true, "cv1", "blue", "point", 0, "yellow", "solid", 1, -5, 5, 0.1, "cos(t)", "t", "cv2", "red", "square", 4, "green", "solid", 1, 0, PI*2.23, PI/10, "5*sqrt(t)", "t + PI") 。</p>
+</td>
+</tr>
+<tr>
+<td><center>plot_polar_data</center></td>
+<td><p>plot_polar_data(16) :</p>
+<p> 函数plot_polar_data分析最少1组，最多8组数值向量，每组数值向量将会被绘制为一条极坐标曲线。输入的参数个数可以为2个（绘制一条曲线），4个（绘制2条曲线），6个（绘制3条曲线），8个（绘制4条曲线），10个（绘制5条曲线），12个（绘制6条曲线），14个（绘制7条曲线），16个（绘制8条曲线）。每一个参数都是一个数值向量（也就是一维矩阵）。奇数号参数决定曲线中的每一个点的R值，偶数号参数决定每一个点的幅角值。注意决定R值的参数中包含的元素个数应该和决定幅角值的参数中包含的元素相同。函数一个例子为plot_polar_data([2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1], [28, 42, 33, 16, 7])。</p>
+</td>
+</tr>
+<tr>
+<td><center>quick_sort</center></td>
+<td><p>quick_sort(2) :</p>
+<p>	函数quick_sort(desc, original_list)将拥有至少一个元素的向量original_list排序并返回排序后的向量。如果desc是true或者1，按照从大到小排序，否则（false或者0）按照从小到大排序。比如，输入quick_sort(1, [5,6,7,9,4])得到[9,7,6,5,4]而输入quick_sort(0, [5,6,7,9,4])的结果是[4,5,6,7,9]。</p>
+</td>
+</tr>
+<tr>
+<td><center>roots</center></td>
+<td><p>roots(1...) :</p>
+<p>函数roots(a, ...)返回一个多项式的根数列。如果a是一个实数或虚数数列，返回多项式a[0] * x**(N-1) + a[1] * x**(N-2) + ... + a[N-2] * x + a[N-1] = 0的根数列。如果a是一个单一的实数，此函数则必须拥有至少两个参数，返回多项式a * x**(number_of_optional_params) + optional_params[0] * x**(number_of_optional_params - 1) + ... + optional_params[number_of_optional_params - 2] * x + optional_params[number_of_optional_params - 1] = 0的根数列。</p>
+<p>需要注意的是，如果该多项式次数大于等于4，根的计算是通过牛顿拉夫逊法给出的近似值。由于牛顿拉夫逊法需要迭代计算，运算时间会比较长（取决于设备的性能）。</p>
+<p>函数例子：</p>
+<p>如果要计算多项式3 * x**2 - 4 * x + 1 == 0的根，输入命令：roots([3, -4, 1])获得的结果是[1, 0.33333333]；</p>
+<p>如果要计算多项式(1+2i) * x**3 + (7-6i) * x**2 + 0.54 * x - 4.31 - 9i == 0的根，输入命令：roots(1+2i, 7-6i, 0.54, -4.31-9i)获得的结果是[0.79288607 + 3.9247084 * i, -0.56361748 - 0.78399569 * i, 0.7707314 + 0.85928729 * i]。</p>
+</td>
+</tr>
+<tr>
+<td><center>sind</center></td>
+<td><p>sind(1) :</p>
+<p>	函数sind(x)返回角度数x的正弦值。</p>
+</td>
+</tr>
+<tr>
+<td><center>sinh</center></td>
+<td><p>sinh(1) :</p>
+<p>	函数sinh(x)返回x的双曲正弦值。</p>
+</td>
+</tr>
+<tr>
+<td><center>sqrt</center></td>
+<td><p>sqrt(1) :</p>
+<p>	函数sqrt(x)返回实数x的平方根值。</p>
+</td>
+</tr>
+<tr>
+<td><center>stdev</center></td>
+<td><p>stdev(0...) :</p>
+<p>	函数stdev(…)返回任意个数参数的标准差，注意这些参数是一个大的集合中的采样。</p>
+</td>
+</tr>
+<tr>
+<td><center>stdevp</center></td>
+<td><p>stdevp(0...) :</p>
+<p>	函数stdevp(…)返回任意个数参数的标准差。</p>
+</td>
+</tr>
+<tr>
+<td><center>sum</center></td>
+<td><p>sum(0...) :</p>
+<p>	函数sum(…)返回任意个数参数的总合。</p>
+</td>
+</tr>
+<tr>
+<td><center>tand</center></td>
+<td><p>tand(1) :</p>
+<p>	函数tand(x)返回角度数x的正切值。</p>
+</td>
+</tr>
+<tr>
+<td><center>tanh</center></td>
+<td><p>tanh(1) :</p>
+<p>	函数tanh(x)用于计算x的双曲正切值。</p>
+</td>
+</tr>
+<tr>
+<td><center>tip</center></td>
+<td><p>tip(2) :</p>
+<p>	函数tip(x,y)用于计算在美国饭馆吃饭时所支付的所有费用包括实际费用和小费。</p>
+</td>
+</tr>
+<tr>
+<td><center>todeg</center></td>
+<td><p>todeg(1) :</p>
+<p>	函数todeg(x)将弧度x转换为度数值。</p>
+</td>
+</tr>
+<tr>
+<td><center>torad</center></td>
+<td><p>torad(1) :</p>
+<p>	函数torad(x)将度数x转换为弧度值。</p>
+</td>
+</tr>
+<tr>
+<td><center>xor</center></td>
+<td><p>xor(2) :</p>
+<p>	函数xor计算x和y的异或值，x和y可以为任何数值。如果x不等于y，返回true。</p>
+</td>
+</tr>
+</table>
+</body>
+</html>

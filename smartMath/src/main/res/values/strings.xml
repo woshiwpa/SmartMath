@@ -853,6 +853,8 @@
 	<string name="what_you_need_to_know_before_start_to_use">What you need to know before start to use ...</string>
 	<string name="no_valid_expr_recognized">No valid expression recognized!</string>
 	<string name="recognition_interrupted">Recognition has been interrupted!</string>
-	
+	<string name="help">Help</string>
+	<string name="why_request_permissions">I need camera permission for math formula recognition and storage permission to save results.</string>
+
 	<string name="baidu_ad_words_China">中 国 </string>
 </resources>

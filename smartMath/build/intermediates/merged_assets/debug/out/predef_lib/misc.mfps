@@ -1,0 +1,2827 @@
+Help
+	@language:
+	Function tip(x, y) is used to calculate total money to pay in a American restaurant with known price x and tip ratio y.
+	@end
+	@language:simplified_chinese
+	函数tip(x,y)用于计算在美国饭馆吃饭时所支付的所有费用包括实际费用和小费。
+	@end
+	@language:traditional_chinese
+	函數tip(x,y)用於計算在美國飯館吃飯時所支付的所有費用包括實際費用和小費。
+	@end
+Endh
+Function tip(Price, TipRatio)
+	If TipRatio >= 1	// this means tip ratio is percentage
+		Return Price * (1+TipRatio/100.0)
+	Else	// this means tip ratio is fraction
+		Return Price *(1+TipRatio)
+	Endif
+Endf
+
+Help
+	@language:
+	get_constant(const_name, n) fetches a constant value (identified by a case-sensative string consta_name) wih n significant digits after decimal point. The second parameter n a non-negative integer and is optional. If it is omitted, this function returns the value without rounding. It supports the following constants:
+	1. Ratio of circumference of a circle to its diameter (const_name == "pi");
+	2. Natural logarithm (const_name == "e");
+	3. Light speed in vacuum [m/s] (const_name == "light_speed_in_vacuum");
+	4. Gravitational constant [m**3/kg/(s**2)] (const_name == "gravitational_constant");
+	5. Planck constant [J*s] (const_name == "planck_constant");
+	6. Magnetic constant [N/(A**2)] (const_name == "magnetic_constant");
+	7. Electric constant [F/m] (const_name == "electric_constant");
+	8. Elementary charge [c] (const_name == "elementary_charge_constant");
+	9. Avogadro constant [1/mol] (const_name == "avogadro_constant");
+	10. Faraday constant [C/mol] (const_name == "faraday_constant");
+	11. Molar gas constant [J/mol/K] (const_name == "molar_gas_constant");
+	12. Boltzman constant [J/K] (const_name == "boltzman_constant");
+	13. Standard gravity [m/(s**2)] (const_name == "standard_gravity");
+	For example, if user inputs get_constant("pi", 4), the result will be 3.1416; if user inputs get_constant("pi", 8), the result will be 3.14159265; if user inputs get_constant("pi", 0), s\he will get 3; if user inputs get_constant("pi"), the result will be 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 (with 100 digits after decimal point), which is the pi value internally used by the software.
+	@end
+	@language:simplified_chinese
+	函数get_constant(const_name, n)返回一个由区分大小写的字符串const_name所对应的常数值，返回的数值将会四舍五入后保留小数点后面n位有效数值，这里n为非负整数并且可以省略。如果n被省略，返回值将不会被四舍五入处理。本函数支持以下常数：
+	1. 圆周率 (const_name == "pi");
+	2. 自然对数 (const_name == "e");
+	3. 真空中的光速 [m/s] (const_name == "light_speed_in_vacuum");
+	4. 万有引力常数 [m**3/kg/(s**2)] (const_name == "gravitational_constant");
+	5. 普朗克常数 [J*s] (const_name == "planck_constant");
+	6. 磁常数（真空磁导率） [N/(A**2)] (const_name == "magnetic_constant");
+	7. 电常数（真空电容率） [F/m] (const_name == "electric_constant");
+	8. 基本电荷 [c] (const_name == "elementary_charge_constant");
+	9. 阿伏伽德罗常数 [1/mol] (const_name == "avogadro_constant");
+	10. 法拉第常数 [C/mol] (const_name == "faraday_constant");
+	11. 气体常数 [J/mol/K] (const_name == "molar_gas_constant");
+	12. 玻尔兹曼常量 [J/K] (const_name == "boltzman_constant");
+	13. 标准重力 [m/(s**2)] (const_name == "standard_gravity");
+	例如，如果用户输入get_constant("pi", 4)，结果将会是3.1416；如果用户输入get_constant("pi", 8)，结果将会是3.14159265；如果用户输入get_constant("pi", 0)，将会得到3，如果用户输入get_constant("pi")返回值将是3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 （小数点后有100位数字），这个数值就是本软件内部所使用的圆周率数值。
+	@end
+	@language:traditional_chinese
+	函數程式get_constant(const_name, n)返回一個由區分大小寫的字符串const_name所對應的常數值，返回的數值將會四舍五入後保留小數點後面n位有效數值，這裏n為非負整數並且可以省略。如果n被省略，返回值將不會被四舍五入處理。本函數程式支持以下常數：
+	1. 圓周率 (const_name == "pi");
+	2. 自然對數 (const_name == "e");
+	3. 真空中的光速 [m/s] (const_name == "light_speed_in_vacuum");
+	4. 萬有引力常數 [m**3/kg/(s**2)] (const_name == "gravitational_constant");
+	5. 普朗克常數 [J*s] (const_name == "planck_constant");
+	6. 磁常數（真空磁導率） [N/(A**2)] (const_name == "magnetic_constant");
+	7. 電常數（真空電容率） [F/m] (const_name == "electric_constant");
+	8. 基本電荷 [c] (const_name == "elementary_charge_constant");
+	9. 亞佛加厥常數 [1/mol] (const_name == "avogadro_constant");
+	10. 法拉第常數 [C/mol] (const_name == "faraday_constant");
+	11. 氣體常數 [J/mol/K] (const_name == "molar_gas_constant");
+	12. 玻茲曼常量 [J/K] (const_name == "boltzman_constant");
+	13. 標準重力 [m/(s**2)] (const_name == "standard_gravity");
+	例如，如果用戶輸入get_constant("pi", 4)，結果將會是3.1416；如果用戶輸入get_constant("pi", 8)，結果將會是3.14159265；如果用戶輸入get_constant("pi", 0)，將會得到3，如果用戶輸入get_constant("pi")返回值將是3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679 （小數點後有100位數字），這個數值就是本軟體內部所使用的圓周率數值。
+	@end
+Endh
+Function get_constant(const_name, ...)
+	If opt_argc > 1
+		Throw "Support at most two parameters!"
+	Endif
+	Variable const_value, const_power
+	const_value = 0
+	const_power = 1
+	select const_name
+	case "pi"
+		const_value = pi
+		const_power = 1
+		break
+	case "e"
+		const_value = e
+		const_power = 1
+		break
+	case "light_speed_in_vacuum"
+		const_value = 299792458
+		const_power = 1
+		break
+	case "gravitational_constant"
+		const_value = 6.67428
+		const_power = 1e-11
+		break
+	case "planck_constant"
+		const_value = 6.62606896
+		const_power = 1e-34
+		break
+	case "magnetic_constant"
+		const_value = 1.256637061
+		const_power = 1e-6
+		break
+	case "electric_constant"
+		const_value = 8.854187817
+		const_power = 1e-12
+		break
+	case "elementary_charge_constant"
+		const_value = 1.602176487
+		const_power = 1e-19
+		break
+	case "avogadro_constant"
+		const_value = 6.02214179
+		const_power = 1e23
+		break
+	case "faraday_constant"
+		const_value = 96485.3399
+		const_power = 1
+		break
+	case "molar_gas_constant"
+		const_value = 8.314472
+		const_power = 1
+		break
+	case "boltzman_constant"
+		const_value = 1.3806504
+		const_power = 1e-23
+		break
+	case "standard_gravity"
+		const_value = 9.80665
+		const_power = 1
+		break
+	default
+		throw "Unrecognized constant"
+	ends
+	if opt_argc == 0
+		return const_value * const_power
+	else
+		const_value = round(const_value, opt_argv[0])
+		return const_value * const_power
+	endif
+Endf
+
+Help
+	@language:
+	Function plot2D calls plot_multi_xy function to plot at most eight 2D-curves in one chart. It has the following parameters: 1. chart name (i.e. chart file name); 2. chart title; 3. X axis title; 4. Y axis title; 5. show grid or not; 6. curve title; 7. curve color; 8. t values start from; 9. t values end at; 10. t values' interval; 11. X's expression (based on variable t); 12. Y's expression (based on variable t)... Note that every new curve needs additional 7 parameters (i.e. parameters 6 to 12). At most 8 curves can be included. Note that this function is not recommended to use. Function plot2DEX should be used as a replacement.
+	@end
+	@language:simplified_chinese
+	函数plot2D调用plot_multi_xy以绘制由最多8条2-D曲线所构成的图像。其包括以下参数：1.图像名字（图像文件名）；2.图像标题；3.X轴标题；4.Y轴标题；5.是否显示网格；6.曲线标题；7.曲线颜色；8.t起始位置；9.t终止位置；10.t的间隔；11.以t为变量的X的表达式；12.以t为变量的Y的表达式...。其中，每增加一条新的曲线，需要添加7个参数（也就是参数6到12），最多定义8条曲线。需要注意的是，本函数不建议被使用。如果想绘制二维图形，请使用函数plot2DEX。
+	@end
+	@language:traditional_chinese
+	函數plot2D調用plot_multi_xy以繪制由最多8條2-D曲線所構成的圖像。其包括以下參數：1.圖像名字（圖像文件名）；2.圖像標題；3.X軸標題；4.Y軸標題；5.是否顯示網格；6.曲線標題；7.曲線顏色；8.t起始位置；9.t終止位置；10.t的間隔；11.以t為變量的X的表達式；12.以t為變量的Y的表達式...。其中，每增加一條新的曲線，需要添加7個參數（也就是參數6到12），最多定義8條曲線。需要註意的是，本函數程式不建議被使用。如果想繪制二維圖形，請使用函數程式plot2DEX。
+	@end
+Endh
+Function plot2D(chart_name, _	// name of the chart
+				chart_title, _	//title for chart
+				X_title, _	// title for x axis
+				Y_title, _	// title for y axis
+				show_grid, _//show grid or not?
+				...)	//parameters for curves
+	If opt_argc > 56
+		Throw "I can draw at most 8 curves in one chart!"
+	Elseif round(opt_argc / 7) * 7 != opt_argc
+		Throw "One curve needs exactly 7 parameters!"
+	Elseif opt_argc == 0
+		Throw "Should include at least one curve!"
+	Endif
+	
+	Variable number_of_curves
+	number_of_curves = opt_argc / 7
+	Variable vectorCurveTitle, vectorCurveColor, vectorTFrom, vectorTTo, vectorTStep, _
+			vectorXExpr, vectorYExpr, vectorCurveSettings, vectorT, vectorX, vectorY
+	vectorCurveTitle = alloc_array(number_of_curves)	
+	vectorCurveColor = alloc_array(number_of_curves)	
+	vectorTFrom = alloc_array(number_of_curves)	
+	vectorTTo = alloc_array(number_of_curves)	
+	vectorTStep = alloc_array(number_of_curves)	
+	vectorXExpr = alloc_array(number_of_curves)
+	vectorYExpr = alloc_array(number_of_curves)
+	vectorCurveSettings = alloc_array(number_of_curves)
+	vectorT = alloc_array(number_of_curves)
+	vectorX = alloc_array(number_of_curves)
+	vectorY = alloc_array(number_of_curves)
+	Variable indexPara
+	indexPara = 0
+	Variable xMin, xMax, yMin, yMax
+	For variable index = 1 to number_of_curves step 1
+		vectorCurveTitle[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorCurveColor[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorCurveSettings[index - 1] = strcat("curve_label:", vectorCurveTitle[index - 1], ";color:", vectorCurveColor[index - 1])
+		vectorTFrom[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorTTo[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorTStep[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorXExpr[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorYExpr[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		Variable t_list_len
+		t_list_len = floor((vectorTTo[index-1] - vectorTFrom[index-1])/vectorTStep[index-1]) + 1
+		If (t_list_len < 1)
+			Throw "Should have at least one point in a curve"
+		Endif
+		vectorT[index - 1] = alloc_array(t_list_len)
+		vectorX[index - 1] = alloc_array(t_list_len)
+		vectorY[index - 1] = alloc_array(t_list_len)
+		Variable indexXY
+		indexXY = 1
+		While indexXY <= t_list_len
+			vectorT[index - 1, indexXY-1] = vectorTFrom[index-1] + (indexXY - 1) * vectorTStep[index-1]
+			vectorX[index - 1, indexXY-1] = evaluate(vectorXExpr[index-1], "t", vectorT[index - 1, indexXY-1])
+			vectorY[index - 1, indexXY-1] = evaluate(vectorYExpr[index-1], "t", vectorT[index - 1, indexXY-1])
+			If and(index == 1, indexXY == 1)
+				xMin = vectorX[index - 1, indexXY-1]
+				xMax = vectorX[index - 1, indexXY-1]
+				yMin = vectorY[index - 1, indexXY-1]
+				yMax = vectorY[index - 1, indexXY-1]
+			Else
+				If xMin > vectorX[index - 1, indexXY-1]
+					xMin = vectorX[index - 1, indexXY-1]
+				Endif
+				If xMax < vectorX[index - 1, indexXY-1]
+					xMax = vectorX[index - 1, indexXY-1]
+				Endif
+				If yMin > vectorY[index - 1, indexXY-1]
+					yMin = vectorY[index - 1, indexXY-1]
+				Endif
+				If yMax < vectorY[index - 1, indexXY-1]
+					yMax = vectorY[index - 1, indexXY-1]
+				Endif
+			Endif
+			indexXY = indexXY + 1
+		Loop
+	Next
+
+	Variable chart_settings
+	chart_settings = strcat("chart_type:multiXY;chart_title:", chart_title, _
+							";x_title:", X_title, ";x_min:", tostring(xMin), ";x_max:", tostring(xMax), ";x_labels:10", _
+							";y_title:", Y_title, ";y_min:", tostring(yMin), ";y_max:", tostring(yMax), ";y_labels:10", _
+							";show_grid:", tostring(show_grid))
+	
+	Select number_of_curves
+	case 1
+		plot_multi_xy(chart_name, chart_settings, vectorCurveSettings[0], vectorX[0], vectorY[0])
+		break
+	case 2
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1])
+		break
+	case 3
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2])
+		break
+	case 4
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3])
+		break
+	case 5
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], _
+						vectorCurveSettings[4], vectorX[4], vectorY[4])
+		break
+	case 6
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], _
+						vectorCurveSettings[4], vectorX[4], vectorY[4], _
+						vectorCurveSettings[5], vectorX[5], vectorY[5])
+		break
+	case 7
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], _
+						vectorCurveSettings[4], vectorX[4], vectorY[4], _
+						vectorCurveSettings[5], vectorX[5], vectorY[5], _
+						vectorCurveSettings[6], vectorX[6], vectorY[6])
+		break
+	case 8
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], _
+						vectorCurveSettings[4], vectorX[4], vectorY[4], _
+						vectorCurveSettings[5], vectorX[5], vectorY[5], _
+						vectorCurveSettings[6], vectorX[6], vectorY[6], _
+						vectorCurveSettings[7], vectorX[7], vectorY[7])
+		break
+	Ends
+Endf
+
+Help
+	@language:
+	Function plot2DEX calls plot_multi_xy function to plot at most eight 2D-curves in one chart. It has the following parameters: 1. chart name (i.e. chart file name); 2. chart title; 3. X axis title; 4. Y axis title; 5.  chart's background color; 6. show grid or not; 7. curve title; 8. curve point color; 9. curve point shape; 10. curve point size; 11. curve line color; 12. curve line pattern; 13. curve line size; 14. t values start from; 15. t values end at; 16. t values' interval; 17. X's expression (based on variable t); 18. Y's expression (based on variable t)... Note that every new curve needs additional 12 parameters (i.e. parameters 7 to 18). At most 8 curves can be included. Also note that at this moment chart's background color, curve point size, curve line color and curve line pattern are not realized yet. And curve line size only has two values, i.e. zero means no connection line and non-zero means with connection line. An example of this function is plot2DEX("chart 3", "3rd chart", "x", "y", "black", true, "cv1", "blue", "x", 2, "blue", "solid", 1, -5, 5, 0.1, "t", "t**2/2.5 - 4*t + 6", "cv2", "red", "square", 4, "square", "solid", 1, -10, 10, 0.1, "5*sin(t)", "10*cos(t)") .
+	@end
+	@language:simplified_chinese
+	函数plot2DEX调用plot_multi_xy以绘制由最多8条2-D曲线所构成的图像。其包括以下参数：1.图像名字（图像文件名）；2.图像标题；3.X轴标题；4.Y轴标题；5.图像背景色；6.是否显示网格；7.曲线标题；8.曲线数据点颜色；9.曲线数据点形状；10.曲线数据点大小；11.曲线连接线颜色；12.曲线连接线类型；13.曲线连接线粗细；14.t起始位置；15.t终止位置；16.t的间隔；17.以t为变量的X的表达式；18.以t为变量的Y的表达式...。其中，每增加一条新的曲线，需要添加12个参数（也就是参数7到18），最多定义8条曲线。另外要注意图像背景色，曲线数据点的大小，曲线连接线颜色以及曲线连接线类型还没有被实现，曲线连接线粗细仅支持0（意味着没有连接线连接数据点）和非0（意味着有连接线连接数据点）。本函数的一个例子为：plot2DEX("chart 3", "3rd chart", "x", "y", "black", true, "cv1", "blue", "x", 2, "blue", "solid", 1, -5, 5, 0.1, "t", "t**2/2.5 - 4*t + 6", "cv2", "red", "square", 4, "square", "solid", 1, -10, 10, 0.1, "5*sin(t)", "10*cos(t)") 。
+	@end
+	@language:traditional_chinese
+	函數plot2DEX調用plot_multi_xy以繪制由最多8條2-D曲線所構成的圖像。其包括以下參數：1.圖像名字（圖像文件名）；2.圖像標題；3.X軸標題；4.Y軸標題；5.圖像背景色；6.是否顯示網格；7.曲線標題；8.曲線數據點顏色；9.曲線數據點形狀；10.曲線數據點大小；11.曲線連接線顏色；12.曲線連接線類型；13.曲線連接線粗細；14.t起始位置；15.t終止位置；16.t的間隔；17.以t為變量的X的表達式；18.以t為變量的Y的表達式...。其中，每增加一條新的曲線，需要添加12個參數（也就是參數7到18），最多定義8條曲線。另外要註意圖像背景色，曲線數據點的大小，曲線連接線顏色以及曲線連接線類型還沒有被實現，曲線連接線粗細僅支持0（意味著沒有連接線連接數據點）和非0（意味著有連接線連接數據點）。本函數程式的一個例子為：plot2DEX("chart 3", "3rd chart", "x", "y", "black", true, "cv1", "blue", "x", 2, "blue", "solid", 1, -5, 5, 0.1, "t", "t**2/2.5 - 4*t + 6", "cv2", "red", "square", 4, "square", "solid", 1, -10, 10, 0.1, "5*sin(t)", "10*cos(t)") 。
+	@end
+Endh
+Function plot2DEX(chart_name, _	// name of the chart
+				chart_title, _	//title for chart
+				X_title, _	// title for x axis
+				Y_title, _	// title for y axis
+				background_color, _	// background color of the chart.
+				show_grid, _//show grid or not?
+				...)	//parameters for curves
+	If opt_argc > 96
+		Throw "I can draw at most 8 curves in one chart!"
+	Elseif round(opt_argc / 12) * 12 != opt_argc
+		Throw "One curve needs exactly 12 parameters!"
+	Elseif opt_argc == 0
+		Throw "Should include at least one curve!"
+	Endif
+	
+	Variable number_of_curves
+	number_of_curves = opt_argc / 12
+	Variable vectorCurveTitle, vectorCurvePntColor, vectorCurvePntStyle, vectorCurvePntSize, vectorCurveLnColor, vectorCurveLnStyle, vectorCurveLnSize, _
+			vectorTFrom, vectorTTo, vectorTStep, vectorXExpr, vectorYExpr, vectorCurveSettings, vectorT, vectorX, vectorY
+	vectorCurveTitle = alloc_array(number_of_curves)	
+	vectorCurvePntColor = alloc_array(number_of_curves)	
+	vectorCurvePntStyle = alloc_array(number_of_curves)	
+	vectorCurvePntSize = alloc_array(number_of_curves)	
+	vectorCurveLnColor = alloc_array(number_of_curves)	
+	vectorCurveLnStyle = alloc_array(number_of_curves)	
+	vectorCurveLnSize = alloc_array(number_of_curves)	
+	vectorTFrom = alloc_array(number_of_curves)	
+	vectorTTo = alloc_array(number_of_curves)	
+	vectorTStep = alloc_array(number_of_curves)	
+	vectorXExpr = alloc_array(number_of_curves)
+	vectorYExpr = alloc_array(number_of_curves)
+	vectorCurveSettings = alloc_array(number_of_curves)
+	vectorT = alloc_array(number_of_curves)
+	vectorX = alloc_array(number_of_curves)
+	vectorY = alloc_array(number_of_curves)
+	Variable indexPara
+	indexPara = 0
+	Variable xMin, xMax, yMin, yMax
+	For variable index = 1 to number_of_curves step 1
+		vectorCurveTitle[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorCurvePntColor[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorCurvePntStyle[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorCurvePntSize[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorCurveLnColor[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorCurveLnStyle[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorCurveLnSize[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorCurveSettings[index - 1] = "curve_label:" + vectorCurveTitle[index - 1] _
+										+ ";point_color:" + vectorCurvePntColor[index - 1] + ";point_style:" + vectorCurvePntStyle[index - 1] + ";point_size:" + vectorCurvePntSize[index - 1] _
+										+ ";line_color:" + vectorCurveLnColor[index - 1] + ";line_style:" + vectorCurveLnStyle[index - 1] + ";line_size:" + vectorCurveLnSize[index - 1]
+		vectorTFrom[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorTTo[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorTStep[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorXExpr[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorYExpr[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		Variable t_list_len
+		t_list_len = floor((vectorTTo[index-1] - vectorTFrom[index-1])/vectorTStep[index-1]) + 1
+		If (t_list_len < 1)
+			Throw "Should have at least one point in a curve"
+		Endif
+		vectorT[index - 1] = alloc_array(t_list_len)
+		vectorX[index - 1] = alloc_array(t_list_len)
+		vectorY[index - 1] = alloc_array(t_list_len)
+		Variable indexXY
+		indexXY = 1
+		While indexXY <= t_list_len
+			vectorT[index - 1, indexXY-1] = vectorTFrom[index-1] + (indexXY - 1) * vectorTStep[index-1]
+			vectorX[index - 1, indexXY-1] = evaluate(vectorXExpr[index-1], "t", vectorT[index - 1, indexXY-1])
+			vectorY[index - 1, indexXY-1] = evaluate(vectorYExpr[index-1], "t", vectorT[index - 1, indexXY-1])
+			If and(index == 1, indexXY == 1)
+				xMin = vectorX[index - 1, indexXY-1]
+				xMax = vectorX[index - 1, indexXY-1]
+				yMin = vectorY[index - 1, indexXY-1]
+				yMax = vectorY[index - 1, indexXY-1]
+			Else
+				If xMin > vectorX[index - 1, indexXY-1]
+					xMin = vectorX[index - 1, indexXY-1]
+				Endif
+				If xMax < vectorX[index - 1, indexXY-1]
+					xMax = vectorX[index - 1, indexXY-1]
+				Endif
+				If yMin > vectorY[index - 1, indexXY-1]
+					yMin = vectorY[index - 1, indexXY-1]
+				Endif
+				If yMax < vectorY[index - 1, indexXY-1]
+					yMax = vectorY[index - 1, indexXY-1]
+				Endif
+			Endif
+			indexXY = indexXY + 1
+		Loop
+	Next
+
+	Variable chart_settings
+	chart_settings = strcat("chart_type:multiXY;chart_title:", chart_title, _
+							";x_title:", X_title, ";x_min:", tostring(xMin), ";x_max:", tostring(xMax), ";x_labels:10", _
+							";y_title:", Y_title, ";y_min:", tostring(yMin), ";y_max:", tostring(yMax), ";y_labels:10", _
+							";background_color:", background_color, ";show_grid:", tostring(show_grid))
+	
+	Select number_of_curves
+	case 1
+		plot_multi_xy(chart_name, chart_settings, vectorCurveSettings[0], vectorX[0], vectorY[0])
+		break
+	case 2
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1])
+		break
+	case 3
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2])
+		break
+	case 4
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3])
+		break
+	case 5
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], _
+						vectorCurveSettings[4], vectorX[4], vectorY[4])
+		break
+	case 6
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], _
+						vectorCurveSettings[4], vectorX[4], vectorY[4], _
+						vectorCurveSettings[5], vectorX[5], vectorY[5])
+		break
+	case 7
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], _
+						vectorCurveSettings[4], vectorX[4], vectorY[4], _
+						vectorCurveSettings[5], vectorX[5], vectorY[5], _
+						vectorCurveSettings[6], vectorX[6], vectorY[6])
+		break
+	case 8
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], _
+						vectorCurveSettings[4], vectorX[4], vectorY[4], _
+						vectorCurveSettings[5], vectorX[5], vectorY[5], _
+						vectorCurveSettings[6], vectorX[6], vectorY[6], _
+						vectorCurveSettings[7], vectorX[7], vectorY[7])
+		break
+	Ends
+Endf
+
+Help
+	@language:
+	Function plot_polar calls plot_multi_xy function to plot at most eight polar-curves in one chart. It has the following parameters: 1. chart name (i.e. chart file name); 2. chart title; 3. R axis title; 4. Angle axis title; 5.  chart's background color; 6. show grid or not; 7. curve title; 8. curve point color; 9. curve point shape; 10. curve point size; 11. curve line color; 12. curve line pattern; 13. curve line size; 14. t values start from; 15. t values end at; 16. t values' interval; 17. R's expression (based on variable t); 18. Angle's expression (based on variable t)... Note that every new curve needs additional 12 parameters (i.e. parameters 7 to 18). At most 8 curves can be included. Also note that at this moment chart's background color, curve point size, curve line color and curve line pattern are not realized yet. And curve line size only has two values, i.e. zero means no connection line and non-zero means with connection line. An example of this function is plot_polar("chart 3", "3rd chart", "R", "Angle", "black", true, "cv1", "blue", "x", 2, "blue", "solid", 1, -5, 5, 0.1, "cos(t)", "t", "cv2", "red", "square", 4, "square", "solid", 1, -PI, PI, PI/10, "5*sqrt(t)", "t + PI") .
+	@end
+	@language:simplified_chinese
+	函数plot_polar调用plot_multi_xy以绘制由最多8条极坐标曲线所构成的图像。其包括以下参数：1.图像名字（图像文件名）；2.图像标题；3.R轴标题；4.幅角标题；5.图像背景色；6.是否显示网格；7.曲线标题；8.曲线数据点颜色；9.曲线数据点形状；10.曲线数据点大小；11.曲线连接线颜色；12.曲线连接线类型；13.曲线连接线粗细；14.t起始位置；15.t终止位置；16.t的间隔；17.以t为变量的R的表达式；18.以t为变量的幅角的表达式...。其中，每增加一条新的曲线，需要添加12个参数（也就是参数7到18），最多定义8条曲线。另外要注意图像背景色，曲线数据点的大小，曲线连接线颜色以及曲线连接线类型还没有被实现，曲线连接线粗细仅支持0（意味着没有连接线连接数据点）和非0（意味着有连接线连接数据点）。本函数的一个例子为：plot_polar("chart 3", "3rd chart", "R", "Angle", "black", true, "cv1", "blue", "x", 2, "blue", "solid", 1, -5, 5, 0.1, "cos(t)", "t", "cv2", "red", "square", 4, "square", "solid", 1, -PI, PI, PI/10, "5*sqrt(t)", "t + PI") 。
+	@end
+	@language:traditional_chinese
+	程式plot_polar調用plot_multi_xy以繪制由最多8條極坐標曲線所構成的圖像。其包括以下參數：1.圖像名字（圖像文件名）；2.圖像標題；3.R軸標題；4.幅角軸標題；5.圖像背景色；6.是否顯示網格；7.曲線標題；8.曲線數據點顏色；9.曲線數據點形狀；10.曲線數據點大小；11.曲線連接線顏色；12.曲線連接線類型；13.曲線連接線粗細；14.t起始位置；15.t終止位置；16.t的間隔；17.以t為變量的R的表達式；18.以t為變量的幅角的表達式...。其中，每增加一條新的曲線，需要添加12個參數（也就是參數7到18），最多定義8條曲線。另外要註意圖像背景色，曲線數據點的大小，曲線連接線顏色以及曲線連接線類型還沒有被實現，曲線連接線粗細僅支持0（意味著沒有連接線連接數據點）和非0（意味著有連接線連接數據點）。本函數程式的一個例子為：plot_polar("chart 3", "3rd chart", "R", "Angle", "black", true, "cv1", "blue", "x", 2, "blue", "solid", 1, -5, 5, 0.1, "cos(t)", "t", "cv2", "red", "square", 4, "square", "solid", 1, -PI, PI, PI/10, "5*sqrt(t)", "t + PI") 。
+	@end
+Endh
+Function plot_polar(chart_name, _	// name of the chart
+				chart_title, _	//title for chart
+				X_title, _	// title for x axis
+				Y_title, _	// title for y axis
+				background_color, _	// background color of the chart.
+				show_grid, _//show grid or not?
+				...)	//parameters for curves
+	If opt_argc > 96
+		Throw "I can draw at most 8 curves in one chart!"
+	Elseif round(opt_argc / 12) * 12 != opt_argc
+		Throw "One curve needs exactly 12 parameters!"
+	Elseif opt_argc == 0
+		Throw "Should include at least one curve!"
+	Endif
+	
+	Variable number_of_curves
+	number_of_curves = opt_argc / 12
+	Variable vectorCurveTitle, vectorCurvePntColor, vectorCurvePntStyle, vectorCurvePntSize, vectorCurveLnColor, vectorCurveLnStyle, vectorCurveLnSize, _
+			vectorTFrom, vectorTTo, vectorTStep, vectorXExpr, vectorYExpr, vectorCurveSettings, vectorT, vectorX, vectorY
+	vectorCurveTitle = alloc_array(number_of_curves)	
+	vectorCurvePntColor = alloc_array(number_of_curves)	
+	vectorCurvePntStyle = alloc_array(number_of_curves)	
+	vectorCurvePntSize = alloc_array(number_of_curves)	
+	vectorCurveLnColor = alloc_array(number_of_curves)	
+	vectorCurveLnStyle = alloc_array(number_of_curves)	
+	vectorCurveLnSize = alloc_array(number_of_curves)	
+	vectorTFrom = alloc_array(number_of_curves)	
+	vectorTTo = alloc_array(number_of_curves)	
+	vectorTStep = alloc_array(number_of_curves)	
+	vectorXExpr = alloc_array(number_of_curves)
+	vectorYExpr = alloc_array(number_of_curves)
+	vectorCurveSettings = alloc_array(number_of_curves)
+	vectorT = alloc_array(number_of_curves)
+	vectorX = alloc_array(number_of_curves)
+	vectorY = alloc_array(number_of_curves)
+	Variable indexPara
+	indexPara = 0
+	Variable xMin, xMax, yMin, yMax
+	For variable index = 1 to number_of_curves step 1
+		vectorCurveTitle[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorCurvePntColor[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorCurvePntStyle[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorCurvePntSize[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorCurveLnColor[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorCurveLnStyle[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorCurveLnSize[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorCurveSettings[index - 1] = "curve_label:" + vectorCurveTitle[index - 1] _
+										+ ";point_color:" + vectorCurvePntColor[index - 1] + ";point_style:" + vectorCurvePntStyle[index - 1] + ";point_size:" + vectorCurvePntSize[index - 1] _
+										+ ";line_color:" + vectorCurveLnColor[index - 1] + ";line_style:" + vectorCurveLnStyle[index - 1] + ";line_size:" + vectorCurveLnSize[index - 1]
+		vectorTFrom[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorTTo[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorTStep[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorXExpr[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorYExpr[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		Variable t_list_len
+		t_list_len = floor((vectorTTo[index-1] - vectorTFrom[index-1])/vectorTStep[index-1]) + 1
+		If (t_list_len < 1)
+			Throw "Should have at least one point in a curve"
+		Endif
+		vectorT[index - 1] = alloc_array(t_list_len)
+		vectorX[index - 1] = alloc_array(t_list_len)
+		vectorY[index - 1] = alloc_array(t_list_len)
+		Variable indexXY
+		indexXY = 1
+		While indexXY <= t_list_len
+			vectorT[index - 1, indexXY-1] = vectorTFrom[index-1] + (indexXY - 1) * vectorTStep[index-1]
+			vectorX[index - 1, indexXY-1] = evaluate(vectorXExpr[index-1], "t", vectorT[index - 1, indexXY-1])
+			vectorY[index - 1, indexXY-1] = evaluate(vectorYExpr[index-1], "t", vectorT[index - 1, indexXY-1])
+			If and(index == 1, indexXY == 1)
+				xMin = vectorX[index - 1, indexXY-1]
+				xMax = vectorX[index - 1, indexXY-1]
+				yMin = vectorY[index - 1, indexXY-1]
+				yMax = vectorY[index - 1, indexXY-1]
+			Else
+				If xMin > vectorX[index - 1, indexXY-1]
+					xMin = vectorX[index - 1, indexXY-1]
+				Endif
+				If xMax < vectorX[index - 1, indexXY-1]
+					xMax = vectorX[index - 1, indexXY-1]
+				Endif
+				If yMin > vectorY[index - 1, indexXY-1]
+					yMin = vectorY[index - 1, indexXY-1]
+				Endif
+				If yMax < vectorY[index - 1, indexXY-1]
+					yMax = vectorY[index - 1, indexXY-1]
+				Endif
+			Endif
+			indexXY = indexXY + 1
+		Loop
+	Next
+
+	Variable chart_settings
+	chart_settings = strcat("chart_type:multiRangle;chart_title:", chart_title, _
+							";x_title:", X_title, ";x_min:", tostring(xMin), ";x_max:", tostring(xMax), ";x_labels:10", _
+							";y_title:", Y_title, ";y_min:", tostring(yMin), ";y_max:", tostring(yMax), ";y_labels:10", _
+							";background_color:", background_color, ";show_grid:", tostring(show_grid))
+	
+	Select number_of_curves
+	case 1
+		plot_multi_xy(chart_name, chart_settings, vectorCurveSettings[0], vectorX[0], vectorY[0])
+		break
+	case 2
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1])
+		break
+	case 3
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2])
+		break
+	case 4
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3])
+		break
+	case 5
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], _
+						vectorCurveSettings[4], vectorX[4], vectorY[4])
+		break
+	case 6
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], _
+						vectorCurveSettings[4], vectorX[4], vectorY[4], _
+						vectorCurveSettings[5], vectorX[5], vectorY[5])
+		break
+	case 7
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], _
+						vectorCurveSettings[4], vectorX[4], vectorY[4], _
+						vectorCurveSettings[5], vectorX[5], vectorY[5], _
+						vectorCurveSettings[6], vectorX[6], vectorY[6])
+		break
+	case 8
+		plot_multi_xy(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], _
+						vectorCurveSettings[4], vectorX[4], vectorY[4], _
+						vectorCurveSettings[5], vectorX[5], vectorY[5], _
+						vectorCurveSettings[6], vectorX[6], vectorY[6], _
+						vectorCurveSettings[7], vectorX[7], vectorY[7])
+		break
+	Ends
+Endf
+
+Help
+	@language:
+	Function plot3D calls plot_multi_xyz function to plot at most eight 3D-surfaces in one chart. It has the following parameters: 1. chart name (i.e. chart file name); 2. chart title; 3. X axis title; 4. Y axis title; 5. Z axis title; 6. curve title; 7. grid or not (if false, a filled surface will be drawn); 8. color at minimum z value; 9. minimum z value (null means automatically determined by software); 10. color at maximum z value; 11. maximum z value (null means automatically determined by software); 12. u values start from; 13. u values end at; 14. u values' interval; 15. v values start from; 16. v values end at; 17. v values' interval; 18. X's expression (based on variables u and v); 19. Y's expression (based on variables u and v); 20. Z's expression (based on variables u and v); ... Note that every new curve needs additional 15 parameters (i.e. parameters 6 to 20). At most 8 curves can be included. A Example of this function is plot3D("chartI", "first chart", "x", "y", "z", "Curve1", true, "red", -0.5, "green", null, 0, pi, pi/8, -pi/2, pi/2, 0, "sin(u)*cos(v)", "sin(u)*sin(v)", "cos(u)") .
+	@end
+	@language:simplified_chinese
+	函数plot3D调用plot_multi_xyz以绘制由最多8条3-D曲面所构成的图像。其包括以下参数：1.图像名字（图像文件名）；2.图像标题；3.X轴标题；4.Y轴标题；5.Z轴标题；6.曲线标题；7.是网格还是填充表面（true是网格，false是填充表面）；8.z值最小的时候的颜色；9.最小的z值（注意如果是null，意味着让软件自己找到最小的z值）；10.z值最大的时候的颜色；11.最大的z值（注意如果是null，意味着让软件自己找到最大的z值）；12.变量u的起始值；13.变量u的终止值；14.变量u的间隔（0意味着间隔由软件决定）；15.变量v的起始值；16.变量v的终止值；17.变量v的间隔（0意味着间隔由软件决定）；18.以u，v为变量的X的表达式；19.以u，v为变量的Y的表达式；20.以u，v为变量的Z的表达式；...。其中，每增加一条新的曲线，需要添加15个参数（也就是参数6到20），最多定义8条曲线。该函数的一个例子为：plot3D("chartI", "first chart", "x", "y", "z", "Curve1", true, "red", -0.5, "green", null, 0, pi, pi/8, -pi/2, pi/2, 0, "sin(u)*cos(v)", "sin(u)*sin(v)", "cos(u)")　。
+	@end
+	@language:traditional_chinese
+	函數plot3D調用plot_multi_xyz以繪制由最多8條3-D曲面所構成的圖像。其包括以下參數：1.圖像名字（圖像文件名）；2.圖像標題；3.X軸標題；4.Y軸標題；5.Z軸標題；6.曲線標題；7.是網格還是填充表面（true是網格，false是填充表面）；8.z值最小的時候的顏色；9.最小的z值（註意如果是null，意味著讓軟件自己找到最小的z值）；10.z值最大的時候的顏色；11.最大的z值（註意如果是null，意味著讓軟件自己找到最大的z值）；12.變數u的起始值；13.變數u的終止值；14.變數u的間隔（0意味著間隔由軟件決定）；15.變數v的起始值；16.變數v的終止值；17.變數v的間隔（0意味著間隔由軟件決定）；18.以u，v為變數的X的表達式；19.以u，v為變數的Y的表達式；20.以u，v為變數的Z的表達式；...。其中，每增加一條新的曲線，需要添加15個參數（也就是參數6到20），最多定義8條曲線。該函數的一個例子為：plot3D("chartI", "first chart", "x", "y", "z", "Curve1", true, "red", -0.5, "green", null, 0, pi, pi/8, -pi/2, pi/2, 0, "sin(u)*cos(v)", "sin(u)*sin(v)", "cos(u)")　。
+	@end
+Endh
+Function plot3D(chart_name, _	// name of the chart
+				chart_title, _	//title for chart
+				X_title, _	// title for x axis
+				Y_title, _	// title for y axis
+				Z_title, _	// title for z axis
+				...)	//parameters for curves
+	If opt_argc > 120
+		Throw "I can draw at most 8 curves in one chart!"
+	Elseif round(opt_argc / 15) * 15 != opt_argc
+		Throw "One curve needs exactly 15 parameters!"
+	Elseif opt_argc == 0
+		Throw "Should include at least one curve!"
+	Endif
+	
+	Variable number_of_curves
+	number_of_curves = opt_argc / 15
+	Variable vectorCurveTitle, vectorGridOrNot, vectorMinZColor, vectorMinZ, vectorMaxZColor, vectorMaxZ, vectorCurveSettings, _
+			vectorUFrom, vectorUTo, vectorUStep, vectorVFrom, vectorVTo, vectorVStep, _
+			vectorU, vectorV, vectorX, vectorY, vectorZ, vectorXExpr, vectorYExpr, vectorZExpr
+	vectorCurveTitle = alloc_array(number_of_curves)	
+	vectorGridOrNot = alloc_array(number_of_curves)	
+	vectorMinZColor = alloc_array(number_of_curves)	
+	vectorMinZ = alloc_array(number_of_curves)	
+	vectorMaxZColor = alloc_array(number_of_curves)	
+	vectorMaxZ = alloc_array(number_of_curves)	
+	vectorCurveSettings = alloc_array(number_of_curves)	
+	vectorUFrom = alloc_array(number_of_curves)	
+	vectorUTo = alloc_array(number_of_curves)	
+	vectorUStep = alloc_array(number_of_curves)	
+	vectorVFrom = alloc_array(number_of_curves)	
+	vectorVTo = alloc_array(number_of_curves)	
+	vectorVStep = alloc_array(number_of_curves)	
+	vectorU = alloc_array(number_of_curves)
+	vectorV = alloc_array(number_of_curves)
+	vectorX = alloc_array(number_of_curves)
+	vectorY = alloc_array(number_of_curves)
+	vectorZ = alloc_array(number_of_curves)
+	vectorXExpr = alloc_array(number_of_curves)
+	vectorYExpr = alloc_array(number_of_curves)
+	vectorZExpr = alloc_array(number_of_curves)
+	Variable indexPara
+	indexPara = 0
+	Variable xMin, xMax, yMin, yMax, zMin, zMax
+	For variable index = 1 to number_of_curves step 1
+		vectorCurveTitle[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorGridOrNot[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorMinZColor[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorMinZ[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorMaxZColor[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorMaxZ[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		//curve_label:cv2;is_grid:false;min_color:blue;min_color_value:-2.0;max_color:white;max_color_value:2.0
+		vectorCurveSettings[index - 1] = "curve_label:" + vectorCurveTitle[index - 1] + ";is_grid:" + vectorGridOrNot[index - 1] _
+										+ ";min_color:" + vectorMinZColor[index - 1] + ";min_color_1:" + vectorMinZColor[index - 1] + ";min_color_value:" + vectorMinZ[index - 1] _
+										+ ";max_color:" + vectorMaxZColor[index - 1] + ";max_color_1:" + vectorMaxZColor[index - 1] + ";max_color_value:" + vectorMaxZ[index - 1]
+		vectorUFrom[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorUTo[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorUStep[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorVFrom[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorVTo[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorVStep[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorXExpr[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorYExpr[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		vectorZExpr[index - 1] = opt_argv[indexPara]
+		indexPara = indexPara + 1
+		if (vectorUStep[index-1] == 0)
+			vectorUStep[index-1] = (vectorUTo[index-1] - vectorUFrom[index-1])/15
+		endif
+		if (vectorVStep[index-1] == 0)
+			vectorVStep[index-1] = (vectorVTo[index-1] - vectorVFrom[index-1])/15
+		endif
+		Variable u_list_len, v_list_len
+		u_list_len = floor((vectorUTo[index-1] - vectorUFrom[index-1])/vectorUStep[index-1]) + 1
+		v_list_len = floor((vectorVTo[index-1] - vectorVFrom[index-1])/vectorVStep[index-1]) + 1
+		If (or(u_list_len < 1, u_list_len < 1))
+			Throw "Should have at least one point in a curve"
+		Endif
+		vectorU[index - 1] = alloc_array(u_list_len)
+		vectorV[index - 1] = alloc_array(v_list_len)
+		vectorX[index - 1] = alloc_array([u_list_len, v_list_len])
+		vectorY[index - 1] = alloc_array([u_list_len, v_list_len])
+		vectorZ[index - 1] = alloc_array([u_list_len, v_list_len])
+		Variable indexU = 1
+		While indexU <= u_list_len
+			Variable indexV = 1
+			While indexV <= v_list_len
+				vectorU[index - 1, indexU-1] = vectorUFrom[index-1] + (indexU - 1) * vectorUStep[index-1]
+				vectorV[index - 1, indexV-1] = vectorVFrom[index-1] + (indexV - 1) * vectorVStep[index-1]
+				vectorX[index - 1, indexU-1, indexV-1] = evaluate("evaluate(vectorXExpr[index-1], \"u\", vectorU[index - 1, indexU-1])", "v", vectorV[index - 1, indexV-1])
+				vectorY[index - 1, indexU-1, indexV-1] = evaluate("evaluate(vectorYExpr[index-1], \"u\", vectorU[index - 1, indexU-1])", "v", vectorV[index - 1, indexV-1])
+				vectorZ[index - 1, indexU-1, indexV-1] = evaluate("evaluate(vectorZExpr[index-1], \"u\", vectorU[index - 1, indexU-1])", "v", vectorV[index - 1, indexV-1])
+				If and(index == 1, indexU == 1, indexV == 1)
+					xMin = vectorX[index - 1, indexU-1, indexV-1]
+					xMax = vectorX[index - 1, indexU-1, indexV-1]
+					yMin = vectorY[index - 1, indexU-1, indexV-1]
+					yMax = vectorY[index - 1, indexU-1, indexV-1]
+					zMin = vectorZ[index - 1, indexU-1, indexV-1]
+					zMax = vectorZ[index - 1, indexU-1, indexV-1]
+				Else
+					If xMin > vectorX[index - 1, indexU-1, indexV-1]
+						xMin = vectorX[index - 1, indexU-1, indexV-1]
+					Endif
+					If xMax < vectorX[index - 1, indexU-1, indexV-1]
+						xMax = vectorX[index - 1, indexU-1, indexV-1]
+					Endif
+					If yMin > vectorY[index - 1, indexU-1, indexV-1]
+						yMin = vectorY[index - 1, indexU-1, indexV-1]
+					Endif
+					If yMax < vectorY[index - 1, indexU-1, indexV-1]
+						yMax = vectorY[index - 1, indexU-1, indexV-1]
+					Endif
+					If zMin > vectorZ[index - 1, indexU-1, indexV-1]
+						zMin = vectorZ[index - 1, indexU-1, indexV-1]
+					Endif
+					If zMax < vectorZ[index - 1, indexU-1, indexV-1]
+						zMax = vectorZ[index - 1, indexU-1, indexV-1]
+					Endif
+				Endif
+				indexV = indexV + 1
+			Loop
+			indexU = indexU + 1
+		Loop
+	Next
+
+	Variable chart_settings
+	chart_settings = strcat("chart_type:multiXYZ;chart_title:", chart_title, _
+							";x_title:", X_title, ";x_min:", tostring(xMin), ";x_max:", tostring(xMax), ";x_labels:4", _
+							";y_title:", Y_title, ";y_min:", tostring(yMin), ";y_max:", tostring(yMax), ";y_labels:2", _
+							";z_title:", Z_title, ";z_min:", tostring(zMin), ";z_max:", tostring(zMax), ";z_labels:4")
+	
+	Select number_of_curves
+	case 1
+		plot_multi_xyz(chart_name, chart_settings, vectorCurveSettings[0], vectorX[0], vectorY[0], vectorZ[0])
+		break
+	case 2
+		plot_multi_xyz(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], vectorZ[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], vectorZ[1])
+		break
+	case 3
+		plot_multi_xyz(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], vectorZ[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], vectorZ[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], vectorZ[2])
+		break
+	case 4
+		plot_multi_xyz(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], vectorZ[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], vectorZ[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], vectorZ[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], vectorZ[3])
+		break
+	case 5
+		plot_multi_xyz(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], vectorZ[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], vectorZ[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], vectorZ[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], vectorZ[3], _
+						vectorCurveSettings[4], vectorX[4], vectorY[4], vectorZ[4])
+		break
+	case 6
+		plot_multi_xyz(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], vectorZ[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], vectorZ[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], vectorZ[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], vectorZ[3], _
+						vectorCurveSettings[4], vectorX[4], vectorY[4], vectorZ[4], _
+						vectorCurveSettings[5], vectorX[5], vectorY[5], vectorZ[5])
+		break
+	case 7
+		plot_multi_xyz(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], vectorZ[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], vectorZ[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], vectorZ[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], vectorZ[3], _
+						vectorCurveSettings[4], vectorX[4], vectorY[4], vectorZ[4], _
+						vectorCurveSettings[5], vectorX[5], vectorY[5], vectorZ[5], _
+						vectorCurveSettings[6], vectorX[6], vectorY[6], vectorZ[6])
+		break
+	case 8
+		plot_multi_xyz(chart_name, chart_settings, _
+						vectorCurveSettings[0], vectorX[0], vectorY[0], vectorZ[0], _
+						vectorCurveSettings[1], vectorX[1], vectorY[1], vectorZ[1], _
+						vectorCurveSettings[2], vectorX[2], vectorY[2], vectorZ[2], _
+						vectorCurveSettings[3], vectorX[3], vectorY[3], vectorZ[3], _
+						vectorCurveSettings[4], vectorX[4], vectorY[4], vectorZ[4], _
+						vectorCurveSettings[5], vectorX[5], vectorY[5], vectorZ[5], _
+						vectorCurveSettings[6], vectorX[6], vectorY[6], vectorZ[6], _
+						vectorCurveSettings[7], vectorX[7], vectorY[7], vectorZ[7])
+		break
+	Ends
+Endf
+
+Help
+	@language:
+	Function plot_exprs analyses at least one expression at most 8 expressions and draw 2D, polar or 3D curves based on the number of variables in the expression. The expression should be an equation, e.g. "4*x+9 == y +z**2" and "log(x*y) == x", or an assignment with an unknown variable on the left side, e.g. "k= 3+ 7 * sin(z)", or an expression which can be recognized as an assignment, e.g. "9*log(y)" may be looked on as "x = 9 * log(y)".  Note that the total number of unknown variables in the expressions should be no more than 3 and each expression should include at most one unknown variable less than the total number of unknown variables. The initial range of each unknown variable is configurable, by default is from -5 to 5 but user can adjust the range after the chart is plotted. If there are two unknown variables and one of the unknown variables is Greek letter α, β, γ or θ, instead of plotting 2D chart, polar graph is drawn. One example of this function is plot_exprs("4*x+sin(y)", "4-y**2==(x**2 + z**2)", "x*lg(x)/log2(z)==y"). Also note that when plotting a 2D expression which is actually an implicit function, this function can plot at most 4 root expressions; when plotting a 3D implicit function, it could be very slow because this function may solve all of the three variables and plot at most 2 root expressions for each of the variables.
+	@end
+	@language:simplified_chinese
+	函数plot_exprs分析最少1条，最多8条表达式以绘制2维或者3维图形（取决于表达式中未知变量的个数）。输入的表达式可以是一个等式，比如"4*x+9 == y +z**2"和"log(x*y) == x"，也可以是一个左侧为未知变量的赋值表达式，比如"k= 3+ 7 * sin(z)"，还可以是一个可以被看作为赋值表达式的表达式，比如"9*log(y)"可以被看作"x = 9 * log(y)"。注意所有表达式中未知变量的总数不多于3，每一条表达式中的未知变量的个数不能少于未知变量的总数减一。未知变量的起始范围可以在设置中设定，缺省是从-5到5，但是使用者可以在图形绘制出来之后动态调整每个未知变量的范围。如果有两个未知变量并且其中一个是希腊字母α、β、γ或者θ，则绘制极坐标图形而不是普通2维图形。本函数的一个例子是plot_exprs("4*x+sin(y)", "4-y**2==(x**2 + z**2)", "x*lg(x)/log2(z)==y")。需要指出的是，如果是绘制二维隐函数表达式，这个函数最多能绘制出4个表达式解；如果绘制的是3维隐函数表达式，这个函数会根据情况，可能会求每一个变量的最多两组解，绘制出最多6个解表达式图形，这样一来，整个求解绘图过程会花费比较长的时间。
+	@end
+	@language:traditional_chinese
+	函數程式plot_exprs分析最少1條，最多8條表達式以繪制2維或者3維圖形（取決於表達式中未知變數的個數）。輸入的表達式可以是一個等式，比如"4*x+9 == y +z**2"和"log(x*y) == x"，也可以是一個左側為未知變數的賦值表達式，比如"k= 3+ 7 * sin(z)"，還可以是一個可以被看作為賦值表達式的表達式，比如"9*log(y)"可以被看作"x = 9 * log(y)"。註意所有表達式中未知變數的總數不多於3，每一條表達式中的未知變數的個數不能少於未知變數的總數減一。未知變數的起始範圍可以在設置中設定，缺省是從-5到5，但是使用者可以在圖形繪制出來之後動態調整每個未知變數的範圍。如果有兩個未知變數並且其中一個是希臘字母α、β、γ或者θ，則繪制極坐標圖形而不是普通2維圖形。本函數程式的一個例子是plot_exprs("4*x+sin(y)", "4-y**2==(x**2 + z**2)", "x*lg(x)/log2(z)==y")。需要指出的是，如果是繪制二維隱函數表達式，這個函數程式最多能繪制出4個表達式解；如果繪制的是3維隱函數表達式，這個函數程式會根據情況，可能會求每一個變數的最多兩組解，繪制出最多6個解表達式圖形，這樣一來，整個求解繪圖過程會花費比較長的時間。
+	@end
+Endh
+Function plot_exprs(expr, ...)
+	If opt_argc > 7
+		Throw "I can draw at most 8 curves in one chart!"
+	Elseif opt_argc == 7
+		plot_expressions("", "expressions", 0, 0, 20, expr, opt_argv[0], opt_argv[1], opt_argv[2], opt_argv[3], opt_argv[4], opt_argv[5], opt_argv[6])
+	Elseif opt_argc == 6
+		plot_expressions("", "expressions", 0, 0, 20, expr, opt_argv[0], opt_argv[1], opt_argv[2], opt_argv[3], opt_argv[4], opt_argv[5])
+	Elseif opt_argc == 5
+		plot_expressions("", "expressions", 0, 0, 20, expr, opt_argv[0], opt_argv[1], opt_argv[2], opt_argv[3], opt_argv[4])
+	Elseif opt_argc == 4
+		plot_expressions("", "expressions", 0, 0, 20, expr, opt_argv[0], opt_argv[1], opt_argv[2], opt_argv[3])
+	Elseif opt_argc == 3
+		plot_expressions("", "expressions", 0, 0, 20, expr, opt_argv[0], opt_argv[1], opt_argv[2])
+	Elseif opt_argc == 2
+		plot_expressions("", "expressions", 0, 0, 20, expr, opt_argv[0], opt_argv[1])
+	Elseif opt_argc == 1
+		plot_expressions("", "expressions", 0, 0, 20, expr, opt_argv[0])
+	Else
+		plot_expressions("", "expressions", 0, 0, 20, expr)
+	Endif
+Endf				
+
+Help
+	@language:
+	Function get_extreme_elem analyses input dataArray and returns the maximum or minimum element in the data array. If an element is not a real value, this function ignores it. It has three parameters. The first is data array (it can be a single value), the second is original max or min value. If this is not null and is a real value, the function compares selected max or min element with this parameter and returns the new max or min value. The third one is to tell the function to get max value or min value. 0 is for min value and 1 is for max value. Examples are get_extreme_elem([[2, 3], "hello", 5], null, 1) and get_extreme_elem([[3,4,6],[5+3i, 7, 9.88-4.61], [5.77 -0.03i]], -8, 0).
+	@end
+	@language:simplified_chinese
+	函数get_extreme_elem分析输入的数值矩阵并返回其所有元素的最大或最小值。如果某一个元素不是实数，这个元素就会被忽略。这个函数有3个参数，第一个是数值矩阵（也可以是一个单一的数值），第二个是起始的最大或者最小值，如果这个参数不是null并且是一个实数，本函数将该参数和选出的最大或最小元素进行比较，并返回新的最大或最小值。第三个参数是告诉本函数返回最大值还是最小值，如果是0则返回最小值，否则返回最大值。函数的例子包括get_extreme_elem([[2, 3], "hello", 5], null, 1)和get_extreme_elem([[3,4,6],[5+3i, 7, 9.88-4.61], [5.77 -0.03i]], -8, 0)。
+	@end
+	@language:traditional_chinese
+	函數程式get_extreme_elem分析輸入的數值陣列並返回其所有元素的最大或最小值。如果某一個元素不是實數，這個元素就會被忽略。這個函數程式有3個參數，第一個是數值陣列（也可以是一個單一的數值），第二個是起始的最大或者最小值，如果這個參數不是null並且是一個實數，本函數程式將該參數和選出的最大或最小元素進行比較，並返回新的最大或最小值。第三個參數是告訴本函數程式返回最大值還是最小值，如果是0則返回最小值，否則返回最大值。函數程式的例子包括get_extreme_elem([[2, 3], "hello", 5], null, 1)和get_extreme_elem([[3,4,6],[5+3i, 7, 9.88-4.61], [5.77 -0.03i]], -8, 0)。
+	@end
+Endh
+Function get_extreme_elem(dataArray, originalExtremeValue, extremeType)
+	if size(dataArray) == []	// this is a single value
+		if originalExtremeValue != null //	original extreme value is valid
+			try
+				if extremeType == 0	// minimum value
+					if dataArray < originalExtremeValue
+						originalExtremeValue = dataArray
+					Endif
+				Else	// maximum value
+					if dataArray > originalExtremeValue
+						originalExtremeValue = dataArray
+					Endif
+				Endif
+			Catch
+				// extreme value no change
+			endtry
+		else
+			try
+				if real(dataArray) == dataArray
+					originalExtremeValue = dataArray
+				Endif
+			Catch
+				// extreme value no change
+			endtry
+		endif
+	else	// this is an array
+		for variable idx = 0 to size(dataArray)[0] - 1 step 1
+			originalExtremeValue = get_extreme_elem(dataArray[idx], originalExtremeValue, extremeType)
+		next
+	Endif
+	return originalExtremeValue
+Endf
+
+Help
+	@language:
+	Function plot_2d_data analyses at least one at most eight groups of data lists and each data group will be plotted as one curve. The number of parameters in these function can be 1 (one curve), 2 (one curve), 4 (two curves), 6 (three curves), 8 (four curves), 10 (five curves), 12 (six curves), 14 (seven curves), 16 (eight curves). Each parameter is a data list (i.e. 1-D data array). If only one parameter, each element value in the parameter will be a point in the curve, otherwise, the odd number of parameters are the x values of the points and the even number of parameters are the y values. Note that the size of x value parameter must match the size of y value parameter. For example, plot_2d_data([5.5, -7, 8.993, 2.788]) or plot_2d_data([2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1], [28, 42, 33, 16, 7]).
+	@end
+	@language:simplified_chinese
+	函数plot_2d_data分析最少1组，最多8组数值向量，每组数值向量将会被绘制为一条曲线。输入的参数个数可以为1个（绘制一条曲线），2个（绘制一条曲线），4个（绘制2条曲线），6个（绘制3条曲线），8个（绘制4条曲线），10个（绘制5条曲线），12个（绘制6条曲线），14个（绘制7条曲线），16个（绘制8条曲线）。每一个参数都是一个数值向量（也就是一维矩阵）。如果只有一个参数，该参数中的每一个元素将会是绘制出的曲线中的一个点，否则，奇数号参数决定曲线中的每一个点的x值，偶数号参数决定每一个点的y值。注意决定x值的参数中包含的元素个数应该和决定y值的参数中包含的元素相同。函数例子包括plot_2d_data([5.5, -7, 8.993, 2.788])以及plot_2d_data([2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1], [28, 42, 33, 16, 7])。
+	@end
+	@language:traditional_chinese
+	函數程式plot_2d_data分析最少1組，最多8組數值向量，每組數值向量將會被繪制為一條曲線。輸入的參數個數可以為1個（繪制一條曲線），2個（繪制一條曲線），4個（繪制2條曲線），6個（繪制3條曲線），8個（繪制4條曲線），10個（繪制5條曲線），12個（繪制6條曲線），14個（繪制7條曲線），16個（繪制8條曲線）。每一個參數都是一個數值向量（也就是一維陣列）。如果只有一個參數，該參數中的每一個元素將會是繪制出的曲線中的一個點，否則，奇數號參數決定曲線中的每一個點的x值，偶數號參數決定每一個點的y值。註意決定x值的參數中包含的元素個數應該和決定y值的參數中包含的元素相同。函數程式例子包括plot_2d_data([5.5, -7, 8.993, 2.788])以及plot_2d_data([2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1], [28, 42, 33, 16, 7])。
+	@end
+Endh
+Function plot_2d_data(dataList, ...)
+	If opt_argc > 15
+		Throw "I can draw at most 8 curves in one chart!"
+	Elseif and(opt_argc != 0, round((opt_argc - 1) / 2) * 2 != (opt_argc - 1))
+		Throw "One curve needs exactly 2 parameters!"
+	Else
+		Variable chart_name = ""
+		Variable curve1_settings = "curve_label:cv1;point_color:red;point_style:circle;point_size:3;line_color:red;line_style:solid;line_size:1", _
+				curve2_settings = "curve_label:cv2;point_color:green;point_style:triangle;point_size:3;line_color:green;line_style:solid;line_size:1", _
+				curve3_settings = "curve_label:cv3;point_color:blue;point_style:square;point_size:3;line_color:blue;line_style:solid;line_size:1", _
+				curve4_settings = "curve_label:cv4;point_color:yellow;point_style:x;point_size:3;line_color:yellow;line_style:solid;line_size:1", _
+				curve5_settings = "curve_label:cv5;point_color:cyan;point_style:x;point_size:3;line_color:cyan;line_style:solid;line_size:1", _
+				curve6_settings = "curve_label:cv6;point_color:magenta;point_style:x;point_size:3;line_color:magenta;line_style:solid;line_size:1", _
+				curve7_settings = "curve_label:cv7;point_color:dkgray;point_style:x;point_size:3;line_color:dkgray;line_style:solid;line_size:1", _
+				curve8_settings = "curve_label:cv8;point_color:ltgray;point_style:x;point_size:3;line_color:ltgray;line_style:solid;line_size:1"
+		Variable xMin = null, xMax = null, yMin = null, yMax = null
+		if opt_argc == 15
+			xMin = get_extreme_elem(dataList, xMin, 0)
+			xMin = get_extreme_elem(opt_argv[1], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[3], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[5], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[7], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[9], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[11], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[13], xMin, 0)
+			xMax = get_extreme_elem(dataList, xMax, 1)
+			xMax = get_extreme_elem(opt_argv[1], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[3], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[5], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[7], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[9], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[11], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[13], xMax, 1)
+			yMin = get_extreme_elem(opt_argv[0], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[2], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[4], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[6], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[8], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[10], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[12], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[14], yMin, 0)
+			yMax = get_extreme_elem(opt_argv[0], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[2], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[4], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[6], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[8], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[10], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[12], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[14], yMax, 1)
+			if Or(xMin == null, xMax == null)
+				xMin = -5
+				xMax = 5
+			elseif xMin == xMax
+				xMin = xMin - 5
+				xMax = xMax + 5
+			endif
+			if Or(yMin == null, yMax == null)
+				yMin = -5
+				yMax = 5
+			elseif yMin == yMax
+				yMin = yMin - 5
+				yMax = yMax + 5
+			endif
+			Variable chart_settings = "chart_type:multiXY;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+			plot_multi_xy(chart_name, chart_settings, curve1_settings, dataList, opt_argv[0], curve2_settings, opt_argv[1], opt_argv[2], curve3_settings, opt_argv[3], opt_argv[4], curve4_settings, opt_argv[5], opt_argv[6], curve5_settings, opt_argv[7], opt_argv[8], curve6_settings, opt_argv[9], opt_argv[10], curve7_settings, opt_argv[11], opt_argv[12], curve8_settings, opt_argv[13], opt_argv[14])
+		Elseif opt_argc == 13
+			xMin = get_extreme_elem(dataList, xMin, 0)
+			xMin = get_extreme_elem(opt_argv[1], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[3], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[5], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[7], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[9], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[11], xMin, 0)
+			xMax = get_extreme_elem(dataList, xMax, 1)
+			xMax = get_extreme_elem(opt_argv[1], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[3], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[5], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[7], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[9], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[11], xMax, 1)
+			yMin = get_extreme_elem(opt_argv[0], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[2], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[4], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[6], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[8], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[10], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[12], yMin, 0)
+			yMax = get_extreme_elem(opt_argv[0], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[2], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[4], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[6], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[8], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[10], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[12], yMax, 1)
+			if Or(xMin == null, xMax == null)
+				xMin = -5
+				xMax = 5
+			elseif xMin == xMax
+				xMin = xMin - 5
+				xMax = xMax + 5
+			endif
+			if Or(yMin == null, yMax == null)
+				yMin = -5
+				yMax = 5
+			elseif yMin == yMax
+				yMin = yMin - 5
+				yMax = yMax + 5
+			endif
+			Variable chart_settings = "chart_type:multiXY;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+			plot_multi_xy(chart_name, chart_settings, curve1_settings, dataList, opt_argv[0], curve2_settings, opt_argv[1], opt_argv[2], curve3_settings, opt_argv[3], opt_argv[4], curve4_settings, opt_argv[5], opt_argv[6], curve5_settings, opt_argv[7], opt_argv[8], curve6_settings, opt_argv[9], opt_argv[10], curve7_settings, opt_argv[11], opt_argv[12])
+		Elseif opt_argc == 11
+			xMin = get_extreme_elem(dataList, xMin, 0)
+			xMin = get_extreme_elem(opt_argv[1], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[3], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[5], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[7], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[9], xMin, 0)
+			xMax = get_extreme_elem(dataList, xMax, 1)
+			xMax = get_extreme_elem(opt_argv[1], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[3], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[5], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[7], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[9], xMax, 1)
+			yMin = get_extreme_elem(opt_argv[0], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[2], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[4], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[6], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[8], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[10], yMin, 0)
+			yMax = get_extreme_elem(opt_argv[0], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[2], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[4], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[6], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[8], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[10], yMax, 1)
+			if Or(xMin == null, xMax == null)
+				xMin = -5
+				xMax = 5
+			elseif xMin == xMax
+				xMin = xMin - 5
+				xMax = xMax + 5
+			endif
+			if Or(yMin == null, yMax == null)
+				yMin = -5
+				yMax = 5
+			elseif yMin == yMax
+				yMin = yMin - 5
+				yMax = yMax + 5
+			endif
+			Variable chart_settings = "chart_type:multiXY;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+			plot_multi_xy(chart_name, chart_settings, curve1_settings, dataList, opt_argv[0], curve2_settings, opt_argv[1], opt_argv[2], curve3_settings, opt_argv[3], opt_argv[4], curve4_settings, opt_argv[5], opt_argv[6], curve5_settings, opt_argv[7], opt_argv[8], curve6_settings, opt_argv[9], opt_argv[10])
+		Elseif opt_argc == 9
+			xMin = get_extreme_elem(dataList, xMin, 0)
+			xMin = get_extreme_elem(opt_argv[1], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[3], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[5], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[7], xMin, 0)
+			xMax = get_extreme_elem(dataList, xMax, 1)
+			xMax = get_extreme_elem(opt_argv[1], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[3], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[5], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[7], xMax, 1)
+			yMin = get_extreme_elem(opt_argv[0], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[2], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[4], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[6], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[8], yMin, 0)
+			yMax = get_extreme_elem(opt_argv[0], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[2], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[4], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[6], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[8], yMax, 1)
+			if Or(xMin == null, xMax == null)
+				xMin = -5
+				xMax = 5
+			elseif xMin == xMax
+				xMin = xMin - 5
+				xMax = xMax + 5
+			endif
+			if Or(yMin == null, yMax == null)
+				yMin = -5
+				yMax = 5
+			elseif yMin == yMax
+				yMin = yMin - 5
+				yMax = yMax + 5
+			endif
+			Variable chart_settings = "chart_type:multiXY;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+			plot_multi_xy(chart_name, chart_settings, curve1_settings, dataList, opt_argv[0], curve2_settings, opt_argv[1], opt_argv[2], curve3_settings, opt_argv[3], opt_argv[4], curve4_settings, opt_argv[5], opt_argv[6], curve5_settings, opt_argv[7], opt_argv[8])
+		Elseif opt_argc == 7
+			xMin = get_extreme_elem(dataList, xMin, 0)
+			xMin = get_extreme_elem(opt_argv[1], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[3], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[5], xMin, 0)
+			xMax = get_extreme_elem(dataList, xMax, 1)
+			xMax = get_extreme_elem(opt_argv[1], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[3], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[5], xMax, 1)
+			yMin = get_extreme_elem(opt_argv[0], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[2], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[4], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[6], yMin, 0)
+			yMax = get_extreme_elem(opt_argv[0], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[2], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[4], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[6], yMax, 1)
+			if Or(xMin == null, xMax == null)
+				xMin = -5
+				xMax = 5
+			elseif xMin == xMax
+				xMin = xMin - 5
+				xMax = xMax + 5
+			endif
+			if Or(yMin == null, yMax == null)
+				yMin = -5
+				yMax = 5
+			elseif yMin == yMax
+				yMin = yMin - 5
+				yMax = yMax + 5
+			endif
+			Variable chart_settings = "chart_type:multiXY;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+			plot_multi_xy(chart_name, chart_settings, curve1_settings, dataList, opt_argv[0], curve2_settings, opt_argv[1], opt_argv[2], curve3_settings, opt_argv[3], opt_argv[4], curve4_settings, opt_argv[5], opt_argv[6])
+		Elseif opt_argc == 5
+			xMin = get_extreme_elem(dataList, xMin, 0)
+			xMin = get_extreme_elem(opt_argv[1], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[3], xMin, 0)
+			xMax = get_extreme_elem(dataList, xMax, 1)
+			xMax = get_extreme_elem(opt_argv[1], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[3], xMax, 1)
+			yMin = get_extreme_elem(opt_argv[0], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[2], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[4], yMin, 0)
+			yMax = get_extreme_elem(opt_argv[0], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[2], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[4], yMax, 1)
+			if Or(xMin == null, xMax == null)
+				xMin = -5
+				xMax = 5
+			elseif xMin == xMax
+				xMin = xMin - 5
+				xMax = xMax + 5
+			endif
+			if Or(yMin == null, yMax == null)
+				yMin = -5
+				yMax = 5
+			elseif yMin == yMax
+				yMin = yMin - 5
+				yMax = yMax + 5
+			endif
+			Variable chart_settings = "chart_type:multiXY;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+			plot_multi_xy(chart_name, chart_settings, curve1_settings, dataList, opt_argv[0], curve2_settings, opt_argv[1], opt_argv[2], curve3_settings, opt_argv[3], opt_argv[4])
+		Elseif opt_argc == 3
+			xMin = get_extreme_elem(dataList, xMin, 0)
+			xMin = get_extreme_elem(opt_argv[1], xMin, 0)
+			xMax = get_extreme_elem(dataList, xMax, 1)
+			xMax = get_extreme_elem(opt_argv[1], xMax, 1)
+			yMin = get_extreme_elem(opt_argv[0], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[2], yMin, 0)
+			yMax = get_extreme_elem(opt_argv[0], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[2], yMax, 1)
+			if Or(xMin == null, xMax == null)
+				xMin = -5
+				xMax = 5
+			elseif xMin == xMax
+				xMin = xMin - 5
+				xMax = xMax + 5
+			endif
+			if Or(yMin == null, yMax == null)
+				yMin = -5
+				yMax = 5
+			elseif yMin == yMax
+				yMin = yMin - 5
+				yMax = yMax + 5
+			endif
+			Variable chart_settings = "chart_type:multiXY;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+			plot_multi_xy(chart_name, chart_settings, curve1_settings, dataList, opt_argv[0], curve2_settings, opt_argv[1], opt_argv[2])
+		Elseif opt_argc == 1
+			xMin = get_extreme_elem(dataList, xMin, 0)
+			xMax = get_extreme_elem(dataList, xMax, 1)
+			yMin = get_extreme_elem(opt_argv[0], yMin, 0)
+			yMax = get_extreme_elem(opt_argv[0], yMax, 1)
+			if Or(xMin == null, xMax == null)
+				xMin = -5
+				xMax = 5
+			elseif xMin == xMax
+				xMin = xMin - 5
+				xMax = xMax + 5
+			endif
+			if Or(yMin == null, yMax == null)
+				yMin = -5
+				yMax = 5
+			elseif yMin == yMax
+				yMin = yMin - 5
+				yMax = yMax + 5
+			endif
+			Variable chart_settings = "chart_type:multiXY;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+			plot_multi_xy(chart_name, chart_settings, curve1_settings, dataList, opt_argv[0])
+		Else
+			if size(size(dataList)) != [1]
+				Throw "Can only plot a value list!"
+			else
+				Variable dataListLen = size(dataList)[0]
+				Variable XArray = alloc_array(dataListLen)
+				For variable idx = 0 to dataListLen - 1 Step 1
+					XArray[idx] = idx + 1
+				Next
+				xMin = 1
+				xMax = dataListLen
+				yMin = get_extreme_elem(dataList, yMin, 0)
+				yMax = get_extreme_elem(dataList, yMax, 1)
+				if Or(xMin == null, xMax == null)
+					xMin = -5
+					xMax = 5
+				elseif xMin == xMax
+					xMin = xMin - 5
+					xMax = xMax + 5
+				endif
+				if Or(yMin == null, yMax == null)
+					yMin = -5
+					yMax = 5
+				elseif yMin == yMax
+					yMin = yMin - 5
+					yMax = yMax + 5
+				endif
+				Variable chart_settings = "chart_type:multiXY;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+				plot_multi_xy(chart_name, chart_settings, curve1_settings, XArray, dataList)
+			Endif
+		Endif
+	Endif
+Endf
+
+Help
+	@language:
+	Function plot_polar_data analyses at least one at most eight groups of data lists and each data group will be plotted as one polar curve. The number of parameters in these function can be 2 (one curve), 4 (two curves), 6 (three curves), 8 (four curves), 10 (five curve), 12 (six curves), 14 (seven curves) and 16 (eight curves). Each parameter is a data list (i.e. 1-D data array). The odd number of parameters are the R values of the points and the even number of parameters are the angle values. Note that the size of R value parameter must match the size of angle value parameter. For example, plot_polar_data([2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1], [28, 42, 33, 16, 7]).
+	@end
+	@language:simplified_chinese
+	函数plot_polar_data分析最少1组，最多8组数值向量，每组数值向量将会被绘制为一条极坐标曲线。输入的参数个数可以为2个（绘制一条曲线），4个（绘制2条曲线），6个（绘制3条曲线），8个（绘制4条曲线），10个（绘制5条曲线），12个（绘制6条曲线），14个（绘制7条曲线），16个（绘制8条曲线）。每一个参数都是一个数值向量（也就是一维矩阵）。奇数号参数决定曲线中的每一个点的R值，偶数号参数决定每一个点的幅角值。注意决定R值的参数中包含的元素个数应该和决定幅角值的参数中包含的元素相同。函数一个例子为plot_polar_data([2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1], [28, 42, 33, 16, 7])。
+	@end
+	@language:traditional_chinese
+	函數程式plot_polar_data分析最少1組，最多8組數值向量，每組數值向量將會被繪制為一條極坐標曲線。輸入的參數個數可以為2個（繪制一條曲線），4個（繪制2條曲線），6個（繪制3條曲線），8個（繪制4條曲線），10個（繪制5條曲線），12個（繪制6條曲線），14個（繪制7條曲線），16個（繪制8條曲線）。每一個參數都是一個數值向量（也就是一維陣列）。奇數號參數決定曲線中的每一個點的R值，偶數號參數決定每一個點的幅角值。註意決定R值的參數中包含的元素個數應該和決定幅角值的參數中包含的元素相同。函數程式一個例子為plot_polar_data([2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1], [28, 42, 33, 16, 7])。
+	@end
+Endh
+Function plot_polar_data(dataList, ...)
+	If opt_argc > 15
+		Throw "I can draw at most 4 curves in one chart!"
+	Elseif round((opt_argc - 1) / 2) * 2 != (opt_argc - 1)
+		Throw "One curve needs exactly 2 parameters!"
+	Else
+		Variable chart_name = ""
+		Variable curve1_settings = "curve_label:cv1;point_color:red;point_style:circle;point_size:3;line_color:red;line_style:solid;line_size:1", _
+				curve2_settings = "curve_label:cv2;point_color:green;point_style:triangle;point_size:3;line_color:green;line_style:solid;line_size:1", _
+				curve3_settings = "curve_label:cv3;point_color:blue;point_style:square;point_size:3;line_color:blue;line_style:solid;line_size:1", _
+				curve4_settings = "curve_label:cv4;point_color:yellow;point_style:x;point_size:3;line_color:yellow;line_style:solid;line_size:1", _
+				curve5_settings = "curve_label:cv5;point_color:cyan;point_style:x;point_size:3;line_color:cyan;line_style:solid;line_size:1", _
+				curve6_settings = "curve_label:cv6;point_color:magenta;point_style:x;point_size:3;line_color:magenta;line_style:solid;line_size:1", _
+				curve7_settings = "curve_label:cv7;point_color:dkgray;point_style:x;point_size:3;line_color:dkgray;line_style:solid;line_size:1", _
+				curve8_settings = "curve_label:cv8;point_color:ltgray;point_style:x;point_size:3;line_color:ltgray;line_style:solid;line_size:1"
+		Variable xMin = null, xMax = null, yMin = null, yMax = null
+		if opt_argc == 15
+			xMin = get_extreme_elem(dataList, xMin, 0)
+			xMin = get_extreme_elem(opt_argv[1], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[3], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[5], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[7], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[9], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[11], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[13], xMin, 0)
+			xMax = get_extreme_elem(dataList, xMax, 1)
+			xMax = get_extreme_elem(opt_argv[1], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[3], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[5], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[7], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[9], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[11], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[13], xMax, 1)
+			yMin = get_extreme_elem(opt_argv[0], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[2], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[4], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[6], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[8], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[10], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[12], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[14], yMin, 0)
+			yMax = get_extreme_elem(opt_argv[0], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[2], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[4], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[6], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[8], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[10], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[12], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[14], yMax, 1)
+			if Or(xMin == null, xMax == null)
+				xMin = -5
+				xMax = 5
+			elseif xMin == xMax
+				xMin = xMin - 5
+				xMax = xMax + 5
+			endif
+			if Or(yMin == null, yMax == null)
+				yMin = -5
+				yMax = 5
+			elseif yMin == yMax
+				yMin = yMin - 5
+				yMax = yMax + 5
+			endif
+			Variable chart_settings = "chart_type:multiRangle;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+			plot_multi_xy(chart_name, chart_settings, curve1_settings, dataList, opt_argv[0], curve2_settings, opt_argv[1], opt_argv[2], curve3_settings, opt_argv[3], opt_argv[4], curve4_settings, opt_argv[5], opt_argv[6], curve5_settings, opt_argv[7], opt_argv[8], curve6_settings, opt_argv[9], opt_argv[10], curve7_settings, opt_argv[11], opt_argv[12], curve8_settings, opt_argv[13], opt_argv[14])
+		Elseif opt_argc == 13
+			xMin = get_extreme_elem(dataList, xMin, 0)
+			xMin = get_extreme_elem(opt_argv[1], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[3], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[5], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[7], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[9], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[11], xMin, 0)
+			xMax = get_extreme_elem(dataList, xMax, 1)
+			xMax = get_extreme_elem(opt_argv[1], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[3], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[5], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[7], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[9], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[11], xMax, 1)
+			yMin = get_extreme_elem(opt_argv[0], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[2], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[4], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[6], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[8], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[10], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[12], yMin, 0)
+			yMax = get_extreme_elem(opt_argv[0], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[2], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[4], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[6], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[8], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[10], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[12], yMax, 1)
+			if Or(xMin == null, xMax == null)
+				xMin = -5
+				xMax = 5
+			elseif xMin == xMax
+				xMin = xMin - 5
+				xMax = xMax + 5
+			endif
+			if Or(yMin == null, yMax == null)
+				yMin = -5
+				yMax = 5
+			elseif yMin == yMax
+				yMin = yMin - 5
+				yMax = yMax + 5
+			endif
+			Variable chart_settings = "chart_type:multiRangle;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+			plot_multi_xy(chart_name, chart_settings, curve1_settings, dataList, opt_argv[0], curve2_settings, opt_argv[1], opt_argv[2], curve3_settings, opt_argv[3], opt_argv[4], curve4_settings, opt_argv[5], opt_argv[6], curve5_settings, opt_argv[7], opt_argv[8], curve6_settings, opt_argv[9], opt_argv[10], curve7_settings, opt_argv[11], opt_argv[12])
+		Elseif opt_argc == 11
+			xMin = get_extreme_elem(dataList, xMin, 0)
+			xMin = get_extreme_elem(opt_argv[1], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[3], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[5], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[7], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[9], xMin, 0)
+			xMax = get_extreme_elem(dataList, xMax, 1)
+			xMax = get_extreme_elem(opt_argv[1], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[3], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[5], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[7], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[9], xMax, 1)
+			yMin = get_extreme_elem(opt_argv[0], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[2], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[4], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[6], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[8], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[10], yMin, 0)
+			yMax = get_extreme_elem(opt_argv[0], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[2], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[4], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[6], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[8], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[10], yMax, 1)
+			if Or(xMin == null, xMax == null)
+				xMin = -5
+				xMax = 5
+			elseif xMin == xMax
+				xMin = xMin - 5
+				xMax = xMax + 5
+			endif
+			if Or(yMin == null, yMax == null)
+				yMin = -5
+				yMax = 5
+			elseif yMin == yMax
+				yMin = yMin - 5
+				yMax = yMax + 5
+			endif
+			Variable chart_settings = "chart_type:multiRangle;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+			plot_multi_xy(chart_name, chart_settings, curve1_settings, dataList, opt_argv[0], curve2_settings, opt_argv[1], opt_argv[2], curve3_settings, opt_argv[3], opt_argv[4], curve4_settings, opt_argv[5], opt_argv[6], curve5_settings, opt_argv[7], opt_argv[8], curve6_settings, opt_argv[9], opt_argv[10])
+		Elseif opt_argc == 9
+			xMin = get_extreme_elem(dataList, xMin, 0)
+			xMin = get_extreme_elem(opt_argv[1], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[3], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[5], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[7], xMin, 0)
+			xMax = get_extreme_elem(dataList, xMax, 1)
+			xMax = get_extreme_elem(opt_argv[1], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[3], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[5], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[7], xMax, 1)
+			yMin = get_extreme_elem(opt_argv[0], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[2], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[4], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[6], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[8], yMin, 0)
+			yMax = get_extreme_elem(opt_argv[0], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[2], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[4], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[6], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[8], yMax, 1)
+			if Or(xMin == null, xMax == null)
+				xMin = -5
+				xMax = 5
+			elseif xMin == xMax
+				xMin = xMin - 5
+				xMax = xMax + 5
+			endif
+			if Or(yMin == null, yMax == null)
+				yMin = -5
+				yMax = 5
+			elseif yMin == yMax
+				yMin = yMin - 5
+				yMax = yMax + 5
+			endif
+			Variable chart_settings = "chart_type:multiRangle;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+			plot_multi_xy(chart_name, chart_settings, curve1_settings, dataList, opt_argv[0], curve2_settings, opt_argv[1], opt_argv[2], curve3_settings, opt_argv[3], opt_argv[4], curve4_settings, opt_argv[5], opt_argv[6], curve5_settings, opt_argv[7], opt_argv[8])
+		Elseif opt_argc == 7
+			xMin = get_extreme_elem(dataList, xMin, 0)
+			xMin = get_extreme_elem(opt_argv[1], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[3], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[5], xMin, 0)
+			xMax = get_extreme_elem(dataList, xMax, 1)
+			xMax = get_extreme_elem(opt_argv[1], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[3], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[5], xMax, 1)
+			yMin = get_extreme_elem(opt_argv[0], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[2], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[4], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[6], yMin, 0)
+			yMax = get_extreme_elem(opt_argv[0], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[2], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[4], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[6], yMax, 1)
+			if Or(xMin == null, xMax == null)
+				xMin = -5
+				xMax = 5
+			elseif xMin == xMax
+				xMin = xMin - 5
+				xMax = xMax + 5
+			endif
+			if Or(yMin == null, yMax == null)
+				yMin = -5
+				yMax = 5
+			elseif yMin == yMax
+				yMin = yMin - 5
+				yMax = yMax + 5
+			endif
+			Variable chart_settings = "chart_type:multiRangle;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+			plot_multi_xy(chart_name, chart_settings, curve1_settings, dataList, opt_argv[0], curve2_settings, opt_argv[1], opt_argv[2], curve3_settings, opt_argv[3], opt_argv[4], curve4_settings, opt_argv[5], opt_argv[6])
+		Elseif opt_argc == 5
+			xMin = get_extreme_elem(dataList, xMin, 0)
+			xMin = get_extreme_elem(opt_argv[1], xMin, 0)
+			xMin = get_extreme_elem(opt_argv[3], xMin, 0)
+			xMax = get_extreme_elem(dataList, xMax, 1)
+			xMax = get_extreme_elem(opt_argv[1], xMax, 1)
+			xMax = get_extreme_elem(opt_argv[3], xMax, 1)
+			yMin = get_extreme_elem(opt_argv[0], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[2], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[4], yMin, 0)
+			yMax = get_extreme_elem(opt_argv[0], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[2], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[4], yMax, 1)
+			if Or(xMin == null, xMax == null)
+				xMin = -5
+				xMax = 5
+			elseif xMin == xMax
+				xMin = xMin - 5
+				xMax = xMax + 5
+			endif
+			if Or(yMin == null, yMax == null)
+				yMin = -5
+				yMax = 5
+			elseif yMin == yMax
+				yMin = yMin - 5
+				yMax = yMax + 5
+			endif
+			Variable chart_settings = "chart_type:multiRangle;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+			plot_multi_xy(chart_name, chart_settings, curve1_settings, dataList, opt_argv[0], curve2_settings, opt_argv[1], opt_argv[2], curve3_settings, opt_argv[3], opt_argv[4])
+		Elseif opt_argc == 3
+			xMin = get_extreme_elem(dataList, xMin, 0)
+			xMin = get_extreme_elem(opt_argv[1], xMin, 0)
+			xMax = get_extreme_elem(dataList, xMax, 1)
+			xMax = get_extreme_elem(opt_argv[1], xMax, 1)
+			yMin = get_extreme_elem(opt_argv[0], yMin, 0)
+			yMin = get_extreme_elem(opt_argv[2], yMin, 0)
+			yMax = get_extreme_elem(opt_argv[0], yMax, 1)
+			yMax = get_extreme_elem(opt_argv[2], yMax, 1)
+			if Or(xMin == null, xMax == null)
+				xMin = -5
+				xMax = 5
+			elseif xMin == xMax
+				xMin = xMin - 5
+				xMax = xMax + 5
+			endif
+			if Or(yMin == null, yMax == null)
+				yMin = -5
+				yMax = 5
+			elseif yMin == yMax
+				yMin = yMin - 5
+				yMax = yMax + 5
+			endif
+			Variable chart_settings = "chart_type:multiRangle;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+			plot_multi_xy(chart_name, chart_settings, curve1_settings, dataList, opt_argv[0], curve2_settings, opt_argv[1], opt_argv[2])
+		Elseif opt_argc == 1
+			xMin = get_extreme_elem(dataList, xMin, 0)
+			xMax = get_extreme_elem(dataList, xMax, 1)
+			yMin = get_extreme_elem(opt_argv[0], yMin, 0)
+			yMax = get_extreme_elem(opt_argv[0], yMax, 1)
+			if Or(xMin == null, xMax == null)
+				xMin = -5
+				xMax = 5
+			elseif xMin == xMax
+				xMin = xMin - 5
+				xMax = xMax + 5
+			endif
+			if Or(yMin == null, yMax == null)
+				yMin = -5
+				yMax = 5
+			elseif yMin == yMax
+				yMin = yMin - 5
+				yMax = yMax + 5
+			endif
+			Variable chart_settings = "chart_type:multiRangle;chart_title:2D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;background_color:black;show_grid:true"
+			plot_multi_xy(chart_name, chart_settings, curve1_settings, dataList, opt_argv[0])
+		Endif
+	Endif
+Endf
+
+Help
+	@language:
+	Function plot_3d_data analyses at least one at most eight groups of data lists and each data group will be plotted as one surface in 3D chart. The number of parameters in these function can be 1 (one curve), 3 (one curve), 6 (two curves), 9 (three curves), 12 (four curves), 15 (five curve), 18 (six curves), 21 (seven curves), 24 (eight curves). If only one parameter, the parameter must be a 2-D array each element value in the parameter will be a point's z value in the surface, otherwise, every 3 parameters construct a group. In the group, the first parameter is a 1-D array whose elements are the x values of the points, the second parameter is a 1-D array whose elements are the y values, the third parameter is a 2-D array whose elements are the z values of the points in the surface. Note that the size of x value parameter and the size of y value parameter must match the size of z value parameter. Examples of this function are plot_3d_data([[2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1]]) and plot_3d_data([1,2,3],[4,5,6,8],[[3,7,2],[5,8,9],[2,6,3],[7,4,4]],[8,7,4,8],[2,1],[[9,3,2,6],[4,5,3,7]]).
+	@end
+	@language:simplified_chinese
+	函数plot_3d_data分析最少1组，最多8组数值矩阵，每组数值矩阵将会被绘制为一条曲面。输入的参数个数可以为1个（绘制一条曲面），3个（绘制一条曲面），6个（绘制2条曲面），9个（绘制3条曲面），12个（绘制4条曲面），15个（绘制5条曲面），18个（绘制6条曲面），21个（绘制7条曲面），24个（绘制8条曲面）。如果只有一个参数，该参数必须是一个2维矩阵，矩阵中的每一个元素将会是绘制出的曲线中的一个点的z值，否则，每3个参数组成一个参数组，在每个参数组中，第一个参数必须是一个一维矩阵，参数中的元素值决定的决定曲面中各点的x值，第二个参数也必须是一个一维矩阵，参数中的元素值决定的决定曲面中各点的y值，第三个参数必须是一个二维矩阵，矩阵中的元素值决定每一个点的z值。注意决定x值的参数中包含的元素个数以及决定y值的参数中包含的元素应该和决定z值的参数中包含的元素个数相符。函数例子包括plot_3d_data([[2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1]])以及plot_3d_data([1,2,3],[4,5,6,8],[[3,7,2],[5,8,9],[2,6,3],[7,4,4]],[8,7,4,8],[2,1],[[9,3,2,6],[4,5,3,7]])。
+	@end
+	@language:traditional_chinese
+	函數程式plot_3d_data分析最少1組，最多8組數值陣列，每組數值陣列將會被繪制為一條曲面。輸入的參數個數可以為1個（繪制一條曲面），3個（繪制一條曲面），6個（繪制2條曲面），9個（繪制3條曲面），12個（繪制4條曲面），15個（繪制5條曲面），18個（繪制6條曲面），21個（繪制7條曲面），24個（繪制8條曲面）。如果只有一個參數，該參數必須是一個2維陣列，陣列中的每一個元素將會是繪制出的曲線中的一個點的z值，否則，每3個參數組成一個參數組，在每個參數組中，第一個參數必須是一個一維陣列，參數中的元素值決定的決定曲面中各點的x值，第二個參數也必須是一個一維陣列，參數中的元素值決定的決定曲面中各點的y值，第三個參數必須是一個二維陣列，陣列中的元素值決定每一個點的z值。註意決定x值的參數中包含的元素個數以及決定y值的參數中包含的元素應該和決定z值的參數中包含的元素個數相符。函數程式例子包括plot_3d_data([[2.47, 3.53, 4.88, 9.42], [8.49, 6.76, 5.31, 0.88], [-9, -7, -5, -3, -1]])以及plot_3d_data([1,2,3],[4,5,6,8],[[3,7,2],[5,8,9],[2,6,3],[7,4,4]],[8,7,4,8],[2,1],[[9,3,2,6],[4,5,3,7]])。
+	@end
+Endh
+Function plot_3d_data(dataArray, ...)
+	If opt_argc > 23
+		Throw "I can draw at most 8 curves in one chart!"
+	Elseif and(opt_argc != 0, round((opt_argc - 2) / 3) * 3 != (opt_argc - 2))
+		Throw "One curve needs exactly 3 parameters!"
+	Else
+		Variable chart_name = ""
+		Variable curve1_settings = "curve_label:cv1;min_color:cyan;max_color:red;min_color_1:cyan;max_color_1:red", _
+				curve2_settings = "curve_label:cv2;min_color:magenta;max_color:green;min_color_1:magenta;max_color_1:green", _
+				curve3_settings = "curve_label:cv3;min_color:white;max_color:blue;min_color_1:white;max_color_1:blue", _
+				curve4_settings = "curve_label:cv4;min_color:gray;max_color:yellow;min_color_1:gray;max_color_1:yellow", _
+				curve5_settings = "curve_label:cv5;min_color:white;max_color:red;min_color_1:white;max_color_1:red", _
+				curve6_settings = "curve_label:cv6;min_color:gray;max_color:green;min_color_1:gray;max_color_1:green", _
+				curve7_settings = "curve_label:cv7;min_color:magenta;max_color:blue;min_color_1:magenta;max_color_1:blue", _
+				curve8_settings = "curve_label:cv8;min_color:cyan;max_color:yellow;min_color_1:cyan;max_color_1:yellow"
+		Variable listX1, listY1, arrayX1, arrayY1, arrayZ1, listX2, listY2, arrayX2, arrayY2, arrayZ2, _
+				listX3, listY3, arrayX3, arrayY3, arrayZ3, listX4, listY4, arrayX4, arrayY4, arrayZ4, _
+				listX5, listY5, arrayX5, arrayY5, arrayZ5, listX6, listY6, arrayX6, arrayY6, arrayZ6, _
+				listX7, listY7, arrayX7, arrayY7, arrayZ7, listX8, listY8, arrayX8, arrayY8, arrayZ8
+		Variable xMin = null, xMax = null, yMin = null, yMax = null, zMin = null, zMax = null
+		Select opt_argc
+		Case 23
+			listX8 = opt_argv[20]
+			listY8 = opt_argv[21]
+			arrayZ8 = opt_argv[22]
+			if Or(size(size(listX8)) != [1], size(size(listY8)) != [1], size(size(arrayZ8)) != [2], _
+				size(listX8)[0] != size(arrayZ8)[1], size(listY8)[0] != size(arrayZ8)[0])
+				Throw "Incorrect input parameter dimension size!"
+			Else
+				xMin = get_extreme_elem(listX8, xMin, 0)
+				xMax = get_extreme_elem(listX8, xMax, 1)
+				yMin = get_extreme_elem(listY8, yMin, 0)
+				yMax = get_extreme_elem(listY8, yMax, 1)
+				zMin = get_extreme_elem(arrayZ8, zMin, 0)
+				zMax = get_extreme_elem(arrayZ8, zMax, 1)
+				arrayX8 = alloc_array(size(arrayZ8))
+				arrayY8 = alloc_array(size(arrayZ8))
+				For variable idxY = 0 to size(listY8)[0] - 1 step 1
+					For variable idxX = 0 to size(listX8)[0] - 1 step 1
+						arrayX8[idxY,idxX] = listX8[idxX]
+						arrayY8[idxY,idxX] = listY8[idxY]
+					Next
+				Next
+			Endif
+		Case 20
+			listX7 = opt_argv[17]
+			listY7 = opt_argv[18]
+			arrayZ7 = opt_argv[19]
+			if Or(size(size(listX7)) != [1], size(size(listY7)) != [1], size(size(arrayZ7)) != [2], _
+				size(listX7)[0] != size(arrayZ7)[1], size(listY7)[0] != size(arrayZ7)[0])
+				Throw "Incorrect input parameter dimension size!"
+			Else
+				xMin = get_extreme_elem(listX7, xMin, 0)
+				xMax = get_extreme_elem(listX7, xMax, 1)
+				yMin = get_extreme_elem(listY7, yMin, 0)
+				yMax = get_extreme_elem(listY7, yMax, 1)
+				zMin = get_extreme_elem(arrayZ7, zMin, 0)
+				zMax = get_extreme_elem(arrayZ7, zMax, 1)
+				arrayX7 = alloc_array(size(arrayZ7))
+				arrayY7 = alloc_array(size(arrayZ7))
+				For variable idxY = 0 to size(listY7)[0] - 1 step 1
+					For variable idxX = 0 to size(listX7)[0] - 1 step 1
+						arrayX7[idxY,idxX] = listX7[idxX]
+						arrayY7[idxY,idxX] = listY7[idxY]
+					Next
+				Next
+			Endif
+		Case 17
+			listX6 = opt_argv[14]
+			listY6 = opt_argv[15]
+			arrayZ6 = opt_argv[16]
+			if Or(size(size(listX6)) != [1], size(size(listY6)) != [1], size(size(arrayZ6)) != [2], _
+				size(listX6)[0] != size(arrayZ6)[1], size(listY6)[0] != size(arrayZ6)[0])
+				Throw "Incorrect input parameter dimension size!"
+			Else
+				xMin = get_extreme_elem(listX6, xMin, 0)
+				xMax = get_extreme_elem(listX6, xMax, 1)
+				yMin = get_extreme_elem(listY6, yMin, 0)
+				yMax = get_extreme_elem(listY6, yMax, 1)
+				zMin = get_extreme_elem(arrayZ6, zMin, 0)
+				zMax = get_extreme_elem(arrayZ6, zMax, 1)
+				arrayX6 = alloc_array(size(arrayZ6))
+				arrayY6 = alloc_array(size(arrayZ6))
+				For variable idxY = 0 to size(listY6)[0] - 1 step 1
+					For variable idxX = 0 to size(listX6)[0] - 1 step 1
+						arrayX6[idxY,idxX] = listX6[idxX]
+						arrayY6[idxY,idxX] = listY6[idxY]
+					Next
+				Next
+			Endif
+		Case 14
+			listX5 = opt_argv[11]
+			listY5 = opt_argv[12]
+			arrayZ5 = opt_argv[13]
+			if Or(size(size(listX5)) != [1], size(size(listY5)) != [1], size(size(arrayZ5)) != [2], _
+				size(listX5)[0] != size(arrayZ5)[1], size(listY5)[0] != size(arrayZ5)[0])
+				Throw "Incorrect input parameter dimension size!"
+			Else
+				xMin = get_extreme_elem(listX5, xMin, 0)
+				xMax = get_extreme_elem(listX5, xMax, 1)
+				yMin = get_extreme_elem(listY5, yMin, 0)
+				yMax = get_extreme_elem(listY5, yMax, 1)
+				zMin = get_extreme_elem(arrayZ5, zMin, 0)
+				zMax = get_extreme_elem(arrayZ5, zMax, 1)
+				arrayX5 = alloc_array(size(arrayZ5))
+				arrayY5 = alloc_array(size(arrayZ5))
+				For variable idxY = 0 to size(listY5)[0] - 1 step 1
+					For variable idxX = 0 to size(listX5)[0] - 1 step 1
+						arrayX5[idxY,idxX] = listX5[idxX]
+						arrayY5[idxY,idxX] = listY5[idxY]
+					Next
+				Next
+			Endif
+		Case 11
+			listX4 = opt_argv[8]
+			listY4 = opt_argv[9]
+			arrayZ4 = opt_argv[10]
+			if Or(size(size(listX4)) != [1], size(size(listY4)) != [1], size(size(arrayZ4)) != [2], _
+				size(listX4)[0] != size(arrayZ4)[1], size(listY4)[0] != size(arrayZ4)[0])
+				Throw "Incorrect input parameter dimension size!"
+			Else
+				xMin = get_extreme_elem(listX4, xMin, 0)
+				xMax = get_extreme_elem(listX4, xMax, 1)
+				yMin = get_extreme_elem(listY4, yMin, 0)
+				yMax = get_extreme_elem(listY4, yMax, 1)
+				zMin = get_extreme_elem(arrayZ4, zMin, 0)
+				zMax = get_extreme_elem(arrayZ4, zMax, 1)
+				arrayX4 = alloc_array(size(arrayZ4))
+				arrayY4 = alloc_array(size(arrayZ4))
+				For variable idxY = 0 to size(listY4)[0] - 1 step 1
+					For variable idxX = 0 to size(listX4)[0] - 1 step 1
+						arrayX4[idxY,idxX] = listX4[idxX]
+						arrayY4[idxY,idxX] = listY4[idxY]
+					Next
+				Next
+			Endif
+		Case 8
+			listX3 = opt_argv[5]
+			listY3 = opt_argv[6]
+			arrayZ3 = opt_argv[7]
+			if Or(size(size(listX3)) != [1], size(size(listY3)) != [1], size(size(arrayZ3)) != [2], _
+				size(listX3)[0] != size(arrayZ3)[1], size(listY3)[0] != size(arrayZ3)[0])
+				Throw "Incorrect input parameter dimension size!"
+			Else
+				xMin = get_extreme_elem(listX3, xMin, 0)
+				xMax = get_extreme_elem(listX3, xMax, 1)
+				yMin = get_extreme_elem(listY3, yMin, 0)
+				yMax = get_extreme_elem(listY3, yMax, 1)
+				zMin = get_extreme_elem(arrayZ3, zMin, 0)
+				zMax = get_extreme_elem(arrayZ3, zMax, 1)
+				arrayX3 = alloc_array(size(arrayZ3))
+				arrayY3 = alloc_array(size(arrayZ3))
+				For variable idxY = 0 to size(listY3)[0] - 1 step 1
+					For variable idxX = 0 to size(listX3)[0] - 1 step 1
+						arrayX3[idxY,idxX] = listX3[idxX]
+						arrayY3[idxY,idxX] = listY3[idxY]
+					Next
+				Next
+			Endif
+		Case 5
+			listX2 = opt_argv[2]
+			listY2 = opt_argv[3]
+			arrayZ2 = opt_argv[4]
+			if Or(size(size(listX2)) != [1], size(size(listY2)) != [1], size(size(arrayZ2)) != [2], _
+				size(listX2)[0] != size(arrayZ2)[1], size(listY2)[0] != size(arrayZ2)[0])
+				Throw "Incorrect input parameter dimension size!"
+			Else
+				xMin = get_extreme_elem(listX2, xMin, 0)
+				xMax = get_extreme_elem(listX2, xMax, 1)
+				yMin = get_extreme_elem(listY2, yMin, 0)
+				yMax = get_extreme_elem(listY2, yMax, 1)
+				zMin = get_extreme_elem(arrayZ2, zMin, 0)
+				zMax = get_extreme_elem(arrayZ2, zMax, 1)
+				arrayX2 = alloc_array(size(arrayZ2))
+				arrayY2 = alloc_array(size(arrayZ2))
+				For variable idxY = 0 to size(listY2)[0] - 1 step 1
+					For variable idxX = 0 to size(listX2)[0] - 1 step 1
+						arrayX2[idxY,idxX] = listX2[idxX]
+						arrayY2[idxY,idxX] = listY2[idxY]
+					Next
+				Next
+			Endif
+		Case 2
+			listX1 = dataArray
+			listY1 = opt_argv[0]
+			arrayZ1 = opt_argv[1]
+			if Or(size(size(listX1)) != [1], size(size(listY1)) != [1], size(size(arrayZ1)) != [2], _
+				size(listX1)[0] != size(arrayZ1)[1], size(listY1)[0] != size(arrayZ1)[0])
+				Throw "Incorrect input parameter dimension size!"
+			Else
+				xMin = get_extreme_elem(listX1, xMin, 0)
+				xMax = get_extreme_elem(listX1, xMax, 1)
+				yMin = get_extreme_elem(listY1, yMin, 0)
+				yMax = get_extreme_elem(listY1, yMax, 1)
+				zMin = get_extreme_elem(arrayZ1, zMin, 0)
+				zMax = get_extreme_elem(arrayZ1, zMax, 1)
+				arrayX1 = alloc_array(size(arrayZ1))
+				arrayY1 = alloc_array(size(arrayZ1))
+				For variable idxY = 0 to size(listY1)[0] - 1 step 1
+					For variable idxX = 0 to size(listX1)[0] - 1 step 1
+						arrayX1[idxY,idxX] = listX1[idxX]
+						arrayY1[idxY,idxX] = listY1[idxY]
+					Next
+				Next
+			Endif
+			Break
+		Case 0
+			arrayZ1 = dataArray
+			if size(size(arrayZ1)) != [2]
+				Throw "Incorrect input parameter dimension size!"
+			Else
+				xMin = get_extreme_elem(1, xMin, 0)
+				xMax = get_extreme_elem(size(arrayZ1)[1], xMax, 1)
+				yMin = get_extreme_elem(1, yMin, 0)
+				yMax = get_extreme_elem(size(arrayZ1)[0], yMax, 1)
+				zMin = get_extreme_elem(arrayZ1, zMin, 0)
+				zMax = get_extreme_elem(arrayZ1, zMax, 1)
+				arrayX1 = alloc_array(size(arrayZ1))
+				arrayY1 = alloc_array(size(arrayZ1))
+				For variable idxY = 0 to size(arrayZ1)[0] - 1 step 1
+					For variable idxX = 0 to size(arrayZ1)[1] - 1 step 1
+						arrayX1[idxY,idxX] = idxX + 1
+						arrayY1[idxY,idxX] = idxY + 1
+					Next
+				Next
+			Endif
+		EndS
+		if Or(xMin == null, xMax == null)
+			xMin = -5
+			xMax = 5
+		elseif xMin == xMax
+			xMin = xMin - 5
+			xMax = xMax + 5
+		endif
+		if Or(yMin == null, yMax == null)
+			yMin = -5
+			yMax = 5
+		elseif yMin == yMax
+			yMin = yMin - 5
+			yMax = yMax + 5
+		endif
+		if Or(zMin == null, zMax == null)
+			zMin = -5
+			zMax = 5
+		elseif zMin == zMax
+			zMin = zMin - 5
+			zMax = zMax + 5
+		endif
+		variable chart_settings = "chart_type:multiXYZ;chart_title:3D data;x_title:X;x_min:" + xMin + ";x_max:" + xMax + ";x_labels:4;y_title:Y;y_min:" + yMin + ";y_max:" + yMax + ";y_labels:4;z_title:Z;z_min:" + zMin + ";z_max:" + zMax + ";z_labels:4"
+		if opt_argc == 23
+			plot_multi_xyz(chart_name, chart_settings, curve1_settings, arrayX1, arrayY1, arrayZ1, curve2_settings, arrayX2, arrayY2, arrayZ2, curve3_settings, arrayX3, arrayY3, arrayZ3, curve4_settings, arrayX4, arrayY4, arrayZ4, curve5_settings, arrayX5, arrayY5, arrayZ5, curve6_settings, arrayX6, arrayY6, arrayZ6, curve7_settings, arrayX7, arrayY7, arrayZ7, curve8_settings, arrayX8, arrayY8, arrayZ8)
+		Elseif opt_argc == 20
+			plot_multi_xyz(chart_name, chart_settings, curve1_settings, arrayX1, arrayY1, arrayZ1, curve2_settings, arrayX2, arrayY2, arrayZ2, curve3_settings, arrayX3, arrayY3, arrayZ3, curve4_settings, arrayX4, arrayY4, arrayZ4, curve5_settings, arrayX5, arrayY5, arrayZ5, curve6_settings, arrayX6, arrayY6, arrayZ6, curve7_settings, arrayX7, arrayY7, arrayZ7)
+		Elseif opt_argc == 17
+			plot_multi_xyz(chart_name, chart_settings, curve1_settings, arrayX1, arrayY1, arrayZ1, curve2_settings, arrayX2, arrayY2, arrayZ2, curve3_settings, arrayX3, arrayY3, arrayZ3, curve4_settings, arrayX4, arrayY4, arrayZ4, curve5_settings, arrayX5, arrayY5, arrayZ5, curve6_settings, arrayX6, arrayY6, arrayZ6)
+		Elseif opt_argc == 14
+			plot_multi_xyz(chart_name, chart_settings, curve1_settings, arrayX1, arrayY1, arrayZ1, curve2_settings, arrayX2, arrayY2, arrayZ2, curve3_settings, arrayX3, arrayY3, arrayZ3, curve4_settings, arrayX4, arrayY4, arrayZ4, curve5_settings, arrayX5, arrayY5, arrayZ5)
+		Elseif opt_argc == 11
+			plot_multi_xyz(chart_name, chart_settings, curve1_settings, arrayX1, arrayY1, arrayZ1, curve2_settings, arrayX2, arrayY2, arrayZ2, curve3_settings, arrayX3, arrayY3, arrayZ3, curve4_settings, arrayX4, arrayY4, arrayZ4)
+		Elseif opt_argc == 8
+			plot_multi_xyz(chart_name, chart_settings, curve1_settings, arrayX1, arrayY1, arrayZ1, curve2_settings, arrayX2, arrayY2, arrayZ2, curve3_settings, arrayX3, arrayY3, arrayZ3)
+		Elseif opt_argc == 5
+			plot_multi_xyz(chart_name, chart_settings, curve1_settings, arrayX1, arrayY1, arrayZ1, curve2_settings, arrayX2, arrayY2, arrayZ2)
+		Else	// opt_argc == 2 or 0
+			plot_multi_xyz(chart_name, chart_settings, curve1_settings, arrayX1, arrayY1, arrayZ1)
+		Endif
+	Endif
+Endf
+
+Help
+	@language:
+	Function convert_unit(value, from_unit, to_unit) converts value based on one unit to value based on another unit. The first parameter is the value to be converted, the second parameter is the from unit (a case sensitive string), the third parameter is the to unit (a case sensitive string). For example, convert_unit(23.71, "m", "km").
+	This function supports the following units:
+	1. length units: "um" (microns), "mm" (millimetres), "cm" (centimetres), "m" (metres), "km" (kilometres), "in" (inches), "ft" (feet), "yd" (yards), "mi" (miles), "nmi" (nautical miles), "AU" (Astronomical units), "ly" (light years), "pc" (parsecs);
+	2. area units: "mm2" (square millimetres), "cm2" (square centimetres), "m2" (square metres), "ha" (hectares), "km2" (square kilometres), "sq in" (square inches), "sq ft" (square feet), "sq yd" (square yards), "ac" (acres), "sq mi" (square miles);
+	3. volume units: "mL" (millilitres (cc)), "L" (litres), "m3" (cubic metres), "cu in" (cubic inches), "cu ft" (cubic feet), "cu yd" (cubic yards), "km3" (cubic kilometres), "fl oz(Imp)" (fluid ounce (Imp)), "pt(Imp)" (pint (Imp)), "gal(Imp)" (gallon (Imp)), "fl oz(US)" (fluid ounce (US)), "pt(US)" (pint (US)), "gal(US)" (gallon (US));
+	4. mass units: "ug" (micrograms), "mg" (milligrams), "g" (grams), "kg" (kilograms), "t" (tonnes), "oz" (ounces), "lb" (pounds), "jin" (market catties), "jin(HK)" (catties (HK)), "jin(TW)" (catties (TW));
+	5. speed units: "m/s" (metres per second), "km/h" (kilometres per hour), "ft/s" (feet per second), "mph" (miles per hour), "knot" (knots);
+	6. time units: "ns" (nanoseconds), "us" (microseconds), "ms" (milliseconds), "s" (seconds), "min" (minutes), "h" (hours), "d" (days), "wk" (weeks), "yr" (years);
+	7. force units: "N" (newtons), "kgf" (kilogram-force), "lbF" (pound-force);
+	8. pressure units: "Pa" (pascal), "hPa" (hectopascal), "kPa" (kilopascal), "MPa" (megapascal), "atm" (atomsphere), "psi" (pounds per square inch), "Torr" (torrs (millimetres of mercury);
+	9. energy units: "J" (joules), "kJ" (kilojoules), "MJ" (megajoules), "kWh" (kilowatt-hours), "cal" (calories), "kcal" (kilocalories), "BTU" (British Thermal Units);
+	10. power units: "W" (Watts), "kW" (kilowatts), "MW" (megawatts), "cal/s" (calories per second), "BTU/h" (BTUs per hour), "hp" (horse power);
+	11. temperature units: "0C" (celsius), "0F" (fahrenheit), "K" (Kelvin);
+	@end
+	@language:simplified_chinese
+	函数convert_unit(value, from_unit, to_unit)将基于某一个单位的数值转换为基于另外一个单位的数值。第一个参数是将要转换的数值，第二个参数是将被转换的单位（单位是一个对大小写敏感的字符串），第三个参数是转换后的单位（单位是一个对大小写敏感的字符串）。比如，convert_unit(23.71, "m", "km")。
+	本函数支持以下单位：
+	1. 长度单位: "um" (微米), "mm" (毫米), "cm" (厘米), "m" (米), "km" (公里), "in" (英寸), "ft" (英尺), "yd" (码), "mi" (英里), "nmi" (海浬), "AU" (天文单位), "ly" (光年), "pc" (秒差距);
+	2. 面积单位: "mm2" (平方毫米), "cm2" (平方厘米), "m2" (平方米), "ha" (公顷), "km2" (平方公里), "sq in" (平方英寸), "sq ft" (平方英尺), "sq yd" (平方码), "ac" (英亩), "sq mi" (平方英里);
+	3. 体积单位: "mL" (毫升), "L" (升), "m3" (立方米), "cu in" (立方英寸), "cu ft" (立方英尺), "cu yd" (立方码), "km3" (立方公里), "fl oz(Imp)" (液盎司(英制)), "pt(Imp)" (品脱(英制)), "gal(Imp)" (加仑(英制)), "fl oz(US)" (液盎司(美制)), "pt(US)" (品脱(美制)), "gal(US)" (加仑(美制));
+	4. 质量单位: "ug" (微克), "mg" (毫克), "g" (克), "kg" (千克), "t" (吨), "oz" (盎司), "lb" (磅), "jin" (市斤), "jin(HK)" (斤(香港)), "jin(TW)" (台斤);
+	5. 速度单位: "m/s" (米每秒), "km/h" (千米每小时), "ft/s" (英尺每秒), "mph" (英里每小时), "knot" (节);
+	6. 时间单位: "ns" (纳秒), "us" (微秒), "ms" (毫秒), "s" (秒), "min" (分钟), "h" (小时), "d" (天), "wk" (礼拜), "yr" (年);
+	7. 力单位: "N" (牛顿), "kgf" (千克力), "lbF" (磅力);
+	8. 压强单位: "Pa" (帕斯卡), "hPa" (百帕), "kPa" (千帕), "MPa" (兆帕), "atm" (大气压), "psi" (每平方英寸上受到的磅力压力), "Torr" (毫米汞柱);
+	9. 能量单位: "J" (焦耳), "kJ" (千焦), "MJ" (兆焦), "kWh" (千瓦时), "cal" (卡路里), "kcal" (千卡), "BTU" (英热单位);
+	10. 功率单位: "W" (瓦特), "kW" (千瓦), "MW" (兆瓦), "cal/s" (卡路里每秒), "BTU/h" (英热单位每小时), "hp" (马力);
+	11. 温度单位: "0C" (摄氏度), "0F" (华氏度), "K" (开氏温标);
+	
+	@end
+	@language:traditional_chinese
+	函數convert_unit(value, from_unit, to_unit)將基於某一個單位的數值轉換為基於另外一個單位的數值。第一個參數是將要轉換的數值，第二個參數是將被轉換的單位（單位是一個對大小寫敏感的字串），第三個參數是轉換後的單位（單位是一個對大小寫敏感的字串）。比如，convert_unit(23.71, "m", "km")。
+	本函數支持以下單位：
+	1. 長度單位: "um" (微米), "mm" (毫米), "cm" (厘米), "m" (米), "km" (公里), "in" (英寸), "ft" (英尺), "yd" (碼), "mi" (英里), "nmi" (海浬), "AU" (天文單位), "ly" (光年), "pc" (秒差距);
+	2. 面積單位: "mm2" (平方毫米), "cm2" (平方厘米), "m2" (平方米), "ha" (公頃), "km2" (平方公里), "sq in" (平方英寸), "sq ft" (平方英尺), "sq yd" (平方碼), "ac" (英畝), "sq mi" (平方英里);
+	3. 體積單位: "mL" (毫升), "L" (升), "m3" (立方米), "cu in" (立方英寸), "cu ft" (立方英尺), "cu yd" (立方碼), "km3" (立方公里), "fl oz(Imp)" (液盎司(英制)), "pt(Imp)" (品脫(英制)), "gal(Imp)" (加侖(英制)), "fl oz(US)" (液盎司(美制)), "pt(US)" (品脫(美制)), "gal(US)" (加侖(美制));
+	4. 質量單位: "ug" (微克), "mg" (毫克), "g" (克), "kg" (千克), "t" (噸), "oz" (盎司), "lb" (磅), "jin" (市斤), "jin(HK)" (斤(香港)), "jin(TW)" (臺斤);
+	5. 速度單位: "m/s" (米每秒), "km/h" (千米每小時), "ft/s" (英尺每秒), "mph" (英里每小時), "knot" (節);
+	6. 時間單位: "ns" (納秒), "us" (微秒), "ms" (毫秒), "s" (秒), "min" (分鐘), "h" (小時), "d" (天), "wk" (禮拜), "yr" (年);
+	7. 力單位: "N" (牛頓), "kgf" (千克力), "lbF" (磅力);
+	8. 壓強單位: "Pa" (帕斯卡), "hPa" (百帕), "kPa" (千帕), "MPa" (兆帕), "atm" (大氣壓), "psi" (每平方英寸上受到的磅力壓力), "Torr" (毫米汞柱);
+	9. 能量單位: "J" (焦耳), "kJ" (千焦), "MJ" (兆焦), "kWh" (千瓦時), "cal" (卡路里), "kcal" (千卡), "BTU" (英熱單位);
+	10. 功率單位: "W" (瓦特), "kW" (千瓦), "MW" (兆瓦), "cal/s" (卡路里每秒), "BTU/h" (英熱單位每小時), "hp" (馬力);
+	11. 溫度單位: "0C" (攝氏度), "0F" (華氏度), "K" (開氏溫標);
+	@end
+Endh
+Function convert_unit(from_value, _	// value based on from unit, it must be a double
+					from_unit, _	// string based from unit
+					to_unit)	// string based to unit
+	variable intermediate_unit, intermediate_value, to_value
+	select from_unit
+	case "um"	// microns
+		intermediate_unit = "m"
+		intermediate_value = from_value / 1E6
+		break
+	case "mm"	// millimeters
+		intermediate_unit = "m"
+		intermediate_value = from_value / 1E3
+		break
+	case "cm"	// centimeters
+		intermediate_unit = "m"
+		intermediate_value = from_value / 100
+		break
+	case "m"	// metres
+		intermediate_unit = "m"
+		intermediate_value = from_value
+		break
+	case "km"	// kilometres
+		intermediate_unit = "m"
+		intermediate_value = from_value * 1E3
+		break
+	case "in"	// inches
+		intermediate_unit = "m"
+		intermediate_value = from_value / 39.37007874
+		break
+	case "ft"	// feet
+		intermediate_unit = "m"
+		intermediate_value = from_value / 3.280839895
+		break
+	case "yd"	// yards
+		intermediate_unit = "m"
+		intermediate_value = from_value / 1.093613298
+		break
+	case "mi"	// miles
+		intermediate_unit = "m"
+		intermediate_value = from_value * 1609.344
+		break
+	case "nmi"	// nautical miles
+		intermediate_unit = "m"
+		intermediate_value = from_value * 1852
+		break
+	case "AU"	// Astronomical units
+		intermediate_unit = "m"
+		intermediate_value = from_value * 149597870700
+		break
+	case "ly"	// light years
+		intermediate_unit = "m"
+		intermediate_value = from_value * 9460730472580800
+		break
+	case "pc"	// Parsecs
+		intermediate_unit = "m"
+		intermediate_value = from_value * 3.0857E16
+		break
+	case "mm2"	// square mms
+		intermediate_unit = "m2"
+		intermediate_value = from_value / 1E6
+		break
+	case "cm2"	// square cms
+		intermediate_unit = "m2"
+		intermediate_value = from_value / 1E4
+		break
+	case "m2"	// square ms
+		intermediate_unit = "m2"
+		intermediate_value = from_value
+		break
+	case "ha"	// hectares
+		intermediate_unit = "m2"
+		intermediate_value = from_value * 1E4
+		break
+	case "km2"	// square kms
+		intermediate_unit = "m2"
+		intermediate_value = from_value * 1E6
+		break
+	case "sq in"	// square inches
+		intermediate_unit = "m2"
+		intermediate_value = from_value / 1550.003100
+		break
+	case "sq ft"	// square feet
+		intermediate_unit = "m2"
+		intermediate_value = from_value / 10.763911
+		break
+	case "sq yd"	// square yards
+		intermediate_unit = "m2"
+		intermediate_value = from_value / 1.195990
+		break
+	case "ac"	// Acres
+		intermediate_unit = "m2"
+		intermediate_value = from_value * 4046.856430
+		break
+	case "sq mi"	// square miles
+		intermediate_unit = "m2"
+		intermediate_value = from_value * 2589988.110336
+		break
+	case "mL"	// millilitres (cc)
+		intermediate_unit = "L"
+		intermediate_value = from_value / 1000
+		break
+	case "L"	// litres
+		intermediate_unit = "L"
+		intermediate_value = from_value
+		break
+	case "m3"	// cubic metres
+		intermediate_unit = "L"
+		intermediate_value = from_value * 1000
+		break
+	case "cu in"	// cubic inches
+		intermediate_unit = "L"
+		intermediate_value = from_value / 61.0237441
+		break
+	case "cu ft"	// cubic feet
+		intermediate_unit = "L"
+		intermediate_value = from_value * 28.316846592
+		break
+	case "cu yd"	// cubic yards
+		intermediate_unit = "L"
+		intermediate_value = from_value * 764.55487
+		break
+	case "km3"	// cubic yards
+		intermediate_unit = "L"
+		intermediate_value = from_value * 1E12
+		break
+	case "fl oz(Imp)"	// Fluid ounce (Imp)
+		intermediate_unit = "L"
+		intermediate_value = from_value * 0.0284130625
+		break
+	case "pt(Imp)"	// Pint (Imp)
+		intermediate_unit = "L"
+		intermediate_value = from_value * 0.56826125
+		break
+	case "gal(Imp)"	// Gallon (Imp)
+		intermediate_unit = "L"
+		intermediate_value = from_value * 4.54609
+		break
+	case "fl oz(US)"	// Fluid ounce (US)
+		intermediate_unit = "L"
+		intermediate_value = from_value * 0.0295735295625
+		break
+	case "pt(US)"	// Pint (US)
+		intermediate_unit = "L"
+		intermediate_value = from_value * 0.473176473
+		break
+	case "gal(US)"	// Gallon (US)
+		intermediate_unit = "L"
+		intermediate_value = from_value * 3.785411784
+		break
+	case "ug"	// micrograms
+		intermediate_unit = "kg"
+		intermediate_value = from_value / 1E9
+		break
+	case "mg"	// milligrams
+		intermediate_unit = "kg"
+		intermediate_value = from_value / 1E6
+		break
+	case "g"	// grams
+		intermediate_unit = "kg"
+		intermediate_value = from_value / 1E3
+		break
+	case "kg"	// kilograms
+		intermediate_unit = "kg"
+		intermediate_value = from_value
+		break
+	case "t"	// tonnes
+		intermediate_unit = "kg"
+		intermediate_value = from_value * 1E3
+		break
+	case "oz"	// ounces
+		intermediate_unit = "kg"
+		intermediate_value = from_value * 0.0283495231
+		break
+	case "lb"	// pounds
+		intermediate_unit = "kg"
+		intermediate_value = from_value * 0.45359237
+		break
+	case "jin"	// market catties
+		intermediate_unit = "kg"
+		intermediate_value = from_value * 0.5
+		break
+	case "jin(HK)"	// catties (HK)
+		intermediate_unit = "kg"
+		intermediate_value = from_value * 0.60478982
+		break
+	case "jin(TW)"	// catties (TW)
+		intermediate_unit = "kg"
+		intermediate_value = from_value * 0.6
+		break
+	case "m/s"	// metres per second
+		intermediate_unit = "km/h"
+		intermediate_value = from_value * 3.6
+		break
+	case "km/h"	// kms per hour
+		intermediate_unit = "km/h"
+		intermediate_value = from_value
+		break
+	case "ft/s"	// feet per second
+		intermediate_unit = "km/h"
+		intermediate_value = from_value * 1.09728
+		break
+	case "mph"	// miles per hour
+		intermediate_unit = "km/h"
+		intermediate_value = from_value * 1.609344
+		break
+	case "knot"	// knots
+		intermediate_unit = "km/h"
+		intermediate_value = from_value * 1.852
+		break
+	case "ns"	// Nanoseconds
+		intermediate_unit = "s"
+		intermediate_value = from_value / 1E9
+		break
+	case "us"	// microseconds
+		intermediate_unit = "s"
+		intermediate_value = from_value / 1E6
+		break
+	case "ms"	// Milliseconds
+		intermediate_unit = "s"
+		intermediate_value = from_value / 1E3
+		break
+	case "s"	// seconds
+		intermediate_unit = "s"
+		intermediate_value = from_value
+		break
+	case "min"	// minutes
+		intermediate_unit = "s"
+		intermediate_value = from_value * 60
+		break
+	case "h"	// hours
+		intermediate_unit = "s"
+		intermediate_value = from_value * 3600
+		break
+	case "d"	// days
+		intermediate_unit = "s"
+		intermediate_value = from_value * 86400
+		break
+	case "wk"	// weeks
+		intermediate_unit = "s"
+		intermediate_value = from_value * 604800
+		break
+	case "yr"	// years
+		intermediate_unit = "s"
+		intermediate_value = from_value * 31536000
+		break
+	case "N"	// Newtons
+		intermediate_unit = "N"
+		intermediate_value = from_value
+		break
+	case "kgf"	// kilogram-force
+		intermediate_unit = "N"
+		intermediate_value = from_value * 9.80665
+		break
+	case "lbF"	// pound-force
+		intermediate_unit = "N"
+		intermediate_value = from_value * 4.44822162
+		break
+	case "Pa"	// Pascal
+		intermediate_unit = "Pa"
+		intermediate_value = from_value
+		break
+	case "hPa"	// hectopascal
+		intermediate_unit = "Pa"
+		intermediate_value = from_value * 100
+		break
+	case "kPa"	// kilopascal
+		intermediate_unit = "Pa"
+		intermediate_value = from_value * 1000
+		break
+	case "MPa"	// Megapascal
+		intermediate_unit = "Pa"
+		intermediate_value = from_value * 1E6
+		break
+	case "atm"	// Atmosphere
+		intermediate_unit = "Pa"
+		intermediate_value = from_value * 101325
+		break
+	case "psi"	// pounds per square inch
+		intermediate_unit = "Pa"
+		intermediate_value = from_value * 6894.8
+		break
+	case "Torr"	// torrs
+		intermediate_unit = "Pa"
+		intermediate_value = from_value * 133.3224
+		break
+	case "J"	// joules
+		intermediate_unit = "J"
+		intermediate_value = from_value
+		break
+	case "kJ"	// kilojoules
+		intermediate_unit = "J"
+		intermediate_value = from_value * 1000
+		break
+	case "MJ"	// megajoules
+		intermediate_unit = "J"
+		intermediate_value = from_value * 1E6
+		break
+	case "kWh"	// kilowatt-hours
+		intermediate_unit = "J"
+		intermediate_value = from_value * 3.6E6
+		break
+	case "cal"	// calories
+		intermediate_unit = "J"
+		intermediate_value = from_value * 4.1868
+		break
+	case "kcal"	// kilocalories
+		intermediate_unit = "J"
+		intermediate_value = from_value * 4186.8
+		break
+	case "BTU"	// British Thermal Units
+		intermediate_unit = "J"
+		intermediate_value = from_value * 1055.055853
+		break
+	case "W"	// watts
+		intermediate_unit = "kW"
+		intermediate_value = from_value / 1E3
+		break
+	case "kW"	// kilowatts
+		intermediate_unit = "kW"
+		intermediate_value = from_value
+		break
+	case "MW"	// megawatts
+		intermediate_unit = "kW"
+		intermediate_value = from_value * 1E3
+		break
+	case "cal/s"	// Calories per second
+		intermediate_unit = "kW"
+		intermediate_value = from_value / 238.8458966
+		break
+	case "BTU/h"	// BTUs per hour
+		intermediate_unit = "kW"
+		intermediate_value = from_value / 3412.141633
+		break
+	case "hp"	// horse power
+		intermediate_unit = "kW"
+		intermediate_value = from_value * 0.746
+		break
+	case "0C"	// Celsius
+		intermediate_unit = "K"
+		intermediate_value = from_value + 273.15
+		break
+	case "0F"	// horse power
+		intermediate_unit = "K"
+		intermediate_value = (from_value + 459.67) * 5/9
+		break
+	case "K"	// horse power
+		intermediate_unit = "K"
+		intermediate_value = from_value
+		break
+	
+	default
+		throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+	ends
+
+	select to_unit
+	case "um"	// microns
+		if intermediate_unit != "m"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 1E6
+		break
+	case "mm"	// millimeters
+		if intermediate_unit != "m"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 1E3
+		break
+	case "cm"	// centimeters
+		if intermediate_unit != "m"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 100
+		break
+	case "m"	// metres
+		if intermediate_unit != "m"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value
+		break
+	case "km"	// kilometres
+		if intermediate_unit != "m"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1E3
+		break
+	case "in"	// inches
+		if intermediate_unit != "m"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 39.37007874
+		break
+	case "ft"	// feet
+		if intermediate_unit != "m"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 3.280839895
+		break
+	case "yd"	// yards
+		if intermediate_unit != "m"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 1.093613298
+		break
+	case "mi"	// miles
+		if intermediate_unit != "m"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1609.344
+		break
+	case "nmi"	// nautical miles
+		if intermediate_unit != "m"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1852
+		break
+	case "AU"	// Astronomical units
+		if intermediate_unit != "m"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 149597870700
+		break
+	case "ly"	// light years
+		if intermediate_unit != "m"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 9460730472580800
+		break
+	case "pc"	// Parsecs
+		if intermediate_unit != "m"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 3.0857E16
+		break
+	case "mm2"	// square mms
+		if intermediate_unit != "m2"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 1E6
+		break
+	case "cm2"	// square cms
+		if intermediate_unit != "m2"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 1E4
+		break
+	case "m2"	// square ms
+		if intermediate_unit != "m2"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value
+		break
+	case "ha"	// hectares
+		if intermediate_unit != "m2"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1E4
+		break
+	case "km2"	// square kms
+		if intermediate_unit != "m2"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1E6
+		break
+	case "sq in"	// square inches
+		if intermediate_unit != "m2"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 1550.003100
+		break
+	case "sq ft"	// square feet
+		if intermediate_unit != "m2"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 10.763911
+		break
+	case "sq yd"	// square yards
+		if intermediate_unit != "m2"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 1.195990
+		break
+	case "ac"	// Acres
+		if intermediate_unit != "m2"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 4046.856430
+		break
+	case "sq mi"	// square miles
+		if intermediate_unit != "m2"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 2589988.110336
+		break
+	case "mL"	// millilitres (cc)
+		if intermediate_unit != "L"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 1000
+		break
+	case "L"	// litres
+		if intermediate_unit != "L"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value
+		break
+	case "m3"	// cubic metres
+		if intermediate_unit != "L"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1000
+		break
+	case "cu in"	// cubic inches
+		if intermediate_unit != "L"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 61.0237441
+		break
+	case "cu ft"	// cubic feet
+		if intermediate_unit != "L"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 28.316846592
+		break
+	case "cu yd"	// cubic yards
+		if intermediate_unit != "L"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 764.55487
+		break
+	case "km3"	// cubic yards
+		if intermediate_unit != "L"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1E12
+		break
+	case "fl oz(Imp)"	// Fluid ounce (Imp)
+		if intermediate_unit != "L"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 0.0284130625
+		break
+	case "pt(Imp)"	// Pint (Imp)
+		if intermediate_unit != "L"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 0.56826125
+		break
+	case "gal(Imp)"	// Gallon (Imp)
+		if intermediate_unit != "L"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 4.54609
+		break
+	case "fl oz(US)"	// Fluid ounce (US)
+		if intermediate_unit != "L"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 0.0295735295625
+		break
+	case "pt(US)"	// Pint (US)
+		if intermediate_unit != "L"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 0.473176473
+		break
+	case "gal(US)"	// Gallon (US)
+		if intermediate_unit != "L"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 3.785411784
+		break
+	case "ug"	// micrograms
+		if intermediate_unit != "kg"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 1E9
+		break
+	case "mg"	// milligrams
+		if intermediate_unit != "kg"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 1E6
+		break
+	case "g"	// grams
+		if intermediate_unit != "kg"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 1E3
+		break
+	case "kg"	// kilograms
+		if intermediate_unit != "kg"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value
+		break
+	case "t"	// tonnes
+		if intermediate_unit != "kg"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1E3
+		break
+	case "oz"	// ounces
+		if intermediate_unit != "kg"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 0.0283495231
+		break
+	case "lb"	// pounds
+		if intermediate_unit != "kg"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 0.45359237
+		break
+	case "jin"	// market catties
+		if intermediate_unit != "kg"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 0.5
+		break
+	case "jin(HK)"	// catties (HK)
+		if intermediate_unit != "kg"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 0.60478982
+		break
+	case "jin(TW)"	// catties (TW)
+		if intermediate_unit != "kg"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 0.6
+		break
+	case "m/s"	// metres per second
+		if intermediate_unit != "km/h"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 3.6
+		break
+	case "km/h"	// kms per hour
+		if intermediate_unit != "km/h"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value
+		break
+	case "ft/s"	// feet per second
+		if intermediate_unit != "km/h"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1.09728
+		break
+	case "mph"	// miles per hour
+		if intermediate_unit != "km/h"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1.609344
+		break
+	case "knot"	// knots
+		if intermediate_unit != "km/h"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1.852
+		break
+	case "ns"	// Nanoseconds
+		if intermediate_unit != "s"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 1E9
+		break
+	case "us"	// microseconds
+		if intermediate_unit != "s"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 1E6
+		break
+	case "ms"	// Milliseconds
+		if intermediate_unit != "s"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 1E3
+		break
+	case "s"	// seconds
+		if intermediate_unit != "s"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value
+		break
+	case "min"	// minutes
+		if intermediate_unit != "s"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 60
+		break
+	case "h"	// hours
+		if intermediate_unit != "s"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 3600
+		break
+	case "d"	// days
+		if intermediate_unit != "s"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 86400
+		break
+	case "wk"	// weeks
+		if intermediate_unit != "s"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 604800
+		break
+	case "yr"	// years
+		if intermediate_unit != "s"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 31536000
+		break
+	case "N"	// Newtons
+		if intermediate_unit != "N"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value
+		break
+	case "kgf"	// kilogram-force
+		if intermediate_unit != "N"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 9.80665
+		break
+	case "lbF"	// pound-force
+		if intermediate_unit != "N"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 4.44822162
+		break
+	case "Pa"	// Pascal
+		if intermediate_unit != "Pa"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value
+		break
+	case "hPa"	// hectopascal
+		if intermediate_unit != "Pa"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 100
+		break
+	case "kPa"	// kilopascal
+		if intermediate_unit != "Pa"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1000
+		break
+	case "MPa"	// Megapascal
+		if intermediate_unit != "Pa"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1E6
+		break
+	case "atm"	// Atmosphere
+		if intermediate_unit != "Pa"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 101325
+		break
+	case "psi"	// pounds per square inch
+		if intermediate_unit != "Pa"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 6894.8
+		break
+	case "Torr"	// torrs
+		if intermediate_unit != "Pa"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 133.3224
+		break
+	case "J"	// joules
+		if intermediate_unit != "J"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value
+		break
+	case "kJ"	// kilojoules
+		if intermediate_unit != "J"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1000
+		break
+	case "MJ"	// megajoules
+		if intermediate_unit != "J"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1E6
+		break
+	case "kWh"	// kilowatt-hours
+		if intermediate_unit != "J"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 3.6E6
+		break
+	case "cal"	// calories
+		if intermediate_unit != "J"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 4.1868
+		break
+	case "kcal"	// kilocalories
+		if intermediate_unit != "J"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 4186.8
+		break
+	case "BTU"	// British Thermal Units
+		if intermediate_unit != "J"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1055.055853
+		break
+	case "W"	// watts
+		if intermediate_unit != "kW"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 1E3
+		break
+	case "kW"	// kilowatts
+		if intermediate_unit != "kW"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value
+		break
+	case "MW"	// megawatts
+		if intermediate_unit != "kW"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 1E3
+		break
+	case "cal/s"	// Calories per second
+		if intermediate_unit != "kW"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 238.8458966
+		break
+	case "BTU/h"	// BTUs per hour
+		if intermediate_unit != "kW"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 3412.141633
+		break
+	case "hp"	// horse power
+		if intermediate_unit != "kW"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value / 0.746
+		break
+	case "0C"	// Celsius
+		if intermediate_unit != "K"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value - 273.15
+		break
+	case "0F"	// horse power
+		if intermediate_unit != "K"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value * 9/5 - 459.67
+		break
+	case "K"	// horse power
+		if intermediate_unit != "K"
+			throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+		endif
+		to_value = intermediate_value
+		break
+	
+	default
+		throw "cannot convert from " + from_unit + " to " + to_unit + "!"
+	ends
+	
+	return to_value
+	
+Endf

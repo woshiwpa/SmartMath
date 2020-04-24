@@ -1,0 +1,169 @@
+﻿<html>
+	<head>
+		<title>智慧計算器幫助</title>
+	</head>
+	<body style="background-color:white;">
+		<h2 style="color:blue">智慧計算器的新特性</h2>
+		
+		
+		<p style="font-family:verdana;color:magenta;">
+<b>1.6.5版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 二維圖形表達式繪圖引擎得到顯著改進。由於引入緩存技術以及對拖動事件響應進行了優化，現在計算器對圖形各種操作更加快速和敏感。但要註意，由於對表達式繪圖必須在新的值計算表達式結果，如果表達式過於復雜，用戶仍然會感覺到明顯的延遲。
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 支持繪制2維或3維隱函數圖形。註意只有當隱函數可解，才能夠繪制圖形。4次或者4次以上的多項式由於根表達式過於復雜，雖然可解，但無法繪圖。。如果繪制包含兩個變數的隱函數，最多4個根表達式將會被繪制出。如果是3個變數的隱函數，根據情況計算器可能會對每個變數求根，然後為每個變數繪制出最多2個解表達式。這樣一來，一個單一的3變數的隱函數，可能意味著繪制出6條圖形，整個求解繪圖過程將會花費比較長的時間。還要註意，隱函數必須是等式，而不能是賦值式，比如x**2+y**2=4-z**2是非法的，而x**2+y**2==4-z**2則是正確的；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. 函數程式size，zeros和ones的返回值和參數定義有所改變。現在，如果是計算一個數值，而不是陣列的尺寸，size函數程式返回[]而不是[0]。同理，如果參數是[]，zeros返回0而ones返回1；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	4. 一定程度的性能提升；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	5. 很多錯誤得到了修正；
+		</p>
+		<p style="font-family:verdana;color:green;">
+<b>1.6.4版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 改進了打印體數學公式識別功能。現在數學公式識別準確率更高；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 其他一些小的功能優化和錯誤修正；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. 1.6.4.16版改進了對不定積分的支持；
+		</p>
+		<p style="font-family:verdana;color:green;">
+<b>1.6.3版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 改進了打印體數學公式識別功能。現在數學公式識別準確率更高；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 其他一些小的功能優化和錯誤修正；
+		</p>
+		<p style="font-family:verdana;color:magenta;">
+<b>1.6.2版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 改進了打印體數學公式識別功能。現在數學公式識別準確率更高，對於基本的加減乘除和次方的計算可以達到90%的準確性，多元一次方程組可以達到80%的準確性，但要註意變數名最好為x、y、a、b或者c，一元多項式可以達到80%的準確性，但要註意變數名最好為x、y、a、b或者c，（一次）積分可以達到70%的準確性，求和（大寫的西格瑪）可以達到80%的準確性，基本陣列運算可以達到60%的準確性。操作數既可以為實數，也可以為復數。但要註意手寫數學公式識別仍然在繼續改進階段；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 其他一些小的功能優化和錯誤修正；
+		</p>
+		<p style="font-family:verdana;color:magenta;">
+<b>1.6.1版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 改進了數學公式識別功能。現在數學公式識別準確率更高，尤其是對於手寫識別；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 允許用戶將不滿意的識別結果發送給開發者做進一步的改進；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. 其他一些小的功能優化和錯誤修正；
+		</p>
+		<p style="font-family:verdana;color:red;">
+<b>1.6.0版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 優化了數學公式識別的過程。現在數學公式識別更靈活，更穩定也更快；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 支持不定積分和用Gauss-Kronrod法計算定積分；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. 優化極坐標繪圖。現在用戶移動圖像更流暢；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	4. 能夠處理任意大數比如1000的1000次方；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	5. 計算結果更準確，誤差小至5*10E-48；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	6. 支持無窮大（infinite）和無意義（nan）；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	7. 能夠計算特征值和特征向量；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	8. 完全支持二進制，8進制和十六進制數。二進制數用0b打頭，比如0b0011101和0b11.1001；8進制由0打頭，比如 02751以及00.23561；16進制由0x打頭，比如0xEFF6和x23FAB.DF24；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	9. 增加了連加函數sum_over和連乘函數product_over；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	10. 其他一些小的功能優化和錯誤修正；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	11. 從1.6.0版開始，本軟體中嵌入了百度流動廣告服務。這一新的特性是針對中國大陸的用戶，只有當系統語言為簡體中文時才會被激活，世界其他地方的用戶不受影響。百度移動廣告服務需要讀取用戶大致位置和流動設備狀態，以針對不同人群推送不同的廣告。我們鄭重承諾，百度和我們均不會存儲用戶的私人數據，用戶的隱私得到充分保護；
+		</p>
+		<p style="font-family:verdana;color:magenta;">
+<b>1.5.1版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 提高了數學公式識別的正確率；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 支持更多的設備；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. 更有效地支持二進制，八進制和16進制的整數和浮點數；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	4. 更快的處理和識別速度；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	5. 改善了用戶界面；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	6. 修正了一些錯誤；
+		</p>
+		<p style="font-family:verdana;color:red;">
+<b>1.5版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 支援印刷體數學公式識別。用戶可以通過拍照的方式輸入數學公式並識別計算；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 支援繪制3維或者極坐標圖像；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. 支援多存儲卡，用戶可以選擇在那塊存儲卡上儲存生成的圖像；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	4. 支援很多新的函數程式；
+		</p>
+		<p style="font-family:verdana;color:green;">
+<b>1.0.2版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 一些小的界面優化和錯誤修正；
+		</p>
+		<p style="font-family:verdana;color:green;">
+<b>1.0.1版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 一些小的界面優化和錯誤修正；
+		</p>
+		<p style="font-family:verdana;color:red;">
+<b>1.0版</b>
+		</p>
+		<p style="font-family:verdana;color:black;">
+	1. 支援基本計算；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	2. 支援繪制二維圖像；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	3. 支援解多項式和一維線性方程組；
+		</p>
+		<p style="font-family:verdana;color:black;">
+	4. 支援（高次）積分；
+		</p>
+	</body>
+</html>

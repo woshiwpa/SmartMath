@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.cyzapps.SmartMath"
     android:installLocation="auto"
-    android:versionCode="18"
-    android:versionName="1.6.5.18" >
-
-    <uses-sdk
-        android:minSdkVersion="9"
-        android:targetSdkVersion="16" />
+    android:versionCode="19"
+    android:versionName="1.6.5.19" >
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -43,13 +40,15 @@
         </activity>
 		<activity android:name=".ActivityQuickRecog"
 		    android:configChanges="keyboardHidden|orientation|screenSize"
-		    android:screenOrientation="landscape"></activity>
+		    android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity"></activity>
         <activity
             android:name="ActivityFingerPaint"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustPan|stateUnchanged"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="landscape"
+            tools:ignore="LockedOrientationActivity">
             <!-- intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -120,6 +119,13 @@
                 <data android:scheme="file" />
             </intent-filter>
         </receiver>
+        <provider android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
     </application>
 
 </manifest>
